@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import '../content/tailwind.css';
 import { motion, AnimatePresence } from 'framer-motion';
 import mojs from '@mojs/core';
+import * as PIXI from 'pixi.js';
 
 function useSetting(key, def='') {
   const [v, setV] = useState(def);
@@ -74,7 +75,7 @@ function OptionsPage() {
     return ()=> el.removeEventListener('click', onClick);
   }, [btnRef.current]);
 
-  // Mouse interactive background (particles) using canvas
+  // Mouse interactive background (particles) using canvas or Pixi.js
   useEffect(() => {
     const canvas = canvasRef.current; if (!canvas) return;
     const ctx = canvas.getContext('2d');
@@ -98,7 +99,7 @@ function OptionsPage() {
     const mouse = { x: -9999, y: -9999 };
     const onMove = (e) => { const rect = canvas.getBoundingClientRect(); mouse.x = (e.clientX-rect.left)*dpr; mouse.y = (e.clientY-rect.top)*dpr; };
     window.addEventListener('mousemove', onMove);
-    let raf; const loop = () => {
+  let raf; const loop = () => {
       ctx.clearRect(0,0,canvas.width, canvas.height);
       for (const p of parts) {
         // simple move
@@ -112,7 +113,25 @@ function OptionsPage() {
       raf = requestAnimationFrame(loop);
     };
     raf = requestAnimationFrame(loop);
-    return () => { cancelAnimationFrame(raf); window.removeEventListener('mousemove', onMove); window.removeEventListener('resize', resize); };
+
+    // Optional Pixi layer (subtle flowing lines)
+    let app;
+    try {
+      app = new PIXI.Application({ backgroundAlpha: 0, resizeTo: window });
+      const overlay = document.createElement('div'); overlay.style.position = 'absolute'; overlay.style.inset = '0'; overlay.style.pointerEvents = 'none'; overlay.style.zIndex = '-5';
+      document.body.appendChild(overlay);
+      overlay.appendChild(app.view);
+      const g = new PIXI.Graphics(); app.stage.addChild(g);
+      app.ticker.add(()=>{
+        g.clear(); g.lineStyle(1, 0x3b82f6, 0.18);
+        for (let i=0;i<parts.length-1;i++){
+          const a = parts[i], b = parts[i+1];
+          const dx=a.x-b.x, dy=a.y-b.y; const d2 = dx*dx+dy*dy; if (d2<40000){ g.moveTo(a.x, a.y); g.lineTo(b.x, b.y); }
+        }
+      });
+    } catch {}
+
+    return () => { cancelAnimationFrame(raf); window.removeEventListener('mousemove', onMove); window.removeEventListener('resize', resize); try{ app?.destroy(true,{children:true, texture:true, baseTexture:true}); overlay?.remove(); }catch{} };
   }, []);
 
   const saveAll = async () => {

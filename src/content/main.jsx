@@ -4,6 +4,8 @@ import Ajv from 'ajv';
 import { getWorkflowJSON as getWFJSONViaBridge, importWorkflowJSON as importWFViaBridge, applyActions as applyActionsViaBridge, refreshCanvas as refreshCanvasViaBridge, pingStores, observeN8nErrors, notify, startVoiceRecognition, exportWorkflowToGitHub } from './n8nUtils';
 import { AnimatePresence, motion } from 'framer-motion';
 import './tailwind.css';
+import { ResizableBox } from 'react-resizable';
+import * as Tooltip from '@radix-ui/react-tooltip';
 
 const ajv = new Ajv({ allErrors: true, strict: false });
 const workflowSchema = {
@@ -175,41 +177,17 @@ function DraggableResizable({ children }) {
     };
   }, [dragging, offset]);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const handleResize = (e) => {
-      const startX = e.clientX;
-      const startY = e.clientY;
-      const startW = size.w;
-      const startH = size.h;
-      const onMove = (ev) => {
-        const dw = ev.clientX - startX;
-        const dh = ev.clientY - startY;
-        const newW = Math.max(320, startW + dw);
-        const newH = Math.max(320, startH + dh);
-        setSize({ w: newW, h: newH });
-      };
-      const onUp = () => {
-        window.removeEventListener('mousemove', onMove);
-        window.removeEventListener('mouseup', onUp);
-      };
-      window.addEventListener('mousemove', onMove);
-      window.addEventListener('mouseup', onUp);
-    };
-    const handle = el.querySelector('.ena-resize');
-    handle?.addEventListener('mousedown', handleResize);
-    return () => handle?.removeEventListener('mousedown', handleResize);
-  }, [size]);
+  // Eliminamos el handler resize manual en favor de react-resizable
 
   return (
-    <motion.div ref={ref} style={{ left: pos.current.x, top: pos.current.y, width: size.w, height: size.h }}
+    <motion.div ref={ref} style={{ left: pos.current.x, top: pos.current.y }}
       initial={{ opacity: 0, y: 10, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ type: 'spring', stiffness: 300, damping: 24 }}
       className="fixed z-[99999] shadow-2xl rounded-lg bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 overflow-hidden backdrop-blur">
-      {children}
-      <div className="ena-resize absolute right-0 bottom-0 w-4 h-4 cursor-se-resize bg-transparent" />
+      <ResizableBox width={size.w} height={size.h} minConstraints={[360, 360]} maxConstraints={[840, 900]} onResizeStop={(e, data)=> setSize({ w: data.size.width, h: data.size.height })} resizeHandles={["se"]} handle={(h)=> <span className="absolute right-0 bottom-0 w-3 h-3 border-r border-b border-[#3f3f46]/70" style={{ cursor:'se-resize' }} />}>
+        {children}
+      </ResizableBox>
     </motion.div>
   );
 }
@@ -227,6 +205,8 @@ function ChatPanel() {
   const voiceRef = useRef(null);
   const [showPreview, setShowPreview] = useState(false);
   const [justActivated, setJustActivated] = useState(false);
+  const [isListening, setIsListening] = useState(false);
+  const taRef = useRef(null);
 
   // Load persisted open state
   useEffect(() => {
@@ -253,8 +233,18 @@ function ChatPanel() {
     console.log('[n8n-ai] Stores', ping);
     const wf = await getWFJSONViaBridge();
     anyWorkflowFromBridge.cache = wf;
-  const stop = observeN8nErrors((t) => setErrorLog(t));
-  return () => stop?.();
+    const stop = observeN8nErrors((t) => setErrorLog(t));
+    // Extra: MutationObserver para logs de consola/errores del DOM
+    try {
+      const mo = new MutationObserver(() => {
+        // captura de textContent de contenedores de error si existen
+        const errSpans = Array.from(document.querySelectorAll('[class*="error"], [data-test-id*="error"], .el-notification__content'));
+        const txt = errSpans.map(e=> e.textContent?.trim()).filter(Boolean).join('\n');
+        if (txt) setErrorLog(l => l.includes(txt) ? l : (l ? l + '\n' + txt : txt));
+      });
+      mo.observe(document.documentElement, { childList: true, subtree: true });
+    } catch {}
+    return () => stop?.();
   })(); }, []);
 
   const send = async () => {
@@ -293,6 +283,15 @@ function ChatPanel() {
     }
   };
 
+  // Auto-resize del textarea y contador de tokens aproximados
+  useEffect(() => {
+    const el = taRef.current; if (!el) return;
+    el.style.height = 'auto';
+    el.style.height = Math.max(40, Math.min(160, el.scrollHeight)) + 'px';
+  }, [input]);
+
+  const approxTokens = Math.ceil((input.trim().length || 0) / 4);
+
   const apply = async () => {
     const last = [...messages].reverse().find(m => m.role === 'assistant');
     if (!last) { setError('No hay respuesta del asistente para aplicar.'); return; }
@@ -329,15 +328,20 @@ function ChatPanel() {
       proposed = Array.isArray(obj) ? JSON.stringify(obj, null, 2) : JSON.stringify(obj, null, 2);
     } catch { proposed = last?.content || ''; }
     return (
-      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50/60 dark:bg-zinc-800/60">
-        <div className="grid grid-cols-2 gap-2 p-2 text-xs">
+      <motion.div
+        initial={{ height: 0, opacity: 0 }}
+        animate={{ height: 'auto', opacity: 1 }}
+        exit={{ height: 0, opacity: 0 }}
+        className="border-t border-[#27272a]/60 bg-[#0b0b0d]/90"
+      >
+        <div className="grid grid-cols-2 gap-2 p-2 text-xs text-[#f3f4f6]">
           <div className="flex flex-col">
-            <div className="font-medium mb-1">Actual</div>
-            <pre className="flex-1 overflow-auto bg-white dark:bg-zinc-900 p-2 rounded border border-zinc-200 dark:border-zinc-700 max-h-48 whitespace-pre-wrap">{current}</pre>
+            <div className="mb-1 text-xs text-[#9ca3af]">Actual</div>
+            <pre className="flex-1 overflow-auto bg-[#09090B] p-2 rounded-md border border-[#27272a]/60 max-h-48 whitespace-pre-wrap text-[11px] text-[#f3f4f6]">{current}</pre>
           </div>
           <div className="flex flex-col">
-            <div className="font-medium mb-1">Propuesto</div>
-            <pre className="flex-1 overflow-auto bg-white dark:bg-zinc-900 p-2 rounded border border-zinc-200 dark:border-zinc-700 max-h-48 whitespace-pre-wrap">{proposed}</pre>
+            <div className="mb-1 text-xs text-[#9ca3af]">Propuesto</div>
+            <pre className="flex-1 overflow-auto bg-[#09090B] p-2 rounded-md border border-[#27272a]/60 max-h-48 whitespace-pre-wrap text-[11px] text-[#f3f4f6]">{proposed}</pre>
           </div>
         </div>
       </motion.div>
@@ -367,9 +371,15 @@ function ChatPanel() {
   const DockButton = ({ visible, onClick }) => (
     <AnimatePresence>
       {visible && (
-        <motion.button initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.8 }}
+        <motion.button
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.8 }}
           onClick={onClick}
-          className="fixed z-[99998] bottom-6 right-6 w-12 h-12 rounded-full shadow-xl bg-gradient-to-br from-emerald-500 to-fuchsia-600 text-white text-xl flex items-center justify-center">
+          className="fixed z-[99998] bottom-6 right-6 w-12 h-12 rounded-full border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xl flex items-center justify-center shadow-lg hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]"
+          aria-label="Abrir asistente de n8n"
+          title="Abrir asistente de n8n"
+        >
           💬
         </motion.button>
       )}
@@ -380,44 +390,85 @@ function ChatPanel() {
     <>
       {open && (
       <DraggableResizable>
-  <div className={"flex flex-col h-full bg-white/85 dark:bg-zinc-900/80 backdrop-blur-md " + (justActivated ? 'ring-2 ring-emerald-500/60 transition-[box-shadow]': '')}>
-        <div className="ena-topbar flex items-center justify-between px-3 py-2 border-b border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-800">
-          <div className="font-medium text-zinc-800 dark:text-zinc-100">n8n AI Assistant</div>
+  <div className={"flex flex-col h-full bg-[#0b0b0d]/95 text-[#f3f4f6] backdrop-blur-md " + (justActivated ? 'ring-2 ring-emerald-500/60 transition-[box-shadow]' : '')}>
+        <div className="ena-topbar flex items-center justify-between px-3 py-2 border-b border-[#27272a]/60 bg-[#0b0b0d]">
+          <div className="font-medium text-[#f3f4f6]">Enhanced n8n AI Assistant</div>
           <div className="flex items-center gap-2">
-            <button onClick={() => setOpen(o => !o)} className="px-2 py-1 text-xs rounded bg-zinc-200 dark:bg-zinc-700">{open ? '–' : '+'}</button>
+            <button
+              onClick={() => setOpen(o => !o)}
+              className="h-7 px-2 text-xs rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]"
+            >
+              {open ? '–' : '+'}
+            </button>
           </div>
         </div>
         {open && (
           <div className="flex flex-col h-full">
-            <div className="flex-1 overflow-auto p-3 space-y-2 bg-white dark:bg-zinc-900">
+            <div className="flex-1 overflow-auto p-3 space-y-2 bg-[#0b0b0d]">
               <AnimatePresence initial={false}>
                 {messages.map((m, i) => (
-                  <motion.div key={i} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -6 }} layout className={"text-sm whitespace-pre-wrap rounded p-2 shadow-sm bg-zinc-100/90 dark:bg-zinc-800/80 text-zinc-800 dark:text-zinc-100"}>
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    layout
+                    className={"text-sm whitespace-pre-wrap rounded-md p-2 border border-[#27272a]/60 bg-[#111113] text-[#f3f4f6]"}
+                  >
                     <div className="text-xs uppercase opacity-60 mb-1">{m.role}</div>
                     {m.content}
                   </motion.div>
                 ))}
               </AnimatePresence>
-              {loading && <div className="text-xs text-zinc-500">Generando…</div>}
-              {error && <div className="text-xs text-red-600">{error}</div>}
+              {loading && <div className="text-xs text-[#9ca3af]">Generando…</div>}
+              {error && <div className="text-xs text-red-500">{error}</div>}
             </div>
             <AnimatePresence>{renderPreview()}</AnimatePresence>
-            <div className="border-t border-zinc-200 dark:border-zinc-800 p-2 bg-zinc-50/90 dark:bg-zinc-800/80 backdrop-blur">
+            <div className="border-t border-[#27272a]/60 p-2 bg-[#0b0b0d]/95 backdrop-blur">
               {offline && <div className="text-xs text-amber-600 mb-1">Modo offline habilitado: no se harán llamadas a LLM.</div>}
-              <textarea value={input} onChange={e => setInput(e.target.value)}
-                placeholder="Describe lo que quieres cambiar o crear en el workflow…"
-                className="w-full text-sm p-2 rounded border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 h-20" />
-              <div className="flex gap-2 mt-2">
-                <button onClick={send} disabled={loading}
-                  className="px-3 py-1 rounded bg-emerald-600 text-white text-sm disabled:opacity-50">Enviar</button>
-                <button onClick={apply}
-                  className="px-3 py-1 rounded bg-blue-600 text-white text-sm">Aplicar</button>
-                <button onClick={copy}
-                  className="px-3 py-1 rounded bg-zinc-200 dark:bg-zinc-700 text-sm">Copiar</button>
-                <button onClick={validateLast}
-                  className="px-3 py-1 rounded bg-purple-600 text-white text-sm">Validar</button>
-                <button onClick={undo}
-                  className="px-3 py-1 rounded bg-zinc-300 dark:bg-zinc-600 text-sm">Deshacer</button>
+              <textarea
+                value={input}
+                onChange={e => setInput(e.target.value)}
+                placeholder="Hazme cualquier pregunta sobre tu flujo de trabajo..."
+                className="flex min-h-[40px] w-full rounded-md border border-[#27272a]/50 bg-[#09090B] px-3 py-2 text-xs placeholder:text-[#9ca3af] text-[#f3f4f6] ring-offset-[#09090B] hover:border-[#3f3f46]/70 focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none leading-[1.2]"
+                style={{ fontFamily: 'Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif' }}
+                spellCheck={false}
+                aria-label="Cuadro de entrada para preguntas sobre el flujo de trabajo"
+                ref={taRef}
+              />
+              <div className="mt-1 text-[10px] text-[#9ca3af]">~{approxTokens} tokens</div>
+              <div className="flex flex-wrap gap-2 mt-2">
+                <button
+                  onClick={send}
+                  disabled={loading}
+                  className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d] disabled:opacity-50"
+                >
+                  Enviar
+                </button>
+                <button
+                  onClick={apply}
+                  className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]"
+                >
+                  Aplicar
+                </button>
+                <button
+                  onClick={copy}
+                  className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]"
+                >
+                  Copiar
+                </button>
+                <button
+                  onClick={validateLast}
+                  className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]"
+                >
+                  Validar
+                </button>
+                <button
+                  onClick={undo}
+                  className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]"
+                >
+                  Deshacer
+                </button>
                 <button onClick={async ()=>{
                   if (!errorLog) { setError('No se detectaron errores.'); return; }
                   const wf = await getWFJSONViaBridge();
@@ -428,19 +479,36 @@ function ChatPanel() {
                   const txt = match ? match[0].replace(/```json|```/g,'') : reply;
                   setMessages(h=>[...h,{role:'assistant',content:txt}]);
                   setShowPreview(true);
-                }} className="px-3 py-1 rounded bg-red-600 text-white text-sm">Fix Error</button>
+                }} className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]">Fix Error</button>
                 <button onClick={async ()=>{
                   try {
                     const r = await fetch('/api/n8n/test', { method: 'POST' }).catch(()=>null);
                     await notify('Simulación', r?.ok ? 'Simulación iniciada' : 'No disponible');
                   } catch {}
-                }} className="px-3 py-1 rounded bg-amber-600 text-white text-sm">Simular</button>
-                <button onClick={()=>{
-                  if (voiceRef.current){ try{voiceRef.current.stop();}catch{} voiceRef.current=null; return; }
-                  const rec = startVoiceRecognition((t,fin)=>{ setInput(t); if(fin){ /* opcional auto-send */ } });
-                  voiceRef.current = rec;
-                }} className="px-3 py-1 rounded bg-zinc-800 text-white text-sm">Voz</button>
-                <button onClick={()=> setShowPreview(p=>!p)} className="px-3 py-1 rounded bg-fuchsia-600 text-white text-sm">{showPreview? 'Ocultar Preview':'Preview'}</button>
+                }} className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]">Simular</button>
+                <Tooltip.Provider delayDuration={200}>
+                  <Tooltip.Root>
+                    <Tooltip.Trigger asChild>
+                      <button
+                        onClick={()=>{
+                          if (voiceRef.current){ try{voiceRef.current.stop();}catch{} voiceRef.current=null; setIsListening(false); return; }
+                          try {
+                            const rec = startVoiceRecognition((t,fin)=>{ setInput(t); if(fin){ setIsListening(false); } else { setIsListening(true); } });
+                            voiceRef.current = rec; setIsListening(true);
+                          } catch { setIsListening(false); }
+                        }}
+                        className={"inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 text-xs focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d] " + (isListening? 'bg-emerald-700 text-white hover:bg-emerald-600':'bg-[#0b0b0d] text-[#f3f4f6] hover:border-[#3f3f46]/70 hover:bg-[#0f0f12]')}
+                      >
+                        {isListening ? 'Escuchando…' : 'Voz'}
+                      </button>
+                    </Tooltip.Trigger>
+                    <Tooltip.Content className="rounded bg-black text-white px-2 py-1 text-[11px] shadow" sideOffset={6}>
+                      {isListening ? 'Click para detener' : 'Dicta tu prompt'}
+                      <Tooltip.Arrow className="fill-black" />
+                    </Tooltip.Content>
+                  </Tooltip.Root>
+                </Tooltip.Provider>
+                <button onClick={()=> setShowPreview(p=>!p)} className="inline-flex items-center justify-center h-9 px-3 rounded-md border border-[#27272a]/60 bg-[#0b0b0d] text-[#f3f4f6] text-xs hover:border-[#3f3f46]/70 hover:bg-[#0f0f12] focus:outline-none focus:ring-2 focus:ring-[rgba(0,187,52,0.4)] focus:ring-offset-2 focus:ring-offset-[#0b0b0d]">{showPreview? 'Ocultar Preview':'Preview'}</button>
               </div>
             </div>
           </div>
