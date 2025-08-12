@@ -11,4 +11,4 @@ coverage/
 .idea/
 *.local
 *.env
-package-lock.json
+ 
