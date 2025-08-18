@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 class Phase4TestSuite {
   constructor() {
-    this.serverUrl = 'http://localhost:3000';
+    this.serverUrl = 'http://localhost:3456';
     this.testResults = [];
     this.totalTests = 0;
     this.passedTests = 0;
@@ -67,7 +67,7 @@ class Phase4TestSuite {
     this.logSection('🏥 Server Health & Monitoring Tests');
 
     // Test basic health endpoint
-    const healthResponse = await this.makeRequest('/health');
+    const healthResponse = await this.makeRequest('/api/health');
     this.logTest('Health endpoint responds', 
       healthResponse.status === 'healthy',
       healthResponse.error || 'Server health check passed'
@@ -101,14 +101,14 @@ class Phase4TestSuite {
     this.logSection('🔴 Redis Caching Tests');
 
     // Test cache stats
-    const cacheStats = await this.makeRequest('/cache/stats');
+    const cacheStats = await this.makeRequest('/api/cache/stats');
     this.logTest('Cache stats endpoint accessible',
       cacheStats !== null,
       cacheStats.error || 'Cache statistics retrieved'
     );
 
     // Test cache clear
-    const clearResult = await this.makeRequest('/cache/clear', 'DELETE');
+    const clearResult = await this.makeRequest('/api/cache/clear', 'DELETE');
     this.logTest('Cache can be cleared',
       clearResult.message || clearResult.error,
       clearResult.message || clearResult.error
@@ -194,7 +194,7 @@ class Phase4TestSuite {
       }
     };
 
-    const simulation1 = await this.makeRequest('/api/simulate', 'POST', simulationData);
+    const simulation1 = await this.makeRequest('/api/simulate/workflow', 'POST', simulationData);
     this.logTest('Workflow simulation works',
       simulation1.workflowId !== undefined,
       'Simulation completed successfully'
@@ -202,7 +202,7 @@ class Phase4TestSuite {
 
     // Test cached simulation (should be faster)
     const cacheStart = Date.now();
-    const simulation2 = await this.makeRequest('/api/simulate', 'POST', simulationData);
+    const simulation2 = await this.makeRequest('/api/simulate/workflow', 'POST', simulationData);
     const cacheTime = Date.now() - cacheStart;
 
     this.logTest('Simulation caching improves performance',
@@ -279,7 +279,7 @@ class Phase4TestSuite {
       }
     };
 
-    const smallResult = await this.makeRequest('/api/simulate', 'POST', smallWorkflow);
+    const smallResult = await this.makeRequest('/api/simulate/workflow', 'POST', smallWorkflow);
     this.logTest('Small workflow simulation',
       smallResult.summary && smallResult.summary.totalNodes === 10,
       `Processed ${smallResult.summary?.totalNodes || 0} nodes`
@@ -296,7 +296,7 @@ class Phase4TestSuite {
       }
     };
 
-    const largeResult = await this.makeRequest('/api/simulate', 'POST', largeWorkflow);
+    const largeResult = await this.makeRequest('/api/simulate/workflow', 'POST', largeWorkflow);
     this.logTest('Large workflow chunked processing',
       largeResult.summary && largeResult.summary.chunksProcessed >= 2,
       `Processed in ${largeResult.summary?.chunksProcessed || 0} chunks`
@@ -442,7 +442,7 @@ class Phase4TestSuite {
     );
 
     // Test health check shows active connections
-    const healthWithConnections = await this.makeRequest('/health');
+    const healthWithConnections = await this.makeRequest('/api/health');
     this.logTest('Active connections tracked',
       typeof healthWithConnections.activeConnections === 'number',
       `Active connections: ${healthWithConnections.activeConnections || 0}`
@@ -481,7 +481,7 @@ class Phase4TestSuite {
 
     // Test response times
     const startTime = Date.now();
-    const healthCheck = await this.makeRequest('/health');
+    const healthCheck = await this.makeRequest('/api/health');
     const responseTime = Date.now() - startTime;
 
     this.logTest('Health check response time acceptable',
@@ -492,9 +492,9 @@ class Phase4TestSuite {
     // Test concurrent requests
     const concurrentStart = Date.now();
     const concurrentRequests = await Promise.all([
-      this.makeRequest('/health'),
+      this.makeRequest('/api/health'),
       this.makeRequest('/api/analytics'),
-      this.makeRequest('/cache/stats')
+      this.makeRequest('/api/cache/stats')
     ]);
     const concurrentTime = Date.now() - concurrentStart;
 
@@ -638,12 +638,12 @@ class Phase4TestSuite {
     this.logSection('🧠 Memory Optimization Tests');
 
     // Test memory management
-    const healthBefore = await this.makeRequest('/health');
+    const healthBefore = await this.makeRequest('/api/health');
     const memoryBefore = healthBefore.memory;
 
     // Generate some memory usage
     await Promise.all([
-      this.makeRequest('/api/simulate', 'POST', {
+      this.makeRequest('/api/simulate/workflow', 'POST', {
         workflow: {
           nodes: Array.from({length: 30}, (_, i) => ({ id: `mem_test_${i}` }))
         }
@@ -655,7 +655,7 @@ class Phase4TestSuite {
       this.makeRequest('/api/templates?category=test')
     ]);
 
-    const healthAfter = await this.makeRequest('/health');
+    const healthAfter = await this.makeRequest('/api/health');
     const memoryAfter = healthAfter.memory;
 
     this.logTest('Memory usage monitored',
@@ -741,7 +741,7 @@ class Phase4TestSuite {
     );
 
     // 2. Run simulation
-    const simulation = await this.makeRequest('/api/simulate', 'POST', integrationWorkflow);
+    const simulation = await this.makeRequest('/api/simulate/workflow', 'POST', integrationWorkflow);
     this.logTest('Integration - Simulation',
       simulation.summary && simulation.summary.totalNodes === 25,
       `Simulated ${simulation.summary?.totalNodes || 0} nodes`
@@ -762,7 +762,7 @@ class Phase4TestSuite {
     );
 
     // 5. Final health check
-    const finalHealth = await this.makeRequest('/health');
+    const finalHealth = await this.makeRequest('/api/health');
     this.logTest('Integration - Final health check',
       finalHealth.status === 'healthy',
       `Final status: ${finalHealth.status}`

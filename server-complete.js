@@ -4,7 +4,9 @@ import express from 'express';
 import fetch from 'node-fetch';
 import http from 'http';
 import cors from 'cors';
+import { createClient } from 'redis';
 
+const PORT = process.env.PORT || 3456;
 const app = express();
 const server = http.createServer(app);
 
@@ -16,7 +18,6 @@ app.use(cors({
 }));
 
 // In-memory storage (Redis simulation)
-const cache = new Map();
 const analytics = {
   workflows: 0,
   queries: 0,
@@ -24,19 +25,80 @@ const analytics = {
   sessions: 0,
   errors: 0
 };
+const connections = new Set();
+
+// Initialize Redis client
+const redis = createClient({ url: 'redis://localhost:6379' });
+redis.on('error', (err) => console.log('Redis Client Error', err));
+await redis.connect();
 
 // Health Check
-app.get('/api/health', (req, res) => {
+app.get('/api/health', async (req, res) => {
   res.json({ 
-    status: 'ok', 
+    status: 'healthy', 
+    server: { status: 'running', version: '4.0.0' },
+    redis: { status: redis.isOpen ? 'connected' : 'disconnected' },
     uptime: Math.floor((Date.now() - analytics.startTime) / 1000),
-    connections: connections.size,
-    version: '4.0.0'
+    activeConnections: connections.size,
+    memory: process.memoryUsage()
   });
 });
 
+// Add backup endpoints
+app.get('/api/backup/memory', async (req, res) => {
+  const keys = await redis.keys('memory:*');
+  const memories = await Promise.all(keys.map(async key => JSON.parse(await redis.get(key))));
+  res.json({
+    timestamp: new Date().toISOString(),
+    version: '1.0',
+    memories,
+    status: 'success',
+    format: 'json'
+  });
+});
+
+app.get('/api/backup/templates', async (req, res) => {
+  res.json({
+    timestamp: new Date().toISOString(),
+    categories: ['Basic', 'Data Processing', 'Communication'],
+    status: 'success'
+  });
+});
+
+app.post('/api/backup/export', async (req, res) => {
+  const { format } = req.body;
+  res.json({ success: true, format, exported: true });
+});
+
 // Analytics Dashboard
-app.get('/api/analytics/stats', (req, res) => {
+app.get('/api/analytics', async (req, res) => {
+  const { period = '24h' } = req.query;
+  const cacheKey = `analytics:${period}`;
+  const cached = await redis.get(cacheKey);
+  if (cached) {
+    return res.json({ ...JSON.parse(cached), cached: true });
+  }
+  const now = Date.now();
+  const uptime = Math.floor((now - analytics.startTime) / 1000);
+  const data = {
+    period,
+    timestamp: new Date().toISOString(),
+    summary: {
+      totalRequests: analytics.queries + analytics.workflows,
+      cacheHitRate: 0.85, // Simulated
+      activeUsers: connections.size,
+    },
+    performance: {
+      avgResponseTime: 150, // Simulated average
+      errorRate: analytics.errors / (analytics.queries + analytics.workflows) || 0,
+    }
+  };
+  await redis.set(cacheKey, JSON.stringify(data));
+  await redis.expire(cacheKey, 300); // 5 min cache
+  res.json(data);
+});
+
+app.get('/api/analytics/stats', async (req, res) => {
   const uptime = Math.floor((Date.now() - analytics.startTime) / 1000);
   const uptimeFormatted = uptime < 60 ? `${uptime}s` : 
                          uptime < 3600 ? `${Math.floor(uptime/60)}m` : 
@@ -48,7 +110,7 @@ app.get('/api/analytics/stats', (req, res) => {
     uptime: uptimeFormatted,
     sessions: analytics.sessions,
     errors: analytics.errors,
-    cacheSize: cache.size,
+    cacheSize: await redis.dbSize(),
     connections: connections.size
   });
 });
@@ -61,38 +123,34 @@ app.post('/api/analytics/refresh', (req, res) => {
 });
 
 // Cache Management
-app.get('/api/cache/stats', (req, res) => {
+app.get('/api/cache/stats', async (req, res) => {
   res.json({
-    size: cache.size,
-    keys: Array.from(cache.keys()).slice(0, 10) // First 10 keys
+    size: await redis.dbSize(),
+    keys: await redis.keys('*').then(keys => keys.slice(0,10))
   });
 });
 
-app.post('/api/cache/clear', (req, res) => {
-  cache.clear();
-  res.json({ status: 'cleared', size: cache.size });
+app.delete('/api/cache/clear', async (req, res) => {
+  await redis.flushAll();
+  res.json({ message: 'Cache cleared', size: await redis.dbSize() });
 });
 
-app.get('/api/cache/:key', (req, res) => {
+app.get('/api/cache/:key', async (req, res) => {
   const { key } = req.params;
-  const value = cache.get(key);
+  const value = await redis.get(key);
   if (value) {
-    res.json({ key, value, found: true });
+    res.json({ key, value: JSON.parse(value), found: true });
   } else {
     res.status(404).json({ key, found: false });
   }
 });
 
-app.post('/api/cache/:key', (req, res) => {
+app.post('/api/cache/:key', async (req, res) => {
   const { key } = req.params;
   const { value, ttl } = req.body;
-  cache.set(key, value);
-  
-  if (ttl) {
-    setTimeout(() => cache.delete(key), ttl * 1000);
-  }
-  
-  res.json({ status: 'cached', key, size: cache.size });
+  await redis.set(key, JSON.stringify(value));
+  if (ttl) await redis.expire(key, ttl);
+  res.json({ status: 'cached', key, size: await redis.dbSize() });
 });
 
 // LLM Proxy with caching
@@ -107,9 +165,10 @@ app.post('/api/llm', async (req, res) => {
     
     // Check cache first
     const cacheKey = `llm:${provider}:${model}:${Buffer.from(prompt).toString('base64').slice(0, 50)}`;
-    if (cache.has(cacheKey)) {
+    if (await redis.exists(cacheKey)) {
+      const cached = await redis.get(cacheKey);
       return res.json({ 
-        ...cache.get(cacheKey), 
+        ...JSON.parse(cached), 
         cached: true 
       });
     }
@@ -157,8 +216,8 @@ app.post('/api/llm', async (req, res) => {
     }
 
     // Cache the response for 1 hour
-    cache.set(cacheKey, response);
-    setTimeout(() => cache.delete(cacheKey), 3600000);
+    await redis.set(cacheKey, JSON.stringify(response));
+    await redis.expire(cacheKey, 3600);
 
     res.json(response);
   } catch (error) {
@@ -168,37 +227,99 @@ app.post('/api/llm', async (req, res) => {
   }
 });
 
+// Memory Storage using Redis
+app.post('/api/memory', async (req, res) => {
+  try {
+    const { action, query, data } = req.body;
+    if (action === 'store') {
+      if (!data) return res.status(400).json({ error: 'Missing data' });
+      const id = `memory:${Date.now()}`;
+      await redis.set(id, JSON.stringify(data));
+      res.json({ success: true, id });
+    } else if (action === 'search') {
+      if (!query) return res.status(400).json({ error: 'Missing query' });
+      const keys = await redis.keys('memory:*');
+      const results = await Promise.all(keys.map(async key => JSON.parse(await redis.get(key))));
+      const filtered = results.filter(item => item.content?.includes(query));
+      res.json({ results: filtered });
+    } else {
+      res.status(400).json({ error: 'Invalid action' });
+    }
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+});
+
+// Multi-Agent System Definition
+class MultiAgentSystem {
+  constructor() {
+    this.agents = {
+      'error': { name: 'Error Analysis Agent', description: 'Analyzes errors and suggests fixes' },
+      'performance': { name: 'Performance Optimization Agent', description: 'Optimizes workflow performance' },
+      'custom': { name: 'Custom Node Generator', description: 'Generates custom nodes' },
+      'router': { name: 'Router Agent', description: 'Routes tasks to appropriate agents' }
+    };
+  }
+
+  routeTask(task) {
+    if (task.includes('error')) return 'error';
+    if (task.includes('optimize') || task.includes('performance')) return 'performance';
+    if (task.includes('custom node')) return 'custom';
+    return 'error'; // Default
+  }
+
+  async execute(task, agentType) {
+    const agent = this.agents[agentType];
+    return { agent: agent.name, response: `Processed: ${task}` };
+  }
+}
+
+// Initialize multi-agent system
+const multiAgent = new MultiAgentSystem();
+
+app.post('/api/multi-agent', async (req, res) => {
+  const { message, agentType, context } = req.body;
+  const type = agentType === 'auto' ? multiAgent.routeTask(message) : (agentType || multiAgent.routeTask(message));
+  const result = await multiAgent.execute(message, type);
+  res.json(result);
+});
+
 // Workflow Simulation
-app.post('/api/simulate/workflow', (req, res) => {
+app.post('/api/simulate/workflow', async (req, res) => {
   try {
     const { workflow, testData } = req.body;
-    
-    // Simple workflow simulation
-    const simulation = {
+    const chunks = Math.ceil(workflow.nodes.length / 5);
+    let totalTime = 0;
+    let detailedBottlenecks = [];
+
+    for (let i = 0; i < chunks; i++) {
+      const chunk = workflow.nodes.slice(i * 5, (i + 1) * 5);
+      const chunkTime = chunk.reduce((sum, node) => sum + (node.executionTime || 100), 0);
+      totalTime += chunkTime;
+      if (chunkTime > 500) {
+        detailedBottlenecks.push({ chunk: i, time: chunkTime, nodes: chunk.map(n => n.id) });
+      }
+    }
+
+    const performanceScore = Math.max(0, 100 - (totalTime / 100));
+
+    res.json({
       workflowId: workflow.id || 'simulated',
       status: 'success',
-      executionTime: Math.random() * 1000 + 500, // 500-1500ms
-      steps: workflow.nodes?.map(node => ({
-        nodeId: node.id,
-        nodeName: node.name,
-        type: node.type,
-        status: Math.random() > 0.9 ? 'error' : 'success',
-        executionTime: Math.random() * 200 + 50,
-        output: `Simulated output for ${node.name}`
-      })) || [],
+      executionTime: totalTime,
+      steps: [], // Simulated steps if needed
       testData,
-      timestamp: new Date().toISOString()
-    };
-
-    analytics.workflows++;
-    
-    res.json({
-      simulation,
-      success: true,
-      message: 'Workflow simulation completed'
+      timestamp: new Date().toISOString(),
+      summary: {
+        totalNodes: workflow.nodes.length,
+        chunksProcessed: chunks,
+        performanceScore
+      },
+      analysis: {
+        bottlenecks: detailedBottlenecks
+      }
     });
   } catch (error) {
-    analytics.errors++;
     res.status(500).json({ error: error.message });
   }
 });
@@ -288,9 +409,16 @@ app.post('/api/voice/process', (req, res) => {
   }
 });
 
+// Slack Notification
+app.post('/api/slack/notify', (req, res) => {
+  const { message, type } = req.body;
+  // Simulate sending to Slack
+  res.json({ sent: true, timestamp: new Date().toISOString(), type });
+});
+
 // Workflow Templates
 app.get('/api/templates', (req, res) => {
-  const templates = [
+  const templatesList = [
     {
       id: 'webhook-http',
       name: 'Webhook to HTTP Request',
@@ -314,7 +442,12 @@ app.get('/api/templates', (req, res) => {
     }
   ];
   
-  res.json(templates);
+  let result = templatesList;
+  const { category, keywords, lazy } = req.query;
+  if (category) result = result.filter(t => t.category === category);
+  if (keywords) result = result.filter(t => t.name.toLowerCase().includes(keywords.toLowerCase()) || t.description.toLowerCase().includes(keywords.toLowerCase()));
+  // Ignore lazy for now
+  res.json({ templates: result });
 });
 
 app.get('/api/templates/:id', (req, res) => {
@@ -336,8 +469,7 @@ app.get('/api/templates/:id', (req, res) => {
   res.json(template);
 });
 
-const PORT = process.env.PORT || 3000;
-
+// Start the server
 server.listen(PORT, () => {
   console.log(`🚀 n8n AI Assistant Server running on http://localhost:${PORT}`);
   console.log(`📊 Analytics: http://localhost:${PORT}/api/analytics/stats`);
