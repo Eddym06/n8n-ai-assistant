@@ -256,6 +256,7 @@ class MultiAgentSystem {
     this.agents = {
       'error': { name: 'Error Analysis Agent', description: 'Analyzes errors and suggests fixes' },
       'performance': { name: 'Performance Optimization Agent', description: 'Optimizes workflow performance' },
+      'optimization': { name: 'Performance Optimization Agent', description: 'Optimizes workflow performance' },
       'custom': { name: 'Custom Node Generator', description: 'Generates custom nodes' },
       'router': { name: 'Router Agent', description: 'Routes tasks to appropriate agents' }
     };
@@ -269,7 +270,7 @@ class MultiAgentSystem {
   }
 
   async execute(task, agentType) {
-    const agent = this.agents[agentType];
+    const agent = this.agents[agentType] || this.agents['error'];
     return { agent: agent.name, response: `Processed: ${task}` };
   }
 }
@@ -279,7 +280,12 @@ const multiAgent = new MultiAgentSystem();
 
 app.post('/api/multi-agent', async (req, res) => {
   const { message, agentType, context } = req.body;
-  const type = agentType === 'auto' ? multiAgent.routeTask(message) : (agentType || multiAgent.routeTask(message));
+  let type = agentType;
+  if (agentType === 'auto' || !agentType) {
+    type = multiAgent.routeTask(message);
+  } else if (agentType === 'optimization') {
+    type = 'performance';
+  }
   const result = await multiAgent.execute(message, type);
   res.json(result);
 });
@@ -288,6 +294,9 @@ app.post('/api/multi-agent', async (req, res) => {
 app.post('/api/simulate/workflow', async (req, res) => {
   try {
     const { workflow, testData } = req.body;
+    if (!workflow || !workflow.nodes) {
+      return res.status(400).json({ error: 'Invalid workflow data' });
+    }
     const chunks = Math.ceil(workflow.nodes.length / 5);
     let totalTime = 0;
     let detailedBottlenecks = [];
@@ -308,7 +317,7 @@ app.post('/api/simulate/workflow', async (req, res) => {
       status: 'success',
       executionTime: totalTime,
       steps: [], // Simulated steps if needed
-      testData,
+      testData: testData || {},
       timestamp: new Date().toISOString(),
       summary: {
         totalNodes: workflow.nodes.length,
