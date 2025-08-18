@@ -8,13 +8,14 @@ import http from 'http';
 import fs from 'fs/promises';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import fetch from 'node-fetch';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 class Phase4TestSuite {
   constructor() {
-    this.serverUrl = 'http://localhost:3456';
+    this.serverUrl = 'http://localhost:3000';
     this.testResults = [];
     this.totalTests = 0;
     this.passedTests = 0;
