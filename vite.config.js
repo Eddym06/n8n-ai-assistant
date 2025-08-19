@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import path from 'path';
 import { createRequire } from 'module';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 const require = createRequire(import.meta.url);
 
@@ -14,6 +15,7 @@ export default defineConfig({
         content: path.resolve(__dirname, 'src/content/index.html'),
         popup: path.resolve(__dirname, 'src/popup/index.html'),
         options: path.resolve(__dirname, 'src/options/index.html'),
+        background: path.resolve(__dirname, 'src/background.js'),
       },
       output: {
         entryFileNames: 'assets/[name].js',
@@ -23,7 +25,6 @@ export default defineConfig({
           'vendor-ui': ['react', 'react-dom', 'framer-motion'],
           'vendor-charts': ['chart.js', 'react-chartjs-2'],
           'vendor-utils': ['fuse.js', 'axios'],
-
         }
       }
     },
@@ -88,7 +89,13 @@ export default defineConfig({
           next();
         });
       }
-    }
+    },
+    viteStaticCopy({
+      targets: [
+        { src: 'manifest.json', dest: '' },
+        { src: 'icons/*', dest: 'icons' }
+      ]
+    })
   ],
   optimizeDeps: {
     include: [

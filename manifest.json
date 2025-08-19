@@ -45,21 +45,21 @@
   "content_scripts": [
     {
       "matches": [
-  "*://*.n8n.cloud/workflow/*",
-  "*://*.n8n.io/workflow/*",
-  "*://*.n8n.cloud/workflows/*",
-  "*://*.n8n.io/workflows/*",
-  "http://localhost/workflow/*",
-  "https://localhost/workflow/*",
-  "http://localhost/*/workflow/*",
-  "https://localhost/*/workflow/*",
-  "http://localhost/workflows/*",
-  "https://localhost/workflows/*",
-  "http://localhost/*/workflows/*",
-  "https://localhost/*/workflows/*"
+        "*://*.n8n.cloud/workflow/*",
+        "*://*.n8n.io/workflow/*",
+        "*://*.n8n.cloud/workflows/*",
+        "*://*.n8n.io/workflows/*",
+        "http://localhost/workflow/*",
+        "https://localhost/workflow/*",
+        "http://localhost/*/workflow/*",
+        "https://localhost/*/workflow/*",
+        "http://localhost/workflows/*",
+        "https://localhost/workflows/*",
+        "http://localhost/*/workflows/*",
+        "https://localhost/*/workflows/*"
       ],
-  "js": ["assets/content.js"],
-  "css": ["assets/content.css"],
+      "js": ["assets/content.js"],
+      "css": ["assets/tailwind.css"],
       "run_at": "document_idle"
     }
   ],
