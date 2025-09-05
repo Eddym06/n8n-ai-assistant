@@ -1,0 +1,18 @@
+[
+  {
+    "original_filename": "1084_Sse_Automation_Triggered.json",
+    "title": "Sse: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Sse"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática"
+    ]
+  }
+]

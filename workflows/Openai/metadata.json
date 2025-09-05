@@ -1,0 +1,230 @@
+[
+  {
+    "original_filename": "0248_Openai_Telegram_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Telegram AI-bot uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Set.",
+    "services": [
+      "Set",
+      "Openai",
+      "Switch",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "fusión",
+      "merge",
+      "openai",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0334_Openai_Form_Create_Triggered.json",
+    "title": "Form: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "This n8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Form",
+      "Openai",
+      "Stickynote",
+      "Merge",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "form",
+      "fusión",
+      "google",
+      "googlesheets",
+      "merge",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0464_Openai_Form_Create_Webhook.json",
+    "title": "Form: Recepción de webhook (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Form",
+      "Webhook",
+      "Openai",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "form",
+      "nombre",
+      "openai",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0785_Openai_Twitter_Create.json",
+    "title": "Twitter: Lectura de datos (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Twitter",
+      "If",
+      "Openai",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "datos",
+      "google",
+      "googlesheets",
+      "lectura",
+      "nombre",
+      "openai",
+      "sheets",
+      "twitter"
+    ]
+  },
+  {
+    "original_filename": "1177_Openai_GoogleSheets_Create_Triggered.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Openai",
+      "Stickynote",
+      "Merge",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "google",
+      "googlesheets",
+      "leads",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "1256_Openai_Form_Automation_Triggered.json",
+    "title": "Form: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "This n8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Form",
+      "Openai",
+      "Stickynote",
+      "Merge",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "form",
+      "fusión",
+      "google",
+      "googlesheets",
+      "merge",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1618_Openai_GoogleSheets_Create_Triggered.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Openai",
+      "Stickynote",
+      "Merge",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "google",
+      "googlesheets",
+      "leads",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "1685_Openai_Telegram_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Telegram AI-bot uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Set.",
+    "services": [
+      "Set",
+      "Openai",
+      "Switch",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "fusión",
+      "merge",
+      "openai",
+      "stickynote"
+    ]
+  }
+]

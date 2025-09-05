@@ -1,0 +1,653 @@
+[
+  {
+    "original_filename": "0004_GoogleSheets_Typeform_Automate_Triggered.json",
+    "title": "Typeform: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Typeform",
+      "If",
+      "Set",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "feedback",
+      "google",
+      "googlesheets",
+      "sheets",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "0035_GoogleSheets_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "google",
+      "googlesheets",
+      "nombre",
+      "recepción",
+      "sheets",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0082_GoogleSheets_Interval_Process_Scheduled.json",
+    "title": "Dropbox: Activación automática (4 pasos)",
+    "description": "The n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Dropbox",
+      "Interval",
+      "Spreadsheetfile",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automática",
+      "dropbox",
+      "google",
+      "googlesheets",
+      "interval",
+      "nombre",
+      "sheets",
+      "spreadsheetfile"
+    ]
+  },
+  {
+    "original_filename": "0222_GoogleSheets_Readbinaryfile_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Movebinarydata",
+      "Readbinaryfile",
+      "Google Sheets"
+    ],
+    "actions": [],
+    "keywords": [
+      "google",
+      "googlesheets",
+      "movebinarydata",
+      "nombre",
+      "readbinaryfile",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0234_GoogleSheets_Cron_Create_Scheduled.json",
+    "title": "MySQL: Ejecución programada (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "MySQL",
+      "Cron",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "google",
+      "googlesheets",
+      "mysql",
+      "nombre",
+      "programada",
+      "scheduled",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0235_GoogleSheets_Cron_Automation_Scheduled.json",
+    "title": "MySQL: Ejecución programada (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "MySQL",
+      "Cron",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "google",
+      "googlesheets",
+      "mysql",
+      "nombre",
+      "programada",
+      "scheduled",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0237_GoogleSheets_Spreadsheetfile_Create_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Webhook",
+      "Spreadsheetfile",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "google",
+      "googlesheets",
+      "nombre",
+      "recepción",
+      "sheets",
+      "spreadsheetfile",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0238_GoogleSheets_Respondtowebhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Function",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "function",
+      "google",
+      "googlesheets",
+      "nombre",
+      "recepción",
+      "sheets",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0256_GoogleSheets_Readbinaryfile_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Movebinarydata",
+      "Readbinaryfile",
+      "Google Sheets"
+    ],
+    "actions": [],
+    "keywords": [
+      "google",
+      "googlesheets",
+      "movebinarydata",
+      "nombre",
+      "readbinaryfile",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0314_GoogleSheets_Discord_Create_Triggered.json",
+    "title": "Discord: Activación automática (4 pasos)",
+    "description": "Este workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Discord.",
+    "services": [
+      "Discord",
+      "Stickynote",
+      "Code",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "discord",
+      "envío",
+      "google",
+      "googlesheets"
+    ]
+  },
+  {
+    "original_filename": "0496_GoogleSheets_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "google",
+      "googlesheets",
+      "nombre",
+      "recepción",
+      "sheets",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0635_GoogleSheets_Webflow_Create_Triggered.json",
+    "title": "Webflow: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webflow",
+      "Stickynote",
+      "Code",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "google",
+      "googlesheets",
+      "nombre",
+      "sheets",
+      "stickynote",
+      "webflow"
+    ]
+  },
+  {
+    "original_filename": "0736_GoogleSheets_Slack_Send_Triggered.json",
+    "title": "Emailsend: Activación automática (5 pasos)",
+    "description": "Business Automation Workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Emailsend",
+      "If",
+      "Slack",
+      "Typeform",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "google",
+      "googlesheets",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0812_GoogleSheets_GoogleDrive_Automate_Triggered.json",
+    "title": "Google Drive: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Google Drive",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "drive",
+      "google",
+      "googledrive",
+      "googlesheets",
+      "nombre",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0814_GoogleSheets_Gmail_Send_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "If",
+      "Gmail",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "email",
+      "envío",
+      "gmail",
+      "google",
+      "googlesheets",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0818_GoogleSheets_Respondtowebhook_Import_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "datos",
+      "google",
+      "googlesheets",
+      "lectura",
+      "nombre",
+      "recepción",
+      "sheets",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0837_GoogleSheets_Gmail_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Google Drive",
+      "Function",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Creación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "división",
+      "drive",
+      "function"
+    ]
+  },
+  {
+    "original_filename": "0927_GoogleSheets_Slack_Send_Triggered.json",
+    "title": "Emailsend: Activación automática (5 pasos)",
+    "description": "Business Automation Workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Emailsend",
+      "If",
+      "Slack",
+      "Typeform",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "google",
+      "googlesheets",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0950_GoogleSheets_Slack_Send_Triggered.json",
+    "title": "Emailsend: Activación automática (5 pasos)",
+    "description": "Business Automation Workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Emailsend",
+      "If",
+      "Slack",
+      "Typeform",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "google",
+      "googlesheets",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0974_GoogleSheets_Telegram_Export_Triggered.json",
+    "title": "Telegram: Activación automática (3 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Telegram y integra 3 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Telegram",
+      "Functionitem",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "functionitem",
+      "google",
+      "googlesheets",
+      "journal",
+      "lectura",
+      "reply"
+    ]
+  },
+  {
+    "original_filename": "1106_GoogleSheets_Cron_Automate_Scheduled.json",
+    "title": "Cron: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Cron",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "google",
+      "googlesheets",
+      "nombre",
+      "programada",
+      "scheduled",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "1153_GoogleSheets_Orbit_Automation.json",
+    "title": "Merge: Fusión de datos (Workflow avanzado - 6 pasos)",
+    "description": "Workflow que fusión de datos utilizando Merge y integra 3 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Merge",
+      "Orbit",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "datos",
+      "fusión",
+      "google",
+      "googlesheets",
+      "lectura",
+      "merge",
+      "metrics",
+      "moving",
+      "orbit",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "1188_GoogleSheets_Emailreadimap_Create.json",
+    "title": "Emailreadimap: Envío de email automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que crea registros en Emailreadimap y integra 5 servicios, utiliza 6 nodos.",
+    "services": [
+      "Emailreadimap",
+      "Set",
+      "If",
+      "Mindee",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Envío de email"
+    ],
+    "keywords": [
+      "email",
+      "emailreadimap",
+      "emails",
+      "envío",
+      "expenses",
+      "extract",
+      "google",
+      "googlesheets",
+      "mindee",
+      "sheet"
+    ]
+  },
+  {
+    "original_filename": "1661_GoogleSheets_Stickynote_Monitor_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 10 nodos.",
+    "services": [
+      "Stickynote",
+      "Executeworkflow",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "chat",
+      "executeworkflow",
+      "expense",
+      "google",
+      "googlesheets",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "1833_GoogleSheets_Gmail_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "Add new incoming emails to a Google Sheets spreadsheet as a new row. This n8n workflow uses 4 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "emails",
+      "gmail",
+      "google",
+      "googlesheets",
+      "incoming",
+      "sheets",
+      "spreadsheet"
+    ]
+  },
+  {
+    "original_filename": "1860_GoogleSheets_Gmail_Automation_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Set",
+      "Gmail",
+      "Webhook",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de email"
+    ],
+    "keywords": [
+      "classification",
+      "contact",
+      "email",
+      "envío",
+      "form",
+      "gmail",
+      "google",
+      "googlesheets",
+      "recepción",
+      "responses"
+    ]
+  }
+]

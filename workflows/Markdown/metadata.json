@@ -1,0 +1,88 @@
+[
+  {
+    "original_filename": "1240_Markdown_Stickynote_Send.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "Set",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "datos",
+      "email",
+      "emailreadimap",
+      "emailsend",
+      "envío",
+      "human",
+      "imap",
+      "loop"
+    ]
+  },
+  {
+    "original_filename": "1540_Markdown_Stickynote_Automation_Webhook.json",
+    "title": "Markdown: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Airtable is a web-based tool that automates business processes. It uses a series of nodes to connect different parts of the business. The nodes are connected by a network of computers.",
+    "services": [
+      "Markdown",
+      "If",
+      "Airtable",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "airtable",
+      "datos",
+      "html",
+      "lectura",
+      "markdown",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1571_Markdown_Stickynote_Send.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "Set",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "datos",
+      "email",
+      "emailreadimap",
+      "emailsend",
+      "envío",
+      "human",
+      "imap",
+      "loop"
+    ]
+  }
+]

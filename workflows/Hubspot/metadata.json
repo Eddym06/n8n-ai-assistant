@@ -1,0 +1,187 @@
+[
+  {
+    "original_filename": "0115_HubSpot_Clearbit_Update_Triggered.json",
+    "title": "Clearbit: Activación automática (4 pasos)",
+    "description": "Business Automation Workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Integra con Clearbit.",
+    "services": [
+      "Clearbit",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "clearbit",
+      "datos",
+      "hubspot",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0129_HubSpot_Cron_Update_Scheduled.json",
+    "title": "Pipedrive: Fusión de datos (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Pipedrive",
+      "Merge",
+      "HubSpot",
+      "Cron"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "cron",
+      "datos",
+      "ejecución",
+      "fusión",
+      "hubspot",
+      "merge",
+      "nombre",
+      "pipedrive",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0130_HubSpot_Cron_Automate_Scheduled.json",
+    "title": "Pipedrive: Fusión de datos (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Pipedrive",
+      "Merge",
+      "HubSpot",
+      "Cron"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "ejecución",
+      "fusión",
+      "hubspot",
+      "merge",
+      "nombre",
+      "pipedrive",
+      "programada",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0243_HubSpot_Mailchimp_Create_Scheduled.json",
+    "title": "HubSpot: Lectura de datos (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HubSpot",
+      "Cron",
+      "MailChimp"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "hubspot",
+      "lectura",
+      "mailchimp",
+      "nombre",
+      "programada",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0244_HubSpot_Mailchimp_Create_Scheduled.json",
+    "title": "MailChimp: Lectura de datos (5 pasos)",
+    "description": "Tarea programada que ejecuta lectura de datos periódicamente y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "MailChimp",
+      "HubSpot",
+      "Functionitem",
+      "Cron"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "functionitem",
+      "hubspot",
+      "lectura",
+      "mailchimp",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0920_HubSpot_Splitout_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 31 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest",
+      "listado",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1081_HubSpot_Automate_Triggered.json",
+    "title": "HubSpot: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "hubspot",
+      "nombre"
+    ]
+  }
+]

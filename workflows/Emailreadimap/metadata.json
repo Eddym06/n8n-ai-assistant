@@ -1,0 +1,222 @@
+[
+  {
+    "original_filename": "0134_Emailreadimap_Nextcloud_Send.json",
+    "title": "Emailreadimap: Envío de email automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Emailreadimap",
+      "Function",
+      "Nextcloud"
+    ],
+    "actions": [
+      "Envío de email"
+    ],
+    "keywords": [
+      "email",
+      "emailreadimap",
+      "envío",
+      "function",
+      "nextcloud",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1050_Emailreadimap_Send.json",
+    "title": "Emailreadimap: Envío de email automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Emailreadimap"
+    ],
+    "actions": [
+      "Envío de email"
+    ],
+    "keywords": [
+      "email",
+      "emailreadimap",
+      "envío",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1277_Emailreadimap_Manual_Send_Webhook.json",
+    "title": "Email AI Auto-responder. Summerize and send email - Emailreadimap",
+    "description": "Email AI Auto-responder uses 26 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Emailreadimap.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "HTTP Request",
+      "Markdown",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "auto",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "email",
+      "emailreadimap",
+      "emailsend"
+    ]
+  },
+  {
+    "original_filename": "1284_Emailreadimap_Markdown_Send.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "Set",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "approval",
+      "automática",
+      "autoresponder",
+      "datos",
+      "email",
+      "emailreadimap",
+      "emailsend",
+      "envío",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1427_Emailreadimap_Manual_Send_Webhook.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 31 pasos)",
+    "description": "Effortless Email Management with AI uses 31 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks. Integra con Emailreadimap.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "HTTP Request",
+      "Set",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "effortless",
+      "email",
+      "emailreadimap",
+      "emailsend"
+    ]
+  },
+  {
+    "original_filename": "1588_Emailreadimap_Markdown_Send.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "Set",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "approval",
+      "automática",
+      "autoresponder",
+      "datos",
+      "email",
+      "emailreadimap",
+      "emailsend",
+      "envío",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1936_Emailreadimap_Manual_Send_Webhook.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 31 pasos)",
+    "description": "Effortless Email Management with AI uses 31 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks. Integra con Emailreadimap.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "HTTP Request",
+      "Set",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "effortless",
+      "email",
+      "emailreadimap",
+      "emailsend"
+    ]
+  },
+  {
+    "original_filename": "1962_Emailreadimap_Manual_Send_Webhook.json",
+    "title": "Email AI Auto-responder. Summerize and send email - Emailreadimap",
+    "description": "Email AI Auto-responder uses 26 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Emailreadimap.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "HTTP Request",
+      "Markdown",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "auto",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "email",
+      "emailreadimap",
+      "emailsend"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "original_filename": "0009_Process.json",
+    "title": "Function: Fusión de datos (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Function",
+      "Merge"
+    ],
+    "actions": [
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "datos",
+      "function",
+      "fusión",
+      "merge",
+      "nombre"
+    ]
+  }
+]

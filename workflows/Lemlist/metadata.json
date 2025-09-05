@@ -1,0 +1,93 @@
+[
+  {
+    "original_filename": "0283_Lemlist_Slack_Create_Webhook.json",
+    "title": "Lemlist: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Lemlist y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Lemlist",
+      "HTTP Request",
+      "Openai",
+      "Slack",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Lectura de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura",
+      "lemlist"
+    ]
+  },
+  {
+    "original_filename": "0504_Lemlist_Slack_Create_Webhook.json",
+    "title": "Lemlist: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Lemlist y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Lemlist",
+      "HTTP Request",
+      "Markdown",
+      "Slack",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "lemlist",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1382_Lemlist_Slack_Automate_Webhook.json",
+    "title": "Lemlist: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Lemlist y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Lemlist",
+      "HTTP Request",
+      "Markdown",
+      "Slack",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "lemlist",
+      "listado"
+    ]
+  }
+]

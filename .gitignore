@@ -1,0 +1,14 @@
+dist/
+node_modules/
+.DS_Store
+*.log
+*.tgz
+*.zip
+*.tmp
+*.orig
+coverage/
+.vscode/
+.idea/
+*.local
+*.env
+package-lock.json

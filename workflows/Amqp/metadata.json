@@ -1,0 +1,24 @@
+[
+  {
+    "original_filename": "0138_Amqp_Send_Triggered.json",
+    "title": "Receive messages for an ActiveMQ queue via AMQP Trigger",
+    "description": "Automatización que se activa cuando ocurren eventos en Amqp.",
+    "services": [
+      "Amqp"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "activemq",
+      "amqp",
+      "automated",
+      "automática",
+      "messages",
+      "queue",
+      "receive",
+      "trigger"
+    ]
+  }
+]

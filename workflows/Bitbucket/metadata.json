@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0999_Bitbucket_Automate_Triggered.json",
+    "title": "Bitbucket: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Bitbucket"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "bitbucket",
+      "nombre"
+    ]
+  }
+]

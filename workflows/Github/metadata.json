@@ -1,0 +1,239 @@
+[
+  {
+    "original_filename": "0135_GitHub_Cron_Create_Scheduled.json",
+    "title": "Cron: Fusión de datos (Workflow avanzado - 6 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Cron",
+      "Gitlab",
+      "Function",
+      "Merge",
+      "Github"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada",
+      "Listado de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "function",
+      "fusión",
+      "github",
+      "gitlab",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0264_GitHub_Stickynote_Create_Triggered.json",
+    "title": "If: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "If",
+      "Function",
+      "Switch",
+      "Stickynote",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Creación de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "eliminación",
+      "filtrado",
+      "function",
+      "nombre",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "0289_GitHub_Stickynote_Update_Triggered.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "Homeassistant",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "github",
+      "homeassistant",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0876_GitHub_Aggregate_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Agregación de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0973_GitHub_Slack_Create_Triggered.json",
+    "title": "If: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "If",
+      "Slack",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "github",
+      "nombre",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "0997_GitHub_Automate_Triggered.json",
+    "title": "Github: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Github"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "github",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1068_GitHub_Slack_Automation_Triggered.json",
+    "title": "Slack: Activación automática",
+    "description": "Automatización que se activa cuando ocurren eventos en Slack y integra 2 servicios.",
+    "services": [
+      "Slack",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "extranet",
+      "github",
+      "releases",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "1149_GitHub_Manual_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "Manual",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Ejecución programada",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "function",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1988_GitHub_Manual_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Restore workflows from GitHub to n8n. Use 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules.",
+    "services": [
+      "Set",
+      "If",
+      "Manual",
+      "N8N",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "fusión",
+      "github",
+      "lectura",
+      "manual",
+      "restore"
+    ]
+  }
+]

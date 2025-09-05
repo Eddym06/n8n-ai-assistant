@@ -1,0 +1,5920 @@
+[
+  {
+    "original_filename": "0318_Splitout_Limit_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0322_Splitout_Code_Send_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Business Automation Workflow uses 18 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Code.",
+    "services": [
+      "Code",
+      "Splitout",
+      "Manual",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "envío",
+      "gmail",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0339_Splitout_Code_Update_Webhook.json",
+    "title": "Printify Automation - Update Title and Description - AlexK1919 - HTTP Request",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automation",
+      "automática",
+      "code",
+      "datos",
+      "description",
+      "división",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0386_Splitout_Filter_Update_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0418_Splitout_Filter_Export_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0421_Splitout_Schedule_Import_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Splitout",
+      "Filter",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0428_Splitout_GoogleCalendar_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0429_Splitout_GoogleCalendar_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "0433_Splitout_Webhook_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "If",
+      "Filter",
+      "Xml"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0434_Splitout_Webhook_Automation_Webhook.json",
+    "title": "Removeduplicates: Recepción de webhook (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "removeduplicates"
+    ]
+  },
+  {
+    "original_filename": "0435_Splitout_Filter_Create_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0442_Splitout_Schedule_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Rssfeedread",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "nombre",
+      "programación",
+      "rssfeedread"
+    ]
+  },
+  {
+    "original_filename": "0445_Splitout_Code_Import_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0449_Splitout_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Filter"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "agregación",
+      "creación",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "0452_Splitout_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Xml",
+      "Aggregate"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "aggregate",
+      "agregación",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "0457_Splitout_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "División de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0459_Splitout_Webhook_Update_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "request",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "0468_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "form",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0500_Splitout_Schedule_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Splitout",
+      "Markdown",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "División de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "envío",
+      "gmail",
+      "http",
+      "httprequest",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "0503_Splitout_Code_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Spotify",
+      "Splitout",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0512_Splitout_Code_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Agregación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0520_Splitout_Filter_Create_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0528_Splitout_GoogleCalendar_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Splitout",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "filtrado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0530_Splitout_GoogleCalendar_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0532_Splitout_Elasticsearch_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. It is designed to eliminate manual tasks by connecting different business systems. It can be used to streamline business processes and improve efficiency.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "editimage",
+      "filtrado",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0554_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 42 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0555_Splitout_Code_Export_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0556_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "This n8n workflow uses 36 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0560_Splitout_Filter_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Workflow uses 26 interconnected nodes to streamline business processes. It uses a combination of software and hardware to make it easier to work with data. It can be used to make changes to existing systems. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Spotify",
+      "Splitout",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0562_Splitout_Filter_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "filtrado",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0570_Splitout_Datetime_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "eliminación",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0579_Splitout_Editimage_Update_Triggered.json",
+    "title": "Editimage: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Editimage y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Editimage",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "división",
+      "drive",
+      "editimage",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0587_Splitout_Filter_Send_Webhook.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emailreadimap",
+      "envío",
+      "filter",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "0607_Splitout_Aggregate_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "manual",
+      "nombre",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "0608_Splitout_Code_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0613_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Splitout",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0614_Splitout_Manual_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0618_Splitout_Code_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Spotify",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0625_Splitout_Code_Create_Triggered.json",
+    "title": "Sort: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Sort y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Sort",
+      "Set",
+      "Splitout",
+      "Code",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "form",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0634_Splitout_Manual_Export_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "N8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0638_Splitout_Redis_Create_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Form",
+      "If",
+      "Crypto"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "crypto",
+      "datos",
+      "división",
+      "envío",
+      "form",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0643_Splitout_Snowflake_Import_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "companies",
+      "creación",
+      "datos",
+      "división",
+      "features",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0645_Splitout_Code_Sync_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "date",
+      "datos",
+      "división",
+      "feature",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0649_Splitout_GoogleCalendar_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 61 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0650_Splitout_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Subida de archivos (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Subida de archivos",
+      "Recepción de webhook",
+      "División de datos",
+      "Creación de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "archivos",
+      "creación",
+      "datos",
+      "descarga",
+      "división",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0652_Splitout_Schedule_Create_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "HTTP Request",
+      "Splitout",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0654_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 34 pasos)",
+    "description": "This n8n workflow uses 34 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Form",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "0657_Splitout_Schedule_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0659_Splitout_Schedule_Create_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Schedule",
+      "Splitout",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0663_Splitout_Schedule_Update_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Workflow uses 19 interconnected nodes to streamline business processes. Workflow uses a combination of human and machine control to make it easier to manage data and processes. Integra con Removeduplicates.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Envío de notificación",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "envío",
+      "lectura",
+      "nombre",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "0664_Splitout_Limit_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0680_Splitout_HTTP_Send_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Splitout",
+      "Markdown",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "0698_Splitout_Code_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. This way, business processes can be carried out without human intervention. Integra con Extractfromfile.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Splitout",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "drive",
+      "extractfromfile",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0699_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 45 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0712_Splitout_Code_Update_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Schedule",
+      "Sort",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de notificación",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "emailsend",
+      "envío",
+      "filtrado",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0714_Splitout_Zendesk_Update_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "This n8n workflow uses 26 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks and ensures consistent data flow.",
+    "services": [
+      "Extractfromfile",
+      "Splitout",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "extractfromfile",
+      "google",
+      "googledrive"
+    ]
+  },
+  {
+    "original_filename": "0724_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Stickynote",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0725_Splitout_Code_Update_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Splitout",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0730_Splitout_Noop_Send_Triggered.json",
+    "title": "Splitout: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Workflow uses 8 interconnected nodes to streamline business processes. Workflow uses Google Drive, Google Play, and Google Play Services. Workflows are designed to eliminate human involvement in business operations.",
+    "services": [
+      "Splitout",
+      "Gmail",
+      "Google Drive",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Envío de notificación"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "envío",
+      "gmail",
+      "google",
+      "googledrive"
+    ]
+  },
+  {
+    "original_filename": "0731_Splitout_Limit_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Workflow uses 22 interconnected nodes to streamline business processes. Workflow uses a combination of human and machine control. Workflows can be used to create new products and services. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Manual",
+      "If",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0740_Splitout_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 31 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0759_Splitout_Comparedatasets_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "lectura",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0760_Splitout_Code_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0772_Splitout_Filter_Process_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Transformación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "extractfromfile",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0774_Splitout_Code_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0780_Splitout_Filter_Process_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 51 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0790_Splitout_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0792_Splitout_Code_Monitor_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Splitout",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0793_Splitout_Code_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Splitout",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0797_Splitout_Code_Monitor_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Lectura de datos",
+      "División de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0798_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Manual",
+      "Readwritefile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0799_Splitout_Executecommand_Automate_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Business Automation Workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Executecommand"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "executecommand",
+      "manual",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "0810_Splitout_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0816_Splitout_Code_Automation_Scheduled.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 30 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Discord y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Discord",
+      "Removeduplicates",
+      "Schedule",
+      "Code",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "discord",
+      "división",
+      "filtrado",
+      "fusión",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0819_Splitout_Schedule_Create_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Sort",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "lectura",
+      "nombre",
+      "programación",
+      "removeduplicates",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "0832_Splitout_Limit_Create_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0833_Splitout_Schedule_Create_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0840_Splitout_HTTP_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Agregación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0846_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Sort",
+      "Code",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0854_Splitout_Filter_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Gmail",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "email",
+      "envío",
+      "filtrado",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0859_Splitout_Code_Create_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Schedule",
+      "Sort",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "emailsend",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0860_Splitout_Limit_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Html"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "html",
+      "http",
+      "httprequest",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0877_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 44 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0883_Splitout_Code_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0894_Splitout_Redis_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 46 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Redis",
+      "If",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "eliminación",
+      "filter",
+      "filtrado",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0895_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Splitout",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0899_Splitout_GoogleCalendar_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0902_Splitout_Code_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0913_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0915_Splitout_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 46 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0919_Splitout_Extractfromfile_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "This n8n workflow uses 21 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "extractfromfile",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "0921_Splitout_Code_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 47 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Splitout",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0923_Splitout_Code_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Microsoftteams",
+      "Set",
+      "Code",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "envío",
+      "fusión",
+      "markdown",
+      "microsoftteams"
+    ]
+  },
+  {
+    "original_filename": "0958_Splitout_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Fusión de datos",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chaining",
+      "datos",
+      "división",
+      "examples",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1058_Splitout_Code_Import_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "comments",
+      "datos",
+      "división",
+      "facebook",
+      "filter",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1059_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "citation",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "file"
+    ]
+  },
+  {
+    "original_filename": "1143_Splitout_Filter_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1146_Splitout_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 66 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "enrichment",
+      "envío",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1147_Splitout_GitHub_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "credentials",
+      "datos",
+      "división",
+      "extractfromfile",
+      "github",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1169_Splitout_Code_Import_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 58 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1243_Splitout_Limit_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Html"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "html",
+      "http",
+      "httprequest",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1258_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 45 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1260_Splitout_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "N8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1283_Splitout_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "División de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1297_Splitout_GoogleCalendar_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1306_Splitout_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Splitout",
+      "If",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "face",
+      "http",
+      "httprequest",
+      "hugging",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "1323_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Rssfeedread",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "auto",
+      "automated",
+      "automática",
+      "blog",
+      "code",
+      "datos",
+      "división",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1325_Splitout_Limit_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1329_Splitout_Editimage_Automate_Triggered.json",
+    "title": "Editimage: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Editimage y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Editimage",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "división",
+      "drive",
+      "editimage",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1332_Splitout_Zendesk_Send_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "This n8n workflow uses 26 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks and ensures consistent data flow.",
+    "services": [
+      "Extractfromfile",
+      "Splitout",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "extractfromfile",
+      "google",
+      "googledrive"
+    ]
+  },
+  {
+    "original_filename": "1333_Splitout_GoogleCalendar_Automate_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 61 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1343_Splitout_Editimage_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Este workflows uses 16 interconnected nodes to streamline business processes. El workflows are designed to eliminate the need for humans to perform certain tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "advanced",
+      "archivos",
+      "automated",
+      "automática",
+      "background",
+      "datos",
+      "división",
+      "drive",
+      "editimage"
+    ]
+  },
+  {
+    "original_filename": "1344_Splitout_Filter_Automation_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1352_Splitout_Filter_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 50 pasos)",
+    "description": "The BambooHR AI-Powered Company Policies and Benefits Chatbot uses 50 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Bamboohr",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "bamboohr",
+      "benefits",
+      "chatbot",
+      "company",
+      "datos",
+      "división",
+      "filter"
+    ]
+  },
+  {
+    "original_filename": "1355_Splitout_Webhook_Automate_Webhook.json",
+    "title": "Automatización HTTP Request: Activación automática activada por evento (Workflow avan",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "application",
+      "automated",
+      "automática",
+      "chanel",
+      "chatbot",
+      "datos",
+      "división",
+      "example",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1363_Splitout_GitHub_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "RAG Chatbot uses 27 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. It processes data according to defined rules, and perform actions without human intervention. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "building",
+      "chatbot",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1381_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "request",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "1388_Splitout_Redis_Automation_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Form",
+      "If",
+      "Crypto"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "crypto",
+      "datos",
+      "división",
+      "envío",
+      "form",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1398_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1403_Splitout_Datetime_Send_Webhook.json",
+    "title": "Send Emails from Obsidian - Set",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "If",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "División de datos",
+      "Envío de email",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "agregación",
+      "datos",
+      "división",
+      "email",
+      "emails",
+      "envío",
+      "gmail",
+      "lectura",
+      "obsidian",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "1407_Splitout_Schedule_Automation_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Schedule",
+      "Splitout",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1408_Splitout_Code_Monitor_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Splitout",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1412_Splitout_Code_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "google",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1425_Splitout_Elasticsearch_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. It is designed to eliminate manual tasks by connecting different business systems. It can be used to streamline business processes and improve efficiency.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "editimage",
+      "filtrado",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1437_Splitout_Code_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 44 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Splitout",
+      "Form",
+      "Crypto"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "crypto",
+      "datos",
+      "división",
+      "extractor"
+    ]
+  },
+  {
+    "original_filename": "1443_Splitout_Extractfromfile_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Gmail",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "details",
+      "división",
+      "envío",
+      "extract",
+      "extractfromfile",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1451_Splitout_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Este workflow uses 11 interconnected nodes to automate business processes. El workflows are designed to reduce the need for humans to perform certain tasks. Este workflow was created to help businesses with their IT infrastructure. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Splitout",
+      "If",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "face",
+      "http",
+      "httprequest",
+      "hugging",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "1454_Splitout_Schedule_Import_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Splitout",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "blog",
+      "collections",
+      "datos",
+      "división",
+      "event",
+      "fetch",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1459_Splitout_Converttofile_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "generation",
+      "http",
+      "httprequest",
+      "image",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1463_Splitout_Code_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set",
+      "Summarize"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analysis",
+      "automated",
+      "automática",
+      "chatbot",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1468_Splitout_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "channel",
+      "code",
+      "datos",
+      "división",
+      "hoarder",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1471_Splitout_Aggregate_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "manual",
+      "nombre",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "1489_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "hiring",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1495_Splitout_Limit_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "documents",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1499_Splitout_Filter_Monitor_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Manual",
+      "Filter",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "check",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1531_Splitout_Comparedatasets_Sync_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "entra",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1542_Splitout_HTTP_Create_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Splitout",
+      "Markdown",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1548_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "citation",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "file"
+    ]
+  },
+  {
+    "original_filename": "1556_Splitout_Code_Monitor_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Spotify",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1559_Splitout_Code_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analysis",
+      "automate",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "drive",
+      "extraction"
+    ]
+  },
+  {
+    "original_filename": "1560_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Eliminación de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "business",
+      "central",
+      "code",
+      "datos",
+      "división",
+      "eliminación",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1564_Splitout_Manual_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "búsqueda",
+      "companies",
+      "datos",
+      "división",
+      "filtrado",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1585_Splitout_Code_Update_Webhook.json",
+    "title": "Printify Automation - Update Title and Description - AlexK1919 - HTTP Request",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automation",
+      "automática",
+      "code",
+      "datos",
+      "description",
+      "división",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1591_Splitout_Code_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "auto",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "dependency",
+      "división",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1603_Splitout_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Vision-Based AI Agent Scraper - with Google Sheets, ScrapingBee, and Gemini. Uses 29 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "based",
+      "creación",
+      "datos",
+      "división",
+      "gemini",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1625_Splitout_Schedule_Monitor_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "HTTP Request",
+      "Splitout",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "community",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1627_Splitout_Code_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Splitout",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "aware",
+      "chunking",
+      "code",
+      "context",
+      "datos",
+      "división",
+      "drive"
+    ]
+  },
+  {
+    "original_filename": "1637_Splitout_Code_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. This way, business processes can be carried out without human intervention. Integra con Extractfromfile.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Splitout",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "drive",
+      "extractfromfile",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1642_Splitout_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "find",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1647_Splitout_Limit_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1648_Splitout_Converttofile_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Sort",
+      "Splitout",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "books",
+      "clean",
+      "datos",
+      "división",
+      "dumpling",
+      "email",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1657_Splitout_Schedule_Monitor_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Workflow uses 19 interconnected nodes to streamline business processes. Workflow uses a combination of human and machine control to make it easier to manage data and processes. Integra con Removeduplicates.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Envío de notificación",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "envío",
+      "lectura",
+      "nombre",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "1658_Splitout_Schedule_Monitor_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Workflow uses 19 interconnected nodes to streamline business processes. Workflow uses a combination of human and machine control to make it easier to manage data and processes. Integra con Removeduplicates.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Envío de notificación",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "envío",
+      "lectura",
+      "nombre",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "1660_Splitout_HTTP_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "executeworkflow",
+      "generate",
+      "http",
+      "httprequest",
+      "keywords"
+    ]
+  },
+  {
+    "original_filename": "1678_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 42 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1721_Splitout_Manual_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Envío de notificación",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automate",
+      "automated",
+      "automática",
+      "bright",
+      "búsqueda",
+      "data",
+      "datos",
+      "división",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1731_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 48 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "anomaly",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "crops",
+      "dataset",
+      "datos",
+      "detection"
+    ]
+  },
+  {
+    "original_filename": "1742_Splitout_Nocodb_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Nocodb"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Búsqueda de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "collector",
+      "datos",
+      "descarga",
+      "división",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1748_Splitout_Code_Automation_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de notificación",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "emailsend",
+      "envío",
+      "estate",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1753_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "form",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1757_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "This n8n workflow uses 15 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos",
+      "Descarga de archivos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "archivos",
+      "automated",
+      "automática",
+      "bluesky",
+      "code",
+      "creación",
+      "datos",
+      "descarga"
+    ]
+  },
+  {
+    "original_filename": "1760_Splitout_GitHub_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "GitHub Workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "extractfromfile",
+      "github",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1774_Splitout_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Manual",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "business",
+      "búsqueda",
+      "datos",
+      "división",
+      "dumpling",
+      "extract",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1780_Splitout_Schedule_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Splitout",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Transformación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "baserow",
+      "datos",
+      "división",
+      "lectura",
+      "order",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1783_Splitout_Postgres_Automation_Triggered.json",
+    "title": "PostgreSQL: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en PostgreSQL y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "PostgreSQL",
+      "Set",
+      "Splitout",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "email",
+      "embeddings",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1784_Splitout_Filter_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Business Automation Workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Set.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Form",
+      "Filter",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "dynamic",
+      "filter",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1787_Splitout_Code_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "AI T-Shirt Redesign Workflow from any Mockup Image. Workflow uses 12 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "image",
+      "mockup"
+    ]
+  },
+  {
+    "original_filename": "1790_Splitout_Summarize_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Summarize",
+      "Splitinbatches",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "compare",
+      "datos",
+      "división",
+      "easily",
+      "google",
+      "llms"
+    ]
+  },
+  {
+    "original_filename": "1798_Splitout_GitHub_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "RAG Chatbot uses 27 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. It processes data according to defined rules, and perform actions without human intervention. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "building",
+      "chatbot",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1824_Splitout_Schedule_Import_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "google",
+      "http",
+      "httprequest",
+      "manual",
+      "orders"
+    ]
+  },
+  {
+    "original_filename": "1830_Splitout_Filter_Create_Webhook.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emailreadimap",
+      "envío",
+      "filter",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1831_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "analysis",
+      "automated",
+      "automática",
+      "code",
+      "comment",
+      "creación",
+      "datos",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "1834_Splitout_Code_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 44 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Splitout",
+      "Form",
+      "Crypto"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "crypto",
+      "datos",
+      "división",
+      "extractor"
+    ]
+  },
+  {
+    "original_filename": "1840_Splitout_Filter_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 50 pasos)",
+    "description": "The BambooHR AI-Powered Company Policies and Benefits Chatbot uses 50 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Bamboohr",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "bamboohr",
+      "benefits",
+      "chatbot",
+      "company",
+      "datos",
+      "división",
+      "filter"
+    ]
+  },
+  {
+    "original_filename": "1880_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "hiring",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1888_Splitout_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1889_Splitout_Comparedatasets_Sync_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "contacts",
+      "creación",
+      "datos",
+      "división",
+      "entra",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1898_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Code",
+      "Airtable"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "agregación",
+      "airtable",
+      "amazon",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "keywords",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1903_Splitout_Googledocs_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Googledocs"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "best",
+      "comparison",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "find"
+    ]
+  },
+  {
+    "original_filename": "1915_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 48 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "anomaly",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "crops",
+      "dataset",
+      "datos",
+      "detection"
+    ]
+  },
+  {
+    "original_filename": "1930_Splitout_Code_Automate_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 34 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Splitout",
+      "Slack",
+      "Nocodb"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de notificación",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "automation",
+      "code",
+      "datos",
+      "división",
+      "envío",
+      "fusión",
+      "keyword",
+      "marketer",
+      "nocodb",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "1934_Splitout_Schedule_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Rssfeedread"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "gmail",
+      "markdown",
+      "newsletter"
+    ]
+  },
+  {
+    "original_filename": "1935_Splitout_Extractfromfile_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Gmail",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "details",
+      "división",
+      "envío",
+      "extract",
+      "extractfromfile",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1937_Splitout_Limit_Automation_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Set",
+      "Splitout",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "bright",
+      "data",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1943_Splitout_Editimage_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Este workflows uses 16 interconnected nodes to streamline business processes. El workflows are designed to eliminate the need for humans to perform certain tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "advanced",
+      "archivos",
+      "automated",
+      "automática",
+      "background",
+      "datos",
+      "división",
+      "drive",
+      "editimage"
+    ]
+  },
+  {
+    "original_filename": "1946_Splitout_Webhook_Import_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "If"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "code",
+      "copy",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "info",
+      "lectura",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "1970_Splitout_Manual_Sync_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "google",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1980_Splitout_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Rssfeedread",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "auto",
+      "automated",
+      "automática",
+      "blog",
+      "code",
+      "datos",
+      "división",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1983_Splitout_Converttofile_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "chatgpt",
+      "copy",
+      "datos",
+      "demo",
+      "división",
+      "drive"
+    ]
+  },
+  {
+    "original_filename": "1993_Splitout_Code_Automation_Triggered.json",
+    "title": "Googletranslate: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googletranslate y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Googletranslate",
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "googletranslate",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "1998_Splitout_Postgres_Sync_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "PostgreSQL",
+      "Splitout",
+      "Stickynote",
+      "Comparedatasets"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "comparedatasets",
+      "datos",
+      "división",
+      "google",
+      "postgres",
+      "postgresql"
+    ]
+  },
+  {
+    "original_filename": "2016_Splitout_Noop_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "If",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "analyzer",
+      "automated",
+      "automática",
+      "comment",
+      "datos",
+      "división",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "2025_Splitout_Code_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Splitout",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "between",
+      "clone",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "2041_Splitout_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Vision-Based AI Agent Scraper - with Google Sheets, ScrapingBee, and Gemini. Uses 29 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "based",
+      "creación",
+      "datos",
+      "división",
+      "gemini",
+      "google"
+    ]
+  }
+]

@@ -1,0 +1,118 @@
+[
+  {
+    "original_filename": "0183_Strapi_Webhook_Automation_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "Strapi",
+      "If",
+      "Googlecloudnaturallanguage",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Fusión de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "datos",
+      "fusión",
+      "googlecloudnaturallanguage",
+      "nombre",
+      "recepción",
+      "strapi",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0584_Strapi_Splitout_Create_Webhook.json",
+    "title": "Webflow: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webflow y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Webflow",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Strapi"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1336_Strapi_Webhook_Automate_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "Strapi",
+      "If",
+      "Googlecloudnaturallanguage",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Fusión de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "datos",
+      "fusión",
+      "googlecloudnaturallanguage",
+      "nombre",
+      "recepción",
+      "strapi",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1434_Strapi_Splitout_Automation_Webhook.json",
+    "title": "Webflow: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webflow y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Webflow",
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Strapi"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Lectura de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "listado"
+    ]
+  }
+]

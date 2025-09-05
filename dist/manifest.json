@@ -1,0 +1,78 @@
+{
+  "manifest_version": 3,
+  "name": "Enhanced n8n AI Assistant",
+  "version": "1.0.0",
+  "description": "Inyecta un chat con IA en el editor de n8n para crear, modificar y depurar flujos con lenguaje natural.",
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_title": "Enhanced n8n AI Assistant",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/index.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png",
+    "256": "icons/icon256.png"
+  },
+  "permissions": [
+  "storage",
+  "notifications",
+  "activeTab",
+  "scripting"
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*",
+    "https://generativelanguage.googleapis.com/*",
+    "https://api.x.ai/*",
+    "https://api.github.com/*",
+    "http://localhost/*",
+    "https://localhost/*"
+  ],
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+  "*://*.n8n.cloud/workflow/*",
+  "*://*.n8n.io/workflow/*",
+  "*://*.n8n.cloud/workflows/*",
+  "*://*.n8n.io/workflows/*",
+  "http://localhost/workflow/*",
+  "https://localhost/workflow/*",
+  "http://localhost/*/workflow/*",
+  "https://localhost/*/workflow/*",
+  "http://localhost/workflows/*",
+  "https://localhost/workflows/*",
+  "http://localhost/*/workflows/*",
+  "https://localhost/*/workflows/*"
+      ],
+  "js": ["assets/content.js"],
+  "css": ["assets/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/pageBridge.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "n8n-ai-assistant@example.com",
+      "strict_min_version": "109.0"
+    }
+  }
+}

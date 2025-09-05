@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0822_Cron_Postgres_Automation_Scheduled.json",
+    "title": "Function: Ejecución programada (3 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 3 servicios.",
+    "services": [
+      "Function",
+      "Cron",
+      "PostgreSQL"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "data",
+      "ejecución",
+      "function",
+      "ingestion",
+      "postgres",
+      "postgresql",
+      "programada",
+      "scheduled"
+    ]
+  }
+]

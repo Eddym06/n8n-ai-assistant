@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "0623_Comparedatasets_Manual_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Spotify",
+      "Manual",
+      "YouTube",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "lectura",
+      "listado",
+      "manual",
+      "nombre",
+      "splitinbatches"
+    ]
+  }
+]

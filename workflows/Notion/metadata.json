@@ -1,0 +1,90 @@
+[
+  {
+    "original_filename": "0141_Notion_Webhook_Create_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Function",
+      "Webhook",
+      "Notion"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Fusión de datos",
+      "Envío de email",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "function",
+      "fusión",
+      "nombre",
+      "notion",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "0142_Notion_Webhook_Create_Webhook.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Function",
+      "Webhook",
+      "Notion"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Recepción de webhook",
+      "Envío de email",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "function",
+      "fusión",
+      "lectura",
+      "nombre",
+      "notion",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "0272_Notion_GoogleDrive_Create_Triggered.json",
+    "title": "Google Drive: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Google Drive",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "drive",
+      "google",
+      "googledrive",
+      "nombre"
+    ]
+  }
+]

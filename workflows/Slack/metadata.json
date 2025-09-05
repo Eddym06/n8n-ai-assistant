@@ -1,0 +1,488 @@
+[
+  {
+    "original_filename": "0008_Slack_Stripe_Create_Triggered.json",
+    "title": "On new Stripe Invoice Payment update Hubspot and notify the team in Slack",
+    "description": "Automatización que se activa cuando ocurren eventos en Slack y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Slack",
+      "If",
+      "HubSpot",
+      "Stripe"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "hubspot",
+      "invoice",
+      "notify",
+      "payment"
+    ]
+  },
+  {
+    "original_filename": "0109_Slack_Cron_Automate_Scheduled.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Set",
+      "Cron",
+      "If",
+      "Google Calendar",
+      "Function"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "calendar",
+      "cron",
+      "datos",
+      "ejecución",
+      "function",
+      "fusión",
+      "google",
+      "googlecalendar",
+      "nombre",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0124_Slack_Typeform_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Airtable",
+      "Slack",
+      "Typeform"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "airtable",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "listado",
+      "nombre",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "0176_Slack_Onfleet_Send_Triggered.json",
+    "title": "Onfleet: Activación automática",
+    "description": "Automatización que se activa cuando ocurren eventos en Onfleet y integra 2 servicios.",
+    "services": [
+      "Onfleet",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "driver",
+      "message",
+      "onfleet",
+      "signup",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "0423_Slack_Hunter_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Hunter",
+      "Form",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "email",
+      "envío",
+      "form",
+      "http",
+      "httprequest",
+      "hunter",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0552_Slack_Stickynote_Send_Webhook.json",
+    "title": "Stickynote: Recepción de webhook (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "Webhook",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "envío",
+      "nombre",
+      "recepción",
+      "slack",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0761_Slack_Comparedatasets_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Slack",
+      "Stickynote",
+      "Aggregate",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0940_Slack_Manual_Automation_Scheduled.json",
+    "title": "Cron: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Cron y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Cron",
+      "Manual",
+      "Google Drive",
+      "Function",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Ejecución programada",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "drive",
+      "ejecución",
+      "function",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1063_Slack_Graphql_Automation_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 4 servicios.",
+    "services": [
+      "Webhook",
+      "Function",
+      "Graphql",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "function",
+      "github",
+      "graphql",
+      "info",
+      "recepción",
+      "slack",
+      "user",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1082_Slack_Readbinaryfile_Create.json",
+    "title": "Emailreadimap: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "Automatización de correo electrónico que fusión de datos y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "Spreadsheetfile",
+      "Function",
+      "Slack"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "email",
+      "emailreadimap",
+      "emailsend",
+      "envío",
+      "function",
+      "fusión",
+      "nombre",
+      "slack",
+      "spreadsheetfile"
+    ]
+  },
+  {
+    "original_filename": "1172_Slack_HubSpot_Send_Triggered.json",
+    "title": "Onesimpleapi: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Onesimpleapi y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Onesimpleapi",
+      "If",
+      "Slack",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "check",
+      "contact",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "hubspot"
+    ]
+  },
+  {
+    "original_filename": "1191_Slack_Typeform_Automate_Triggered.json",
+    "title": "Typeform: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Typeform",
+      "Airtable",
+      "Slack",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "nombre",
+      "slack",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "1194_Slack_Emailreadimap_Create.json",
+    "title": "Emailreadimap: Envío de email automática (Workflow avanzado - 6 pasos)",
+    "description": "Sistema de notificaciones que envía alertas cuando envío de email y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "If",
+      "Mindee",
+      "Slack"
+    ],
+    "actions": [
+      "Envío de email",
+      "Envío de datos",
+      "Envío de notificación"
+    ],
+    "keywords": [
+      "datos",
+      "email",
+      "emailreadimap",
+      "emailsend",
+      "envío",
+      "invoice",
+      "mindee",
+      "notificación",
+      "notification",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "1318_Slack_Stickynote_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "If",
+      "Slack",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "email",
+      "envío",
+      "executeworkflow",
+      "human",
+      "slack",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1396_Slack_Stickynote_Automate_Webhook.json",
+    "title": "Stickynote: Recepción de webhook (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "Webhook",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "envío",
+      "nombre",
+      "recepción",
+      "slack",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1592_Slack_Stickynote_Automate_Webhook.json",
+    "title": "Switch: Recepción de webhook (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Webhook",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "envío",
+      "recepción",
+      "slack",
+      "stickynote",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1643_Slack_Manual_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Slack AI Chatbot with RAG for company staff uses 21 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Manual",
+      "Google Drive",
+      "Slack",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chatbot",
+      "company",
+      "creación",
+      "datos",
+      "división",
+      "drive",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1663_Slack_Stickynote_Automate_Webhook.json",
+    "title": "Switch: Recepción de webhook (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Webhook",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "envío",
+      "recepción",
+      "slack",
+      "stickynote",
+      "switch",
+      "webhook"
+    ]
+  }
+]

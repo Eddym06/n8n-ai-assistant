@@ -1,0 +1,126 @@
+[
+  {
+    "original_filename": "0475_Googleanalytics_Code_Automate_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Set",
+      "Manual",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Programación temporal",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automate",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "email",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1480_Googleanalytics_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Business Automation Workflow uses 22 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Googleanalytics"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "envío",
+      "google",
+      "googleanalytics"
+    ]
+  },
+  {
+    "original_filename": "1529_Googleanalytics_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Business Automation Workflow uses 22 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Googleanalytics"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "envío",
+      "google",
+      "googleanalytics"
+    ]
+  },
+  {
+    "original_filename": "1652_Googleanalytics_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Business Automation Workflow uses 22 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Googleanalytics"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "envío",
+      "google",
+      "googleanalytics"
+    ]
+  }
+]

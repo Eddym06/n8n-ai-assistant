@@ -1,0 +1,59 @@
+[
+  {
+    "original_filename": "0113_Emailsend_GoogleDrive_Send_Triggered.json",
+    "title": "Emailsend: Activación automática",
+    "description": "Business Automation Workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Emailsend.",
+    "services": [
+      "Emailsend",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "email",
+      "emailsend",
+      "envío",
+      "google",
+      "googledrive"
+    ]
+  },
+  {
+    "original_filename": "1628_Emailsend_Code_Automation_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de notificación",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "contact",
+      "datos",
+      "emailsend",
+      "enrichment",
+      "envío",
+      "filtrado"
+    ]
+  }
+]

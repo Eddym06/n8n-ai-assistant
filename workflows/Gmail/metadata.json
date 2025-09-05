@@ -1,0 +1,201 @@
+[
+  {
+    "original_filename": "0036_Gmail_GoogleDrive_Import.json",
+    "title": "Gmail: Lectura de datos (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Gmail",
+      "Google Drive",
+      "Set"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "archivos",
+      "datos",
+      "drive",
+      "gmail",
+      "google",
+      "googledrive",
+      "lectura",
+      "nombre",
+      "subida"
+    ]
+  },
+  {
+    "original_filename": "0221_Gmail_Movebinarydata_Send.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Movebinarydata",
+      "Gmail",
+      "Stickynote",
+      "Spreadsheetfile"
+    ],
+    "actions": [],
+    "keywords": [
+      "gmail",
+      "movebinarydata",
+      "nombre",
+      "spreadsheetfile",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0319_Gmail_Googlecalendartool_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "datos",
+      "envío",
+      "gmail",
+      "google",
+      "googlecalendar",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0544_Gmail_GoogleDrive_Create_Triggered.json",
+    "title": "Gmail: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Gmail",
+      "Function",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "drive",
+      "email",
+      "envío",
+      "function",
+      "gmail",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0852_Gmail_GoogleSheets_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Extractfromfile",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "email",
+      "envío",
+      "extractfromfile",
+      "gmail",
+      "google",
+      "googlesheets",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1479_Gmail_Stickynote_Create_Triggered.json",
+    "title": "Gmail AI auto-responder: create draft replies to incoming emails - If",
+    "description": "Gmail AI auto-responder creates draft replies to incoming emails. Uses 12 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "If",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "auto",
+      "automated",
+      "automática",
+      "creación",
+      "create",
+      "datos",
+      "draft",
+      "email",
+      "emails"
+    ]
+  },
+  {
+    "original_filename": "1565_Gmail_Stickynote_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Odoo"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail",
+      "odoo",
+      "opportunities"
+    ]
+  },
+  {
+    "original_filename": "1914_Gmail_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, utiliza 15 nodos.",
+    "services": [
+      "Stickynote",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "classification",
+      "email",
+      "gmail",
+      "stickynote"
+    ]
+  }
+]

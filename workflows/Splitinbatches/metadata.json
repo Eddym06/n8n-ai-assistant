@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "0070_Splitinbatches_Notion_Export_Scheduled.json",
+    "title": "Cron: Lectura de datos (Workflow avanzado - 10 pasos)",
+    "description": "Tarea programada que ejecuta lectura de datos periódicamente y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Cron",
+      "If",
+      "Function",
+      "Splitinbatches",
+      "Notion"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "División de datos",
+      "Ejecución programada",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "archive",
+      "cron",
+      "database",
+      "datos",
+      "división",
+      "ejecución",
+      "eliminación",
+      "empty",
+      "function",
+      "lectura"
+    ]
+  }
+]

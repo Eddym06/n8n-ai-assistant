@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0187_Onfleet_GoogleDrive_Create_Triggered.json",
+    "title": "Create an Onfleet task when a file in Google Drive is updated",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Onfleet",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "create",
+      "drive",
+      "file",
+      "google",
+      "googledrive",
+      "onfleet",
+      "task"
+    ]
+  }
+]

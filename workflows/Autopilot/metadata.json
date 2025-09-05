@@ -1,0 +1,36 @@
+[
+  {
+    "original_filename": "1227_Autopilot_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Autopilot"
+    ],
+    "actions": [],
+    "keywords": [
+      "autopilot",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1228_Autopilot_Airtable_Automate_Triggered.json",
+    "title": "Airtable: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Airtable",
+      "Autopilot",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "autopilot",
+      "nombre"
+    ]
+  }
+]

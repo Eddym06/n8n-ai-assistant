@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0148_Awstextract_Telegram_Automate_Triggered.json",
+    "title": "Amazon Web Services: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Amazon Web Services",
+      "Airtable",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "amazon",
+      "amazonwebservices",
+      "automated",
+      "automática",
+      "nombre",
+      "services",
+      "telegram"
+    ]
+  }
+]

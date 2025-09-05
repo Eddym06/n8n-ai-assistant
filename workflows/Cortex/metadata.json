@@ -1,0 +1,30 @@
+[
+  {
+    "original_filename": "0972_Cortex_Emailreadimap_Send.json",
+    "title": "Emailreadimap: Envío de email automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización de correo electrónico que envío de email y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Wait",
+      "Thehive",
+      "If",
+      "Cortex"
+    ],
+    "actions": [
+      "Envío de email",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "cortex",
+      "creación",
+      "datos",
+      "email",
+      "emailreadimap",
+      "envío",
+      "thehive",
+      "wait"
+    ]
+  }
+]

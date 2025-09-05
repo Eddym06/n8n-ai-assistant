@@ -1,0 +1,125 @@
+[
+  {
+    "original_filename": "0097_Executecommand_Mailgun_Automation_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, utiliza 9 nodos.",
+    "services": [
+      "If",
+      "Webhook",
+      "Executecommand",
+      "Mailgun"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "executecommand",
+      "mailgun",
+      "recepción",
+      "report",
+      "steam",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0190_Executecommand_Functionitem_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "Executecommand",
+      "Functionitem"
+    ],
+    "actions": [],
+    "keywords": [
+      "executecommand",
+      "functionitem",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0534_Executecommand_Localfile_Process_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "If",
+      "Executecommand",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "executecommand",
+      "lectura",
+      "listado",
+      "nombre",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "1190_Executecommand_Readbinaryfile_Automate_Triggered.json",
+    "title": "Manual: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Manual",
+      "If",
+      "Function",
+      "Executecommand",
+      "Readbinaryfile"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executecommand",
+      "function",
+      "manual",
+      "nombre",
+      "readbinaryfile"
+    ]
+  },
+  {
+    "original_filename": "1587_Executecommand_Localfile_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "If",
+      "Executecommand",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "executecommand",
+      "lectura",
+      "listado",
+      "nombre",
+      "splitout"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "0969_Dropbox_Manual_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "If",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  }
+]

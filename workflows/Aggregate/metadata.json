@@ -1,0 +1,474 @@
+[
+  {
+    "original_filename": "0472_Aggregate_Gmail_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Gmail",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "gmail",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0480_Aggregate_Telegram_Automate_Triggered.json",
+    "title": "Aggregate: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "Aggregate",
+      "Stickynote",
+      "Merge",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "merge",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0681_Aggregate_HTTP_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 41 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Airtable",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0691_Aggregate_Jotform_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "If",
+      "Jotform",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "jotform",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0695_Aggregate_Stickynote_Create_Webhook.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "If",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Recepción de webhook",
+      "División de datos",
+      "Listado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "aggregate",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "listado",
+      "nombre",
+      "recepción",
+      "splitout",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0697_Aggregate_Typeform_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "If",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0762_Aggregate_Stickynote_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Stickynote",
+      "Aggregate",
+      "Executeworkflow",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "executeworkflow",
+      "fusión",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "0800_Aggregate_Telegram_Automate_Triggered.json",
+    "title": "Google Sheets: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Google Sheets",
+      "Stickynote",
+      "Aggregate",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "google",
+      "googlesheets",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1324_Aggregate_Gmail_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Gmail",
+      "Aggregate",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "gmail",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1374_Aggregate_Stickynote_Create_Triggered.json",
+    "title": "Aggregate: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Aggregate",
+      "Limit",
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "limit",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1404_Aggregate_Telegram_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Airtable",
+      "Switch",
+      "Aggregate",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "aggregate",
+      "agregación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "1413_Aggregate_Telegram_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Airtable",
+      "Switch",
+      "Aggregate",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "aggregate",
+      "agregación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1430_Aggregate_Schedule_Send_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "Aggregate",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1506_Aggregate_Telegram_Automation_Triggered.json",
+    "title": "Aggregate: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "Aggregate",
+      "Stickynote",
+      "Merge",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "merge",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1544_Aggregate_Schedule_Send_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "Aggregate",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1576_Aggregate_Stickynote_Automate_Webhook.json",
+    "title": "Aggregate: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Aggregate y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Aggregate",
+      "HTTP Request",
+      "Stickynote",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "ahrefs",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "http",
+      "httprequest"
+    ]
+  }
+]

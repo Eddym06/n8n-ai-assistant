@@ -1,0 +1,570 @@
+[
+  {
+    "original_filename": "0017_Mattermost_Emelia_Automate_Triggered.json",
+    "title": "Mattermost: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Mattermost",
+      "Emelia"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "emelia",
+      "mattermost",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0020_Mattermost_Emelia_Automate_Triggered.json",
+    "title": "Mattermost: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Mattermost",
+      "Emelia"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "emelia",
+      "mattermost",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0027_Mattermost_N8N_Automate_Triggered.json",
+    "title": "Mattermost: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Mattermost",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "mattermost",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0028_Mattermost_Workflow_Automate_Webhook.json",
+    "title": "Workflow: Recepción de webhook (4 pasos)",
+    "description": "N8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Workflow",
+      "Webhook",
+      "Mattermost",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "mattermost",
+      "nombre",
+      "recepción",
+      "webhook",
+      "workflow"
+    ]
+  },
+  {
+    "original_filename": "0040_Mattermost_Noop_Automate_Triggered.json",
+    "title": "If: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "Mattermost",
+      "Notion",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "mattermost",
+      "nombre",
+      "noop",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "0132_Mattermost_Googlecloudnaturallanguage_Send_Triggered.json",
+    "title": "Analyze the sentiment of feedback and send a message on Mattermost - If",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 5 servicios.",
+    "services": [
+      "If",
+      "Mattermost",
+      "Googlecloudnaturallanguage",
+      "Typeform",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "analyze",
+      "automated",
+      "automática",
+      "feedback",
+      "googlecloudnaturallanguage",
+      "mattermost",
+      "message",
+      "noop",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "0169_Mattermost_Profitwell_Send_Scheduled.json",
+    "title": "Send financial metrics monthly to Mattermost",
+    "description": "Workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. This way, the business can focus on what it wants to do. Integra con Mattermost.",
+    "services": [
+      "Mattermost",
+      "Profitwell",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "financial",
+      "mattermost",
+      "metrics",
+      "monthly",
+      "profitwell",
+      "programada",
+      "scheduled",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "0180_Mattermost_Airtable_Create_Triggered.json",
+    "title": "Receive a Mattermost message when new data gets added to Airtable",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Mattermost",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "added",
+      "airtable",
+      "automated",
+      "automática",
+      "data",
+      "gets",
+      "mattermost",
+      "message",
+      "receive"
+    ]
+  },
+  {
+    "original_filename": "0294_Mattermost_Woocommerce_Create_Triggered.json",
+    "title": "Send a message on Mattermost when an order is created in WooCommerce",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Mattermost",
+      "WooCommerce"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "created",
+      "mattermost",
+      "message",
+      "order",
+      "send",
+      "woocommerce"
+    ]
+  },
+  {
+    "original_filename": "0301_Mattermost_Noop_Automation_Webhook.json",
+    "title": "If: Recepción de webhook (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios.",
+    "services": [
+      "If",
+      "Webhook",
+      "Mattermost",
+      "Noop"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "gender",
+      "inclusive",
+      "language",
+      "mattermost",
+      "noop",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0357_Mattermost_Twitter_Automation_Scheduled.json",
+    "title": "Set: Ejecución programada (5 pasos)",
+    "description": "Sistema de notificaciones que envía alertas cuando ejecución programada y integra 5 servicios.",
+    "services": [
+      "Set",
+      "Cron",
+      "Mattermost",
+      "Function",
+      "Twitter"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "function",
+      "mattermost",
+      "notifications",
+      "programada",
+      "scheduled",
+      "twitter"
+    ]
+  },
+  {
+    "original_filename": "0850_Mattermost_Pagerduty_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Webhook",
+      "Pagerduty",
+      "Mattermost",
+      "Jira"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "jira",
+      "mattermost",
+      "nombre",
+      "pagerduty",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0855_Mattermost_Pagerduty_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "Mattermost",
+      "Pagerduty"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "mattermost",
+      "nombre",
+      "pagerduty",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0857_Mattermost_Webhook_Automate_Webhook.json",
+    "title": "Jira: Recepción de webhook (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Jira",
+      "Mattermost",
+      "Webhook",
+      "Pagerduty"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "jira",
+      "mattermost",
+      "nombre",
+      "pagerduty",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0865_Mattermost_Twilio_Automate_Triggered.json",
+    "title": "Mattermost: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Mattermost",
+      "Twilio",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "mattermost",
+      "nombre",
+      "twilio"
+    ]
+  },
+  {
+    "original_filename": "0941_Mattermost_GoogleSheets_Automation_Scheduled.json",
+    "title": "Cron: Lectura de datos (5 pasos)",
+    "description": "Tarea programada que ejecuta lectura de datos periódicamente y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Cron",
+      "Function",
+      "Mattermost",
+      "Datetime",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "datetime",
+      "datos",
+      "ejecución",
+      "function",
+      "google",
+      "googlesheets",
+      "lectura",
+      "mattermost",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "1077_Mattermost_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "Mattermost",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "mattermost",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1117_Mattermost_GoogleSheets_Automate_Scheduled.json",
+    "title": "Mattermost: Ejecución programada (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Mattermost",
+      "Cron",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "google",
+      "googlesheets",
+      "mattermost",
+      "nombre",
+      "programada",
+      "scheduled",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "1137_Mattermost_Cron_Automate_Scheduled.json",
+    "title": "Mattermost: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Coffee Bot is a business automation tool that automates business processes. It uses six different systems to create a seamless experience for customers. Integra con Mattermost.",
+    "services": [
+      "Mattermost",
+      "Google Calendar",
+      "Function",
+      "Cron"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "calendar",
+      "coffee",
+      "cron",
+      "datos",
+      "ejecución",
+      "envío",
+      "function",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1167_Mattermost_GoogleSheets_Create_Scheduled.json",
+    "title": "Function: Envío de datos automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Function",
+      "Mattermost",
+      "Interval",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "envío",
+      "function",
+      "google",
+      "googlesheets",
+      "interval",
+      "mattermost",
+      "nombre",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "1215_Mattermost_Typeform_Automate_Triggered.json",
+    "title": "If: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "If",
+      "Mattermost",
+      "Amazon Web Services",
+      "Typeform",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "amazon",
+      "amazonwebservices",
+      "automated",
+      "automática",
+      "mattermost",
+      "nombre",
+      "noop",
+      "services",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "1221_Mattermost_Lemlist_Automate_Triggered.json",
+    "title": "Lemlist: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Lemlist",
+      "Mattermost"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "lemlist",
+      "listado",
+      "mattermost",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1309_Mattermost_Googlecloudnaturallanguage_Send_Triggered.json",
+    "title": "Analyze the sentiment of feedback and send a message on Mattermost - If",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 5 servicios.",
+    "services": [
+      "If",
+      "Mattermost",
+      "Googlecloudnaturallanguage",
+      "Typeform",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "analyze",
+      "automated",
+      "automática",
+      "feedback",
+      "googlecloudnaturallanguage",
+      "mattermost",
+      "message",
+      "noop",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "1310_Mattermost_Typeform_Send_Triggered.json",
+    "title": "If: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "If",
+      "Mattermost",
+      "Amazon Web Services",
+      "Typeform",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "amazon",
+      "amazonwebservices",
+      "automated",
+      "automática",
+      "mattermost",
+      "nombre",
+      "noop",
+      "services",
+      "typeform"
+    ]
+  }
+]

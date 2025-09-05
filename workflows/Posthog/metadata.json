@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "1217_Posthog_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Posthog"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "nombre",
+      "posthog",
+      "recepción",
+      "webhook"
+    ]
+  }
+]

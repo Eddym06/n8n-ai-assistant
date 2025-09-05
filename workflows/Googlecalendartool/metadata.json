@@ -1,0 +1,137 @@
+[
+  {
+    "original_filename": "1071_Googlecalendartool_Stickynote_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "build",
+      "búsqueda",
+      "calendar",
+      "creación",
+      "datos",
+      "eliminación"
+    ]
+  },
+  {
+    "original_filename": "1247_Googlecalendartool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "AI Agent uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "assistant",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "1792_Googlecalendartool_Executeworkflow_Automation_Triggered.json",
+    "title": "Google Calendar: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Google Calendar y integra 3 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Google Calendar",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "agent",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "eliminación",
+      "executeworkflow"
+    ]
+  },
+  {
+    "original_filename": "1872_Googlecalendartool_Automation_Triggered.json",
+    "title": "Google Calendar: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "The MCP_CALENDAR uses 7 interconnected nodes to streamline business processes. Each node is programmed to perform a specific set of tasks. The MCP CALENTAR was created to help businesses streamline their processes. Integra con Google Calendar.",
+    "services": [
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "eliminación",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "1928_Googlecalendartool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 12 nodos.",
+    "services": [
+      "Stickynote",
+      "Google Calendar",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "google",
+      "googlecalendar",
+      "googlesheets",
+      "medcin",
+      "reservation",
+      "sheets"
+    ]
+  }
+]

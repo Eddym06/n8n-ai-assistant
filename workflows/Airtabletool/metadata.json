@@ -1,0 +1,56 @@
+[
+  {
+    "original_filename": "1261_Airtabletool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "AI Social Media Caption Creator uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Wait",
+      "Airtable",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "caption",
+      "creator",
+      "datos",
+      "lectura",
+      "media",
+      "social"
+    ]
+  },
+  {
+    "original_filename": "1723_Airtabletool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "AI Social Media Caption Creator uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Wait",
+      "Airtable",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "caption",
+      "creator",
+      "datos",
+      "lectura",
+      "media",
+      "social"
+    ]
+  }
+]

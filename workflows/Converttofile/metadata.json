@@ -1,0 +1,92 @@
+[
+  {
+    "original_filename": "0508_Converttofile_Manual_Process_Triggered.json",
+    "title": "Manual: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Manual",
+      "N8N",
+      "Stickynote",
+      "Converttofile",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "converttofile",
+      "datos",
+      "lectura",
+      "manual",
+      "nombre",
+      "noop",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0889_Converttofile_HTTP_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Manual",
+      "Google Drive",
+      "Stickynote",
+      "Converttofile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Envío de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "converttofile",
+      "datos",
+      "descarga",
+      "drive",
+      "envío",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1985_Converttofile_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "This n8n workflow uses 37 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Form",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Lectura de datos",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "design",
+      "drive",
+      "envío",
+      "form"
+    ]
+  }
+]

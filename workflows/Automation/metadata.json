@@ -1,0 +1,67 @@
+[
+  {
+    "original_filename": "1250_Automation.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1265_Automation_Triggered.json",
+    "title": "Workflow Sin Nombre",
+    "description": "Business Automation Workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1290_Automation.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1497_Automation.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1634_Automation.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "2047_Automation.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "0875_Googledrivetool_Extractfromfile_Import_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Google Drive",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Lectura de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "descarga",
+      "drive",
+      "extractfromfile",
+      "google"
+    ]
+  }
+]

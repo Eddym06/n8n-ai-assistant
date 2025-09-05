@@ -1,0 +1,36 @@
+[
+  {
+    "original_filename": "1229_Wise_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Wise"
+    ],
+    "actions": [],
+    "keywords": [
+      "nombre",
+      "wise"
+    ]
+  },
+  {
+    "original_filename": "1230_Wise_Airtable_Automate_Triggered.json",
+    "title": "Airtable: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Airtable",
+      "Wise",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "nombre",
+      "wise"
+    ]
+  }
+]

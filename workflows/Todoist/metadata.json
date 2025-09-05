@@ -1,0 +1,33 @@
+[
+  {
+    "original_filename": "1749_Todoist_Schedule_Send_Scheduled.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailreadimap y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Schedule",
+      "Todoist",
+      "If",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de email",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "emailreadimap",
+      "envío",
+      "fusión",
+      "mailbox"
+    ]
+  }
+]

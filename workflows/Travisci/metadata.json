@@ -1,0 +1,25 @@
+[
+  {
+    "original_filename": "0060_Travisci_GitHub_Automate_Triggered.json",
+    "title": "If: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "Travisci",
+      "Noop",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "github",
+      "nombre",
+      "noop",
+      "travisci"
+    ]
+  }
+]

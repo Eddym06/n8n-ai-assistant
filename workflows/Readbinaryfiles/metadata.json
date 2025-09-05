@@ -1,0 +1,87 @@
+[
+  {
+    "original_filename": "0171_Readbinaryfiles_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 27 nodos.",
+    "services": [
+      "HTTP Request",
+      "Readbinaryfiles",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "examples",
+      "http",
+      "httprequest",
+      "manual",
+      "model",
+      "openai"
+    ]
+  },
+  {
+    "original_filename": "1583_Readbinaryfiles_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 27 nodos.",
+    "services": [
+      "HTTP Request",
+      "Readbinaryfiles",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "examples",
+      "http",
+      "httprequest",
+      "manual",
+      "model",
+      "openai"
+    ]
+  },
+  {
+    "original_filename": "2036_Readbinaryfiles_Filter_Import_Triggered.json",
+    "title": "Readbinaryfiles: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Readbinaryfiles y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Readbinaryfiles",
+      "Set",
+      "Spreadsheetfile",
+      "Manual",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "googlesheet",
+      "import",
+      "itemlists"
+    ]
+  }
+]

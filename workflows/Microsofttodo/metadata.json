@@ -1,0 +1,30 @@
+[
+  {
+    "original_filename": "1494_Microsofttodo_Webhook_Automation_Webhook.json",
+    "title": "Automatización HTTP Request: Recepción de webhook activada por evento (Workflow avanz",
+    "description": "MiniBear Webhook uses 45 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Microsoftteams",
+      "OneDrive",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "microsoftteams",
+      "minibear",
+      "onedrive",
+      "recepción",
+      "request",
+      "switch"
+    ]
+  }
+]

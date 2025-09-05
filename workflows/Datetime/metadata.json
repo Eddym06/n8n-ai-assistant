@@ -1,0 +1,536 @@
+[
+  {
+    "original_filename": "0087_Datetime_Slack_Automate_Scheduled.json",
+    "title": "Set: Ejecución programada (Workflow avanzado - 9 pasos)",
+    "description": "This n8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Set",
+      "Cron",
+      "If",
+      "Function",
+      "Slack"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "function",
+      "nombre",
+      "programada",
+      "scheduled",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "0159_Datetime_Functionitem_Create_Webhook.json",
+    "title": "Htmlextract: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Htmlextract y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Htmlextract",
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "htmlextract",
+      "http",
+      "httprequest",
+      "itemlists",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0168_Datetime_GoogleCalendar_Send_Scheduled.json",
+    "title": "Emailsend: Fusión de datos (Workflow avanzado - 13 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Set",
+      "Cron",
+      "Code",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada",
+      "Filtrado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "calendar",
+      "code",
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "emailsend",
+      "envío",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0311_Datetime_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "If",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "fusión",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0316_Datetime_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "If",
+      "Itemlists",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "itemlists",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0348_Datetime_GoogleCalendar_Automation_Scheduled.json",
+    "title": "Cron: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Cron y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Cron",
+      "If",
+      "Manual",
+      "Google Calendar",
+      "Zoom"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "cron",
+      "ejecución",
+      "google",
+      "googlecalendar",
+      "manual",
+      "meeting"
+    ]
+  },
+  {
+    "original_filename": "0396_Datetime_Schedule_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "Schedule",
+      "Set",
+      "If",
+      "Filter",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "fusión",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0444_Datetime_Todoist_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Todoist",
+      "HTTP Request",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0682_Datetime_Schedule_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Business Automation Workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Schedule",
+      "Sort",
+      "Servicenow",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "lectura",
+      "manual",
+      "nombre",
+      "programación",
+      "schedule",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "1092_Datetime_Schedule_Sync_Scheduled.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "Schedule",
+      "Set",
+      "If",
+      "MySQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "mysql",
+      "pipedrive",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1272_Datetime_Webhook_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "block",
+      "datos",
+      "división",
+      "generated",
+      "google",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1273_Datetime_Webhook_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "block",
+      "datos",
+      "división",
+      "generated",
+      "google",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1296_Datetime_Splitout_Process.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Emailsend",
+      "Renamekeys",
+      "Set",
+      "Extractfromfile"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de notificación",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "datos",
+      "división",
+      "dmarc",
+      "email",
+      "emailreadimap",
+      "emailsend",
+      "envío",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1510_Datetime_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Stickynote",
+      "Webhook",
+      "Datetime"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "code",
+      "datetime",
+      "datos",
+      "flow",
+      "http",
+      "httprequest",
+      "intelligent",
+      "query",
+      "ranking"
+    ]
+  },
+  {
+    "original_filename": "1523_Datetime_Code_Automation_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de notificación",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "daylight",
+      "email",
+      "emailsend",
+      "envío",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "1755_Datetime_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "local"
+    ]
+  },
+  {
+    "original_filename": "2003_Datetime_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Stickynote",
+      "Webhook",
+      "Datetime"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "code",
+      "datetime",
+      "datos",
+      "flow",
+      "http",
+      "httprequest",
+      "intelligent",
+      "query",
+      "ranking"
+    ]
+  },
+  {
+    "original_filename": "2050_Datetime_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Splitout",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "local"
+    ]
+  }
+]

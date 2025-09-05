@@ -1,0 +1,43 @@
+[
+  {
+    "original_filename": "0345_Mailchimp_Cron_Create_Scheduled.json",
+    "title": "Create entry in Mailchimp from Airtable",
+    "description": "Automatización que crea registros en Airtable y integra 3 servicios.",
+    "services": [
+      "Airtable",
+      "Cron",
+      "MailChimp"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "airtable",
+      "create",
+      "cron",
+      "ejecución",
+      "entry",
+      "mailchimp",
+      "programada",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0989_Mailchimp_Automate_Triggered.json",
+    "title": "MailChimp: Activación automática",
+    "description": "Business Automation Workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con MailChimp.",
+    "services": [
+      "MailChimp"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "mailchimp",
+      "nombre"
+    ]
+  }
+]

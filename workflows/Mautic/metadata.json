@@ -1,0 +1,224 @@
+[
+  {
+    "original_filename": "0155_Mautic_Twilio_Update_Triggered.json",
+    "title": "Receive updates when a form is submitted in Mautic, and send a confirmation SMS ",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. Receive updates when a form is submitted in Mautic, and send a confirmation SMS. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Twilio",
+      "Mautic"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "confirmation",
+      "form",
+      "mautic",
+      "receive",
+      "send",
+      "submitted",
+      "twilio"
+    ]
+  },
+  {
+    "original_filename": "0275_Mautic_Mondaycom_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "Mondaycom",
+      "Mautic"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "mautic",
+      "mondaycom",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0490_Mautic_Gmail_Send_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Gmail",
+      "Mautic"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "contacts",
+      "datos",
+      "email",
+      "emails",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0963_Mautic_Webhook_Update_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Function",
+      "Mautic",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de email",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "function",
+      "fusión",
+      "mautic",
+      "nombre",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "1083_Mautic_GoogleSheets_Automate_Scheduled.json",
+    "title": "Cron: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Cron",
+      "Mautic",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "google",
+      "googlesheets",
+      "mautic",
+      "nombre",
+      "programada",
+      "scheduled",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "1160_Mautic_Woocommerce_Create_Triggered.json",
+    "title": "If: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "If",
+      "WooCommerce",
+      "Mautic"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "customer",
+      "datos",
+      "mautic",
+      "woocommerce"
+    ]
+  },
+  {
+    "original_filename": "1168_Mautic_Slack_Send_Triggered.json",
+    "title": "If: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "If",
+      "Itemlists",
+      "Slack",
+      "Mautic",
+      "Onesimpleapi"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Listado de datos",
+      "Validación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "check",
+      "contact",
+      "datos",
+      "email",
+      "envío",
+      "itemlists",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1526_Mautic_Webhook_Automation_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Shopify + Mautic is an automated, webhook-driven business Automation Workflow. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales.",
+    "services": [
+      "Set",
+      "If",
+      "Crypto",
+      "Mautic",
+      "Shopify"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Envío de email",
+      "Creación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "crypto",
+      "datos",
+      "email",
+      "envío",
+      "mautic"
+    ]
+  }
+]

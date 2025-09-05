@@ -1,0 +1,241 @@
+[
+  {
+    "original_filename": "0647_GoogleCalendar_Form_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Form",
+      "If",
+      "Gmail",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "envío",
+      "form",
+      "gmail",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0783_GoogleCalendar_Schedule_Create_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Set",
+      "Google Calendar",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "filtrado",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1116_GoogleCalendar_GoogleSheets_Create_Triggered.json",
+    "title": "Google Calendar: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Google Calendar y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Google Calendar",
+      "Function",
+      "Mattermost",
+      "Gmail",
+      "Typeform"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de email",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "function",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1346_GoogleCalendar_GoogleSheets_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "Automate Event Creation in Google Calendar from Google Sheets. This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Stickynote",
+      "Google Calendar",
+      "Code",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automate",
+      "automated",
+      "automática",
+      "calendar",
+      "code",
+      "creation",
+      "datos",
+      "event",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1361_GoogleCalendar_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 34 pasos)",
+    "description": "Build a Chatbot, Voice Agent and Phone Agent with Voiceflow, Google Calendar and RAG. This n8n workflow uses 34 interconnected nodes to automate business processes.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Google Calendar",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "build",
+      "calendar",
+      "chatbot",
+      "creación",
+      "datos",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "1573_GoogleCalendar_Slack_Create_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Este workflows uses 9 interconnected nodes to automate business processes. It uses a combination of webhook, Stickynote, Slack, and other tools. El workflows are designed to make it easier for people to work with data.",
+    "services": [
+      "Webhook",
+      "Stickynote",
+      "Google Calendar",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos",
+      "Creación de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "calendar",
+      "creación",
+      "datos",
+      "eliminación",
+      "envío",
+      "generate",
+      "google",
+      "googlecalendar",
+      "links",
+      "meet"
+    ]
+  },
+  {
+    "original_filename": "1620_GoogleCalendar_Form_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Form",
+      "If",
+      "Gmail",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "envío",
+      "form",
+      "gmail",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1668_GoogleCalendar_Filter_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Gmail",
+      "Google Calendar",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Filtrado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "datos",
+      "envío",
+      "filtrado",
+      "gmail",
+      "google",
+      "googlecalendar"
+    ]
+  }
+]

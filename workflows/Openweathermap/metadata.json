@@ -1,0 +1,308 @@
+[
+  {
+    "original_filename": "0006_Openweathermap_Cron_Automate_Scheduled.json",
+    "title": "Openweathermap: Ejecución programada (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Openweathermap",
+      "Plivo",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "nombre",
+      "openweathermap",
+      "plivo",
+      "programada",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0065_Openweathermap_Line_Update_Scheduled.json",
+    "title": "Send daily weather updates via a message in Line - Openweathermap",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Openweathermap",
+      "Cron",
+      "Line"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "ejecución",
+      "line",
+      "message",
+      "openweathermap",
+      "programada",
+      "scheduled",
+      "send",
+      "updates"
+    ]
+  },
+  {
+    "original_filename": "0072_Openweathermap_Cron_Update_Scheduled.json",
+    "title": "Send daily weather updates via a message using the Gotify node - Openweathermap",
+    "description": "Send daily weather updates via a message using the Gotify node. This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Openweathermap",
+      "Gotify",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "ejecución",
+      "gotify",
+      "message",
+      "openweathermap",
+      "programada",
+      "scheduled",
+      "send",
+      "updates"
+    ]
+  },
+  {
+    "original_filename": "0161_Openweathermap_Spontit_Update_Scheduled.json",
+    "title": "Send daily weather updates via a push notification using Spontit",
+    "description": "Send daily weather updates via a push notification using Spontit or Openweathermap. This n8n workflow uses 3 interconnected nodes to automate business processes.",
+    "services": [
+      "Spontit",
+      "Openweathermap",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "ejecución",
+      "notification",
+      "openweathermap",
+      "programada",
+      "push",
+      "scheduled",
+      "send",
+      "spontit"
+    ]
+  },
+  {
+    "original_filename": "0196_Openweathermap_Webhook_Automation_Webhook.json",
+    "title": "Receive the weather information of any city - Webhook",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 3 servicios.",
+    "services": [
+      "Webhook",
+      "Openweathermap",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "city",
+      "information",
+      "openweathermap",
+      "receive",
+      "recepción",
+      "weather",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0751_Openweathermap_Telegram_Automate_Triggered.json",
+    "title": "Openweathermap: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Openweathermap",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "openweathermap",
+      "telegram",
+      "weather"
+    ]
+  },
+  {
+    "original_filename": "1101_Openweathermap_Twilio_Automate_Scheduled.json",
+    "title": "Cron: Ejecución programada (5 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios.",
+    "services": [
+      "Cron",
+      "If",
+      "Twilio",
+      "Openweathermap",
+      "Noop"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "creating",
+      "cron",
+      "ejecución",
+      "first",
+      "noop",
+      "openweathermap",
+      "programada",
+      "scheduled",
+      "twilio"
+    ]
+  },
+  {
+    "original_filename": "1118_Openweathermap_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Openweathermap",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "nombre",
+      "openweathermap",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1119_Openweathermap_Twilio_Automate_Webhook.json",
+    "title": "Set: Recepción de webhook (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "Airtable",
+      "Webhook",
+      "Twilio",
+      "Openweathermap"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "airtable",
+      "nombre",
+      "openweathermap",
+      "recepción",
+      "twilio",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1156_Openweathermap_Cron_Update_Scheduled.json",
+    "title": "Send daily weather updates via a push notification using the Pushcut node - Open",
+    "description": "Send daily weather updates via a push notification using the Pushcut node. This n8n workflow uses 3 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Openweathermap",
+      "Pushcut",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "ejecución",
+      "notification",
+      "openweathermap",
+      "programada",
+      "push",
+      "pushcut",
+      "scheduled",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "1163_Openweathermap_Cron_Update_Scheduled.json",
+    "title": "Send daily weather updates to a phone number using the Vonage node - Openweather",
+    "description": "Send daily weather updates to a phone number using the Vonage node. This n8n workflow uses 3 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Openweathermap",
+      "Vonage",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "ejecución",
+      "number",
+      "openweathermap",
+      "phone",
+      "programada",
+      "scheduled",
+      "send",
+      "updates"
+    ]
+  },
+  {
+    "original_filename": "1195_Openweathermap_Pushover_Update_Scheduled.json",
+    "title": "Send daily weather updates via a push notification - Openweathermap",
+    "description": "Send daily weather updates via a push notification. This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Openweathermap",
+      "Pushover",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "ejecución",
+      "notification",
+      "openweathermap",
+      "programada",
+      "push",
+      "pushover",
+      "scheduled",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "1222_Openweathermap_Webhook_Create_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Openweathermap",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "lectura",
+      "nombre",
+      "openweathermap",
+      "recepción",
+      "webhook"
+    ]
+  }
+]

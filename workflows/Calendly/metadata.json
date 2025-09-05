@@ -1,0 +1,182 @@
+[
+  {
+    "original_filename": "0039_Calendly_Notion_Automate_Triggered.json",
+    "title": "Calendly: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Calendly",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendly",
+      "nombre",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "0125_Calendly_Notion_Automate_Triggered.json",
+    "title": "Calendly: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Calendly",
+      "Notion",
+      "Dropcontact"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendly",
+      "dropcontact",
+      "nombre",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "0277_Calendly_Mautic_Create_Triggered.json",
+    "title": "Calendly: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Calendly",
+      "Stickynote",
+      "Mautic"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "calendly",
+      "creación",
+      "datos",
+      "mautic",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0430_Calendly_Filter_Create_Triggered.json",
+    "title": "Calendly: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Calendly y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Calendly",
+      "If",
+      "Filter",
+      "Clearbit",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de email",
+      "Búsqueda de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "calendly",
+      "clearbit",
+      "creación",
+      "datos",
+      "email",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "0660_Calendly_Noop_Create_Triggered.json",
+    "title": "Calendly: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Calendly y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Calendly",
+      "Set",
+      "Splitout",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendly",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0661_Calendly_Noop_Create_Triggered.json",
+    "title": "Calendly: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Calendly y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Calendly",
+      "Set",
+      "Splitout",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendly",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1009_Calendly_Automate_Triggered.json",
+    "title": "Calendly: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Calendly"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendly",
+      "nombre"
+    ]
+  }
+]

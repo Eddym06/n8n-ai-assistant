@@ -1,0 +1,23 @@
+[
+  {
+    "original_filename": "1114_Taiga_Update_Triggered.json",
+    "title": "Receive updates when an event occurs in Taiga",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Taiga"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "event",
+      "occurs",
+      "receive",
+      "taiga",
+      "updates"
+    ]
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "original_filename": "0215_Typeform_Clickup_Automation_Triggered.json",
+    "title": "Typeform: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Typeform y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Typeform",
+      "Clickup",
+      "Switch",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "clickup",
+      "datos",
+      "listado",
+      "management",
+      "request",
+      "switch",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "0262_Typeform_Spreadsheetfile_Automate_Triggered.json",
+    "title": "Typeform: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Typeform",
+      "Merge",
+      "Nextcloud",
+      "Spreadsheetfile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "merge",
+      "nextcloud",
+      "nombre",
+      "spreadsheetfile",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "1018_Typeform_Airtable_Automation_Triggered.json",
+    "title": "Typeform: Activación automática",
+    "description": "Automatización que se activa cuando ocurren eventos en Typeform y integra 2 servicios.",
+    "services": [
+      "Typeform",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "selection",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "1207_Typeform_Demio_Automate_Triggered.json",
+    "title": "Typeform: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Typeform",
+      "Demio"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "demio",
+      "nombre",
+      "typeform"
+    ]
+  }
+]
