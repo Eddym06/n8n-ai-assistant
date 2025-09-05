@@ -1,0 +1,28 @@
+[
+  {
+    "original_filename": "0479_Grist_Stickynote_Create_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "If",
+      "Webhook",
+      "Stickynote",
+      "Grist"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "grist",
+      "lectura",
+      "nombre",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  }
+]

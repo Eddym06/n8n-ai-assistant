@@ -1,0 +1,397 @@
+[
+  {
+    "original_filename": "0847_Linkedin_Splitout_Create_Triggered.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Business Automation Workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Integra con LinkedIn.",
+    "services": [
+      "LinkedIn",
+      "Splitout",
+      "Manual",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "gmail",
+      "linkedin",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1121_Linkedin_Wait_Create_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 48 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "HTTP Request",
+      "Wait",
+      "OneDrive",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "hacker",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1280_Linkedin_Telegram_Automation_Scheduled.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "HTTP Request",
+      "Schedule",
+      "Wait",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "filtrado",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1330_Linkedin_Schedule_Automate_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "Schedule",
+      "HTTP Request",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automate",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1342_Linkedin_Telegram_Automate_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 100 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "HTTP Request",
+      "Extractfromfile",
+      "Googledocs",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "composition",
+      "content",
+      "datos",
+      "email",
+      "envío",
+      "extractfromfile",
+      "factory"
+    ]
+  },
+  {
+    "original_filename": "1491_Linkedin_Wait_Create_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 48 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "HTTP Request",
+      "Wait",
+      "OneDrive",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "hacker",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1709_Linkedin_Wordpress_Automation_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "AI Social Media Publisher from WordPress uses 20 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "LinkedIn",
+      "HTTP Request",
+      "Google Sheets",
+      "Manual",
+      "Wordpress"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest",
+      "lectura",
+      "linkedin"
+    ]
+  },
+  {
+    "original_filename": "1782_Linkedin_Telegram_Automation_Scheduled.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "HTTP Request",
+      "Schedule",
+      "Wait",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "filtrado",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1807_Linkedin_Googledocs_Automate_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 56 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "HTTP Request",
+      "Googledocs",
+      "Set",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "composition",
+      "content",
+      "datos",
+      "email",
+      "envío",
+      "factory"
+    ]
+  },
+  {
+    "original_filename": "1922_Linkedin_Schedule_Automate_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "Schedule",
+      "HTTP Request",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automate",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1939_Linkedin_Code_Automation_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "descarga",
+      "filtrado",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1951_Linkedin_Webhook_Automate_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "Emailsend",
+      "HTTP Request",
+      "Airtable",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automation",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "emailsend",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "2024_Linkedin_Telegram_Automate_Webhook.json",
+    "title": "LinkedIn: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en LinkedIn y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "LinkedIn",
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automation",
+      "automática",
+      "code",
+      "datos",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  }
+]

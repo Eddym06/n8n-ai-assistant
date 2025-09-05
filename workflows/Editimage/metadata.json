@@ -1,0 +1,58 @@
+[
+  {
+    "original_filename": "0575_Editimage_Manual_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "The n8n workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "If",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "drive",
+      "editimage",
+      "google",
+      "googledrive",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1369_Editimage_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "The n8n workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "If",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "drive",
+      "editimage",
+      "google",
+      "googledrive",
+      "http"
+    ]
+  }
+]

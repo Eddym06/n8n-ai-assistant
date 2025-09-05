@@ -1,0 +1,25 @@
+[
+  {
+    "original_filename": "0211_Interval_Amqp_Automation_Scheduled.json",
+    "title": "Interval: Envío de datos automática (3 pasos)",
+    "description": "Workflow que envío de datos utilizando Interval y integra 3 servicios.",
+    "services": [
+      "Interval",
+      "Amqp",
+      "Set"
+    ],
+    "actions": [
+      "Envío de datos"
+    ],
+    "keywords": [
+      "amqp",
+      "data",
+      "datos",
+      "envío",
+      "factory",
+      "generator",
+      "interval",
+      "smart"
+    ]
+  }
+]

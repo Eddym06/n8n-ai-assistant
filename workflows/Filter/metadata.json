@@ -1,0 +1,695 @@
+[
+  {
+    "original_filename": "0335_Filter_Telegram_Send_Triggered.json",
+    "title": "Filter: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Filter",
+      "N8N",
+      "Switch",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "nombre",
+      "stickynote",
+      "switch",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0411_Filter_Form_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Form",
+      "If",
+      "Gmail",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "filter",
+      "filtrado",
+      "form",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0431_Filter_Convertkit_Create_Triggered.json",
+    "title": "Noop: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Noop y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Noop",
+      "If",
+      "Filter",
+      "Clearbit",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de email",
+      "Creación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "clearbit",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "filter"
+    ]
+  },
+  {
+    "original_filename": "0451_Filter_Slack_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Filter",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0572_Filter_Schedule_Send_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "This n8n workflow uses 27 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling procesos empresariales.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "Sort",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "filtrado",
+      "fusión",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0595_Filter_Manual_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Markdown",
+      "Manual",
+      "If",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "fusión",
+      "manual",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "0612_Filter_Slack_Send_Scheduled.json",
+    "title": "Set: Ejecución programada (Workflow avanzado - 24 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Cron",
+      "Slack",
+      "Filter",
+      "Switch"
+    ],
+    "actions": [
+      "Ejecución programada",
+      "Filtrado de datos",
+      "Envío de email",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "envío",
+      "filter",
+      "filtrado",
+      "nombre",
+      "programación",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0801_Filter_Schedule_Import_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0830_Filter_Summarize_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Extractfromfile",
+      "Set",
+      "Form",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "extractfromfile",
+      "filtrado",
+      "form",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0849_Filter_Extractfromfile_Create_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "If",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "descarga",
+      "división",
+      "drive",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "0879_Filter_HTTP_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Filter",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Búsqueda de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0917_Filter_Whatsapp_Create_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Whatsapp",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "filter",
+      "filtrado",
+      "nombre",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "0948_Filter_Schedule_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "If",
+      "Gmail",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "envío",
+      "filter",
+      "filtrado",
+      "gmail",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1321_Filter_Manual_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Markdown",
+      "Manual",
+      "If",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "fusión",
+      "manual",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1383_Filter_Slack_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Filter",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1414_Filter_Summarize_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Store Notion's Pages as Vector Documents into Supabase with OpenAI. N8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Stickynote",
+      "Filter",
+      "Summarize",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "documents",
+      "filter",
+      "filtrado",
+      "into"
+    ]
+  },
+  {
+    "original_filename": "1562_Filter_Manual_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Spreadsheetfile",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Filtrado de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "filter",
+      "filtrado",
+      "googlesheet",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1570_Filter_Summarize_Automation_Triggered.json",
+    "title": "Filter: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Filter y integra 3 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Filter",
+      "Summarize",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "dimension",
+      "división",
+      "filter",
+      "filtrado",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "1667_Filter_Summarize_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Store Notion's Pages as Vector Documents into Supabase with OpenAI. N8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Stickynote",
+      "Filter",
+      "Summarize",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "documents",
+      "filter",
+      "filtrado",
+      "into"
+    ]
+  },
+  {
+    "original_filename": "1751_Filter_Schedule_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Markdown",
+      "Thehive"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "http",
+      "httprequest",
+      "listado",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1772_Filter_Rssfeedread_Monitor_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Rssfeedread",
+      "Manual",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de email",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "filtrado",
+      "gmail",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1791_Filter_Summarize_Create_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "This n8n workflow uses 23 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Form",
+      "Summarize",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "crawls",
+      "datos",
+      "extractfromfile",
+      "files",
+      "filter",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "2006_Filter_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Manual",
+      "Filter",
+      "Stickynote",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "company",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  }
+]

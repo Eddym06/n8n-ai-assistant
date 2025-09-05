@@ -1,0 +1,71 @@
+[
+  {
+    "original_filename": "0241_Asana_Notion_Create_Triggered.json",
+    "title": "If: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "If",
+      "Asana",
+      "Function",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "asana",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "function",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0967_Asana_Update_Triggered.json",
+    "title": "Receive updates when an event occurs in Asana",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Asana"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "asana",
+      "automated",
+      "automática",
+      "event",
+      "occurs",
+      "receive",
+      "updates"
+    ]
+  },
+  {
+    "original_filename": "1223_Asana_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "Asana",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "asana",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  }
+]

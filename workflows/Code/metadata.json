@@ -1,0 +1,5429 @@
+[
+  {
+    "original_filename": "0034_Code_Filter_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 30 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Spotify",
+      "If",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "fusión",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0182_Code_GitHub_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de notificación",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0239_Code_Typeform_Create_Triggered.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Pipedrive",
+      "Code",
+      "Set",
+      "Stickynote",
+      "Typeform"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "nombre",
+      "pipedrive",
+      "stickynote",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "0273_Code_Webhook_Create_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "If",
+      "Slack",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "code",
+      "creación",
+      "datos",
+      "lectura",
+      "nombre",
+      "recepción",
+      "slack",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0288_Code_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Stripe",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0296_Code_Webhook_Create_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "This n8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Code",
+      "N8N",
+      "Stickynote",
+      "Webhook",
+      "Html"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "html",
+      "lectura",
+      "nombre",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0298_Code_Readpdf_Send_Triggered.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "If",
+      "Google Drive",
+      "Gmail"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Envío de email",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "drive",
+      "email",
+      "envío",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0299_Code_Webhook_Create_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 49 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "If",
+      "Gmail",
+      "Crypto"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "crypto",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0307_Code_Postgres_Automate_Triggered.json",
+    "title": "PostgreSQL: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "This n8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "PostgreSQL",
+      "Code",
+      "Manual",
+      "Filter",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "manual",
+      "nombre",
+      "postgresql"
+    ]
+  },
+  {
+    "original_filename": "0308_Code_Schedule_Automate_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Itemlists",
+      "Slack",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Programación temporal",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "itemlists",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0309_Code_Filter_Automate_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Code",
+      "Set",
+      "Manual",
+      "Filter",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "manual",
+      "nombre",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "0341_Code_Filter_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "anomaly",
+      "archivos",
+      "automated",
+      "automática",
+      "batch",
+      "classification",
+      "code",
+      "creación",
+      "crops"
+    ]
+  },
+  {
+    "original_filename": "0362_Code_HTTP_Send_Webhook.json",
+    "title": "xSend and check TTS (Text-to-speech) voice calls end email verification - Emails",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calls",
+      "check",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "0365_Code_Manual_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "google",
+      "googlesheets"
+    ]
+  },
+  {
+    "original_filename": "0366_Code_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Business Automation Workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0367_Code_Manual_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "google",
+      "googlesheets"
+    ]
+  },
+  {
+    "original_filename": "0370_Code_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Markdown",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "itemlists"
+    ]
+  },
+  {
+    "original_filename": "0373_Code_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 15 pasos)",
+    "description": "This n8n workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "code",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0379_Code_Pipedrive_Create_Triggered.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "Code",
+      "Set",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0380_Code_Manual_Create_Triggered.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Manual",
+      "Google Drive",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Descarga de archivos",
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "descarga",
+      "división",
+      "drive",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0391_Code_Filter_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0393_Code_Slack_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Slack",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "airtable",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0397_Code_Schedule_Import_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "itemlists"
+    ]
+  },
+  {
+    "original_filename": "0401_Code_Filter_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Filter",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Lectura de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "lectura",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0415_Code_GoogleCalendar_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0437_Code_Filter_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Set",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "filtrado",
+      "gmail",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0438_Code_Filter_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "This n8n workflow uses 24 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "filtrado",
+      "form",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0446_Code_Todoist_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Todoist",
+      "Code",
+      "If",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Eliminación de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "eliminación",
+      "filter",
+      "filtrado",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0482_Code_Respondtowebhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Form",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "advanced",
+      "agregación",
+      "automated",
+      "automática",
+      "channel",
+      "code",
+      "datos",
+      "feeds",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "0491_Code_Webhook_Monitor_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "code",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0506_Code_Filter_Create_Scheduled.json",
+    "title": "Webflow: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webflow y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Webflow",
+      "Schedule",
+      "Set",
+      "Code",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "fusión",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0516_Code_GitHub_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0519_Code_Manual_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "Readwritefile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0546_Code_Schedule_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0548_Code_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Gmail",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Lectura de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0553_Code_Schedule_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Mqtt",
+      "Ftp",
+      "Converttofile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "converttofile",
+      "datos",
+      "ejecución",
+      "envío",
+      "mqtt",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0571_Code_Webhook_Send_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Workflow can be used to streamline business processes and improve efficiency. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Set",
+      "Gmail",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Programación temporal",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "gmail",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0577_Code_Editimage_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "editimage",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0580_Code_Editimage_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Sort",
+      "Code",
+      "Compression"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "compression",
+      "datos",
+      "división",
+      "editimage",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0598_Code_Editimage_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "editimage",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0600_Code_Extractfromfile_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 50 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Sort",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "editimage",
+      "eliminación",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0605_Code_Itemlists_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "If",
+      "Google Drive",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "drive",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0628_Code_Schedule_Export_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Code",
+      "If",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "backup",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0630_Code_Webhook_Create_Scheduled.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "If",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0651_Code_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0655_Code_Postgres_Update_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "PostgreSQL",
+      "Schedule",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0658_Code_Schedule_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Editimage",
+      "Set",
+      "Code",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "editimage",
+      "email",
+      "envío",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "0665_Code_Editimage_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Business Automation Workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "editimage",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0667_Code_GitHub_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0669_Code_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Google Drive",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "drive",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0670_Code_Microsoftoutlook_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0671_Code_Converttofile_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0686_Code_Webhook_Update_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks and ensures consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Agregación de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "agregación",
+      "code",
+      "datos",
+      "envío",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0693_Code_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 27 pasos)",
+    "description": "This n8n workflow uses 27 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Googledocstool",
+      "If"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "googledocstool",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "0696_Code_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 51 pasos)",
+    "description": "This n8n workflow uses 51 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0700_Code_Respondtowebhook_Send_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0701_Code_Strava_Send_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Strava",
+      "Code",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "gmail",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0706_Code_Schedule_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Function",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "function",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0708_Code_Filter_Update_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0709_Code_HTTP_Create_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0718_Code_GitHub_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0726_Code_Schedule_Update_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "Code",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de email",
+      "Envío de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0753_Code_Executiondata_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 8 nodos.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "code",
+      "dream",
+      "http",
+      "httprequest",
+      "luma",
+      "machine"
+    ]
+  },
+  {
+    "original_filename": "0767_Code_Filter_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 30 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Filter",
+      "Aggregate",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Agregación de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0773_Code_Manual_Update_Triggered.json",
+    "title": "Automatically Update YouTube Video Descriptions with Inserted Text - Set",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "Manual",
+      "YouTube",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automatically",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "descriptions",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "0777_Code_Filter_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Manual",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de notificación",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "envío",
+      "filtrado",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0781_Code_Schedule_Export_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Set",
+      "Google Drive",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "drive",
+      "google",
+      "googledrive",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0784_Code_Form_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Form",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "drive",
+      "form",
+      "google",
+      "googledrive",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0787_Code_GoogleCalendar_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "envío",
+      "gmail",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0794_Code_Schedule_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0808_Code_Form_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Form",
+      "Gmail",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "0844_Code_Ghost_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Business Automation Workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention. Integra con Set.",
+    "services": [
+      "Set",
+      "Code",
+      "Manual",
+      "Stickynote",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "manual",
+      "nombre",
+      "splitinbatches"
+    ]
+  },
+  {
+    "original_filename": "0848_Code_Filter_Update_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "This n8n workflow uses 20 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Google Drive",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "drive",
+      "envío",
+      "filter",
+      "filtrado",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0851_Code_Extractfromfile_Monitor_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "This n8n workflow uses 22 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "extractfromfile",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0856_Code_Schedule_Update_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0863_Code_Schedule_Import_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "function",
+      "fusión",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0891_Code_Manual_Create_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Business Automation Workflow uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "Set",
+      "Manual",
+      "Google Drive",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "drive",
+      "google",
+      "googledrive"
+    ]
+  },
+  {
+    "original_filename": "0898_Code_Schedule_Create_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 45 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0918_Code_Noop_Send_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Code",
+      "If",
+      "Splitinbatches",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "executeworkflow",
+      "nombre",
+      "splitinbatches",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0922_Code_Webhook_Create_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 16 pasos)",
+    "description": "This n8n workflow uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "code",
+      "creación",
+      "datos",
+      "nombre",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0924_Code_Respondtowebhook_Process_Webhook.json",
+    "title": "Switch: Recepción de webhook (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Switch",
+      "Webhook",
+      "Stickynote",
+      "Code"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "code",
+      "nombre",
+      "recepción",
+      "stickynote",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0926_Code_Webhook_Create_Webhook.json",
+    "title": "Code: Activación automática (Workflow avanzado - 51 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Gmail",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "Listado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "fusión",
+      "gmail",
+      "itemlists",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0946_Code_Webhook_Send_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 35 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Itemlists"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de email",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "itemlists",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0980_Code_Webhook_Automation_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Stickynote",
+      "Code"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "entity",
+      "extraction",
+      "google",
+      "http",
+      "httprequest",
+      "lectura",
+      "page",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "1109_Code_Schedule_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "airtable",
+      "anonym",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1161_Code_Slack_Send_Webhook.json",
+    "title": "Receive_and_analyze_emails_with_rules_in_Sublime_Security - Emailreadimap",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailreadimap y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "emailreadimap",
+      "envío",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1178_Code_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 30 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Form",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "blotato",
+      "code",
+      "form",
+      "http",
+      "httprequest",
+      "images"
+    ]
+  },
+  {
+    "original_filename": "1257_Code_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 51 pasos)",
+    "description": "This n8n workflow uses 51 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1259_Code_Strava_Automation_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Strava",
+      "Code",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "gmail",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1264_Code_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "YouTube"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "complete",
+      "datos",
+      "división",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1278_Code_Schedule_Monitor_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 31 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Rssfeedread",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "google",
+      "http",
+      "httprequest",
+      "information",
+      "jina"
+    ]
+  },
+  {
+    "original_filename": "1281_Code_Schedule_Monitor_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 31 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Rssfeedread",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "google",
+      "http",
+      "httprequest",
+      "information",
+      "jina"
+    ]
+  },
+  {
+    "original_filename": "1286_Code_Manual_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Manual",
+      "Itemlists",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Búsqueda de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "digest",
+      "división",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1292_Code_GitHub_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Stickynote",
+      "Github",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "github",
+      "google",
+      "googlesheets",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1299_Code_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Gmail",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Lectura de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1301_Code_Extractfromfile_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Lectura de datos",
+      "Envío de email",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "amazon",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "drive",
+      "email",
+      "envío",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1307_Code_Converttofile_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1308_Code_Microsoftoutlook_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1313_Code_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Markdown",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analyze",
+      "automated",
+      "automática",
+      "code",
+      "content",
+      "creación",
+      "datos",
+      "envío",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1317_Code_Schedule_Export_Scheduled.json",
+    "title": "🧹 Archive (delete) duplicate items from a Notion database - Schedule",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Set",
+      "Aggregate",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "archive",
+      "automated",
+      "automática",
+      "code",
+      "database",
+      "datos",
+      "delete"
+    ]
+  },
+  {
+    "original_filename": "1320_Code_Schedule_Automate_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "This n8n workflow uses 35 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automation",
+      "automática",
+      "blog",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1331_Code_Schedule_Automate_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Gmail",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "analysis",
+      "automate",
+      "automated",
+      "automática",
+      "code",
+      "content",
+      "creación",
+      "datos"
+    ]
+  },
+  {
+    "original_filename": "1337_Code_Schedule_Automate_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Gmail",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "analysis",
+      "automate",
+      "automated",
+      "automática",
+      "code",
+      "content",
+      "creación",
+      "datos"
+    ]
+  },
+  {
+    "original_filename": "1356_Code_Webhook_Import_Webhook.json",
+    "title": "Automatización HTTP Request: Recepción de webhook activada por evento (Workflow avanz",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "application",
+      "code",
+      "creación",
+      "datos",
+      "example",
+      "extractfromfile",
+      "form",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1378_Code_Filter_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Filter",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "google",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1391_Code_Respondtowebhook_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1401_Code_Webhook_Automate_Webhook.json",
+    "title": "Sort: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "This n8n workflow uses 33 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Sort",
+      "Code",
+      "Set",
+      "Manual",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "fusión",
+      "lectura",
+      "manual",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "1402_Code_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "LinkedIn Web Scraping with Bright Data MCP Server & Google Gemini. Workflow uses 20 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "bright",
+      "code",
+      "creación",
+      "data",
+      "datos",
+      "function",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1423_Code_Editimage_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "editimage",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1426_Code_Schedule_Export_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "backup",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "gitea",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1428_Code_Schedule_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Editimage",
+      "Set",
+      "Code",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "editimage",
+      "email",
+      "envío",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1429_Code_Schedule_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Editimage",
+      "Set",
+      "Code",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "editimage",
+      "email",
+      "envío",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1435_Code_Slack_Automation_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Code",
+      "Markdown",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1446_Code_Schedule_Automate_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1460_Code_Schedule_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agile",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "enrichment",
+      "filtrado",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1461_Code_Manual_Automation_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "YouTube Video Analyzer with AI uses 21 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analyzer",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1478_Code_Todoist_Automate_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Todoist",
+      "Code",
+      "Rssfeedread",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "fusión",
+      "gmail",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1500_Code_Webhook_Automation_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Switch",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "deploy",
+      "docker",
+      "lectura",
+      "minio",
+      "recepción",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1514_Code_HTTP_Create_Webhook.json",
+    "title": "Dynamically create tables in Airtable for your Webflow form submissions",
+    "description": "Automatización que se activa cuando ocurren eventos en Webflow y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Webflow",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "create",
+      "datos",
+      "dynamically",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1518_Code_Manual_Process_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Subida de archivos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "convert",
+      "datos",
+      "drive",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1586_Code_Respondtowebhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "Youtube Discord Bot uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Webhook.",
+    "services": [
+      "Webhook",
+      "Code"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "code",
+      "discord",
+      "recepción",
+      "webhook",
+      "youtube"
+    ]
+  },
+  {
+    "original_filename": "1594_Code_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Matomo Analytics Report uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1605_Code_Editimage_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Business Automation Workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "editimage",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1619_Code_Pipedrive_Automation_Triggered.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "Code",
+      "Set",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1630_Code_Form_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "The N8n workflow uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "Set",
+      "Form",
+      "N8N",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "dropdown",
+      "dynamic",
+      "field",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1644_Code_Schedule_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "creator",
+      "datos",
+      "envío",
+      "generator"
+    ]
+  },
+  {
+    "original_filename": "1646_Code_Schedule_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "extraction",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1653_Code_Webhook_Send_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 49 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "If",
+      "Gmail",
+      "Crypto"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "crypto",
+      "datos",
+      "email",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1656_Code_Readpdf_Send_Triggered.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "If",
+      "Google Drive",
+      "Gmail"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Envío de email",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "drive",
+      "email",
+      "envío",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1664_Code_HTTP_Send_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1666_Code_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "discrimination",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1670_Code_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1671_Code_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1699_Code_Editimage_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Editimage",
+      "Sort",
+      "Code",
+      "Compression"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "compression",
+      "datos",
+      "división",
+      "editimage",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1710_Code_Schedule_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "creator",
+      "datos",
+      "envío",
+      "generator"
+    ]
+  },
+  {
+    "original_filename": "1713_Code_Webhook_Automate_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "Code",
+      "Manual",
+      "N8N",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Envío de datos",
+      "Listado de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "dashboard",
+      "datos",
+      "envío",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1724_Code_Schedule_Automation_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de email",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1726_Code_Webhook_Automation_Webhook.json",
+    "title": "Extractfromfile: Recepción de webhook (Workflow avanzado - 60 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Sort",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "docsify",
+      "example",
+      "extractfromfile",
+      "fusión",
+      "lectura",
+      "recepción",
+      "sort",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1728_Code_Filter_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "anomaly",
+      "archivos",
+      "automated",
+      "automática",
+      "batch",
+      "classification",
+      "code",
+      "creación",
+      "crops"
+    ]
+  },
+  {
+    "original_filename": "1756_Code_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "This n8n workflow uses 23 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "article",
+      "auto",
+      "automated",
+      "automática",
+      "base",
+      "code",
+      "creación",
+      "datos",
+      "function"
+    ]
+  },
+  {
+    "original_filename": "1758_Code_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "YouTube"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "complete",
+      "datos",
+      "división",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1759_Code_Filter_Monitor_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Airtop",
+      "Manual",
+      "Slack",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "airtop",
+      "automated",
+      "automática",
+      "code",
+      "competitor",
+      "datos",
+      "filter",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1761_Code_Extractfromfile_Automate_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Google Drive",
+      "Stickynote",
+      "Converttofile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Fusión de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "converttofile",
+      "datos",
+      "descarga",
+      "drive"
+    ]
+  },
+  {
+    "original_filename": "1765_Code_Filter_Process_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Compression",
+      "Gmail",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "colombian",
+      "compression",
+      "datos",
+      "división",
+      "drive",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1789_Code_Webhook_Automate_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "google",
+      "http",
+      "httprequest",
+      "lectura",
+      "linechatbot",
+      "memory",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "1796_Code_Slack_Automation_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Code",
+      "Markdown",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1802_Code_Manual_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Tiktok Downloader uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "downloader",
+      "drive",
+      "google",
+      "googledrive"
+    ]
+  },
+  {
+    "original_filename": "1809_Code_Schedule_Automate_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "This n8n workflow uses 35 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automation",
+      "automática",
+      "blog",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1813_Code_GoogleCalendar_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Google Calendar",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "1814_Code_Extractfromfile_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Descarga de archivos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "deployer",
+      "descarga",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1815_Code_Webhook_Automation_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Switch",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "deploy",
+      "docker",
+      "influxdb",
+      "lectura",
+      "recepción",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1818_Code_Converttofile_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "This n8n workflow uses 36 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Markdown",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "form",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1819_Code_Discord_Send_Triggered.json",
+    "title": "Send Discord message from Webflow form submission",
+    "description": "Automatización que se activa cuando ocurren eventos en Webflow y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Webflow",
+      "Discord",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "discord",
+      "envío",
+      "filtrado",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1825_Code_Webhook_Automation_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 34 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Switch",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "deploy",
+      "docker",
+      "lectura",
+      "recepción",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1832_Code_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 44 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "deploy",
+      "división",
+      "docker",
+      "eliminación",
+      "http",
+      "httprequest",
+      "lectura",
+      "nextcloud"
+    ]
+  },
+  {
+    "original_filename": "1836_Code_Googledocs_Automation_Webhook.json",
+    "title": "Code: Activación automática (Workflow avanzado - 53 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Cron",
+      "Googledocs",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Ejecución programada",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "cron",
+      "datos",
+      "división",
+      "drive",
+      "ejecución",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1837_Code_Ghost_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Form",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "extractfromfile",
+      "form",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1839_Code_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Lectura de datos",
+      "Filtrado de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "descarga",
+      "drive",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1844_Code_Schedule_Export_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "backup",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "github"
+    ]
+  },
+  {
+    "original_filename": "1850_Code_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1861_Code_Form_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Streamline data from an n8n form into Google Sheet and Airtable. Use 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Code",
+      "Set",
+      "Form",
+      "Gmail",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "code",
+      "data",
+      "form",
+      "gmail",
+      "google",
+      "into"
+    ]
+  },
+  {
+    "original_filename": "1862_Code_Respondtowebhook_Automation_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Webhook",
+      "Stickynote",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Validación de datos"
+    ],
+    "keywords": [
+      "calculate",
+      "centroid",
+      "code",
+      "datos",
+      "recepción",
+      "stickynote",
+      "validación",
+      "vectors",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1864_Code_Executecommand_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "AutoClip uses 23 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Listado de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "autoclip",
+      "automated",
+      "automatically",
+      "automática",
+      "clips",
+      "code",
+      "datos",
+      "descarga"
+    ]
+  },
+  {
+    "original_filename": "1865_Code_HTTP_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Google Drive",
+      "YouTube"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Lectura de datos",
+      "Eliminación de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "drive",
+      "eliminación",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1875_Code_Schedule_Automate_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Code",
+      "Reddit"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1906_Code_Extractfromfile_Automate_Triggered.json",
+    "title": "Google Drive: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Google Drive Automation uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Google Drive",
+      "Extractfromfile",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automation",
+      "automática",
+      "code",
+      "datos",
+      "descarga",
+      "división",
+      "drive"
+    ]
+  },
+  {
+    "original_filename": "1910_Code_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling the flow of data between systems. Este workflows uses a combination of webhooks and other tools.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Slack",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de notificación",
+      "Envío de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "batchdata",
+      "code",
+      "creación",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lead",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "1921_Code_Filter_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Manual",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de notificación",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "envío",
+      "filtrado",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1924_Code_Webhook_Export_Webhook.json",
+    "title": "HTTP Request: Subida de archivos (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Google Drive",
+      "Webhook"
+    ],
+    "actions": [
+      "Subida de archivos",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "archivos",
+      "code",
+      "datos",
+      "drive",
+      "envío",
+      "file",
+      "fusión",
+      "google",
+      "googledrive",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1958_Code_Slack_Send_Triggered.json",
+    "title": "Send Slack message from Webflow form submission",
+    "description": "Automatización que se activa cuando ocurren eventos en Webflow y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Webflow",
+      "Code",
+      "Set",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos",
+      "Listado de datos",
+      "Transformación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "envío",
+      "form",
+      "listado",
+      "message"
+    ]
+  },
+  {
+    "original_filename": "1965_Code_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1966_Code_Webhook_Automation_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 35 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Switch",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "deploy",
+      "docker",
+      "immich",
+      "lectura",
+      "recepción",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1969_Code_Stickynote_Automation_Triggered.json",
+    "title": "Code: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios.",
+    "services": [
+      "Code",
+      "Set",
+      "Compression",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "compression",
+      "executeworkflow",
+      "files",
+      "multiple",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1984_Code_Executecommand_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "credentials",
+      "datos",
+      "extractfromfile",
+      "form",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1994_Code_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "discrimination",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "2008_Code_Webhook_Automate_Webhook.json",
+    "title": "Automatización Code: Recepción de webhook activada por evento (Workflow avanzado - 10",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Google Drive",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "attendance",
+      "automated",
+      "code",
+      "creación",
+      "datos",
+      "drive",
+      "google",
+      "googledrive",
+      "location",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "2011_Code_Manual_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "google",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "2012_Code_Schedule_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "extraction",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "2020_Code_Noop_Create_Triggered.json",
+    "title": "Addon for Workflow Nodes Update Check Template - Set",
+    "description": "This n8n workflow uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "Code",
+      "Gmail",
+      "N8N",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "addon",
+      "automated",
+      "automática",
+      "check",
+      "code",
+      "datos",
+      "envío",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "2026_Code_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Use XMLRPC via HttpRequest-node to post on Wordpress.com. This n8n workflow uses 11 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "http",
+      "httprequest",
+      "manual",
+      "post",
+      "request",
+      "wordpress"
+    ]
+  },
+  {
+    "original_filename": "2033_Code_Extractfromfile_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "AI-Powered WhatsApp Chatbot for Text, Voice, Images & PDFs. Workflow uses 32 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "chatbot",
+      "code",
+      "datos",
+      "descarga",
+      "envío",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "2034_Code_Webhook_Automate_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "client",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura",
+      "oidc",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "2046_Code_Webhook_Automation_Webhook.json",
+    "title": "Extractfromfile: Recepción de webhook (Workflow avanzado - 60 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Sort",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "docsify",
+      "example",
+      "extractfromfile",
+      "fusión",
+      "lectura",
+      "recepción",
+      "sort",
+      "webhook"
+    ]
+  }
+]

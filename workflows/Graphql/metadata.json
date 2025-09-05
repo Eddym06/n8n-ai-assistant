@@ -1,0 +1,51 @@
+[
+  {
+    "original_filename": "0116_Graphql_Discord_Automate_Scheduled.json",
+    "title": "Discord: Listado de datos (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Discord",
+      "Set",
+      "Cron",
+      "Itemlists",
+      "Graphql"
+    ],
+    "actions": [
+      "Listado de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "discord",
+      "ejecución",
+      "graphql",
+      "itemlists",
+      "listado",
+      "nombre",
+      "programada",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0461_Graphql_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Function",
+      "Graphql",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "function",
+      "graphql",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  }
+]

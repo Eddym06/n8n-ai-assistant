@@ -1,0 +1,174 @@
+[
+  {
+    "original_filename": "0274_Zendesk_Asana_Create_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "If",
+      "Asana",
+      "Function",
+      "Webhook",
+      "Zendesk"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "asana",
+      "creación",
+      "datos",
+      "function",
+      "lectura",
+      "nombre",
+      "recepción",
+      "webhook",
+      "zendesk"
+    ]
+  },
+  {
+    "original_filename": "0279_Zendesk_GitHub_Create_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "If",
+      "Function",
+      "Webhook",
+      "Zendesk",
+      "Github"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "creación",
+      "datos",
+      "function",
+      "github",
+      "lectura",
+      "nombre",
+      "recepción",
+      "webhook",
+      "zendesk"
+    ]
+  },
+  {
+    "original_filename": "0280_Zendesk_Jira_Create_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "If",
+      "Function",
+      "Webhook",
+      "Zendesk",
+      "Jira"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "creación",
+      "datos",
+      "function",
+      "jira",
+      "lectura",
+      "nombre",
+      "recepción",
+      "webhook",
+      "zendesk"
+    ]
+  },
+  {
+    "original_filename": "0285_Zendesk_HubSpot_Create_Scheduled.json",
+    "title": "Cron: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Cron",
+      "If",
+      "Zendesk",
+      "Functionitem",
+      "Merge"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "functionitem",
+      "fusión",
+      "lectura",
+      "merge",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0286_Zendesk_HubSpot_Create_Scheduled.json",
+    "title": "Set: Fusión de datos (Workflow avanzado - 13 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Cron",
+      "If",
+      "Zendesk",
+      "Functionitem"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "functionitem",
+      "fusión",
+      "lectura",
+      "nombre",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0823_Zendesk_Update_Triggered.json",
+    "title": "Receive updates for support in Zendesk",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Zendesk"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "receive",
+      "support",
+      "updates",
+      "zendesk"
+    ]
+  }
+]

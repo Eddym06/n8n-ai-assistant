@@ -1,0 +1,53 @@
+[
+  {
+    "original_filename": "1754_Executiondata_Slack_Automate_Webhook.json",
+    "title": "Slack: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Slack y integra 2 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Slack",
+      "Executiondata"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "clockifyblockiaworkflow",
+      "creación",
+      "datos",
+      "eliminación",
+      "envío",
+      "executiondata",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1972_Executiondata_Stickynote_Automation_Webhook.json",
+    "title": "Automatización Set: Recepción de webhook activada por evento (Workflow avanzado - 8 p",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, utiliza 8 nodos.",
+    "services": [
+      "Set",
+      "If",
+      "Airtable",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "airtable",
+      "luma",
+      "recepción",
+      "response",
+      "stickynote",
+      "webhook"
+    ]
+  }
+]

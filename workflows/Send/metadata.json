@@ -1,0 +1,45 @@
+[
+  {
+    "original_filename": "0320_Send_Triggered.json",
+    "title": "Workflow Sin Nombre",
+    "description": "Business Automation Workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0804_Send_Triggered.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [
+      "Activación automática",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1409_Send.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  }
+]

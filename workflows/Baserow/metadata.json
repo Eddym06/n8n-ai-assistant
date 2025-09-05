@@ -1,0 +1,30 @@
+[
+  {
+    "original_filename": "1822_Baserow_Stickynote_Automation_Webhook.json",
+    "title": "Markdown: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Este workflow uses 9 interconnected nodes to streamline business processes. It uses a webhook to connect different business systems. It can also be used to automate tasks that require human intervention.",
+    "services": [
+      "Markdown",
+      "If",
+      "Stickynote",
+      "Webhook",
+      "Baserow"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "baserow",
+      "datos",
+      "html",
+      "lectura",
+      "markdown",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  }
+]

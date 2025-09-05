@@ -1,0 +1,118 @@
+[
+  {
+    "original_filename": "0118_Readbinaryfile_Onfleet_Create.json",
+    "title": "Create Onfleet tasks from Spreadsheets",
+    "description": "Automatización que crea registros en Onfleet y integra 3 servicios.",
+    "services": [
+      "Onfleet",
+      "Spreadsheetfile",
+      "Readbinaryfile"
+    ],
+    "actions": [],
+    "keywords": [
+      "create",
+      "onfleet",
+      "readbinaryfile",
+      "spreadsheetfile",
+      "spreadsheets",
+      "tasks"
+    ]
+  },
+  {
+    "original_filename": "0220_Readbinaryfile_Manual_Automate_Triggered.json",
+    "title": "Writebinaryfile: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Writebinaryfile",
+      "Spreadsheetfile",
+      "Manual",
+      "Readbinaryfile",
+      "Movebinarydata"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "manual",
+      "movebinarydata",
+      "nombre",
+      "readbinaryfile",
+      "spreadsheetfile",
+      "writebinaryfile"
+    ]
+  },
+  {
+    "original_filename": "0351_Readbinaryfile_Manual_Automate_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Spreadsheetfile",
+      "Manual",
+      "Splitinbatches",
+      "Readbinaryfile"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "manual",
+      "readbinaryfile"
+    ]
+  },
+  {
+    "original_filename": "0352_Readbinaryfile_Spreadsheetfile_Create.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Spreadsheetfile",
+      "PostgreSQL",
+      "Readbinaryfile"
+    ],
+    "actions": [],
+    "keywords": [
+      "nombre",
+      "postgresql",
+      "readbinaryfile",
+      "spreadsheetfile"
+    ]
+  },
+  {
+    "original_filename": "0749_Readbinaryfile_Movebinarydata_Send_Scheduled.json",
+    "title": "Writebinaryfile: Ejecución programada (Workflow avanzado - 9 pasos)",
+    "description": "Sistema de notificaciones que envía alertas cuando ejecución programada y integra 5 servicios, utiliza 9 nodos.",
+    "services": [
+      "Writebinaryfile",
+      "Cron",
+      "If",
+      "Function",
+      "Signl4"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "alert",
+      "cron",
+      "ejecución",
+      "function",
+      "programada",
+      "scheduled",
+      "writebinaryfile"
+    ]
+  }
+]

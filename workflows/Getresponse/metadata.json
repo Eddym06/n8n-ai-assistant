@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "1202_Getresponse_Airtable_Import_Triggered.json",
+    "title": "Getresponse: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Getresponse",
+      "Airtable",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "getresponse",
+      "lectura",
+      "nombre"
+    ]
+  }
+]

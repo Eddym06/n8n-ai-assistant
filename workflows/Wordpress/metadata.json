@@ -1,0 +1,154 @@
+[
+  {
+    "original_filename": "0502_Wordpress_Filter_Update_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Markdown",
+      "Wordpress"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "0721_Wordpress_Converttofile_Process_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Business Automation Workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Set.",
+    "services": [
+      "Set",
+      "Manual",
+      "Google Drive",
+      "Wordpress",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "google",
+      "googledrive",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1327_Wordpress_Manual_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automate Content Generator for WordPress with DeepSeek R1. This n8n workflow uses 17 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Wordpress",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automate",
+      "automated",
+      "automática",
+      "content",
+      "creación",
+      "datos",
+      "deepseek"
+    ]
+  },
+  {
+    "original_filename": "1550_Wordpress_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Wordpress",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Subida de archivos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automated",
+      "automática",
+      "blog",
+      "datos",
+      "guide",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1949_Wordpress_Manual_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automate Content Generator for WordPress with DeepSeek R1. This n8n workflow uses 17 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Wordpress",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automate",
+      "automated",
+      "automática",
+      "content",
+      "creación",
+      "datos",
+      "deepseek"
+    ]
+  }
+]

@@ -1,0 +1,430 @@
+[
+  {
+    "original_filename": "0126_Error_Slack_Automate_Triggered.json",
+    "title": "Slack: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Slack",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "nombre",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "0395_Error_Mondaycom_Update_Triggered.json",
+    "title": "Code: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "Mondaycom",
+      "Datetime",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "datetime",
+      "datos",
+      "error",
+      "mondaycom",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0447_Error_Slack_Send_Triggered.json",
+    "title": "Set: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "Stickynote",
+      "Slack",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "nombre",
+      "slack",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0454_Error_Telegram_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Error",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "nombre",
+      "stickynote",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0456_Error_Gmail_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "gmail",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0518_Error_Code_Update_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Code",
+      "Error",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "error",
+      "gmail",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0545_Error_N8N_Import_Triggered.json",
+    "title": "N8N: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "N8N",
+      "Code",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "error",
+      "lectura",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0945_Error_Code_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Error",
+      "Code",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "alert",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "error",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1036_Error_Twilio_Send_Triggered.json",
+    "title": "Send an SMS when a workflow fails - Twilio",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Twilio",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "fails",
+      "send",
+      "twilio"
+    ]
+  },
+  {
+    "original_filename": "1099_Error_Gmail_Send_Triggered.json",
+    "title": "Gmail: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Gmail",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "gmail",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1179_Error_Mailgun_Automate_Triggered.json",
+    "title": "Error: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Error",
+      "Mailgun"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "mailgun",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1237_Error_Telegram_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Writebinaryfile",
+      "Error",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "error",
+      "google",
+      "googledrive",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1715_Error_Telegram_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Writebinaryfile",
+      "Error",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "error",
+      "google",
+      "googledrive",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1777_Error_Postgres_Send_Triggered.json",
+    "title": "Log errors and avoid sending too many emails - Emailsend",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "PostgreSQL",
+      "Code",
+      "Error",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Envío de notificación"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "avoid",
+      "code",
+      "datos",
+      "email",
+      "emails",
+      "emailsend",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1849_Error_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Error"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "http",
+      "httprequest",
+      "line",
+      "report",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1948_Error_Telegram_Send_Triggered.json",
+    "title": "Error Handler send Telegram - Stickynote",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Error",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "error",
+      "handler",
+      "send",
+      "stickynote",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "1991_Error_Code_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Set",
+      "Error",
+      "Code",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "error",
+      "evaluation",
+      "fusión",
+      "gmail",
+      "handling"
+    ]
+  }
+]

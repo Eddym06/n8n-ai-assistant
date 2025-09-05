@@ -1,0 +1,87 @@
+[
+  {
+    "original_filename": "1582_Summarize_Stickynote_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Summarize",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "assistant",
+      "automated",
+      "automática",
+      "code",
+      "custom",
+      "datos",
+      "fusión",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1706_Summarize_Stickynote_Automation_Triggered.json",
+    "title": "Googledocs: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googledocs y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Googledocs",
+      "Set",
+      "If",
+      "Summarize",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "googledocs",
+      "jira",
+      "lectura",
+      "retrospective",
+      "stickynote",
+      "summarize"
+    ]
+  },
+  {
+    "original_filename": "1829_Summarize_Respondtowebhook_Automation_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Adaptive RAG uses 39 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Set.",
+    "services": [
+      "Set",
+      "Summarize",
+      "Switch",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "adaptive",
+      "automated",
+      "automática",
+      "recepción",
+      "stickynote",
+      "summarize",
+      "switch",
+      "webhook"
+    ]
+  }
+]

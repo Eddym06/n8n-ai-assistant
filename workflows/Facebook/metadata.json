@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0123_Facebook_Mattermost_Update_Triggered.json",
+    "title": "Receive a Mattermost message when a user updates their profile on Facebook",
+    "description": "Receive a Mattermost message when a user updates their profile on Facebook. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow between integrated applications and services.",
+    "services": [
+      "Mattermost",
+      "Facebook"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "facebook",
+      "mattermost",
+      "message",
+      "profile",
+      "receive",
+      "updates",
+      "user"
+    ]
+  }
+]

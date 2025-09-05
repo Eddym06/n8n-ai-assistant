@@ -1,0 +1,126 @@
+[
+  {
+    "original_filename": "1551_Mondaycom_Schedule_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Markdown",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Eliminación de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "assistant",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "eliminación",
+      "email",
+      "fusión",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1553_Mondaycom_Splitout_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Manual",
+      "Mondaycom"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1781_Mondaycom_Splitout_Import_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Splitout",
+      "Set",
+      "Aggregate",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "full",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1974_Mondaycom_Schedule_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Markdown",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Eliminación de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "assistant",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "eliminación",
+      "email",
+      "fusión",
+      "manual"
+    ]
+  }
+]

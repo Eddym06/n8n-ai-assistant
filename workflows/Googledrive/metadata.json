@@ -1,0 +1,82 @@
+[
+  {
+    "original_filename": "0839_GoogleDrive_GoogleSheets_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "This n8n workflow uses 13 interconnected nodes to automate business processes. It uses Google Drive, Facebook, Google Sheets and other tools to connect business systems.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Facebook",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "drive",
+      "facebook",
+      "google",
+      "googledrive",
+      "googlesheets"
+    ]
+  },
+  {
+    "original_filename": "1673_GoogleDrive_GoogleSheets_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, utiliza 12 nodos.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Googledocs",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "drive",
+      "google",
+      "googledocs",
+      "googledrive",
+      "googlesheets",
+      "sheets",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1806_GoogleDrive_GoogleSheets_Import_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, utiliza 12 nodos.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Googledocs",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "document",
+      "drive",
+      "fetch",
+      "google",
+      "googledocs",
+      "googledrive",
+      "googlesheets"
+    ]
+  }
+]

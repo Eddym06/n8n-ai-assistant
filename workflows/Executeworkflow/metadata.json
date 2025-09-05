@@ -1,0 +1,243 @@
+[
+  {
+    "original_filename": "0371_Executeworkflow_Summarize_Send_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Summarize",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "fusión",
+      "lectura",
+      "listado",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0372_Executeworkflow_Hackernews_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "Code",
+      "Stickynote",
+      "Executeworkflow",
+      "Hackernews"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "executeworkflow",
+      "hackernews",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0406_Executeworkflow_Slack_Send_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "If",
+      "Slack",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "email",
+      "envío",
+      "executeworkflow",
+      "nombre",
+      "slack",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0569_Executeworkflow_Telegram_Update_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Business Automation Workflow uses 29 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "Google Sheets",
+      "If",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "google",
+      "googlesheets",
+      "lectura",
+      "nombre",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0872_Executeworkflow_Executecommandtool_Create_Triggered.json",
+    "title": "Executecommand: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Executecommand y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Executecommand",
+      "Executecommandtool",
+      "Switch",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Búsqueda de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "executecommand",
+      "executecommandtool",
+      "executeworkflow",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0947_Executeworkflow_Stickynote_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "This n8n workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "If",
+      "Google Drive",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "drive",
+      "executeworkflow",
+      "google",
+      "googledrive",
+      "markdown",
+      "notes",
+      "obsidian"
+    ]
+  },
+  {
+    "original_filename": "1793_Executeworkflow_Airtabletool_Automation_Triggered.json",
+    "title": "Executeworkflow: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Executeworkflow y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Executeworkflow",
+      "Airtable",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "agent",
+      "airtable",
+      "automated",
+      "automática",
+      "contact",
+      "datos",
+      "executeworkflow",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1794_Executeworkflow_Automation_Webhook.json",
+    "title": "Executeworkflow: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Executeworkflow y integra 2 servicios, utiliza 6 nodos.",
+    "services": [
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "content",
+      "creator",
+      "executeworkflow"
+    ]
+  },
+  {
+    "original_filename": "1918_Executeworkflow_Automation_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Switch y integra 4 servicios, utiliza 7 nodos.",
+    "services": [
+      "Switch",
+      "If",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "format",
+      "number",
+      "phone",
+      "switch"
+    ]
+  }
+]

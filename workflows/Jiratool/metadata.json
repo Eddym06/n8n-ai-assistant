@@ -1,0 +1,64 @@
+[
+  {
+    "original_filename": "0604_Jiratool_Schedule_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "If",
+      "Jiratool",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "jiratool",
+      "lectura",
+      "listado",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1328_Jiratool_Schedule_Automate_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "If",
+      "Jiratool",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "jiratool",
+      "lectura",
+      "listado",
+      "nombre",
+      "programación"
+    ]
+  }
+]

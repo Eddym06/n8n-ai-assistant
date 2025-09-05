@@ -1,0 +1,102 @@
+[
+  {
+    "original_filename": "0354_Twilio_Typeform_Send_Triggered.json",
+    "title": "Send Typeforms leads via Whatsapp (Twilio)",
+    "description": "Automatización que se activa cuando ocurren eventos en Typeform y integra 3 servicios.",
+    "services": [
+      "Typeform",
+      "Twilio",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "leads",
+      "send",
+      "twilio",
+      "typeform",
+      "typeforms",
+      "whatsapp"
+    ]
+  },
+  {
+    "original_filename": "0841_Twilio_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Airtable",
+      "Twilio",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de SMS",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "envío",
+      "listado",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0842_Twilio_Cron_Send_Scheduled.json",
+    "title": "Set: Ejecución programada (5 pasos)",
+    "description": "Sistema de notificaciones que envía alertas cuando ejecución programada y integra 4 servicios.",
+    "services": [
+      "Set",
+      "PostgreSQL",
+      "Twilio",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "alerting",
+      "cron",
+      "ejecución",
+      "monitoring",
+      "postgresql",
+      "programada",
+      "scheduled",
+      "twilio"
+    ]
+  },
+  {
+    "original_filename": "1198_Twilio_Pushcut_Send_Triggered.json",
+    "title": "Send an SMS to a number whenever you go out - Twilio",
+    "description": "Automatización que se activa cuando ocurren eventos en Twilio y integra 2 servicios.",
+    "services": [
+      "Twilio",
+      "Pushcut"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "number",
+      "pushcut",
+      "send",
+      "twilio",
+      "whenever"
+    ]
+  }
+]

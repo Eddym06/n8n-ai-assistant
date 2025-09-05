@@ -1,0 +1,31 @@
+[
+  {
+    "original_filename": "0413_Intercom_Code_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Code",
+      "Intercom",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "intercom",
+      "nombre",
+      "recepción",
+      "request"
+    ]
+  }
+]

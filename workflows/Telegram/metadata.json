@@ -1,0 +1,3397 @@
+[
+  {
+    "original_filename": "0001_Telegram_Schedule_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Nostr #damus AI Powered Reporting + Gmail + Telegram Workflow. This n8n workflow uses 24 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations.",
+    "services": [
+      "Schedule",
+      "Markdown",
+      "Manual",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "damus",
+      "datos",
+      "fusión",
+      "gmail",
+      "lectura",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0140_Telegram_Webhook_Automation_Webhook.json",
+    "title": "Cron: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Cron y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Cron",
+      "Manual",
+      "MySQL",
+      "Webhook",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "cron",
+      "ejecución",
+      "manual",
+      "mysql",
+      "nombre",
+      "programada",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "0158_Telegram_Functionitem_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Writebinaryfile",
+      "Set",
+      "Cron",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Ejecución programada",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0170_Telegram_Wait_Automation_Scheduled.json",
+    "title": "HTTP Request: Ejecución programada (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Wait",
+      "Cron",
+      "If",
+      "Noop"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "http",
+      "httprequest",
+      "nombre",
+      "noop",
+      "programada",
+      "request",
+      "scheduled",
+      "wait"
+    ]
+  },
+  {
+    "original_filename": "0201_Telegram_Executecommand_Process_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Writebinaryfile",
+      "Set",
+      "Spreadsheetfile",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0231_Telegram_Nasa_Send_Scheduled.json",
+    "title": "Send the Astronomy Picture of the day daily to a Telegram channel - Nasa",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 3 servicios.",
+    "services": [
+      "Nasa",
+      "Cron",
+      "Telegram"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "astronomy",
+      "channel",
+      "cron",
+      "daily",
+      "ejecución",
+      "nasa",
+      "picture",
+      "programada",
+      "scheduled",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "0340_Telegram_Automation_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 2 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "blockchain",
+      "búsqueda",
+      "datos",
+      "insights",
+      "lectura",
+      "screener"
+    ]
+  },
+  {
+    "original_filename": "0346_Telegram_Cron_Automation_Scheduled.json",
+    "title": "Functionitem: Ejecución programada (3 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 3 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Functionitem",
+      "Cron",
+      "Telegram"
+    ],
+    "actions": [
+      "Ejecución programada",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "datos",
+      "ejecución",
+      "envío",
+      "functionitem",
+      "journal",
+      "programada",
+      "reminder",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0381_Telegram_Code_Update_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Function",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "envío",
+      "filtrado",
+      "function"
+    ]
+  },
+  {
+    "original_filename": "0383_Telegram_Wait_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Wait",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Envío de notificación",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "envío",
+      "filtrado",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0388_Telegram_Code_Create_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Noop",
+      "Spreadsheetfile",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "envío",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0398_Telegram_Wait_Send_Webhook.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Emailreadimap",
+      "HTTP Request",
+      "Wait",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "email",
+      "emailreadimap",
+      "envío",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0419_Telegram_Automate_Triggered.json",
+    "title": "Telegram: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0425_Telegram_Hunter_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Hunter",
+      "Form",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "email",
+      "envío",
+      "form",
+      "http",
+      "httprequest",
+      "hunter",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0462_Telegram_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 43 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "extractfromfile",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0465_Telegram_Filter_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "The N8N workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Filter",
+      "N8N",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0481_Telegram_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Gmail",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Eliminación de datos",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "eliminación",
+      "envío",
+      "fusión",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "0488_Telegram_Stickynote_Update_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Switch y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Wait",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "lectura",
+      "nombre",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "0585_Telegram_Splitout_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Manual",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Eliminación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "eliminación",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0599_Telegram_Gmailtool_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Google Calendar",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "datos",
+      "email",
+      "envío",
+      "gmail",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "0676_Telegram_Splitout_Import_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Splitout",
+      "YouTube",
+      "Summarize"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "lectura",
+      "nombre",
+      "recepción",
+      "splitout",
+      "summarize",
+      "webhook",
+      "youtube"
+    ]
+  },
+  {
+    "original_filename": "0679_Telegram_Splitout_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0690_Telegram_Webhook_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "This n8n workflow uses 35 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks and ensures consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Gmail",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "fusión",
+      "gmail",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0704_Telegram_Automate_Triggered.json",
+    "title": "If: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 2 servicios.",
+    "services": [
+      "If",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "español",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0705_Telegram_Automate_Triggered.json",
+    "title": "If: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "If",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0735_Telegram_GoogleCalendar_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "This n8n workflow uses 36 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Google Calendar",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "división",
+      "drive",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "0742_Telegram_Splitout_Create_Webhook.json",
+    "title": "YT AI News Playlist Creator/AI News Form Updater - HTTP Request",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Splitout",
+      "Manual",
+      "YouTube"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creator",
+      "datos",
+      "división",
+      "eliminación",
+      "filtrado",
+      "form",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0768_Telegram_Stickynote_Create_Triggered.json",
+    "title": "Todoist: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Todoist y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Todoist",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "nombre",
+      "stickynote",
+      "switch",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0769_Telegram_Webhook_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Airtable",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "envío",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0782_Telegram_Redis_Create_Webhook.json",
+    "title": "Executiondata: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Executiondata y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Executiondata",
+      "HTTP Request",
+      "Set",
+      "If",
+      "Redis"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "executiondata",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0789_Telegram_Code_Create_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Google Sheets",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "drive",
+      "envío",
+      "google",
+      "googledrive"
+    ]
+  },
+  {
+    "original_filename": "0807_Telegram_Wait_Send_Triggered.json",
+    "title": "Wait: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "This n8n workflow uses 23 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Wait",
+      "Code",
+      "Google Sheets",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de notificación"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "envío",
+      "google",
+      "googlesheets",
+      "nombre",
+      "notificación",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0815_Telegram_Code_Update_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Redis",
+      "If",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "lectura",
+      "nombre",
+      "redis"
+    ]
+  },
+  {
+    "original_filename": "0824_Telegram_Rssfeedread_Monitor_Scheduled.json",
+    "title": "Rssfeedread: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Rssfeedread y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Rssfeedread",
+      "Cron",
+      "If",
+      "Manual",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "ejecución",
+      "filtrado",
+      "function",
+      "manual",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0864_Telegram_Splitout_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Code",
+      "Google Sheets",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "google",
+      "googlesheets",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0882_Telegram_Googletaskstool_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Googletaskstool",
+      "Switch",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "descarga",
+      "envío",
+      "googletaskstool",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0884_Telegram_Filter_Export_Triggered.json",
+    "title": "Manual: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "Manual",
+      "Gmail",
+      "Filter",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Agregación de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "gmail",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0885_Telegram_Mondaycom_Automate_Triggered.json",
+    "title": "If: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "Mondaycom",
+      "Freshdesk",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "freshdesk",
+      "mondaycom",
+      "nombre",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0916_Telegram_Gmail_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Gmail",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "gmail",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0931_Telegram_Splitout_Monitor_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Editimage",
+      "Code",
+      "Splitout",
+      "Summarize"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "editimage",
+      "envío",
+      "financial",
+      "invoices"
+    ]
+  },
+  {
+    "original_filename": "0944_Telegram_Rssfeedread_Automation_Scheduled.json",
+    "title": "Cron: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Cron y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Cron",
+      "Rssfeedread",
+      "If",
+      "Manual",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "envío",
+      "function",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1001_Telegram_Stickynote_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Búsqueda de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "brave",
+      "búsqueda",
+      "client",
+      "code",
+      "datos",
+      "envío",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1065_Telegram_Webhook_Automation_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 3 servicios.",
+    "services": [
+      "Webhook",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "bash",
+      "dash",
+      "recepción",
+      "telegram",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1070_Telegram_Wordpress_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Form",
+      "Wordpress",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "content",
+      "datos",
+      "envío",
+      "form",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1113_Telegram_Splitout_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 49 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Sort",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "creación",
+      "creators",
+      "datos",
+      "división",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1127_Telegram_Wait_Automate_Triggered.json",
+    "title": "Wait: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Wait",
+      "Manual",
+      "Splitinbatches",
+      "Telegram",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "google",
+      "googlesheets",
+      "manual",
+      "nombre",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "1182_Telegram_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "agent",
+      "audio",
+      "datos",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "images",
+      "lectura",
+      "listado",
+      "messaging"
+    ]
+  },
+  {
+    "original_filename": "1185_Telegram_Wait_Automate_Webhook.json",
+    "title": "Wait: Activación automática (Workflow avanzado - 50 pasos)",
+    "description": "AI Powered RAG Chatbot for Your Docs + Google Drive + Gemini + Qdrant. Workflow uses 50 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks. Integra con Wait.",
+    "services": [
+      "Wait",
+      "Extractfromfile",
+      "Set",
+      "Googledocs",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chatbot",
+      "datos",
+      "división",
+      "docs",
+      "drive",
+      "extractfromfile",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1244_Telegram_GoogleSheets_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Code",
+      "If",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "chatbot",
+      "code",
+      "datos",
+      "envío",
+      "lectura",
+      "multiple"
+    ]
+  },
+  {
+    "original_filename": "1288_Telegram_Wait_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Wait",
+      "Code",
+      "Set",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "auto",
+      "automated",
+      "automática",
+      "blotato",
+      "code",
+      "datos",
+      "envío",
+      "facebook"
+    ]
+  },
+  {
+    "original_filename": "1291_Telegram_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Markdown",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "content",
+      "creación",
+      "creator",
+      "datos",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1300_Telegram_Stickynote_Create_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agentic",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "langchain",
+      "listado",
+      "nodes",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1304_Telegram_Code_Monitor_Webhook.json",
+    "title": "HTTP Request: Ejecución programada (Workflow avanzado - 8 pasos)",
+    "description": "Monitor USDT ERC-20 Wallet Balance with Etherscan and Telegram Notifications. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow between integrated applications.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Cron",
+      "If"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "balance",
+      "code",
+      "cron",
+      "ejecución",
+      "etherscan",
+      "http",
+      "httprequest",
+      "monitor",
+      "notifications",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "1305_Telegram_Splitout_Export_Webhook.json",
+    "title": "Extractfromfile: Fusión de datos (Workflow avanzado - 48 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Recepción de webhook",
+      "División de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "assistant",
+      "baserow",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión",
+      "lectura",
+      "listado",
+      "long",
+      "notes"
+    ]
+  },
+  {
+    "original_filename": "1315_Telegram_Gmailtool_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Google Calendar",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "datos",
+      "email",
+      "envío",
+      "gmail",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "1338_Telegram_Stickynote_Automate_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Switch y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Wait",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "lectura",
+      "nombre",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1341_Telegram_Splitout_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automated Research Report Generation with OpenAI, Wikipedia, Google Search, and Gmail/Telegram. This n8n workflow uses 26 interconnected nodes to automate business processes.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Manual",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "división",
+      "envío",
+      "fusión",
+      "generation"
+    ]
+  },
+  {
+    "original_filename": "1347_Telegram_Gmail_Automation_Triggered.json",
+    "title": "If: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "If",
+      "Stickynote",
+      "Gmail",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "datos",
+      "email",
+      "envío",
+      "filtered",
+      "forward",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1368_Telegram_Limit_Export_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "Use OpenAI to Transcribe Audio + Summarize with AI + Save to Google Drive. Business Automation Workflow uses 33 interconnected nodes to automate business processes.",
+    "services": [
+      "Set",
+      "Manual",
+      "Gmail",
+      "Google Drive",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Lectura de datos",
+      "Filtrado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "audio",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "email",
+      "envío",
+      "filter",
+      "filtrado"
+    ]
+  },
+  {
+    "original_filename": "1375_Telegram_Automate_Triggered.json",
+    "title": "Telegram: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "1380_Telegram_Code_Automate_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "nang",
+      "programación",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1384_Telegram_Stickynote_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios.",
+    "services": [
+      "Stickynote",
+      "Google Calendar",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "events",
+      "google",
+      "googlecalendar",
+      "post",
+      "stickynote",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "1392_Telegram_Googleanalytics_Automation_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "Code",
+      "Set",
+      "Summarize"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "analytics",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1411_Telegram_Wait_Automation_Triggered.json",
+    "title": "Wait: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Wait y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Wait",
+      "Sort",
+      "If",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Agregación de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "buffering",
+      "chat",
+      "datos",
+      "eliminación",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1424_Telegram_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Markdown",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "approval",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "content",
+      "creación",
+      "creation",
+      "datos"
+    ]
+  },
+  {
+    "original_filename": "1439_Telegram_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 43 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "extractfromfile",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1448_Telegram_Stickynote_Automation_Triggered.json",
+    "title": "Spotify: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Spotify y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Spotify",
+      "Set",
+      "If",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "fusión",
+      "merge",
+      "play",
+      "spotify",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1450_Telegram_Automation_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "coinmarketcap",
+      "datos",
+      "envío",
+      "price",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "1452_Telegram_Stickynote_Automate_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "descarga",
+      "división",
+      "speech",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1470_Telegram_Code_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 44 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "PostgreSQL",
+      "Set",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "content",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1482_Telegram_Code_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 44 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "PostgreSQL",
+      "Set",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "content",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1485_Telegram_Stickynote_Automate_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Telegram AI is a new type of business automation tool. It automates tasks by connecting different parts of a company's business. The tool is available in English, Spanish, and French.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Descarga de archivos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "chatbot",
+      "datos",
+      "descarga",
+      "envío",
+      "format",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1487_Telegram_Extractfromfile_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "audio",
+      "automated",
+      "automática",
+      "chatbot",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "helpdesk"
+    ]
+  },
+  {
+    "original_filename": "1490_Telegram_Splitout_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Splitout",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1496_Telegram_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 47 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "html",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1515_Telegram_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Translate Telegram audio messages with AI (55 supported languages) v1.0.1. Workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different systems.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "audio",
+      "automated",
+      "automática",
+      "languages",
+      "messages",
+      "stickynote",
+      "supported",
+      "telegram",
+      "translate"
+    ]
+  },
+  {
+    "original_filename": "1522_Telegram_Schedule_Send_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Gmail",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "alert",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "expiry",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1533_Telegram_Splitout_Automation_Webhook.json",
+    "title": "Code: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Splitout",
+      "Googledocs",
+      "Googledocstool"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "about",
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "chat",
+      "code",
+      "content",
+      "datos",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "1539_Telegram_Splitout_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "AI Document Assistant via Telegram + Supabase uses 28 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules. Integra con Extractfromfile.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "Splitout",
+      "Set",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Descarga de archivos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agregación",
+      "archivos",
+      "assistant",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "descarga",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "1595_Telegram_Schedule_Update_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "The n8n workflow uses 27 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "manual",
+      "programación",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1596_Telegram_Code_Automate_Webhook.json",
+    "title": "Code: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Switch",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "División de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "descarga",
+      "división",
+      "email",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1606_Telegram_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 35 pasos)",
+    "description": "This n8n workflow uses 35 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks and ensures consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Gmail",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "fusión",
+      "gmail",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1610_Telegram_Googledocs_Automate_Triggered.json",
+    "title": "Googledocs: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googledocs y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Googledocs",
+      "Set",
+      "Googledocstool",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "chatbot",
+      "datos",
+      "fusión",
+      "googledocs"
+    ]
+  },
+  {
+    "original_filename": "1679_Telegram_GoogleCalendar_Automation_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Google Calendar",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "datos",
+      "envío",
+      "event",
+      "google",
+      "googlecalendar",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1686_Telegram_Stickynote_Automate_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Telegram AI is a new type of business automation tool. It automates tasks by connecting different parts of a company's business. The tool is available in English, Spanish, and French.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Descarga de archivos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "chatbot",
+      "datos",
+      "descarga",
+      "envío",
+      "format",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1690_Telegram_Stickynote_Automation_Triggered.json",
+    "title": "Spotify: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Spotify y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Spotify",
+      "Set",
+      "If",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "fusión",
+      "merge",
+      "play",
+      "spotify",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1701_Telegram_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Translate Telegram audio messages with AI (55 supported languages) v1.0.1. Workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different systems.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "audio",
+      "automated",
+      "automática",
+      "languages",
+      "messages",
+      "stickynote",
+      "supported",
+      "telegram",
+      "translate"
+    ]
+  },
+  {
+    "original_filename": "1708_Telegram_Stickynote_Create_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agentic",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "langchain",
+      "listado",
+      "nodes",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1712_Telegram_Automation_Webhook.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Switch y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Switch",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "assistant",
+      "automated",
+      "automática",
+      "descarga",
+      "email",
+      "envío",
+      "personal",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1741_Telegram_Gumroad_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Gumroad",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "beehiiv",
+      "datos",
+      "gumroad",
+      "http",
+      "httprequest",
+      "listado",
+      "newsletter"
+    ]
+  },
+  {
+    "original_filename": "1775_Telegram_Code_Import_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "AI-Driven WooCommerce Product Importer with SEO. This n8n workflow uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Code",
+      "Manual",
+      "Splitinbatches",
+      "Stickynote",
+      "WooCommerce"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "driven",
+      "envío",
+      "importer"
+    ]
+  },
+  {
+    "original_filename": "1797_Telegram_GoogleDrive_Create_Triggered.json",
+    "title": "Save new Files received on Telegram to Google Drive - If",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 3 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "If",
+      "Google Drive",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "drive",
+      "files",
+      "google",
+      "googledrive",
+      "received",
+      "save"
+    ]
+  },
+  {
+    "original_filename": "1812_Telegram_Code_Automate_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "nang",
+      "programación",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1841_Telegram_Manual_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks and ensures consistent data flow.",
+    "services": [
+      "Set",
+      "If",
+      "Manual",
+      "Gmail",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de notificación",
+      "Eliminación de datos",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "automated",
+      "automática",
+      "datos",
+      "eliminación",
+      "email",
+      "envío",
+      "gmail",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1843_Telegram_Code_Automate_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Splitinbatches",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "both",
+      "chatbot",
+      "code",
+      "datos",
+      "división",
+      "mail",
+      "pgvector"
+    ]
+  },
+  {
+    "original_filename": "1856_Telegram_Stickynote_Automation_Webhook.json",
+    "title": "Set: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Airtable",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "access",
+      "activación",
+      "agent",
+      "airtable",
+      "automated",
+      "automática",
+      "control",
+      "datos",
+      "executeworkflow",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1877_Telegram_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Code",
+      "Executeworkflow",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "executeworkflow",
+      "optimize",
+      "prompt",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1878_Telegram_Wait_Create_Webhook.json",
+    "title": "Auto-create and publish AI social videos with Telegram, GPT-4 and Blotato - HTTP",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Wait",
+      "Code",
+      "Set",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "División de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "auto",
+      "automated",
+      "automática",
+      "blotato",
+      "code",
+      "create",
+      "datos",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "1904_Telegram_Limit_Process_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 54 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Gmail",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "advanced",
+      "automated",
+      "automática",
+      "datos",
+      "document",
+      "drive",
+      "email",
+      "envío",
+      "extraction"
+    ]
+  },
+  {
+    "original_filename": "1905_Telegram_Googleanalytics_Automation_Webhook.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 51 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1916_Telegram_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "stickynote",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "1919_Telegram_Splitout_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Confluence Page AI Powered Chatbot uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "chatbot",
+      "confluence",
+      "datos",
+      "división",
+      "envío",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1938_Telegram_Schedule_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Nostr #damus AI Powered Reporting + Gmail + Telegram Workflow. This n8n workflow uses 24 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations.",
+    "services": [
+      "Schedule",
+      "Markdown",
+      "Manual",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "damus",
+      "datos",
+      "fusión",
+      "gmail",
+      "lectura",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1940_Telegram_Limit_Export_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Converttofile",
+      "Set",
+      "Code",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Eliminación de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "backups",
+      "code",
+      "converttofile",
+      "creación",
+      "datos",
+      "división",
+      "drive"
+    ]
+  },
+  {
+    "original_filename": "1941_Telegram_Stickynote_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (3 pasos)",
+    "description": "Telegram echo-bot uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "echo",
+      "envío",
+      "listado",
+      "stickynote",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "1945_Telegram_Schedule_Import_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Filter",
+      "Stickynote",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "fetchgithubissues",
+      "filter",
+      "filtrado",
+      "github"
+    ]
+  },
+  {
+    "original_filename": "1950_Telegram_Googledocs_Automate_Triggered.json",
+    "title": "Googledocs: Activación automática (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googledocs y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Googledocs",
+      "Set",
+      "Gmail",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "chatbot",
+      "datos",
+      "email",
+      "envío",
+      "give",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1975_Telegram_Googledocs_Automation_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Googledocstool",
+      "Googledocs",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Listado de datos",
+      "Activación automática",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "datos",
+      "deepseek",
+      "fusión",
+      "googledocs",
+      "googledocstool",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1982_Telegram_Splitout_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 41 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Code",
+      "Set",
+      "Rssfeedread"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "advanced",
+      "automated",
+      "automática",
+      "buddy",
+      "channels",
+      "code",
+      "datos",
+      "división",
+      "favorite"
+    ]
+  },
+  {
+    "original_filename": "2004_Telegram_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 13 nodos.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "insights",
+      "opensea",
+      "powered",
+      "stickynote",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "2005_Telegram_Schedule_Monitor_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Stickynote",
+      "Telegram",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "check",
+      "health",
+      "http",
+      "httprequest",
+      "maia",
+      "noop",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "2018_Telegram_Cal_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Stickynote",
+      "Cal"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "booked",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "meeting",
+      "newsletter"
+    ]
+  },
+  {
+    "original_filename": "2038_Telegram_Extractfromfile_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "audio",
+      "automated",
+      "automática",
+      "chatbot",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "helpdesk"
+    ]
+  },
+  {
+    "original_filename": "2040_Telegram_Splitout_Automation_Webhook.json",
+    "title": "Code: Recepción de webhook (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Splitout",
+      "YouTube",
+      "Summarize"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "code",
+      "datos",
+      "división",
+      "lectura",
+      "nombre",
+      "recepción",
+      "splitout",
+      "summarize",
+      "webhook",
+      "youtube"
+    ]
+  },
+  {
+    "original_filename": "2044_Telegram_Googledocs_Automation_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Googledocstool",
+      "Googledocs",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Listado de datos",
+      "Activación automática",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "datos",
+      "deepseek",
+      "fusión",
+      "googledocs",
+      "googledocstool",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "2051_Telegram_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 39 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "agent",
+      "audio",
+      "datos",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "images",
+      "lectura",
+      "listado",
+      "messaging"
+    ]
+  },
+  {
+    "original_filename": "2052_Telegram_Splitout_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 49 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Sort",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "creación",
+      "creators",
+      "datos",
+      "división",
+      "fusión",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "2053_Telegram_Googledocs_Automate_Triggered.json",
+    "title": "Googledocs: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googledocs y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Googledocs",
+      "Set",
+      "Googledocstool",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "chatbot",
+      "datos",
+      "fusión",
+      "googledocs"
+    ]
+  }
+]

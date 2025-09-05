@@ -1,0 +1,31 @@
+[
+  {
+    "original_filename": "0193_Nocodb_Telegram_Create_Webhook.json",
+    "title": "HTTP Request: Fusión de datos (Workflow avanzado - 18 pasos)",
+    "description": "The n8n workflow uses 18 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "If",
+      "Function",
+      "Switch",
+      "Nocodb"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "function",
+      "fusión",
+      "http",
+      "httprequest",
+      "nocodb"
+    ]
+  }
+]

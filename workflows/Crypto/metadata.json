@@ -1,0 +1,47 @@
+[
+  {
+    "original_filename": "0042_Crypto_Airtable_Update_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 26 pasos)",
+    "description": "This n8n workflow uses 26 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "If",
+      "Crypto",
+      "Function",
+      "Airtable"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "airtable",
+      "crypto",
+      "datos",
+      "function",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0164_Crypto_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Crypto",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "crypto",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "original_filename": "0756_Airtable_Create_Triggered.json",
+    "title": "Airtable: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Airtable",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1120_Airtable_Mindee_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Mindee",
+      "Airtable",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "airtable",
+      "mindee",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1138_Airtable_Vonage_Automation_Scheduled.json",
+    "title": "Set: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Tarea programada que ejecuta activación automática periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "Cron",
+      "Function",
+      "Lingvanex",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada",
+      "Filtrado de datos",
+      "Envío de SMS",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automática",
+      "cron",
+      "daily",
+      "datos",
+      "ejecución",
+      "envío",
+      "filtrado",
+      "function"
+    ]
+  },
+  {
+    "original_filename": "1220_Airtable_Lemlist_Automate.json",
+    "title": "Lemlist: Listado de datos (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Lemlist",
+      "Airtable"
+    ],
+    "actions": [
+      "Listado de datos"
+    ],
+    "keywords": [
+      "airtable",
+      "datos",
+      "lemlist",
+      "listado",
+      "nombre"
+    ]
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "original_filename": "1294_Compression_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Compression",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "compression",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1683_Compression_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Compression",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "compression",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "manual"
+    ]
+  }
+]

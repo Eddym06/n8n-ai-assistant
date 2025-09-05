@@ -1,0 +1,120 @@
+[
+  {
+    "original_filename": "0404_Postgrestool_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "PostgreSQL"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "postgresql",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0656_Postgrestool_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "PostgreSQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "lectura",
+      "nombre",
+      "postgresql",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1251_Postgrestool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "PostgreSQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "lectura",
+      "nombre",
+      "postgresql",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1377_Postgrestool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "PostgreSQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "database",
+      "datos",
+      "lectura",
+      "listado",
+      "postgresql",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1848_Postgrestool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "PostgreSQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "database",
+      "datos",
+      "lectura",
+      "listado",
+      "postgresql",
+      "stickynote"
+    ]
+  }
+]

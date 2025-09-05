@@ -1,0 +1,48 @@
+[
+  {
+    "original_filename": "1350_Mysqltool_Stickynote_Automate_Webhook.json",
+    "title": "If: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, utiliza 12 nodos.",
+    "services": [
+      "If",
+      "Stickynote",
+      "MySQL",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chatbot",
+      "modelo",
+      "mysql",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1372_Mysqltool_Stickynote_Automate_Webhook.json",
+    "title": "If: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, utiliza 12 nodos.",
+    "services": [
+      "If",
+      "Stickynote",
+      "MySQL",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chatbot",
+      "modelo",
+      "mysql",
+      "stickynote"
+    ]
+  }
+]

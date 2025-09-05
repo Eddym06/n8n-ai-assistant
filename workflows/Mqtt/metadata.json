@@ -1,0 +1,22 @@
+[
+  {
+    "original_filename": "0992_Mqtt_Send_Triggered.json",
+    "title": "Receive messages for a MQTT queue",
+    "description": "Automatización que se activa cuando ocurren eventos en Mqtt.",
+    "services": [
+      "Mqtt"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "messages",
+      "mqtt",
+      "queue",
+      "receive"
+    ]
+  }
+]

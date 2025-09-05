@@ -1,0 +1,21 @@
+[
+  {
+    "original_filename": "0147_Toggl_Create_Triggered.json",
+    "title": "Toggl: Activación automática",
+    "description": "Automatización que se activa cuando ocurren eventos en Toggl.",
+    "services": [
+      "Toggl"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "entries",
+      "time",
+      "toggl"
+    ]
+  }
+]

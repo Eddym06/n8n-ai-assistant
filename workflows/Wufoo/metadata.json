@@ -1,0 +1,23 @@
+[
+  {
+    "original_filename": "1129_Wufoo_Update_Triggered.json",
+    "title": "Receive updates when a form is submitted in Wufoo",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Wufoo"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "form",
+      "receive",
+      "submitted",
+      "updates",
+      "wufoo"
+    ]
+  }
+]

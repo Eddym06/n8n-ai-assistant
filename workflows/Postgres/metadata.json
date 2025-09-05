@@ -1,0 +1,348 @@
+[
+  {
+    "original_filename": "0263_Postgres_Code_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 46 pasos)",
+    "description": "Auto WordPress Blog Generator (GPT + Postgres + WP Media) uses 46 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "PostgreSQL",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "auto",
+      "automated",
+      "automática",
+      "blog",
+      "code",
+      "datos",
+      "filtrado",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0460_Postgres_Filter_Import_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "PostgreSQL",
+      "Set",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "lectura",
+      "manual",
+      "nombre",
+      "postgresql"
+    ]
+  },
+  {
+    "original_filename": "0666_Postgres_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 19 pasos)",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "PostgreSQL",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "nombre",
+      "postgresql",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1108_Postgres_Googlecloudnaturallanguage_Automation_Scheduled.json",
+    "title": "PostgreSQL: Ejecución programada (Workflow avanzado - 9 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, utiliza 9 nodos.",
+    "services": [
+      "PostgreSQL",
+      "Set",
+      "Cron",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "pipeline",
+      "postgresql",
+      "programada",
+      "scheduled",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "1144_Postgres_Code_Automation_Triggered.json",
+    "title": "PostgreSQL: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Sheets RAG uses 23 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "PostgreSQL",
+      "Code",
+      "Set",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "drive",
+      "google",
+      "googledrive",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1245_Postgres_Extractfromfile_Automation_Triggered.json",
+    "title": "PostgreSQL: Activación automática (Workflow avanzado - 26 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en PostgreSQL y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "PostgreSQL",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "about",
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "extractfromfile",
+      "fusión",
+      "into",
+      "listado",
+      "mails"
+    ]
+  },
+  {
+    "original_filename": "1249_Postgres_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 19 pasos)",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "PostgreSQL",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "nombre",
+      "postgresql",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1421_Postgres_Googlecloudnaturallanguage_Automation_Scheduled.json",
+    "title": "PostgreSQL: Ejecución programada (Workflow avanzado - 9 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, utiliza 9 nodos.",
+    "services": [
+      "PostgreSQL",
+      "Set",
+      "Cron",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "pipeline",
+      "postgresql",
+      "programada",
+      "scheduled",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "1752_Postgres_Wordpress_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 53 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "PostgreSQL",
+      "HTTP Request",
+      "Set",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "content",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "genai",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1788_Postgres_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "PostgreSQL",
+      "Code",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1942_Postgres_Wordpress_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 53 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "PostgreSQL",
+      "HTTP Request",
+      "Set",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "content",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "genai",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "2014_Postgres_Webhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 43 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "PostgreSQL",
+      "Set",
+      "Code",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  }
+]

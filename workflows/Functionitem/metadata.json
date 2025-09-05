@@ -1,0 +1,388 @@
+[
+  {
+    "original_filename": "0031_Functionitem_Dropbox_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Manual",
+      "Dropbox",
+      "Amazon Web Services",
+      "Uproc"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Fusión de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "amazon",
+      "amazonwebservices",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "dropbox",
+      "email",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "0068_Functionitem_Manual_Import_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Cron",
+      "Manual",
+      "Google Drive",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Ejecución programada",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "drive",
+      "ejecución",
+      "function",
+      "fusión",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0146_Functionitem_Telegram_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "HTTP Request",
+      "If",
+      "Webhook",
+      "Functionitem",
+      "Telegram"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Descarga de archivos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "archivos",
+      "búsqueda",
+      "datos",
+      "descarga",
+      "functionitem",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0178_Functionitem_Executecommand_Automation_Webhook.json",
+    "title": "Htmlextract: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Htmlextract y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Htmlextract",
+      "HTTP Request",
+      "Writebinaryfile",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "htmlextract",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0184_Functionitem_Itemlists_Automate.json",
+    "title": "Itemlists: Listado de datos (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Itemlists",
+      "Function",
+      "Functionitem"
+    ],
+    "actions": [
+      "Listado de datos"
+    ],
+    "keywords": [
+      "datos",
+      "function",
+      "functionitem",
+      "itemlists",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0246_Functionitem_Pipedrive_Create_Scheduled.json",
+    "title": "Pipedrive: Fusión de datos (Workflow avanzado - 11 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Set",
+      "Stripe",
+      "Cron"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "División de datos",
+      "Ejecución programada",
+      "Listado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0247_Functionitem_HTTP_Create_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Set",
+      "Itemlists",
+      "Functionitem"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "functionitem",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0255_Functionitem_Manual_Create_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Manual",
+      "Itemlists",
+      "Functionitem",
+      "N8Ntrainingcustomerdatastore"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "functionitem",
+      "itemlists",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0266_Functionitem_Zendesk_Create_Webhook.json",
+    "title": "Pipedrive: Fusión de datos (Workflow avanzado - 17 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "If"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada",
+      "Envío de email",
+      "Creación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0267_Functionitem_Zendesk_Create_Scheduled.json",
+    "title": "Pipedrive: Fusión de datos (Workflow avanzado - 21 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "If"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "División de datos",
+      "Ejecución programada",
+      "Listado de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "email",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1067_Functionitem_Manual_Export_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Cron",
+      "Manual",
+      "Function",
+      "Functionitem"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Ejecución programada",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "backup",
+      "cron",
+      "datos",
+      "ejecución",
+      "example",
+      "function",
+      "functionitem"
+    ]
+  },
+  {
+    "original_filename": "1140_Functionitem_Raindrop_Automation_Scheduled.json",
+    "title": "Raindrop: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Raindrop y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Raindrop",
+      "Cron",
+      "Manual",
+      "Function",
+      "YouTube"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "ejecución",
+      "filtrado",
+      "function",
+      "manual",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "1157_Functionitem_Executecommand_Update_Webhook.json",
+    "title": "Htmlextract: Ejecución programada (Workflow avanzado - 25 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Htmlextract",
+      "Emailsend",
+      "HTTP Request",
+      "Writebinaryfile",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada",
+      "Envío de email",
+      "Envío de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "emailsend",
+      "envío",
+      "htmlextract",
+      "http",
+      "httprequest"
+    ]
+  }
+]

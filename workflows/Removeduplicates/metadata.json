@@ -1,0 +1,33 @@
+[
+  {
+    "original_filename": "1854_Removeduplicates_Converttofile_Automation_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "Set",
+      "Form",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "filtrado",
+      "form",
+      "fusión",
+      "http"
+    ]
+  }
+]

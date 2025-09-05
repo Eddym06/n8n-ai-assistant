@@ -1,0 +1,614 @@
+[
+  {
+    "original_filename": "0484_Form_Stickynote_Automation_Webhook.json",
+    "title": "Form: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Form",
+      "Webhook",
+      "Nasa",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "credentials",
+      "dynamic",
+      "expressions",
+      "form",
+      "nasa",
+      "recepción",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0633_Form_GoogleSheets_Create_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "This n8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. It performs actions according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "Set",
+      "Form",
+      "If",
+      "Crypto"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Lectura de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "crypto",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "form",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "0648_Form_GoogleSheets_Create_Triggered.json",
+    "title": "Form: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "Slack",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "email",
+      "envío",
+      "form",
+      "google",
+      "googlesheets",
+      "nombre",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0732_Form_Youtube_Update_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "Googledocstool",
+      "Form",
+      "YouTube",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "form",
+      "googledocstool",
+      "nombre",
+      "stickynote",
+      "youtube"
+    ]
+  },
+  {
+    "original_filename": "0733_Form_Code_Create_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Form",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "creación",
+      "datos",
+      "drive",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "0805_Form_Html_Create_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "Html",
+      "Splitout",
+      "Form"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "form",
+      "html"
+    ]
+  },
+  {
+    "original_filename": "0890_Form_Stickynote_Send_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "Form",
+      "Gmail",
+      "Stickynote",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "email",
+      "envío",
+      "form",
+      "gmail",
+      "hubspot",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1316_Form_Stickynote_Automation_Webhook.json",
+    "title": "Form: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 4 servicios.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "Converttofile",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "converttofile",
+      "form",
+      "generator",
+      "http",
+      "httprequest",
+      "image",
+      "openai"
+    ]
+  },
+  {
+    "original_filename": "1348_Form_Automation_Triggered.json",
+    "title": "Form: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 2 servicios.",
+    "services": [
+      "Form",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "form",
+      "image",
+      "license",
+      "number",
+      "plate"
+    ]
+  },
+  {
+    "original_filename": "1371_Form_S3_Import_Triggered.json",
+    "title": "Form: Activación automática (3 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 2 servicios.",
+    "services": [
+      "Form",
+      "S3"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "digialoceanupload",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1420_Form_Extractfromfile_Automate_Triggered.json",
+    "title": "Form: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Form",
+      "Gmail",
+      "Extractfromfile",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "extractfromfile",
+      "form",
+      "gmail",
+      "google",
+      "googlesheets",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1441_Form_Automation_Triggered.json",
+    "title": "Form: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 2 servicios.",
+    "services": [
+      "Form",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "form",
+      "image",
+      "license",
+      "number",
+      "plate"
+    ]
+  },
+  {
+    "original_filename": "1537_Form_GoogleSheets_Automation_Triggered.json",
+    "title": "Form: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "Emailsend",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "classifier",
+      "contact",
+      "datos",
+      "ecommerce",
+      "email",
+      "emailsend",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1554_Form_GoogleSheets_Automation_Triggered.json",
+    "title": "Form: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "Emailsend",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "classifier",
+      "contact",
+      "datos",
+      "ecommerce",
+      "email",
+      "emailsend",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1611_Form_Stickynote_Automate_Triggered.json",
+    "title": "Form: Activación automática (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 3 servicios.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "data",
+      "form",
+      "stickynote",
+      "storage",
+      "submission"
+    ]
+  },
+  {
+    "original_filename": "1649_Form_Extractfromfile_Automate_Triggered.json",
+    "title": "Form: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Form",
+      "Gmail",
+      "Extractfromfile",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "extractfromfile",
+      "form",
+      "gmail",
+      "google",
+      "googlesheets",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1762_Form_Aggregate_Automation_Triggered.json",
+    "title": "Form: Fusión de datos (Workflow avanzado - 22 pasos)",
+    "description": "SEO Blog Generator with GPT-4o, Perplexity, and Telegram Integration. Uses 22 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "Aggregate",
+      "Merge",
+      "Telegram"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Agregación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "blog",
+      "búsqueda",
+      "datos",
+      "form",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1767_Form_HTTP_Automation_Webhook.json",
+    "title": "Form: Activación automática (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 4 servicios.",
+    "services": [
+      "Form",
+      "HTTP Request",
+      "Function",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "extraction",
+      "form",
+      "function",
+      "http",
+      "httprequest",
+      "request",
+      "transcript"
+    ]
+  },
+  {
+    "original_filename": "1873_Form_HTTP_Automation_Webhook.json",
+    "title": "Form: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Form",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "conversion",
+      "form",
+      "http",
+      "httprequest",
+      "optimizer",
+      "rate",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1886_Form_Markdown_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Markdown",
+      "Form",
+      "Gmail",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "audit",
+      "automated",
+      "automática",
+      "datos",
+      "form",
+      "fusión",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1908_Form_Asana_Automate_Triggered.json",
+    "title": "Form: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automate Your Customer Service With WhatsApp Business Cloud & Asana Workflow. This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "Asana",
+      "Whatsapp"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "asana",
+      "automate",
+      "automated",
+      "automática",
+      "business",
+      "cloud",
+      "customer",
+      "form",
+      "service"
+    ]
+  },
+  {
+    "original_filename": "1957_Form_Stickynote_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Set",
+      "Airtop",
+      "Form",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtop",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "executeworkflow",
+      "form",
+      "post",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1968_Form_Stickynote_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 14 nodos.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Form",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "form",
+      "http",
+      "httprequest",
+      "media",
+      "publisher",
+      "request",
+      "social"
+    ]
+  }
+]

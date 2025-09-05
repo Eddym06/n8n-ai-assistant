@@ -1,0 +1,87 @@
+[
+  {
+    "original_filename": "0149_Awss3_Wait_Automate_Triggered.json",
+    "title": "Wait: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Wait",
+      "Set",
+      "Google Drive",
+      "Amazon Web Services",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "amazon",
+      "amazonwebservices",
+      "automated",
+      "automática",
+      "drive",
+      "google",
+      "googledrive",
+      "googlesheets",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0151_Awss3_GoogleDrive_Import_Triggered.json",
+    "title": "Amazon Web Services: Activación automática (4 pasos)",
+    "description": "Este workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Amazon Web Services.",
+    "services": [
+      "Amazon Web Services",
+      "Google Drive",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "amazon",
+      "amazonwebservices",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "fusión",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0593_Awss3_Compression_Automate_Triggered.json",
+    "title": "Compression: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Compression y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Compression",
+      "Manual",
+      "Stickynote",
+      "Aggregate",
+      "Amazon Web Services"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Agregación de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "amazon",
+      "amazonwebservices",
+      "archivos",
+      "automated",
+      "automática",
+      "compression",
+      "datos"
+    ]
+  }
+]

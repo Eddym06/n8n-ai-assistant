@@ -1,0 +1,4781 @@
+[
+  {
+    "original_filename": "0015_HTTP_Cron_Update_Webhook.json",
+    "title": "Send updates about the position of the ISS every minute to a topic in ActiveMQ -",
+    "description": "Proceso que actualiza información en HTTP Request y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Amqp",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "about",
+      "activemq",
+      "amqp",
+      "cron",
+      "datos",
+      "ejecución",
+      "envío",
+      "every",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0021_HTTP_Awssqs_Automation_Scheduled.json",
+    "title": "HTTP Request: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Amazon Web Services",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "amazon",
+      "amazonwebservices",
+      "cron",
+      "ejecución",
+      "http",
+      "httprequest",
+      "nombre",
+      "programada",
+      "request",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0023_HTTP_Googlebigquery_Automation_Scheduled.json",
+    "title": "HTTP Request: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "Googlebigquery"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "googlebigquery",
+      "http",
+      "httprequest",
+      "nombre",
+      "programada",
+      "request",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0033_HTTP_Mqtt_Automation_Webhook.json",
+    "title": "Mqtt: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Mqtt",
+      "HTTP Request",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "http",
+      "httprequest",
+      "mqtt",
+      "nombre",
+      "programada",
+      "request",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0048_HTTP_Htmlextract_Create_Webhook.json",
+    "title": "Htmlextract: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "N8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Htmlextract",
+      "HTTP Request",
+      "Set",
+      "If",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "htmlextract",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0077_HTTP_Noop_Sync_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Switch",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "alert",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "opsgenie",
+      "recepción",
+      "request",
+      "switch",
+      "syncro"
+    ]
+  },
+  {
+    "original_filename": "0084_HTTP_Cron_Automation_Webhook.json",
+    "title": "Emailsend: Ejecución programada (Workflow avanzado - 9 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "Function"
+    ],
+    "actions": [
+      "Ejecución programada",
+      "Envío de email",
+      "Envío de datos",
+      "Búsqueda de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "emailsend",
+      "envío",
+      "function",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0093_HTTP_GitHub_Create_Scheduled.json",
+    "title": "HTTP Request: Fusión de datos (Workflow avanzado - 11 pasos)",
+    "description": "Tarea programada que ejecuta fusión de datos periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Cron",
+      "Function",
+      "Merge",
+      "Github"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Ejecución programada",
+      "Transformación de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "function",
+      "fusión",
+      "github",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0136_HTTP_Googlefirebaserealtimedatabase_Update_Webhook.json",
+    "title": "Receive updates for the position of the ISS every minute and push it to a databa",
+    "description": "Proceso que actualiza información en Googlefirebaserealtimedatabase y integra 4 servicios.",
+    "services": [
+      "Googlefirebaserealtimedatabase",
+      "HTTP Request",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "database",
+      "ejecución",
+      "every",
+      "googlefirebaserealtimedatabase",
+      "http",
+      "httprequest",
+      "minute",
+      "position",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0139_HTTP_Mysql_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "PostgreSQL",
+      "MySQL",
+      "Function",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "datos",
+      "function",
+      "fusión",
+      "http",
+      "httprequest",
+      "mysql",
+      "nombre",
+      "postgresql",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0143_HTTP_Gitlab_Automation_Webhook.json",
+    "title": "Gitlab: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Gitlab",
+      "If",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "gitlab",
+      "http",
+      "httprequest",
+      "nombre",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0144_HTTP_Twitter_Automation_Scheduled.json",
+    "title": "HTTP Request: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Cron",
+      "Twitter"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "http",
+      "httprequest",
+      "nombre",
+      "programada",
+      "request",
+      "scheduled",
+      "twitter"
+    ]
+  },
+  {
+    "original_filename": "0153_HTTP_Dropbox_Update_Webhook.json",
+    "title": "HTTP Request: Lectura de datos (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Dropbox",
+      "Xml"
+    ],
+    "actions": [
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "datos",
+      "dropbox",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0154_HTTP_Mattermost_Automation_Webhook.json",
+    "title": "Automatización Webhook: Recepción de webhook activada por evento (3 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 3 servicios.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Mattermost"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "mattermost",
+      "recepción",
+      "request",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0156_HTTP_Awsrekognition_Automation_Webhook.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Amazon Web Services",
+      "Set",
+      "Google Sheets"
+    ],
+    "actions": [],
+    "keywords": [
+      "amazon",
+      "amazonwebservices",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "services",
+      "sheets"
+    ]
+  },
+  {
+    "original_filename": "0162_HTTP_Telegram_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "This n8n workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "If",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "ejecución",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0167_HTTP_Slack_Create_Webhook.json",
+    "title": "HubSpot: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HubSpot",
+      "If",
+      "HTTP Request",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "hubspot",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0223_HTTP_GoogleSheets_Automation_Webhook.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Spreadsheetfile",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [],
+    "keywords": [
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "sheets",
+      "spreadsheetfile",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0224_HTTP_GoogleSheets_Send_Webhook.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Writebinaryfile",
+      "Set",
+      "Spreadsheetfile",
+      "Gmail"
+    ],
+    "actions": [],
+    "keywords": [
+      "gmail",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "spreadsheetfile",
+      "writebinaryfile"
+    ]
+  },
+  {
+    "original_filename": "0245_HTTP_Stripe_Create_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Stripe",
+      "If",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Búsqueda de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0252_HTTP_GitHub_Create_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Set",
+      "If",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Búsqueda de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "github",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0253_HTTP_GitHub_Send_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "If",
+      "Noop",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "email",
+      "envío",
+      "github",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0287_HTTP_Rabbitmq_Update_Scheduled.json",
+    "title": "Send updates about the position of the ISS every minute to a topic in RabbitMQ -",
+    "description": "Proceso que actualiza información en HTTP Request y integra 4 servicios.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "Rabbitmq"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "about",
+      "cron",
+      "ejecución",
+      "every",
+      "http",
+      "httprequest",
+      "minute",
+      "position",
+      "programada",
+      "rabbitmq"
+    ]
+  },
+  {
+    "original_filename": "0306_HTTP_Respondtowebhook_Import_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Webhook",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "request",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0310_HTTP_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Spreadsheetfile",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre",
+      "request",
+      "spreadsheetfile",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0313_HTTP_Schedule_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "If",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "google",
+      "googlecalendar",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0344_HTTP_Emailreadimap_Create_Webhook.json",
+    "title": "Create Nextcloud Deck card from email - Emailreadimap",
+    "description": "Automatización que crea registros en Emailreadimap y integra 3 servicios.",
+    "services": [
+      "Emailreadimap",
+      "HTTP Request",
+      "Function"
+    ],
+    "actions": [
+      "Envío de email"
+    ],
+    "keywords": [
+      "card",
+      "create",
+      "deck",
+      "email",
+      "emailreadimap",
+      "envío",
+      "function",
+      "http",
+      "httprequest",
+      "nextcloud"
+    ]
+  },
+  {
+    "original_filename": "0347_HTTP_GoogleSheets_Sync_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 22 pasos)",
+    "description": "This n8n workflow uses 22 interconnected nodes to automate business processes. It uses a webhook to connect different business systems, and perform actions without human intervention. It is designed to streamline business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Function",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "creación",
+      "datos",
+      "dialpad",
+      "function",
+      "http",
+      "httprequest",
+      "lectura",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0350_HTTP_Emailreadimap_Send_Webhook.json",
+    "title": "Emailreadimap: Envío de email automática (5 pasos)",
+    "description": "Automatización de correo electrónico que envío de email y integra 5 servicios.",
+    "services": [
+      "Emailreadimap",
+      "HTTP Request",
+      "Set",
+      "Xml",
+      "Movebinarydata"
+    ],
+    "actions": [
+      "Envío de email"
+    ],
+    "keywords": [
+      "email",
+      "emailreadimap",
+      "envío",
+      "http",
+      "httprequest",
+      "imapemail",
+      "movebinarydata",
+      "post",
+      "request",
+      "xmltojson"
+    ]
+  },
+  {
+    "original_filename": "0358_HTTP_Discord_Monitor_Scheduled.json",
+    "title": "If: Ejecución programada (5 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 4 servicios.",
+    "services": [
+      "If",
+      "HTTP Request",
+      "Discord",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "check",
+      "cron",
+      "discord",
+      "ejecución",
+      "http",
+      "httprequest",
+      "programada",
+      "request",
+      "scheduled",
+      "website"
+    ]
+  },
+  {
+    "original_filename": "0363_HTTP_Executeworkflow_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Business Automation Workflow uses 20 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Markdown",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "markdown",
+      "nombre",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0364_HTTP_Twilio_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "BillBot uses 6 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Twilio",
+      "Telegram",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de notificación",
+      "Envío de SMS",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "billbot",
+      "datos",
+      "envío",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0384_HTTP_Manual_Create_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 47 pasos)",
+    "description": "This n8n workflow uses 47 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Manual",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "eliminación",
+      "http",
+      "httprequest",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "0390_HTTP_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Medium",
+      "Manual",
+      "Itemlists",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "itemlists",
+      "listado",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0394_HTTP_Spreadsheetfile_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Spreadsheetfile",
+      "If",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "descarga",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0405_HTTP_Executeworkflow_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "This n8n workflow uses 18 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Stickynote",
+      "Aggregate",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0440_HTTP_Stickynote_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0441_HTTP_GoogleSheets_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0450_HTTP_Stickynote_Create_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0463_HTTP_Stickynote_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automática",
+      "datos",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0470_HTTP_GoogleSheets_Update_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Removeduplicates",
+      "HTTP Request",
+      "If",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "google",
+      "googlesheets",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0471_HTTP_Form_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Form",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "form",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "0485_HTTP_Stickynote_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automática",
+      "datos",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0492_HTTP_Respondtowebhook_Create_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "N8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "HTTP Request",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0493_HTTP_Keap_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Keap",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automática",
+      "datos",
+      "http",
+      "httprequest",
+      "keap",
+      "nombre",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0494_HTTP_Htmlextract_Send_Webhook.json",
+    "title": "Emailsend: Envío de email automática (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "Htmlextract",
+      "HTTP Request",
+      "Cron",
+      "If"
+    ],
+    "actions": [
+      "Envío de email",
+      "Envío de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "emailsend",
+      "envío",
+      "htmlextract",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0505_HTTP_Stickynote_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Sendinblue",
+      "If",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "executeworkflow",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0510_HTTP_Schedule_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "Business Automation Workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "HTTP Request",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "http",
+      "httprequest",
+      "nombre",
+      "programación",
+      "request",
+      "schedule",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0517_HTTP_Stickynote_Process_Webhook.json",
+    "title": "Manual: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Manual",
+      "HTTP Request",
+      "Stickynote",
+      "Readwritefile"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre",
+      "readwritefile",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0549_HTTP_Filter_Monitor_Webhook.json",
+    "title": "Stickynote: Lectura de datos (Workflow avanzado - 7 pasos)",
+    "description": "This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Filter",
+      "Splitout"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "datos",
+      "división",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "request",
+      "splitout"
+    ]
+  },
+  {
+    "original_filename": "0550_HTTP_Slack_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Slack",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "request",
+      "slack",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0551_HTTP_Stickynote_Create_Webhook.json",
+    "title": "Stickynote: Lectura de datos (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Splitout"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "División de datos"
+    ],
+    "keywords": [
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "request",
+      "splitout",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0559_HTTP_Webhook_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "code",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0566_HTTP_Stickynote_Automate_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "N8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0588_HTTP_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Recepción de webhook",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0594_HTTP_Telegram_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "If",
+      "Stickynote",
+      "Supabase",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0606_HTTP_Respondtowebhook_Create_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0611_HTTP_Filter_Automation_Scheduled.json",
+    "title": "Stickynote: Listado de datos (Workflow avanzado - 17 pasos)",
+    "description": "Tarea programada que ejecuta listado de datos periódicamente y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Filter",
+      "Cron"
+    ],
+    "actions": [
+      "Listado de datos",
+      "Ejecución programada",
+      "Filtrado de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "ejecución",
+      "eliminación",
+      "filter",
+      "filtrado",
+      "http",
+      "httprequest",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0622_HTTP_Stickynote_Create_Webhook.json",
+    "title": "Stickynote: Subida de archivos (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Set",
+      "Noop"
+    ],
+    "actions": [
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "archivos",
+      "http",
+      "httprequest",
+      "nombre",
+      "noop",
+      "request",
+      "stickynote",
+      "subida"
+    ]
+  },
+  {
+    "original_filename": "0624_HTTP_Schedule_Send_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "If",
+      "Splitinbatches",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de notificación",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0626_HTTP_Schedule_Create_Scheduled.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Set",
+      "Schedule"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "http",
+      "httprequest",
+      "listado",
+      "nombre",
+      "programación",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0636_HTTP_Stickynote_Create_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "N8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0637_HTTP_Schedule_Automation_Webhook.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Business Automation Workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Discord.",
+    "services": [
+      "Discord",
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "discord",
+      "http",
+      "httprequest",
+      "nombre",
+      "programación",
+      "request",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "0641_HTTP_Rssfeedread_Create_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Datetime",
+      "Rssfeedread"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Lectura de datos",
+      "Creación de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "creación",
+      "datetime",
+      "datos",
+      "descarga",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0642_HTTP_Extractfromfile_Process_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "The n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0687_HTTP_Form_Automation_Webhook.json",
+    "title": "Form: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "HTTP Request",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "form",
+      "http",
+      "httprequest",
+      "nombre",
+      "noop",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0688_HTTP_Webhook_Process_Webhook.json",
+    "title": "Webhook: Recepción de webhook (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Webhook",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "dall",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "image",
+      "lego",
+      "line",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0707_HTTP_Stripe_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Quickbooks",
+      "Stripe",
+      "If",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Fusión de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "0717_HTTP_Schedule_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Wait",
+      "Schedule",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0739_HTTP_Form_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Streamline Your Zoom Meetings with Secure, Automated Stripe Payments. This n8n workflow uses 20 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Stripe",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "form",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0745_HTTP_Telegram_Automation_Webhook.json",
+    "title": "HTTP Request: Ejecución programada (3 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 3 servicios.",
+    "services": [
+      "HTTP Request",
+      "Cron",
+      "Telegram"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "affirmations",
+      "cron",
+      "daily",
+      "ejecución",
+      "http",
+      "httprequest",
+      "programada",
+      "request",
+      "scheduled",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0752_HTTP_Rssfeedread_Automation_Scheduled.json",
+    "title": "HTTP Request: Ejecución programada (Workflow avanzado - 6 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, utiliza 6 nodos.",
+    "services": [
+      "HTTP Request",
+      "Rssfeedread",
+      "Cron",
+      "If",
+      "Function"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "function",
+      "http",
+      "httprequest",
+      "mattermost",
+      "post",
+      "programada",
+      "request",
+      "rssfeedread"
+    ]
+  },
+  {
+    "original_filename": "0771_HTTP_Telegram_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "This n8n workflow uses 16 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "0775_HTTP_Executecommand_Automate_Webhook.json",
+    "title": "If: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "N8N Español - NocodeBot is an automated business automation tool. N8n uses 7 interconnected nodes to automate business processes. The tool can be used to streamline business operations.",
+    "services": [
+      "If",
+      "HTTP Request",
+      "Executecommand",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "español",
+      "executecommand",
+      "http",
+      "httprequest",
+      "nocodebot",
+      "request",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0778_HTTP_Stickynote_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "This n8n workflow uses 21 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "drive",
+      "google",
+      "googledrive",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0825_HTTP_Manual_Send_Webhook.json",
+    "title": "Manual: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "N8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Manual",
+      "HTTP Request",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0870_HTTP_Schedule_Update_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Function",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "function",
+      "http",
+      "httprequest",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0878_HTTP_Aggregate_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Agregación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0901_HTTP_GoogleSheets_Automate_Webhook.json",
+    "title": "Emailsend: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "AccountCraft WhatsApp Automation uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Emailsend.",
+    "services": [
+      "Emailsend",
+      "Webhook",
+      "HTTP Request",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de email",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "accountcraft",
+      "actualización",
+      "automation",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "google",
+      "googlesheets",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0934_HTTP_Code_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 7 nodos.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "conversion",
+      "drive",
+      "google",
+      "googledrive",
+      "html",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "0935_HTTP_GoogleSheets_Sync_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Function",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "clockify",
+      "datos",
+      "function",
+      "http",
+      "httprequest",
+      "recepción",
+      "request",
+      "syncro",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0936_HTTP_Lingvanex_Automation_Webhook.json",
+    "title": "HTTP Request: Ejecución programada (4 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 4 servicios.",
+    "services": [
+      "HTTP Request",
+      "Lingvanex",
+      "Cron",
+      "Telegram"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "daily",
+      "ejecución",
+      "http",
+      "httprequest",
+      "lingvanex",
+      "poems",
+      "programada",
+      "request",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0937_HTTP_Editimage_Update_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Editimage"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "editimage",
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0939_HTTP_Cron_Automation_Webhook.json",
+    "title": "HTTP Request: Listado de datos (Workflow avanzado - 7 pasos)",
+    "description": "Tarea programada que ejecuta listado de datos periódicamente y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Function",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Listado de datos",
+      "Ejecución programada",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "ddns",
+      "dynamic",
+      "ejecución",
+      "envío",
+      "function",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0952_HTTP_Medium_Automation_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Medium"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "medium",
+      "nombre",
+      "recepción",
+      "request",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0955_HTTP_Automation_Webhook.json",
+    "title": "Workflow Sin Nombre",
+    "description": "Business Automation Workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request"
+    ],
+    "actions": [],
+    "keywords": [
+      "http",
+      "httprequest",
+      "nombre",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0956_HTTP_Readbinaryfile_Automation_Webhook.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Readbinaryfile"
+    ],
+    "actions": [],
+    "keywords": [
+      "http",
+      "httprequest",
+      "nombre",
+      "readbinaryfile",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0964_HTTP_Bannerbear_Automation_Scheduled.json",
+    "title": "HTTP Request: Ejecución programada (4 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 4 servicios.",
+    "services": [
+      "HTTP Request",
+      "Rocketchat",
+      "Bannerbear",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "bannerbear",
+      "cocktail",
+      "cron",
+      "ejecución",
+      "http",
+      "httprequest",
+      "programada",
+      "recipe",
+      "request",
+      "rocketchat"
+    ]
+  },
+  {
+    "original_filename": "0966_HTTP_Discord_Import_Scheduled.json",
+    "title": "Discord: Lectura de datos (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Discord",
+      "HTTP Request",
+      "Cron",
+      "If",
+      "Function"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "discord",
+      "ejecución",
+      "function",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0970_HTTP_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "daily",
+      "datos",
+      "delivery",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1030_HTTP_Typeform_Monitor_Webhook.json",
+    "title": "HTTP Request: Activación automática (5 pasos)",
+    "description": "The Expense Tracker App uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Mindee",
+      "Airtable",
+      "Typeform"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "datos",
+      "expense",
+      "http",
+      "httprequest",
+      "lectura",
+      "mindee"
+    ]
+  },
+  {
+    "original_filename": "1043_HTTP_Telegram_Send_Webhook.json",
+    "title": "Send a cocktail recipe every day via a Telegram - HTTP Request",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 3 servicios.",
+    "services": [
+      "HTTP Request",
+      "Cron",
+      "Telegram"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cocktail",
+      "cron",
+      "ejecución",
+      "every",
+      "http",
+      "httprequest",
+      "programada",
+      "recipe",
+      "request",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "1052_HTTP_Telegram_Update_Webhook.json",
+    "title": "Receive updates from Telegram and send an image of a cocktail - HTTP Request",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "cocktail",
+      "http",
+      "httprequest",
+      "image",
+      "receive",
+      "request",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "1064_HTTP_Clockify_Update_Webhook.json",
+    "title": "Syncro Status Update Clockify",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, utiliza 6 nodos.",
+    "services": [
+      "If",
+      "Webhook",
+      "Clockify",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "clockify",
+      "http",
+      "httprequest",
+      "recepción",
+      "request",
+      "status",
+      "syncro",
+      "update",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1072_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "perplexity",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1107_HTTP_GitHub_Automation_Webhook.json",
+    "title": "HTTP Request: Ejecución programada (Workflow avanzado - 24 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, utiliza 24 nodos.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "Function",
+      "Github"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "dashboard",
+      "ejecución",
+      "function",
+      "github",
+      "http",
+      "httprequest",
+      "programada",
+      "request",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "1110_HTTP_Mqtt_Monitor_Webhook.json",
+    "title": "Mqtt: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Mqtt y integra 4 servicios, utiliza 6 nodos.",
+    "services": [
+      "Mqtt",
+      "Stickynote",
+      "HTTP Request",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "http",
+      "httprequest",
+      "influxdb",
+      "monitoring",
+      "mqtt",
+      "remote"
+    ]
+  },
+  {
+    "original_filename": "1111_HTTP_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automating Betting Data Retrieval with TheOddsAPI and Airtable. Uses 10 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Airtable",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "airtable",
+      "automated",
+      "automating",
+      "automática",
+      "betting",
+      "creación",
+      "data",
+      "datos"
+    ]
+  },
+  {
+    "original_filename": "1112_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "AI Agent with charts capabilities using OpenAI Structured Output. Uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "capabilities",
+      "charts",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "openai"
+    ]
+  },
+  {
+    "original_filename": "1131_HTTP_Stickynote_Import_Webhook.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1152_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Converttofile: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "OpenAI ImageGen1 uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Converttofile.",
+    "services": [
+      "Converttofile",
+      "Stickynote",
+      "HTTP Request",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "converttofile",
+      "http",
+      "httprequest",
+      "openai",
+      "request",
+      "stickynote",
+      "template"
+    ]
+  },
+  {
+    "original_filename": "1171_HTTP_Cron_Automation_Scheduled.json",
+    "title": "HTTP Request: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Function",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "function",
+      "http",
+      "httprequest",
+      "nombre",
+      "programada",
+      "request",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "1187_HTTP_Dropbox_Automation_Webhook.json",
+    "title": "Manual: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Manual",
+      "HTTP Request",
+      "Dropbox",
+      "Compression"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "compression",
+      "dropbox",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1192_HTTP_Timescaledb_Automation_Scheduled.json",
+    "title": "Timescaledb: Ejecución programada (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Timescaledb",
+      "HTTP Request",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "http",
+      "httprequest",
+      "nombre",
+      "programada",
+      "request",
+      "scheduled",
+      "timescaledb"
+    ]
+  },
+  {
+    "original_filename": "1226_HTTP_Kafka_Update_Webhook.json",
+    "title": "Send updates about the position of the ISS every minute to a topic in Kafka - HT",
+    "description": "Send updates about the position of the ISS every minute to a topic in Kafka. This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations.",
+    "services": [
+      "HTTP Request",
+      "Kafka",
+      "Set",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "about",
+      "cron",
+      "ejecución",
+      "every",
+      "http",
+      "httprequest",
+      "kafka",
+      "minute",
+      "position",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "1233_HTTP_Deepl_Automation_Webhook.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Deepl",
+      "HTTP Request"
+    ],
+    "actions": [],
+    "keywords": [
+      "deepl",
+      "http",
+      "httprequest",
+      "nombre",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1267_HTTP_Markdown_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Markdown",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "custom",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "markdown"
+    ]
+  },
+  {
+    "original_filename": "1334_HTTP_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "Business Automation Workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "analyze",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "manual",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "1340_HTTP_Executeworkflow_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "anomaly",
+      "automated",
+      "automática",
+      "code",
+      "crops",
+      "dataset",
+      "datos",
+      "detection",
+      "executeworkflow"
+    ]
+  },
+  {
+    "original_filename": "1349_HTTP_Slack_Automation_Webhook.json",
+    "title": "Webhook: Recepción de webhook (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 3 servicios.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "recepción",
+      "request",
+      "slack",
+      "weather",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1354_HTTP_Respondtowebhook_Automate_Webhook.json",
+    "title": "Automatización HTTP Request: Recepción de webhook activada por evento (Workflow avanz",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Function",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos",
+      "Validación de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "application",
+      "chatbot",
+      "datos",
+      "eliminación",
+      "envío",
+      "example",
+      "function",
+      "http",
+      "httprequest",
+      "integration"
+    ]
+  },
+  {
+    "original_filename": "1367_HTTP_Schedule_Automate_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "auto",
+      "automated",
+      "automática",
+      "datos",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1370_HTTP_Extractfromfile_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "The n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1419_HTTP_Schedule_Automation_Scheduled.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Nextcloud",
+      "Schedule"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "http",
+      "httprequest",
+      "nextcloud",
+      "programación",
+      "request",
+      "scans",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1440_HTTP_Executeworkflow_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Búsqueda de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1447_HTTP_Schedule_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "http",
+      "httprequest",
+      "listado",
+      "pinger",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1458_HTTP_Stickynote_Import_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Este workflow uses 10 interconnected nodes to streamline business processes. It uses Google Drive to upload images to the cloud. It is designed to make it easier to share data between different systems.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "drive",
+      "envío",
+      "gdrive",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1462_HTTP_Executeworkflow_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "anomaly",
+      "automated",
+      "automática",
+      "code",
+      "crops",
+      "dataset",
+      "datos",
+      "detection",
+      "executeworkflow"
+    ]
+  },
+  {
+    "original_filename": "1464_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "deep",
+      "http",
+      "httprequest",
+      "jina"
+    ]
+  },
+  {
+    "original_filename": "1473_HTTP_Respondtowebhook_Create_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "N8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "HTTP Request",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "nombre",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1481_HTTP_Form_Send_Webhook.json",
+    "title": "Send TTS (Text-to-speech) voice calls - Form",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 3 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calls",
+      "datos",
+      "envío",
+      "form",
+      "http",
+      "httprequest",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1519_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, utiliza 15 nodos.",
+    "services": [
+      "Stickynote",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "deepseek",
+      "http",
+      "httprequest",
+      "quick",
+      "reasoning",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1520_HTTP_Respondtowebhook_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "http",
+      "httprequest",
+      "recepción",
+      "request",
+      "stickynote",
+      "transcriber"
+    ]
+  },
+  {
+    "original_filename": "1530_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "N8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1535_HTTP_Form_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automate Blog Content Creation with GPT-4, Perplexity & WordPress. Use 17 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Form",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de notificación",
+      "Envío de email",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automate",
+      "automated",
+      "automática",
+      "blog",
+      "búsqueda",
+      "content",
+      "creation",
+      "datos",
+      "email"
+    ]
+  },
+  {
+    "original_filename": "1538_HTTP_Googlecalendartool_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "LINE Assistant with Google Calendar and Gmail Integration. This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Google Calendar",
+      "Gmail",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "assistant",
+      "calendar",
+      "creación",
+      "datos",
+      "gmail",
+      "google",
+      "googlecalendar",
+      "http",
+      "httprequest",
+      "integration"
+    ]
+  },
+  {
+    "original_filename": "1558_HTTP_Stickynote_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Multi-AI Agent Chatbot for Postgres/Supabase DB and QuickCharts + Tool Router. Uses 40 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "PostgreSQL",
+      "Set",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "chatbot",
+      "creación",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1580_HTTP_Stickynote_Automate_Webhook.json",
+    "title": "Splitinbatches: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Splitinbatches y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Splitinbatches",
+      "HTTP Request",
+      "Stickynote",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "autonomous",
+      "búsqueda",
+      "code",
+      "datos",
+      "deep",
+      "división",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1593_HTTP_Schedule_Import_Webhook.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "HTTP Request",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "daily",
+      "data",
+      "datos",
+      "fetcher",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1598_HTTP_Schedule_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "AirQuality Scheduler uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "airquality",
+      "automated",
+      "automática",
+      "datos",
+      "gmail",
+      "http",
+      "httprequest",
+      "lectura",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1615_HTTP_Emailreadimap_Send_Webhook.json",
+    "title": "Summarize emails with A.I. then send to messenger - Emailreadimap",
+    "description": "Summarize emails with A.I. then send to messenger. This n8n workflow uses 7 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Emailreadimap",
+      "Stickynote",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "email",
+      "emailreadimap",
+      "emails",
+      "envío",
+      "http",
+      "httprequest",
+      "messenger",
+      "request",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "1617_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "extract",
+      "filtrado",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1631_HTTP_Telegram_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "NeurochainAI uses 29 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Switch",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "basic",
+      "code",
+      "http",
+      "httprequest",
+      "integration",
+      "neurochainai",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1632_HTTP_Telegram_Monitor_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "If",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "blacklist",
+      "checker",
+      "code",
+      "datos",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1640_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Manual: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Manual y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Manual",
+      "HTTP Request",
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "files",
+      "github",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1651_HTTP_Schedule_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "HTTP Request",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "gratitude",
+      "http",
+      "httprequest",
+      "programación",
+      "reminder",
+      "request",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1654_HTTP_Telegram_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "This n8n workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Cron",
+      "If",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "cron",
+      "datos",
+      "ejecución",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1655_HTTP_Schedule_Send_Webhook.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Business Automation Workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Discord.",
+    "services": [
+      "Discord",
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "discord",
+      "http",
+      "httprequest",
+      "nombre",
+      "programación",
+      "request",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1672_HTTP_Form_Automation_Webhook.json",
+    "title": "Form: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "HTTP Request",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "form",
+      "http",
+      "httprequest",
+      "nombre",
+      "noop",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1674_HTTP_Emailreadimap_Send_Webhook.json",
+    "title": "Summarize emails with A.I. then send to messenger - Emailreadimap",
+    "description": "Summarize emails with A.I. then send to messenger. This n8n workflow uses 7 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Emailreadimap",
+      "Stickynote",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "email",
+      "emailreadimap",
+      "emails",
+      "envío",
+      "http",
+      "httprequest",
+      "messenger",
+      "request",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "1675_HTTP_Emailreadimap_Send_Webhook.json",
+    "title": "Summarize emails with A.I. then send to messenger - Emailreadimap",
+    "description": "Summarize emails with A.I. then send to messenger. This n8n workflow uses 7 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems.",
+    "services": [
+      "Emailreadimap",
+      "Stickynote",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "email",
+      "emailreadimap",
+      "emails",
+      "envío",
+      "http",
+      "httprequest",
+      "messenger",
+      "request",
+      "send"
+    ]
+  },
+  {
+    "original_filename": "1684_HTTP_Telegram_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "NeurochainAI uses 29 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Switch",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "basic",
+      "code",
+      "http",
+      "httprequest",
+      "integration",
+      "neurochainai",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1687_HTTP_Telegram_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Stickynote",
+      "Executeworkflow",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "langchain",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1688_HTTP_Telegram_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "If",
+      "Stickynote",
+      "Supabase",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1700_HTTP_Webhook_Process_Webhook.json",
+    "title": "Webhook: Recepción de webhook (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Webhook",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "dall",
+      "datos",
+      "envío",
+      "http",
+      "httprequest",
+      "image",
+      "lego",
+      "line",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1720_HTTP_Stickynote_Import_Webhook.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1725_HTTP_Code_Process_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "Convert Parquet, Avro, ORC & Feather via ParquetReader to JSON. Workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con Webhook.",
+    "services": [
+      "Webhook",
+      "HTTP Request",
+      "Stickynote",
+      "Code"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "avro",
+      "code",
+      "convert",
+      "datos",
+      "envío",
+      "feather",
+      "http",
+      "httprequest",
+      "json",
+      "parquet"
+    ]
+  },
+  {
+    "original_filename": "1729_HTTP_Executeworkflow_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 18 nodos.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "classifier",
+      "code",
+      "dataset",
+      "http",
+      "httprequest",
+      "lands",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1730_HTTP_Executeworkflow_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 18 nodos.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "classifier",
+      "code",
+      "dataset",
+      "http",
+      "httprequest",
+      "lands",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1732_HTTP_Executeworkflow_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "anomaly",
+      "automated",
+      "automática",
+      "code",
+      "crops",
+      "dataset",
+      "datos",
+      "detection",
+      "executeworkflow"
+    ]
+  },
+  {
+    "original_filename": "1737_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "N8n workflow uses 19 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "nombre",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1747_HTTP_Stickynote_Automate_Webhook.json",
+    "title": "Splitinbatches: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Splitinbatches y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Splitinbatches",
+      "HTTP Request",
+      "Stickynote",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "autonomous",
+      "búsqueda",
+      "code",
+      "datos",
+      "deep",
+      "división",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1773_HTTP_Stripe_Sync_Webhook.json",
+    "title": "HTTP Request: Activación automática (3 pasos)",
+    "description": "Stripe Payment Order Sync – Auto Retrieve Customer & Product Purchased Data. Workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Stripe"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "auto",
+      "automated",
+      "automática",
+      "customer",
+      "datos",
+      "filtrado",
+      "http",
+      "httprequest",
+      "order"
+    ]
+  },
+  {
+    "original_filename": "1778_HTTP_Googlecalendartool_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "LINE Assistant with Google Calendar and Gmail Integration. This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Google Calendar",
+      "Gmail",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "assistant",
+      "calendar",
+      "creación",
+      "datos",
+      "gmail",
+      "google",
+      "googlecalendar",
+      "http",
+      "httprequest",
+      "integration"
+    ]
+  },
+  {
+    "original_filename": "1799_HTTP_Manual_Send_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Manual",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "demo",
+      "http",
+      "httprequest",
+      "line",
+      "manual",
+      "message",
+      "recepción"
+    ]
+  },
+  {
+    "original_filename": "1800_HTTP_Telegram_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Stickynote",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "extractfromfile",
+      "groq",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1808_HTTP_Telegram_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Stickynote",
+      "Executeworkflow",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "executeworkflow",
+      "http",
+      "httprequest",
+      "langchain",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1811_HTTP_GoogleSheets_Automate_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 17 pasos)",
+    "description": "Line_Chatbot uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "recepción",
+      "request",
+      "stickynote",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1827_HTTP_Respondtowebhook_Automate_Webhook.json",
+    "title": "Automatización HTTP Request: Recepción de webhook activada por evento (Workflow avanz",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Function",
+      "Switch"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos",
+      "Validación de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "application",
+      "chatbot",
+      "datos",
+      "eliminación",
+      "envío",
+      "example",
+      "function",
+      "http",
+      "httprequest",
+      "integration"
+    ]
+  },
+  {
+    "original_filename": "1852_HTTP_Stickynote_Automate_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Business Automation Workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "call",
+      "connect",
+      "contacts",
+      "http",
+      "httprequest",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1868_HTTP_Stickynote_Automate_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 14 nodos.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "chatbot",
+      "http",
+      "httprequest",
+      "recepción",
+      "request",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1871_HTTP_Executeworkflow_Import_Webhook.json",
+    "title": "HTTP Request: Activación automática (5 pasos)",
+    "description": "Business Automation Workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "executeworkflow",
+      "getbible",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1876_HTTP_Manual_Automation_Webhook.json",
+    "title": "Wait: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Gemini AI is a new type of business automation software. It automates a series of tasks by connecting different parts of a business. The software can also be used to create new jobs. Integra con Wait.",
+    "services": [
+      "Wait",
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Lectura de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "analysis",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "gemini",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1883_HTTP_Form_Import_Webhook.json",
+    "title": "Form: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Form y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Form",
+      "Stickynote",
+      "HTTP Request",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "form",
+      "gmail",
+      "http",
+      "httprequest",
+      "jsreport"
+    ]
+  },
+  {
+    "original_filename": "1885_HTTP_Extractfromfile_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Switch",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "chinese",
+      "datos",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "lectura",
+      "recepción",
+      "request",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1890_HTTP_Executeworkflow_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 18 nodos.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "classifier",
+      "code",
+      "dataset",
+      "http",
+      "httprequest",
+      "lands",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1893_HTTP_Gmail_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Tarea programada que ejecuta activación automática periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Cron",
+      "Gmail",
+      "Function",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada",
+      "Envío de email",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "búsqueda",
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "envío",
+      "function",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1920_HTTP_Telegram_Automate_Webhook.json",
+    "title": "Emailsend: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Function",
+      "Webhook",
+      "Telegram"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "function",
+      "http",
+      "httprequest",
+      "recepción",
+      "request",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "1959_HTTP_Schedule_Automate_Webhook.json",
+    "title": "If: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "Schedule",
+      "HTTP Request",
+      "Twilio"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "http",
+      "httprequest",
+      "nombre",
+      "programación",
+      "request",
+      "schedule",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "1964_HTTP_Aggregate_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Stickynote",
+      "Aggregate",
+      "Executeworkflow",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Búsqueda de datos",
+      "Listado de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "envío",
+      "executeworkflow",
+      "full"
+    ]
+  },
+  {
+    "original_filename": "1973_HTTP_Manual_Import_Webhook.json",
+    "title": "HTTP Request: Fusión de datos (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Manual",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Lectura de datos",
+      "Activación automática",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "images"
+    ]
+  },
+  {
+    "original_filename": "1976_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "If: Recepción de webhook (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "If",
+      "Stickynote",
+      "HTTP Request",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "archivos",
+      "callback",
+      "descarga",
+      "http",
+      "httprequest",
+      "pdfmonkey",
+      "react",
+      "recepción",
+      "request",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1989_HTTP_Schedule_Create_Webhook.json",
+    "title": "Schedule: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Twitter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "http",
+      "httprequest",
+      "news",
+      "perplexity",
+      "post"
+    ]
+  },
+  {
+    "original_filename": "1996_HTTP_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Fusión de datos (Workflow avanzado - 9 pasos)",
+    "description": "Business Automation Workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "analyze",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "http",
+      "httprequest",
+      "manual",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "2019_HTTP_Stickynote_Automate_Webhook.json",
+    "title": "Stickynote: Recepción de webhook (Workflow avanzado - 9 pasos)",
+    "description": "Line Chatbot Handling AI Responses with Groq and Llama3 uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems and process data according to defined rules. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "HTTP Request",
+      "Webhook",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "chatbot",
+      "datos",
+      "groq",
+      "handling",
+      "http",
+      "httprequest",
+      "lectura",
+      "line",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "2043_HTTP_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, utiliza 15 nodos.",
+    "services": [
+      "Stickynote",
+      "HTTP Request"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "deepseek",
+      "http",
+      "httprequest",
+      "quick",
+      "reasoning",
+      "request"
+    ]
+  }
+]

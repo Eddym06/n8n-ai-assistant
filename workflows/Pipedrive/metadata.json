@@ -1,0 +1,82 @@
+[
+  {
+    "original_filename": "0071_Pipedrive_Update_Triggered.json",
+    "title": "Receive updates for all changes in Pipedrive",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Pipedrive"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "changes",
+      "pipedrive",
+      "receive",
+      "updates"
+    ]
+  },
+  {
+    "original_filename": "0249_Pipedrive_Stickynote_Create_Webhook.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Pipedrive y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Pipedrive",
+      "HTTP Request",
+      "Set",
+      "If",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de email",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0251_Pipedrive_Spreadsheetfile_Create_Triggered.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Pipedrive",
+      "Set",
+      "Spreadsheetfile",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "drive",
+      "fusión",
+      "google",
+      "googledrive",
+      "nombre"
+    ]
+  }
+]

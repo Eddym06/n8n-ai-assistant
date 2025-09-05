@@ -1,0 +1,58 @@
+[
+  {
+    "original_filename": "1599_Woocommercetool_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "OpenAI Personal Shopper uses 25 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "google",
+      "googledrive",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1857_Woocommercetool_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 25 pasos)",
+    "description": "OpenAI Personal Shopper uses 25 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con HTTP Request.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "google",
+      "googledrive",
+      "http",
+      "httprequest"
+    ]
+  }
+]

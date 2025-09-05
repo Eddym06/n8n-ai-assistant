@@ -1,0 +1,86 @@
+[
+  {
+    "original_filename": "0095_Googleslides_Slack_Automate_Triggered.json",
+    "title": "Googleslides: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Googleslides",
+      "Set",
+      "If",
+      "Slack",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "googleslides",
+      "nombre",
+      "slack"
+    ]
+  },
+  {
+    "original_filename": "0754_Googleslides_Noop_Automation_Triggered.json",
+    "title": "Googleslides: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googleslides y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Googleslides",
+      "Set",
+      "If",
+      "Google Drive",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "certificate",
+      "datos",
+      "drive",
+      "email",
+      "envío",
+      "forms",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1845_Googleslides_Extractfromfile_Create_Triggered.json",
+    "title": "Create Custom Presentations per Lead - Googleslides",
+    "description": "Automatización que se activa cuando ocurren eventos en Googleslides y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Googleslides",
+      "Extractfromfile",
+      "Google Drive",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Lectura de datos",
+      "Listado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "create",
+      "custom",
+      "datos",
+      "drive",
+      "extractfromfile",
+      "fusión"
+    ]
+  }
+]

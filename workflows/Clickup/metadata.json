@@ -1,0 +1,71 @@
+[
+  {
+    "original_filename": "0047_Clickup_Update_Triggered.json",
+    "title": "Receive updates for events in ClickUp",
+    "description": "Automatización que se activa cuando ocurren eventos en Clickup.",
+    "services": [
+      "Clickup"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "clickup",
+      "events",
+      "receive",
+      "updates"
+    ]
+  },
+  {
+    "original_filename": "0282_Clickup_Notion_Update_Triggered.json",
+    "title": "Clickup: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Clickup",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "clickup",
+      "datos",
+      "lectura",
+      "nombre",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "0469_Clickup_Respondtowebhook_Create_Webhook.json",
+    "title": "Webhook: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Webhook",
+      "Stickynote",
+      "Clickup",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "clickup",
+      "creación",
+      "datos",
+      "nombre",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "original_filename": "0177_Coingecko_Cron_Update_Scheduled.json",
+    "title": "Set: Lectura de datos (Workflow avanzado - 8 pasos)",
+    "description": "Proceso que actualiza información en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "Cron",
+      "Function",
+      "Airtable",
+      "Coingecko"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "actualización",
+      "airtable",
+      "coingecko",
+      "cron",
+      "crypto",
+      "datos",
+      "ejecución",
+      "function",
+      "lectura",
+      "programada"
+    ]
+  }
+]

@@ -1,0 +1,79 @@
+[
+  {
+    "original_filename": "1148_Woocommerce_Slack_Create_Triggered.json",
+    "title": "WooCommerce: Activación automática",
+    "description": "Automatización que se activa cuando ocurren eventos en WooCommerce y integra 2 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "WooCommerce",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "product",
+      "slack",
+      "woocommerce"
+    ]
+  },
+  {
+    "original_filename": "1151_Woocommerce_Slack_Create_Triggered.json",
+    "title": "If: Activación automática (3 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "If",
+      "WooCommerce",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "order",
+      "slack",
+      "woocommerce"
+    ]
+  },
+  {
+    "original_filename": "1155_Woocommerce_Slack_Create_Triggered.json",
+    "title": "If: Activación automática (3 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "If",
+      "WooCommerce",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "refund",
+      "slack",
+      "woocommerce"
+    ]
+  }
+]

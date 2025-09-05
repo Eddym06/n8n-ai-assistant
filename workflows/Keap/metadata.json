@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "1023_Keap_Automate_Triggered.json",
+    "title": "Keap: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Keap"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "keap",
+      "nombre"
+    ]
+  }
+]

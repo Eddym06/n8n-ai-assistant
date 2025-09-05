@@ -1,0 +1,19 @@
+[
+  {
+    "original_filename": "1031_Box_Automate_Triggered.json",
+    "title": "Box: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Box"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre"
+    ]
+  }
+]
