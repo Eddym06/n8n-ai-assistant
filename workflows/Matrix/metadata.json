@@ -1,0 +1,27 @@
+[
+  {
+    "original_filename": "1236_Matrix_Cron_Automate_Scheduled.json",
+    "title": "Function: Activación automática (5 pasos)",
+    "description": "Coffee Bot uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Function.",
+    "services": [
+      "Function",
+      "Matrix",
+      "Cron"
+    ],
+    "actions": [
+      "Activación automática",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "coffee",
+      "cron",
+      "ejecución",
+      "function",
+      "matrix",
+      "programada",
+      "scheduled"
+    ]
+  }
+]

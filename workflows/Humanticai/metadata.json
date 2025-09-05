@@ -1,0 +1,24 @@
+[
+  {
+    "original_filename": "0043_Humanticai_Calendly_Automate_Triggered.json",
+    "title": "Calendly: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Calendly",
+      "Notion",
+      "Humanticai"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendly",
+      "humanticai",
+      "nombre",
+      "notion"
+    ]
+  }
+]

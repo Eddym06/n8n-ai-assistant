@@ -1,0 +1,641 @@
+[
+  {
+    "original_filename": "0061_Noop_GitHub_Automate_Triggered.json",
+    "title": "Set: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Set",
+      "If",
+      "Telegram",
+      "Noop",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "github",
+      "nombre",
+      "noop",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0083_Noop_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 21 pasos)",
+    "description": "Plex Automatic Throttler uses 21 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Switch",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Lectura de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "archivos",
+      "automatic",
+      "datos",
+      "descarga",
+      "http",
+      "httprequest",
+      "lectura",
+      "plex",
+      "recepción",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "0089_Noop_Telegram_Automate_Triggered.json",
+    "title": "If: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "Noop",
+      "Googleperspective",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "googleperspective",
+      "nombre",
+      "noop",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0094_Noop_Gmail_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Gmail",
+      "Typeform",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "gmail",
+      "hubspot",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0096_Noop_GitHub_Automate_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Switch",
+      "If",
+      "Noop",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "assigning",
+      "automate",
+      "automated",
+      "automática",
+      "github",
+      "issues",
+      "noop",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "0108_Noop_GitHub_Create_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Switch",
+      "If",
+      "Noop",
+      "Github"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "github",
+      "nombre",
+      "noop",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "0172_Noop_GoogleSheets_Create_Webhook.json",
+    "title": "HTTP Request: Recepción de webhook (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Webhook",
+      "Noop"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "http",
+      "httprequest",
+      "nombre",
+      "noop",
+      "recepción",
+      "request",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0174_Noop_Emailsend_Automation_Scheduled.json",
+    "title": "Emailsend: Envío de email automática (Workflow avanzado - 6 pasos)",
+    "description": "Tarea programada que ejecuta envío de email periódicamente y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Strava",
+      "Set",
+      "Cron",
+      "If"
+    ],
+    "actions": [
+      "Envío de email",
+      "Envío de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "activity",
+      "cron",
+      "datos",
+      "ejecución",
+      "email",
+      "emailsend",
+      "encouragement",
+      "envío",
+      "programada",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0209_Noop_Kafka_Send_Triggered.json",
+    "title": "Receive messages from a topic and send an SMS - If",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios.",
+    "services": [
+      "If",
+      "Vonage",
+      "Noop",
+      "Kafka"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "kafka",
+      "messages",
+      "noop",
+      "receive",
+      "send",
+      "topic",
+      "vonage"
+    ]
+  },
+  {
+    "original_filename": "0212_Noop_Cratedb_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Set",
+      "Pagerduty",
+      "If",
+      "Cratedb",
+      "Amqp"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "amqp",
+      "automated",
+      "automática",
+      "case",
+      "cratedb",
+      "creación",
+      "datos",
+      "factory",
+      "pagerduty"
+    ]
+  },
+  {
+    "original_filename": "0291_Noop_Rabbitmq_Send_Triggered.json",
+    "title": "Receive messages from a queue via RabbitMQ and send an SMS - If",
+    "description": "Business Automation Workflow uses 4 interconnected nodes to automate business processes. Receive messages from a queue via RabbitMQ and send an SMS.",
+    "services": [
+      "If",
+      "Vonage",
+      "Noop",
+      "Rabbitmq"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "messages",
+      "noop",
+      "queue",
+      "rabbitmq",
+      "receive",
+      "send",
+      "vonage"
+    ]
+  },
+  {
+    "original_filename": "0327_Noop_Slack_Send_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 14 pasos)",
+    "description": "This n8n workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "If",
+      "Slack",
+      "Stickynote",
+      "Webhook",
+      "Noop"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "nombre",
+      "noop",
+      "recepción",
+      "slack",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0416_Noop_HubSpot_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Stickynote",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0610_Noop_Twilio_Automate_Scheduled.json",
+    "title": "Cron: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Tarea programada que ejecuta activación automática periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Cron",
+      "If",
+      "Function",
+      "Twilio",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Ejecución programada",
+      "Envío de datos",
+      "Envío de SMS"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "congratulations",
+      "cron",
+      "datos",
+      "ejecución",
+      "envío",
+      "function",
+      "fusión",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "0748_Noop_Telegram_Automation_Scheduled.json",
+    "title": "Rssfeedread: Ejecución programada (Workflow avanzado - 7 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios, utiliza 7 nodos.",
+    "services": [
+      "Rssfeedread",
+      "Cron",
+      "If",
+      "Function",
+      "Noop"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "ejecución",
+      "function",
+      "noop",
+      "programada",
+      "rssfeedread",
+      "scheduled",
+      "telegram"
+    ]
+  },
+  {
+    "original_filename": "0809_Noop_Slack_Send_Scheduled.json",
+    "title": "Check To Do on Notion and send message on Slack - Cron",
+    "description": "Tarea programada que ejecuta lectura de datos periódicamente y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Cron",
+      "If",
+      "Slack",
+      "Notion",
+      "Noop"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "check",
+      "creación",
+      "cron",
+      "datos",
+      "ejecución",
+      "envío",
+      "lectura",
+      "message",
+      "noop",
+      "notion"
+    ]
+  },
+  {
+    "original_filename": "0929_Noop_Extractfromfile_Automation.json",
+    "title": "Emailreadimap: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización de correo electrónico que activación automática y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Emailreadimap",
+      "Stickynote",
+      "Extractfromfile",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "application",
+      "automática",
+      "classification",
+      "email",
+      "emailreadimap",
+      "envío",
+      "extractfromfile",
+      "mail",
+      "noop"
+    ]
+  },
+  {
+    "original_filename": "1091_Noop_Trello_Import_Triggered.json",
+    "title": "Trello: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Trello y integra 5 servicios, utiliza 6 nodos.",
+    "services": [
+      "Trello",
+      "Set",
+      "If",
+      "Airtable",
+      "Typeform"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "feedback",
+      "product",
+      "trello",
+      "typeform"
+    ]
+  },
+  {
+    "original_filename": "1130_Noop_Twilio_Send_Scheduled.json",
+    "title": "Get the price of BTC in EUR and send an SMS when the price is larger than EUR 90",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 5 servicios.",
+    "services": [
+      "Cron",
+      "If",
+      "Twilio",
+      "Coingecko",
+      "Noop"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "coingecko",
+      "cron",
+      "ejecución",
+      "larger",
+      "noop",
+      "price",
+      "programada",
+      "scheduled",
+      "send",
+      "than"
+    ]
+  },
+  {
+    "original_filename": "1150_Noop_Executecommand_Automation_Scheduled.json",
+    "title": "Cron: Ejecución programada (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Cron",
+      "If",
+      "Executecommand",
+      "Twilio",
+      "Noop"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "command",
+      "cron",
+      "disk",
+      "ejecución",
+      "execute",
+      "executecommand",
+      "gives",
+      "hard",
+      "host",
+      "machine"
+    ]
+  },
+  {
+    "original_filename": "1442_Noop_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 13 nodos.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "data",
+      "extract",
+      "hosted",
+      "mistral",
+      "nemo",
+      "noop",
+      "personal"
+    ]
+  },
+  {
+    "original_filename": "1486_Noop_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 13 nodos.",
+    "services": [
+      "Stickynote",
+      "Set",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "data",
+      "extract",
+      "hosted",
+      "mistral",
+      "nemo",
+      "noop",
+      "personal"
+    ]
+  },
+  {
+    "original_filename": "1838_Noop_Stickynote_Automation_Triggered.json",
+    "title": "If: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "If",
+      "Stickynote",
+      "Set",
+      "Noop"
+    ],
+    "actions": [
+      "Activación automática",
+      "Validación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "between",
+      "datos",
+      "dynamically",
+      "llms",
+      "noop",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1892_Noop_Mautic_Automation_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Mautic",
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "form",
+      "mautic",
+      "recepción",
+      "stickynote",
+      "webhook",
+      "wordpress"
+    ]
+  }
+]

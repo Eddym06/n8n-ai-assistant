@@ -1,0 +1,18 @@
+[
+  {
+    "original_filename": "0026_Mailcheck_Airtable_Monitor.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "Airtable",
+      "Mailcheck"
+    ],
+    "actions": [],
+    "keywords": [
+      "airtable",
+      "mailcheck",
+      "nombre"
+    ]
+  }
+]

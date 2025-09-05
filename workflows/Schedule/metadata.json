@@ -1,0 +1,1557 @@
+[
+  {
+    "original_filename": "0382_Schedule_Spotify_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Spotify",
+      "If",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Ejecución programada",
+      "Listado de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "ejecución",
+      "fusión",
+      "listado",
+      "nombre",
+      "programación",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "0402_Schedule_Filter_Update_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Gmail",
+      "Filter",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "filter",
+      "filtrado",
+      "fusión",
+      "gmail",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0412_Schedule_HTTP_Update_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0417_Schedule_Gmail_Send_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Gmail",
+      "Stickynote",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de email",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "gmail",
+      "hubspot",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0422_Schedule_HTTP_Send_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "gmail",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0432_Schedule_Filter_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Slack",
+      "Filter",
+      "Stickynote",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "filter",
+      "filtrado",
+      "hubspot",
+      "lectura",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0443_Schedule_Filter_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Itemlists",
+      "Gmail",
+      "Filter",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Listado de datos",
+      "Programación temporal",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "filter",
+      "filtrado",
+      "gmail",
+      "itemlists"
+    ]
+  },
+  {
+    "original_filename": "0448_Schedule_HTTP_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "If",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0474_Schedule_GoogleSheets_Automation_Scheduled.json",
+    "title": "Twitter: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Twitter y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Twitter",
+      "Schedule",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "google",
+      "googlesheets",
+      "lectura",
+      "listado",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0478_Schedule_HTTP_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Programación temporal",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "form",
+      "http",
+      "httprequest",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0486_Schedule_Telegram_Create_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "envío",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "0487_Schedule_Telegram_Create_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "envío",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "0526_Schedule_Slack_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "If",
+      "Slack",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "fusión",
+      "lectura",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "0527_Schedule_Manual_Update_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Manual",
+      "Splitinbatches",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "fusión",
+      "manual",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0529_Schedule_Slack_Update_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Gmail",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "gmail",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0539_Schedule_Twilio_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Airtable",
+      "Switch",
+      "Stickynote",
+      "Twilio"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0563_Schedule_Filter_Update_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Este workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "Todoist",
+      "Set",
+      "Filter",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0631_Schedule_Wordpress_Automate_Scheduled.json",
+    "title": "Slack: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Slack",
+      "Schedule",
+      "Wordpress",
+      "Zoom"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "programación",
+      "schedule",
+      "scheduled",
+      "slack",
+      "temporal",
+      "wordpress"
+    ]
+  },
+  {
+    "original_filename": "0711_Schedule_Slack_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "fusión",
+      "http",
+      "httprequest",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0720_Schedule_Filter_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. It can also process data according to defined rules.",
+    "services": [
+      "Schedule",
+      "Manual",
+      "Google Drive",
+      "Filter",
+      "N8N"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Filtrado de datos",
+      "Eliminación de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "eliminación",
+      "filter",
+      "filtrado",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0729_Schedule_Stickynote_Send_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "If",
+      "Stickynote",
+      "Ssh"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "fusión",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0758_Schedule_Manual_Monitor_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Schedule",
+      "Sort",
+      "Set",
+      "If",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "lectura",
+      "manual",
+      "nombre",
+      "programación",
+      "schedule",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "0795_Schedule_Mailchimp_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización.",
+    "services": [
+      "Schedule",
+      "Manual",
+      "Stickynote",
+      "Splitinbatches",
+      "MailChimp"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "mailchimp",
+      "manual",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "0817_Schedule_Removeduplicates_Create_Webhook.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "HTTP Request",
+      "Set",
+      "Markdown"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "http",
+      "httprequest",
+      "lectura",
+      "markdown",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0907_Schedule_Removeduplicates_Create_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Set",
+      "Splitinbatches",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0911_Schedule_Removeduplicates_Create_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Markdown",
+      "Stickynote",
+      "Microsoftoutlook"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "lectura",
+      "markdown",
+      "microsoftoutlook",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "0912_Schedule_Removeduplicates_Create_Scheduled.json",
+    "title": "Removeduplicates: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Removeduplicates y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Removeduplicates",
+      "Schedule",
+      "Markdown",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "gmail",
+      "lectura",
+      "markdown",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1270_Schedule_Manual_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Manual",
+      "Splitinbatches",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Programación temporal",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "fusión",
+      "manual",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1275_Schedule_Telegram_Automation_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "envío",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1276_Schedule_Telegram_Automation_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "Set",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "envío",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1345_Schedule_Discord_Automation_Scheduled.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Discord y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Discord",
+      "Schedule",
+      "Removeduplicates",
+      "Set",
+      "Twitter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "discord",
+      "post",
+      "programación",
+      "removeduplicates",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1399_Schedule_Slack_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "If",
+      "Slack",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "fusión",
+      "lectura",
+      "nombre",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1406_Schedule_Slack_Automation_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Gemini AI is a new type of business automation tool. It automates tasks by connecting different systems and processes. It can be used to streamline business processes and improve efficiency. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Google Calendar",
+      "Slack",
+      "Schedule"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "daily",
+      "datos",
+      "envío",
+      "gemini",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "1418_Schedule_Nocodb_Automation_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Noco Kanban Board with AI Prioritization uses 27 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules. Integra con Emailsend.",
+    "services": [
+      "Emailsend",
+      "Schedule",
+      "Set",
+      "Form",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "board",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "form",
+      "kanban"
+    ]
+  },
+  {
+    "original_filename": "1492_Schedule_Twilio_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Airtable",
+      "Switch",
+      "Stickynote",
+      "Twilio"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "envío",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1524_Schedule_Manual_Automation_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "If",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "execution",
+      "hourly",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1574_Schedule_Youtube_Create_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "YouTube",
+      "Twitter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "post",
+      "programación",
+      "schedule",
+      "scheduled",
+      "stickynote",
+      "temporal",
+      "twitter"
+    ]
+  },
+  {
+    "original_filename": "1602_Schedule_Youtube_Create_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Schedule",
+      "YouTube",
+      "Twitter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "post",
+      "programación",
+      "schedule",
+      "scheduled",
+      "stickynote",
+      "temporal",
+      "twitter"
+    ]
+  },
+  {
+    "original_filename": "1607_Schedule_Notion_Sync_Scheduled.json",
+    "title": "Schedule: Activación automática (4 pasos)",
+    "description": "Este workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. It does this by automatically handling sronización of data. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "Todoist",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "lectura",
+      "notion",
+      "programación",
+      "schedule",
+      "scheduled",
+      "sync"
+    ]
+  },
+  {
+    "original_filename": "1614_Schedule_HTTP_Send_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "If",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "alert",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "expiry",
+      "gmail",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1629_Schedule_Stickynote_Automation_Scheduled.json",
+    "title": "If: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "If",
+      "Asana",
+      "Schedule",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "asana",
+      "automated",
+      "automática",
+      "clean",
+      "completed",
+      "datos",
+      "lectura",
+      "overdue",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1697_Schedule_HTTP_Monitor_Scheduled.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Envío de email",
+      "Envío de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "amazon",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1718_Schedule_Filter_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Este workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "Todoist",
+      "Set",
+      "Filter",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "lectura",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1738_Schedule_Comparedatasets_Automation_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Manual",
+      "If",
+      "MySQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de notificación",
+      "Programación temporal",
+      "Envío de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "googlesheets",
+      "integration",
+      "lectura",
+      "manual",
+      "mysql"
+    ]
+  },
+  {
+    "original_filename": "1750_Schedule_Extractfromfile_Import_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Workflow is available on Google Drive.",
+    "services": [
+      "Schedule",
+      "Extractfromfile",
+      "Manual",
+      "Google Drive",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Programación temporal",
+      "Búsqueda de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "descarga",
+      "división",
+      "drive",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1820_Schedule_N8N_Automate_Scheduled.json",
+    "title": "Schedule: Fusión de datos (Workflow avanzado - 13 pasos)",
+    "description": "The N8N is a set of software tools that can be used to automate business processes. The software is designed to be used in conjunction with other tools to create a more efficient business process.",
+    "services": [
+      "Schedule",
+      "Set",
+      "N8N",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "activity",
+      "automated",
+      "automática",
+      "datos",
+      "fusión",
+      "merge",
+      "programación",
+      "schedule",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "1859_Schedule_Slack_Monitor_Scheduled.json",
+    "title": "Schedule: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Airtop",
+      "If",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtop",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "monitor",
+      "producthunt",
+      "programación",
+      "schedule"
+    ]
+  },
+  {
+    "original_filename": "1867_Schedule_Filter_Sync_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 40 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Sort",
+      "Spotify",
+      "Set",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "filtrado",
+      "fusión",
+      "lectura",
+      "liked",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1891_Schedule_Slack_Automation_Scheduled.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Gemini AI is a new type of business automation tool. It automates tasks by connecting different systems and processes. It can be used to streamline business processes and improve efficiency. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Google Calendar",
+      "Slack",
+      "Schedule"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "daily",
+      "datos",
+      "envío",
+      "gemini",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "1932_Schedule_Telegram_Send_Scheduled.json",
+    "title": "Automatically Send Daily Meeting List to Telegram - Schedule",
+    "description": "Business Automation Workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Google Calendar",
+      "Function",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automatically",
+      "automática",
+      "calendar",
+      "daily",
+      "datos",
+      "function",
+      "google",
+      "googlecalendar"
+    ]
+  },
+  {
+    "original_filename": "1952_Schedule_HTTP_Monitor_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Web Server Monitor uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Schedule.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Gmail",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "gmail",
+      "google",
+      "googlesheets",
+      "http",
+      "httprequest",
+      "monitor",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "2045_Schedule_HTTP_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Set",
+      "Stickynote",
+      "Html"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "html",
+      "http",
+      "httprequest",
+      "lectura",
+      "nombre"
+    ]
+  }
+]

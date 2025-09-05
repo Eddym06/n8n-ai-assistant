@@ -1,0 +1,78 @@
+[
+  {
+    "original_filename": "1165_Twitter_Telegram_Create_Triggered.json",
+    "title": "WooCommerce: Activación automática (3 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en WooCommerce y integra 3 servicios.",
+    "services": [
+      "WooCommerce",
+      "Telegram",
+      "Twitter"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "product",
+      "telegram",
+      "twitter",
+      "woocommerce"
+    ]
+  },
+  {
+    "original_filename": "1211_Twitter_Strava_Create_Triggered.json",
+    "title": "Receive updates when a new activity gets created and tweet about it - Strava",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Strava",
+      "Twitter"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "about",
+      "activación",
+      "activity",
+      "automated",
+      "automática",
+      "created",
+      "gets",
+      "receive",
+      "strava",
+      "tweet"
+    ]
+  },
+  {
+    "original_filename": "1212_Twitter_Slack_Automation_Scheduled.json",
+    "title": "Set: Lectura de datos (Workflow avanzado - 7 pasos)",
+    "description": "Tarea programada que ejecuta lectura de datos periódicamente y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "Cron",
+      "If",
+      "Slack",
+      "Datetime"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada",
+      "Filtrado de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "company",
+      "creación",
+      "cron",
+      "datetime",
+      "datos",
+      "ejecución",
+      "filtrado",
+      "lectura",
+      "mentions",
+      "programada"
+    ]
+  }
+]

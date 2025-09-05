@@ -1,0 +1,261 @@
+[
+  {
+    "original_filename": "0085_Shopify_Twitter_Create_Triggered.json",
+    "title": "Shopify: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Shopify",
+      "Telegram",
+      "Twitter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "nombre",
+      "shopify",
+      "telegram",
+      "twitter"
+    ]
+  },
+  {
+    "original_filename": "0152_Shopify_Onfleet_Create_Triggered.json",
+    "title": "Onfleet: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Onfleet",
+      "Shopify"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creating",
+      "fulfillment",
+      "onfleet",
+      "shopify",
+      "task"
+    ]
+  },
+  {
+    "original_filename": "0185_Shopify_Onfleet_Automation_Triggered.json",
+    "title": "Onfleet: Activación automática",
+    "description": "Automatización que se activa cuando ocurren eventos en Onfleet y integra 2 servicios.",
+    "services": [
+      "Onfleet",
+      "Shopify"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "events",
+      "onfleet",
+      "shopify",
+      "tags",
+      "updating"
+    ]
+  },
+  {
+    "original_filename": "0265_Shopify_HubSpot_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Shopify",
+      "Merge",
+      "HubSpot"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "fusión",
+      "hubspot",
+      "merge",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0268_Shopify_Zendesk_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Shopify",
+      "Zendesk",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de email",
+      "Creación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "fusión",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "0269_Shopify_Zendesk_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Shopify",
+      "Zendesk",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "fusión",
+      "merge",
+      "nombre",
+      "shopify"
+    ]
+  },
+  {
+    "original_filename": "0278_Shopify_Mautic_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "Mautic",
+      "Shopify"
+    ],
+    "actions": [
+      "Activación automática",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "mautic",
+      "nombre",
+      "shopify",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0961_Shopify_Filter_Create_Triggered.json",
+    "title": "Shopify: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Shopify y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Shopify",
+      "Code",
+      "Filter",
+      "Odoo"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filter",
+      "filtrado",
+      "odoo",
+      "product",
+      "products"
+    ]
+  },
+  {
+    "original_filename": "1015_Shopify_Automate_Triggered.json",
+    "title": "Shopify: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Shopify"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "shopify"
+    ]
+  },
+  {
+    "original_filename": "1786_Shopify_Filter_Create_Triggered.json",
+    "title": "Shopify: Activación automática (5 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Shopify y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Shopify",
+      "Code",
+      "Filter",
+      "Odoo"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Búsqueda de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "contacts",
+      "creación",
+      "customers",
+      "datos",
+      "filter"
+    ]
+  }
+]

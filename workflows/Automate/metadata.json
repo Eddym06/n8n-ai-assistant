@@ -1,0 +1,66 @@
+[
+  {
+    "original_filename": "1060_Automate_Webhook.json",
+    "title": "POC - Chatbot Order By Sheet Data",
+    "description": "Workflow que se ejecuta automáticamente ante eventos específicos y realiza 2 tipos de acciones, utiliza 8 nodos.",
+    "services": [],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chatbot",
+      "data",
+      "datos",
+      "lectura",
+      "order",
+      "sheet"
+    ]
+  },
+  {
+    "original_filename": "1123_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Function"
+    ],
+    "actions": [],
+    "keywords": [
+      "function",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1271_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1326_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1911_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 0 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [],
+    "actions": [],
+    "keywords": [
+      "nombre"
+    ]
+  }
+]

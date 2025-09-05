@@ -1,0 +1,27 @@
+[
+  {
+    "original_filename": "1069_Figma_Stickynote_Update_Triggered.json",
+    "title": "Automate Figma Versioning and Jira Updates with n8n Webhook Integration - Sticky",
+    "description": "Automate Figma Versioning and Jira Updates with n8n Webhook Integration. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Figma",
+      "Jira"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automate",
+      "automated",
+      "automática",
+      "figma",
+      "integration",
+      "jira",
+      "stickynote",
+      "updates",
+      "versioning"
+    ]
+  }
+]

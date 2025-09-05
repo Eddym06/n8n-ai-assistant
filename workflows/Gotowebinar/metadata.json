@@ -1,0 +1,15 @@
+[
+  {
+    "original_filename": "1213_Gotowebinar_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Gotowebinar"
+    ],
+    "actions": [],
+    "keywords": [
+      "gotowebinar",
+      "nombre"
+    ]
+  }
+]

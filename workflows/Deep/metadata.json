@@ -1,0 +1,64 @@
+[
+  {
+    "original_filename": "2054_Deep_Research_Report_Generation_With_Open_Router_Google_Search_Webhook_Telegram_and_Notion.json",
+    "title": "Automatización HTTP Request: Activación automática activada por evento (Workflow avan",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Splitout",
+      "Markdown",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Filtrado de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "deep",
+      "división",
+      "filtrado",
+      "generation"
+    ]
+  },
+  {
+    "original_filename": "generate-collaborative-handbooks-with-gpt4o-multi-agent-orchestration-human-review.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 34 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Wait",
+      "PostgreSQL",
+      "If",
+      "Function"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "architettura",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emailsend",
+      "envío",
+      "function",
+      "fusión"
+    ]
+  }
+]

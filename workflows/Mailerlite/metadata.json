@@ -1,0 +1,29 @@
+[
+  {
+    "original_filename": "1874_Mailerlite_Gumroad_Automation_Webhook.json",
+    "title": "Automatización HTTP Request: Activación automática activada por evento (Workflow avan",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, utiliza 8 nodos.",
+    "services": [
+      "HTTP Request",
+      "Mailerlite",
+      "Gumroad",
+      "Stickynote",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "google",
+      "googlesheets",
+      "gumroad",
+      "http",
+      "httprequest",
+      "mailerlite",
+      "request"
+    ]
+  }
+]

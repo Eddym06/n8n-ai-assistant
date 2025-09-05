@@ -1,0 +1,64 @@
+[
+  {
+    "original_filename": "0977_Odoo_Code_Import_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Extractfromfile",
+      "Code",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Búsqueda de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "búsqueda",
+      "code",
+      "datos",
+      "descarga",
+      "drive",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1929_Odoo_Schedule_Automate_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Extractfromfile",
+      "If",
+      "Readwritefile",
+      "Aggregate"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Programación temporal",
+      "Lectura de datos",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aggregate",
+      "agregación",
+      "automated",
+      "automática",
+      "chatbot",
+      "datos",
+      "extractfromfile",
+      "fusión",
+      "lectura"
+    ]
+  }
+]

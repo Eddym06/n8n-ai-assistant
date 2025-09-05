@@ -1,0 +1,24 @@
+[
+  {
+    "original_filename": "0965_Paypal_Update_Triggered.json",
+    "title": "Receive updates when a billing plan is activated in PayPal",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "PayPal"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "activated",
+      "automated",
+      "automática",
+      "billing",
+      "paypal",
+      "plan",
+      "receive",
+      "updates"
+    ]
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "original_filename": "0806_Googlebigquery_Stickynote_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Stickynote",
+      "Code",
+      "Executeworkflow",
+      "Googlebigquery"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "executeworkflow",
+      "googlebigquery",
+      "nombre",
+      "stickynote"
+    ]
+  }
+]

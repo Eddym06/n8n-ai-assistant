@@ -1,0 +1,184 @@
+[
+  {
+    "original_filename": "0535_Localfile_Manual_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Búsqueda de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "eliminación",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0536_Localfile_Splitout_Send_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Extractfromfile.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Code",
+      "Readwritefile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "lectura",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0537_Localfile_Wait_Create_Triggered.json",
+    "title": "Wait: Activación automática (Workflow avanzado - 42 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Wait y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Wait",
+      "Converttofile",
+      "Extractfromfile",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "converttofile",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1357_Localfile_Wait_Automation_Triggered.json",
+    "title": "Wait: Activación automática (Workflow avanzado - 42 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Wait y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Wait",
+      "Converttofile",
+      "Extractfromfile",
+      "Set",
+      "Splitout"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Listado de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "converttofile",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión",
+      "lectura",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1358_Localfile_Manual_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "If",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Búsqueda de datos",
+      "Eliminación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "división",
+      "eliminación",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1635_Localfile_Splitout_Automation_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Extractfromfile.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Splitout",
+      "Code",
+      "Readwritefile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "división",
+      "extractfromfile",
+      "lectura",
+      "listado",
+      "nombre"
+    ]
+  }
+]

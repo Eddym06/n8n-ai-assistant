@@ -1,0 +1,46 @@
+[
+  {
+    "original_filename": "0360_Discord_Cron_Automation_Scheduled.json",
+    "title": "Discord: Ejecución programada (Workflow avanzado - 6 pasos)",
+    "description": "Tarea programada que ejecuta ejecución programada periódicamente y integra 2 servicios, utiliza 6 nodos.",
+    "services": [
+      "Discord",
+      "Cron"
+    ],
+    "actions": [
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cheems",
+      "cron",
+      "discord",
+      "ejecución",
+      "programada",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "2028_Discord_Hunter_Automate_Triggered.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Discord",
+      "Hunter",
+      "Form",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "discord",
+      "form",
+      "gmail",
+      "hunter"
+    ]
+  }
+]

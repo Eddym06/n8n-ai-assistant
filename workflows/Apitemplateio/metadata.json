@@ -1,0 +1,22 @@
+[
+  {
+    "original_filename": "1224_Apitemplateio_Typeform_Automation_Triggered.json",
+    "title": "Typeform: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Typeform",
+      "Apitemplateio"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "apitemplateio",
+      "automated",
+      "automática",
+      "nombre",
+      "typeform"
+    ]
+  }
+]

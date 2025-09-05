@@ -1,0 +1,186 @@
+[
+  {
+    "original_filename": "0524_Googledocs_Webhook_Create_Webhook.json",
+    "title": "Extractfromfile: Recepción de webhook (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Googledocs",
+      "Set",
+      "Gmail",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "División de datos",
+      "Listado de datos",
+      "Envío de notificación",
+      "Envío de email"
+    ],
+    "keywords": [
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "extractfromfile",
+      "gmail",
+      "googledocs",
+      "listado",
+      "nombre",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "1134_Googledocs_Code_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 37 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Googledocs",
+      "Code",
+      "Manual",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Listado de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "exam",
+      "generate",
+      "googledocs"
+    ]
+  },
+  {
+    "original_filename": "1279_Googledocs_Manual_Automate_Triggered.json",
+    "title": "Googledocs: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googledocs y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Googledocs",
+      "Manual",
+      "Google Drive",
+      "Splitinbatches",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "analysis",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "división",
+      "drive",
+      "earnings"
+    ]
+  },
+  {
+    "original_filename": "1287_Googledocs_Googledrivetool_Monitor_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Googledocs",
+      "Gmail",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de notificación",
+      "Listado de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "drive",
+      "envío",
+      "extractfromfile",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1335_Googledocs_Webhook_Process_Webhook.json",
+    "title": "Extractfromfile: Recepción de webhook (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Googledocs",
+      "Set",
+      "Gmail",
+      "Slack"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "División de datos",
+      "Listado de datos",
+      "Envío de notificación",
+      "Envío de email"
+    ],
+    "keywords": [
+      "datos",
+      "división",
+      "email",
+      "envío",
+      "extractfromfile",
+      "gmail",
+      "googledocs",
+      "listado",
+      "nombre",
+      "notificación"
+    ]
+  },
+  {
+    "original_filename": "1858_Googledocs_Manual_Automate_Triggered.json",
+    "title": "Googledocs: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googledocs y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Googledocs",
+      "Manual",
+      "Google Drive",
+      "Splitinbatches",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "División de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "analysis",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "división",
+      "drive",
+      "earnings"
+    ]
+  }
+]

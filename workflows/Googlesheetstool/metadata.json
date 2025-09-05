@@ -1,0 +1,27 @@
+[
+  {
+    "original_filename": "1133_Googlesheetstool_Automation_Triggered.json",
+    "title": "Google Sheets: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Google Sheets y realiza 3 tipos de acciones, utiliza 7 nodos.",
+    "services": [
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "customer",
+      "datos",
+      "google",
+      "googlesheets",
+      "lectura",
+      "sales"
+    ]
+  }
+]

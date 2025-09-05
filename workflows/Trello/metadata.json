@@ -1,0 +1,136 @@
+[
+  {
+    "original_filename": "0044_Trello_Googlecloudnaturallanguage_Automate_Triggered.json",
+    "title": "Trello: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Trello",
+      "If",
+      "Slack",
+      "Googlecloudnaturallanguage",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "googlecloudnaturallanguage",
+      "nombre",
+      "notion",
+      "slack",
+      "trello"
+    ]
+  },
+  {
+    "original_filename": "0053_Trello_GoogleCalendar_Create_Scheduled.json",
+    "title": "Trello: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Tarea programada que ejecuta activación automática periódicamente y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Trello",
+      "Set",
+      "Cron",
+      "If",
+      "Google Calendar"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Ejecución programada",
+      "Eliminación de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automática",
+      "calendar",
+      "creación",
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "eliminación",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "0076_Trello_Update_Triggered.json",
+    "title": "Receive updates for changes in the specified list in Trello",
+    "description": "Automatización que se activa cuando ocurren eventos en Trello.",
+    "services": [
+      "Trello"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "changes",
+      "list",
+      "receive",
+      "specified",
+      "trello",
+      "updates"
+    ]
+  },
+  {
+    "original_filename": "1298_Trello_Googlecloudnaturallanguage_Create_Triggered.json",
+    "title": "Trello: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Trello",
+      "If",
+      "Slack",
+      "Googlecloudnaturallanguage",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "googlecloudnaturallanguage",
+      "nombre",
+      "notion",
+      "slack",
+      "trello"
+    ]
+  },
+  {
+    "original_filename": "1302_Trello_Limit_Automate_Scheduled.json",
+    "title": "Trello: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Trello y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Trello",
+      "Schedule",
+      "Sort",
+      "Set",
+      "Rssfeedread"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "envío",
+      "filtrado",
+      "fusión",
+      "nombre",
+      "programación",
+      "rssfeedread"
+    ]
+  }
+]

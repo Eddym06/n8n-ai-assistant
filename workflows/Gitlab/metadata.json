@@ -1,0 +1,112 @@
+[
+  {
+    "original_filename": "0557_Gitlab_Filter_Create_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Gitlab",
+      "Manual",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Creación de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "filtrado",
+      "gitlab",
+      "listado",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0561_Gitlab_Code_Create_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Code",
+      "Gitlab",
+      "Manual"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "gitlab",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0998_Gitlab_Automate_Triggered.json",
+    "title": "Gitlab: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Gitlab"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "gitlab",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1895_Gitlab_Code_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Code",
+      "Gitlab",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Envío de notificación",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "assessment",
+      "auto",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "fusión"
+    ]
+  }
+]

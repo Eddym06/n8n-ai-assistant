@@ -1,0 +1,147 @@
+[
+  {
+    "original_filename": "0361_Hunter_Noop_Send_Triggered.json",
+    "title": "Hunter: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Hunter y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Hunter",
+      "Sendgrid",
+      "Form",
+      "If",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "form",
+      "hunter",
+      "listado",
+      "sendgrid"
+    ]
+  },
+  {
+    "original_filename": "0420_Hunter_Form_Create_Triggered.json",
+    "title": "Hunter: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Hunter",
+      "Form",
+      "If",
+      "Clearbit",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "clearbit",
+      "email",
+      "envío",
+      "form",
+      "hunter",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0424_Hunter_Form_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "HTTP Request",
+      "Hunter",
+      "Form",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "email",
+      "envío",
+      "form",
+      "gmail",
+      "http",
+      "httprequest",
+      "hunter"
+    ]
+  },
+  {
+    "original_filename": "0426_Hunter_Form_Send_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "This n8n workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Hunter",
+      "Set",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "form",
+      "http",
+      "httprequest",
+      "hunter"
+    ]
+  },
+  {
+    "original_filename": "0436_Hunter_Pipedrive_Create_Triggered.json",
+    "title": "Pipedrive: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "This n8n workflow uses 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Pipedrive",
+      "Hunter",
+      "Form",
+      "If",
+      "Clearbit"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "clearbit",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "form"
+    ]
+  }
+]

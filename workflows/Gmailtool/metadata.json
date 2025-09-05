@@ -1,0 +1,176 @@
+[
+  {
+    "original_filename": "0677_Gmailtool_Splitout_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Gmail",
+      "Google Calendar",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "división",
+      "gmail",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1142_Gmailtool_Stickynote_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "DeepSeek v3.1 uses 10 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales. Integra con Set.",
+    "services": [
+      "Set",
+      "Gmail",
+      "Stickynote",
+      "Notion",
+      "Wordpresstool"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Listado de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "deepseek",
+      "email",
+      "envío",
+      "gmail",
+      "listado"
+    ]
+  },
+  {
+    "original_filename": "1248_Gmailtool_Splitout_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Splitout",
+      "Gmail",
+      "Google Calendar",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "división",
+      "gmail",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1613_Gmailtool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Gmail MCP Server uses 27 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "eliminación",
+      "gmail",
+      "lectura",
+      "server"
+    ]
+  },
+  {
+    "original_filename": "1795_Gmailtool_Executeworkflow_Send_Triggered.json",
+    "title": "Gmail: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Gmail y integra 3 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Gmail",
+      "Executeworkflow",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "envío",
+      "executeworkflow",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1909_Gmailtool_Automation_Triggered.json",
+    "title": "Gmail: Activación automática (5 pasos)",
+    "description": "MCP_GMAIL uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "gmail",
+      "lectura"
+    ]
+  }
+]

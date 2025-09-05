@@ -1,0 +1,114 @@
+[
+  {
+    "original_filename": "0835_Microsoftoutlook_Schedule_Automation_Scheduled.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Switch",
+      "Schedule",
+      "MySQL",
+      "Microsoftoutlook"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "microsoftoutlook",
+      "mysql",
+      "nombre",
+      "programación",
+      "schedule",
+      "scheduled",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1870_Microsoftoutlook_GoogleCalendar_Automation_Triggered.json",
+    "title": "Microsoftoutlook: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Microsoftoutlook y integra 3 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Microsoftoutlook",
+      "Google Calendar",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Eliminación de datos",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "eliminación",
+      "envío",
+      "fusión",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1925_Microsoftoutlook_Microsoftoutlooktool_Automation_Triggered.json",
+    "title": "Microsoftoutlook: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Microsoftoutlook y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Microsoftoutlook",
+      "Stickynote",
+      "Microsoftoutlooktool"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "envío",
+      "filtrado",
+      "microsoftoutlook",
+      "microsoftoutlooktool",
+      "outlook"
+    ]
+  },
+  {
+    "original_filename": "1944_Microsoftoutlook_Telegram_Send_Triggered.json",
+    "title": "send file to kindle through telegram bot - Code",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Code",
+      "If",
+      "Stickynote",
+      "Microsoftoutlook",
+      "Telegram"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "email",
+      "envío",
+      "file",
+      "kindle",
+      "microsoftoutlook"
+    ]
+  }
+]

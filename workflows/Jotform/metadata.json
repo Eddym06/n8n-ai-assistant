@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "1010_Jotform_Automate_Triggered.json",
+    "title": "Jotform: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Jotform"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "jotform",
+      "nombre"
+    ]
+  }
+]

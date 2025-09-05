@@ -1,0 +1,24 @@
+[
+  {
+    "original_filename": "0403_Beeminder_Strava_Create_Triggered.json",
+    "title": "Add a datapoint to Beeminder when new activity is added to Strava",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Strava",
+      "Beeminder"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "activity",
+      "added",
+      "automated",
+      "automática",
+      "beeminder",
+      "datapoint",
+      "strava"
+    ]
+  }
+]

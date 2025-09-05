@@ -1,0 +1,32 @@
+[
+  {
+    "original_filename": "0788_Googletranslate_Noop_Create_Webhook.json",
+    "title": "Googletranslate: Fusión de datos (Workflow avanzado - 22 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Googletranslate y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Googletranslate",
+      "HTTP Request",
+      "Set",
+      "If",
+      "Google Drive"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Lectura de datos",
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "fusión",
+      "google",
+      "googledrive",
+      "googletranslate"
+    ]
+  }
+]

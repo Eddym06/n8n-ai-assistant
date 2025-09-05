@@ -1,0 +1,60 @@
+[
+  {
+    "original_filename": "0750_Clockify_Webhook_Sync_Webhook.json",
+    "title": "Webhook: Recepción de webhook",
+    "description": "Automatización que se activa cuando ocurren eventos en Webhook y integra 2 servicios.",
+    "services": [
+      "Webhook",
+      "Clockify"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "clockify",
+      "recepción",
+      "syncro",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1005_Clockify_Automate_Triggered.json",
+    "title": "Clockify: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Clockify"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "clockify",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1923_Clockify_Stickynote_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios.",
+    "services": [
+      "Stickynote",
+      "Clockify",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "clients",
+      "clockify",
+      "notion",
+      "stickynote"
+    ]
+  }
+]

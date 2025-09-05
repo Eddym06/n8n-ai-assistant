@@ -1,0 +1,36 @@
+[
+  {
+    "original_filename": "1124_Create.json",
+    "title": "Function: Creación automática de registros",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Function"
+    ],
+    "actions": [
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "function",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1125_Create.json",
+    "title": "Function: Creación automática de registros",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Function"
+    ],
+    "actions": [
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "function",
+      "nombre"
+    ]
+  }
+]

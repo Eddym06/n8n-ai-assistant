@@ -1,0 +1,51 @@
+[
+  {
+    "original_filename": "1242_Discordtool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 13 nodos.",
+    "services": [
+      "Stickynote",
+      "Discord",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "discord",
+      "executeworkflow",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1913_Discordtool_Stickynote_Automation_Webhook.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Discord y integra 3 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Discord",
+      "HTTP Request",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "discord",
+      "envío",
+      "http",
+      "httprequest",
+      "lectura",
+      "request"
+    ]
+  }
+]

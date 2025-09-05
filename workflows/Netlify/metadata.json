@@ -1,0 +1,61 @@
+[
+  {
+    "original_filename": "0103_Netlify_Airtable_Automate_Triggered.json",
+    "title": "Airtable: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Airtable",
+      "Netlify",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "netlify",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0104_Netlify_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "Netlify"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "netlify",
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0105_Netlify_Slack_Automate_Triggered.json",
+    "title": "Slack: Activación automática",
+    "description": "This n8n workflow uses 2 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Slack",
+      "Netlify"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "netlify",
+      "nombre",
+      "slack"
+    ]
+  }
+]

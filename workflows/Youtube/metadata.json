@@ -1,0 +1,28 @@
+[
+  {
+    "original_filename": "0197_Youtube_Telegram_Send_Scheduled.json",
+    "title": "Set: Lectura de datos (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "Set",
+      "Function",
+      "YouTube",
+      "Interval",
+      "Telegram"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "datos",
+      "envío",
+      "function",
+      "interval",
+      "lectura",
+      "nombre",
+      "telegram",
+      "youtube"
+    ]
+  }
+]

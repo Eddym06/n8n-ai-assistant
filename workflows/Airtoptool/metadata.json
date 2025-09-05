@@ -1,0 +1,27 @@
+[
+  {
+    "original_filename": "1681_Airtoptool_Slack_Automation_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 19 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, utiliza 19 nodos.",
+    "services": [
+      "Set",
+      "Airtop",
+      "Form",
+      "Slack",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "airtop",
+      "automated",
+      "automática",
+      "form",
+      "slack",
+      "stickynote"
+    ]
+  }
+]

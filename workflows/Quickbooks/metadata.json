@@ -1,0 +1,38 @@
+[
+  {
+    "original_filename": "0186_Quickbooks_Onfleet_Create_Triggered.json",
+    "title": "Create a QuickBooks invoice on a new Onfleet Task creation",
+    "description": "Automatización que se activa cuando ocurren eventos en Onfleet y integra 2 servicios.",
+    "services": [
+      "Onfleet",
+      "Quickbooks"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "create",
+      "creation",
+      "invoice",
+      "onfleet",
+      "quickbooks",
+      "task"
+    ]
+  },
+  {
+    "original_filename": "1208_Quickbooks_Automate.json",
+    "title": "Workflow Sin Nombre",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Quickbooks"
+    ],
+    "actions": [],
+    "keywords": [
+      "nombre",
+      "quickbooks"
+    ]
+  }
+]

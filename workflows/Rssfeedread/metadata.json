@@ -1,0 +1,174 @@
+[
+  {
+    "original_filename": "0188_Rssfeedread_Telegram_Create_Scheduled.json",
+    "title": "Rssfeedread: Lectura de datos (Workflow avanzado - 11 pasos)",
+    "description": "N8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Rssfeedread",
+      "Cron",
+      "If",
+      "Function",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "División de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "división",
+      "ejecución",
+      "function",
+      "lectura",
+      "nombre",
+      "programada",
+      "rssfeedread",
+      "scheduled"
+    ]
+  },
+  {
+    "original_filename": "1176_Rssfeedread_Slack_Automation_Scheduled.json",
+    "title": "Cron: Lectura de datos (Workflow avanzado - 6 pasos)",
+    "description": "Tarea programada que ejecuta lectura de datos periódicamente y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Cron",
+      "Rssfeedread",
+      "If",
+      "Function",
+      "Slack"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "ejecución",
+      "feed",
+      "function",
+      "items",
+      "lectura",
+      "post",
+      "programada",
+      "rssfeedread"
+    ]
+  },
+  {
+    "original_filename": "1180_Rssfeedread_Htmlextract_Create_Scheduled.json",
+    "title": "Htmlextract: Lectura de datos (5 pasos)",
+    "description": "Tarea programada que ejecuta lectura de datos periódicamente y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Htmlextract",
+      "Set",
+      "Rssfeedread",
+      "Cron",
+      "Function"
+    ],
+    "actions": [
+      "Lectura de datos",
+      "Ejecución programada",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "cron",
+      "datos",
+      "ejecución",
+      "filtrado",
+      "function",
+      "htmlextract",
+      "lectura",
+      "only",
+      "photo",
+      "programada"
+    ]
+  },
+  {
+    "original_filename": "1186_Rssfeedread_Telegram_Create_Triggered.json",
+    "title": "Code: Fusión de datos (Workflow avanzado - 30 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "Rssfeedread",
+      "Stickynote",
+      "Merge"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "Filtrado de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "crypto",
+      "datos",
+      "envío",
+      "filtrado",
+      "fusión",
+      "merge"
+    ]
+  },
+  {
+    "original_filename": "1536_Rssfeedread_Extractfromfile_Automation_Webhook.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Discord y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Discord",
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Rssfeedread"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "discord",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "request"
+    ]
+  },
+  {
+    "original_filename": "1659_Rssfeedread_Extractfromfile_Automation_Webhook.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Discord y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Discord",
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Rssfeedread"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "discord",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "request"
+    ]
+  }
+]

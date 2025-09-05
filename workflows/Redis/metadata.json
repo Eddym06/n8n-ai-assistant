@@ -1,0 +1,94 @@
+[
+  {
+    "original_filename": "0387_Redis_Code_Create_Scheduled.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Schedule",
+      "Microsoftteams",
+      "Code",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "0497_Redis_Schedule_Import_Scheduled.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "If",
+      "Redis",
+      "Manual",
+      "Filter"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Programación temporal",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "filter",
+      "filtrado",
+      "lectura",
+      "manual",
+      "nombre",
+      "programación"
+    ]
+  },
+  {
+    "original_filename": "1933_Redis_Code_Create_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "HTTP Request",
+      "Microsoftteams",
+      "Code",
+      "Redis"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Filtrado de datos",
+      "Programación temporal",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "alerts",
+      "automated",
+      "automática",
+      "code",
+      "datos",
+      "filtrado",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  }
+]

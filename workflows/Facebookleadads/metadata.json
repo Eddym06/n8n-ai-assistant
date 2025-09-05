@@ -1,0 +1,22 @@
+[
+  {
+    "original_filename": "0896_Facebookleadads_Stickynote_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Facebook"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "facebook",
+      "nombre",
+      "stickynote"
+    ]
+  }
+]

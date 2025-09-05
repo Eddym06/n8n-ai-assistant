@@ -1,0 +1,33 @@
+[
+  {
+    "original_filename": "1575_Telegramtool_Woocommercetool_Automate_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 31 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Manual",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "chatbot",
+      "creación",
+      "datos",
+      "descarga",
+      "división",
+      "drive"
+    ]
+  }
+]

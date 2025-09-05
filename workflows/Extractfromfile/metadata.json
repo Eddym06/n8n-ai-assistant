@@ -1,0 +1,615 @@
+[
+  {
+    "original_filename": "0601_Extractfromfile_Manual_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Manual",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "0646_Extractfromfile_Form_Export_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "This n8n workflow uses 23 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Form",
+      "Airtable",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "archivos",
+      "automated",
+      "automática",
+      "extractfromfile",
+      "form",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0694_Extractfromfile_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "drive",
+      "extractfromfile",
+      "google",
+      "googledrive",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "0741_Extractfromfile_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "AG AI Agent with Milvus and Cohere uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Extractfromfile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "archivos",
+      "automated",
+      "automática",
+      "cohere",
+      "datos",
+      "descarga",
+      "división",
+      "drive"
+    ]
+  },
+  {
+    "original_filename": "0828_Extractfromfile_Gmail_Send_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Business Automation Workflow uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Extractfromfile",
+      "Code",
+      "If",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Envío de email"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "code",
+      "descarga",
+      "email",
+      "envío",
+      "extractfromfile",
+      "gmail"
+    ]
+  },
+  {
+    "original_filename": "1246_Extractfromfile_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 33 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "If",
+      "Manual",
+      "Switch"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "División de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "fusión",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1254_Extractfromfile_Form_Automate_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Este workflow uses 18 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Este workflow eliminates manual tasks.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Form",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automation",
+      "automática",
+      "datos",
+      "drive",
+      "extractfromfile",
+      "focused",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1364_Extractfromfile_Manual_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Manual",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1365_Extractfromfile_Manual_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Manual",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "División de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "división",
+      "extractfromfile",
+      "http",
+      "httprequest",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1438_Extractfromfile_Manual_Process_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 11 pasos)",
+    "description": "This n8n workflow uses 11 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "drive",
+      "extractfromfile",
+      "google",
+      "googledrive",
+      "http",
+      "httprequest",
+      "manual"
+    ]
+  },
+  {
+    "original_filename": "1444_Extractfromfile_Converttofile_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Google Drive",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Envío de datos",
+      "Lectura de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "drive",
+      "envío",
+      "extract",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1472_Extractfromfile_Converttofile_Create_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "If",
+      "MySQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "extractfromfile",
+      "fusión",
+      "generate",
+      "listado",
+      "manual",
+      "mysql"
+    ]
+  },
+  {
+    "original_filename": "1488_Extractfromfile_Form_Automation_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "This n8n workflow uses 36 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "Extractfromfile",
+      "Set",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Listado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "evaluation",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1493_Extractfromfile_Form_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 23 pasos)",
+    "description": "This n8n workflow uses 23 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Form",
+      "Airtable",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "archivos",
+      "automated",
+      "automática",
+      "extractfromfile",
+      "form",
+      "http",
+      "httprequest",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1501_Extractfromfile_Form_Automate_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automated Resume Review System Using OpenAI + Google Sheets. Workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con Extractfromfile.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Form",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "drive",
+      "extractfromfile",
+      "form",
+      "fusión",
+      "google"
+    ]
+  },
+  {
+    "original_filename": "1590_Extractfromfile_Converttofile_Create_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 29 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Extractfromfile y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "If",
+      "MySQL"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Fusión de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "extractfromfile",
+      "fusión",
+      "generate",
+      "listado",
+      "manual",
+      "mysql"
+    ]
+  },
+  {
+    "original_filename": "1641_Extractfromfile_Manual_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "Manual",
+      "YouTube"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "chapter",
+      "datos",
+      "extractfromfile",
+      "generator",
+      "http",
+      "httprequest"
+    ]
+  },
+  {
+    "original_filename": "1764_Extractfromfile_HTTP_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Set",
+      "If",
+      "Gmail"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "attachments",
+      "automated",
+      "automática",
+      "drive",
+      "extractfromfile",
+      "gmail",
+      "google",
+      "http"
+    ]
+  },
+  {
+    "original_filename": "1847_Extractfromfile_Form_Automation_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 36 pasos)",
+    "description": "This n8n workflow uses 36 interconnected nodes to automate business processes. It executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Emailsend",
+      "Extractfromfile",
+      "Set",
+      "Form",
+      "If"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Listado de datos",
+      "Envío de email",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "evaluation",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1978_Extractfromfile_Converttofile_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Extractfromfile",
+      "Google Drive",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Subida de archivos",
+      "Envío de datos",
+      "Lectura de datos",
+      "Descarga de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "datos",
+      "descarga",
+      "drive",
+      "envío",
+      "extract",
+      "extractfromfile"
+    ]
+  },
+  {
+    "original_filename": "1981_Extractfromfile_Form_Automate_Triggered.json",
+    "title": "Extractfromfile: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Este workflow uses 18 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Este workflow eliminates manual tasks.",
+    "services": [
+      "Extractfromfile",
+      "Set",
+      "Form",
+      "Google Drive",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automation",
+      "automática",
+      "datos",
+      "drive",
+      "extractfromfile",
+      "focused",
+      "form"
+    ]
+  }
+]

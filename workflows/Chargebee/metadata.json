@@ -1,0 +1,22 @@
+[
+  {
+    "original_filename": "0041_Chargebee_Update_Triggered.json",
+    "title": "Receive updates for events in Chargebee",
+    "description": "Automatización que se activa cuando ocurren eventos en Chargebee.",
+    "services": [
+      "Chargebee"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chargebee",
+      "events",
+      "receive",
+      "updates"
+    ]
+  }
+]

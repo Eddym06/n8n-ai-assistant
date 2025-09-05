@@ -1,0 +1,1362 @@
+[
+  {
+    "original_filename": "0281_Stickynote_Notion_Create_Webhook.json",
+    "title": "Webhook: Recepción de webhook (3 pasos)",
+    "description": "This n8n workflow uses 3 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Stickynote",
+      "Notion"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "creación",
+      "datos",
+      "nombre",
+      "notion",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0325_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "This n8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0332_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0368_Stickynote_Webhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "nombre",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0378_Stickynote_Notion_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Webhook",
+      "Stickynote",
+      "Notion"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "nombre",
+      "notion",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0407_Stickynote_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0573_Stickynote_Notion_Send_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Notion",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "lectura",
+      "nombre",
+      "notion",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0574_Stickynote_Notion_Create_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "This n8n workflow uses 24 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "nombre",
+      "notion",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "0684_Stickynote_Respondtowebhook_Send_Webhook.json",
+    "title": "Set: Recepción de webhook (Workflow avanzado - 10 pasos)",
+    "description": "Este workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Set.",
+    "services": [
+      "Set",
+      "Servicenow",
+      "Switch",
+      "Webhook",
+      "Stickynote"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Envío de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "datos",
+      "envío",
+      "nombre",
+      "recepción",
+      "servicenow",
+      "stickynote",
+      "switch",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "0689_Stickynote_Gmail_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Business Automation Workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Wait"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "gmail",
+      "lectura",
+      "nombre",
+      "stickynote",
+      "wait"
+    ]
+  },
+  {
+    "original_filename": "0727_Stickynote_Create_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0755_Stickynote_Send_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 6 pasos)",
+    "description": "This n8n workflow uses 6 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0796_Stickynote_Gmail_Create_Triggered.json",
+    "title": "Emailsend: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Emailsend y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Emailsend",
+      "Sendinblue",
+      "If",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Envío de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "email",
+      "emailsend",
+      "envío",
+      "gmail",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0873_Stickynote_Postgrestool_Create_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Switch y integra 4 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "PostgreSQL",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "executeworkflow",
+      "lectura",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0874_Stickynote_Executeworkflow_Create_Triggered.json",
+    "title": "Switch: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Switch y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Switch",
+      "Stickynote",
+      "Code",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "creación",
+      "datos",
+      "executeworkflow",
+      "listado",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "0893_Stickynote_Emailreadimap_Create.json",
+    "title": "Emailreadimap: Búsqueda de datos (Workflow avanzado - 13 pasos)",
+    "description": "This n8n workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "Emailreadimap",
+      "Set",
+      "If",
+      "Stickynote",
+      "HubSpot"
+    ],
+    "actions": [
+      "Búsqueda de datos",
+      "Envío de email",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "creación",
+      "datos",
+      "email",
+      "emailreadimap",
+      "envío",
+      "hubspot",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "0978_Stickynote_GoogleDrive_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automated Image Metadata Tagging (Community Node) uses 7 interconnected nodes to automate business processes. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Merge"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Fusión de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automated",
+      "automática",
+      "community",
+      "datos",
+      "descarga",
+      "drive",
+      "fusión"
+    ]
+  },
+  {
+    "original_filename": "1104_Stickynote_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Build a Web Search Chatbot with GPT-4o and MCP Brave Search. Use 15 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con Stickynote.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "brave",
+      "build",
+      "búsqueda",
+      "chatbot",
+      "datos",
+      "lectura",
+      "search"
+    ]
+  },
+  {
+    "original_filename": "1141_Stickynote_GoogleDrive_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos",
+      "Descarga de archivos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automated",
+      "automática",
+      "company",
+      "creación",
+      "datos",
+      "descarga",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "1253_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "This n8n workflow uses 10 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1268_Stickynote_Hackernews_Automate_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Set",
+      "Code",
+      "Stickynote",
+      "Executeworkflow",
+      "Hackernews"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "executeworkflow",
+      "hackernews",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1269_Stickynote_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "This n8n workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1353_Stickynote_Gmail_Send_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Business Automation Workflow uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Wait"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Creación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "gmail",
+      "lectura",
+      "nombre",
+      "stickynote",
+      "wait"
+    ]
+  },
+  {
+    "original_filename": "1379_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "llms",
+      "local",
+      "ollama",
+      "stickynote",
+      "using"
+    ]
+  },
+  {
+    "original_filename": "1507_Stickynote_Executeworkflow_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 15 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "executeworkflow",
+      "listado",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1509_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Integrating AI with Open-Meteo API for Enhanced Weather Forecasting. Uses 12 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "enhanced",
+      "forecasting",
+      "integrating",
+      "lectura",
+      "meteo",
+      "open"
+    ]
+  },
+  {
+    "original_filename": "1534_Stickynote_Googlecalendartool_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 20 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 4 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Google Calendar",
+      "Gmail",
+      "Google Sheets"
+    ],
+    "actions": [
+      "Activación automática",
+      "Envío de email",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "assistant",
+      "automated",
+      "automática",
+      "calendar",
+      "creación",
+      "datos",
+      "email",
+      "envío"
+    ]
+  },
+  {
+    "original_filename": "1557_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y utiliza 16 nodos.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "hosted",
+      "local",
+      "ollama",
+      "private",
+      "router",
+      "self",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1567_Stickynote_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Integrating AI with Open-Meteo API for Enhanced Weather Forecasting. Uses 12 interconnected nodes to automate business processes. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "enhanced",
+      "forecasting",
+      "integrating",
+      "lectura",
+      "meteo",
+      "open"
+    ]
+  },
+  {
+    "original_filename": "1568_Stickynote_Notion_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "This n8n workflow uses 24 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Code",
+      "Set",
+      "Switch",
+      "Stickynote",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "nombre",
+      "notion",
+      "stickynote",
+      "switch"
+    ]
+  },
+  {
+    "original_filename": "1569_Stickynote_Notion_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Notion",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "lectura",
+      "nombre",
+      "notion",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1624_Stickynote_Executeworkflow_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "executeworkflow",
+      "listado",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1626_Stickynote_GoogleDrive_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Google Drive"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Creación de datos",
+      "Descarga de archivos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "archivos",
+      "automated",
+      "automática",
+      "company",
+      "creación",
+      "datos",
+      "descarga",
+      "división"
+    ]
+  },
+  {
+    "original_filename": "1682_Stickynote_Notion_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 8 nodos.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "copy",
+      "drive",
+      "google",
+      "googledrive",
+      "notion",
+      "stickynote",
+      "transkription"
+    ]
+  },
+  {
+    "original_filename": "1691_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, utiliza 14 nodos.",
+    "services": [
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "ollama",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1698_Stickynote_Notion_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 8 nodos.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "copy",
+      "drive",
+      "google",
+      "googledrive",
+      "notion",
+      "stickynote",
+      "transkription"
+    ]
+  },
+  {
+    "original_filename": "1703_Stickynote_Webhook_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Travel Planning Agent with Couchbase Vector Search, Gemini 2.0 Flash and OpenAI. Uses 13 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Recepción de webhook",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "búsqueda",
+      "couchbase",
+      "datos",
+      "división",
+      "flash",
+      "gemini"
+    ]
+  },
+  {
+    "original_filename": "1719_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "model",
+      "openrouter",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1734_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "This n8n workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "model",
+      "openrouter",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1779_Stickynote_Executeworkflow_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "OpenSea NFT Agent Tool uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, and perform actions without human intervention. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "datos",
+      "executeworkflow",
+      "lectura",
+      "opensea",
+      "stickynote",
+      "tool"
+    ]
+  },
+  {
+    "original_filename": "1804_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (5 pasos)",
+    "description": "This n8n workflow uses 5 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "llms",
+      "local",
+      "ollama",
+      "stickynote",
+      "using"
+    ]
+  },
+  {
+    "original_filename": "1816_Stickynote_Executeworkflow_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 17 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "datos",
+      "executeworkflow",
+      "lectura",
+      "listado",
+      "marketplace",
+      "opensea"
+    ]
+  },
+  {
+    "original_filename": "1846_Stickynote_Executeworkflow_Automate_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "This n8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Stickynote",
+      "Code",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "code",
+      "executeworkflow",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1899_Stickynote_Airtabletool_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Búsqueda de datos",
+      "Creación de datos",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "build",
+      "búsqueda",
+      "creación",
+      "datos",
+      "eliminación",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "1902_Stickynote_Executeworkflow_Update_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, utiliza 12 nodos.",
+    "services": [
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "executeworkflow",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1907_Stickynote_Converttofile_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 28 pasos)",
+    "description": "Business Automation Workflow uses 28 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Converttofile",
+      "Merge",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Transformación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "business",
+      "canvas",
+      "code",
+      "converttofile",
+      "datos",
+      "fusión",
+      "generator"
+    ]
+  },
+  {
+    "original_filename": "1926_Stickynote_Splitinbatches_Automation_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 18 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Code",
+      "Set",
+      "If",
+      "Splitinbatches",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "code",
+      "conversation",
+      "datos",
+      "división",
+      "multi",
+      "splitinbatches"
+    ]
+  },
+  {
+    "original_filename": "1927_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y realiza 2 tipos de acciones, utiliza 7 nodos.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "búsqueda",
+      "datos",
+      "searchapi",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1947_Stickynote_Supabasetool_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 27 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Supabasetool"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Lectura de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "creación",
+      "datos",
+      "eliminación",
+      "lectura",
+      "stickynote",
+      "supabasetool"
+    ]
+  },
+  {
+    "original_filename": "1986_Stickynote_Jira_Create_Webhook.json",
+    "title": "Create_Unique_Jira_tickets_from_Splunk_alerts - Set",
+    "description": "Automatización que se activa cuando ocurren eventos en Set y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Set",
+      "If",
+      "Webhook",
+      "Stickynote",
+      "Jira"
+    ],
+    "actions": [
+      "Recepción de webhook",
+      "Creación de datos",
+      "Búsqueda de datos"
+    ],
+    "keywords": [
+      "búsqueda",
+      "creación",
+      "datos",
+      "jira",
+      "recepción",
+      "stickynote",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "1987_Stickynote_Airtable_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios, utiliza 8 nodos.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Airtable"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "airtable",
+      "automated",
+      "automática",
+      "drive",
+      "files",
+      "google",
+      "googledrive",
+      "stickynote",
+      "sync"
+    ]
+  },
+  {
+    "original_filename": "2009_Stickynote_Automate_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "AI Agent Chatbot with Jina.ai Webpage Scraper. Workflow uses 9 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Integra con Stickynote.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "chatbot",
+      "jina",
+      "scraper",
+      "stickynote",
+      "webpage"
+    ]
+  },
+  {
+    "original_filename": "2015_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y utiliza 7 nodos.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "chat",
+      "discord",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "2023_Stickynote_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 9 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y utiliza 9 nodos.",
+    "services": [
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "automated",
+      "automática",
+      "build",
+      "custom",
+      "gemini",
+      "hosted",
+      "langchain",
+      "self"
+    ]
+  },
+  {
+    "original_filename": "2027_Stickynote_Executeworkflow_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "Executeworkflow"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "analytics",
+      "automated",
+      "automática",
+      "datos",
+      "executeworkflow",
+      "lectura",
+      "opensea",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "2039_Stickynote_Webhook_Automation_Webhook.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Travel AssistantAgent uses 14 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow. Integra con Stickynote.",
+    "services": [
+      "Stickynote",
+      "Webhook"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "assistantagent",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "recepción",
+      "stickynote",
+      "travel",
+      "webhook"
+    ]
+  },
+  {
+    "original_filename": "2048_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 14 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, utiliza 14 nodos.",
+    "services": [
+      "Stickynote",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "chat",
+      "ollama",
+      "stickynote"
+    ]
+  }
+]

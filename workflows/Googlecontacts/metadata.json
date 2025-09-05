@@ -1,0 +1,31 @@
+[
+  {
+    "original_filename": "1239_Googlecontacts_Schedule_Send_Scheduled.json",
+    "title": "Send Daily Birthday Reminders from Google Contacts to Slack - Schedule",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Googlecontacts",
+      "If",
+      "Filter",
+      "Slack"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "birthday",
+      "contacts",
+      "daily",
+      "datos",
+      "filter",
+      "filtrado",
+      "google"
+    ]
+  }
+]

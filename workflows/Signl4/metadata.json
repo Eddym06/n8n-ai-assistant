@@ -1,0 +1,31 @@
+[
+  {
+    "original_filename": "0055_Signl4_Interval_Create_Scheduled.json",
+    "title": "Function: Activación automática (Workflow avanzado - 13 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Function y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Function",
+      "Webhook",
+      "Signl4",
+      "Notion",
+      "Interval"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "function",
+      "interval",
+      "nombre",
+      "notion",
+      "recepción"
+    ]
+  }
+]

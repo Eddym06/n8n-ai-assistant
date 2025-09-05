@@ -1,0 +1,33 @@
+[
+  {
+    "original_filename": "0910_Bitly_Datetime_Update_Webhook.json",
+    "title": "Calendly: Activación automática (Workflow avanzado - 113 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Calendly y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Calendly",
+      "Schedule",
+      "Emailsendtool",
+      "Aitransform",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Recepción de webhook",
+      "Fusión de datos",
+      "División de datos",
+      "Filtrado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "aitransform",
+      "automated",
+      "automática",
+      "calendly",
+      "datos",
+      "división",
+      "emailsendtool",
+      "filtrado",
+      "fusión"
+    ]
+  }
+]

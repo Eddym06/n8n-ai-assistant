@@ -1,0 +1,33 @@
+[
+  {
+    "original_filename": "1184_Debughelper_HTTP_Create_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 32 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "Google Calendar",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "build",
+      "búsqueda",
+      "calendar",
+      "creación",
+      "datos",
+      "eliminación"
+    ]
+  }
+]

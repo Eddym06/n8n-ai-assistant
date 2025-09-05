@@ -1,0 +1,52 @@
+[
+  {
+    "original_filename": "1521_Whatsapp_Stickynote_Automation_Webhook.json",
+    "title": "If: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "AI Customer-Support Assistant. WhatsApp Ready. Works for Any Business. N8n workflow uses 12 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems.",
+    "services": [
+      "If",
+      "Stickynote",
+      "Whatsapp",
+      "Code"
+    ],
+    "actions": [
+      "Activación automática",
+      "Listado de datos",
+      "Lectura de datos",
+      "Envío de datos"
+    ],
+    "keywords": [
+      "activación",
+      "assistant",
+      "automated",
+      "automática",
+      "business",
+      "code",
+      "customer",
+      "datos",
+      "envío",
+      "lectura"
+    ]
+  },
+  {
+    "original_filename": "2030_Whatsapp_Respondtowebhook_Automate_Webhook.json",
+    "title": "If: Recepción de webhook (Workflow avanzado - 8 pasos)",
+    "description": "WhatsApp starter workflow uses 8 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems, process data according to defined rules, and perform actions without human intervention.",
+    "services": [
+      "If",
+      "Webhook",
+      "Stickynote",
+      "Whatsapp"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "recepción",
+      "starter",
+      "stickynote",
+      "webhook",
+      "whatsapp"
+    ]
+  }
+]

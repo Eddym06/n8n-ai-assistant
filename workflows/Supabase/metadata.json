@@ -1,0 +1,84 @@
+[
+  {
+    "original_filename": "0564_Supabase_Stickynote_Create_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "This n8n workflow uses 21 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Supabase",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "google",
+      "googledrive",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1677_Supabase_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 21 pasos)",
+    "description": "This n8n workflow uses 21 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks.",
+    "services": [
+      "Stickynote",
+      "Google Drive",
+      "Supabase",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "drive",
+      "google",
+      "googledrive",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1680_Supabase_Stickynote_Automation_Triggered.json",
+    "title": "If: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en If y integra 4 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "If",
+      "Stickynote",
+      "Supabase",
+      "Set"
+    ],
+    "actions": [
+      "Activación automática",
+      "Lectura de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "lectura",
+      "split",
+      "stickynote",
+      "supabase",
+      "testing"
+    ]
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "original_filename": "0525_Bannerbear_Discord_Create_Webhook.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Discord y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Discord",
+      "HTTP Request",
+      "Set",
+      "Form",
+      "Bannerbear"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Envío de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "bannerbear",
+      "datos",
+      "descarga",
+      "discord",
+      "envío",
+      "form"
+    ]
+  },
+  {
+    "original_filename": "1665_Bannerbear_Discord_Automation_Webhook.json",
+    "title": "Discord: Activación automática (Workflow avanzado - 16 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Discord y integra 5 servicios, realiza 4 tipos de acciones.",
+    "services": [
+      "Discord",
+      "HTTP Request",
+      "Set",
+      "Form",
+      "Bannerbear"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Envío de datos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "bannerbear",
+      "datos",
+      "descarga",
+      "discord",
+      "envío",
+      "form"
+    ]
+  }
+]

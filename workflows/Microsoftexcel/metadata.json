@@ -1,0 +1,33 @@
+[
+  {
+    "original_filename": "0258_Microsoftexcel_Manual_Create_Triggered.json",
+    "title": "Renamekeys: Activación automática (Workflow avanzado - 12 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Renamekeys y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Renamekeys",
+      "Set",
+      "If",
+      "Manual",
+      "Itemlists"
+    ],
+    "actions": [
+      "Activación automática",
+      "Fusión de datos",
+      "Creación de datos",
+      "Búsqueda de datos",
+      "Listado de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "búsqueda",
+      "creación",
+      "datos",
+      "fusión",
+      "itemlists",
+      "listado",
+      "manual"
+    ]
+  }
+]

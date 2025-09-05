@@ -1,0 +1,51 @@
+[
+  {
+    "original_filename": "1035_Jira_Automate_Triggered.json",
+    "title": "Jira: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Jira"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "jira",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1769_Jira_Stickynote_Sync_Triggered.json",
+    "title": "Code: Activación automática (Workflow avanzado - 10 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Code y integra 5 servicios, realiza 5 tipos de acciones.",
+    "services": [
+      "Code",
+      "If",
+      "Switch",
+      "Stickynote",
+      "Notion"
+    ],
+    "actions": [
+      "Activación automática",
+      "Filtrado de datos",
+      "Eliminación de datos",
+      "Creación de datos",
+      "Actualización de datos"
+    ],
+    "keywords": [
+      "activación",
+      "actualización",
+      "automated",
+      "automática",
+      "code",
+      "comments",
+      "creación",
+      "database",
+      "datos",
+      "eliminación"
+    ]
+  }
+]

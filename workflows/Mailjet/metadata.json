@@ -1,0 +1,48 @@
+[
+  {
+    "original_filename": "0994_Mailjet_Automate_Triggered.json",
+    "title": "Mailjet: Activación automática",
+    "description": "Business Automation Workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks. Integra con Mailjet.",
+    "services": [
+      "Mailjet"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "mailjet",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "1956_Mailjet_Gmail_Create_Triggered.json",
+    "title": "Set: Activación automática (Workflow avanzado - 7 pasos)",
+    "description": "Forward Netflix emails to multiple email addresses with GMail and Mailjet. This n8n workflow uses 7 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations.",
+    "services": [
+      "Set",
+      "Splitout",
+      "Mailjet",
+      "Gmail",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "addresses",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "email",
+      "emails",
+      "forward",
+      "gmail"
+    ]
+  }
+]

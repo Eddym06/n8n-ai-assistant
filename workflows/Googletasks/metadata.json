@@ -1,0 +1,56 @@
+[
+  {
+    "original_filename": "0881_Googletasks_HTTP_Update_Webhook.json",
+    "title": "HTTP Request: Fusión de datos (Workflow avanzado - 17 pasos)",
+    "description": "This n8n workflow uses 17 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "HTTP Request",
+      "Set",
+      "If",
+      "Manual",
+      "Splitinbatches"
+    ],
+    "actions": [
+      "Fusión de datos",
+      "Activación automática",
+      "División de datos"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "datos",
+      "división",
+      "fusión",
+      "http",
+      "httprequest",
+      "manual",
+      "nombre"
+    ]
+  },
+  {
+    "original_filename": "2031_Googletasks_Gmail_Create_Triggered.json",
+    "title": "📦 New Email ➔ Create Google Task - Stickynote",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 3 servicios.",
+    "services": [
+      "Stickynote",
+      "Gmail",
+      "Googletasks"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "create",
+      "email",
+      "gmail",
+      "google",
+      "googletasks",
+      "stickynote",
+      "task"
+    ]
+  }
+]

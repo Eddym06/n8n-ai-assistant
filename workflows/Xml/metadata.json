@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "0081_Xml_Respondtowebhook_Automate_Webhook.json",
+    "title": "Webhook: Recepción de webhook (4 pasos)",
+    "description": "This n8n workflow uses 4 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Streamlines business operations by automating repetitive tasks and ensuring consistent data flow.",
+    "services": [
+      "Webhook",
+      "Set",
+      "Xml"
+    ],
+    "actions": [
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "nombre",
+      "recepción",
+      "webhook"
+    ]
+  }
+]

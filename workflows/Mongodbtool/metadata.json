@@ -1,0 +1,48 @@
+[
+  {
+    "original_filename": "0511_Mongodbtool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "MongoDB"
+    ],
+    "actions": [
+      "Activación automática",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "mongodb",
+      "stickynote"
+    ]
+  },
+  {
+    "original_filename": "1555_Mongodbtool_Stickynote_Automation_Triggered.json",
+    "title": "Stickynote: Activación automática (Workflow avanzado - 8 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Stickynote y integra 2 servicios, realiza 2 tipos de acciones.",
+    "services": [
+      "Stickynote",
+      "MongoDB"
+    ],
+    "actions": [
+      "Activación automática",
+      "Agregación de datos"
+    ],
+    "keywords": [
+      "activación",
+      "agent",
+      "agregación",
+      "automated",
+      "automática",
+      "datos",
+      "mongodb",
+      "stickynote"
+    ]
+  }
+]

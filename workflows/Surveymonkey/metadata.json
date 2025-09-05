@@ -1,0 +1,20 @@
+[
+  {
+    "original_filename": "1020_Surveymonkey_Automate_Triggered.json",
+    "title": "Surveymonkey: Activación automática",
+    "description": "This n8n workflow uses 1 interconnected nodes to automate business processes. When triggered, it executes a sequence of operations that connect different business systems. Este workflow eliminates manual tasks by automatically handling automatización de procesos empresariales.",
+    "services": [
+      "Surveymonkey"
+    ],
+    "actions": [
+      "Activación automática"
+    ],
+    "keywords": [
+      "activación",
+      "automated",
+      "automática",
+      "nombre",
+      "surveymonkey"
+    ]
+  }
+]

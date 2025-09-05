@@ -1,0 +1,31 @@
+[
+  {
+    "original_filename": "0276_Microsoftonedrive_Readbinaryfile_Automation_Webhook.json",
+    "title": "HTTP Request: Activación automática (Workflow avanzado - 24 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en HTTP Request y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "HTTP Request",
+      "Writebinaryfile",
+      "OneDrive",
+      "Set",
+      "Spreadsheetfile"
+    ],
+    "actions": [
+      "Activación automática",
+      "Descarga de archivos",
+      "Subida de archivos"
+    ],
+    "keywords": [
+      "activación",
+      "archivos",
+      "automated",
+      "automática",
+      "descarga",
+      "http",
+      "httprequest",
+      "nombre",
+      "onedrive",
+      "request"
+    ]
+  }
+]

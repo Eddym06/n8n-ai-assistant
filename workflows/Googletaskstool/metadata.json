@@ -1,0 +1,31 @@
+[
+  {
+    "original_filename": "1103_Googletaskstool_Telegram_Automation_Webhook.json",
+    "title": "Schedule: Activación automática (Workflow avanzado - 38 pasos)",
+    "description": "Automatización que se activa cuando ocurren eventos en Schedule y integra 5 servicios, realiza 3 tipos de acciones.",
+    "services": [
+      "Schedule",
+      "Set",
+      "Googletaskstool",
+      "Switch",
+      "Stickynote"
+    ],
+    "actions": [
+      "Activación automática",
+      "Programación temporal",
+      "Recepción de webhook"
+    ],
+    "keywords": [
+      "activación",
+      "agente",
+      "automated",
+      "automática",
+      "googletaskstool",
+      "programación",
+      "recepción",
+      "schedule",
+      "scheduled",
+      "stickynote"
+    ]
+  }
+]
