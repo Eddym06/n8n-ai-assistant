@@ -1,0 +1,131 @@
+{
+  "nodes": [
+    {
+      "id": "telegramTrigger1",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        -140,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "extractData1",
+      "name": "Extraer Datos del Mensaje",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "functionCode": "return items;",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "googleCalendar1",
+      "name": "Crear Evento en Google Calendar",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        140,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendEmail1",
+      "name": "Enviar Correo a Personas Relacionadas",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "telegramSendMessage1",
+      "name": "Confirmar al Cliente (Telegram)",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "resource": "message",
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.message }}",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "telegramApi Credentials"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extraer Datos del Mensaje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extraer Datos del Mensaje": {
+      "main": [
+        [
+          {
+            "node": "Crear Evento en Google Calendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Crear Evento en Google Calendar": {
+      "main": [
+        [
+          {
+            "node": "Enviar Correo a Personas Relacionadas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar Correo a Personas Relacionadas": {
+      "main": [
+        [
+          {
+            "node": "Confirmar al Cliente (Telegram)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

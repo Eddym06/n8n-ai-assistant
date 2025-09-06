@@ -1,0 +1,246 @@
+{
+  "nodes": [
+    {
+      "id": "telegramWebhook",
+      "name": "Telegram Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -280,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "parseTelegramMessage",
+      "name": "Parse Telegram Message",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -280,
+        500
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "commandSwitch",
+      "name": "Command Switch",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        0,
+        500
+      ],
+      "parameters": {
+        "rules": [
+          {
+            "conditions": {
+              "string": [
+                {
+                  "value1": "{{$json[\"field\"]}}",
+                  "operation": "equal",
+                  "value2": "value"
+                }
+              ]
+            },
+            "output": 0
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "extractEventDetails",
+      "name": "Extract Event Details",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        280,
+        500
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "ifExtractionError",
+      "name": "If Extraction Error",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -140,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "formatDateTime",
+      "name": "Format Date Time",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -280,
+        640
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "ifFormatError",
+      "name": "If Format Error",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        140,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "tryCreateCalendar",
+      "name": "Try Create Calendar",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "createGoogleCalendarEvent",
+      "name": "Create Google Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        0,
+        640
+      ],
+      "parameters": {
+        "operation": "create"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendEmailConfirmation",
+      "name": "Send Email Confirmation",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -280,
+        840
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "telegramSendConfirmation",
+      "name": "Telegram Send Confirmation",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        0,
+        840
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "catchCalendarError",
+      "name": "Catch Calendar Error",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        280,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "telegramSendError",
+      "name": "Telegram Send Error",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        280,
+        840
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Webhook Trigger": {
+      "main": []
+    },
+    "Parse Telegram Message": {
+      "main": []
+    },
+    "Command Switch": {
+      "main": []
+    },
+    "Extract Event Details": {
+      "main": []
+    },
+    "If Extraction Error": {
+      "main": []
+    },
+    "Format Date Time": {
+      "main": []
+    },
+    "If Format Error": {
+      "main": []
+    },
+    "Try Create Calendar": {
+      "main": []
+    },
+    "Create Google Calendar Event": {
+      "main": []
+    },
+    "Send Email Confirmation": {
+      "main": []
+    },
+    "Telegram Send Confirmation": {
+      "main": []
+    },
+    "Catch Calendar Error": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

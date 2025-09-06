@@ -1,0 +1,98 @@
+{
+  "nodes": [
+    {
+      "id": "telegramTrigger",
+      "name": "Telegram Chatbot",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "parseMessage",
+      "name": "Parse Chat Message",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -280,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "googleCalendar",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "operation": "create"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "emailSend",
+      "name": "Notify Related People",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "mergeResults",
+      "name": "Merge Results",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        280,
+        300
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "telegramConfirmation",
+      "name": "Send Confirmation",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot": {
+      "main": []
+    },
+    "Parse Chat Message": {
+      "main": []
+    },
+    "Create Calendar Event": {
+      "main": []
+    },
+    "Notify Related People": {
+      "main": []
+    },
+    "Merge Results": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

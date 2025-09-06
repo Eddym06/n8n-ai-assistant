@@ -1,0 +1,123 @@
+{
+  "nodes": [
+    {
+      "id": "startNode",
+      "name": "Start Workflow",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -280,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "dataSource",
+      "name": "Generate Test Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -280,
+        500
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "batchProcessor",
+      "name": "Process in Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        0,
+        500
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "httpRequest",
+      "name": "Call External API",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        280,
+        500
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "errorCheck",
+      "name": "Check API Response",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "successHandler",
+      "name": "API Call Successful",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "errorHandler",
+      "name": "API Call Failed",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        280,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Start Workflow": {
+      "main": []
+    },
+    "Generate Test Data": {
+      "main": []
+    },
+    "Process in Batches": {
+      "main": []
+    },
+    "Call External API": {
+      "main": []
+    },
+    "Check API Response": {
+      "main": []
+    },
+    "API Call Successful": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

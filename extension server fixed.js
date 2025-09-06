@@ -11,6 +11,9 @@ import util from 'util';
 // 🎯 IMPORTACIÓN DE MÓDULOS INDEPENDIENTES
 import { WorkflowValidator } from './workflow-validator.js';
 
+// 🔧 IMPORTACIÓN DEL SISTEMA DE VALIDACIÓN INDEPENDIENTE
+import { N8nValidationSystem, IntegratedValidationOrchestrator } from './validation-system.js';
+
 // 🔧 INTEGRACIÓN DEL AUTOCORRECTOR INTELIGENTE
 import AutocorrectorFlujos from './Herramienta-Autocorrector.js';
 
@@ -21,9 +24,9 @@ import IntelligentNameCorrector from './intelligent-name-corrector.js';
 import IntelligentPositioningAgent from './intelligent-positioning-agent.js';
 
 // 🎯 INTEGRACIÓN DE AGENTES INDEPENDIENTES
-import { PromptEnhancementAgent } from './prompt-enhancement-agent.js';
-import { N8nWorkflowSearchAgent } from './workflow-search-agent-new.js';
-import { SemanticMemoryAgent } from './semantic-memory-agent.js';
+import PromptEnhancementAgent from './prompt-enhancement-agent.js';
+import WorkflowSearchAgentNew from './workflow-search-agent-new.js';
+import SemanticMemoryAgent from './semantic-memory-agent.js';
 
 // === JSON REPAIR AGENT INTEGRADO ===
 // Sistema integrado de reparación de JSON con IA avanzada - VERSIÓN INTEGRADA V4.0
@@ -324,42 +327,6 @@ class IntegratedSemanticMemoryAgent {
   }
 }
 
-class IntegratedValidationOrchestrator {
-  constructor() {
-    console.log('🔍 ValidationOrchestrator inicializado');
-  }
-
-  async validateRepair(repairedJSON, originalJSON, analysis) {
-    console.log('🔬 ValidationOrchestrator iniciando validación final...');
-    
-    try {
-      // Limpieza básica antes de validación
-      const cleanedJSON = repairedJSON.replace(/```json|```/g, '').trim();
-      console.log(`🧹 JSON limpiado: ${cleanedJSON.length} caracteres`);
-      
-      // Intentar parsear el JSON
-      const parsed = JSON.parse(cleanedJSON);
-      console.log('📊 Validación completada: VÁLIDO (Score: 1)');
-      console.log('🐛 Problemas encontrados: 0');
-      
-      return { 
-        isValid: true, 
-        score: 1, 
-        issues: [],
-        cleanedJSON: cleanedJSON
-      };
-    } catch (error) {
-      console.log('❌ Error de parseo en validación:', error.message);
-      return { 
-        isValid: false, 
-        score: 0, 
-        issues: [error.message],
-        error: `JSON inválido: ${error.message}`
-      };
-    }
-  }
-}
-
 // === FIN DE LA CLASE ANTERIOR ===
 
 // Función principal modificada para recibir prompt desde terminal
@@ -434,10 +401,14 @@ async function main() {
 // CLASE PRINCIPAL DEL ASISTENTE
 class N8nAIAssistant {
   constructor() {
-    this.searchAgent = new N8nWorkflowSearchAgent();
+    this.searchAgent = new WorkflowSearchAgentNew();
     this.promptAgent = new PromptEnhancementAgent();
     this.semanticMemory = new SemanticMemoryAgent();
-    this.workflowValidator = new WorkflowValidator(); // 🎯 Sistema de validación modular
+
+    // 🚀 INTEGRACIÓN DEL SISTEMA DE VALIDACIÓN INDEPENDIENTE
+    this.validationSystem = new N8nValidationSystem();
+    this.workflowValidator = new WorkflowValidator(); // Mantenido por compatibilidad
+
     this.isComplexPrompt = false;
     this.requestCache = new Map(); // Cache para evitar llamadas duplicadas
     this.timeouts = new Set(); // Para manejo de timeouts
@@ -446,6 +417,17 @@ class N8nAIAssistant {
     this.jsonRepairAgent = null; // Inicializado bajo demanda para mejor performance - VERSIÓN INTEGRADA V4.0
 
     this.currentWorkflow = '';
+
+    // 🆕 EL SISTEMA DE VALIDACIÓN AHORA ESTÁ EN EL MÓDULO INDEPENDIENTE
+    // this.validNodeTypes = { ... } // Movido a validation-system.js
+    // this.nodeValidations = this.getNodeValidations(); // Movido a validation-system.js
+    // this.credentialValidations = this.getCredentialValidations(); // Movido a validation-system.js
+    // this.connectionValidations = this.getConnectionValidations(); // Movido a validation-system.js
+  }
+
+  // 🆕 MÉTODO PARA GENERAR IDs ÚNICOS DE NODOS
+  generateNodeId() {
+    return `node_${Date.now()}_${Math.random().toString(36).substring(2, 9)}`;
   }
 
   // SISTEMA DE CORRECCIÓN AUTOMÁTICA DE NODOS
@@ -1152,8 +1134,12 @@ return [{ json: { memory, sessionId, input } }];`
 
   // APLICAR CORRECCIONES AUTOMÁTICAS A NODOS INCORRECTOS
   autoCorrectInvalidNodes(workflow) {
+    console.log('🔧 DEBUG: autoCorrectInvalidNodes called');
+    console.log('🔧 DEBUG: this.validationSystem.validNodeTypes exists:', !!this.validationSystem?.validNodeTypes);
+    console.log('🔧 DEBUG: this.validationSystem.validNodeTypes value:', this.validationSystem?.validNodeTypes);
+    
     const corrections = this.getNodeCorrections();
-    const allValidTypes = Object.values(this.validNodeTypes).flat();
+    const allValidTypes = Object.values(this.validationSystem.validNodeTypes).flat();
     let correctedCount = 0;
 
     // 🆕 PRIMERA FASE: CORREGIR IDS DUPLICADOS Y POSICIONES
@@ -5124,13 +5110,13 @@ return items.map(item => ({
         }
 
         // Estadísticas por tipo
-        if (this.validNodeTypes.triggers.includes(node.type)) {
+        if (this.validationSystem.validNodeTypes.triggers.includes(node.type)) {
           results.stats.triggers++;
         } else {
           results.stats.actions++;
         }
 
-        if (this.validNodeTypes.ai.includes(node.type)) {
+        if (this.validationSystem.validNodeTypes.ai.includes(node.type)) {
           results.stats.aiNodes++;
         }
       }
@@ -5183,7 +5169,7 @@ return items.map(item => ({
     }
 
     // Validación específica por tipo
-    const validation = this.nodeValidations[node.type];
+    const validation = this.validationSystem.nodeValidations[node.type];
     if (validation && validation.validateParams) {
       const paramError = validation.validateParams(node.parameters);
       if (paramError) {
@@ -5586,7 +5572,7 @@ return items.map(item => ({
       }
 
       // Validar nodos de IA existentes
-      if (this.validNodeTypes.ai.includes(node.type)) {
+      if (this.validationSystem.validNodeTypes.ai.includes(node.type)) {
         const validation = this.validateAINodeConfiguration(node);
         if (validation.corrections.length > 0) {
           corrections.push(...validation.corrections);
@@ -5812,7 +5798,7 @@ return items.map(item => ({
       suggestions.push('Consider splitting this workflow into smaller, more manageable workflows');
     }
 
-    const aiNodes = workflow.nodes.filter(n => this.validNodeTypes.ai.includes(n.type));
+    const aiNodes = workflow.nodes.filter(n => this.validationSystem.validNodeTypes.ai.includes(n.type));
     if (aiNodes.length > 5) {
       suggestions.push('High AI usage detected. Consider optimizing API calls and implementing caching');
     }
@@ -5825,7 +5811,7 @@ return items.map(item => ({
     const result = { warnings: [] };
 
     for (const node of workflow.nodes) {
-      if (this.connectionValidations.security.requiresAuth.includes(node.type) && !node.credentials) {
+      if (this.validationSystem.connectionValidations.security.requiresAuth.includes(node.type) && !node.credentials) {
         result.warnings.push(`Node "${node.name}" requires authentication but has no credentials configured`);
       }
     }
@@ -6827,6 +6813,53 @@ Por favor, incluye en tu respuesta JSON:
           }
         });
         console.log(`   ✅ IDs asignados a ${data.nodes.filter(n => n.id).length}/${data.nodes.length} nodos`);
+        
+        // ACTUALIZAR CONEXIONES PARA USAR LOS NUEVOS IDs
+        if (data.connections) {
+          console.log('🔗 ACTUALIZANDO CONEXIONES CON NUEVOS IDs...');
+          const idMap = {};
+          
+          // Crear mapa de IDs originales a nuevos IDs
+          data.nodes.forEach(node => {
+            if (node.originalId && node.originalId !== node.id) {
+              idMap[node.originalId] = node.id;
+            }
+          });
+          
+          // Si no hay originalId, intentar mapear por posición en el array
+          if (Object.keys(idMap).length === 0) {
+            data.nodes.forEach((node, index) => {
+              const originalId = (index + 1).toString(); // Asumir IDs originales como "1", "2", "3", etc.
+              if (originalId !== node.id) {
+                idMap[originalId] = node.id;
+              }
+            });
+          }
+          
+          // Actualizar conexiones usando el mapa
+          const updatedConnections = {};
+          Object.keys(data.connections).forEach(sourceKey => {
+            const newSourceKey = idMap[sourceKey] || sourceKey;
+            updatedConnections[newSourceKey] = data.connections[sourceKey];
+            
+            // Actualizar referencias dentro de las conexiones
+            const connection = updatedConnections[newSourceKey];
+            if (connection.main && Array.isArray(connection.main)) {
+              connection.main.forEach(outputArray => {
+                if (Array.isArray(outputArray)) {
+                  outputArray.forEach(target => {
+                    if (target.node && idMap[target.node]) {
+                      target.node = idMap[target.node];
+                    }
+                  });
+                }
+              });
+            }
+          });
+          
+          data.connections = updatedConnections;
+          console.log(`   ✅ Conexiones actualizadas para ${Object.keys(idMap).length} nodos`);
+        }
       }
 
       // Validate first with AJV using the modular validator
@@ -6881,6 +6914,12 @@ Por favor, incluye en tu respuesta JSON:
 
         // 🔧 VERIFICAR Y REPARAR CONEXIONES FALTANTES
         console.log('🔧 VERIFICANDO Y REPARANDO CONEXIONES FALTANTES...');
+
+        // INICIALIZAR CONEXIONES SI NO EXISTEN
+        if (!data.connections) {
+          console.log('🔧 Inicializando conexiones vacías...');
+          data.connections = {};
+        }
 
         // Identificar nodos que están referenciados en conexiones pero que pueden necesitar más conexiones
         const connectedAsTarget = new Set();
@@ -6965,10 +7004,10 @@ Por favor, incluye en tu respuesta JSON:
       console.log('📋 VALIDANDO TIPOS DE NODOS...');
       
       // Aplicar correcciones automáticas PRIMERO
-      const correctedCount = this.autoCorrectInvalidNodes(data);
-      
+      const correctedCount = this.validationSystem.autoCorrectInvalidNodes(data);
+
       // Luego validar si quedan nodos inválidos
-      const allValidTypes = Object.values(this.validNodeTypes).flat();
+      const allValidTypes = this.validationSystem.getAllValidTypes();
       const invalidNodeTypes = data.nodes.filter(node => !allValidTypes.includes(node.type));
 
       if (invalidNodeTypes.length > 0) {
@@ -6993,7 +7032,7 @@ Por favor, incluye en tu respuesta JSON:
       // 2. VALIDACIÓN DE PARÁMETROS ESPECÍFICOS POR NODO
       console.log('⚙️ VALIDANDO PARÁMETROS DE NODOS...');
       data.nodes.forEach((node, index) => {
-        const validation = this.nodeValidations[node.type];
+        const validation = this.validationSystem.nodeValidations[node.type];
         if (validation) {
           // Verificar parámetros requeridos
           const missingParams = validation.requiredParams.filter(param =>
@@ -7026,7 +7065,7 @@ Por favor, incluye en tu respuesta JSON:
       // 3. VALIDACIÓN DE CREDENCIALES
       console.log('🔐 VALIDANDO CREDENCIALES...');
       data.nodes.forEach(node => {
-        const requiredCreds = this.credentialValidations[node.type];
+        const requiredCreds = this.validationSystem.credentialValidations[node.type];
         if (requiredCreds && requiredCreds.length > 0) {
           if (!node.credentials || Object.keys(node.credentials).length === 0) {
             console.warn(`⚠️ Nodo "${node.name}" requiere credenciales: ${requiredCreds.join(', ')}`);
@@ -7093,7 +7132,7 @@ Por favor, incluye en tu respuesta JSON:
       // 6. VALIDACIÓN DE FLUJO DE DATOS
       console.log('🌊 VALIDANDO FLUJO DE DATOS...');
       const triggerNodes = data.nodes.filter(node =>
-        this.connectionValidations.compatibility[node.type]?.canBeFirst
+        this.validationSystem.connectionValidations.compatibility[node.type]?.canBeFirst
       );
 
       if (triggerNodes.length === 0) {
@@ -7134,7 +7173,7 @@ Por favor, incluye en tu respuesta JSON:
 
       const orphanNodes = data.nodes.filter(node =>
         !connectedNodes.has(node.name) &&
-        !this.connectionValidations.dataFlow.canWorkWithoutInput.includes(node.type)
+        !this.validationSystem.connectionValidations.dataFlow.canWorkWithoutInput.includes(node.type)
       );
 
       if (orphanNodes.length > 0) {
@@ -7146,7 +7185,7 @@ Por favor, incluye en tu respuesta JSON:
 
       // Verificar profundidad máxima
       const maxDepth = this.calculateWorkflowDepth(data);
-      if (maxDepth > this.connectionValidations.structure.maxDepth) {
+      if (maxDepth > this.validationSystem.connectionValidations.structure.maxDepth) {
         console.warn(`⚠️ Workflow muy profundo (${maxDepth} niveles). Puede ser difícil de mantener.`);
       }
 
@@ -7284,7 +7323,7 @@ Por favor, incluye en tu respuesta JSON:
 
   // Sugerir tipo de nodo similar basado en el tipo inválido
   suggestSimilarNodeType(invalidType) {
-    const allValidTypes = Object.values(this.validNodeTypes).flat();
+    const allValidTypes = Object.values(this.validationSystem.validNodeTypes).flat();
 
     // Buscar coincidencias por palabras clave
     const invalidWords = invalidType.toLowerCase().split(/[-_.\s]+/);
@@ -8045,6 +8084,9 @@ Por favor, incluye en tu respuesta JSON:
     for (let attempt = 1; attempt <= maxAttempts; attempt++) {
       try {
         console.log(`🔄 Intento ${attempt}/${maxAttempts}...`);
+        console.log('🔑 DEBUG executeWithRetry: API Key existe:', !!process.env.GEMINI_API_KEY);
+        console.log('🔑 DEBUG executeWithRetry: API Key longitud:', process.env.GEMINI_API_KEY ? process.env.GEMINI_API_KEY.length : 0);
+        
         const result = await operation();
         
         // Cachear resultado exitoso
@@ -8359,7 +8401,7 @@ RESPUESTA REQUERIDA:
 
 ${exampleContext}
 
-REGLAS:
+REGLAS CRÍTICAS:
 - WORKFLOWS MASIVOS permitidos - Sin límites de nodos
 - SOLO tipos válidos (webhook,cron,googleSheets,slack,etc)
 - IDs únicos, posiciones [x,y]  
@@ -8367,14 +8409,27 @@ REGLAS:
 - Parámetros completos para producción
 - Credenciales si necesario
 
+🚨 CONEXIONES OBLIGATORIAS - REGLAS CRÍTICAS:
+- CONEXIONES SIEMPRE PRESENTES: El objeto "connections" NUNCA debe estar vacío
+- FLUJO LÓGICO OBLIGATORIO: Trigger → Procesador → Output (mínimo)
+- CONEXIONES COMPLETAS: Cada nodo (excepto outputs finales) DEBE tener al menos una conexión de salida
+- VALIDACIÓN INTERNA: Asegurar que todas las conexiones referencien nodos existentes
+- ESTRUCTURA RIGUROSA: {"NodeName":{"main":[[{"node":"NextName","type":"main","index":0}]]}}
+
 ESTRUCTURA JSON MASIVA:
 {
-  "nodes": [{"id":"uuid","name":"Name","type":"n8n-nodes-base.webhook","position":[x,y],"parameters":{...},"credentials":{...}}],
-  "connections": {"NodeName":{"main":[[{"node":"NextName","type":"main","index":0}]]}},
+  "nodes": [{"id":"uuid","name":"Nombre Descriptivo del Nodo","type":"n8n-nodes-base.webhook","position":[x,y],"parameters":{...},"credentials":{...}}],
+  "connections": {"Nombre Descriptivo del Nodo":{"main":[[{"node":"Nombre Descriptivo del Siguiente Nodo","type":"main","index":0}]]}},
   "settings": {}
 }
 
-OUTPUT: JSON masivo válido completo.`;
+⚠️ REGLAS CRÍTICAS PARA CONEXIONES:
+- CONEXIONES DEBEN usar "name" de nodos, NO "id"
+- Cada conexión DEBE referenciar el "name" exacto del nodo destino
+- Estructura: "connections": {"Nombre Nodo Origen": {"main": [{"node": "Nombre Nodo Destino"}]}}
+- Nombres deben coincidir EXACTAMENTE con los definidos en "nodes"
+
+OUTPUT: JSON masivo válido completo con conexiones funcionales.`;
 
       // 5. Llamar a Gemini con configuración masiva
       console.log('🤖 Llamando a', settings.provider, 'con configuración masiva');
@@ -8576,8 +8631,12 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
       }
 
       // Llamada con manejo de errores y reintentos optimizado
+      const self = this; // Preservar contexto de this
       const response = await this.executeWithRetry(
-        () => this.callGeminiMassive([{ role: 'user', content: finalPrompt }], maxTokens, temperature),
+        async () => {
+          console.log('🔧 DEBUG: Ejecutando callGeminiMassive...');
+          return await self.callGeminiMassive([{ role: 'user', content: finalPrompt }], maxTokens, temperature);
+        },
         3,
         cacheKey
       );
@@ -8904,7 +8963,12 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
         throw new Error('❌ GEMINI_API_KEY no configurada en archivo .env');
       }
       
-      console.log('🔮 Usando Gemini 2.5 Flash real de Google con salida masiva');
+      console.log('� DEBUG: API Key existe:', !!process.env.GEMINI_API_KEY);
+      console.log('🔑 DEBUG: API Key longitud:', process.env.GEMINI_API_KEY.length);
+      console.log('🔑 DEBUG: API Key inicia con AIza:', process.env.GEMINI_API_KEY.startsWith('AIza'));
+      console.log('🔑 DEBUG: API Key valor (primeros 10):', process.env.GEMINI_API_KEY.substring(0, 10));
+      
+      console.log('�🔮 Usando Gemini 2.5 Flash real de Google con salida masiva');
       const fetchModule = await getFetch();
       
       const response = await fetchModule(`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${process.env.GEMINI_API_KEY}`, {
@@ -9015,10 +9079,10 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
       // IDs y nombres únicos
       if (!node.id) {
         errors.push(`Nodo ${index} sin ID`);
-      } else if (nodeIds.has(node.id)) {
+      } else if (nodeIds.has(String(node.id))) {
         errors.push(`ID duplicado: ${node.id}`);
       } else {
-        nodeIds.add(node.id);
+        nodeIds.add(String(node.id)); // Convertir a string para consistencia
       }
       
       if (!node.name) {
@@ -9045,8 +9109,14 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
     
     // 3. Validar conexiones (soportar tanto IDs como nombres)
     Object.keys(parsedWorkflow.connections).forEach(sourceName => {
+      console.log(`🔍 DEBUG: Validando conexión desde: "${sourceName}"`);
+      console.log(`🔍 DEBUG: nodeIds contiene:`, Array.from(nodeIds));
+      console.log(`🔍 DEBUG: nodeNames contiene:`, Array.from(nodeNames));
+      
       // Verificar que el nodo origen existe (por nombre o ID)
-      const sourceExists = nodeNames.has(sourceName) || nodeIds.has(sourceName);
+      const sourceExists = nodeNames.has(sourceName) || nodeIds.has(String(sourceName));
+      console.log(`🔍 DEBUG: sourceExists = ${sourceExists} (name: ${nodeNames.has(sourceName)}, id: ${nodeIds.has(String(sourceName))})`);
+      
       if (!sourceExists) {
         errors.push(`Conexión desde nodo inexistente: "${sourceName}"`);
         return;
@@ -9058,7 +9128,7 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
           if (Array.isArray(outputArray)) {
             outputArray.forEach((target, targetIndex) => {
               // Verificar que el nodo destino existe (por nombre o ID)
-              const targetExists = nodeNames.has(target.node) || nodeIds.has(target.node);
+              const targetExists = nodeNames.has(target.node) || nodeIds.has(String(target.node));
               if (!targetExists) {
                 errors.push(`Conexión hacia nodo inexistente: "${sourceName}" -> "${target.node}"`);
               }
@@ -9393,7 +9463,7 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
 
     const validOperations = {
       'n8n-nodes-base.gmail': ['send', 'get', 'getAll', 'reply', 'sendAndWait'],
-      'n8n-nodes-base.googleSheets': ['append', 'read', 'update', 'clear', 'delete'],
+      'n8n-nodes-base.googleSheets': ['append', 'read', 'update', 'clear', 'delete', 'getAll'],
       'n8n-nodes-base.mysql': ['select', 'insert', 'update', 'delete', 'executeQuery'],
       'n8n-nodes-base.postgres': ['select', 'insert', 'update', 'delete', 'executeQuery'],
       'n8n-nodes-base.woocommerce': ['get', 'getAll', 'create', 'update', 'delete'],
@@ -9710,7 +9780,7 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
 
   // Sugerir tipo de nodo similar basado en el tipo inválido
   suggestSimilarNodeType(invalidType) {
-    const allValidTypes = Object.values(this.validNodeTypes).flat();
+    const allValidTypes = Object.values(this.validationSystem.validNodeTypes).flat();
 
     // Buscar coincidencias por palabras clave
     const invalidWords = invalidType.toLowerCase().split(/[-_.\s]+/);
@@ -10008,7 +10078,7 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
     const result = { warnings: [] };
 
     for (const node of workflow.nodes) {
-      if (this.connectionValidations.security.requiresAuth.includes(node.type) && !node.credentials) {
+      if (this.validationSystem.connectionValidations.security.requiresAuth.includes(node.type) && !node.credentials) {
         result.warnings.push(`Node "${node.name}" requires authentication but has no credentials configured`);
       }
     }
@@ -10026,7 +10096,7 @@ OUTPUT: JSON válido COMPACTO con POSICIONES OBLIGATORIAS (max 50000 chars) SIN 
       suggestions.push('Consider splitting this workflow into smaller, more manageable workflows');
     }
 
-    const aiNodes = workflow.nodes.filter(n => this.validNodeTypes.ai.includes(n.type));
+    const aiNodes = workflow.nodes.filter(n => this.validationSystem.validNodeTypes.ai.includes(n.type));
     if (aiNodes.length > 5) {
       suggestions.push('High AI usage detected. Consider optimizing API calls and implementing caching');
     }
@@ -10641,6 +10711,14 @@ REQUISITOS OBLIGATORIOS:
 6. 🎯 Enfocarse en nodos de procesamiento, validación y salida que falten
 7. 🧹 Generar SOLO JSON válido y bien formado
 
+🚨 CONEXIONES OBLIGATORIAS EN EXTENSIÓN:
+- CONEXIONES SIEMPRE PRESENTES: El objeto "connections" NUNCA debe estar vacío
+- CONEXIÓN INICIAL OBLIGATORIA: Conectar desde "${connectionPoint}" hacia el primer nuevo nodo
+- FLUJO LÓGICO OBLIGATORIO: Procesador → Procesador → Output (mínimo)
+- CONEXIONES COMPLETAS: Cada nodo nuevo (excepto outputs finales) DEBE tener al menos una conexión de salida
+- VALIDACIÓN INTERNA: Asegurar que todas las conexiones referencien nodos existentes o nuevos
+- ESTRUCTURA RIGUROSA: {"NodeName":{"main":[[{"node":"NextName","type":"main","index":0}]]}}
+
 ANÁLISIS DEL WORKFLOW PARCIAL:
 - Nodos actuales: ${partialWorkflow.nodes?.length || 0}
 - Último nodo: "${connectionPoint}"
@@ -10659,6 +10737,13 @@ POSICIONAMIENTO DE NODOS:
 - Ramas de error: +100px vertical
 
 ⚡ SALIDA REQUERIDA: JSON válido y completo ÚNICAMENTE para la extensión del workflow (nuevos nodos + conexiones).
+
+⚠️ REGLAS CRÍTICAS PARA CONEXIONES EN EXTENSIÓN:
+- CONEXIONES DEBEN usar "name" de nodos, NO "id"
+- Conectar DESDE "${connectionPoint}" hacia el primer nuevo nodo
+- Cada conexión DEBE referenciar el "name" exacto del nodo destino
+- Estructura: "connections": {"Nombre Nodo Origen": {"main": [{"node": "Nombre Nodo Destino"}]}}
+- Nombres deben coincidir EXACTAMENTE con los definidos en "nodes"
 
 🎯 OBJETIVO: Completar un workflow funcional que implemente completamente el prompt original del usuario.`;
 
@@ -11345,6 +11430,8 @@ SOLO generar la EXTENSIÓN, no recrear el workflow completo.`;
 
     if (type.includes('webhook') || type.includes('trigger') || type.includes('cron') || 
         name.includes('trigger') || name.includes('start')) return 'triggers';
+    if (type.includes('respondtowebhook') || type.includes('webhookresponse') || 
+        name.includes('response') || name.includes('reply')) return 'outputs';
     if (type.includes('gmail') || type.includes('slack') || type.includes('telegram') || 
         name.includes('send') || name.includes('email')) return 'outputs';
     if (type.includes('if') || type.includes('switch') || type.includes('merge') || 
@@ -12129,6 +12216,11 @@ SOLO generar la EXTENSIÓN, no recrear el workflow completo.`;
     let cleanups = 0;
     const nodeNames = new Set(data.nodes.map(n => n.name));
 
+    // VERIFICAR QUE EXISTAN CONEXIONES
+    if (!data.connections) {
+      return 0;
+    }
+
     Object.keys(data.connections).forEach(sourceName => {
       if (!nodeNames.has(sourceName)) {
         delete data.connections[sourceName];
@@ -12166,12 +12258,23 @@ SOLO generar la EXTENSIÓN, no recrear el workflow completo.`;
   connectOrphanNodes(data, analysis) {
     let connections = 0;
 
+    // INICIALIZAR CONEXIONES SI NO EXISTEN
+    if (!data.connections) {
+      data.connections = {};
+    }
+
     // Conectar triggers sin salida
     analysis.triggers.forEach(trigger => {
       if (analysis.connectionMatrix[trigger.name].outgoing.length === 0) {
         const target = analysis.processors[0] || analysis.outputs[0];
         if (target) {
-          if (!data.connections[trigger.name]) data.connections[trigger.name] = { main: [[]] };
+          if (!data.connections[trigger.name]) {
+            data.connections[trigger.name] = { main: [[]] };
+          }
+          // Asegurar que main[0] existe
+          if (!data.connections[trigger.name].main[0]) {
+            data.connections[trigger.name].main[0] = [];
+          }
           data.connections[trigger.name].main[0].push({
             node: target.name, type: 'main', index: 0
           });
@@ -12186,8 +12289,13 @@ SOLO generar la EXTENSIÓN, no recrear el workflow completo.`;
       if (analysis.connectionMatrix[output.name].incoming.length === 0) {
         const source = analysis.processors[analysis.processors.length - 1] || analysis.triggers[0];
         if (source) {
-          if (!data.connections[source.name]) data.connections[source.name] = { main: [[]] };
-          if (!data.connections[source.name].main[0]) data.connections[source.name].main[0] = [];
+          if (!data.connections[source.name]) {
+            data.connections[source.name] = { main: [[]] };
+          }
+          // Asegurar que main[0] existe
+          if (!data.connections[source.name].main[0]) {
+            data.connections[source.name].main[0] = [];
+          }
           data.connections[source.name].main[0].push({
             node: output.name, type: 'main', index: 0
           });
@@ -12203,6 +12311,11 @@ SOLO generar la EXTENSIÓN, no recrear el workflow completo.`;
   // Optimizar flujo de conexiones
   optimizeConnectionFlow(data, analysis) {
     let optimizations = 0;
+
+    // INICIALIZAR CONEXIONES SI NO EXISTEN
+    if (!data.connections) {
+      data.connections = {};
+    }
 
     // Crear secuencia entre procesadores
     for (let i = 0; i < analysis.processors.length - 1; i++) {

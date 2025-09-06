@@ -1,0 +1,142 @@
+{
+  "nodes": [
+    {
+      "id": "telegramTrigger_1",
+      "name": "Telegram Chatbot Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        -280,
+        100
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "telegramApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "code_parseMessage_2",
+      "name": "Parse Chat Message",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "googleCalendar_createEvent_3",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleCalendarApi": {
+          "id": "googleCalendarApi",
+          "name": "googleCalendarApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "emailSend_notifyStaff_4",
+      "name": "Notify Staff via Email",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        280,
+        100
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "telegram_sendConfirmation_5",
+      "name": "Send Confirmation to Client",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        0,
+        500
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "resource": "message",
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.message }}",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "telegramApi Credentials"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot Trigger": {
+      "main": [
+        [
+          {
+            "node": "Parse Chat Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Chat Message": {
+      "main": [
+        [
+          {
+            "node": "Create Calendar Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Calendar Event": {
+      "main": [
+        [
+          {
+            "node": "Notify Staff via Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Staff via Email": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation to Client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

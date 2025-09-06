@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "id": "telegramTrigger",
+      "name": "Telegram Chatbot",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "parseMessage",
+      "name": "Parse Chat Message",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        -140,
+        300
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "googleCalendar",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        140,
+        300
+      ],
+      "parameters": {
+        "operation": "create"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "emailSend",
+      "name": "Notify Related Persons",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "telegramSendMessage",
+      "name": "Send Confirmation to Client",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot": {
+      "main": []
+    },
+    "Parse Chat Message": {
+      "main": []
+    },
+    "Create Calendar Event": {
+      "main": []
+    },
+    "Notify Related Persons": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

@@ -1,0 +1,171 @@
+{
+  "nodes": [
+    {
+      "id": "telegramTrigger1",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        -140,
+        100
+      ],
+      "parameters": {
+        "allowedUpdates": [
+          "message"
+        ],
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "Telegram API Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "extractData1",
+      "name": "Extract Chat Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "mode": "merge",
+        "values": [
+          {
+            "name": "chatId",
+            "value": "{{ $json.message.chat.id }}"
+          },
+          {
+            "name": "messageText",
+            "value": "{{ $json.message.text }}"
+          },
+          {
+            "name": "userName",
+            "value": "{{ $json.message.from.first_name + ($json.message.from.last_name ? ' ' + $json.message.from.last_name : '') }}"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "googleCalendarCreateEvent1",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        140,
+        100
+      ],
+      "parameters": {
+        "operation": "create",
+        "resource": "event",
+        "calendarId": "primary",
+        "summary": "Cita con Chatbot Telegram - {{ $json.userName }}",
+        "description": "Conversación: {{ $json.messageText }}",
+        "startDateTime": "{{ $now }}",
+        "endDateTime": "{{ $now.plus({ hours: 1 }) }}",
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "credentials": {
+        "googleApi": {
+          "id": "googleApi",
+          "name": "Google API Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendConfirmationEmail1",
+      "name": "Send Confirmation Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "fromEmail": "noreply@yourcompany.com",
+        "toEmail": "support@yourcompany.com",
+        "subject": "Nueva conversación de Telegram con {{ $json.userName }}",
+        "text": "El cliente {{ $json.userName }} (ID: {{ $json.chatId }}) ha tenido la siguiente conversación:  {{ $json.messageText }}  Se ha agendado en Google Calendar.",
+        "to": "={{ $json.email }}",
+        "options": {}
+      },
+      "credentials": {
+        "smtpAuth": {
+          "id": "smtpAuth",
+          "name": "SMTP Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendTelegramConfirmation1",
+      "name": "Send Telegram Confirmation",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "{{ $json.chatId }}",
+        "text": "¡Hola {{ $json.userName }}! Tus datos se han enviado correctamente y se ha agendado tu conversación. Pronto nos pondremos en contacto contigo.",
+        "options": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "Telegram API Account"
+        }
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extract Chat Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Calendar Event": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Telegram Confirmation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Chat Data": {
+      "main": [
+        [
+          {
+            "node": "Create Calendar Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "workflowName": "Telegram Chatbot to Google Calendar and Email"
+  }
+}

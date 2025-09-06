@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "webhookTrigger",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -140,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "webhookResponse",
+      "name": "Webhook Response",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        140,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

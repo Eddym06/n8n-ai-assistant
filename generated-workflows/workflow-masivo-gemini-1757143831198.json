@@ -1,0 +1,164 @@
+{
+  "nodes": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      "name": "Telegram Chatbot",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "updates": [
+          "message"
+        ]
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef0",
+      "name": "Preparar Datos Evento",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -280,
+        300
+      ],
+      "parameters": {
+        "options": {},
+        "values": [
+          {
+            "name": "summary",
+            "value": "Cita de Chatbot - {{ $json.message.from.first_name || 'Cliente' }}",
+            "alwaysSet": true
+          },
+          {
+            "name": "description",
+            "value": "Mensaje del cliente: {{ $json.message.text }}  Chat ID: {{ $json.message.chat.id }}",
+            "alwaysSet": true
+          },
+          {
+            "name": "startDateTime",
+            "value": "{{ $now }}",
+            "alwaysSet": true
+          },
+          {
+            "name": "endDateTime",
+            "value": "{{ $now.plus({ hours: 1 }) }}",
+            "alwaysSet": true
+          },
+          {
+            "name": "chatId",
+            "value": "{{ $json.message.chat.id }}",
+            "alwaysSet": true
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
+      "name": "Crear Evento Google Calendar",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "operation": "create",
+        "calendarId": "primary",
+        "summary": "{{ $json.summary }}",
+        "description": "{{ $json.description }}",
+        "startDateTime": "{{ $json.startDateTime }}",
+        "endDateTime": "{{ $json.endDateTime }}",
+        "sendNotifications": true
+      },
+      "credentials": {
+        "googleApi": {
+          "id": "YOUR_GOOGLE_CREDENTIAL_ID",
+          "name": "Google Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d4e5f6a7-b8c9-0123-4567-890abcdef012",
+      "name": "Enviar Correo Notificación",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "fromEmail": "your_n8n_email@example.com",
+        "toEmail": "related_person1@example.com, related_person2@example.com",
+        "subject": "Nueva Cita Agendada por Chatbot: {{ $json.summary }}",
+        "htmlBody": "Se ha agendado una nueva cita a través del chatbot de Telegram.<br><br><b>Resumen:</b> {{ $json.summary }}<br><b>Descripción:</b> {{ $json.description }}<br><b>Inicio:</b> {{ $json.startDateTime }}<br><b>Fin:</b> {{ $json.endDateTime }}<br><br>Saludos."
+      },
+      "credentials": {
+        "smtpApi": {
+          "id": "YOUR_SMTP_CREDENTIAL_ID",
+          "name": "SMTP Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "e5f6a7b8-c9d0-1234-5678-90abcdef0123",
+      "name": "Merge Results",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        280,
+        300
+      ],
+      "parameters": {
+        "mode": "wait"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "f6a7b8c9-d0e1-2345-6789-0abcdef01234",
+      "name": "Enviar Confirmación Cliente",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "operation": "sendText",
+        "chatId": "{{ $json.chatId }}",
+        "text": "¡Hola! Tus datos se han enviado correctamente y tu cita ha sido agendada en Google Calendar. Te contactaremos pronto."
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "YOUR_TELEGRAM_CREDENTIAL_ID",
+          "name": "Telegram Account"
+        }
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot": {
+      "main": []
+    },
+    "Preparar Datos Evento": {
+      "main": []
+    },
+    "Crear Evento Google Calendar": {
+      "main": []
+    },
+    "Enviar Correo Notificación": {
+      "main": []
+    },
+    "Merge Results": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

@@ -1,0 +1,431 @@
+{
+  "nodes": [
+    {
+      "id": "node_1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -420,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_2",
+      "name": "Email Validation",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        -140,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_3",
+      "name": "Data Normalization",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -280,
+        500
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_4",
+      "name": "Interest Classification",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -280,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_5",
+      "name": "Save Lead to CRM",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        140,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_6",
+      "name": "Campaign Trigger",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_7",
+      "name": "Send Campaign",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        420,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_8",
+      "name": "Log Metrics",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        0,
+        500
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_9",
+      "name": "Save Log to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        0,
+        1040
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "node_10",
+      "name": "Save Historical Data to Airtable",
+      "type": "n8n-nodes-base.airtable",
+      "position": [
+        280,
+        500
+      ],
+      "parameters": {
+        "options": {},
+        "operation": "list",
+        "application": "appXXXXXXXXX",
+        "table": "Table1"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "airtableApi": {
+          "id": "airtableApi",
+          "name": "airtableApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "node_11",
+      "name": "Data Analysis",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -280,
+        640
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_12",
+      "name": "Generate Report",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        0,
+        640
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_13",
+      "name": "Send Report to Team",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        840
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_14",
+      "name": "System Health Monitor",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        280,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_15",
+      "name": "Notify Errors",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        140,
+        840
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Email Validation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Validation": {
+      "main": [
+        [
+          {
+            "node": "Data Normalization",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Normalization": {
+      "main": [
+        [
+          {
+            "node": "Interest Classification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Interest Classification": {
+      "main": [
+        [
+          {
+            "node": "Save Lead to CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Lead to CRM": {
+      "main": [
+        [
+          {
+            "node": "Campaign Trigger",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campaign Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send Campaign",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Campaign": {
+      "main": [
+        [
+          {
+            "node": "Log Metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log Metrics": {
+      "main": [
+        [
+          {
+            "node": "Save Log to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Log to Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Save Historical Data to Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Historical Data to Airtable": {
+      "main": [
+        [
+          {
+            "node": "Data Analysis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Data Analysis": {
+      "main": [
+        [
+          {
+            "node": "Generate Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Report": {
+      "main": [
+        [
+          {
+            "node": "Send Report to Team",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Report to Team": {
+      "main": [
+        [
+          {
+            "node": "System Health Monitor",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "System Health Monitor": {
+      "main": [
+        [
+          {
+            "node": "Notify Errors",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

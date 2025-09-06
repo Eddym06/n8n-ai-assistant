@@ -1,0 +1,82 @@
+{
+  "nodes": [
+    {
+      "id": "telegramTrigger",
+      "name": "Telegram Chatbot Listener",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "codeNode",
+      "name": "Extract Chat Data",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "googleCalendar",
+      "name": "Create Google Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        140,
+        300
+      ],
+      "parameters": {
+        "operation": "create"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "emailSend",
+      "name": "Send Email to Related People",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "telegramSend",
+      "name": "Send Confirmation to Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot Listener": {
+      "main": []
+    },
+    "Extract Chat Data": {
+      "main": []
+    },
+    "Create Google Calendar Event": {
+      "main": []
+    },
+    "Send Email to Related People": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

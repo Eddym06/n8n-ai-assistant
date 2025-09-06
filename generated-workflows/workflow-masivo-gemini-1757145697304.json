@@ -1,0 +1,103 @@
+{
+  "nodes": [
+    {
+      "id": "telegramTrigger",
+      "name": "Telegram Chatbot Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "extractInfo",
+      "name": "Extract Appointment Details",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -280,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "googleCalendar",
+      "name": "Create Google Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "operation": "create"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "setEmailDetails",
+      "name": "Set Email Details",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        280,
+        300
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendEmail",
+      "name": "Send Email to Related Persons",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "sendTelegramConfirmation",
+      "name": "Send Telegram Confirmation",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot Trigger": {
+      "main": []
+    },
+    "Extract Appointment Details": {
+      "main": []
+    },
+    "Create Google Calendar Event": {
+      "main": []
+    },
+    "Set Email Details": {
+      "main": []
+    },
+    "Send Email to Related Persons": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

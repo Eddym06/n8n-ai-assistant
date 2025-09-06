@@ -1,0 +1,127 @@
+{
+  "nodes": [
+    {
+      "id": "telegramChatbotTrigger",
+      "name": "Telegram Chatbot",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "updateTypes": [
+          "message"
+        ]
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "Telegram API Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "extractChatData",
+      "name": "Extract Chat Data",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        300
+      ],
+      "parameters": {
+        "functionCode": "// Este código debe analizar el mensaje entrante de Telegram (item.json.message.text) // y extraer la información relevante para el evento del calendario y el correo electrónico. // Variables de ejemplo a establecer:  // item.json.eventName = 'Cita con ' + item.json.message.from.first_name; // item.json.eventDescription = item.json.message.text; // item.json.eventDate = '2024-12-31'; // Ejemplo: Necesita lógica de análisis de fecha real // item.json.eventTime = '15: 00'; // Ejemplo: Necesita lógica de análisis de hora real // item.json.clientEmail = 'client@example.com'; // Ejemplo: Necesita lógica de análisis de correo real o valor predeterminado // item.json.relatedPersonEmail = 'admin@yourcompany.com'; // Ejemplo: Configurar este correo electrónico // item.json.chatId = item.json.message.chat.id;  // Para demostración, establecemos algunos datos de ejemplo basados en la solicitud item.json.eventName = 'Cita con Chatbot'; item.json.eventDescription = item.json.message.text; item.json.eventDate = '2024-12-31';  item.json.eventTime = '15: 00';  item.json.clientEmail = 'client@example.com';  item.json.relatedPersonEmail = 'admin@yourcompany.com';  item.json.chatId = item.json.message.chat.id;  return item;",
+        "jsCode": "return $input.all();",
+        "mode": "runOnceForAllItems"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "createGoogleCalendarEvent",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        140,
+        300
+      ],
+      "parameters": {
+        "operation": "create",
+        "resource": "event",
+        "calendarId": "primary",
+        "summary": "={{$json.eventName}}",
+        "description": "={{$json.eventDescription}}",
+        "startDateTime": "={{$json.eventDate + 'T' + $json.eventTime + ':00'}}",
+        "endDateTime": "={{$json.eventDate + 'T' + $json.eventTime + ':00'}}",
+        "sendUpdates": "all",
+        "options": {}
+      },
+      "credentials": {
+        "googleCalendarApi": {
+          "id": "googleCalendarApi",
+          "name": "Google Calendar Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendEmailNotification",
+      "name": "Notify Related Persons",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "fromEmail": "noreply@yourcompany.com",
+        "toEmail": "={{$json.relatedPersonEmail}}",
+        "subject": "={{'Nueva Cita Agendada: ' + $json.eventName}}",
+        "text": "={{'Se ha agendado una nueva cita a través del chatbot de Telegram.  Detalles de la conversación: ' + $json.eventDescription + '  Fecha y Hora: ' + $json.eventDate + ' ' + $json.eventTime + '  Cliente: ' + ($json.message.from.first_name || 'N/A') + ' (' + ($json.message.from.username || 'N/A') + ')'}}",
+        "options": {}
+      },
+      "credentials": {
+        "smtpApi": {
+          "id": "smtpApi",
+          "name": "SMTP Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendTelegramConfirmation",
+      "name": "Confirm to Client",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "={{$json.chatId}}",
+        "text": "Los datos de tu cita se han enviado correctamente y se han agendado en el calendario. ¡Gracias!",
+        "options": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "Telegram API Account"
+        }
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot": {
+      "main": []
+    },
+    "Notify Related Persons": {
+      "main": []
+    },
+    "Extract Chat Data": {
+      "main": []
+    },
+    "Create Calendar Event": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

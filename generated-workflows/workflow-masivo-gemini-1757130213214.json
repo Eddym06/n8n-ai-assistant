@@ -1,0 +1,546 @@
+{
+  "nodes": [
+    {
+      "id": "webhookTrigger",
+      "name": "1. Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -280,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "dataTransformation",
+      "name": "2. Data Transformation (JSON)",
+      "type": "n8n-nodes-base.json",
+      "position": [
+        -420,
+        640
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "dataProcessing",
+      "name": "3. Data Processing (Set)",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -140,
+        640
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "dataValidation",
+      "name": "4. Data Validation (If)",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -140,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "crmUpdateValid",
+      "name": "5. CRM Update (Valid)",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "crmFollowupTask",
+      "name": "6. CRM Follow-up Task",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        280,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "audienceSegmentation",
+      "name": "7. Audience Segmentation (Switch)",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        140,
+        640
+      ],
+      "parameters": {
+        "rules": {
+          "rules": [
+            {
+              "operation": "equal",
+              "value": "option1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "emailSendA",
+      "name": "8. Personalized Email A",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -280,
+        840
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "emailSendB",
+      "name": "9. Personalized Email B",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        0,
+        840
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "emailSendC",
+      "name": "10. Personalized Email C",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        280,
+        840
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "activityLogging",
+      "name": "11. Activity Logging",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        -280,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "analyticsDataPush",
+      "name": "12. Analytics Data Push",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        640
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "analyticsDashboardUpdate",
+      "name": "13. Analytics Dashboard Update",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        0,
+        1380
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "reportGeneration",
+      "name": "14. Report Generation (Google Sheets)",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -140,
+        1180
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "reportDistribution",
+      "name": "15. Report Distribution (Email)",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -280,
+        980
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "dataBackup",
+      "name": "16. Data Backup (SFTP)",
+      "type": "n8n-nodes-base.sftp",
+      "position": [
+        140,
+        1180
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "monitoringCheck",
+      "name": "17. Monitoring Check",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        440
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "rateLimiter",
+      "name": "18. Rate Limiter",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        0,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "errorAlerting",
+      "name": "19. Error Alerting (Slack)",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        0,
+        980
+      ],
+      "parameters": {
+        "operation": "post",
+        "resource": "message",
+        "channel": "#general",
+        "text": "={{ $json.message }}",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "slackApi": {
+          "id": "slackApi",
+          "name": "slackApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "errorLogging",
+      "name": "20. Error Logging",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        280,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "1. Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "2. Data Transformation (JSON)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Data Transformation (JSON)": {
+      "main": [
+        [
+          {
+            "node": "3. Data Processing (Set)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Data Processing (Set)": {
+      "main": [
+        [
+          {
+            "node": "4. Data Validation (If)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4. Data Validation (If)": {
+      "main": [
+        [
+          {
+            "node": "5. CRM Update (Valid)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "5. CRM Update (Valid)": {
+      "main": [
+        [
+          {
+            "node": "6. CRM Follow-up Task",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "6. CRM Follow-up Task": {
+      "main": [
+        [
+          {
+            "node": "7. Audience Segmentation (Switch)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "7. Audience Segmentation (Switch)": {
+      "main": [
+        [
+          {
+            "node": "8. Personalized Email A",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "8. Personalized Email A": {
+      "main": [
+        [
+          {
+            "node": "9. Personalized Email B",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "9. Personalized Email B": {
+      "main": [
+        [
+          {
+            "node": "10. Personalized Email C",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "10. Personalized Email C": {
+      "main": [
+        [
+          {
+            "node": "11. Activity Logging",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "11. Activity Logging": {
+      "main": [
+        [
+          {
+            "node": "12. Analytics Data Push",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "12. Analytics Data Push": {
+      "main": [
+        [
+          {
+            "node": "13. Analytics Dashboard Update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "13. Analytics Dashboard Update": {
+      "main": [
+        [
+          {
+            "node": "14. Report Generation (Google Sheets)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "14. Report Generation (Google Sheets)": {
+      "main": [
+        [
+          {
+            "node": "15. Report Distribution (Email)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "15. Report Distribution (Email)": {
+      "main": [
+        [
+          {
+            "node": "16. Data Backup (SFTP)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "16. Data Backup (SFTP)": {
+      "main": [
+        [
+          {
+            "node": "17. Monitoring Check",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "17. Monitoring Check": {
+      "main": [
+        [
+          {
+            "node": "18. Rate Limiter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "18. Rate Limiter": {
+      "main": [
+        [
+          {
+            "node": "19. Error Alerting (Slack)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "19. Error Alerting (Slack)": {
+      "main": [
+        [
+          {
+            "node": "20. Error Logging",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

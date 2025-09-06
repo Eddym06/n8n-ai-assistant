@@ -1,0 +1,191 @@
+{
+  "nodes": [
+    {
+      "id": "webhook_trigger_001",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "split_batches_002",
+      "name": "Split In Batches",
+      "type": "n8n-nodes-base.splitInBatches",
+      "position": [
+        -420,
+        500
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "set_standardize_003",
+      "name": "Standardize Customer Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "http_enrich_004",
+      "name": "Enrich Customer Data (API)",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "if_customer_type_005",
+      "name": "If New or Existing Customer",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "gsheets_new_006",
+      "name": "Add New Customer (Google Sheets)",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -140,
+        900
+      ],
+      "parameters": {
+        "operation": "append",
+        "sheetId": "0"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "email_welcome_007",
+      "name": "Send Welcome Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -280,
+        700
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "gsheets_update_008",
+      "name": "Update Existing Customer (Google Sheets)",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        140,
+        900
+      ],
+      "parameters": {
+        "operation": "append",
+        "sheetId": "0"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "slack_notify_009",
+      "name": "Notify Slack (Customer Update)",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        0,
+        700
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "merge_results_010",
+      "name": "Merge Batch Results",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        420,
+        500
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "email_summary_011",
+      "name": "Send Processing Summary Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        280,
+        700
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": []
+    },
+    "Split In Batches": {
+      "main": []
+    },
+    "Standardize Customer Data": {
+      "main": []
+    },
+    "Enrich Customer Data (API)": {
+      "main": []
+    },
+    "If New or Existing Customer": {
+      "main": []
+    },
+    "Add New Customer (Google Sheets)": {
+      "main": []
+    },
+    "Send Welcome Email": {
+      "main": []
+    },
+    "Update Existing Customer (Google Sheets)": {
+      "main": []
+    },
+    "Notify Slack (Customer Update)": {
+      "main": []
+    },
+    "Merge Batch Results": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

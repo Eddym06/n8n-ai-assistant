@@ -1,0 +1,135 @@
+{
+  "nodes": [
+    {
+      "id": "node_1757144615683_l7c316z",
+      "name": "Telegram Chatbot Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "allowedUpdates": [
+          "message"
+        ]
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "Telegram Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757144615683_nerytlm",
+      "name": "Extract Chat Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -140,
+        300
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "chatId",
+            "value": "={{ $json.message.chat.id }}"
+          },
+          {
+            "name": "messageText",
+            "value": "={{ $json.message.text }}"
+          },
+          {
+            "name": "clientName",
+            "value": "={{ $json.message.from.first_name || 'Cliente' }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757144615683_lyb7jzx",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        140,
+        300
+      ],
+      "parameters": {
+        "operation": "create",
+        "resource": "event",
+        "calendarId": "primary",
+        "summary": "Conversación con {{ $json.clientName }} sobre servicio",
+        "description": "Mensaje del cliente: {{ $json.messageText }}  ID de Chat: {{ $json.chatId }}",
+        "startDateTime": "={{ new Date().toISOString() }}",
+        "endDateTime": "={{ new Date(Date.now() + 3600000).toISOString() }}"
+      },
+      "credentials": {
+        "googleApi": {
+          "id": "googleApi",
+          "name": "Google Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757144615683_hdq4hqc",
+      "name": "Notify Related Persons",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "from": "your_n8n_email@example.com",
+        "to": "related_person@example.com, another_person@example.com",
+        "subject": "Nueva conversación de chatbot con {{ $json.clientName }}",
+        "text": "Un cliente ha iniciado una conversación a través del chatbot de Telegram.  Detalles de la conversación: Cliente: {{ $json.clientName }} ID de Chat: {{ $json.chatId }} Mensaje: {{ $json.messageText }}  Se ha agendado un evento en Google Calendar."
+      },
+      "credentials": {
+        "emailSendApi": {
+          "id": "emailSendApi",
+          "name": "Email Send Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757144615683_utfqjjw",
+      "name": "Send Confirmation to Client",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "resource": "message",
+        "chatId": "={{ $json.chatId }}",
+        "text": "¡Hola {{ $json.clientName }}! Tus datos han sido enviados correctamente y agendados en nuestro calendario. Pronto nos pondremos en contacto contigo. ¡Gracias!"
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "Telegram Account"
+        }
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot Trigger": {
+      "main": []
+    },
+    "Notify Related Persons": {
+      "main": []
+    },
+    "Extract Chat Data": {
+      "main": []
+    },
+    "Create Calendar Event": {
+      "main": []
+    }
+  },
+  "settings": {}
+}

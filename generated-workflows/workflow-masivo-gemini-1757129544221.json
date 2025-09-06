@@ -1,0 +1,59 @@
+{
+  "nodes": [
+    {
+      "id": "node_1757129544211_zbwfaf5",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "email-trigger",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757129544211_oywessi",
+      "name": "Send Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "fromEmail": "noreply@yourdomain.com",
+        "toEmail": "recipient@example.com",
+        "subject": "n8n Workflow Activated!",
+        "text": "This email was sent because the n8n workflow was activated via a webhook.",
+        "html": "<p>This email was sent because the <b>n8n workflow</b> was activated via a webhook.</p>",
+        "smtpOptions": {},
+        "to": "={{ $json.email }}",
+        "options": {}
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

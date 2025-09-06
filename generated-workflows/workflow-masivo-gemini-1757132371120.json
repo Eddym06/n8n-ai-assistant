@@ -1,0 +1,620 @@
+{
+  "nodes": [
+    {
+      "id": "whatsappTrigger",
+      "name": "WhatsApp Chatbot Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -280,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "extractUserData",
+      "name": "Extraer Datos de Usuario",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -420,
+        640
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "readUserFromDB",
+      "name": "Leer Usuario de DB (Google Sheets)",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -280,
+        980
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "ifUserExists",
+      "name": "¿Usuario Existe?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        0,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "updateUserInDB",
+      "name": "Actualizar Usuario en DB",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        0,
+        980
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "addNewUserToDB",
+      "name": "Añadir Nuevo Usuario a DB",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        280,
+        980
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "sendWelcomeEmailNotification",
+      "name": "Notificación Email Nuevo Usuario",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        -140,
+        640
+      ],
+      "parameters": {
+        "operation": "get",
+        "resource": "message",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "gmailApi": {
+          "id": "gmailApi",
+          "name": "gmailApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "routeMessageContent",
+      "name": "Enrutar Mensaje",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        140,
+        640
+      ],
+      "parameters": {
+        "rules": {
+          "rules": [
+            {
+              "operation": "equal",
+              "value": "option1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "caseMandar",
+      "name": "Caso: 'mandar'",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        420,
+        640
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "prepareEmailForUser",
+      "name": "Preparar Email para Usuario",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -420,
+        780
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendEmailToUser",
+      "name": "Enviar Email al Usuario",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        -140,
+        780
+      ],
+      "parameters": {
+        "operation": "get",
+        "resource": "message",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "gmailApi": {
+          "id": "gmailApi",
+          "name": "gmailApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "confirmWhatsAppMandar",
+      "name": "Confirmar Envío por WhatsApp",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "caseHola",
+      "name": "Caso: 'hola'",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        140,
+        780
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "getPersonalizedGreeting",
+      "name": "Obtener Saludo Personalizado",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -280,
+        1120
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "sendPersonalizedWhatsAppHola",
+      "name": "Enviar Saludo Personalizado",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        280,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "caseAyuda",
+      "name": "Caso: 'ayuda'",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        420,
+        780
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendHelpWhatsApp",
+      "name": "Enviar Mensaje de Ayuda",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        -280,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendInternalHelpNotification",
+      "name": "Notificación Interna de Ayuda",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        -420,
+        920
+      ],
+      "parameters": {
+        "operation": "get",
+        "resource": "message",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "gmailApi": {
+          "id": "gmailApi",
+          "name": "gmailApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "defaultCase",
+      "name": "Caso: Por Defecto",
+      "type": "n8n-nodes-base.noOp",
+      "position": [
+        -140,
+        920
+      ],
+      "parameters": {
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "sendGenericWhatsAppReply",
+      "name": "Enviar Respuesta Genérica",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        0,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "logUnrecognizedMessage",
+      "name": "Registrar Mensaje No Reconocido",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        0,
+        1120
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "WhatsApp Chatbot Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extraer Datos de Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extraer Datos de Usuario": {
+      "main": [
+        [
+          {
+            "node": "Leer Usuario de DB (Google Sheets)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer Usuario de DB (Google Sheets)": {
+      "main": [
+        [
+          {
+            "node": "¿Usuario Existe?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "¿Usuario Existe?": {
+      "main": [
+        [
+          {
+            "node": "Actualizar Usuario en DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Actualizar Usuario en DB": {
+      "main": [
+        [
+          {
+            "node": "Añadir Nuevo Usuario a DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Añadir Nuevo Usuario a DB": {
+      "main": [
+        [
+          {
+            "node": "Notificación Email Nuevo Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notificación Email Nuevo Usuario": {
+      "main": [
+        [
+          {
+            "node": "Enrutar Mensaje",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enrutar Mensaje": {
+      "main": [
+        [
+          {
+            "node": "Caso: 'mandar'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Caso: 'mandar'": {
+      "main": [
+        [
+          {
+            "node": "Preparar Email para Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Preparar Email para Usuario": {
+      "main": [
+        [
+          {
+            "node": "Enviar Email al Usuario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar Email al Usuario": {
+      "main": [
+        [
+          {
+            "node": "Confirmar Envío por WhatsApp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Confirmar Envío por WhatsApp": {
+      "main": [
+        [
+          {
+            "node": "Caso: 'hola'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Caso: 'hola'": {
+      "main": [
+        [
+          {
+            "node": "Obtener Saludo Personalizado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Obtener Saludo Personalizado": {
+      "main": [
+        [
+          {
+            "node": "Enviar Saludo Personalizado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar Saludo Personalizado": {
+      "main": [
+        [
+          {
+            "node": "Caso: 'ayuda'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Caso: 'ayuda'": {
+      "main": [
+        [
+          {
+            "node": "Enviar Mensaje de Ayuda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar Mensaje de Ayuda": {
+      "main": [
+        [
+          {
+            "node": "Notificación Interna de Ayuda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notificación Interna de Ayuda": {
+      "main": [
+        [
+          {
+            "node": "Caso: Por Defecto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Caso: Por Defecto": {
+      "main": [
+        [
+          {
+            "node": "Enviar Respuesta Genérica",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar Respuesta Genérica": {
+      "main": [
+        [
+          {
+            "node": "Registrar Mensaje No Reconocido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

@@ -1,0 +1,132 @@
+{
+  "nodes": [
+    {
+      "id": "a1b2c3d4-e5f6-7890-1234-567890abcdef",
+      "name": "Telegram Chatbot Trigger",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        -140,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b2c3d4e5-f6a7-8901-2345-67890abcdef0",
+      "name": "Parse Chat Message",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c3d4e5f6-a7b8-9012-3456-7890abcdef01",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        140,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d4e5f6a7-b8c9-0123-4567-890abcdef012",
+      "name": "Notify Team via Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "e5f6a7b8-c9d0-1234-5678-90abcdef0123",
+      "name": "Send Confirmation to Client",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "resource": "message",
+        "chatId": "={{ $json.chatId }}",
+        "text": "={{ $json.message }}",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "telegramApi": {
+          "id": "telegramApi",
+          "name": "telegramApi Credentials"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot Trigger": {
+      "main": [
+        [
+          {
+            "node": "Parse Chat Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Chat Message": {
+      "main": [
+        [
+          {
+            "node": "Create Calendar Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Calendar Event": {
+      "main": [
+        [
+          {
+            "node": "Notify Team via Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Team via Email": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation to Client",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

@@ -1,0 +1,625 @@
+{
+  "nodes": [
+    {
+      "id": "a1b2c3d4-e5f6-4789-1234-567890abcdef",
+      "name": "Start Workflow - New Lead",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -280,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b2c3d4e5-f6a7-4890-2345-67890abcdef0",
+      "name": "Extract & Clean Lead Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        -280,
+        640
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c3d4e5f6-a7b8-4901-3456-7890abcdef01",
+      "name": "Validate Essential Data",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -140,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d4e5f6a7-b8c9-4012-4567-890abcdef012",
+      "name": "HubSpot - Find Contact",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "e5f6a7b8-c9d0-4123-5678-90abcdef0123",
+      "name": "Contact Exists?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        140,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "f6a7b8c9-d0e1-4234-6789-0abcdef01234",
+      "name": "HubSpot - Create Contact",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        280,
+        100
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "a7b8c9d0-e1f2-4345-7890-abcdef012345",
+      "name": "HubSpot - Update Contact",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        -280,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b8c9d0e1-f2a3-4456-8901-234567890abc",
+      "name": "Merge HubSpot Output",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        0,
+        640
+      ],
+      "parameters": {
+        "mode": "append",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c9d0e1f2-a3b4-4567-9012-34567890abcd",
+      "name": "Segment by Interest",
+      "type": "n8n-nodes-base.switch",
+      "position": [
+        280,
+        640
+      ],
+      "parameters": {
+        "rules": {
+          "rules": [
+            {
+              "operation": "equal",
+              "value": "option1"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d0e1f2a3-b4c5-4678-0123-4567890abcde",
+      "name": "Email - Welcome (Product A)",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -280,
+        980
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "e1f2a3b4-c5d6-4789-1234-567890abcdef",
+      "name": "Email - Welcome (Product B)",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        0,
+        980
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "f2a3b4c5-d6e7-4890-2345-67890abcdef0",
+      "name": "Email - Welcome (Service X)",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        280,
+        980
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "a3b4c5d6-e7f8-4901-3456-7890abcdef01",
+      "name": "Email - Welcome (Default)",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -280,
+        1120
+      ],
+      "parameters": {
+        "to": "={{ $json.email }}",
+        "subject": "Notification from n8n",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b4c5d6e7-f8a9-4012-4567-890abcdef012",
+      "name": "Google Sheets - Log New Lead",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -140,
+        1320
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "c5d6e7f8-a9b0-4123-5678-90abcdef0123",
+      "name": "Slack - Notify New Lead",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        0,
+        1120
+      ],
+      "parameters": {
+        "operation": "post",
+        "resource": "message",
+        "channel": "#general",
+        "text": "={{ $json.message }}",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "slackApi": {
+          "id": "slackApi",
+          "name": "slackApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "d6e7f8a9-b0c1-4234-6789-0abcdef01234",
+      "name": "HTTP - Send to Analytics",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -280,
+        780
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "e7f8a9b0-c1d2-4345-7890-abcdef012345",
+      "name": "Code - Prepare Report Data",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        0,
+        780
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "f8a9b0c1-d2e3-4456-8901-234567890abc",
+      "name": "Google Drive - Upload Lead Report",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        0,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "a9b0c1d2-e3f4-4567-9012-34567890abcd",
+      "name": "AWS S3 - Backup Raw Lead Data",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        280,
+        240
+      ],
+      "parameters": {
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b0c1d2e3-f4a5-4678-0123-4567890abcde",
+      "name": "HTTP - Monitoring Heartbeat",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        280,
+        780
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c1d2e3f4-a5b6-4789-1234-567890abcdef",
+      "name": "Slack - Alert Invalid Data",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        280,
+        1120
+      ],
+      "parameters": {
+        "operation": "post",
+        "resource": "message",
+        "channel": "#general",
+        "text": "={{ $json.message }}",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "slackApi": {
+          "id": "slackApi",
+          "name": "slackApi Credentials"
+        }
+      }
+    },
+    {
+      "id": "d2e3f4a5-b6c7-4890-2345-67890abcdef0",
+      "name": "Google Sheets - Log Invalid Data",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        140,
+        1320
+      ],
+      "parameters": {
+        "operation": "append",
+        "resource": "spreadsheet",
+        "documentId": "={{ $json.spreadsheetId }}",
+        "options": {},
+        "sheetId": "0",
+        "sheetName": "Sheet1",
+        "range": "A:Z"
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "googleSheetsApi": {
+          "id": "googleSheetsApi",
+          "name": "googleSheetsApi Credentials"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Start Workflow - New Lead": {
+      "main": [
+        [
+          {
+            "node": "Extract & Clean Lead Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract & Clean Lead Data": {
+      "main": [
+        [
+          {
+            "node": "Validate Essential Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Essential Data": {
+      "main": [
+        [
+          {
+            "node": "HubSpot - Find Contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HubSpot - Find Contact": {
+      "main": [
+        [
+          {
+            "node": "Contact Exists?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Contact Exists?": {
+      "main": [
+        [
+          {
+            "node": "HubSpot - Create Contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HubSpot - Create Contact": {
+      "main": [
+        [
+          {
+            "node": "HubSpot - Update Contact",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HubSpot - Update Contact": {
+      "main": [
+        [
+          {
+            "node": "Merge HubSpot Output",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge HubSpot Output": {
+      "main": [
+        [
+          {
+            "node": "Segment by Interest",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Segment by Interest": {
+      "main": [
+        [
+          {
+            "node": "Email - Welcome (Product A)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email - Welcome (Product A)": {
+      "main": [
+        [
+          {
+            "node": "Email - Welcome (Product B)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email - Welcome (Product B)": {
+      "main": [
+        [
+          {
+            "node": "Email - Welcome (Service X)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email - Welcome (Service X)": {
+      "main": [
+        [
+          {
+            "node": "Email - Welcome (Default)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email - Welcome (Default)": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log New Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - Log New Lead": {
+      "main": [
+        [
+          {
+            "node": "Slack - Notify New Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack - Notify New Lead": {
+      "main": [
+        [
+          {
+            "node": "HTTP - Send to Analytics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Send to Analytics": {
+      "main": [
+        [
+          {
+            "node": "Code - Prepare Report Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code - Prepare Report Data": {
+      "main": [
+        [
+          {
+            "node": "Google Drive - Upload Lead Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive - Upload Lead Report": {
+      "main": [
+        [
+          {
+            "node": "AWS S3 - Backup Raw Lead Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AWS S3 - Backup Raw Lead Data": {
+      "main": [
+        [
+          {
+            "node": "HTTP - Monitoring Heartbeat",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP - Monitoring Heartbeat": {
+      "main": [
+        [
+          {
+            "node": "Slack - Alert Invalid Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack - Alert Invalid Data": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log Invalid Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

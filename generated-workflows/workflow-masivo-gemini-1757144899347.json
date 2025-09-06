@@ -1,0 +1,108 @@
+{
+  "nodes": [
+    {
+      "id": "node_1757144899334_soxra8v",
+      "name": "Telegram Chatbot Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "position": [
+        0,
+        100
+      ],
+      "parameters": {
+        "updateTypes": [
+          "message"
+        ]
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_credential_id",
+          "name": "Telegram Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757144899334_gm0zvq9",
+      "name": "Create Google Calendar Event",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        0,
+        300
+      ],
+      "parameters": {
+        "operation": "create",
+        "resource": "event",
+        "calendarId": "primary",
+        "summary": "={{$json.message.text.substring(0, 50) + ( $json.message.text.length > 50 ? '...' : '' )}}",
+        "description": "Interacción con Chatbot Telegram:  Usuario: {{$json.message.from.first_name}} {{$json.message.from.last_name || ''}} (ID: {{$json.message.from.id}}) Mensaje: {{$json.message.text}}  Fecha de la interacción: {{new Date($json.message.date * 1000).toLocaleString()}}",
+        "startDateTime": "={{new Date().toISOString()}}",
+        "endDateTime": "={{new Date(new Date().getTime() + 3600000).toISOString()}}",
+        "options": {}
+      },
+      "credentials": {
+        "googleApi": {
+          "id": "google_credential_id",
+          "name": "Google Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757144899334_j5dqbse",
+      "name": "Send Related Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        500
+      ],
+      "parameters": {
+        "fromEmail": "noreply@yourcompany.com",
+        "toEmail": "related.person@yourcompany.com",
+        "subject": "Nueva Interacción Chatbot Telegram: {{$json.message.text.substring(0, 30)}}",
+        "text": "Se ha registrado una nueva interacción con el chatbot de Telegram.  Detalles del mensaje: Usuario: {{$json.message.from.first_name}} {{$json.message.from.last_name || ''}} ID de Usuario: {{$json.message.from.id}} Mensaje: {{$json.message.text}}  Se ha creado un evento en Google Calendar.",
+        "options": {}
+      },
+      "credentials": {
+        "smtpApi": {
+          "id": "smtp_credential_id",
+          "name": "SMTP Account"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "node_1757144899334_vqcpfn3",
+      "name": "Send Confirmation to Client",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        500
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "chatId": "={{$json.message.chat.id}}",
+        "text": "¡Hola! Tus datos se han enviado correctamente y se ha agendado en el calendario. Nos pondremos en contacto pronto.",
+        "options": {}
+      },
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram_credential_id",
+          "name": "Telegram Account"
+        }
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Chatbot Trigger": {
+      "main": []
+    },
+    "Create Google Calendar Event": {
+      "main": []
+    }
+  },
+  "settings": {},
+  "active": false,
+  "id": "telegram-chatbot-google-calendar-email",
+  "name": "Telegram Chatbot to Google Calendar & Email"
+}
