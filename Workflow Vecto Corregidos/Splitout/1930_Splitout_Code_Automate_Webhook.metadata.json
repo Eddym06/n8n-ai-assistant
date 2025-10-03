@@ -1,0 +1,1027 @@
+{
+  "workflow_info": {
+    "id": "nGpVbW7RTylKujyT",
+    "name": "AI powered SEO Keyword Research Automation - The vibe Marketer",
+    "display_name": "AI powered SEO Keyword Research Automation - The vibe Marketer",
+    "file_name": "1930_Splitout_Code_Automate_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\1930_Splitout_Code_Automate_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true,
+    "fingerprint": "90c2e7642577"
+  },
+  "structure": {
+    "total_nodes": 34,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-dataforseo.dataForSeo",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.slack",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.nocoDb",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-dataforseo.dataForSeo",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.nocoDb",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 8
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          88,
+          455
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          208,
+          455
+        ]
+      },
+      {
+        "name": "Topic Expansion",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          60,
+          235
+        ]
+      },
+      {
+        "name": "Competitor Analysis",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1100,
+          660
+        ]
+      },
+      {
+        "name": "Keyword Difficulty",
+        "type": "n8n-nodes-dataforseo.dataForSeo",
+        "position": [
+          656,
+          260
+        ]
+      },
+      {
+        "name": "Search Volume & CPC",
+        "type": "n8n-nodes-dataforseo.dataForSeo",
+        "position": [
+          656,
+          60
+        ]
+      },
+      {
+        "name": "split primary keywords",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          440,
+          160
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1920,
+          640
+        ]
+      },
+      {
+        "name": "Keyword Ranking per URL",
+        "type": "n8n-nodes-dataforseo.dataForSeo",
+        "position": [
+          880,
+          660
+        ]
+      },
+      {
+        "name": "Final Keyword Strategy",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1940,
+          440
+        ]
+      },
+      {
+        "name": "Get Input from NocoDB",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -680,
+          340
+        ]
+      },
+      {
+        "name": "Split the Competitor URLs",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          580,
+          660
+        ]
+      },
+      {
+        "name": "Set relevant fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -500,
+          340
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1100,
+          860
+        ]
+      },
+      {
+        "name": "Format Json and add Competitor URLs",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          300,
+          660
+        ]
+      },
+      {
+        "name": "Aggregate SV & CPC",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          880,
+          60
+        ]
+      },
+      {
+        "name": "Aggregate KWD",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          880,
+          260
+        ]
+      },
+      {
+        "name": "Merge SV, CPC & KWD",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1174,
+          160
+        ]
+      },
+      {
+        "name": "Merge Topic Expansion, SV, CPC & KWD",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1472,
+          235
+        ]
+      },
+      {
+        "name": "Aggregate Competitor Analysis",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1472,
+          660
+        ]
+      },
+      {
+        "name": "Merge Everything",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1720,
+          440
+        ]
+      },
+      {
+        "name": "Write Content Brief ",
+        "type": "n8n-nodes-base.nocoDb",
+        "position": [
+          2320,
+          440
+        ]
+      },
+      {
+        "name": "Update Status - Done",
+        "type": "n8n-nodes-base.nocoDb",
+        "position": [
+          2320,
+          600
+        ]
+      },
+      {
+        "name": "Send Notification",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          2320,
+          800
+        ]
+      },
+      {
+        "name": "Start Notification",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          -340,
+          20
+        ]
+      },
+      {
+        "name": "Update Status - Started",
+        "type": "n8n-nodes-base.nocoDb",
+        "position": [
+          -140,
+          40
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          40
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          400,
+          -80
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          260,
+          600
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1700,
+          260
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2260,
+          260
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -740,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          460,
+          -280
+        ]
+      }
+    ],
+    "connections_count": 22,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 0,
+      "action_count": 34
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "monitoring and alerts",
+    "use_cases": [
+      "Team communication"
+    ],
+    "complexity_score": 870,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "search volume & cpc",
+      "nocoDb",
+      "merge everything",
+      "competitor analysis",
+      "keyword difficulty",
+      "sticky note5",
+      "split primary keywords",
+      "n8n nodes dataforseo.dataForSeo",
+      "sticky note7",
+      "sticky note3",
+      "structured output parser",
+      "openai chat model1",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "stickyNote",
+      "merge sv, cpc & kwd",
+      "ai-ml",
+      "webhook",
+      "sticky note6",
+      "aggregate competitor analysis",
+      "slack",
+      "keyword ranking per url",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "aggregate",
+      "aggregate kwd",
+      "start notification",
+      "final keyword strategy",
+      "code",
+      "openai chat model",
+      "set",
+      "sticky note4",
+      "openai chat model2",
+      "merge",
+      "send notification",
+      "format json and add competitor urls",
+      "write content brief ",
+      "sticky note",
+      "aggregate sv & cpc",
+      "@n8n/n8n nodes langchain.agent",
+      "complex",
+      "split the competitor urls",
+      "update status - started",
+      "get input from nocodb",
+      "topic expansion",
+      "monitoring and alerts",
+      "sticky note1",
+      "sticky note2",
+      "set relevant fields",
+      "merge topic expansion, sv, cpc & kwd",
+      "update status - done",
+      "splitOut"
+    ],
+    "description": "'AI powered SEO Keyword Research Automation - The vibe Marketer' es un workflow diseñado para monitoring and alerts con 34 nodos que ejecuta: OpenAI Chat Model, Structured Output Parser, Topic Expansion en la categoría de ai-ml.",
+    "semantic_content": "Workflow: AI powered SEO Keyword Research Automation - The vibe Marketer. Nodos: OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Topic Expansion (@n8n/n8n-nodes-langchain.agent), Competitor Analysis (@n8n/n8n-nodes-langchain.agent), Keyword Difficulty (n8n-nodes-dataforseo.dataForSeo), Search Volume & CPC (n8n-nodes-dataforseo.dataForSeo), split primary keywords (splitOut), OpenAI Chat Model2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Keyword Ranking per URL (n8n-nodes-dataforseo.dataForSeo), Final Keyword Strategy (@n8n/n8n-nodes-langchain.agent), Get Input from NocoDB (webhook), Split the Competitor URLs (splitOut), Set relevant fields (set), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Format Json and add Competitor URLs (code), Aggregate SV & CPC (aggregate), Aggregate KWD (aggregate), Merge SV, CPC & KWD (merge), Merge Topic Expansion, SV, CPC & KWD (merge), Aggregate Competitor Analysis (aggregate), Merge Everything (merge), Write Content Brief  (nocoDb), Update Status - Done (nocoDb), Send Notification (slack), Start Notification (slack), Update Status - Started (nocoDb), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote). Propósito: monitoring and alerts. Categoría: ai-ml",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Topic Expansion",
+      "OpenAI Chat Model",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "Structured Output Parser"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.nocodb",
+      "n8n-nodes-dataforseo.dataforseo",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.slack",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.aggregate"
+    ],
+    "search_terms": [
+      "code",
+      "webhook",
+      "1930",
+      "1930_splitout_code_automate_webhook",
+      "splitout",
+      "automate"
+    ],
+    "alternative_names": [
+      "AI powered SEO Keyword Research Automation - The vibe Marketer"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "monitoring and alerts"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 78.16091954022988,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.38218390804597
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:18.655502"
+  },
+  "semantic_vector": [
+    -0.055398356169462204,
+    -0.05648639425635338,
+    0.005783068016171455,
+    -0.029483342543244362,
+    -0.047093406319618225,
+    -0.05647328123450279,
+    0.04895851016044617,
+    -0.05281737446784973,
+    -0.04116598516702652,
+    0.042572785168886185,
+    -0.04384065791964531,
+    -0.035628098994493484,
+    -0.03798363730311394,
+    -0.05623532086610794,
+    -0.0390196368098259,
+    0.0565016008913517,
+    0.05649033561348915,
+    -0.02757999673485756,
+    -0.04045166075229645,
+    0.05432163178920746,
+    -0.05408767983317375,
+    0.05611466243863106,
+    -0.03169061616063118,
+    0.0032670071814209223,
+    0.005681097041815519,
+    -0.02000565268099308,
+    -0.055731479078531265,
+    0.055193278938531876,
+    -0.05572236329317093,
+    0.036379676312208176,
+    0.056000929325819016,
+    -0.017129266634583473,
+    -0.027500038966536522,
+    0.04331843927502632,
+    0.041054464876651764,
+    0.043358009308576584,
+    -0.007878167554736137,
+    0.05510318651795387,
+    0.021363435313105583,
+    -0.052834972739219666,
+    -0.04671097919344902,
+    0.055057235062122345,
+    -0.03323530778288841,
+    0.051775820553302765,
+    0.056479312479496,
+    0.053907107561826706,
+    0.05073336511850357,
+    -0.05356176570057869,
+    -0.0562182180583477,
+    -0.04838128015398979,
+    -0.052313342690467834,
+    0.033524706959724426,
+    -0.056389715522527695,
+    -0.05478673800826073,
+    0.008032272569835186,
+    -0.054755501449108124,
+    0.055692754685878754,
+    0.03739427402615547,
+    -0.009396920911967754,
+    0.054111264646053314,
+    -0.04527392238378525,
+    -0.05432968959212303,
+    0.04961046949028969,
+    0.055828481912612915,
+    -0.027512922883033752,
+    0.0472244992852211,
+    0.05644028261303902,
+    -0.04808010905981064,
+    0.05413852632045746,
+    -0.0074378727003932,
+    -0.04701242968440056,
+    0.029080592095851898,
+    -0.010760021395981312,
+    0.05648075416684151,
+    0.0442952960729599,
+    -0.031362827867269516,
+    0.04684946686029434,
+    -0.051266662776470184,
+    0.017887433990836143,
+    0.04653799533843994,
+    0.03971688449382782,
+    0.03195559233427048,
+    0.04319129139184952,
+    -0.05621600151062012,
+    -0.015204908326268196,
+    0.05596096068620682,
+    0.02801637165248394,
+    0.013001411221921444,
+    -0.03510364517569542,
+    -0.02817784994840622,
+    -0.02889818511903286,
+    0.0002345393440918997,
+    0.0507550947368145,
+    -0.040737900882959366,
+    0.05381986126303673,
+    -0.043521832674741745,
+    -0.04951271787285805,
+    0.04464563727378845,
+    -0.05605448782444,
+    -0.05645669996738434,
+    0.028079533949494362,
+    -0.030299387872219086,
+    0.0018930421210825443,
+    0.055733371526002884,
+    0.05566323176026344,
+    0.056433115154504776,
+    0.05649077892303467,
+    0.014048720709979534,
+    0.027162732556462288,
+    -0.05648311227560043,
+    -0.05130169540643692,
+    -0.055588480085134506,
+    0.011863211169838905,
+    0.029526490718126297,
+    0.04777488484978676,
+    -0.024652831256389618,
+    -0.05223937705159187,
+    -0.0563376322388649,
+    0.04184792935848236,
+    0.036576006561517715,
+    0.013611124828457832,
+    0.055900461971759796,
+    0.007432256825268269,
+    -0.04405652731657028,
+    0.055858783423900604,
+    0.027650415897369385,
+    -0.04802576079964638,
+    0.0475650355219841,
+    0.05125613510608673,
+    0.030635977163910866,
+    -0.010538331232964993,
+    -0.022977067157626152,
+    0.040363289415836334,
+    0.03846343234181404,
+    0.05533332750201225,
+    -0.05342959240078926,
+    -0.03362926468253136,
+    0.03347092494368553,
+    -0.018389174714684486,
+    -0.056376516819000244,
+    0.032432232052087784,
+    0.05649645999073982,
+    -0.05532538890838623,
+    0.05436376482248306,
+    -0.011732114478945732,
+    -0.05648684501647949,
+    0.032294001430273056,
+    -0.022112304344773293,
+    0.004885447211563587,
+    0.03438927233219147,
+    0.002690358553081751,
+    -0.04250761494040489,
+    -0.05125610530376434,
+    0.004077468067407608,
+    0.05492585524916649,
+    0.05649576336145401,
+    -0.045436739921569824,
+    -0.056252267211675644,
+    0.05448450893163681,
+    -0.05626630410552025,
+    -0.05643576383590698,
+    -0.05539233237504959,
+    0.031221162527799606,
+    0.05648057162761688,
+    0.04494042322039604,
+    -0.054582852870225906,
+    -0.052730992436409,
+    0.05622104927897453,
+    -0.05011240765452385,
+    -0.053841400891542435,
+    0.05646849796175957,
+    0.0317281112074852,
+    0.03047419711947441,
+    0.05625387281179428,
+    -0.02679719217121601,
+    0.05257779359817505,
+    -0.05561082810163498,
+    -0.008252096362411976,
+    0.009903496131300926,
+    -0.05531078577041626,
+    0.013878232799470425,
+    0.03500141203403473,
+    -0.05606110766530037,
+    0.03499915078282356,
+    0.05649659037590027,
+    0.05446935445070267,
+    -0.055730190128088,
+    -0.020546654239296913,
+    -0.04809175059199333,
+    -0.022766880691051483,
+    0.04446066915988922,
+    -0.03718717023730278,
+    -0.05383629351854324,
+    -0.047053802758455276,
+    -0.05556190386414528,
+    -0.05649891495704651,
+    0.04344687610864639,
+    0.0565016008913517,
+    0.03085373342037201,
+    -0.03450934961438179,
+    0.04883108660578728,
+    0.04489405080676079,
+    -0.0341421477496624,
+    -0.043437764048576355,
+    -0.050500836223363876,
+    -0.055465973913669586,
+    0.03675837442278862,
+    0.05546034127473831,
+    -0.05647634342312813,
+    -0.04769514128565788,
+    0.03427835553884506,
+    -0.033499013632535934,
+    0.05113247036933899,
+    -0.011740647256374359,
+    -0.05644750967621803,
+    -0.04403833672404289,
+    0.022998595610260963,
+    0.05137743055820465,
+    0.0464727021753788,
+    0.03640624135732651,
+    0.048454202711582184,
+    0.04172857850790024,
+    0.013065719045698643,
+    -0.027129150927066803,
+    -0.04546061530709267,
+    -0.056136079132556915,
+    -0.05533767119050026,
+    -0.0563792958855629,
+    -0.010666964575648308,
+    -0.04387819766998291,
+    -0.02641618810594082,
+    -0.046829257160425186,
+    -0.025349518284201622,
+    -0.056486260145902634,
+    0.04898030683398247,
+    0.056439317762851715,
+    0.05649757385253906,
+    0.0562276691198349,
+    -0.05434154346585274,
+    0.046116285026073456,
+    -0.015894707292318344,
+    0.04373718798160553,
+    -0.05648614838719368,
+    0.049831323325634,
+    0.05280623584985733,
+    0.055474478751420975,
+    0.032525014132261276,
+    0.007332870736718178,
+    0.02033805474638939,
+    0.05649856477975845,
+    -0.05645689368247986,
+    0.041800063103437424,
+    -0.04099936783313751,
+    -0.05397650599479675,
+    0.05169833451509476,
+    -0.05643915385007858,
+    -0.009275218471884727,
+    0.0565016008913517,
+    0.04389490932226181,
+    0.01393017079681158,
+    0.010763760656118393,
+    0.040225110948085785,
+    -0.031856827437877655,
+    0.05644280090928078,
+    0.05351576209068298,
+    0.0022348712664097548,
+    -0.028993889689445496,
+    0.029253633692860603,
+    -0.05607496574521065,
+    0.05348602309823036,
+    -0.05519038811326027,
+    -0.010985837318003178,
+    -0.04621385410428047,
+    0.054284315556287766,
+    0.056351277977228165,
+    0.007749513722956181,
+    -0.05494927614927292,
+    0.0492769218981266,
+    0.05648786574602127,
+    0.041372716426849365,
+    0.007270439527928829,
+    0.051584016531705856,
+    0.05444733425974846,
+    0.030602404847741127,
+    -0.014333177357912064,
+    -0.053550124168395996,
+    0.015792397782206535,
+    0.046814121305942535,
+    -0.04323848709464073,
+    0.056069158017635345,
+    -0.04852137714624405,
+    0.03294295445084572,
+    0.05647553876042366,
+    -0.023748086765408516,
+    0.037128034979104996,
+    -0.04832493141293526,
+    -0.03803271800279617,
+    -0.01488100178539753,
+    -0.04585259407758713,
+    -0.019588787108659744,
+    -0.05079341307282448,
+    0.03953612968325615,
+    0.05624083802103996,
+    -0.051839374005794525,
+    -0.04978287220001221,
+    -0.015560311265289783,
+    0.00824236124753952,
+    0.04932580888271332,
+    0.05166274681687355,
+    -0.04977751150727272,
+    0.045714832842350006,
+    -0.02675510197877884,
+    -0.01279458124190569,
+    -0.01741231046617031,
+    0.03439030796289444,
+    -0.043192487210035324,
+    -0.015326673164963722,
+    0.05270421877503395,
+    -0.0428321473300457,
+    0.015258301980793476,
+    0.04771856963634491,
+    -0.05548704043030739,
+    0.05321463569998741,
+    -0.052725650370121,
+    0.013592780567705631,
+    -0.0228988379240036,
+    0.0448794960975647,
+    -0.017160864546895027,
+    -0.05371078848838806,
+    0.044895805418491364,
+    0.03918476775288582,
+    -0.05355951935052872,
+    0.018382858484983444,
+    0.056463416665792465,
+    -0.021070009097456932,
+    0.04123324528336525,
+    0.05186320096254349,
+    -0.02959352917969227,
+    -0.01920737512409687,
+    -0.05332101508975029,
+    0.032445166260004044,
+    -0.053054824471473694,
+    0.02403286099433899,
+    -0.05549442395567894,
+    -0.0565016008913517,
+    0.054345667362213135,
+    -0.05478180944919586,
+    0.009726968593895435,
+    -0.003910963889211416,
+    -0.04512527957558632,
+    0.05406247824430466,
+    0.05638779699802399,
+    0.05306451767683029,
+    0.05605284869670868,
+    0.042905956506729126,
+    -0.0021308462601155043,
+    -0.05650082230567932,
+    -0.036285463720560074,
+    0.02804788015782833,
+    0.04592571035027504,
+    0.04645715653896332,
+    -0.042645324021577835,
+    -0.056495822966098785,
+    0.030155513435602188,
+    -0.056209318339824677,
+    0.056457504630088806,
+    0.03675086051225662,
+    -0.056422650814056396,
+    -0.023582957684993744,
+    -0.031762972474098206,
+    0.011654770001769066,
+    -0.05618045851588249,
+    0.04046105965971947,
+    0.0560649037361145,
+    0.0564168244600296,
+    0.054756615310907364,
+    -0.01764015294611454,
+    -0.05615716055035591,
+    0.006357107311487198,
+    -0.026506979018449783,
+    0.04236825555562973,
+    0.007184119429439306,
+    -0.045709673315286636,
+    0.03384007513523102,
+    -0.026821674779057503,
+    -0.023393016308546066,
+    0.05640055984258652,
+    -0.051194433122873306,
+    -0.015792876482009888,
+    -0.05623990669846535,
+    -0.04867047071456909,
+    -0.016784969717264175,
+    0.056483108550310135,
+    0.056318506598472595,
+    -0.051987290382385254,
+    0.05347580835223198,
+    -0.04053390398621559,
+    -0.05353742092847824,
+    0.03949728608131409,
+    -0.022436639294028282,
+    0.027745291590690613,
+    0.047112662345170975,
+    -0.03512177616357803,
+    0.0563228614628315,
+    -0.0427611842751503,
+    -0.05540059506893158,
+    -0.05640638247132301,
+    0.049268752336502075,
+    0.055684421211481094,
+    -0.05485126003623009,
+    0.004831785336136818,
+    0.05024674907326698,
+    0.0458865761756897,
+    0.045395106077194214,
+    -0.01749400421977043,
+    -0.0503753162920475,
+    0.054421085864305496,
+    -0.047144029289484024,
+    -0.05567771941423416,
+    0.03779583051800728,
+    -0.008122415281832218,
+    0.04881799966096878,
+    -0.05643656477332115,
+    0.02728814259171486,
+    -0.002383897779509425,
+    0.02839934639632702,
+    -0.05645110458135605,
+    0.055637963116168976,
+    -0.032830461859703064,
+    0.028797846287488937,
+    -0.005710827186703682,
+    -0.013907847926020622,
+    -0.04087609052658081,
+    0.04650622233748436,
+    -0.05597691237926483,
+    -0.05552632734179497,
+    -0.028717750683426857,
+    -0.056483086198568344,
+    -0.056379131972789764,
+    -0.02535451576113701,
+    0.04733222723007202,
+    -0.05503387376666069,
+    -0.0417981892824173,
+    -0.05512985587120056,
+    -0.012845158576965332,
+    -0.05475979298353195,
+    -0.05576379597187042,
+    -0.04740038141608238,
+    0.05374673753976822,
+    -0.05635461211204529,
+    0.037562403827905655,
+    0.034314535558223724,
+    0.05633463338017464,
+    0.053749341517686844,
+    0.05339356139302254,
+    -0.05649779736995697,
+    0.046379946172237396,
+    0.05648580193519592,
+    0.04931333661079407,
+    -0.05177171155810356,
+    0.0555444061756134,
+    0.042411331087350845,
+    0.05640184134244919,
+    0.056114111095666885,
+    -0.0189003087580204,
+    -0.05479809641838074,
+    0.0066566201858222485,
+    0.002439467003569007,
+    -0.05640732869505882,
+    0.05622279271483421,
+    0.054604362696409225,
+    -0.05120500177145004,
+    0.049947213381528854,
+    0.05505024641752243,
+    -0.053573593497276306,
+    -0.022932114079594612,
+    0.01667502149939537,
+    0.042981360107660294,
+    0.025765977799892426,
+    0.025679435580968857,
+    -0.050670791417360306,
+    0.056355152279138565,
+    -0.037972964346408844,
+    -0.056480515748262405,
+    -0.0017403579549863935,
+    0.056419648230075836,
+    -0.023744791746139526,
+    -0.05026984587311745,
+    -0.024698739871382713,
+    0.044584594666957855,
+    0.02711709588766098,
+    0.05116361752152443,
+    -0.042593952268362045,
+    0.013835214078426361,
+    -0.05430155247449875,
+    0.05433374643325806,
+    0.051202286034822464,
+    0.05505882576107979,
+    -0.054502978920936584,
+    -0.037306785583496094,
+    0.056282028555870056,
+    -0.05491868779063225,
+    0.05635387450456619,
+    -0.05649706348776817,
+    -0.036898620426654816,
+    -0.034440431743860245,
+    0.04149762541055679,
+    -0.04941944777965546,
+    -0.05336451530456543,
+    0.056492846459150314,
+    -0.056471262127161026,
+    -0.02768516354262829
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs monitoring and alerts; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for monitoring and alerts in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

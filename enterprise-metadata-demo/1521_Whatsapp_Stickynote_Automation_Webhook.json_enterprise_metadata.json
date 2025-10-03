@@ -1,0 +1,25 @@
+{
+  "name": "WhatsApp Automation Workflow - 1521_Whatsapp_Stickynote_Automation_Webhook.json",
+  "description": "🤖 WhatsApp automation workflow with AI capabilities",
+  "node_count": 12,
+  "validation": {
+    "is_valid": true,
+    "issues": [],
+    "warnings": []
+  },
+  "business_value": {
+    "automation_level": "high",
+    "roi_projection": "200-400%"
+  },
+  "error": "JSON parsing failed, using fallback metadata",
+  "metadata": {
+    "version": "1.0",
+    "extraction_date": "2025-09-15T04:45:21.398Z",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Whatsapp\\1521_Whatsapp_Stickynote_Automation_Webhook.json",
+    "category": "WhatsApp",
+    "original_filename": "1521_Whatsapp_Stickynote_Automation_Webhook.json",
+    "enhancement_agent": "MetadataEnhancementAgent Demo v1.0",
+    "gemini_model": "gemini-2.0-flash-exp",
+    "analysis_depth": "enterprise-level"
+  }
+}

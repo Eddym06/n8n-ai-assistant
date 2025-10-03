@@ -1,0 +1,368 @@
+{
+  "workflow": {
+    "name": "Workflow Inteligente - 25/9/2025",
+    "active": false,
+    "nodes": [
+      {
+        "id": "intelligent-ict9o2snt",
+        "name": "Webhook de Entrada Inteligente",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          310.6534834005979,
+          232.87977986897394
+        ],
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "webhook-data",
+          "responseMode": "lastNode",
+          "options": {
+            "noResponseBody": false,
+            "rawBody": false,
+            "allowedOrigins": "*"
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-ysl21rbxu",
+        "name": "Validate Order - Sistema",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          650.0675677721788,
+          415.2662580595801
+        ],
+        "parameters": {
+          "conditions": [
+            {
+              "value1": "={{$json.data}}",
+              "operator": "isNotEmpty",
+              "value2": ""
+            }
+          ],
+          "options": {}
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-ahpwmc3cf",
+        "name": "Check Inventory - Sistema",
+        "type": "n8n-nodes-base.postgres",
+        "position": [
+          811.5129648478911,
+          567.2734569092861
+        ],
+        "parameters": {
+          "options": {
+            "queryBatching": true,
+            "batchSize": 100
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "postgres": {
+            "id": "pg-creds",
+            "name": "PostgreSQL DB"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-eq3tj3v79",
+        "name": "Process Payment - Sistema",
+        "type": "n8n-nodes-base.stripe",
+        "position": [
+          760.5738150108739,
+          250.27980686871393
+        ],
+        "parameters": {},
+        "typeVersion": 1,
+        "credentials": {
+          "stripeApi": {
+            "id": "stripe-creds",
+            "name": "Stripe API"
+          }
+        },
+        "onError": "continueRegularOutput",
+        "alwaysOutputData": true,
+        "retryOnFail": true,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "continueOnFail": false
+      },
+      {
+        "id": "intelligent-oim4e21es",
+        "name": "Generate Invoice - Sistema",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          786.1103258199756,
+          677.2508988828141
+        ],
+        "parameters": {
+          "functionCode": "// Procesamiento de datos básico\nconst processedItems = items.map(item => {\n    return {\n        json: {\n            ...item.json,\n            processed: true,\n            processedAt: new Date().toISOString(),\n            workflowId: '{{$workflow.id}}',\n            executionId: '{{$execution.id}}'\n        }\n    };\n});\n\nreturn processedItems;"
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-079s2b1pa",
+        "name": "Send Confirmation - Sistema",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          441.2424661545286,
+          432.775941946326
+        ],
+        "parameters": {
+          "fromEmail": "noreply@company.com",
+          "toEmail": "={{$json.email}}",
+          "subject": "Notificación de {{$workflow.name}}",
+          "message": "Su solicitud ha sido procesada exitosamente por nuestro sistema.",
+          "options": {
+            "allowUnauthorizedCerts": false,
+            "appendAttribution": false
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "smtp": {
+            "id": "email-creds",
+            "name": "SMTP Server"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-h0ifufnyo",
+        "name": "Update Inventory - Sistema",
+        "type": "n8n-nodes-base.postgres",
+        "position": [
+          647.1862174926221,
+          125.97786400703743
+        ],
+        "parameters": {
+          "options": {
+            "queryBatching": true,
+            "batchSize": 100
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "postgres": {
+            "id": "pg-creds",
+            "name": "PostgreSQL DB"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-0bx5jzgxx",
+        "name": "Notify Fulfillment - Sistema",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          617.5750422525371,
+          561.1251870571398
+        ],
+        "parameters": {
+          "channel": "#general",
+          "text": "📢 Notificación: {{$json.message || \"Evento procesado correctamente\"}}",
+          "username": "n8n-bot",
+          "options": {}
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "slackApi": {
+            "id": "slack-creds",
+            "name": "Slack API"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-mb6f87x0m",
+        "name": "Manejador Inteligente de Errores",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          333.67386492698296,
+          582.8828170150236
+        ],
+        "parameters": {
+          "functionCode": "// Procesamiento de datos básico\nconst processedItems = items.map(item => {\n    return {\n        json: {\n            ...item.json,\n            processed: true,\n            processedAt: new Date().toISOString(),\n            workflowId: '{{$workflow.id}}',\n            executionId: '{{$execution.id}}'\n        }\n    };\n});\n\nreturn processedItems;"
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      }
+    ],
+    "connections": {
+      "Validate Order - Sistema": {
+        "main": [
+          [
+            {
+              "node": "Check Inventory - Sistema",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Check Inventory - Sistema": {
+        "main": [
+          [
+            {
+              "node": "Process Payment - Sistema",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Process Payment - Sistema": {
+        "main": [
+          [
+            {
+              "node": "Generate Invoice - Sistema",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Generate Invoice - Sistema": {
+        "main": [
+          [
+            {
+              "node": "Send Confirmation - Sistema",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Notify Fulfillment - Sistema",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Send Confirmation - Sistema": {
+        "main": [
+          [
+            {
+              "node": "Update Inventory - Sistema",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Update Inventory - Sistema": {
+        "main": [
+          [
+            {
+              "node": "Notify Fulfillment - Sistema",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Notify Fulfillment - Sistema": {
+        "main": [
+          [
+            {
+              "node": "Manejador Inteligente de Errores",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2025-09-26T01:58:27.484Z",
+    "updatedAt": "2025-09-26T01:58:27.484Z",
+    "settings": {
+      "executionOrder": "v1",
+      "saveManualExecutions": true,
+      "callerPolicy": "workflowsFromSameOwner",
+      "errorWorkflow": "",
+      "timezone": "Europe/Madrid"
+    },
+    "staticData": {},
+    "tags": [
+      "intelligent-agent",
+      "ai-generated",
+      "professional"
+    ],
+    "triggerCount": 0,
+    "versionId": "2.0.0",
+    "meta": {
+      "generatedBy": "intelligent-workflow-agent-v1.0",
+      "generatedAt": "2025-09-26T01:58:27.484Z",
+      "analysis": {
+        "domains": [],
+        "complexity": "SIMPLE",
+        "intents": [
+          "data-capture"
+        ],
+        "confidence": 0.5
+      },
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "estimatedExecutionTime": "6.66 segundos (estimación inteligente)",
+        "confidenceScore": 0.8999999999999999
+      }
+    }
+  },
+  "metadata": {
+    "prompt": "Plataforma de marketing automation con segmentación, campañas y reportes",
+    "method": "intelligent-agent",
+    "duration": 5,
+    "generatedAt": "2025-09-26T01:58:27.486Z",
+    "nodeCount": 9,
+    "connectionCount": 7
+  }
+}

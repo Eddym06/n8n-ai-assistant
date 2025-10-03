@@ -1,0 +1,1153 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Splitout Code Create Webhook",
+    "file_name": "0877_Splitout_Code_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\0877_Splitout_Code_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "be037bfbaf45"
+  },
+  "structure": {
+    "total_nodes": 44,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.aggregate",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Qdrant MCP Server",
+        "type": "@n8n/n8n-nodes-langchain.mcpTrigger",
+        "position": [
+          -40,
+          60
+        ]
+      },
+      {
+        "name": "When Executed by Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          540,
+          280
+        ]
+      },
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -140,
+          -580
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -220,
+          -80
+        ]
+      },
+      {
+        "name": "Insert",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          -40,
+          380
+        ]
+      },
+      {
+        "name": "Search",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          80,
+          440
+        ]
+      },
+      {
+        "name": "Recommend",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          280,
+          240
+        ]
+      },
+      {
+        "name": "Operation",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          760,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          480,
+          -140
+        ]
+      },
+      {
+        "name": "Compare",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          220,
+          380
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1920,
+          860
+        ]
+      },
+      {
+        "name": "Recommend API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1980,
+          900
+        ]
+      },
+      {
+        "name": "Get Embeddings",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1580,
+          900
+        ]
+      },
+      {
+        "name": "Preferences to Items",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1380,
+          900
+        ]
+      },
+      {
+        "name": "Aggregate Embeddings",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1780,
+          900
+        ]
+      },
+      {
+        "name": "Get Embeddings1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1380,
+          560
+        ]
+      },
+      {
+        "name": "Aggregate Embeddings1",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1580,
+          560
+        ]
+      },
+      {
+        "name": "Group Search API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1780,
+          560
+        ]
+      },
+      {
+        "name": "Has Results?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2600,
+          560
+        ]
+      },
+      {
+        "name": "Simplify Group Results",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2180,
+          560
+        ]
+      },
+      {
+        "name": "Empty Compare Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2820,
+          660
+        ]
+      },
+      {
+        "name": "Aggregate Compare Response",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2820,
+          440
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          1340,
+          -40
+        ]
+      },
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          1460,
+          -40
+        ]
+      },
+      {
+        "name": "Recursive Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          1560,
+          80
+        ]
+      },
+      {
+        "name": "Simplify Recommend Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2180,
+          900
+        ]
+      },
+      {
+        "name": "Get Insert Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1780,
+          -200
+        ]
+      },
+      {
+        "name": "Get Search Response",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1780,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1720,
+          500
+        ]
+      },
+      {
+        "name": "Insert Reviews",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          1380,
+          -200
+        ]
+      },
+      {
+        "name": "Search Reviews",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          1380,
+          240
+        ]
+      },
+      {
+        "name": "Split Out Companies",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1980,
+          560
+        ]
+      },
+      {
+        "name": "Filter By CompanyId",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          2380,
+          560
+        ]
+      },
+      {
+        "name": "Aggregate Recommend Response",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2600,
+          780
+        ]
+      },
+      {
+        "name": "Has Results?1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2380,
+          900
+        ]
+      },
+      {
+        "name": "Empty Compare Response1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          1000
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          1480,
+          400
+        ]
+      },
+      {
+        "name": "ListCompanies",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          -120,
+          240
+        ]
+      },
+      {
+        "name": "List by Facet API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1380,
+          -440
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -720,
+          -740
+        ]
+      },
+      {
+        "name": "Create Facet Index",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          260,
+          -580
+        ]
+      },
+      {
+        "name": "Create Collection",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          60,
+          -580
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -220,
+          -740
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -220,
+          -200
+        ]
+      }
+    ],
+    "connections_count": 28,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 3,
+      "action_count": 41
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1395,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "aggregate compare response",
+      "search",
+      "insert reviews",
+      "preferences to items",
+      "filter by companyid",
+      "simplify recommend response",
+      "recommend api",
+      "recursive character text splitter",
+      "switch",
+      "recommend",
+      "aggregate embeddings",
+      "has results?",
+      "sticky note3",
+      "get embeddings",
+      "ai-ml",
+      "stickyNote",
+      "when clicking ‘test workflow’",
+      "@n8n/n8n nodes langchain.embeddingsOpenAi",
+      "get insert response",
+      "aggregate recommend response",
+      "insert",
+      "@n8n/n8n nodes langchain.toolWorkflow",
+      "list by facet api",
+      "aggregate embeddings1",
+      "default data loader",
+      "webhook integration",
+      "httpRequest",
+      "aggregate",
+      "get search response",
+      "sticky note2",
+      "compare",
+      "create facet index",
+      "listcompanies",
+      "code",
+      "sticky note9",
+      "@n8n/n8n nodes langchain.vectorStoreQdrant",
+      "simplify group results",
+      "sticky note4",
+      "set",
+      "search reviews",
+      "operation",
+      "sticky note",
+      "get embeddings1",
+      "embeddings openai",
+      "split out companies",
+      "qdrant mcp server",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "sticky note8",
+      "has results?1",
+      "embeddings openai1",
+      "empty compare response1",
+      "complex",
+      "filter",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "manualTrigger",
+      "empty compare response",
+      "@n8n/n8n nodes langchain.mcpTrigger",
+      "sticky note1",
+      "group search api",
+      "create collection",
+      "splitOut",
+      "executeWorkflowTrigger",
+      "when executed by another workflow"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 44 nodos con 3 disparadores que ejecuta: Sticky Note, Insert, Search en la categoría de ai-ml.",
+    "semantic_content": "Nodos: Sticky Note (stickyNote), Insert (@n8n/n8n-nodes-langchain.toolWorkflow), Search (@n8n/n8n-nodes-langchain.toolWorkflow), Recommend (@n8n/n8n-nodes-langchain.toolWorkflow), Qdrant MCP Server (@n8n/n8n-nodes-langchain.mcpTrigger), When Executed by Another Workflow (executeWorkflowTrigger), Operation (switch), Sticky Note1 (stickyNote), Compare (@n8n/n8n-nodes-langchain.toolWorkflow), Sticky Note8 (stickyNote), Recommend API (httpRequest), Get Embeddings (httpRequest), Preferences to Items (code), Aggregate Embeddings (aggregate), Get Embeddings1 (httpRequest), Aggregate Embeddings1 (aggregate), Group Search API (httpRequest), Has Results? (if), Simplify Group Results (set), Empty Compare Response (set), Aggregate Compare Response (aggregate), Embeddings OpenAI (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Recursive Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), Simplify Recommend Response (set), Get Insert Response (set), Get Search Response (aggregate), Sticky Note9 (stickyNote), Insert Reviews (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Search Reviews (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Split Out Companies (splitOut), Filter By CompanyId (filter), Aggregate Recommend Response (aggregate), Has Results?1 (if), Empty Compare Response1 (set), Embeddings OpenAI1 (@n8n/n8n-nodes-langchain.embeddingsOpenAi), ListCompanies (@n8n/n8n-nodes-langchain.toolWorkflow), List by Facet API (httpRequest), Sticky Note2 (stickyNote), Create Facet Index (httpRequest), Create Collection (httpRequest), Sticky Note3 (stickyNote), When clicking ‘Test workflow’ (manualTrigger), Sticky Note4 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Qdrant MCP Server, When Executed by Another Workflow, When clicking ‘Test workflow’",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "Insert",
+      "When Executed by Another Workflow",
+      "Search",
+      "Qdrant MCP Server",
+      "n8n-nodes-base.manualTrigger",
+      "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.mcptrigger",
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.toolworkflow",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.vectorstoreqdrant",
+      "@n8n/n8n-nodes-langchain.embeddingsopenai",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.aggregate"
+    ],
+    "search_terms": [
+      "create",
+      "code",
+      "webhook",
+      "0877",
+      "splitout",
+      "0877_splitout_code_create_webhook"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "@n8n/n8n-nodes-langchain.mcpTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 63.08243727598566,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 76.36648745519713
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:17.792495"
+  },
+  "semantic_vector": [
+    -0.052132170647382736,
+    -0.05669347569346428,
+    0.04699188470840454,
+    -0.052997030317783356,
+    -0.037073053419589996,
+    -0.04284336417913437,
+    0.05452654883265495,
+    -0.053146783262491226,
+    -0.05549012869596481,
+    0.056754738092422485,
+    0.002583773573860526,
+    0.03098335862159729,
+    0.03433281183242798,
+    -0.025654714554548264,
+    -0.03303049877285957,
+    0.056799136102199554,
+    0.056707628071308136,
+    0.039216142147779465,
+    -0.03135622292757034,
+    -0.01142745092511177,
+    0.02396489679813385,
+    0.04967479780316353,
+    0.012139085680246353,
+    0.046934764832258224,
+    -0.03632161021232605,
+    -0.012262586504220963,
+    -0.05397537350654602,
+    0.055970869958400726,
+    -0.055944398045539856,
+    -0.01245077420026064,
+    0.04798939824104309,
+    -0.04511377587914467,
+    -0.05431542918086052,
+    -0.021350091323256493,
+    0.042948879301548004,
+    0.03594786673784256,
+    0.044273313134908676,
+    -0.007919575087726116,
+    -0.032313719391822815,
+    -0.0503426119685173,
+    -0.050926633179187775,
+    0.045621685683727264,
+    -0.048829153180122375,
+    0.047874365001916885,
+    0.056799110025167465,
+    0.0534476563334465,
+    -0.039885263890028,
+    0.04294740408658981,
+    0.0016159468796104193,
+    0.035647641867399216,
+    -0.05423704534769058,
+    0.0406024269759655,
+    -0.05646872892975807,
+    -0.05481303110718727,
+    -0.05653862655162811,
+    -0.05554848909378052,
+    0.04753458872437477,
+    0.015025777742266655,
+    0.0305703766644001,
+    0.049278341233730316,
+    0.05627860128879547,
+    -0.037687815725803375,
+    0.008046900853514671,
+    0.05671252682805061,
+    0.04895201697945595,
+    0.0005981131107546389,
+    0.056573063135147095,
+    -0.028081104159355164,
+    0.056615740060806274,
+    -0.05277768149971962,
+    -0.0567883662879467,
+    0.026790358126163483,
+    0.009597532451152802,
+    0.05626334249973297,
+    -0.05451631173491478,
+    -0.016759345307946205,
+    0.05321982875466347,
+    -0.05540262162685394,
+    -0.015454386360943317,
+    0.017679043114185333,
+    0.05615738779306412,
+    -0.014708508737385273,
+    -0.049594536423683167,
+    -0.0553959459066391,
+    0.027865568175911903,
+    0.04408826678991318,
+    -0.03924734890460968,
+    -0.054365936666727066,
+    0.028040418401360512,
+    0.004519881680607796,
+    -0.0525374598801136,
+    0.028186263516545296,
+    0.03711463510990143,
+    -0.02910415641963482,
+    0.038119710981845856,
+    -0.05402978137135506,
+    0.04393947497010231,
+    0.02518889494240284,
+    -0.05677008628845215,
+    -0.05679607018828392,
+    0.052674099802970886,
+    -0.011724269948899746,
+    0.05461032688617706,
+    0.05552354454994202,
+    0.04946708306670189,
+    0.03600446879863739,
+    0.05677574872970581,
+    0.04948270320892334,
+    0.020668568089604378,
+    -0.056757695972919464,
+    -0.012620963156223297,
+    -0.05503690242767334,
+    0.011294192634522915,
+    -0.006832369137555361,
+    -0.015963329002261162,
+    0.03554297238588333,
+    -0.05558081716299057,
+    -0.055447354912757874,
+    0.023655040189623833,
+    0.05181364342570305,
+    0.0067984312772750854,
+    0.053938280791044235,
+    0.044719841331243515,
+    0.03290608525276184,
+    0.05674605071544647,
+    -0.019145948812365532,
+    0.033223532140254974,
+    0.056179799139499664,
+    0.04633830860257149,
+    -0.046808335930109024,
+    0.028159456327557564,
+    -0.02635658159852028,
+    0.05391453579068184,
+    -0.05546123534440994,
+    0.05535302311182022,
+    -0.0552382729947567,
+    -0.041964173316955566,
+    -0.05021784082055092,
+    -0.05602647364139557,
+    -0.056797415018081665,
+    -0.04288113862276077,
+    0.05679909884929657,
+    -0.02669624611735344,
+    0.032423101365566254,
+    0.013633400201797485,
+    -0.056790538132190704,
+    0.05674092844128609,
+    -0.041667722165584564,
+    0.043651022017002106,
+    0.03979165107011795,
+    -0.01331388857215643,
+    -0.03375089913606644,
+    -0.021164733916521072,
+    -0.0562719851732254,
+    0.05674566328525543,
+    0.05679025873541832,
+    -0.044010698795318604,
+    -0.05670878291130066,
+    -0.013671926222741604,
+    -0.05100398138165474,
+    -0.055391546338796616,
+    -0.05496571958065033,
+    0.039188072085380554,
+    0.05630600452423096,
+    -0.008054085075855255,
+    -0.056374289095401764,
+    -0.0549958162009716,
+    0.03678072988986969,
+    -0.05610191076993942,
+    -0.0417415052652359,
+    0.028027750551700592,
+    -0.03804297000169754,
+    -0.0320621132850647,
+    0.05300182104110718,
+    -0.012813572771847248,
+    0.044373806565999985,
+    0.04758257791399956,
+    -0.05170150846242905,
+    0.03600020706653595,
+    -0.05497407913208008,
+    -0.041447997093200684,
+    0.03612774983048439,
+    -0.055937133729457855,
+    0.050045788288116455,
+    0.0559939406812191,
+    0.05035052075982094,
+    -0.05581203103065491,
+    0.05650153383612633,
+    0.03310476988554001,
+    0.05475877597928047,
+    0.018473848700523376,
+    -0.0231376551091671,
+    0.0182328037917614,
+    -0.05648050457239151,
+    -0.05629519373178482,
+    -0.056610770523548126,
+    0.026899855583906174,
+    0.056799136102199554,
+    -0.002460651332512498,
+    0.012375078164041042,
+    0.0519556924700737,
+    0.05312613397836685,
+    0.01768965646624565,
+    0.045080896466970444,
+    0.03220459446310997,
+    -0.03285175561904907,
+    -0.04927392303943634,
+    0.046432171016931534,
+    -0.05679807811975479,
+    -0.028043024241924286,
+    0.03777385130524635,
+    0.03267676383256912,
+    0.027736308053135872,
+    0.05278262123465538,
+    -0.05679440498352051,
+    -0.05476289987564087,
+    0.03891496732831001,
+    0.055607546120882034,
+    0.05596074089407921,
+    -0.024750368669629097,
+    -0.04956412315368652,
+    0.027638930827379227,
+    0.0472600944340229,
+    0.034980468451976776,
+    -0.0307098887860775,
+    -0.05575893819332123,
+    -0.053677767515182495,
+    -0.04883105680346489,
+    -0.05587993934750557,
+    -0.056079089641571045,
+    0.054484084248542786,
+    -0.05644890293478966,
+    0.009821982122957706,
+    -0.056799087673425674,
+    0.054560646414756775,
+    0.056727517396211624,
+    0.05679909139871597,
+    0.056781571358442307,
+    -0.05541317164897919,
+    0.044314999133348465,
+    -0.045279406011104584,
+    0.052484042942523956,
+    -0.053395770490169525,
+    0.05480421334505081,
+    0.014475243166089058,
+    0.052366387099027634,
+    0.05224612355232239,
+    -0.025700893253087997,
+    0.05406748875975609,
+    0.05674699693918228,
+    -0.05016028881072998,
+    0.02112475037574768,
+    0.022666724398732185,
+    -0.02151786908507347,
+    0.05134524032473564,
+    -0.04274243488907814,
+    -0.031339406967163086,
+    0.056799136102199554,
+    -0.038960833102464676,
+    -0.024029159918427467,
+    0.05535382404923439,
+    -0.043472398072481155,
+    -0.02225077897310257,
+    0.056607626378536224,
+    -0.022560762241482735,
+    0.043109308928251266,
+    -0.049528975039720535,
+    -0.020141856744885445,
+    -0.034485507756471634,
+    0.016497230157256126,
+    -0.0546027347445488,
+    0.05384194105863571,
+    -0.035116881132125854,
+    0.05647340044379234,
+    0.04995160922408104,
+    -0.041220489889383316,
+    -0.05677054449915886,
+    0.04590877890586853,
+    0.05679909512400627,
+    0.05317327380180359,
+    -0.054072313010692596,
+    0.048571404069662094,
+    0.054662659764289856,
+    -0.037226393818855286,
+    -0.00493178004398942,
+    -0.056263335049152374,
+    0.05420291796326637,
+    0.05659104883670807,
+    -0.04446188360452652,
+    0.0567895881831646,
+    -0.02262437529861927,
+    0.05632942169904709,
+    0.056751053780317307,
+    -0.04317990317940712,
+    0.05637795850634575,
+    -0.049312006682157516,
+    0.03088967502117157,
+    -0.041726186871528625,
+    0.01701524294912815,
+    0.03390907868742943,
+    0.016316240653395653,
+    0.005124752875417471,
+    0.05231446400284767,
+    0.006140912417322397,
+    -0.002242899965494871,
+    0.037248045206069946,
+    0.056342482566833496,
+    -0.025643058121204376,
+    0.05396974831819534,
+    -0.0055464752949774265,
+    0.045189954340457916,
+    -0.023620445281267166,
+    0.017788678407669067,
+    -0.056152425706386566,
+    -0.03176689147949219,
+    -0.0565720871090889,
+    0.015122232027351856,
+    0.02267838642001152,
+    0.032471101731061935,
+    0.03879494592547417,
+    -0.03248830884695053,
+    -0.041989173740148544,
+    0.056538261473178864,
+    -0.03314020112156868,
+    0.05453729256987572,
+    -0.04367424547672272,
+    0.005124755669385195,
+    -0.043699320405721664,
+    0.010935245081782341,
+    0.034738827496767044,
+    0.052403636276721954,
+    -0.050793737173080444,
+    0.04132908582687378,
+    0.05544540286064148,
+    -0.007025078404694796,
+    0.04108891636133194,
+    0.04117218032479286,
+    0.007309758570045233,
+    0.041439544409513474,
+    -0.05639068782329559,
+    -0.04550841823220253,
+    -0.05513010546565056,
+    0.020431041717529297,
+    -0.042426642030477524,
+    -0.056799136102199554,
+    -0.04647151380777359,
+    0.05004214495420456,
+    -0.027165602892637253,
+    -0.055798374116420746,
+    0.026449743658304214,
+    0.02238333784043789,
+    0.04902099817991257,
+    0.02947087399661541,
+    0.03342917934060097,
+    0.014612666331231594,
+    -0.051673773676157,
+    -0.05679911747574806,
+    -0.0070546092465519905,
+    -0.02772541716694832,
+    0.03090009279549122,
+    0.024113325402140617,
+    -0.05653967708349228,
+    -0.056799136102199554,
+    0.05104690417647362,
+    -0.05533382669091225,
+    0.05592614784836769,
+    0.043269794434309006,
+    -0.046169769018888474,
+    0.03998822718858719,
+    -0.012726014479994774,
+    -0.027722815051674843,
+    -0.04217701405286789,
+    -0.056502316147089005,
+    0.05125202611088753,
+    0.05628072842955589,
+    0.05596602335572243,
+    -0.05513045936822891,
+    -0.05523939058184624,
+    -0.03428516536951065,
+    -0.05090231075882912,
+    -0.0396881140768528,
+    0.02207709103822708,
+    -0.03577352315187454,
+    -0.049674686044454575,
+    0.03292689472436905,
+    -0.04631434753537178,
+    0.05649237334728241,
+    -0.04699193313717842,
+    -0.05531656742095947,
+    -0.05262543261051178,
+    0.046015407890081406,
+    -0.055821504443883896,
+    0.05675658956170082,
+    0.052667148411273956,
+    -0.04275347292423248,
+    0.056247908622026443,
+    -0.0327264703810215,
+    -0.05203312262892723,
+    0.05342014133930206,
+    -0.04030352085828781,
+    0.05587663874030113,
+    0.0037952489219605923,
+    -0.05453483387827873,
+    0.0558728352189064,
+    0.030616262927651405,
+    -0.03125258535146713,
+    -0.05679547041654587,
+    0.056021548807621,
+    0.05527787655591965,
+    0.02453003264963627,
+    0.027589725330471992,
+    0.0518047921359539,
+    0.005138668697327375,
+    0.024922017008066177,
+    -0.0023814074229449034,
+    -0.029916802421212196,
+    0.054913099855184555,
+    -0.041219647973775864,
+    -0.05075979605317116,
+    -0.031448811292648315,
+    -0.0328947976231575,
+    -0.03786458075046539,
+    -0.047622837126255035,
+    0.037152111530303955,
+    0.03704033046960831,
+    -0.01821054518222809,
+    -0.05647791177034378,
+    0.05594663694500923,
+    -0.02993606962263584,
+    0.04287078231573105,
+    -0.02821074053645134,
+    -0.038847506046295166,
+    -0.05458955466747284,
+    -0.030568614602088928,
+    -0.055639833211898804,
+    -0.05273573845624924,
+    -0.054384730756282806,
+    -0.05665244162082672,
+    -0.055674172937870026,
+    -0.054472416639328,
+    -0.04377659782767296,
+    -0.05666135251522064,
+    -0.006233736872673035,
+    -0.04924071580171585,
+    0.017962375655770302,
+    -0.05677155405282974,
+    -0.04352721571922302,
+    0.002635788172483444,
+    -0.03396706283092499,
+    -0.03919719159603119,
+    0.05304458364844322,
+    0.022755587473511696,
+    0.056799136102199554,
+    0.05559317395091057,
+    0.04138975962996483,
+    -0.05679905042052269,
+    0.011116093024611473,
+    0.05678829550743103,
+    0.049598973244428635,
+    -0.014670971781015396,
+    0.04822113737463951,
+    0.05139709636569023,
+    0.05675438418984413,
+    0.05677276477217674,
+    0.03684873878955841,
+    -0.055381547659635544,
+    0.056358952075242996,
+    0.055644694715738297,
+    -0.04930249601602554,
+    0.05317944660782814,
+    0.054585907608270645,
+    -0.053337618708610535,
+    -0.0013781123561784625,
+    0.0313197523355484,
+    -0.04849192872643471,
+    -0.04731115698814392,
+    0.04268757253885269,
+    0.0486646369099617,
+    0.04968389868736267,
+    -0.028173210099339485,
+    -0.05360165238380432,
+    0.04780346527695656,
+    -0.04461202025413513,
+    -0.05649920552968979,
+    -0.0010980465449392796,
+    0.05657083913683891,
+    -0.04077812284231186,
+    -0.04317433014512062,
+    0.00409652991220355,
+    0.043013960123062134,
+    0.04031836614012718,
+    0.05461381375789642,
+    -0.034588031470775604,
+    0.038961201906204224,
+    -0.051674116402864456,
+    0.05520844832062721,
+    -0.030933981761336327,
+    0.021942047402262688,
+    -0.05492769926786423,
+    0.03326842561364174,
+    0.01957368291914463,
+    -0.056437138468027115,
+    0.05547946318984032,
+    -0.056799113750457764,
+    -0.05227108299732208,
+    -0.05350905656814575,
+    0.014149650931358337,
+    0.053256068378686905,
+    0.008695611730217934,
+    0.056799136102199554,
+    -0.04075946286320686,
+    -0.05498413369059563
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Qdrant MCP Server, When Executed by Another Workflow, When clicking ‘Test workflow’; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Test Simple Import",
+  "nodes": [
+    {
+      "id": "webhook-start",
+      "name": "Start",
+      "type": "n8n-nodes-base.start",
+      "position": [280, 300],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "set-node",
+      "name": "Set Data",
+      "type": "n8n-nodes-base.set",
+      "position": [500, 300],
+      "parameters": {
+        "keepOnlySet": false,
+        "values": [
+          {
+            "name": "message",
+            "value": "Hello World"
+          }
+        ]
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {},
+  "id": "test-simple"
+}

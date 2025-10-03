@@ -1,0 +1,140 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "webhook": true,
+        "updates": [
+          "message"
+        ]
+      },
+      "id": "b2a7c1e0-5e7a-4a3b-9a2d-1c8b3f4a5e6f",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1,
+      "position": [
+        240,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "values": [
+          {
+            "name": "message",
+            "value": "={{$json.message.text}}"
+          },
+          {
+            "name": "chatId",
+            "value": "={{$json.message.chat.id}}"
+          }
+        ],
+        "options": {}
+      },
+      "id": "a1b2c3d4-5e6f-4789-9abc-def012345678",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        480,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "apiKey": "YOUR_GEMINI_API_KEY",
+        "model": "gemini-1.0-pro",
+        "prompt": "Responde al siguiente mensaje de forma concisa y útil: {{$json.message}}",
+        "options": {}
+      },
+      "id": "c5d6e7f8-9abc-4def-8901-234567890abc",
+      "name": "Gemini AI",
+      "type": "n8n-nodes-base.googleGemini",
+      "typeVersion": 1,
+      "position": [
+        720,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$json.chatId}}",
+        "text": "={{$json.response}}",
+        "options": {}
+      },
+      "id": "d7e8f90a-bcde-4123-abcd-ef0123456789",
+      "name": "Telegram Send Message",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        960,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "response": "={{$json[\"candidates\"][0][\"content\"][\"parts\"][0][\"text\"]}}"
+      },
+      "id": "e9f01a2b-cdef-4345-bcde-f0123456789a",
+      "name": "Set Response",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        840,
+        480
+      ]
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Gemini AI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gemini AI": {
+      "main": [
+        [
+          {
+            "node": "Set Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Response": {
+      "main": [
+        [
+          {
+            "node": "Telegram Send Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveExecutionProgress": "true"
+  },
+  "triggerCount": 0,
+  "version": 1
+}

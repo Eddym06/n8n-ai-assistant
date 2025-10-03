@@ -1,0 +1,537 @@
+🤖 GUÍA COMPLETA PARA EXPANDIR INTELLIGENT NODE CONFIG AGENT V3
+==============================================================
+
+Esta guía explica cómo expandir el IntelligentNodeConfigAgentV3 para soportar
+nuevos nodos, configuraciones avanzadas y dominios específicos.
+
+📋 ÍNDICE
+=========
+1. Arquitectura del Agente
+2. Agregar Nuevos Tipos de Nodos
+3. Crear Configuraciones Específicas por Dominio
+4. Expandir el Sistema de Códigos JavaScript
+5. Agregar Nuevas Integraciones
+6. Sistema de Templates Avanzados
+7. Mejoras con IA/Gemini
+8. Testing y Validación
+
+1. 🏗️ ARQUITECTURA DEL AGENTE
+=============================
+
+El agente V3 tiene estas partes principales:
+
+📁 COMPONENTES PRINCIPALES:
+- initializeSupportedNodeTypes(): Registra todos los tipos de nodos soportados
+- initializeContextPatterns(): Patrones para detectar contexto del workflow
+- initializeConfigTemplates(): Templates de configuración por tipo de nodo
+- configureWorkflowNodes(): Método principal de configuración
+- generateConfigurationWithGemini(): Configuración inteligente con IA
+
+📁 ESTRUCTURA DE DATOS:
+```javascript
+this.supportedNodeTypes = {
+  triggers: ['webhook', 'cron', 'emailTrigger', ...],
+  processors: ['function', 'set', 'if', 'switch', ...],
+  integrations: ['hubspot', 'googleSheets', 'postgresql', ...],
+  // ... más categorías
+}
+
+this.contextPatterns = {
+  'e-commerce': ['pedido', 'orden', 'producto', 'inventario', ...],
+  'crm': ['cliente', 'contacto', 'lead', 'deal', ...],
+  // ... más dominios
+}
+```
+
+2. ➕ AGREGAR NUEVOS TIPOS DE NODOS
+==================================
+
+Para agregar soporte a un nuevo nodo:
+
+PASO 1: Registrar el tipo de nodo
+```javascript
+// En initializeSupportedNodeTypes()
+return {
+  triggers: [
+    // ... nodos existentes
+    'n8n-nodes-base.NUEVO_NODO_TRIGGER'
+  ],
+  integrations: [
+    // ... nodos existentes  
+    'n8n-nodes-base.NUEVA_INTEGRACION'
+  ]
+}
+```
+
+PASO 2: Crear template de configuración
+```javascript
+// En initializeConfigTemplates()
+'n8n-nodes-base.NUEVO_NODO': {
+  defaultParameters: {
+    // Parámetros por defecto
+    operation: 'create',
+    resource: 'item'
+  },
+  contextualParameters: {
+    'e-commerce': {
+      // Parámetros específicos para e-commerce
+      operation: 'createOrder',
+      fields: ['customer_email', 'total_amount']
+    }
+  },
+  credentialsRequired: ['nuevaIntegracionApi']
+}
+```
+
+PASO 3: Implementar lógica de configuración
+```javascript
+// En configureNode() agregar case
+case 'n8n-nodes-base.NUEVO_NODO':
+  return this.configureNuevoNodo(node, context, workflow);
+
+// Método específico
+configureNuevoNodo(node, context, workflow) {
+  const baseConfig = this.configTemplates['n8n-nodes-base.NUEVO_NODO'];
+  
+  // Aplicar configuración contextual
+  if (context.domain === 'e-commerce') {
+    node.parameters = {
+      ...baseConfig.defaultParameters,
+      ...baseConfig.contextualParameters['e-commerce']
+    };
+  }
+  
+  return true;
+}
+```
+
+3. 🎯 CREAR CONFIGURACIONES ESPECÍFICAS POR DOMINIO
+==================================================
+
+Para agregar un nuevo dominio/contexto (ej: healthcare, finance):
+
+PASO 1: Agregar patrones de contexto
+```javascript
+// En initializeContextPatterns()
+'healthcare': [
+  'paciente', 'patient', 'cita', 'appointment', 'historial',
+  'diagnóstico', 'treatment', 'medicina', 'doctor'
+],
+'finance': [
+  'transacción', 'payment', 'cuenta', 'account', 'balance',
+  'factura', 'invoice', 'impuesto', 'tax'
+]
+```
+
+PASO 2: Crear códigos específicos del dominio
+```javascript
+// En generateEcommerceCode() crear métodos similares
+generateHealthcareCode(nodeType, nodeName) {
+  const codes = {
+    'appointment-scheduler': `
+// Programar cita médica
+const appointments = $input.all();
+for (const appointment of appointments) {
+  appointment.json.scheduledTime = new Date(appointment.json.datetime);
+  appointment.json.patientId = appointment.json.patient_email.replace('@', '_');
+  appointment.json.status = 'confirmed';
+}
+return appointments;`,
+    
+    'patient-validator': `
+// Validar datos del paciente
+const patients = $input.all();
+for (const patient of patients) {
+  patient.json.isValid = !!(
+    patient.json.name && 
+    patient.json.birthDate && 
+    patient.json.insurance
+  );
+}
+return patients;`
+  };
+  
+  return codes[nodeType] || codes['default-healthcare'];
+}
+```
+
+PASO 3: Integrar en el flujo principal
+```javascript
+// En generateEcommerceCode() agregar más casos
+generateContextualCode(context, nodeType, nodeName) {
+  switch(context.domain) {
+    case 'e-commerce':
+      return this.generateEcommerceCode(nodeType, nodeName);
+    case 'healthcare':
+      return this.generateHealthcareCode(nodeType, nodeName);
+    case 'finance':
+      return this.generateFinanceCode(nodeType, nodeName);
+    default:
+      return this.generateGenericCode(nodeType, nodeName);
+  }
+}
+```
+
+4. 🔧 EXPANDIR EL SISTEMA DE CÓDIGOS JAVASCRIPT
+===============================================
+
+Para agregar códigos más sofisticados:
+
+PASO 1: Crear biblioteca de funciones
+```javascript
+// Agregar al inicio de la clase
+initializeCodeLibrary() {
+  return {
+    utilities: {
+      formatDate: `
+function formatDate(date, format = 'ISO') {
+  const d = new Date(date);
+  switch(format) {
+    case 'ISO': return d.toISOString();
+    case 'US': return d.toLocaleDateString('en-US');
+    case 'EU': return d.toLocaleDateString('es-ES');
+    default: return d.toString();
+  }
+}`,
+      
+      validateEmail: `
+function validateEmail(email) {
+  return /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test(email);
+}`,
+      
+      calculateTax: `
+function calculateTax(amount, rate = 0.21) {
+  return Math.round(amount * rate * 100) / 100;
+}`
+    },
+    
+    integrations: {
+      hubspotHelpers: `
+function createHubSpotContact(data) {
+  return {
+    properties: {
+      email: data.email,
+      firstname: data.firstName,
+      lastname: data.lastName,
+      company: data.company || '',
+      phone: data.phone || ''
+    }
+  };
+}`,
+      
+      googleSheetsFormat: `
+function formatForGoogleSheets(data) {
+  return Object.values(data).map(val => 
+    typeof val === 'object' ? JSON.stringify(val) : String(val)
+  );
+}`
+    }
+  };
+}
+```
+
+PASO 2: Usar en generación de código
+```javascript
+generateAdvancedCode(nodeType, nodeName, context) {
+  const codeLib = this.initializeCodeLibrary();
+  
+  // Combinar utilidades con código específico
+  const utilities = Object.values(codeLib.utilities).join('\n\n');
+  const specificCode = this.generateSpecificLogic(nodeType, context);
+  
+  return `${utilities}\n\n${specificCode}`;
+}
+```
+
+5. 🔗 AGREGAR NUEVAS INTEGRACIONES
+=================================
+
+Para agregar soporte a una nueva API/servicio:
+
+PASO 1: Definir configuración de integración
+```javascript
+// En initializeConfigTemplates()
+'n8n-nodes-base.NUEVA_API': {
+  defaultParameters: {
+    operation: 'create',
+    resource: 'record'
+  },
+  authentication: {
+    type: 'api_key',  // o 'oauth2', 'basic'
+    fields: ['apiKey', 'apiSecret']
+  },
+  operations: {
+    create: { method: 'POST', endpoint: '/api/records' },
+    read: { method: 'GET', endpoint: '/api/records/{id}' },
+    update: { method: 'PUT', endpoint: '/api/records/{id}' },
+    delete: { method: 'DELETE', endpoint: '/api/records/{id}' }
+  }
+}
+```
+
+PASO 2: Implementar configuración específica
+```javascript
+configureNuevaApi(node, context, workflow) {
+  const config = this.configTemplates['n8n-nodes-base.NUEVA_API'];
+  
+  // Configurar operación según contexto
+  let operation = 'create';
+  if (context.intent.includes('obtener') || context.intent.includes('buscar')) {
+    operation = 'read';
+  } else if (context.intent.includes('actualizar')) {
+    operation = 'update';
+  }
+  
+  node.parameters = {
+    operation,
+    url: config.operations[operation].endpoint,
+    method: config.operations[operation].method,
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': '={{$credentials.NUEVA_API.apiKey}}'
+    }
+  };
+  
+  node.credentials = { NUEVA_API: 'YOUR_NUEVA_API_CREDENTIALS' };
+  
+  return true;
+}
+```
+
+6. 📄 SISTEMA DE TEMPLATES AVANZADOS
+====================================
+
+Para crear templates más dinámicos:
+
+PASO 1: Templates con variables
+```javascript
+initializeAdvancedTemplates() {
+  return {
+    'email-notification': {
+      template: `
+Hola {{customer.name}},
+
+Tu {{context.itemType}} #{{order.id}} ha sido {{action.type}}.
+
+{{#if context.isEcommerce}}
+Total: ${{order.total}}
+Estado: {{order.status}}
+{{/if}}
+
+Gracias por tu confianza.`,
+      
+      variables: {
+        'customer.name': '={{$json.customer_name}}',
+        'order.id': '={{$json.order_id}}',
+        'order.total': '={{$json.total_amount}}',
+        'action.type': '={{$json.action}}'
+      }
+    }
+  };
+}
+```
+
+PASO 2: Procesador de templates
+```javascript
+processTemplate(templateName, context, nodeData) {
+  const template = this.advancedTemplates[templateName];
+  if (!template) return null;
+  
+  let processed = template.template;
+  
+  // Reemplazar variables
+  Object.entries(template.variables).forEach(([key, value]) => {
+    const placeholder = `{{${key}}}`;
+    processed = processed.replace(new RegExp(placeholder, 'g'), value);
+  });
+  
+  // Procesar condicionales simples
+  processed = this.processConditionals(processed, context);
+  
+  return processed;
+}
+```
+
+7. 🧠 MEJORAS CON IA/GEMINI
+==========================
+
+Para hacer el agente más inteligente:
+
+PASO 1: Prompts especializados por tipo de nodo
+```javascript
+generateSpecializedPrompt(nodeType, context, userPrompt) {
+  const basePrompt = `Eres un experto en ${nodeType} para n8n workflows.`;
+  
+  const specializations = {
+    'function': `
+Genera código JavaScript funcional y eficiente.
+Incluye manejo de errores y validaciones.
+Usa las mejores prácticas de n8n.`,
+    
+    'httpRequest': `
+Configura llamadas HTTP reales y funcionales.
+Incluye headers apropiados y manejo de respuestas.
+Considera autenticación y rate limiting.`,
+    
+    'if': `
+Crea condiciones lógicas precisas.
+Usa expresiones n8n válidas.
+Considera casos edge y validaciones.`
+  };
+  
+  return `${basePrompt}
+${specializations[nodeType] || ''}
+
+Contexto: ${context.domain}
+Usuario pidió: "${userPrompt}"
+
+Genera configuración JSON específica y funcional.`;
+}
+```
+
+PASO 2: Análisis inteligente de contexto
+```javascript
+async analyzeContextWithAI(userPrompt, existingNodes) {
+  const prompt = `
+Analiza este prompt de workflow y los nodos existentes:
+
+PROMPT: "${userPrompt}"
+NODOS: ${existingNodes.map(n => n.name).join(', ')}
+
+Determina:
+1. Dominio principal (e-commerce, CRM, healthcare, etc.)
+2. Intenciones específicas (crear, leer, actualizar, notificar)
+3. Integraciones requeridas
+4. Tipo de datos que fluye
+5. Configuraciones especiales necesarias
+
+Responde en JSON:
+{
+  "domain": "...",
+  "intentions": [...],
+  "integrations": [...],
+  "dataFlow": "...",
+  "specialConfigs": [...]
+}`;
+
+  const result = await this.callGemini(prompt);
+  return JSON.parse(result);
+}
+```
+
+8. 🧪 TESTING Y VALIDACIÓN
+==========================
+
+Para validar configuraciones:
+
+PASO 1: Tests unitarios
+```javascript
+// Crear archivo: test-node-config-agent.js
+import IntelligentNodeConfigAgentV3 from './intelligent-node-config-agent-v3.js';
+
+const agent = new IntelligentNodeConfigAgentV3();
+
+// Test básico
+const testWorkflow = {
+  nodes: [
+    { name: 'Test Webhook', type: 'n8n-nodes-base.webhook' },
+    { name: 'Test Function', type: 'n8n-nodes-base.function' }
+  ]
+};
+
+const result = await agent.configureWorkflowNodes(testWorkflow, {
+  originalPrompt: 'crear workflow de e-commerce'
+});
+
+console.assert(result.success === true, 'Configuración debe ser exitosa');
+console.assert(result.stats.configurationsApplied === 2, 'Debe configurar 2 nodos');
+```
+
+PASO 2: Validador de configuraciones
+```javascript
+validateConfiguration(node, nodeType) {
+  const validators = {
+    'n8n-nodes-base.webhook': (params) => {
+      return !!(params.httpMethod && params.path);
+    },
+    
+    'n8n-nodes-base.function': (params) => {
+      return !!(params.functionCode || params.jsCode);
+    },
+    
+    'n8n-nodes-base.httpRequest': (params) => {
+      return !!(params.url && params.method);
+    }
+  };
+  
+  const validator = validators[nodeType];
+  return validator ? validator(node.parameters) : true;
+}
+```
+
+📝 EJEMPLOS DE USO COMPLETOS
+============================
+
+EJEMPLO 1: Agregar soporte para Stripe
+```javascript
+// 1. Registrar tipo
+'n8n-nodes-base.stripe': {
+  category: 'integrations',
+  operations: ['createCustomer', 'createPayment', 'refund']
+}
+
+// 2. Configurar
+configureStripe(node, context, workflow) {
+  if (context.domain === 'e-commerce') {
+    node.parameters = {
+      operation: 'createPayment',
+      amount: '={{$json.total_amount}}',
+      currency: 'usd',
+      customer: '={{$json.customer_id}}'
+    };
+  }
+  return true;
+}
+```
+
+EJEMPLO 2: Dominio Healthcare
+```javascript
+// Patrones
+'healthcare': ['patient', 'medical', 'appointment', 'prescription']
+
+// Código específico
+generateMedicalCode(nodeType) {
+  return `
+// Validar datos médicos
+const records = $input.all();
+for (const record of records) {
+  record.json.isValidPatient = validatePatientData(record.json);
+  record.json.appointmentSlot = allocateTimeSlot(record.json.preferredTime);
+}
+return records;`;
+}
+```
+
+🎯 ROADMAP DE EXPANSIÓN
+======================
+
+PRIORIDAD ALTA:
+- ✅ Integración con Gemini para configuraciones inteligentes  
+- ✅ Sistema de workflows de referencia
+- 🔄 Validación automática de configuraciones
+- 🔄 Soporte para nodos personalizados
+
+PRIORIDAD MEDIA:
+- Templates visuales para configuraciones
+- Sistema de plugins para dominios específicos
+- Optimización de performance
+- Integración con n8n API para validación real
+
+PRIORIDAD BAJA:
+- UI gráfica para configuración
+- Sistema de aprendizaje de configuraciones
+- Exportación de configuraciones como templates
+- Integración con n8n marketplace
+
+Esta guía cubre todos los aspectos para expandir el agente. ¡El sistema está
+diseñado para ser completamente modular y extensible!

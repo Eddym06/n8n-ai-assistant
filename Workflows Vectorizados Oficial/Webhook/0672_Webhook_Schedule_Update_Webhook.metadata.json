@@ -1,0 +1,1072 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Webhook Schedule Update Webhook",
+    "file_name": "0672_Webhook_Schedule_Update_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Webhook\\0672_Webhook_Schedule_Update_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "bf271fc21d15"
+  },
+  "structure": {
+    "total_nodes": 34,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+      "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.webhook",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.n8n"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 10
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.n8n",
+        "count": 2
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          40,
+          980
+        ]
+      },
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          80,
+          1260
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          600
+        ]
+      },
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          480,
+          1420
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          420,
+          1660
+        ]
+      },
+      {
+        "name": "Window Buffer Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          880,
+          1760
+        ]
+      },
+      {
+        "name": "Vector Store Retriever",
+        "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+        "position": [
+          1780,
+          1800
+        ]
+      },
+      {
+        "name": "In-Memory Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+        "position": [
+          1060,
+          1880
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          1660,
+          1940
+        ]
+      },
+      {
+        "name": "Question and Answer Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "position": [
+          760,
+          1540
+        ]
+      },
+      {
+        "name": "Switch",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1360,
+          1220
+        ]
+      },
+      {
+        "name": "IF",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          440,
+          1480
+        ]
+      },
+      {
+        "name": "Dummy Node",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1360,
+          1520
+        ]
+      },
+      {
+        "name": "Dummy Node (1)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          700,
+          900
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          920,
+          980
+        ]
+      },
+      {
+        "name": "Dummy Node (2)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1140,
+          940
+        ]
+      },
+      {
+        "name": "Dummy Node (3)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          700,
+          1200
+        ]
+      },
+      {
+        "name": "Dummy Node (4)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          900,
+          1460
+        ]
+      },
+      {
+        "name": "Dummy Node (5)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1140,
+          1200
+        ]
+      },
+      {
+        "name": "Dummy Node (6)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1580,
+          980
+        ]
+      },
+      {
+        "name": "Dummy Node (7)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1780,
+          1300
+        ]
+      },
+      {
+        "name": "Dummy Node (8)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1340,
+          1720
+        ]
+      },
+      {
+        "name": "Dummy Node (9)",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1580,
+          1640
+        ]
+      },
+      {
+        "name": "Dummy Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "position": [
+          720,
+          1660
+        ]
+      },
+      {
+        "name": "Dummy Tool (1)",
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "position": [
+          680,
+          1760
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model (1)",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1360,
+          1880
+        ]
+      },
+      {
+        "name": "Update n8n Workflow",
+        "type": "n8n-nodes-base.n8n",
+        "position": [
+          700,
+          380
+        ]
+      },
+      {
+        "name": "Magic Positioning IA2S",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          480,
+          380
+        ]
+      },
+      {
+        "name": "POST /workflow/magic/position/id",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          40,
+          380
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          -60
+        ]
+      },
+      {
+        "name": "Get n8n Workflow",
+        "type": "n8n-nodes-base.n8n",
+        "position": [
+          260,
+          380
+        ]
+      },
+      {
+        "name": "Simple Webhook Response",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          920,
+          380
+        ]
+      },
+      {
+        "name": "Magic Positioning",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          40,
+          160
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          300,
+          -60
+        ]
+      }
+    ],
+    "connections_count": 22,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 32
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution",
+      "Scheduled automation"
+    ],
+    "complexity_score": 1125,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "dummy node (9)",
+      "update n8n workflow",
+      "dummy node (5)",
+      "dummy tool",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "openai chat model (1)",
+      "switch",
+      "dummy node (4)",
+      "ai-ml",
+      "stickyNote",
+      "post /workflow/magic/position/id",
+      "@n8n/n8n nodes langchain.embeddingsOpenAi",
+      "respondToWebhook",
+      "webhook",
+      "sticky note6",
+      "dummy node (3)",
+      "magic positioning ia2s",
+      "scheduleTrigger",
+      "dummy node (2)",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "schedule trigger",
+      "webhook integration",
+      "httpRequest",
+      "dummy node (7)",
+      "splitInBatches",
+      "vector store retriever",
+      "dummy node",
+      "openai chat model",
+      "window buffer memory",
+      "in-memory vector store",
+      "@n8n/n8n nodes langchain.vectorStoreInMemory",
+      "simple webhook response",
+      "dummy node (6)",
+      "n8n",
+      "@n8n/n8n nodes langchain.chainRetrievalQa",
+      "ai agent",
+      "embeddings openai",
+      "sticky note",
+      "@n8n/n8n nodes langchain.agent",
+      "question and answer chain",
+      "@n8n/n8n nodes langchain.retrieverVectorStore",
+      "dummy tool (1)",
+      "dummy node (1)",
+      "complex",
+      "get n8n workflow",
+      "dummy node (8)",
+      "manualTrigger",
+      "noOp",
+      "when clicking ‘test workflow’",
+      "sticky note1",
+      "@n8n/n8n nodes langchain.toolHttpRequest",
+      "magic positioning",
+      "loop over items"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 34 nodos con 2 disparadores que ejecuta: Sticky Note6, AI Agent, OpenAI Chat Model en la categoría de ai-ml.",
+    "semantic_content": "Nodos: When clicking ‘Test workflow’ (manualTrigger), Sticky Note6 (stickyNote), AI Agent (@n8n/n8n-nodes-langchain.agent), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Window Buffer Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), Vector Store Retriever (@n8n/n8n-nodes-langchain.retrieverVectorStore), In-Memory Vector Store (@n8n/n8n-nodes-langchain.vectorStoreInMemory), Embeddings OpenAI (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Question and Answer Chain (@n8n/n8n-nodes-langchain.chainRetrievalQa), Switch (switch), IF (if), Dummy Node (noOp), Dummy Node (1) (noOp), Loop Over Items (splitInBatches), Dummy Node (2) (noOp), Dummy Node (3) (noOp), Dummy Node (4) (noOp), Dummy Node (5) (noOp), Dummy Node (6) (noOp), Dummy Node (7) (noOp), Dummy Node (8) (noOp), Dummy Node (9) (noOp), Dummy Tool (@n8n/n8n-nodes-langchain.toolHttpRequest), Dummy Tool (1) (@n8n/n8n-nodes-langchain.toolHttpRequest), OpenAI Chat Model (1) (@n8n/n8n-nodes-langchain.lmChatOpenAi), Update n8n Workflow (n8n), Magic Positioning IA2S (httpRequest), POST /workflow/magic/position/id (webhook), Sticky Note (stickyNote), Get n8n Workflow (n8n), Simple Webhook Response (respondToWebhook), Schedule Trigger (scheduleTrigger), Magic Positioning (httpRequest), Sticky Note1 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: When clicking ‘Test workflow’, Schedule Trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "Sticky Note6",
+      "Schedule Trigger",
+      "AI Agent",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "OpenAI Chat Model",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.respondtowebhook",
+      "@n8n/n8n-nodes-langchain.toolhttprequest",
+      "n8n-nodes-base.manualtrigger",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "@n8n/n8n-nodes-langchain.retrievervectorstore",
+      "n8n-nodes-base.noop",
+      "@n8n/n8n-nodes-langchain.vectorstoreinmemory",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "@n8n/n8n-nodes-langchain.chainretrievalqa",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.scheduletrigger",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.embeddingsopenai",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.n8n"
+    ],
+    "search_terms": [
+      "0672",
+      "webhook",
+      "schedule",
+      "0672_webhook_schedule_update_webhook",
+      "update"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 60.44444444444444,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 75.83888888888889
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:23.036824"
+  },
+  "semantic_vector": [
+    0.010624272748827934,
+    -0.056297410279512405,
+    -0.045827221125364304,
+    -0.049783866852521896,
+    -0.038656484335660934,
+    -0.05723808705806732,
+    0.04072165861725807,
+    0.04125801473855972,
+    0.01966296136379242,
+    0.05753077194094658,
+    0.05357621982693672,
+    -0.04503299668431282,
+    0.055372755974531174,
+    -0.015843279659748077,
+    -0.008449275977909565,
+    0.05774252861738205,
+    0.024884335696697235,
+    -0.05014295503497124,
+    -0.056769028306007385,
+    0.0008763193036429584,
+    0.012464932166039944,
+    0.04053604602813721,
+    -0.046737078577280045,
+    -0.025304842740297318,
+    -0.02404332347214222,
+    -0.050515349954366684,
+    -0.02574625425040722,
+    0.02603595145046711,
+    -0.046187981963157654,
+    -0.044064056128263474,
+    0.055395226925611496,
+    -0.002032474847510457,
+    -0.0489320233464241,
+    -0.046914540231227875,
+    0.007686125114560127,
+    0.05539660155773163,
+    0.019625311717391014,
+    0.018300872296094894,
+    -0.01129838265478611,
+    -0.05573577433824539,
+    -0.01136069092899561,
+    0.04844830557703972,
+    -0.03257321938872337,
+    0.053710706532001495,
+    0.05774233490228653,
+    0.05279884114861488,
+    -0.020058371126651764,
+    -0.05153898149728775,
+    -0.05771877244114876,
+    -0.03777720034122467,
+    -0.05401211977005005,
+    -0.020653201267123222,
+    -0.05771460756659508,
+    -0.05308704078197479,
+    -0.008863662369549274,
+    0.02932419441640377,
+    0.05703311040997505,
+    -0.040286898612976074,
+    -0.04103595390915871,
+    0.013659418560564518,
+    0.05660995841026306,
+    -0.05661778151988983,
+    -0.050822664052248,
+    0.057576145976781845,
+    -0.03805941343307495,
+    0.02749873325228691,
+    0.05321306735277176,
+    -0.04082691669464111,
+    -0.04885207489132881,
+    -0.05748945474624634,
+    -0.054481711238622665,
+    0.03602055087685585,
+    -0.0561831071972847,
+    0.05686222389340401,
+    -0.05617082118988037,
+    -0.05668414384126663,
+    0.03318459168076515,
+    0.005190530326217413,
+    0.009902852587401867,
+    -0.02566724829375744,
+    0.016695884987711906,
+    -0.053095441311597824,
+    -0.051755666732788086,
+    -0.04226084053516388,
+    0.03134840354323387,
+    -0.03259960934519768,
+    -0.030366627499461174,
+    -0.04729713499546051,
+    0.05237453803420067,
+    0.02922610566020012,
+    -0.048612289130687714,
+    0.05665148049592972,
+    0.018882209435105324,
+    0.04441162198781967,
+    0.049489088356494904,
+    -0.0279495008289814,
+    0.04849602282047272,
+    0.05670740827918053,
+    -0.05467328429222107,
+    -0.057742055505514145,
+    0.05694993585348129,
+    -0.035576432943344116,
+    0.05383738502860069,
+    0.045508675277233124,
+    -0.020357394590973854,
+    0.05669931322336197,
+    0.05686977133154869,
+    0.049044106155633926,
+    -0.021437065675854683,
+    -0.056204043328762054,
+    -0.005273513030260801,
+    -0.05750435218214989,
+    0.005764670670032501,
+    -0.042810577899217606,
+    0.05392935499548912,
+    0.03846117481589317,
+    -0.057630956172943115,
+    0.0353621207177639,
+    0.05719221383333206,
+    0.03784361481666565,
+    -0.04655705392360687,
+    0.025233423337340355,
+    -0.0473797544836998,
+    0.054479535669088364,
+    0.05768100172281265,
+    0.053308676928281784,
+    -0.0555991530418396,
+    0.05211006477475166,
+    0.05169655382633209,
+    0.016469569876790047,
+    -0.021034402772784233,
+    0.050583504140377045,
+    0.04721172899007797,
+    -0.05150856822729111,
+    -0.012768208980560303,
+    -0.05258724465966225,
+    0.042406704276800156,
+    -0.05757841095328331,
+    -0.052488259971141815,
+    -0.05648862197995186,
+    0.05343380942940712,
+    0.057742442935705185,
+    0.015058796852827072,
+    -0.009664976969361305,
+    0.037579283118247986,
+    -0.05772676318883896,
+    0.052580010145902634,
+    0.04687142372131348,
+    0.056596267968416214,
+    0.044602662324905396,
+    -0.05626507103443146,
+    -0.055344078689813614,
+    0.0379745252430439,
+    -0.03404971584677696,
+    0.04883641377091408,
+    0.05762211233377457,
+    -0.056618545204401016,
+    -0.05485176667571068,
+    -0.04662042111158371,
+    0.050454940646886826,
+    -0.010893682017922401,
+    -0.04934542626142502,
+    0.04242293909192085,
+    0.05644799396395683,
+    0.05532008782029152,
+    -0.028675032779574394,
+    -0.0573478639125824,
+    -0.05303439497947693,
+    -0.033534687012434006,
+    -0.02285565622150898,
+    0.053394466638565063,
+    -0.04118482396006584,
+    -0.04190606251358986,
+    0.051046960055828094,
+    -0.05148431658744812,
+    0.053450874984264374,
+    0.007552159484475851,
+    0.03383110091090202,
+    0.039001334458589554,
+    -0.0529981330037117,
+    0.057128190994262695,
+    0.01791001856327057,
+    -0.054258350282907486,
+    -0.025733519345521927,
+    0.05111946165561676,
+    0.05491422116756439,
+    -0.0010248941835016012,
+    0.05725060775876045,
+    -0.029073936864733696,
+    -0.013688893988728523,
+    0.0567411445081234,
+    -0.0321415513753891,
+    0.006228347774595022,
+    -0.05416135862469673,
+    -0.02850036695599556,
+    -0.050898417830467224,
+    -0.049949824810028076,
+    0.05774252861738205,
+    0.036239318549633026,
+    -0.026475680992007256,
+    0.05747302621603012,
+    0.05010141059756279,
+    -0.05705084651708603,
+    0.056841179728507996,
+    0.05226662755012512,
+    -0.04342339187860489,
+    -0.056728433817625046,
+    0.05242205411195755,
+    -0.05774160102009773,
+    0.053573787212371826,
+    0.02251659892499447,
+    0.0577203743159771,
+    0.048896029591560364,
+    0.04043937847018242,
+    -0.05774172395467758,
+    -0.05710505321621895,
+    -0.012840925715863705,
+    0.04357275366783142,
+    -0.03782675415277481,
+    0.05719469487667084,
+    -0.04506850615143776,
+    -0.05584520846605301,
+    0.0226951502263546,
+    -0.05616176128387451,
+    -0.03224401921033859,
+    -0.04968741163611412,
+    -0.03740007057785988,
+    0.04538523033261299,
+    -0.05753551796078682,
+    -0.057178180664777756,
+    -0.04959981143474579,
+    -0.05679483711719513,
+    0.05469416081905365,
+    -0.0577332004904747,
+    -0.052016545087099075,
+    0.026563484221696854,
+    0.05769229680299759,
+    -0.052052177488803864,
+    -0.05148229002952576,
+    0.019498316571116447,
+    0.052524685859680176,
+    -0.04014331474900246,
+    0.0028721855487674475,
+    0.031462013721466064,
+    -0.024423005059361458,
+    0.049759261310100555,
+    0.05067756026983261,
+    0.05278101935982704,
+    0.05504123121500015,
+    0.05770093575119972,
+    -0.05774164944887161,
+    0.005641927942633629,
+    0.04341837018728256,
+    -0.014982088468968868,
+    0.052528444677591324,
+    -0.04780716076493263,
+    0.054216090589761734,
+    0.05774249508976936,
+    0.016886765137314796,
+    0.03568650037050247,
+    0.048985861241817474,
+    0.015464846976101398,
+    0.0423114150762558,
+    0.04075300693511963,
+    0.0007426122901961207,
+    -0.003674538340419531,
+    0.039250221103429794,
+    0.05608372017741203,
+    0.057255133986473083,
+    0.04536713287234306,
+    -0.031287867575883865,
+    0.0547594279050827,
+    0.027446189895272255,
+    0.057625025510787964,
+    0.030286697670817375,
+    -0.042568132281303406,
+    -0.04379186034202576,
+    -0.037095602601766586,
+    0.05773567780852318,
+    0.053264424204826355,
+    -0.05676907300949097,
+    -0.039118897169828415,
+    0.05351315811276436,
+    0.054040636867284775,
+    0.021178103983402252,
+    -0.057700783014297485,
+    0.022051652893424034,
+    0.055404938757419586,
+    0.0551120787858963,
+    0.05558048561215401,
+    0.009644853882491589,
+    -0.014951331540942192,
+    0.05763162672519684,
+    -0.03185197338461876,
+    0.010164727456867695,
+    0.0416937917470932,
+    0.05451425537467003,
+    -0.0074875568971037865,
+    0.042882684618234634,
+    0.01637766696512699,
+    -0.056449729949235916,
+    -0.05537145212292671,
+    -0.01388620212674141,
+    0.05193528160452843,
+    -0.040768176317214966,
+    -0.04196517542004585,
+    -0.012849199585616589,
+    0.009570910595357418,
+    -0.022290891036391258,
+    0.0013875283766537905,
+    0.04312137886881828,
+    -0.03172270953655243,
+    0.057135093957185745,
+    -0.057714685797691345,
+    -0.012320579029619694,
+    -0.01622026041150093,
+    0.05202719569206238,
+    -0.0035740837920457125,
+    -0.05730123445391655,
+    0.02831747941672802,
+    -0.036296576261520386,
+    -0.036786895245313644,
+    0.039739444851875305,
+    -0.002507242141291499,
+    0.05004722997546196,
+    0.009291214868426323,
+    0.05680917575955391,
+    0.054159797728061676,
+    -0.015151984989643097,
+    -0.05127369239926338,
+    0.004203625489026308,
+    0.006683942396193743,
+    -0.057008471339941025,
+    0.05774206295609474,
+    0.020552722737193108,
+    0.04729440435767174,
+    0.05018511041998863,
+    0.05757887288928032,
+    0.057715125381946564,
+    0.0007527250563725829,
+    -0.05378594249486923,
+    -0.05748279020190239,
+    -0.05665178596973419,
+    0.003369953017681837,
+    -0.05774252861738205,
+    0.015008119866251945,
+    -0.014500042423605919,
+    -0.049830302596092224,
+    0.017209108918905258,
+    -0.0345628559589386,
+    0.030929146334528923,
+    0.0571785569190979,
+    0.05303874611854553,
+    0.055806197226047516,
+    -0.004515144042670727,
+    -0.03017079271376133,
+    -0.057742416858673096,
+    -0.05140620470046997,
+    0.008392158895730972,
+    0.057506803423166275,
+    0.05617895722389221,
+    0.015309039503335953,
+    -0.05773637816309929,
+    0.046193916350603104,
+    0.012062348425388336,
+    -0.007570628076791763,
+    0.050280917435884476,
+    -0.05363578349351883,
+    0.054118428379297256,
+    0.057596635073423386,
+    0.02312939241528511,
+    -0.01933666132390499,
+    -2.716207382036373e-05,
+    -0.01269574835896492,
+    0.00970679335296154,
+    0.0226421058177948,
+    -0.01953790709376335,
+    -0.04817326366901398,
+    0.05767599120736122,
+    -0.052939094603061676,
+    0.052567653357982635,
+    -0.018050063401460648,
+    0.02688688226044178,
+    0.05649961158633232,
+    0.027870001271367073,
+    -0.056612614542245865,
+    0.05708688125014305,
+    -0.0500553734600544,
+    0.0165175162255764,
+    -0.05144539102911949,
+    0.04917296767234802,
+    -0.03769708424806595,
+    0.053452085703611374,
+    0.04063725844025612,
+    -0.05752551183104515,
+    0.055526550859212875,
+    0.00609402684494853,
+    0.05175602436065674,
+    0.04037155956029892,
+    0.05729375779628754,
+    0.05448192358016968,
+    0.03320981562137604,
+    -0.03998570144176483,
+    0.012548547238111496,
+    -0.03158218786120415,
+    -0.03708738088607788,
+    -0.0576353557407856,
+    0.04374740645289421,
+    0.050568029284477234,
+    0.04489881917834282,
+    -0.010134988464415073,
+    0.018386855721473694,
+    -0.052888382226228714,
+    0.019474070519208908,
+    -0.0568762831389904,
+    0.05605100095272064,
+    0.021779080852866173,
+    -0.041744500398635864,
+    0.0034301490522921085,
+    0.05011303350329399,
+    -0.05300591513514519,
+    0.014574708417057991,
+    -0.05681535229086876,
+    0.056420549750328064,
+    -0.021545104682445526,
+    -0.0479113943874836,
+    -0.057733893394470215,
+    0.01603148691356182,
+    -0.03277836740016937,
+    -0.013625900261104107,
+    -0.057677652686834335,
+    -0.04875321686267853,
+    -0.04076731204986572,
+    0.015935132279992104,
+    -0.05641034618020058,
+    0.02259509265422821,
+    -0.05685117468237877,
+    -0.002124418970197439,
+    -0.05591931194067001,
+    0.05274278670549393,
+    0.03631410002708435,
+    -0.053720422089099884,
+    -0.03431115671992302,
+    0.05664238706231117,
+    -0.054890476167201996,
+    -0.04309987276792526,
+    -0.05712461844086647,
+    -0.010803737677633762,
+    0.04478251188993454,
+    -0.05427328497171402,
+    0.007277740631252527,
+    -0.035719383507966995,
+    0.057741619646549225,
+    0.05428589507937431,
+    -0.0321468822658062,
+    -0.05774065852165222,
+    0.05716298148036003,
+    0.05771271511912346,
+    -0.022181402891874313,
+    -0.05602152273058891,
+    -0.0450381375849247,
+    0.02774704061448574,
+    0.028022104874253273,
+    0.05420275405049324,
+    -0.04017624258995056,
+    -0.006962891202419996,
+    0.056928880512714386,
+    -0.020171895623207092,
+    -0.05771026760339737,
+    0.057173438370227814,
+    0.03763777017593384,
+    -0.05188632011413574,
+    0.05744922533631325,
+    -0.03934421390295029,
+    -0.04656911641359329,
+    0.05214172601699829,
+    -0.03122859261929989,
+    0.05771716684103012,
+    -0.05344901606440544,
+    -0.04136144369840622,
+    -0.05277755856513977,
+    0.018638236448168755,
+    0.05475570634007454,
+    -0.05343744158744812,
+    -0.03177221491932869,
+    0.057638123631477356,
+    0.033170945942401886,
+    -0.026013530790805817,
+    0.04960986599326134,
+    0.050415948033332825,
+    -0.040331099182367325,
+    0.05753496661782265,
+    0.05517130717635155,
+    0.05597515404224396,
+    -0.04888417571783066,
+    0.05693329498171806,
+    0.039815064519643784,
+    0.05246521532535553,
+    -0.054179321974515915,
+    0.03402625396847725,
+    0.04987815394997597,
+    -0.05006861314177513,
+    -0.016434943303465843,
+    -0.05774224177002907,
+    -0.013746951706707478,
+    -0.054862070828676224,
+    0.028725605458021164,
+    -0.04835767671465874,
+    -0.033167023211717606,
+    0.05774231627583504,
+    -0.025378428399562836,
+    -0.05163278058171272
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking ‘Test workflow’, Schedule Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Webhook",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Webhook"
+  }
+}

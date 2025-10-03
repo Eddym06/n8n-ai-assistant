@@ -1,0 +1,1331 @@
+{
+  "workflow_info": {
+    "id": "7wwY8wfZdNpL83QQ",
+    "name": "LinkedIn Leads Scraping & Enrichment (Main)",
+    "display_name": "LinkedIn Leads Scraping & Enrichment (Main)",
+    "file_name": "1146_Splitout_Code_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\1146_Splitout_Code_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "c5e7fe566160"
+  },
+  "structure": {
+    "total_nodes": 66,
+    "node_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 23
+      },
+      {
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 6
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 10
+      }
+    ],
+    "triggers": [
+      {
+        "name": "On form submission",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          -80,
+          -80
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          -100,
+          280
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger2",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          -100,
+          680
+        ]
+      },
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          1640,
+          680
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger3",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          -100,
+          1160
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger4",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          -120,
+          1640
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger5",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          -120,
+          2100
+        ]
+      },
+      {
+        "name": "Schedule Trigger2",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          1860,
+          1160
+        ]
+      },
+      {
+        "name": "Schedule Trigger3",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          1840,
+          1640
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger6",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          2920,
+          1380
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          360,
+          -80
+        ]
+      },
+      {
+        "name": "OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          360,
+          280
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          200
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          -160
+        ]
+      },
+      {
+        "name": "Clean Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          600,
+          -80
+        ]
+      },
+      {
+        "name": "Add Leads to Google Sheet",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          840,
+          -80
+        ]
+      },
+      {
+        "name": "Add Linkedin Username",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          720,
+          280
+        ]
+      },
+      {
+        "name": "Get Pending Username Row",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          140,
+          280
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          560
+        ]
+      },
+      {
+        "name": "Add Email Address",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1240,
+          600
+        ]
+      },
+      {
+        "name": "Mark Invalid Email",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1240,
+          760
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1560,
+          560
+        ]
+      },
+      {
+        "name": "Get Email from Apollo",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          380,
+          680
+        ]
+      },
+      {
+        "name": "Confirm Email Validity",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          620,
+          680
+        ]
+      },
+      {
+        "name": "Get Pending Email Statuses",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          140,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          1040
+        ]
+      },
+      {
+        "name": "Get Profile Posts",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          340,
+          1640
+        ]
+      },
+      {
+        "name": "Get About Profile",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          380,
+          1160
+        ]
+      },
+      {
+        "name": "Get Pending About and Posts Rows",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          140,
+          1160
+        ]
+      },
+      {
+        "name": "Clean Profile Data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          620,
+          1160
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          1520
+        ]
+      },
+      {
+        "name": "Get Pending About and Posts Rows1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          100,
+          1640
+        ]
+      },
+      {
+        "name": "Clean Posts Data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          580,
+          1640
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          1980
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1780,
+          1040
+        ]
+      },
+      {
+        "name": "get invalid email rows",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1880,
+          680
+        ]
+      },
+      {
+        "name": "update_to_pending",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2100,
+          680
+        ]
+      },
+      {
+        "name": "get_failed_profile_summary_rows",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2100,
+          1160
+        ]
+      },
+      {
+        "name": "update_to_pending1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2320,
+          1160
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1760,
+          1520
+        ]
+      },
+      {
+        "name": "get_failed_posts_summary_rows1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2080,
+          1640
+        ]
+      },
+      {
+        "name": "Posts AI Summarizer",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          1060,
+          1560
+        ]
+      },
+      {
+        "name": "AI Profile Summarizer",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          1100,
+          1080
+        ]
+      },
+      {
+        "name": "Update Profile Summary",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1500,
+          1080
+        ]
+      },
+      {
+        "name": "Update Posts Summary",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1440,
+          1560
+        ]
+      },
+      {
+        "name": "Get Completely Enriched Profiles",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          120,
+          2100
+        ]
+      },
+      {
+        "name": "update_to_unscraped",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2300,
+          1640
+        ]
+      },
+      {
+        "name": "Append to Enriched Leads Database",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          340,
+          2100
+        ]
+      },
+      {
+        "name": "update status to failed",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          880,
+          1240
+        ]
+      },
+      {
+        "name": "Google Sheets",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          840,
+          1720
+        ]
+      },
+      {
+        "name": "Stringify Profile Data1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          880,
+          1080
+        ]
+      },
+      {
+        "name": "Stringify Posts Data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          840,
+          1560
+        ]
+      },
+      {
+        "name": "Generate Leads with Apollo.io",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          -80
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2840,
+          1060
+        ]
+      },
+      {
+        "name": "Get Pending About and Posts Rows2",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          3160,
+          1380
+        ]
+      },
+      {
+        "name": "Clean Profile Data1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3720,
+          1280
+        ]
+      },
+      {
+        "name": "Stringify Data2",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3900,
+          1280
+        ]
+      },
+      {
+        "name": "AI Profile Summarizer1",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          4100,
+          1280
+        ]
+      },
+      {
+        "name": "Update Profile Summary1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          4640,
+          1380
+        ]
+      },
+      {
+        "name": "Stringify Data3",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3900,
+          1520
+        ]
+      },
+      {
+        "name": "Posts AI Summarizer1",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          4100,
+          1520
+        ]
+      },
+      {
+        "name": "Get About Profile2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3400,
+          1380
+        ]
+      },
+      {
+        "name": "Clean Profile Data2",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3720,
+          1520
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          4460,
+          1380
+        ]
+      },
+      {
+        "name": "update status to failed1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          3400,
+          1640
+        ]
+      },
+      {
+        "name": "If email is valid",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          880,
+          680
+        ]
+      }
+    ],
+    "connections_count": 43,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 10,
+      "action_count": 56
+    }
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "Scheduled automation"
+    ],
+    "complexity_score": 1730,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "schedule trigger2",
+      "sticky note7",
+      "update profile summary",
+      "stickyNote",
+      "mark invalid email",
+      "clean profile data1",
+      "get_failed_posts_summary_rows1",
+      "confirm email validity",
+      "httpRequest",
+      "update status to failed1",
+      "stringify data3",
+      "stringify posts data",
+      "split out",
+      "merge",
+      "clean data",
+      "ai profile summarizer",
+      "append to enriched leads database",
+      "if email is valid",
+      "google sheets trigger4",
+      "openai1",
+      "ai profile summarizer1",
+      "update profile summary1",
+      "clean profile data2",
+      "get about profile2",
+      "get invalid email rows",
+      "productivity",
+      "update_to_pending1",
+      "add leads to google sheet",
+      "update status to failed",
+      "posts ai summarizer",
+      "googleSheets",
+      "clean posts data",
+      "get completely enriched profiles",
+      "sticky note5",
+      "generate leads with apollo.io",
+      "get pending about and posts rows1",
+      "add linkedin username",
+      "googleSheetsTrigger",
+      "formTrigger",
+      "get pending about and posts rows2",
+      "sticky note3",
+      "posts ai summarizer1",
+      "clean profile data",
+      "stringify profile data1",
+      "schedule trigger",
+      "google sheets",
+      "code",
+      "sticky note9",
+      "sticky note4",
+      "set",
+      "add email address",
+      "get_failed_profile_summary_rows",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "get about profile",
+      "complex",
+      "sticky note1",
+      "sticky note2",
+      "splitOut",
+      "on form submission",
+      "get pending about and posts rows",
+      "update_to_unscraped",
+      "update posts summary",
+      "sticky note6",
+      "update_to_pending",
+      "scheduleTrigger",
+      "google sheets trigger5",
+      "webhook integration",
+      "google sheets trigger2",
+      "google sheets trigger3",
+      "get email from apollo",
+      "get pending username row",
+      "get profile posts",
+      "get pending email statuses",
+      "google sheets trigger6",
+      "sticky note8",
+      "stringify data2",
+      "google sheets trigger",
+      "schedule trigger3"
+    ],
+    "description": "'LinkedIn Leads Scraping & Enrichment (Main)' es un workflow diseñado para webhook integration con 66 nodos con 10 disparadores que ejecuta: Split Out, OpenAI1, Sticky Note en la categoría de productivity.",
+    "semantic_content": "Workflow: LinkedIn Leads Scraping & Enrichment (Main). Nodos: On form submission (formTrigger), Split Out (splitOut), Google Sheets Trigger (googleSheetsTrigger), OpenAI1 (@n8n/n8n-nodes-langchain.openAi), Google Sheets Trigger2 (googleSheetsTrigger), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Clean Data (set), Add Leads to Google Sheet (googleSheets), Add Linkedin Username (googleSheets), Get Pending Username Row (googleSheets), Sticky Note2 (stickyNote), Add Email Address (googleSheets), Mark Invalid Email (googleSheets), Sticky Note3 (stickyNote), Schedule Trigger (scheduleTrigger), Get Email from Apollo (httpRequest), Confirm Email Validity (httpRequest), Get Pending Email Statuses (googleSheets), Google Sheets Trigger3 (googleSheetsTrigger), Sticky Note4 (stickyNote), Get Profile Posts (httpRequest), Get About Profile (httpRequest), Get Pending About and Posts Rows (googleSheets), Clean Profile Data (code), Google Sheets Trigger4 (googleSheetsTrigger), Sticky Note5 (stickyNote), Get Pending About and Posts Rows1 (googleSheets), Clean Posts Data (code), Sticky Note6 (stickyNote), Google Sheets Trigger5 (googleSheetsTrigger), Sticky Note8 (stickyNote), Schedule Trigger2 (scheduleTrigger), get invalid email rows (googleSheets), update_to_pending (googleSheets), get_failed_profile_summary_rows (googleSheets), update_to_pending1 (googleSheets), Sticky Note9 (stickyNote), Schedule Trigger3 (scheduleTrigger), get_failed_posts_summary_rows1 (googleSheets), Posts AI Summarizer (@n8n/n8n-nodes-langchain.openAi), AI Profile Summarizer (@n8n/n8n-nodes-langchain.openAi), Update Profile Summary (googleSheets), Update Posts Summary (googleSheets), Get Completely Enriched Profiles (googleSheets), update_to_unscraped (googleSheets), Append to Enriched Leads Database (googleSheets), update status to failed (googleSheets), Google Sheets (googleSheets), Stringify Profile Data1 (code), Stringify Posts Data (code), Generate Leads with Apollo.io (httpRequest), Google Sheets Trigger6 (googleSheetsTrigger), Sticky Note7 (stickyNote), Get Pending About and Posts Rows2 (googleSheets), Clean Profile Data1 (code), Stringify Data2 (code), AI Profile Summarizer1 (@n8n/n8n-nodes-langchain.openAi), Update Profile Summary1 (googleSheets), Stringify Data3 (code), Posts AI Summarizer1 (@n8n/n8n-nodes-langchain.openAi), Get About Profile2 (httpRequest), Clean Profile Data2 (code), Merge (merge), update status to failed1 (googleSheets), If email is valid (if). Propósito: webhook integration. Categoría: productivity. Disparadores: On form submission, Google Sheets Trigger, Google Sheets Trigger2, Schedule Trigger, Google Sheets Trigger3, Google Sheets Trigger4, Google Sheets Trigger5, Schedule Trigger2, Schedule Trigger3, Google Sheets Trigger6",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Google Sheets Trigger2",
+      "Google Sheets Trigger4",
+      "Schedule Trigger",
+      "Google Sheets Trigger5",
+      "On form submission",
+      "Sticky Note",
+      "Schedule Trigger3",
+      "n8n-nodes-base.splitOut",
+      "OpenAI1",
+      "Split Out",
+      "n8n-nodes-base.formTrigger",
+      "Google Sheets Trigger3",
+      "n8n-nodes-base.scheduleTrigger",
+      "Schedule Trigger2",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "Google Sheets Trigger6",
+      "Google Sheets Trigger",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.formtrigger",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.googlesheetstrigger"
+    ],
+    "search_terms": [
+      "code",
+      "webhook",
+      "automation",
+      "splitout",
+      "1146_splitout_code_automation_webhook",
+      "1146"
+    ],
+    "alternative_names": [
+      "LinkedIn Leads Scraping & Enrichment (Main)"
+    ],
+    "related_concepts": [
+      "productivity",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.googleSheetsTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 76.30057803468208,
+    "best_practices_score": 50.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 80.26011560693641
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:17.933327"
+  },
+  "semantic_vector": [
+    -0.05090222507715225,
+    -0.05402855575084686,
+    0.030741937458515167,
+    -0.01824258640408516,
+    -0.02890104055404663,
+    -0.02172613888978958,
+    -0.04051890969276428,
+    -0.039990052580833435,
+    -0.05416586995124817,
+    0.05096348375082016,
+    -0.0525597482919693,
+    -0.02042209729552269,
+    -0.0528152696788311,
+    -0.052347734570503235,
+    0.03936899080872536,
+    0.05418357998132706,
+    0.02830854244530201,
+    0.029071856290102005,
+    -0.030580205842852592,
+    -0.029869426041841507,
+    -0.006026966497302055,
+    0.05295362323522568,
+    0.030863776803016663,
+    -0.04505585879087448,
+    0.0541083961725235,
+    -0.03148874640464783,
+    -0.05209437757730484,
+    0.048689063638448715,
+    -0.02197640761733055,
+    0.05406090244650841,
+    0.021612411364912987,
+    0.04762285575270653,
+    -0.018567243590950966,
+    -0.053920939564704895,
+    0.05365653708577156,
+    -0.03609905764460564,
+    -0.05414968729019165,
+    -0.05001191049814224,
+    -0.014302534982562065,
+    -0.03684968873858452,
+    0.053078629076480865,
+    0.052825428545475006,
+    -0.03158626705408096,
+    -0.004001453518867493,
+    0.05415324121713638,
+    0.05392657220363617,
+    0.03260583057999611,
+    0.042994868010282516,
+    0.047757118940353394,
+    0.01236000470817089,
+    -0.053710538893938065,
+    -0.04706713184714317,
+    -0.05418338254094124,
+    -0.039870597422122955,
+    -0.04567154869437218,
+    0.013394930399954319,
+    0.05263188108801842,
+    0.04142314940690994,
+    0.03215716779232025,
+    -0.01548276748508215,
+    0.05083645135164261,
+    0.002816287335008383,
+    -0.05076911300420761,
+    0.05405554920434952,
+    -0.04318997636437416,
+    -0.045126818120479584,
+    0.04139374569058418,
+    0.01522477250546217,
+    0.05171621963381767,
+    0.01916464790701866,
+    -0.018192294985055923,
+    -0.052828408777713776,
+    0.0330561026930809,
+    0.054048098623752594,
+    -0.041195761412382126,
+    0.025999225676059723,
+    0.05417463928461075,
+    -0.05378548800945282,
+    -0.052506234496831894,
+    -0.022701801732182503,
+    0.04978064447641373,
+    0.006690224166959524,
+    0.05342265963554382,
+    -0.053836070001125336,
+    0.004654445219784975,
+    -0.042652763426303864,
+    0.021982084959745407,
+    -0.053163230419158936,
+    -0.04087703675031662,
+    -0.02735782042145729,
+    0.04641241207718849,
+    0.04703943058848381,
+    0.05389058589935303,
+    0.05033492669463158,
+    0.05196414515376091,
+    0.05330897495150566,
+    0.047702595591545105,
+    0.006503821816295385,
+    -0.054039403796195984,
+    -0.05413103848695755,
+    0.052001748234033585,
+    -0.05059146136045456,
+    -0.052976418286561966,
+    -0.04504353180527687,
+    0.054128751158714294,
+    -0.007462614215910435,
+    0.05411249399185181,
+    0.05363805592060089,
+    0.051451653242111206,
+    -0.054183535277843475,
+    -0.028641406446695328,
+    -0.05368857458233833,
+    0.011264286004006863,
+    -0.039825890213251114,
+    0.005426357965916395,
+    0.03856126219034195,
+    -0.054131899029016495,
+    -0.043931491672992706,
+    0.04319004341959953,
+    0.026443826034665108,
+    0.022281182929873466,
+    0.05227286368608475,
+    -0.03139634430408478,
+    -0.021734975278377533,
+    0.05413226783275604,
+    0.005344880744814873,
+    -0.01112382672727108,
+    0.04822584241628647,
+    0.05316140502691269,
+    -0.053398627787828445,
+    -0.05224580317735672,
+    0.04595186188817024,
+    0.0521869882941246,
+    0.05176261439919472,
+    0.03733216971158981,
+    -0.05379105731844902,
+    -0.03300975263118744,
+    0.05350642651319504,
+    -0.04807522892951965,
+    -0.05329560488462448,
+    0.004268057178705931,
+    0.05418357998132706,
+    -0.05082428455352783,
+    0.049095269292593,
+    -0.03177410364151001,
+    -0.05416536331176758,
+    0.0541032999753952,
+    -0.05299786478281021,
+    0.03266986459493637,
+    0.054167281836271286,
+    -0.051367275416851044,
+    -0.027022359892725945,
+    0.012598605826497078,
+    -0.05303956940770149,
+    0.044368524104356766,
+    0.05416223034262657,
+    0.033294130116701126,
+    -0.04751981422305107,
+    -0.027747325599193573,
+    -0.05412692204117775,
+    -0.054170478135347366,
+    -0.05413256213068962,
+    -0.004073272459208965,
+    -0.02434179186820984,
+    -0.03996262699365616,
+    -0.05414362996816635,
+    -0.054126787930727005,
+    -0.04002377390861511,
+    -0.05418292060494423,
+    0.00011049391468986869,
+    0.05405062437057495,
+    -0.04578370228409767,
+    0.032440606504678726,
+    -0.00014651333913207054,
+    -0.05417598411440849,
+    0.0500175878405571,
+    0.045353762805461884,
+    -0.05331234633922577,
+    0.044413067400455475,
+    -0.05328691005706787,
+    -0.040215156972408295,
+    -0.03478293865919113,
+    -0.05414825305342674,
+    -0.005872790701687336,
+    0.0533413290977478,
+    0.03531242907047272,
+    -0.0527489110827446,
+    0.038022879511117935,
+    0.031201159581542015,
+    0.03719565272331238,
+    0.049720413982868195,
+    0.05351836606860161,
+    -0.04892076179385185,
+    -0.05401954427361488,
+    -0.054177265614271164,
+    -0.054165445268154144,
+    0.052998799830675125,
+    0.05418357998132706,
+    0.04814634099602699,
+    0.048586405813694,
+    0.02088780701160431,
+    0.05409044027328491,
+    0.048651374876499176,
+    0.051341086626052856,
+    -0.017206482589244843,
+    -0.05257579684257507,
+    -0.031663086265325546,
+    -0.030271317809820175,
+    -0.05413753166794777,
+    -0.04789277911186218,
+    0.05267424136400223,
+    0.02844174951314926,
+    0.05283153057098389,
+    0.053951624780893326,
+    -0.05418352410197258,
+    -0.053693365305662155,
+    0.053869642317295074,
+    0.02972927875816822,
+    0.05380340665578842,
+    0.031165704131126404,
+    0.04651597887277603,
+    0.05363817885518074,
+    -0.04958920180797577,
+    -0.024933243170380592,
+    -0.038551606237888336,
+    -0.05417058244347572,
+    -0.05086120218038559,
+    -0.053471889346838,
+    0.0361703559756279,
+    -0.05407670512795448,
+    0.024639062583446503,
+    -0.053665079176425934,
+    0.0522240586578846,
+    -0.05418240278959274,
+    0.02222149446606636,
+    0.05410156026482582,
+    0.054179586470127106,
+    0.05418357998132706,
+    -0.05407467111945152,
+    -0.03138216212391853,
+    -0.04550516977906227,
+    0.05408988147974014,
+    -0.01806846261024475,
+    0.052726712077856064,
+    0.046495791524648666,
+    0.05380156263709068,
+    0.0051795728504657745,
+    -0.04846559837460518,
+    0.05408910661935806,
+    0.05389236658811569,
+    -0.009548596106469631,
+    0.03948534280061722,
+    -0.051683101803064346,
+    0.0255055520683527,
+    0.033744025975465775,
+    -0.05411824584007263,
+    -0.05410038307309151,
+    0.05418357998132706,
+    -0.052377019077539444,
+    0.026228416711091995,
+    -0.05372576415538788,
+    0.049318235367536545,
+    -0.047203242778778076,
+    0.052025701850652695,
+    -0.0049684904515743256,
+    0.009655111469328403,
+    0.05189256742596626,
+    -0.04559444636106491,
+    -0.05370436981320381,
+    0.028874874114990234,
+    -0.05149402841925621,
+    0.04698359966278076,
+    -0.05409349873661995,
+    0.0535261332988739,
+    0.04480552673339844,
+    0.03467145562171936,
+    -0.05403059720993042,
+    0.05144290626049042,
+    0.05417471006512642,
+    -0.03211022913455963,
+    -0.01962875761091709,
+    0.0017494370695203543,
+    0.05398136004805565,
+    0.05219341069459915,
+    0.050171032547950745,
+    0.0099656255915761,
+    0.006831180304288864,
+    0.05415923893451691,
+    -0.05339939892292023,
+    0.035722386091947556,
+    -0.021851927042007446,
+    0.020004887133836746,
+    0.05416354537010193,
+    0.004942812491208315,
+    0.028543168678879738,
+    -0.053507205098867416,
+    0.0536331869661808,
+    -0.047402605414390564,
+    -0.047788042575120926,
+    0.05134342610836029,
+    -0.040629107505083084,
+    0.05214583873748779,
+    0.015920182690024376,
+    -0.05364878848195076,
+    0.008676816709339619,
+    -0.04063526913523674,
+    -0.018065424636006355,
+    0.03167549893260002,
+    0.010010652244091034,
+    0.01680123805999756,
+    0.05159658193588257,
+    0.04236479103565216,
+    0.04774688929319382,
+    0.05355153605341911,
+    0.05318664759397507,
+    -0.05334838107228279,
+    0.05408729240298271,
+    -0.03114514797925949,
+    -0.000565106573048979,
+    -0.004595841746777296,
+    0.051066406071186066,
+    -0.05418180301785469,
+    0.053520675748586655,
+    -0.05263325944542885,
+    0.05061844736337662,
+    0.04402832314372063,
+    0.05049881339073181,
+    0.04227599874138832,
+    -0.020014915615320206,
+    -0.027550995349884033,
+    -0.03829848766326904,
+    -0.04644614830613136,
+    0.027667617425322533,
+    0.05400152876973152,
+    0.044886454939842224,
+    0.05311313644051552,
+    0.05416645482182503,
+    0.05024629831314087,
+    0.053713101893663406,
+    -0.0007968123536556959,
+    0.028525305911898613,
+    -0.05317503586411476,
+    0.05394362285733223,
+    -0.05010942369699478,
+    -0.05417768657207489,
+    -0.046157367527484894,
+    -0.007967391982674599,
+    0.0343867726624012,
+    -0.05401336029171944,
+    -0.01432521641254425,
+    0.052976034581661224,
+    0.027670541778206825,
+    -0.051961664110422134,
+    0.05401168763637543,
+    0.05259579420089722,
+    -0.0540928915143013,
+    -0.05418349802494049,
+    0.03454906865954399,
+    0.04841175302863121,
+    0.0519678071141243,
+    0.044581834226846695,
+    -0.05386893451213837,
+    -0.05394311994314194,
+    0.054055843502283096,
+    -0.05395942181348801,
+    0.051160261034965515,
+    0.047376349568367004,
+    -0.05268663540482521,
+    0.04624699056148529,
+    -0.010470523498952389,
+    -0.05352471023797989,
+    -0.05107701197266579,
+    -0.054075222462415695,
+    0.0532991960644722,
+    0.05335170403122902,
+    0.05377704277634621,
+    -0.04806322231888771,
+    -0.05413856729865074,
+    0.05302098020911217,
+    -0.027456045150756836,
+    -0.028886504471302032,
+    -0.021669797599315643,
+    -0.05386396497488022,
+    0.008488045074045658,
+    0.010502380318939686,
+    -0.047190140932798386,
+    0.04371420294046402,
+    0.02262844890356064,
+    -0.048241399228572845,
+    -0.05409029498696327,
+    0.04539865255355835,
+    0.03939206153154373,
+    0.051726099103689194,
+    0.05370192974805832,
+    -0.053540751338005066,
+    0.049905307590961456,
+    -0.03545946627855301,
+    -0.038590915501117706,
+    -0.04779423773288727,
+    0.05286521464586258,
+    0.03028755821287632,
+    -0.048963118344545364,
+    -0.015655962750315666,
+    0.053966324776411057,
+    -0.04952871799468994,
+    -0.0053168958984315395,
+    -0.054102394729852676,
+    -0.04953257739543915,
+    0.05390631780028343,
+    0.008534458465874195,
+    0.04794694855809212,
+    0.050125062465667725,
+    -0.00021769924205727875,
+    0.051459334790706635,
+    0.04779369384050369,
+    -0.03139937296509743,
+    0.04436379298567772,
+    -0.052376601845026016,
+    0.032484542578458786,
+    -0.05359707027673721,
+    0.04219561815261841,
+    0.02712332084774971,
+    -0.05008670687675476,
+    0.04743644967675209,
+    -0.04734265059232712,
+    0.025702228769659996,
+    -0.05377848073840141,
+    0.053451139479875565,
+    -0.04888640344142914,
+    0.053416237235069275,
+    0.037244122475385666,
+    -0.05396994948387146,
+    0.05067724362015724,
+    0.053738098591566086,
+    -0.03807350993156433,
+    -0.05103776976466179,
+    -0.04373878613114357,
+    -0.05402533710002899,
+    -0.05412451922893524,
+    0.04414810985326767,
+    0.040379881858825684,
+    -0.04770243912935257,
+    0.006537268869578838,
+    -0.05123690143227577,
+    -0.00526933278888464,
+    -0.0536966472864151,
+    -0.053439170122146606,
+    0.009317115880548954,
+    0.023709557950496674,
+    -0.04363387078046799,
+    -0.04866499826312065,
+    0.052590202540159225,
+    0.05411975085735321,
+    0.05136775225400925,
+    0.03579457849264145,
+    -0.054183479398489,
+    -0.05176806077361107,
+    0.05406441166996956,
+    -0.01641269214451313,
+    -0.05079835280776024,
+    0.05342383310198784,
+    0.051783666014671326,
+    0.04157578572630882,
+    0.04406656697392464,
+    0.04310589283704758,
+    -0.05391246825456619,
+    0.05308464542031288,
+    -0.028384696692228317,
+    -0.054182957857847214,
+    0.05418285354971886,
+    0.05184358358383179,
+    0.010157383978366852,
+    -0.013052481226623058,
+    0.02068660780787468,
+    -0.053476106375455856,
+    0.04111536964774132,
+    0.001865185797214508,
+    -0.04011435806751251,
+    -0.017807019874453545,
+    -0.038423363119363785,
+    0.018435798585414886,
+    0.05197163671255112,
+    -0.041565876454114914,
+    -0.05418044328689575,
+    -0.05374797061085701,
+    0.03034576214849949,
+    -0.024494245648384094,
+    -0.04304905980825424,
+    -0.053976938128471375,
+    0.03575829789042473,
+    -0.04003867134451866,
+    0.0239625945687294,
+    0.009222321212291718,
+    0.05082264915108681,
+    -0.04770350083708763,
+    0.05380219593644142,
+    0.043721795082092285,
+    0.05404456704854965,
+    -0.03158228471875191,
+    0.051794182509183884,
+    -0.0353146530687809,
+    -0.029998013749718666,
+    0.05377984791994095,
+    -0.05418354645371437,
+    0.05004765838384628,
+    -0.054156187921762466,
+    0.00971534289419651,
+    0.0478876531124115,
+    0.0479881688952446,
+    0.05417759716510773,
+    -0.05375976115465164,
+    -0.05352766066789627
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: On form submission, Google Sheets Trigger, Google Sheets Trigger2, Schedule Trigger, Google Sheets Trigger3, Google Sheets Trigger4, Google Sheets Trigger5, Schedule Trigger2, Schedule Trigger3, Google Sheets Trigger6; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in productivity context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "summary": {
+    "totalTests": 5,
+    "successfulTests": 5,
+    "successRate": 100,
+    "averageDuration": 12,
+    "generatedAt": "2025-09-26T01:58:27.505Z"
+  },
+  "results": [
+    {
+      "testName": "CRM Básico",
+      "success": true,
+      "duration": 33,
+      "metrics": {
+        "method": "intelligent-agent",
+        "nodeCount": 7,
+        "connectionCount": 2,
+        "qualityScore": 10,
+        "issues": []
+      },
+      "timestamp": "2025-09-26T01:58:27.472Z"
+    },
+    {
+      "testName": "E-commerce Completo",
+      "success": true,
+      "duration": 7,
+      "metrics": {
+        "method": "intelligent-agent",
+        "nodeCount": 10,
+        "connectionCount": 7,
+        "qualityScore": 10,
+        "issues": []
+      },
+      "timestamp": "2025-09-26T01:58:27.479Z"
+    },
+    {
+      "testName": "Automatización de Marketing",
+      "success": true,
+      "duration": 10,
+      "metrics": {
+        "method": "intelligent-agent",
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "qualityScore": 10,
+        "issues": []
+      },
+      "timestamp": "2025-09-26T01:58:27.489Z"
+    },
+    {
+      "testName": "Sistema de Notificaciones",
+      "success": true,
+      "duration": 3,
+      "metrics": {
+        "method": "original-fallback",
+        "nodeCount": 3,
+        "connectionCount": 2,
+        "qualityScore": 9,
+        "issues": [
+          "Menos nodos de los esperados"
+        ]
+      },
+      "timestamp": "2025-09-26T01:58:27.493Z"
+    },
+    {
+      "testName": "Pipeline de Datos",
+      "success": true,
+      "duration": 9,
+      "metrics": {
+        "method": "intelligent-agent",
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "qualityScore": 10,
+        "issues": []
+      },
+      "timestamp": "2025-09-26T01:58:27.503Z"
+    }
+  ],
+  "methodStats": {
+    "intelligent-agent": {
+      "count": 4,
+      "totalDuration": 59,
+      "totalQuality": 40
+    },
+    "original-fallback": {
+      "count": 1,
+      "totalDuration": 3,
+      "totalQuality": 9
+    }
+  },
+  "qualityAnalysis": {
+    "average": 9.8,
+    "min": 9,
+    "max": 10
+  },
+  "conclusions": {
+    "integrationStatus": "EXCELLENT",
+    "primaryMethod": "intelligent-agent",
+    "fallbackReliability": "HIGH",
+    "autonomyLevel": "COMPLETE"
+  }
+}

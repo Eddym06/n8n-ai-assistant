@@ -1,0 +1,1906 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Workflow-Limpio-Sin-Credenciales",
+    "file_name": "workflow-limpio-sin-credenciales.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Email y Comunicación\\workflow-limpio-sin-credenciales.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "0b9c836af84e"
+  },
+  "structure": {
+    "total_nodes": 130,
+    "node_types": [
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.googleCalendar",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.emailSend",
+      "n8n-nodes-base.twilio",
+      "n8n-nodes-base.openAi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleCalendar",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 44
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 11
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 29
+      },
+      {
+        "type": "n8n-nodes-base.emailSend",
+        "count": 15
+      },
+      {
+        "type": "n8n-nodes-base.twilio",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.openAi",
+        "count": 9
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 5
+      }
+    ],
+    "triggers": [
+      {
+        "name": "RH_Generacion Contrato Google Docs",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -140,
+          100
+        ]
+      },
+      {
+        "name": "RH_Registro PostgreSQL Empleados",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          140,
+          100
+        ]
+      },
+      {
+        "name": "Ventas_Registro Interacciones DB",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -420,
+          240
+        ]
+      },
+      {
+        "name": "Fin_Repositorio Documental",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          140,
+          240
+        ]
+      },
+      {
+        "name": "Fin_Libro Mayor Registro",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          420,
+          240
+        ]
+      },
+      {
+        "name": "Fin_Flujo Caja Actualizacion",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -420,
+          380
+        ]
+      },
+      {
+        "name": "Fin_Presupuestos Control",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -140,
+          380
+        ]
+      },
+      {
+        "name": "Fin_Auditoria Trail Automatico",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          140,
+          380
+        ]
+      },
+      {
+        "name": "Ops_Inventario Actualizacion Automatica",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -420,
+          520
+        ]
+      },
+      {
+        "name": "Sop_Documentacion Creacion",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          140,
+          520
+        ]
+      },
+      {
+        "name": "Sop_Resolucion Metricas",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          420,
+          520
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "RH_Webhook Candidatos ATS",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -420,
+          100
+        ]
+      },
+      {
+        "name": "RH_Validacion Docs IA",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -420,
+          780
+        ]
+      },
+      {
+        "name": "RH_IF Validacion Docs",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -280,
+          440
+        ]
+      },
+      {
+        "name": "RH_Notificar Rechazo Docs",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -420,
+          1120
+        ]
+      },
+      {
+        "name": "RH_Verificacion Antecedentes HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          780
+        ]
+      },
+      {
+        "name": "RH_Validacion Referencias Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          140,
+          780
+        ]
+      },
+      {
+        "name": "RH_Creacion Usuario Active Directory HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          780
+        ]
+      },
+      {
+        "name": "RH_Setup Correo Exchange HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          920
+        ]
+      },
+      {
+        "name": "RH_Perfil Slack HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          920
+        ]
+      },
+      {
+        "name": "RH_Credenciales Temporales Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          920
+        ]
+      },
+      {
+        "name": "RH_Induccion Google Calendar",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          420,
+          920
+        ]
+      },
+      {
+        "name": "RH_Kit Bienvenida Email",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -140,
+          1120
+        ]
+      },
+      {
+        "name": "RH_VPN Accesos HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          1060
+        ]
+      },
+      {
+        "name": "RH_Nomina Registro HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          1060
+        ]
+      },
+      {
+        "name": "RH_Capacitaciones LMS HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          1060
+        ]
+      },
+      {
+        "name": "RH_Seguro Medico Registro",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          1060
+        ]
+      },
+      {
+        "name": "RH_Vacaciones Calendario",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -420,
+          1200
+        ]
+      },
+      {
+        "name": "RH_Documentos Firmas Digitales",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          1200
+        ]
+      },
+      {
+        "name": "Ventas_Webhook Leads Salesforce",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          420,
+          100
+        ]
+      },
+      {
+        "name": "Ventas_Scoring IA OpenAI",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          140,
+          1200
+        ]
+      },
+      {
+        "name": "Ventas_Clasificacion Geografica IF",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          0,
+          440
+        ]
+      },
+      {
+        "name": "Ventas_Notificar Lead No Apto",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          140,
+          1120
+        ]
+      },
+      {
+        "name": "Ventas_Asignacion Vendedores Algoritmo",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          420,
+          1200
+        ]
+      },
+      {
+        "name": "Ventas_Email Personalizado Seguimiento",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          420,
+          1120
+        ]
+      },
+      {
+        "name": "Ventas_Oportunidad CRM HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          1340
+        ]
+      },
+      {
+        "name": "Ventas_Llamadas Sistema Telefonico",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          1340
+        ]
+      },
+      {
+        "name": "Ventas_Propuesta PDF Generacion",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          1340
+        ]
+      },
+      {
+        "name": "Ventas_Tracking Emails Apertura",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          420,
+          1340
+        ]
+      },
+      {
+        "name": "Ventas_Notificaciones Push Mobile",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          1480
+        ]
+      },
+      {
+        "name": "Ventas_Dashboard Power BI HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          1460
+        ]
+      },
+      {
+        "name": "Ventas_Tarea Seguimiento HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          1480
+        ]
+      },
+      {
+        "name": "Ventas_WhatsApp Business HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          1480
+        ]
+      },
+      {
+        "name": "Ventas_Reportes Automaticos",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -420,
+          1260
+        ]
+      },
+      {
+        "name": "Ventas_Analisis Competencia IA",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          420,
+          1480
+        ]
+      },
+      {
+        "name": "Ventas_Pricing Dinamico Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -420,
+          1620
+        ]
+      },
+      {
+        "name": "Ventas_Forecasting Ventas",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -140,
+          1620
+        ]
+      },
+      {
+        "name": "Ventas_Territorio Optimizacion",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          1620
+        ]
+      },
+      {
+        "name": "Ventas_Comisiones Calculo Automatico",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          420,
+          1620
+        ]
+      },
+      {
+        "name": "Ventas_Pipeline Gestion",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          1760
+        ]
+      },
+      {
+        "name": "Ventas_Cliente Segmentacion IA",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          -140,
+          1760
+        ]
+      },
+      {
+        "name": "Ventas_Cross-selling Sugerencias",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          1760
+        ]
+      },
+      {
+        "name": "Ventas_Retention Analisis",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          420,
+          1760
+        ]
+      },
+      {
+        "name": "Fin_Webhook Facturas Sistema Contable",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -140,
+          240
+        ]
+      },
+      {
+        "name": "Fin_Validacion Fiscal IF",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          280,
+          440
+        ]
+      },
+      {
+        "name": "Fin_Notificar Factura Invalida",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -140,
+          1260
+        ]
+      },
+      {
+        "name": "Fin_Verificacion Credito Bureau HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          1900
+        ]
+      },
+      {
+        "name": "Fin_Impuestos Calculo Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -140,
+          1900
+        ]
+      },
+      {
+        "name": "Fin_XML Fiscal Generacion",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          1900
+        ]
+      },
+      {
+        "name": "Fin_SAT Timbrado HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          1900
+        ]
+      },
+      {
+        "name": "Fin_SMS Cliente Notificacion",
+        "type": "n8n-nodes-base.twilio",
+        "position": [
+          140,
+          1260
+        ]
+      },
+      {
+        "name": "Fin_Asiento Contable Automatico",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          2040
+        ]
+      },
+      {
+        "name": "Fin_Banca Electronica HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          2040
+        ]
+      },
+      {
+        "name": "Fin_Estados Financieros",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          2040
+        ]
+      },
+      {
+        "name": "Fin_Vencimientos Alertas",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          420,
+          1260
+        ]
+      },
+      {
+        "name": "Fin_Conciliacion Bancaria",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          420,
+          2040
+        ]
+      },
+      {
+        "name": "Fin_Gastos Aprobacion Workflow IF",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -280,
+          580
+        ]
+      },
+      {
+        "name": "Fin_Aprobar Gasto",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          2180
+        ]
+      },
+      {
+        "name": "Fin_Rechazar Gasto",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          2180
+        ]
+      },
+      {
+        "name": "Fin_Inversiones Analisis",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          2180
+        ]
+      },
+      {
+        "name": "Fin_Riesgos Evaluacion IA",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          420,
+          2180
+        ]
+      },
+      {
+        "name": "Fin_Compliance Regulatorio",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -420,
+          2320
+        ]
+      },
+      {
+        "name": "Fin_Reportes Fiscales",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -420,
+          1400
+        ]
+      },
+      {
+        "name": "Ops_Webhook Ordenes Compra",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          420,
+          380
+        ]
+      },
+      {
+        "name": "Ops_Inventario Validacion IF Multiple",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          0,
+          580
+        ]
+      },
+      {
+        "name": "Ops_Notificar Stock Insuficiente",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -140,
+          1400
+        ]
+      },
+      {
+        "name": "Ops_Proveedores Verificacion HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          2320
+        ]
+      },
+      {
+        "name": "Ops_Costos Envio Calculo",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          2320
+        ]
+      },
+      {
+        "name": "Ops_Orden Produccion Generacion",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          2320
+        ]
+      },
+      {
+        "name": "Ops_MRP Programacion HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          2460
+        ]
+      },
+      {
+        "name": "Ops_Etiquetas Envio",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -140,
+          2460
+        ]
+      },
+      {
+        "name": "Ops_Transportistas Integracion HTTP",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          2460
+        ]
+      },
+      {
+        "name": "Ops_Tracking Paquetes",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          2460
+        ]
+      },
+      {
+        "name": "Ops_Entrega Notificaciones",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          140,
+          1400
+        ]
+      },
+      {
+        "name": "Ops_Calidad Reportes",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -420,
+          2600
+        ]
+      },
+      {
+        "name": "Ops_Temperatura Control IoT",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          2600
+        ]
+      },
+      {
+        "name": "Ops_Devoluciones Gestion",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          2600
+        ]
+      },
+      {
+        "name": "Ops_KPIs Operativos",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          420,
+          2600
+        ]
+      },
+      {
+        "name": "Ops_Mantenimiento Preventivo Programado",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          2740
+        ]
+      },
+      {
+        "name": "Ops_Almacen Optimizacion Algoritmo",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -140,
+          2740
+        ]
+      },
+      {
+        "name": "Ops_Rutas Distribucion IA",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          140,
+          2740
+        ]
+      },
+      {
+        "name": "Ops_Sustainability Metricas",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          420,
+          2740
+        ]
+      },
+      {
+        "name": "Ops_Safety Protocolos Automatizados",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -420,
+          2880
+        ]
+      },
+      {
+        "name": "Ops_Vendor Management",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          2880
+        ]
+      },
+      {
+        "name": "Ops_Procurement Automatizado",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          2880
+        ]
+      },
+      {
+        "name": "Ops_Asset Tracking RFID",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          2880
+        ]
+      },
+      {
+        "name": "Ops_Production Scheduling",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          3020
+        ]
+      },
+      {
+        "name": "Ops_Quality Assurance Automatizada",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -140,
+          3020
+        ]
+      },
+      {
+        "name": "Ops_Logistics Coordination",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          3020
+        ]
+      },
+      {
+        "name": "Ops_Supply Chain Visibility",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          3020
+        ]
+      },
+      {
+        "name": "Ops_Demand Forecasting IA",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          -420,
+          3160
+        ]
+      },
+      {
+        "name": "Ops_Capacity Planning",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -140,
+          3160
+        ]
+      },
+      {
+        "name": "Sop_Webhook Tickets Helpdesk",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -140,
+          520
+        ]
+      },
+      {
+        "name": "Sop_Clasificacion Tipo IF",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          280,
+          580
+        ]
+      },
+      {
+        "name": "Sop_Notificar Ticket Invalido",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          420,
+          1400
+        ]
+      },
+      {
+        "name": "Sop_Prioridad Asignacion Algoritmo",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          3160
+        ]
+      },
+      {
+        "name": "Sop_Escalamiento Tiempo Automatico",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          420,
+          3160
+        ]
+      },
+      {
+        "name": "Sop_Knowledge Base Busqueda",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          3300
+        ]
+      },
+      {
+        "name": "Sop_IA Respuesta Generacion",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          -140,
+          3300
+        ]
+      },
+      {
+        "name": "Sop_Solucion Cliente Envio",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -420,
+          1540
+        ]
+      },
+      {
+        "name": "Sop_Seguimiento Programado",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          3300
+        ]
+      },
+      {
+        "name": "Sop_Satisfaccion Encuesta",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          -140,
+          1540
+        ]
+      },
+      {
+        "name": "Sop_Sentimientos Analisis IA",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          420,
+          3300
+        ]
+      },
+      {
+        "name": "Sop_FAQ Actualizacion",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          3440
+        ]
+      },
+      {
+        "name": "Sop_Supervisores Notificacion",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          140,
+          1540
+        ]
+      },
+      {
+        "name": "Sop_Chat Vivo Integracion",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          3440
+        ]
+      },
+      {
+        "name": "Sop_SLA Monitoring",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          3440
+        ]
+      },
+      {
+        "name": "Sop_Chatbot Integracion",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          3440
+        ]
+      },
+      {
+        "name": "Sop_Remote Assistance",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -420,
+          3580
+        ]
+      },
+      {
+        "name": "Sop_Problem Escalation",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -140,
+          3580
+        ]
+      },
+      {
+        "name": "Central_Merge RH",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          140,
+          3580
+        ]
+      },
+      {
+        "name": "Central_Merge Ventas",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          420,
+          3580
+        ]
+      },
+      {
+        "name": "Central_Merge Financiero",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          -420,
+          3720
+        ]
+      },
+      {
+        "name": "Central_Merge Operaciones",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          -140,
+          3720
+        ]
+      },
+      {
+        "name": "Central_Merge Soporte",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          140,
+          3720
+        ]
+      },
+      {
+        "name": "Central_Merge Todos Modulos",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          420,
+          3720
+        ]
+      },
+      {
+        "name": "Central_Metricas Consolidacion Masiva",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -420,
+          3860
+        ]
+      },
+      {
+        "name": "Central_Dashboard Ejecutivo Generacion",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          140,
+          1460
+        ]
+      },
+      {
+        "name": "Central_Stakeholders Notificaciones",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          420,
+          1540
+        ]
+      },
+      {
+        "name": "Central_Strategic Insights IA",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          -140,
+          3860
+        ]
+      }
+    ],
+    "connections_count": 114,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 11,
+      "action_count": 119
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "email automation",
+    "use_cases": [
+      "On-demand execution",
+      "Email automation"
+    ],
+    "complexity_score": 4845,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "ventas_analisis competencia ia",
+      "fin_compliance regulatorio",
+      "sop_webhook tickets helpdesk",
+      "ventas_reportes automaticos",
+      "fin_auditoria trail automatico",
+      "central_dashboard ejecutivo generacion",
+      "sop_remote assistance",
+      "rh_induccion google calendar",
+      "ops_entrega notificaciones",
+      "webhook",
+      "central_merge ventas",
+      "ventas_pipeline gestion",
+      "ventas_email personalizado seguimiento",
+      "ventas_oportunidad crm http",
+      "central_stakeholders notificaciones",
+      "fin_riesgos evaluacion ia",
+      "rh_setup correo exchange http",
+      "fin_impuestos calculo code",
+      "sop_chat vivo integracion",
+      "httpRequest",
+      "rh_verificacion antecedentes http",
+      "rh_creacion usuario active directory http",
+      "sop_resolucion metricas",
+      "ops_capacity planning",
+      "email automation",
+      "rh_seguro medico registro",
+      "sop_knowledge base busqueda",
+      "ventas_retention analisis",
+      "ops_asset tracking rfid",
+      "ops_rutas distribucion ia",
+      "googleCalendar",
+      "merge",
+      "rh_webhook candidatos ats",
+      "fin_sat timbrado http",
+      "ops_mantenimiento preventivo programado",
+      "ops_temperatura control iot",
+      "rh_if validacion docs",
+      "rh_validacion referencias gmail",
+      "fin_rechazar gasto",
+      "rh_nomina registro http",
+      "gmail",
+      "rh_capacitaciones lms http",
+      "ops_safety protocolos automatizados",
+      "fin_gastos aprobacion workflow if",
+      "sop_notificar ticket invalido",
+      "emailSend",
+      "rh_credenciales temporales code",
+      "ops_sustainability metricas",
+      "ops_inventario actualizacion automatica",
+      "ops_etiquetas envio",
+      "ops_webhook ordenes compra",
+      "central_metricas consolidacion masiva",
+      "ops_devoluciones gestion",
+      "ventas_propuesta pdf generacion",
+      "ventas_cliente segmentacion ia",
+      "sop_escalamiento tiempo automatico",
+      "ops_proveedores verificacion http",
+      "fin_asiento contable automatico",
+      "ventas_scoring ia openai",
+      "ops_vendor management",
+      "ops_orden produccion generacion",
+      "ventas_clasificacion geografica if",
+      "sop_satisfaccion encuesta",
+      "sop_clasificacion tipo if",
+      "ops_supply chain visibility",
+      "ventas_registro interacciones db",
+      "ops_production scheduling",
+      "fin_verificacion credito bureau http",
+      "fin_reportes fiscales",
+      "fin_validacion fiscal if",
+      "central_merge operaciones",
+      "fin_webhook facturas sistema contable",
+      "ventas_pricing dinamico code",
+      "ops_inventario validacion if multiple",
+      "ventas_territorio optimizacion",
+      "fin_libro mayor registro",
+      "ops_kpis operativos",
+      "rh_vacaciones calendario",
+      "ops_tracking paquetes",
+      "sop_seguimiento programado",
+      "integration",
+      "ventas_llamadas sistema telefonico",
+      "fin_presupuestos control",
+      "fin_sms cliente notificacion",
+      "sop_chatbot integracion",
+      "sop_ia respuesta generacion",
+      "rh_validacion docs ia",
+      "rh_registro postgresql empleados",
+      "central_merge soporte",
+      "sop_problem escalation",
+      "fin_inversiones analisis",
+      "ventas_dashboard power bi http",
+      "central_strategic insights ia",
+      "ops_procurement automatizado",
+      "code",
+      "set",
+      "ops_logistics coordination",
+      "ventas_comisiones calculo automatico",
+      "ventas_tarea seguimiento http",
+      "ops_notificar stock insuficiente",
+      "ops_calidad reportes",
+      "fin_notificar factura invalida",
+      "central_merge financiero",
+      "ventas_notificaciones push mobile",
+      "complex",
+      "manualTrigger",
+      "sop_sla monitoring",
+      "ops_mrp programacion http",
+      "rh_vpn accesos http",
+      "fin_banca electronica http",
+      "ventas_asignacion vendedores algoritmo",
+      "sop_prioridad asignacion algoritmo",
+      "fin_flujo caja actualizacion",
+      "central_merge todos modulos",
+      "rh_documentos firmas digitales",
+      "ventas_whatsapp business http",
+      "ops_demand forecasting ia",
+      "ops_quality assurance automatizada",
+      "ventas_notificar lead no apto",
+      "sop_documentacion creacion",
+      "central_merge rh",
+      "ops_transportistas integracion http",
+      "openAi",
+      "sop_sentimientos analisis ia",
+      "twilio",
+      "sop_solucion cliente envio",
+      "ops_costos envio calculo",
+      "ventas_tracking emails apertura",
+      "fin_repositorio documental",
+      "fin_vencimientos alertas",
+      "fin_aprobar gasto",
+      "rh_kit bienvenida email",
+      "sop_faq actualizacion",
+      "ventas_webhook leads salesforce",
+      "fin_estados financieros",
+      "ventas_cross-selling sugerencias",
+      "rh_perfil slack http",
+      "sop_supervisores notificacion",
+      "rh_notificar rechazo docs",
+      "fin_xml fiscal generacion",
+      "rh_generacion contrato google docs",
+      "ventas_forecasting ventas",
+      "fin_conciliacion bancaria",
+      "ops_almacen optimizacion algoritmo"
+    ],
+    "description": "Este workflow diseñado para email automation con 130 nodos con 11 disparadores que ejecuta: RH_Webhook Candidatos ATS, RH_Validacion Docs IA, RH_IF Validacion Docs en la categoría de integration.",
+    "semantic_content": "Nodos: RH_Webhook Candidatos ATS (webhook), RH_Validacion Docs IA (code), RH_IF Validacion Docs (if), RH_Notificar Rechazo Docs (emailSend), RH_Verificacion Antecedentes HTTP (httpRequest), RH_Validacion Referencias Gmail (gmail), RH_Generacion Contrato Google Docs (manualTrigger), RH_Creacion Usuario Active Directory HTTP (httpRequest), RH_Setup Correo Exchange HTTP (httpRequest), RH_Perfil Slack HTTP (httpRequest), RH_Registro PostgreSQL Empleados (manualTrigger), RH_Credenciales Temporales Code (code), RH_Induccion Google Calendar (googleCalendar), RH_Kit Bienvenida Email (emailSend), RH_VPN Accesos HTTP (httpRequest), RH_Nomina Registro HTTP (httpRequest), RH_Capacitaciones LMS HTTP (httpRequest), RH_Seguro Medico Registro (httpRequest), RH_Vacaciones Calendario (googleCalendar), RH_Documentos Firmas Digitales (httpRequest), Ventas_Webhook Leads Salesforce (webhook), Ventas_Scoring IA OpenAI (openAi), Ventas_Clasificacion Geografica IF (if), Ventas_Notificar Lead No Apto (emailSend), Ventas_Asignacion Vendedores Algoritmo (code), Ventas_Email Personalizado Seguimiento (emailSend), Ventas_Oportunidad CRM HTTP (httpRequest), Ventas_Llamadas Sistema Telefonico (httpRequest), Ventas_Propuesta PDF Generacion (code), Ventas_Tracking Emails Apertura (set), Ventas_Notificaciones Push Mobile (httpRequest), Ventas_Dashboard Power BI HTTP (httpRequest), Ventas_Tarea Seguimiento HTTP (httpRequest), Ventas_WhatsApp Business HTTP (httpRequest), Ventas_Registro Interacciones DB (manualTrigger), Ventas_Reportes Automaticos (emailSend), Ventas_Analisis Competencia IA (openAi), Ventas_Pricing Dinamico Code (code), Ventas_Forecasting Ventas (code), Ventas_Territorio Optimizacion (code), Ventas_Comisiones Calculo Automatico (code), Ventas_Pipeline Gestion (httpRequest), Ventas_Cliente Segmentacion IA (openAi), Ventas_Cross-selling Sugerencias (code), Ventas_Retention Analisis (code), Fin_Webhook Facturas Sistema Contable (webhook), Fin_Validacion Fiscal IF (if), Fin_Notificar Factura Invalida (emailSend), Fin_Verificacion Credito Bureau HTTP (httpRequest), Fin_Impuestos Calculo Code (code), Fin_XML Fiscal Generacion (code), Fin_SAT Timbrado HTTP (httpRequest), Fin_Repositorio Documental (manualTrigger), Fin_SMS Cliente Notificacion (twilio), Fin_Libro Mayor Registro (manualTrigger), Fin_Flujo Caja Actualizacion (manualTrigger), Fin_Asiento Contable Automatico (httpRequest), Fin_Banca Electronica HTTP (httpRequest), Fin_Estados Financieros (code), Fin_Vencimientos Alertas (emailSend), Fin_Conciliacion Bancaria (code), Fin_Presupuestos Control (manualTrigger), Fin_Gastos Aprobacion Workflow IF (if), Fin_Aprobar Gasto (httpRequest), Fin_Rechazar Gasto (httpRequest), Fin_Inversiones Analisis (code), Fin_Riesgos Evaluacion IA (openAi), Fin_Auditoria Trail Automatico (manualTrigger), Fin_Compliance Regulatorio (code), Fin_Reportes Fiscales (emailSend), Ops_Webhook Ordenes Compra (webhook), Ops_Inventario Validacion IF Multiple (if), Ops_Notificar Stock Insuficiente (emailSend), Ops_Proveedores Verificacion HTTP (httpRequest), Ops_Costos Envio Calculo (code), Ops_Orden Produccion Generacion (httpRequest), Ops_MRP Programacion HTTP (httpRequest), Ops_Etiquetas Envio (code), Ops_Transportistas Integracion HTTP (httpRequest), Ops_Tracking Paquetes (httpRequest), Ops_Entrega Notificaciones (emailSend), Ops_Inventario Actualizacion Automatica (manualTrigger), Ops_Calidad Reportes (code), Ops_Temperatura Control IoT (httpRequest), Ops_Devoluciones Gestion (httpRequest), Ops_KPIs Operativos (code), Ops_Mantenimiento Preventivo Programado (httpRequest), Ops_Almacen Optimizacion Algoritmo (code), Ops_Rutas Distribucion IA (openAi), Ops_Sustainability Metricas (code), Ops_Safety Protocolos Automatizados (code), Ops_Vendor Management (httpRequest), Ops_Procurement Automatizado (httpRequest), Ops_Asset Tracking RFID (httpRequest), Ops_Production Scheduling (httpRequest), Ops_Quality Assurance Automatizada (code), Ops_Logistics Coordination (httpRequest), Ops_Supply Chain Visibility (httpRequest), Ops_Demand Forecasting IA (openAi), Ops_Capacity Planning (code), Sop_Webhook Tickets Helpdesk (webhook), Sop_Clasificacion Tipo IF (if), Sop_Notificar Ticket Invalido (emailSend), Sop_Prioridad Asignacion Algoritmo (code), Sop_Escalamiento Tiempo Automatico (code), Sop_Knowledge Base Busqueda (httpRequest), Sop_IA Respuesta Generacion (openAi), Sop_Solucion Cliente Envio (emailSend), Sop_Seguimiento Programado (httpRequest), Sop_Satisfaccion Encuesta (emailSend), Sop_Sentimientos Analisis IA (openAi), Sop_FAQ Actualizacion (httpRequest), Sop_Supervisores Notificacion (emailSend), Sop_Chat Vivo Integracion (httpRequest), Sop_Documentacion Creacion (manualTrigger), Sop_Resolucion Metricas (manualTrigger), Sop_SLA Monitoring (code), Sop_Chatbot Integracion (httpRequest), Sop_Remote Assistance (httpRequest), Sop_Problem Escalation (httpRequest), Central_Merge RH (merge), Central_Merge Ventas (merge), Central_Merge Financiero (merge), Central_Merge Operaciones (merge), Central_Merge Soporte (merge), Central_Merge Todos Modulos (merge), Central_Metricas Consolidacion Masiva (code), Central_Dashboard Ejecutivo Generacion (httpRequest), Central_Stakeholders Notificaciones (emailSend), Central_Strategic Insights IA (openAi). Propósito: email automation. Categoría: integration. Disparadores: RH_Generacion Contrato Google Docs, RH_Registro PostgreSQL Empleados, Ventas_Registro Interacciones DB, Fin_Repositorio Documental, Fin_Libro Mayor Registro, Fin_Flujo Caja Actualizacion, Fin_Presupuestos Control, Fin_Auditoria Trail Automatico, Ops_Inventario Actualizacion Automatica, Sop_Documentacion Creacion, Sop_Resolucion Metricas",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Fin_Flujo Caja Actualizacion",
+      "n8n-nodes-base.webhook",
+      "RH_Webhook Candidatos ATS",
+      "RH_Registro PostgreSQL Empleados",
+      "Fin_Libro Mayor Registro",
+      "n8n-nodes-base.manualTrigger",
+      "RH_Validacion Docs IA",
+      "Sop_Resolucion Metricas",
+      "n8n-nodes-base.code",
+      "Sop_Documentacion Creacion",
+      "n8n-nodes-base.if",
+      "Fin_Auditoria Trail Automatico",
+      "RH_IF Validacion Docs",
+      "Fin_Presupuestos Control",
+      "RH_Generacion Contrato Google Docs",
+      "Ops_Inventario Actualizacion Automatica",
+      "Fin_Repositorio Documental",
+      "Ventas_Registro Interacciones DB"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.googlecalendar",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.openai",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.emailsend",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.twilio",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "limpio",
+      "sin",
+      "workflow-limpio-sin-credenciales",
+      "workflow",
+      "credenciales"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "integration",
+      "email automation"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 53.66357069143447,
+    "best_practices_score": 50.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 69.4827141382869
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.238009"
+  },
+  "semantic_vector": [
+    -0.048032525926828384,
+    0.028050297871232033,
+    -0.0345308743417263,
+    0.0474860742688179,
+    0.041978057473897934,
+    -0.018528148531913757,
+    -0.045487187802791595,
+    -0.04859859496355057,
+    -0.05028915032744408,
+    0.037346500903367996,
+    -0.049814436584711075,
+    -0.050124965608119965,
+    0.0241207517683506,
+    -0.04942283034324646,
+    0.04903265833854675,
+    0.050289202481508255,
+    0.05021229386329651,
+    0.049516092985868454,
+    0.04526887089014053,
+    0.04103722795844078,
+    0.05026992782950401,
+    -0.05026203393936157,
+    0.048630330711603165,
+    -0.040096208453178406,
+    0.046658772975206375,
+    -0.050230156630277634,
+    0.04695003852248192,
+    0.05027898773550987,
+    -0.05026950314640999,
+    0.05010855570435524,
+    0.04901426285505295,
+    0.04893029108643532,
+    -0.05027061700820923,
+    0.04300980269908905,
+    0.05028751492500305,
+    -0.05021308362483978,
+    -0.050161026418209076,
+    0.04998086765408516,
+    0.023385193198919296,
+    -0.050092704594135284,
+    0.050120703876018524,
+    0.045463934540748596,
+    -0.04539678245782852,
+    0.050289202481508255,
+    0.050289202481508255,
+    -0.02306625247001648,
+    -0.050288308411836624,
+    0.04231943190097809,
+    0.020758377388119698,
+    0.04043209180235863,
+    -0.049307338893413544,
+    0.040255118161439896,
+    -0.05028915777802467,
+    -0.05028507113456726,
+    -0.05028918758034706,
+    0.03048604726791382,
+    0.02721797488629818,
+    0.04990353435277939,
+    0.010531028732657433,
+    0.0018061096780002117,
+    0.0477626733481884,
+    0.03358528017997742,
+    -0.04711666703224182,
+    0.050289105623960495,
+    -0.04992341250181198,
+    -0.029866671189665794,
+    0.050285860896110535,
+    -0.04997440055012703,
+    0.050209444016218185,
+    -0.012296090833842754,
+    -0.050289202481508255,
+    0.049749791622161865,
+    -0.029255907982587814,
+    0.050194647163152695,
+    -0.049663398414850235,
+    0.008989966474473476,
+    0.049687888473272324,
+    -0.015399574302136898,
+    0.03742371127009392,
+    -0.047973085194826126,
+    0.047398343682289124,
+    0.04432553052902222,
+    0.0036612781696021557,
+    -0.0465269535779953,
+    0.05028720200061798,
+    0.03799636662006378,
+    -0.03231927007436752,
+    -0.050231557339429855,
+    0.022612886503338814,
+    -0.050259385257959366,
+    -0.05028456822037697,
+    0.047928377985954285,
+    0.04963059350848198,
+    -0.01870863512158394,
+    0.005224115680903196,
+    -0.04966842010617256,
+    0.04997682943940163,
+    0.050289180129766464,
+    -0.05028918385505676,
+    -0.050288498401641846,
+    0.04951123148202896,
+    -0.05021372064948082,
+    -0.05028394237160683,
+    -0.04635259136557579,
+    0.05028676614165306,
+    -0.045228730887174606,
+    0.050289202481508255,
+    -0.050254594534635544,
+    -0.03345803543925285,
+    -0.050289202481508255,
+    0.01838746666908264,
+    -0.05028912052512169,
+    -0.045742541551589966,
+    0.015963971614837646,
+    -0.012513061985373497,
+    -0.02105468511581421,
+    -0.050131022930145264,
+    -0.04288617521524429,
+    0.027347024530172348,
+    0.050287876278162,
+    0.04397715628147125,
+    0.0501633919775486,
+    0.05028737708926201,
+    0.02585827186703682,
+    0.05028906837105751,
+    -0.04017720744013786,
+    0.048425886780023575,
+    0.050008613616228104,
+    0.05024639517068863,
+    -0.04535878822207451,
+    0.03337559849023819,
+    0.0460771881043911,
+    0.05028821900486946,
+    0.04045315459370613,
+    0.050282467156648636,
+    0.044127099215984344,
+    0.04940340295433998,
+    0.04993561655282974,
+    -0.05017375200986862,
+    -0.050289202481508255,
+    -0.04993363842368126,
+    0.050289202481508255,
+    -0.008338281884789467,
+    0.050255488604307175,
+    0.05009908601641655,
+    -0.050289202481508255,
+    -0.04029576852917671,
+    -0.036110471934080124,
+    -0.05024547129869461,
+    0.050178516656160355,
+    -0.045532334595918655,
+    -0.050287045538425446,
+    0.050217658281326294,
+    -0.050121720880270004,
+    -0.05011654645204544,
+    0.05028875544667244,
+    0.0178719200193882,
+    -0.050289202481508255,
+    -0.04853418096899986,
+    0.049509868025779724,
+    -0.050264447927474976,
+    -0.04994787648320198,
+    0.04281232878565788,
+    -0.0008766052196733654,
+    0.01928088627755642,
+    -0.0172978937625885,
+    -0.04967290908098221,
+    -0.010979820974171162,
+    -0.05009603500366211,
+    0.0502474345266819,
+    -0.002861862536519766,
+    -0.045361001044511795,
+    -0.04999794811010361,
+    -0.021575691178441048,
+    0.044312458485364914,
+    -0.05013466626405716,
+    -0.04823924973607063,
+    -0.04988748952746391,
+    -0.03807879984378815,
+    -0.04766814410686493,
+    -0.047645971179008484,
+    -0.04961403086781502,
+    -0.05028384178876877,
+    -0.047248054295778275,
+    0.05024782568216324,
+    -0.027783768251538277,
+    -0.050285931676626205,
+    0.05028913542628288,
+    0.05000847205519676,
+    0.03984720632433891,
+    0.05028914660215378,
+    0.00045397545909509063,
+    -0.047470346093177795,
+    -0.05028918385505676,
+    -0.04044080153107643,
+    -0.05017872154712677,
+    0.020184097811579704,
+    0.050289202481508255,
+    0.050234559923410416,
+    0.046525754034519196,
+    -0.04818253591656685,
+    0.05011240020394325,
+    -0.04686268791556358,
+    0.03804532438516617,
+    -0.024717289954423904,
+    0.04890407621860504,
+    0.026697704568505287,
+    0.0500892736017704,
+    -0.050289202481508255,
+    0.049346763640642166,
+    0.050059687346220016,
+    0.04709681123495102,
+    0.0501578189432621,
+    -0.02089250646531582,
+    -0.050289202481508255,
+    -0.050051335245370865,
+    0.05028535798192024,
+    0.027839839458465576,
+    0.03974442929029465,
+    0.041423410177230835,
+    -0.04217561334371567,
+    -0.049412019550800323,
+    -0.017743388190865517,
+    -0.028313592076301575,
+    -0.05028615891933441,
+    -0.05028846114873886,
+    -0.05028288811445236,
+    -0.050281692296266556,
+    0.04125192388892174,
+    0.026254096999764442,
+    0.047950729727745056,
+    -0.04829941689968109,
+    0.04313252121210098,
+    -0.050289202481508255,
+    -0.04959046095609665,
+    0.019269542768597603,
+    0.050289202481508255,
+    0.04087773337960243,
+    -0.016233086585998535,
+    0.046849340200424194,
+    0.04939373582601547,
+    0.04987182095646858,
+    0.04490503668785095,
+    -0.048507753759622574,
+    0.05028689652681351,
+    0.04969584941864014,
+    0.04518891125917435,
+    0.03243156895041466,
+    0.04589986428618431,
+    0.050289202481508255,
+    -0.050289053469896317,
+    0.04727449268102646,
+    0.04037121683359146,
+    -0.04416191577911377,
+    -0.049537599086761475,
+    -0.050289202481508255,
+    0.02587589994072914,
+    0.050289202481508255,
+    0.048423927277326584,
+    -0.030208973214030266,
+    0.050271566957235336,
+    -0.011085680685937405,
+    0.026680607348680496,
+    0.05028918385505676,
+    -0.03449578210711479,
+    0.05016803368926048,
+    0.05023903772234917,
+    -0.04505126550793648,
+    -0.050267837941646576,
+    0.03378596901893616,
+    -0.050251539796590805,
+    0.0502871498465538,
+    -0.049977295100688934,
+    0.021124551072716713,
+    0.022533277049660683,
+    -0.04484253004193306,
+    -0.050285086035728455,
+    0.030819108709692955,
+    0.050289202481508255,
+    -0.049727022647857666,
+    -0.03197847306728363,
+    0.05025441199541092,
+    0.05005230754613876,
+    -0.04986967518925667,
+    0.05007467418909073,
+    -0.05028541758656502,
+    -0.04700614511966705,
+    0.05028044804930687,
+    -0.05026125907897949,
+    0.050289202481508255,
+    0.050287019461393356,
+    -0.0038780136965215206,
+    0.050289202481508255,
+    0.048229414969682693,
+    -0.037933655083179474,
+    -0.050289202481508255,
+    0.048941731452941895,
+    -0.026139449328184128,
+    0.03898021951317787,
+    0.05027417466044426,
+    0.030753502622246742,
+    -0.03719110041856766,
+    0.05027678608894348,
+    0.05028507485985756,
+    0.04042214900255203,
+    0.0491032600402832,
+    0.03220757842063904,
+    0.049949564039707184,
+    0.03727332875132561,
+    0.050142742693424225,
+    0.050288815051317215,
+    0.04207785055041313,
+    -0.050086189061403275,
+    0.035951390862464905,
+    0.030793258920311928,
+    -0.03805861249566078,
+    0.04993700981140137,
+    -0.04618951678276062,
+    -0.039936140179634094,
+    -0.0029452908784151077,
+    0.047190792858600616,
+    0.0446055606007576,
+    0.05028916150331497,
+    -0.049980781972408295,
+    0.050276968628168106,
+    -0.04981672763824463,
+    -0.03982463851571083,
+    0.049697261303663254,
+    -0.04977809265255928,
+    0.04910459369421005,
+    -0.04978000372648239,
+    -0.03546896204352379,
+    -0.023800257593393326,
+    0.050287630409002304,
+    0.04969940707087517,
+    -0.05027886852622032,
+    0.012010148726403713,
+    0.022487005218863487,
+    0.05023106187582016,
+    -0.04577174410223961,
+    -0.050224293023347855,
+    -0.05028910934925079,
+    0.050287798047065735,
+    -0.046548742800951004,
+    -0.050289202481508255,
+    -0.04042944312095642,
+    -0.04974688962101936,
+    -0.04952701926231384,
+    0.038557328283786774,
+    -0.02178427018225193,
+    0.04828713834285736,
+    0.001183734042569995,
+    0.008102446794509888,
+    0.020057087764143944,
+    -0.006729365326464176,
+    -0.05026145279407501,
+    -0.050289202481508255,
+    0.029614893719553947,
+    0.0253483597189188,
+    0.05028919130563736,
+    0.050125230103731155,
+    -0.049606405198574066,
+    -0.050289202481508255,
+    0.05028602108359337,
+    -0.050289202481508255,
+    -0.03473760560154915,
+    0.05026725307106972,
+    -0.009914793074131012,
+    0.049078959971666336,
+    -0.0353846438229084,
+    -0.04443341866135597,
+    0.04766767844557762,
+    -0.050286974757909775,
+    0.05027127265930176,
+    -0.03549906983971596,
+    0.04962090775370598,
+    -0.05026472732424736,
+    -0.049649741500616074,
+    0.018312210217118263,
+    -0.01893702708184719,
+    -0.01137833297252655,
+    -0.04828352481126785,
+    -0.030250925570726395,
+    -0.050210196524858475,
+    -0.05005975440144539,
+    -0.05025763437151909,
+    0.050250787287950516,
+    -0.01899847388267517,
+    -0.04873831570148468,
+    -0.04172834753990173,
+    -0.04479290917515755,
+    -0.019467271864414215,
+    0.050289202481508255,
+    0.04921066388487816,
+    -0.050266165286302567,
+    0.050089649856090546,
+    -0.036046102643013,
+    -0.05026481673121452,
+    0.04976057633757591,
+    0.050274260342121124,
+    -0.04872370511293411,
+    -0.05028630420565605,
+    -0.04857264831662178,
+    0.032056860625743866,
+    -0.04943396896123886,
+    0.050089363008737564,
+    -0.050289202481508255,
+    0.05020666867494583,
+    0.049181509763002396,
+    -0.018136143684387207,
+    -0.05014262720942497,
+    0.048299647867679596,
+    -0.05011552944779396,
+    0.04014396667480469,
+    -0.05024515464901924,
+    -0.050284244120121,
+    0.005785330198705196,
+    -0.05023465305566788,
+    -0.047996483743190765,
+    -0.05017826333642006,
+    -0.04687272384762764,
+    -0.04249749332666397,
+    0.03522254899144173,
+    -0.010860109701752663,
+    -0.05023835599422455,
+    0.050217002630233765,
+    -0.05017544701695442,
+    0.05028888210654259,
+    -0.04993491992354393,
+    0.049930814653635025,
+    -0.04973727464675903,
+    -0.05028366297483444,
+    0.05027632787823677,
+    -0.05027765780687332,
+    -0.05026821419596672,
+    0.029229434207081795,
+    -0.0502873994410038,
+    -0.05028913915157318,
+    -0.04954973980784416,
+    -0.04283607378602028,
+    0.05009625107049942,
+    -0.004956489894539118,
+    -0.05007937178015709,
+    0.050037916749715805,
+    0.04518381878733635,
+    -0.050289202481508255,
+    0.049975354224443436,
+    0.0013113536406308413,
+    -0.047454267740249634,
+    -0.04984268918633461,
+    -0.006712488830089569,
+    -0.033588673919439316,
+    0.050289202481508255,
+    0.05018384009599686,
+    0.04968637973070145,
+    -0.050289202481508255,
+    -0.04547407478094101,
+    0.050289202481508255,
+    0.0005170573713257909,
+    -0.050281912088394165,
+    0.03924742341041565,
+    0.036727532744407654,
+    0.044141560792922974,
+    0.0502835176885128,
+    0.04761659353971481,
+    0.046177394688129425,
+    -0.050233159214258194,
+    0.05024579167366028,
+    0.03996765613555908,
+    0.04999420419335365,
+    -0.04475373402237892,
+    -0.05023915693163872,
+    -0.04277833551168442,
+    0.04804430902004242,
+    -0.0462147481739521,
+    -0.04877874627709389,
+    -0.04873355105519295,
+    0.045087870210409164,
+    -0.036619238555431366,
+    0.05028916522860527,
+    -0.05019410327076912,
+    0.0502663217484951,
+    0.023145072162151337,
+    -0.050275202840566635,
+    0.04925801232457161,
+    0.04898820444941521,
+    0.03708992525935173,
+    0.050050269812345505,
+    -0.050022371113300323,
+    0.05028644949197769,
+    -0.050113290548324585,
+    0.0008565580938011408,
+    -0.04998469725251198,
+    0.050257593393325806,
+    -0.04090476408600807,
+    0.05028877779841423,
+    -0.01357065886259079,
+    -0.04733522608876228,
+    -0.050287917256355286,
+    0.050289180129766464,
+    -0.0063226488418877125,
+    -0.05026475340127945,
+    -0.021341638639569283,
+    -0.050289202481508255,
+    0.013797539286315441,
+    -0.04742099717259407,
+    0.050288908183574677,
+    0.05004896596074104,
+    -0.03199213743209839,
+    0.05028840899467468,
+    -0.04877987131476402,
+    -0.050287142395973206
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs email automation; When working with: RH_Generacion Contrato Google Docs, RH_Registro PostgreSQL Empleados, Ventas_Registro Interacciones DB, Fin_Repositorio Documental, Fin_Libro Mayor Registro, Fin_Flujo Caja Actualizacion, Fin_Presupuestos Control, Fin_Auditoria Trail Automatico, Ops_Inventario Actualizacion Automatica, Sop_Documentacion Creacion, Sop_Resolucion Metricas; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for email automation in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Email y Comunicación",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Email y Comunicación"
+  }
+}

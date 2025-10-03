@@ -1,0 +1,1039 @@
+{
+  "workflow_info": {
+    "id": "mZNPDXjRPDZdHMYD",
+    "name": "The Recap AI - Insurance Lawyer Lead Gen",
+    "display_name": "The Recap AI - Insurance Lawyer Lead Gen",
+    "file_name": "deal_breakdown_lawyer_lead_gen.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Ventas y CRM\\deal_breakdown_lawyer_lead_gen.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "582c5d3fc215"
+  },
+  "structure": {
+    "total_nodes": 33,
+    "node_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.splitOut",
+      "@mendable/n8n-nodes-firecrawl.firecrawl",
+      "n8n-nodes-base.executeWorkflow",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.markdown",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 2
+      },
+      {
+        "type": "@mendable/n8n-nodes-firecrawl.firecrawl",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.markdown",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 2
+      }
+    ],
+    "triggers": [
+      {
+        "name": "process_firm_website_trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "process_firm_form_trigger",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          0,
+          -192
+        ]
+      },
+      {
+        "name": "process_directory_page_form_trigger",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          0,
+          -656
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "scrape_directory_page",
+        "type": "@mendable/n8n-nodes-firecrawl.firecrawl",
+        "position": [
+          368,
+          -656
+        ]
+      },
+      {
+        "name": "iterate_firms",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          976,
+          -656
+        ]
+      },
+      {
+        "name": "try_get_firm",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1264,
+          -640
+        ]
+      },
+      {
+        "name": "split_firms",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          672,
+          -656
+        ]
+      },
+      {
+        "name": "process_firm",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          2848,
+          -656
+        ]
+      },
+      {
+        "name": "search_firm",
+        "type": "@mendable/n8n-nodes-firecrawl.firecrawl",
+        "position": [
+          1776,
+          -656
+        ]
+      },
+      {
+        "name": "insert_law_firm",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2608,
+          -688
+        ]
+      },
+      {
+        "name": "gemini-2.5-flash",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          2016,
+          384
+        ]
+      },
+      {
+        "name": "evaluate_website",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          2016,
+          -656
+        ]
+      },
+      {
+        "name": "check_if_law_firm_website",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2368,
+          -672
+        ]
+      },
+      {
+        "name": "search_firm_people",
+        "type": "@mendable/n8n-nodes-firecrawl.firecrawl",
+        "position": [
+          672,
+          0
+        ]
+      },
+      {
+        "name": "iterate_law_firm_pages",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          1264,
+          0
+        ]
+      },
+      {
+        "name": "split_firm_pages",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          976,
+          0
+        ]
+      },
+      {
+        "name": "check_if_profile_page",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1872,
+          -16
+        ]
+      },
+      {
+        "name": "scrape_profile_page",
+        "type": "@mendable/n8n-nodes-firecrawl.firecrawl",
+        "position": [
+          2144,
+          16
+        ]
+      },
+      {
+        "name": "evaluate_profile_page",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          2864,
+          0
+        ]
+      },
+      {
+        "name": "evaluate_contact_details",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          3216,
+          0
+        ]
+      },
+      {
+        "name": "try_get_person",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2368,
+          16
+        ]
+      },
+      {
+        "name": "check_if_person_exists",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2576,
+          16
+        ]
+      },
+      {
+        "name": "insert_person",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          4656,
+          0
+        ]
+      },
+      {
+        "name": "process_firm_set_details",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          368,
+          0
+        ]
+      },
+      {
+        "name": "check_if_firm_already_exists",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1504,
+          -640
+        ]
+      },
+      {
+        "name": "evaluate_page",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          1504,
+          16
+        ]
+      },
+      {
+        "name": "write_email",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3552,
+          0
+        ]
+      },
+      {
+        "name": "convert_to_html",
+        "type": "n8n-nodes-base.markdown",
+        "position": [
+          3776,
+          0
+        ]
+      },
+      {
+        "name": "set_google_doc_values",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4000,
+          0
+        ]
+      },
+      {
+        "name": "build_google_request_data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          4224,
+          0
+        ]
+      },
+      {
+        "name": "create_google_doc",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4448,
+          0
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -96,
+          -832
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -96,
+          -288
+        ]
+      }
+    ],
+    "connections_count": 31,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 3,
+      "action_count": 30
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 945,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "@mendable/n8n nodes firecrawl.firecrawl",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "executeWorkflow",
+      "iterate_law_firm_pages",
+      "build_google_request_data",
+      "set_google_doc_values",
+      "insert_law_firm",
+      "scrape_directory_page",
+      "formTrigger",
+      "convert_to_html",
+      "create_google_doc",
+      "check_if_firm_already_exists",
+      "ai-ml",
+      "stickyNote",
+      "search_firm_people",
+      "insert_person",
+      "check_if_law_firm_website",
+      "search_firm",
+      "evaluate_page",
+      "process_firm_set_details",
+      "webhook integration",
+      "httpRequest",
+      "splitInBatches",
+      "code",
+      "set",
+      "process_firm_website_trigger",
+      "split_firms",
+      "evaluate_website",
+      "split_firm_pages",
+      "evaluate_profile_page",
+      "process_firm",
+      "markdown",
+      "write_email",
+      "process_firm_form_trigger",
+      "sticky note",
+      "iterate_firms",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "googleSheets",
+      "try_get_person",
+      "try_get_firm",
+      "process_directory_page_form_trigger",
+      "complex",
+      "gemini-2.5-flash",
+      "scrape_profile_page",
+      "sticky note1",
+      "check_if_profile_page",
+      "splitOut",
+      "executeWorkflowTrigger",
+      "evaluate_contact_details",
+      "check_if_person_exists"
+    ],
+    "description": "'The Recap AI - Insurance Lawyer Lead Gen' es un workflow diseñado para webhook integration con 33 nodos con 3 disparadores que ejecuta: scrape_directory_page, iterate_firms, try_get_firm en la categoría de ai-ml.",
+    "semantic_content": "Workflow: The Recap AI - Insurance Lawyer Lead Gen. Nodos: process_firm_website_trigger (executeWorkflowTrigger), process_firm_form_trigger (formTrigger), process_directory_page_form_trigger (formTrigger), scrape_directory_page (@mendable/n8n-nodes-firecrawl.firecrawl), iterate_firms (splitInBatches), try_get_firm (googleSheets), split_firms (splitOut), process_firm (executeWorkflow), search_firm (@mendable/n8n-nodes-firecrawl.firecrawl), insert_law_firm (googleSheets), gemini-2.5-flash (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), evaluate_website (@n8n/n8n-nodes-langchain.informationExtractor), check_if_law_firm_website (if), search_firm_people (@mendable/n8n-nodes-firecrawl.firecrawl), iterate_law_firm_pages (splitInBatches), split_firm_pages (splitOut), check_if_profile_page (if), scrape_profile_page (@mendable/n8n-nodes-firecrawl.firecrawl), evaluate_profile_page (@n8n/n8n-nodes-langchain.informationExtractor), evaluate_contact_details (@n8n/n8n-nodes-langchain.informationExtractor), try_get_person (googleSheets), check_if_person_exists (if), insert_person (googleSheets), process_firm_set_details (set), check_if_firm_already_exists (if), evaluate_page (@n8n/n8n-nodes-langchain.informationExtractor), write_email (set), convert_to_html (markdown), set_google_doc_values (set), build_google_request_data (code), create_google_doc (httpRequest), Sticky Note (stickyNote), Sticky Note1 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: process_firm_website_trigger, process_firm_form_trigger, process_directory_page_form_trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "process_firm_form_trigger",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.googleSheets",
+      "@mendable/n8n-nodes-firecrawl.firecrawl",
+      "iterate_firms",
+      "try_get_firm",
+      "process_directory_page_form_trigger",
+      "process_firm_website_trigger",
+      "scrape_directory_page",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.splitInBatches"
+    ],
+    "secondary_tags": [
+      "@mendable/n8n-nodes-firecrawl.firecrawl",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.formtrigger",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "n8n-nodes-base.markdown",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "gen",
+      "deal_breakdown_lawyer_lead_gen",
+      "deal",
+      "breakdown",
+      "lead",
+      "lawyer"
+    ],
+    "alternative_names": [
+      "The Recap AI - Insurance Lawyer Lead Gen"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.formTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 69.84126984126983,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 83.96825396825398
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.776988"
+  },
+  "semantic_vector": [
+    -0.0643436461687088,
+    -0.07565965503454208,
+    -0.027798771858215332,
+    0.02855435200035572,
+    0.006014212034642696,
+    0.02699597366154194,
+    0.001878769020549953,
+    -0.0033656363375484943,
+    -0.0684840977191925,
+    -0.005919348448514938,
+    -0.0508989542722702,
+    -0.003990005236119032,
+    -0.013465519063174725,
+    -0.04888717457652092,
+    -0.00589144928380847,
+    0.05458700656890869,
+    0.04117698222398758,
+    0.02544027380645275,
+    0.008972394280135632,
+    -0.01916198804974556,
+    -0.0015118027804419398,
+    0.014876368455588818,
+    -0.03345445170998573,
+    0.005539807956665754,
+    0.02593717910349369,
+    0.04032139852643013,
+    -0.03219792619347572,
+    0.033934228122234344,
+    -0.01952706091105938,
+    0.03591740503907204,
+    0.045934952795505524,
+    0.05472840368747711,
+    -0.0362284891307354,
+    -0.018089396879076958,
+    0.04792724922299385,
+    0.037817202508449554,
+    0.043989937752485275,
+    -0.010480779223144054,
+    -0.041792094707489014,
+    -0.04192548245191574,
+    -0.003283168189227581,
+    -0.007863822393119335,
+    0.03727768734097481,
+    0.001827216474339366,
+    0.03521853685379028,
+    -0.01319688931107521,
+    0.07495802640914917,
+    0.04494886472821236,
+    -0.047267794609069824,
+    0.006917010992765427,
+    -0.01235516369342804,
+    -0.03676316514611244,
+    -0.08420475572347641,
+    -0.08276963233947754,
+    -0.050913821905851364,
+    -0.04627063497900963,
+    0.0720597580075264,
+    0.028974274173378944,
+    -0.010844231583178043,
+    -0.0021509986836463213,
+    0.0629362240433693,
+    -0.00706024095416069,
+    -0.021465767174959183,
+    0.011801629327237606,
+    -0.06816655397415161,
+    -0.03306811675429344,
+    -0.04594980925321579,
+    0.05857456102967262,
+    0.06527834385633469,
+    0.030201110988855362,
+    -0.004753931891173124,
+    0.05424785614013672,
+    0.005486291833221912,
+    0.06216515228152275,
+    -0.026654431596398354,
+    -0.006076696794480085,
+    -0.00527133559808135,
+    -0.06279227882623672,
+    -0.017903169617056847,
+    -0.0479721873998642,
+    0.016776233911514282,
+    0.026376068592071533,
+    0.06937689334154129,
+    -0.04846936836838722,
+    -0.023373017087578773,
+    0.020548345521092415,
+    0.0698455348610878,
+    0.02300366200506687,
+    -0.03842533752322197,
+    0.028793472796678543,
+    -0.046480942517519,
+    0.06919481605291367,
+    -0.06761258095502853,
+    -0.0161195807158947,
+    0.020385803654789925,
+    -0.008646992966532707,
+    0.012709776870906353,
+    0.06915885210037231,
+    -0.036374714225530624,
+    -0.011896990239620209,
+    0.029862113296985626,
+    -0.006127737462520599,
+    0.07448276877403259,
+    -0.022233065217733383,
+    0.0782165676355362,
+    -0.02133023552596569,
+    0.05533016100525856,
+    0.048767801374197006,
+    0.05891653522849083,
+    -0.05883828178048134,
+    -0.04175952076911926,
+    -0.02236458659172058,
+    0.07953236997127533,
+    0.025123098865151405,
+    0.06068168580532074,
+    -0.03325508162379265,
+    -0.031792983412742615,
+    -0.03865297511219978,
+    0.043114472180604935,
+    0.029636472463607788,
+    0.006983636412769556,
+    0.01341036893427372,
+    0.05850698798894882,
+    -0.01584940403699875,
+    0.06506079435348511,
+    0.068936787545681,
+    0.03459437936544418,
+    -0.03165808692574501,
+    0.024043027311563492,
+    -0.026732884347438812,
+    -0.07797272503376007,
+    -0.040617406368255615,
+    0.08278919011354446,
+    -0.009083129465579987,
+    0.011132629588246346,
+    -0.00821125227957964,
+    0.061244282871484756,
+    0.03651944175362587,
+    -0.03407370671629906,
+    0.01591578871011734,
+    -0.049841802567243576,
+    0.08422734588384628,
+    -0.06982825696468353,
+    0.032836463302373886,
+    -0.0761922299861908,
+    -0.08176695555448532,
+    0.04855923354625702,
+    -0.05355077236890793,
+    0.0006424160674214363,
+    0.055629681795835495,
+    -0.05028939247131348,
+    -0.051594994962215424,
+    -0.03580435737967491,
+    -0.009930144064128399,
+    0.04604770988225937,
+    0.07291970402002335,
+    0.02480323426425457,
+    0.06538258492946625,
+    0.06946126371622086,
+    -0.05910337716341019,
+    -0.07320879399776459,
+    -0.05560794100165367,
+    0.048229798674583435,
+    -0.02910146489739418,
+    0.0062010944820940495,
+    0.037119146436452866,
+    -0.07191988825798035,
+    0.06543650478124619,
+    -0.031095506623387337,
+    0.0017392707522958517,
+    0.06267479062080383,
+    0.045174404978752136,
+    -7.225307490443811e-05,
+    -0.015156072564423084,
+    0.015829982236027718,
+    0.0640849620103836,
+    0.026229236274957657,
+    -0.06708795577287674,
+    0.029399510473012924,
+    -0.026882315054535866,
+    -0.03675348311662674,
+    -0.01841018721461296,
+    0.040033772587776184,
+    -0.029852401465177536,
+    0.07179880887269974,
+    -0.016823947429656982,
+    -0.003974230028688908,
+    0.04655914008617401,
+    0.005519495345652103,
+    0.009393800981342793,
+    0.04224514216184616,
+    0.0012154902797192335,
+    0.01410222053527832,
+    -0.07421457767486572,
+    -0.03488447889685631,
+    -0.07027442008256912,
+    0.04910891875624657,
+    0.060095660388469696,
+    0.050711289048194885,
+    -0.05091089382767677,
+    0.02755088545382023,
+    0.07292532920837402,
+    0.06313106417655945,
+    0.07606694102287292,
+    0.06946367770433426,
+    3.2732780255173566e-06,
+    -0.007139905821532011,
+    0.03595363348722458,
+    -0.01655029132962227,
+    -0.04784589633345604,
+    0.05801476910710335,
+    -0.003551327856257558,
+    0.07734424620866776,
+    0.04090375825762749,
+    -0.08419566601514816,
+    -0.014610404148697853,
+    0.05010430887341499,
+    0.02233346737921238,
+    -0.015058858320116997,
+    -0.0173064935952425,
+    0.010942368768155575,
+    0.053098466247320175,
+    -0.02258656732738018,
+    -0.011626524850726128,
+    -0.034220609813928604,
+    -0.07624001801013947,
+    0.002497005043551326,
+    0.058202337473630905,
+    -0.04442663490772247,
+    -0.045823726803064346,
+    0.012702852487564087,
+    -0.048165738582611084,
+    0.06170113384723663,
+    -0.0790281593799591,
+    0.022953540086746216,
+    0.06795285642147064,
+    0.029992032796144485,
+    0.05623238906264305,
+    -0.07799992710351944,
+    -0.005230100359767675,
+    -0.027343764901161194,
+    -0.011547793634235859,
+    0.03577471151947975,
+    0.01734728366136551,
+    0.021524351090192795,
+    0.07632049918174744,
+    0.02634873241186142,
+    0.016930093988776207,
+    0.011777977459132671,
+    0.02639441005885601,
+    -0.05443473905324936,
+    0.04519367218017578,
+    -0.011791113764047623,
+    0.05403553321957588,
+    0.06414613127708435,
+    -0.06580962240695953,
+    0.018063126131892204,
+    0.08422508835792542,
+    0.00106254150159657,
+    0.04690168425440788,
+    -0.05460372567176819,
+    -0.06513634324073792,
+    0.06876745820045471,
+    0.07152226567268372,
+    0.028758741915225983,
+    -0.013275724835693836,
+    -0.00922062061727047,
+    0.020273355767130852,
+    -0.06433788686990738,
+    0.04523723945021629,
+    -0.022845758125185966,
+    0.08084949105978012,
+    -0.0038670171052217484,
+    0.04789865016937256,
+    0.02330086939036846,
+    -0.008724763058125973,
+    -0.04666659235954285,
+    0.05126003921031952,
+    -0.013413162901997566,
+    0.06707259267568588,
+    -0.044730816036462784,
+    0.08321056514978409,
+    0.08180322498083115,
+    0.005086298566311598,
+    0.02883204072713852,
+    0.015626495704054832,
+    -0.04744798317551613,
+    0.08017592132091522,
+    -0.06634749472141266,
+    0.07581072300672531,
+    -0.03923457860946655,
+    0.006539190653711557,
+    0.027008289471268654,
+    0.048475541174411774,
+    0.022510753944516182,
+    -0.008944432251155376,
+    -0.0029526539146900177,
+    0.00789084006100893,
+    0.008741476573050022,
+    0.05050349235534668,
+    -0.06218560412526131,
+    0.02206963486969471,
+    0.05986291170120239,
+    -0.07580745965242386,
+    -0.05197160318493843,
+    0.048251621425151825,
+    -0.010986373759806156,
+    -0.056226786226034164,
+    0.04694188013672829,
+    -0.0030001415871083736,
+    0.04457793012261391,
+    0.04961906373500824,
+    0.0067204320803284645,
+    -0.039793647825717926,
+    0.000896089943125844,
+    -0.05105016753077507,
+    0.07046617567539215,
+    -0.007960345596075058,
+    -0.052947577089071274,
+    0.039633069187402725,
+    -0.00041034381138160825,
+    -0.06254282593727112,
+    0.037776365876197815,
+    -0.044662006199359894,
+    0.03497624024748802,
+    -0.0572982095181942,
+    0.001660032314248383,
+    -0.02382594160735607,
+    0.06357619911432266,
+    -0.04131966084241867,
+    0.040809664875268936,
+    -0.03274734318256378,
+    -0.017763076350092888,
+    0.07195668667554855,
+    0.06375519931316376,
+    0.01109777670353651,
+    0.03649440035223961,
+    -0.0009066265192814171,
+    0.06673243641853333,
+    -0.055301789194345474,
+    -0.03604797646403313,
+    -0.061473727226257324,
+    0.04116536304354668,
+    -0.04978363960981369,
+    -0.05476626753807068,
+    0.037504199892282486,
+    -0.011916128918528557,
+    0.02716338261961937,
+    -0.0016702773282304406,
+    -0.018907153978943825,
+    -0.0022222506813704967,
+    0.03922232985496521,
+    0.014987406320869923,
+    0.05252565070986748,
+    -0.0174377653747797,
+    0.05880134180188179,
+    -0.07950007170438766,
+    0.001897588837891817,
+    -0.019764475524425507,
+    0.0355079248547554,
+    0.05570748448371887,
+    -0.02657727524638176,
+    0.02057911455631256,
+    0.07800731062889099,
+    -0.004153555259108543,
+    0.034033264964818954,
+    0.062025345861911774,
+    -0.03722842037677765,
+    -0.0330071747303009,
+    -0.018296172842383385,
+    -0.012362532317638397,
+    -0.07702965289354324,
+    -0.04358530789613724,
+    -0.004465071018785238,
+    0.035307224839925766,
+    0.07728248834609985,
+    -0.032365892082452774,
+    -0.08267956227064133,
+    -0.03645802661776543,
+    -0.052266087383031845,
+    -0.019973384216427803,
+    0.023342328146100044,
+    -0.04390512406826019,
+    -0.04072834923863411,
+    -0.008523967117071152,
+    -0.0064013004302978516,
+    0.03839438036084175,
+    0.019240811467170715,
+    0.012699688784778118,
+    -0.07181493192911148,
+    -0.007889163680374622,
+    -0.0385475680232048,
+    0.073652483522892,
+    0.01562846079468727,
+    0.04341525956988335,
+    0.015119030140340328,
+    0.024845965206623077,
+    -0.014202969148755074,
+    0.010759161785244942,
+    0.023858478292822838,
+    0.037350188940763474,
+    -0.0023834670428186655,
+    -0.059836335480213165,
+    0.035510286688804626,
+    -0.06005198508501053,
+    -0.05488061159849167,
+    -0.021553045138716698,
+    -0.0011985288001596928,
+    0.07015188783407211,
+    0.07354326546192169,
+    -0.0810193344950676,
+    0.03764685243368149,
+    -0.04522326588630676,
+    0.013272350654006004,
+    0.03980688005685806,
+    -0.07040227204561234,
+    -0.008250443264842033,
+    -0.035736747086048126,
+    0.023433173075318336,
+    0.013251647353172302,
+    0.03762698173522949,
+    -0.036659952253103256,
+    -0.043995462357997894,
+    0.043538037687540054,
+    0.033806245774030685,
+    -0.07826915383338928,
+    -0.07966181635856628,
+    -0.0842037945985794,
+    -0.03710923716425896,
+    0.03021777793765068,
+    -0.03884550929069519,
+    -0.06735315918922424,
+    -0.0641564428806305,
+    0.02339235320687294,
+    0.00042157157440669835,
+    0.038874268531799316,
+    -0.0038879727944731712,
+    -0.06819193065166473,
+    -0.06313034147024155,
+    0.0819467082619667,
+    0.040489934384822845,
+    0.022058362141251564,
+    -0.013947305269539356,
+    -0.06124383583664894,
+    -0.035977136343717575,
+    -0.025238875299692154,
+    -0.03162600100040436,
+    0.011139017529785633,
+    -0.03552131727337837,
+    -0.0273781418800354,
+    -0.038039132952690125,
+    0.016211217269301414,
+    0.03780524805188179,
+    0.012460089288651943,
+    -0.04523293673992157,
+    0.01739996299147606,
+    -0.015581983141601086,
+    0.056252676993608475,
+    -0.0291158277541399,
+    0.018443625420331955,
+    0.006885328330099583,
+    -0.016845541074872017,
+    0.015698513016104698,
+    -0.04466532915830612,
+    -0.03906762972474098,
+    -0.06276176124811172,
+    0.04498322308063507,
+    0.014977012760937214,
+    -0.06533776223659515,
+    0.009312916547060013,
+    0.035320281982421875,
+    0.03253374993801117,
+    -0.0575002022087574,
+    0.02747602015733719,
+    0.01711125858128071,
+    0.030663134530186653,
+    -0.015444792807102203,
+    -0.021671392023563385,
+    -0.011761294677853584,
+    -0.04118325933814049,
+    -0.04971039295196533,
+    0.005079096648842096,
+    -0.0354846753180027,
+    -0.06921819597482681,
+    -0.055051155388355255,
+    0.07551266252994537,
+    -0.03690351918339729,
+    -0.06341356039047241,
+    -0.0636209100484848,
+    0.03250281512737274,
+    -0.04207482561469078,
+    0.018259702250361443,
+    -0.027564620599150658,
+    -0.06932740658521652,
+    0.011377590708434582,
+    0.07715212553739548,
+    -0.015114642679691315,
+    -0.015167959965765476,
+    -0.0018480686703696847,
+    0.001110982382670045,
+    -0.01516504306346178,
+    -0.0752469152212143,
+    0.04820334166288376,
+    -0.08319579809904099,
+    -0.03311881050467491,
+    -0.036474306136369705,
+    -0.004207242280244827,
+    -0.04412253573536873,
+    -0.037768784910440445,
+    -0.008570377714931965,
+    -0.035891175270080566,
+    -0.0830957293510437
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: process_firm_website_trigger, process_firm_form_trigger, process_directory_page_form_trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Ventas y CRM",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Ventas y CRM"
+  }
+}

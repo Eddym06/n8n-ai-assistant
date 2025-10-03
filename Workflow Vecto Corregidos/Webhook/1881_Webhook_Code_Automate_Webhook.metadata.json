@@ -1,0 +1,1080 @@
+{
+  "workflow_info": {
+    "id": "hzwyrm761fxBLiG8",
+    "name": "Personal Portfolio Resume CV Chatbot",
+    "display_name": "Personal Portfolio Resume CV Chatbot",
+    "file_name": "1881_Webhook_Code_Automate_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Webhook\\1881_Webhook_Code_Automate_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "f8823323c5a6"
+  },
+  "structure": {
+    "total_nodes": 35,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "n8n-nodes-base.gmail",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "n8n-nodes-base.googleDrive",
+      "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.nocoDb",
+      "n8n-nodes-base.googleDriveTrigger",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.html",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.webhook",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.nocoDb",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.html",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 11
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          420,
+          2560
+        ]
+      },
+      {
+        "name": "Google Drive - Resume CV File Created",
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "position": [
+          380,
+          340
+        ]
+      },
+      {
+        "name": "Google Drive - Resume CV File Updated",
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "position": [
+          380,
+          500
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Embeddings Google Gemini",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "position": [
+          880,
+          640
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1380,
+          380
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          1720
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          2440
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          1080
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -420,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -460,
+          2400
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          1040
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -460,
+          220
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -460,
+          120
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          800,
+          1400
+        ]
+      },
+      {
+        "name": "Download CV File From Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          700,
+          360
+        ]
+      },
+      {
+        "name": "Pinecone - Vector Store forr CV Content",
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "position": [
+          920,
+          360
+        ]
+      },
+      {
+        "name": "CV File Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          1340,
+          480
+        ]
+      },
+      {
+        "name": "CV content - Recursive Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          1440,
+          600
+        ]
+      },
+      {
+        "name": "Chat API - webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          580,
+          1200
+        ]
+      },
+      {
+        "name": "Personal CV AI Agent Assistant",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          880,
+          1140
+        ]
+      },
+      {
+        "name": "Chat API Response - Webhook",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          1560,
+          1180
+        ]
+      },
+      {
+        "name": "Chat Memory -  Window Buffer",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          980,
+          1420
+        ]
+      },
+      {
+        "name": "Resume lookup : Vector Store Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "position": [
+          1260,
+          1320
+        ]
+      },
+      {
+        "name": "Resume Vector Store (Retrieval)",
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "position": [
+          1280,
+          1460
+        ]
+      },
+      {
+        "name": "Resume Embeddings Google Gemini (retrieval)",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "position": [
+          1320,
+          1600
+        ]
+      },
+      {
+        "name": "Resume Google Gemini Chat Model (retrieval)",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          1600,
+          1460
+        ]
+      },
+      {
+        "name": "Save Conversation API - Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          620,
+          1920
+        ]
+      },
+      {
+        "name": "Save Conversation - NocoDB",
+        "type": "n8n-nodes-base.nocoDb",
+        "position": [
+          940,
+          1940
+        ]
+      },
+      {
+        "name": "Save Conversation API Webhook - Response",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          1220,
+          1940
+        ]
+      },
+      {
+        "name": "NocoDB - get all todays conversation",
+        "type": "n8n-nodes-base.nocoDb",
+        "position": [
+          680,
+          2560
+        ]
+      },
+      {
+        "name": "Group Conversation By Unique Session + Email - Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          900,
+          2560
+        ]
+      },
+      {
+        "name": "Format HTML Display  For email",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          1140,
+          2540
+        ]
+      },
+      {
+        "name": "Send Report To Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1420,
+          2560
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          940
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          2300
+        ]
+      }
+    ],
+    "connections_count": 22,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 3,
+      "action_count": 32
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "email automation",
+    "use_cases": [
+      "Scheduled automation"
+    ],
+    "complexity_score": 1240,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "nocoDb",
+      "googleDriveTrigger",
+      "googleDrive",
+      "google drive - resume cv file created",
+      "resume embeddings google gemini (retrieval)",
+      "embeddings google gemini",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "sticky note7",
+      "sticky note11",
+      "google gemini chat model",
+      "save conversation api - webhook",
+      "@n8n/n8n nodes langchain.embeddingsGoogleGemini",
+      "resume lookup : vector store tool",
+      "sticky note3",
+      "chat api response - webhook",
+      "stickyNote",
+      "ai-ml",
+      "respondToWebhook",
+      "cv content - recursive character text splitter",
+      "webhook",
+      "sticky note6",
+      "cv file data loader",
+      "scheduleTrigger",
+      "resume vector store (retrieval)",
+      "schedule trigger",
+      "save conversation - nocodb",
+      "sticky note10",
+      "@n8n/n8n nodes langchain.vectorStorePinecone",
+      "@n8n/n8n nodes langchain.toolVectorStore",
+      "format html display  for email",
+      "html",
+      "resume google gemini chat model (retrieval)",
+      "group conversation by unique session + email - code",
+      "email automation",
+      "code",
+      "chat memory -  window buffer",
+      "sticky note9",
+      "save conversation api webhook - response",
+      "sticky note4",
+      "send report to gmail",
+      "google drive - resume cv file updated",
+      "download cv file from google drive",
+      "chat api - webhook",
+      "pinecone - vector store forr cv content",
+      "sticky note",
+      "@n8n/n8n nodes langchain.agent",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "sticky note8",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "gmail",
+      "complex",
+      "nocodb - get all todays conversation",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "sticky note1",
+      "sticky note5",
+      "personal cv ai agent assistant"
+    ],
+    "description": "'Personal Portfolio Resume CV Chatbot' es un workflow diseñado para email automation con 35 nodos con 3 disparadores que ejecuta: Embeddings Google Gemini, Sticky Note1, Sticky Note3 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Personal Portfolio Resume CV Chatbot. Nodos: Embeddings Google Gemini (@n8n/n8n-nodes-langchain.embeddingsGoogleGemini), Sticky Note1 (stickyNote), Sticky Note3 (stickyNote), Schedule Trigger (scheduleTrigger), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Google Gemini Chat Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Google Drive - Resume CV File Created (googleDriveTrigger), Google Drive - Resume CV File Updated (googleDriveTrigger), Download CV File From Google Drive (googleDrive), Pinecone - Vector Store forr CV Content (@n8n/n8n-nodes-langchain.vectorStorePinecone), CV File Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), CV content - Recursive Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), Chat API - webhook (webhook), Personal CV AI Agent Assistant (@n8n/n8n-nodes-langchain.agent), Chat API Response - Webhook (respondToWebhook), Chat Memory -  Window Buffer (@n8n/n8n-nodes-langchain.memoryBufferWindow), Resume lookup : Vector Store Tool (@n8n/n8n-nodes-langchain.toolVectorStore), Resume Vector Store (Retrieval) (@n8n/n8n-nodes-langchain.vectorStorePinecone), Resume Embeddings Google Gemini (retrieval) (@n8n/n8n-nodes-langchain.embeddingsGoogleGemini), Resume Google Gemini Chat Model (retrieval) (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Save Conversation API - Webhook (webhook), Save Conversation - NocoDB (nocoDb), Save Conversation API Webhook - Response (respondToWebhook), NocoDB - get all todays conversation (nocoDb), Group Conversation By Unique Session + Email - Code (code), Format HTML Display  For email (html), Send Report To Gmail (gmail), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote). Propósito: email automation. Categoría: ai-ml. Disparadores: Schedule Trigger, Google Drive - Resume CV File Created, Google Drive - Resume CV File Updated",
+    "business_context": "Email Marketing, Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Google Drive - Resume CV File Created",
+      "Schedule Trigger",
+      "Google Drive - Resume CV File Updated",
+      "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "Embeddings Google Gemini",
+      "n8n-nodes-base.scheduleTrigger",
+      "Sticky Note3",
+      "Sticky Note1",
+      "n8n-nodes-base.googleDriveTrigger",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.toolvectorstore",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.nocodb",
+      "n8n-nodes-base.googledrivetrigger",
+      "n8n-nodes-base.respondtowebhook",
+      "@n8n/n8n-nodes-langchain.vectorstorepinecone",
+      "@n8n/n8n-nodes-langchain.embeddingsgooglegemini",
+      "n8n-nodes-base.scheduletrigger",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.html",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "@n8n/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "1881_webhook_code_automate_webhook",
+      "code",
+      "webhook",
+      "1881",
+      "automate"
+    ],
+    "alternative_names": [
+      "Personal Portfolio Resume CV Chatbot"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "email automation"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.googleDriveTrigger",
+      "n8n-nodes-base.googleDriveTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 56.451612903225815,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 81.29032258064517
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:23.297968"
+  },
+  "semantic_vector": [
+    -0.05145245045423508,
+    -0.050678350031375885,
+    0.04613327607512474,
+    0.03384442254900932,
+    0.029458019882440567,
+    -0.04930197447538376,
+    0.044108547270298004,
+    -0.0313422828912735,
+    -0.052147626876831055,
+    0.025562800467014313,
+    -0.033300697803497314,
+    0.03462732955813408,
+    -0.005475139245390892,
+    -0.052149463444948196,
+    -0.05116870254278183,
+    0.05215056240558624,
+    0.02400127239525318,
+    -0.008800824172794819,
+    -0.029738962650299072,
+    0.04597137123346329,
+    0.03151598572731018,
+    -0.04973451420664787,
+    0.0360785573720932,
+    -0.04544653370976448,
+    0.01854267530143261,
+    0.040916524827480316,
+    -0.0489351786673069,
+    0.05116906017065048,
+    -0.05213351175189018,
+    0.05215052515268326,
+    -0.004021609667688608,
+    0.03637591749429703,
+    0.05214056000113487,
+    -0.05207696929574013,
+    0.050816360861063004,
+    -0.03185103088617325,
+    -0.05214087292551994,
+    0.04332849755883217,
+    -0.05014512687921524,
+    -0.052148059010505676,
+    0.04391838237643242,
+    0.015414288267493248,
+    -0.051697682589292526,
+    0.05195781961083412,
+    0.052147939801216125,
+    -0.0345294214785099,
+    0.04513002187013626,
+    0.0505160354077816,
+    -0.04022827744483948,
+    -0.051371749490499496,
+    -0.05213889852166176,
+    0.04085111618041992,
+    -0.05215054750442505,
+    -0.051986563950777054,
+    -0.05214458331465721,
+    0.04714781045913696,
+    0.052074234932661057,
+    -0.03194316104054451,
+    -0.01447322964668274,
+    -0.045435450971126556,
+    -0.027778027579188347,
+    -0.050044137984514236,
+    -0.04563349857926369,
+    0.05213727056980133,
+    0.04966636002063751,
+    -0.004834831692278385,
+    0.052139583975076675,
+    -0.028079494833946228,
+    0.04721887409687042,
+    -0.049873560667037964,
+    -0.05177818238735199,
+    0.04230315610766411,
+    -0.05199199169874191,
+    0.04917856678366661,
+    0.03751212731003761,
+    -0.052148956805467606,
+    0.05213106796145439,
+    0.034620124846696854,
+    0.04648997262120247,
+    0.006748013198375702,
+    0.04705861583352089,
+    0.0504024513065815,
+    0.030839819461107254,
+    -0.049910303205251694,
+    -0.025743741542100906,
+    0.051224637776613235,
+    -0.011252982541918755,
+    -0.052114978432655334,
+    -0.04767552763223648,
+    -0.04691122844815254,
+    0.007680070586502552,
+    0.009237325750291348,
+    0.05213585123419762,
+    0.048674240708351135,
+    -0.038571447134017944,
+    0.05205012485384941,
+    -0.0520733967423439,
+    0.0515933521091938,
+    -0.048800524324178696,
+    -0.05215051397681236,
+    -0.016818920150399208,
+    -0.045265473425388336,
+    -0.05213206633925438,
+    -0.018109530210494995,
+    -0.033687692135572433,
+    0.04985565319657326,
+    0.05161347612738609,
+    0.034959979355335236,
+    0.05211756378412247,
+    -0.052035197615623474,
+    -0.05213889107108116,
+    -0.051950182765722275,
+    -0.04705672711133957,
+    -0.0484064556658268,
+    0.029524702578783035,
+    0.04999827221035957,
+    -0.05214822664856911,
+    -0.03660033643245697,
+    0.049669213593006134,
+    -0.047668054699897766,
+    -0.03656170144677162,
+    0.05209977924823761,
+    0.030158894136548042,
+    0.046550218015909195,
+    0.052147869020700455,
+    -0.014671994373202324,
+    -0.04358069226145744,
+    0.03689436987042427,
+    0.05159640312194824,
+    -0.023055424913764,
+    -0.05202027037739754,
+    -0.046299684792757034,
+    0.051294926553964615,
+    0.052107539027929306,
+    0.05182459577918053,
+    0.04105342552065849,
+    0.049373313784599304,
+    0.05191781744360924,
+    0.026964150369167328,
+    -0.0494074784219265,
+    -0.05166274681687355,
+    0.05215056240558624,
+    0.04243762418627739,
+    0.04527288302779198,
+    -0.014354689978063107,
+    0.021951712667942047,
+    0.0520954430103302,
+    -0.05171212926506996,
+    0.05214798450469971,
+    0.05070364475250244,
+    -0.05214772745966911,
+    -0.05214022472500801,
+    0.05196840688586235,
+    0.039854805916547775,
+    0.05197671055793762,
+    0.051993757486343384,
+    0.05202080309391022,
+    -0.052149441093206406,
+    -0.04881661757826805,
+    -0.051940057426691055,
+    -0.052120815962553024,
+    -0.05214555561542511,
+    -0.012055299244821072,
+    0.03661949932575226,
+    0.013682126998901367,
+    -0.040631987154483795,
+    -0.05190005898475647,
+    -0.050438087433576584,
+    -0.05215001106262207,
+    -0.05149362236261368,
+    0.04912026599049568,
+    -0.05173565447330475,
+    0.04988078400492668,
+    0.044323526322841644,
+    -0.05194271355867386,
+    0.051990292966365814,
+    0.049379196017980576,
+    -0.05085960775613785,
+    0.04935436695814133,
+    -0.045320793986320496,
+    -0.0016589128645136952,
+    0.025532109662890434,
+    -0.05214538425207138,
+    -0.05171878635883331,
+    0.04719124734401703,
+    -0.014730032533407211,
+    -0.05214801803231239,
+    0.051590997725725174,
+    -0.018008656799793243,
+    0.035978641360998154,
+    0.006527123507112265,
+    0.0027963442262262106,
+    0.023951223120093346,
+    -0.05138889327645302,
+    -0.05214102566242218,
+    -0.051710765808820724,
+    0.04907086119055748,
+    0.05215056240558624,
+    0.008730689063668251,
+    -0.004285903647542,
+    0.007568721193820238,
+    0.05170326679944992,
+    0.051903512328863144,
+    0.041650690138339996,
+    0.01333350595086813,
+    -0.029399018734693527,
+    0.04963977262377739,
+    0.05183397978544235,
+    -0.052150458097457886,
+    -0.05202746018767357,
+    0.05160199850797653,
+    0.052149698138237,
+    0.051348961889743805,
+    0.030764076858758926,
+    -0.052124764770269394,
+    -0.05145811289548874,
+    0.01732642576098442,
+    0.05214120075106621,
+    0.04937586188316345,
+    0.05062420666217804,
+    -0.04819638282060623,
+    0.04677248001098633,
+    0.03997619077563286,
+    0.03992149606347084,
+    -0.052081238478422165,
+    -0.05199802666902542,
+    -0.052119363099336624,
+    -0.051616307348012924,
+    -0.04320934787392616,
+    -0.05158701166510582,
+    -0.05172685906291008,
+    -0.006365296896547079,
+    -0.02915697731077671,
+    -0.0521499402821064,
+    -0.050791364163160324,
+    0.05193410813808441,
+    0.052150480449199677,
+    0.05215054750442505,
+    -0.05206439271569252,
+    0.03744366019964218,
+    0.03237663581967354,
+    0.05125470831990242,
+    0.002318545477464795,
+    -0.03019826114177704,
+    0.0521363765001297,
+    0.050763633102178574,
+    -0.016229933127760887,
+    -0.03960975632071495,
+    0.017170140519738197,
+    0.05214812979102135,
+    -0.051962610334157944,
+    0.03662601858377457,
+    -0.05207645148038864,
+    -0.03037094883620739,
+    0.017476562410593033,
+    -0.05215046554803848,
+    -0.047533851116895676,
+    0.05215056240558624,
+    -0.04521852731704712,
+    0.04873742163181305,
+    -0.05114051699638367,
+    0.05175158008933067,
+    -0.050651900470256805,
+    0.03465111926198006,
+    0.00659544114023447,
+    0.05213535577058792,
+    0.04885496944189072,
+    -0.05145924910902977,
+    -0.05214434862136841,
+    0.052078116685152054,
+    -0.04687649384140968,
+    0.037835121154785156,
+    -0.047178708016872406,
+    -0.00816597044467926,
+    0.052149057388305664,
+    0.05196204409003258,
+    -0.05213811248540878,
+    0.04330736771225929,
+    0.05215046554803848,
+    -0.0321243554353714,
+    -0.006932495161890984,
+    -0.03842368349432945,
+    0.05204286053776741,
+    0.05178331583738327,
+    -0.0315878689289093,
+    -0.0021281444933265448,
+    -0.050078827887773514,
+    0.052072249352931976,
+    -0.03131644055247307,
+    -0.007619487587362528,
+    -0.03895704448223114,
+    0.04891242831945419,
+    0.05215056240558624,
+    -0.05215008184313774,
+    0.05195091664791107,
+    -0.052147407084703445,
+    0.05167636647820473,
+    -0.03341607376933098,
+    -0.05203106999397278,
+    0.050576258450746536,
+    -0.04977913200855255,
+    -0.033286456018686295,
+    0.04845719039440155,
+    0.04289865121245384,
+    0.05198568478226662,
+    -0.05070159211754799,
+    0.03678949922323227,
+    -0.03198185935616493,
+    -0.03245650604367256,
+    0.05134885385632515,
+    0.050752878189086914,
+    0.003825586987659335,
+    0.051227081567049026,
+    0.03611446171998978,
+    0.05201084166765213,
+    -0.05212680250406265,
+    -0.047695744782686234,
+    -0.04825952276587486,
+    0.046455856412649155,
+    0.0521397590637207,
+    -0.05209164321422577,
+    -0.05215053632855415,
+    0.051533911377191544,
+    -0.0518595390021801,
+    0.026208236813545227,
+    0.05214333534240723,
+    0.051134124398231506,
+    0.03962397575378418,
+    0.015701768919825554,
+    0.0021092870738357306,
+    0.05213310196995735,
+    -0.05050160363316536,
+    0.05081954970955849,
+    0.0521455779671669,
+    0.017549801617860794,
+    -0.009635579772293568,
+    0.052049729973077774,
+    0.051992934197187424,
+    0.05213945358991623,
+    -0.046430546790361404,
+    -0.04746967926621437,
+    -0.05213345214724541,
+    -0.02845701389014721,
+    -0.04337668418884277,
+    -0.05215039849281311,
+    -0.0463213175535202,
+    -0.04989911988377571,
+    -0.016014745458960533,
+    -0.04835524782538414,
+    -0.024897946044802666,
+    0.051247019320726395,
+    0.016477074474096298,
+    -0.05211253836750984,
+    0.051939573138952255,
+    0.049500856548547745,
+    -0.052023131400346756,
+    -0.05215056240558624,
+    0.048253562301397324,
+    -0.049621693789958954,
+    0.05214914306998253,
+    0.04453473165631294,
+    -0.05214853212237358,
+    -0.051411665976047516,
+    0.0517333559691906,
+    -0.010293752886354923,
+    0.0475359745323658,
+    0.0516582690179348,
+    -0.052072927355766296,
+    -0.001606225618161261,
+    0.015194268897175789,
+    -0.03822806105017662,
+    0.0017007443821057677,
+    -0.051095325499773026,
+    0.05159825086593628,
+    0.005645605269819498,
+    0.04729408398270607,
+    0.016178233548998833,
+    -0.05021921172738075,
+    0.05214493349194527,
+    -0.05199507996439934,
+    0.017629258334636688,
+    0.051468782126903534,
+    0.037475429475307465,
+    0.04798879101872444,
+    0.007033824920654297,
+    -0.04956052079796791,
+    0.05148790031671524,
+    0.03380689024925232,
+    0.019262146204710007,
+    -0.05174383521080017,
+    0.04281899333000183,
+    -0.05214196443557739,
+    0.052127737551927567,
+    0.05212017148733139,
+    -0.050299182534217834,
+    0.047980643808841705,
+    -0.040587056428194046,
+    0.051618386059999466,
+    -0.048879560083150864,
+    -0.04062522202730179,
+    -0.010951045900583267,
+    0.039476729929447174,
+    -0.05211212858557701,
+    0.052150122821331024,
+    -0.026548530906438828,
+    0.05209498479962349,
+    -0.05214972794055939,
+    0.050570741295814514,
+    0.052149951457977295,
+    -0.010645793750882149,
+    0.05191362649202347,
+    0.05194699764251709,
+    0.018597595393657684,
+    -0.049961693584918976,
+    -0.025065012276172638,
+    -0.004605691879987717,
+    0.05207235366106033,
+    -0.05212661996483803,
+    -0.051906660199165344,
+    0.032366618514060974,
+    -0.05190924182534218,
+    -0.04296110197901726,
+    -0.052136875689029694,
+    0.04420531541109085,
+    -0.014644987881183624,
+    0.05211814120411873,
+    -0.05133309215307236,
+    0.052147604525089264,
+    -0.05215020850300789,
+    0.05210523679852486,
+    0.032772935926914215,
+    -0.04216976463794708,
+    0.0472114197909832,
+    0.0030925360042601824,
+    -0.04979874938726425,
+    -0.05197380483150482,
+    -0.05204407870769501,
+    -0.052150119096040726,
+    -0.04924110695719719,
+    0.02937237359583378,
+    -0.04876977950334549,
+    -0.03562247008085251,
+    -0.05105632543563843,
+    0.019947567954659462,
+    0.012027865275740623,
+    -0.00030134510598145425,
+    -0.05076739937067032,
+    -0.05214855819940567,
+    -0.04833848029375076,
+    -0.05209650844335556,
+    0.02618071809411049,
+    -0.039656005799770355,
+    0.05215052142739296,
+    0.05215003341436386,
+    0.052026983350515366,
+    -0.05215056240558624,
+    0.03960292041301727,
+    0.05215054005384445,
+    0.03126717358827591,
+    -0.050862424075603485,
+    -0.039355989545583725,
+    0.05149780586361885,
+    0.0521375946700573,
+    -0.023245159536600113,
+    0.03716319799423218,
+    -0.045489873737096786,
+    0.05209539830684662,
+    0.04845263436436653,
+    -0.04110301285982132,
+    0.05215056240558624,
+    0.05004672333598137,
+    -0.05161173269152641,
+    0.052123166620731354,
+    0.02209950052201748,
+    -0.05141755938529968,
+    0.016164304688572884,
+    0.03299618512392044,
+    0.05169617757201195,
+    -0.020140215754508972,
+    -0.05135975778102875,
+    -0.051153041422367096,
+    0.051588695496320724,
+    0.04445497319102287,
+    -0.05214953422546387,
+    -0.030300037935376167,
+    0.006398756057024002,
+    0.048737093806266785,
+    0.052128199487924576,
+    -0.05203481391072273,
+    -0.05196721851825714,
+    -0.052078232169151306,
+    -0.04831034690141678,
+    -0.023588860407471657,
+    0.052121639251708984,
+    -0.03205065801739693,
+    0.051965970546007156,
+    0.04301847517490387,
+    0.04586103931069374,
+    -0.05214114859700203,
+    0.04660399630665779,
+    -0.027352849021553993,
+    0.01828063651919365,
+    0.05212625861167908,
+    -0.05215056240558624,
+    0.015887122601270676,
+    -0.01818031258881092,
+    -0.04060978442430496,
+    -0.0377921424806118,
+    0.025766799226403236,
+    0.051940347999334335,
+    -0.052095282822847366,
+    0.009702756069600582
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs email automation; When working with: Schedule Trigger, Google Drive - Resume CV File Created, Google Drive - Resume CV File Updated; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for email automation in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Webhook",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Webhook"
+  }
+}

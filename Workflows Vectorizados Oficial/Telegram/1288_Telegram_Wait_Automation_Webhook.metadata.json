@@ -1,0 +1,1050 @@
+{
+  "workflow_info": {
+    "id": "SvZQB2gsI57KlfvO",
+    "name": "💥AI Social Video Generator with GPT-4, Kling & Blotato —Auto-Post to Instagram, Facebook,, TikTok, Twitter & Pinterest - vide",
+    "display_name": "💥AI Social Video Generator with GPT-4, Kling & Blotato —Auto-Post to Instagram, Facebook,, TikTok, Twitter & Pinterest - vide",
+    "file_name": "1288_Telegram_Wait_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram\\1288_Telegram_Wait_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "c39000ae1026"
+  },
+  "structure": {
+    "total_nodes": 38,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.telegramTrigger",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.telegramTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 17
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 4
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.telegram",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Trigger: Telegram Prompt",
+        "type": "n8n-nodes-base.telegramTrigger",
+        "position": [
+          -180,
+          -160
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -880,
+          -280
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -880,
+          180
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -880,
+          1080
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -880,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -880,
+          480
+        ]
+      },
+      {
+        "name": "Extract Prompt & Caption",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          -160
+        ]
+      },
+      {
+        "name": "Transform Prompt for Kling (GPT-4)",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          480,
+          -160
+        ]
+      },
+      {
+        "name": "OpenAI Model Bridge",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          500,
+          0
+        ]
+      },
+      {
+        "name": "Generate Video via Kling API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          -160
+        ]
+      },
+      {
+        "name": "Wait for Video Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1240,
+          -160
+        ]
+      },
+      {
+        "name": "Get Generated Video URL",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1520,
+          -160
+        ]
+      },
+      {
+        "name": "Generate Voice-Over Script",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          140,
+          200
+        ]
+      },
+      {
+        "name": "Convert Script to Audio (TTS)",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          500,
+          200
+        ]
+      },
+      {
+        "name": "Upload Audio to Cloudinary",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          700,
+          200
+        ]
+      },
+      {
+        "name": "Merge Audio + Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          200
+        ]
+      },
+      {
+        "name": "Wait for Audio/Video Fusion",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1240,
+          200
+        ]
+      },
+      {
+        "name": "Get Video URL with Audio",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1520,
+          200
+        ]
+      },
+      {
+        "name": "Wait Before Captioning",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          700,
+          500
+        ]
+      },
+      {
+        "name": "Add Captions/Subtitles to Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          500
+        ]
+      },
+      {
+        "name": "Wait for Caption Render",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1240,
+          500
+        ]
+      },
+      {
+        "name": "Get Final Video URL (Audio + Captions)",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1520,
+          500
+        ]
+      },
+      {
+        "name": "Generate Social Caption from Voiceover",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          160,
+          840
+        ]
+      },
+      {
+        "name": "Generate YouTube-Style Title",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          560,
+          840
+        ]
+      },
+      {
+        "name": "Save Video Metadata to Google Sheets",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          940,
+          840
+        ]
+      },
+      {
+        "name": "Send Final Video to Telegram",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          1240,
+          840
+        ]
+      },
+      {
+        "name": "Send Caption Link via Telegram",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          1520,
+          840
+        ]
+      },
+      {
+        "name": "Assign Social Media IDs",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          160,
+          1300
+        ]
+      },
+      {
+        "name": "Upload Video to Blotato",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          380,
+          1300
+        ]
+      },
+      {
+        "name": "Post to Instagram",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          1120
+        ]
+      },
+      {
+        "name": "Post to YouTube",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1240,
+          1120
+        ]
+      },
+      {
+        "name": "Post to TikTok",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1520,
+          1120
+        ]
+      },
+      {
+        "name": "Post to Facebook Page",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          1300
+        ]
+      },
+      {
+        "name": "Post to Threads",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1240,
+          1300
+        ]
+      },
+      {
+        "name": "Post to Twitter (X)",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1520,
+          1300
+        ]
+      },
+      {
+        "name": "Post to LinkedIn",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          1460
+        ]
+      },
+      {
+        "name": "Post to Bluesky",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1240,
+          1460
+        ]
+      },
+      {
+        "name": "Post to Pinterest",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1520,
+          1460
+        ]
+      }
+    ],
+    "connections_count": 30,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 37
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "social media management",
+    "use_cases": [],
+    "complexity_score": 1415,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "get video url with audio",
+      "telegramTrigger",
+      "wait for audio/video fusion",
+      "get final video url (audio + captions)",
+      "post to linkedin",
+      "transform prompt for kling (gpt-4)",
+      "get generated video url",
+      "social media management",
+      "post to bluesky",
+      "post to threads",
+      "integration",
+      "wait for video generation",
+      "upload audio to cloudinary",
+      "sticky note3",
+      "stickyNote",
+      "assign social media ids",
+      "save video metadata to google sheets",
+      "post to pinterest",
+      "generate video via kling api",
+      "generate youtube-style title",
+      "wait for caption render",
+      "add captions/subtitles to video",
+      "upload video to blotato",
+      "generate voice-over script",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "post to facebook page",
+      "httpRequest",
+      "send caption link via telegram",
+      "merge audio + video",
+      "code",
+      "sticky note4",
+      "set",
+      "convert script to audio (tts)",
+      "wait before captioning",
+      "post to tiktok",
+      "post to youtube",
+      "wait",
+      "send final video to telegram",
+      "post to instagram",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "@n8n/n8n nodes langchain.agent",
+      "googleSheets",
+      "openai model bridge",
+      "post to twitter (x)",
+      "telegram",
+      "trigger: telegram prompt",
+      "generate social caption from voiceover",
+      "complex",
+      "extract prompt & caption",
+      "sticky note1",
+      "sticky note2"
+    ],
+    "description": "'💥AI Social Video Generator with GPT-4, Kling & Blotato —Auto-Post to Instagram, Facebook,, TikTok, Twitter & Pinterest - vide' es un workflow diseñado para social media management con 38 nodos activado por Trigger: Telegram Prompt que ejecuta: Sticky Note, Sticky Note1, Sticky Note3 en la categoría de integration.",
+    "semantic_content": "Workflow: 💥AI Social Video Generator with GPT-4, Kling & Blotato —Auto-Post to Instagram, Facebook,, TikTok, Twitter & Pinterest - vide. Nodos: Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note2 (stickyNote), Trigger: Telegram Prompt (telegramTrigger), Extract Prompt & Caption (code), Transform Prompt for Kling (GPT-4) (@n8n/n8n-nodes-langchain.agent), OpenAI Model Bridge (@n8n/n8n-nodes-langchain.lmChatOpenAi), Generate Video via Kling API (httpRequest), Wait for Video Generation (wait), Get Generated Video URL (httpRequest), Generate Voice-Over Script (@n8n/n8n-nodes-langchain.openAi), Convert Script to Audio (TTS) (@n8n/n8n-nodes-langchain.openAi), Upload Audio to Cloudinary (httpRequest), Merge Audio + Video (httpRequest), Wait for Audio/Video Fusion (wait), Get Video URL with Audio (httpRequest), Wait Before Captioning (wait), Add Captions/Subtitles to Video (httpRequest), Wait for Caption Render (wait), Get Final Video URL (Audio + Captions) (httpRequest), Generate Social Caption from Voiceover (@n8n/n8n-nodes-langchain.openAi), Generate YouTube-Style Title (@n8n/n8n-nodes-langchain.openAi), Save Video Metadata to Google Sheets (googleSheets), Send Final Video to Telegram (telegram), Send Caption Link via Telegram (telegram), Assign Social Media IDs (set), Upload Video to Blotato (httpRequest), Post to Instagram (httpRequest), Post to YouTube (httpRequest), Post to TikTok (httpRequest), Post to Facebook Page (httpRequest), Post to Threads (httpRequest), Post to Twitter (X) (httpRequest), Post to LinkedIn (httpRequest), Post to Bluesky (httpRequest), Post to Pinterest (httpRequest). Propósito: social media management. Categoría: integration. Disparadores: Trigger: Telegram Prompt",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Trigger: Telegram Prompt",
+      "n8n-nodes-base.telegramTrigger",
+      "Sticky Note3",
+      "Sticky Note1",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.telegramtrigger",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.googlesheets",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "1288_telegram_wait_automation_webhook",
+      "webhook",
+      "telegram",
+      "automation",
+      "wait",
+      "1288"
+    ],
+    "alternative_names": [
+      "💥AI Social Video Generator with GPT-4, Kling & Blotato —Auto-Post to Instagram, Facebook,, TikTok, Twitter & Pinterest - vide"
+    ],
+    "related_concepts": [
+      "social media management",
+      "integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.telegramTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 53.71024734982333,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 80.74204946996467
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:20.557999"
+  },
+  "semantic_vector": [
+    -0.018866166472434998,
+    0.019199026748538017,
+    0.03798487037420273,
+    -0.05280889943242073,
+    0.03574807196855545,
+    0.05336834117770195,
+    0.0243991706520319,
+    0.05433746427297592,
+    -0.05408768355846405,
+    0.04999706149101257,
+    -0.05321165546774864,
+    0.05304061248898506,
+    -0.036433931440114975,
+    -0.05399544909596443,
+    0.048371635377407074,
+    0.05435630679130554,
+    0.054217174649238586,
+    -0.05197422206401825,
+    -0.05386416241526604,
+    0.014810172840952873,
+    0.04960831627249718,
+    0.02314876765012741,
+    0.05357477441430092,
+    -0.03394203260540962,
+    -0.054327692836523056,
+    0.05433497950434685,
+    -0.05201827362179756,
+    0.019713664427399635,
+    -0.022393640130758286,
+    0.024449162185192108,
+    0.053631678223609924,
+    -0.05128753185272217,
+    0.039219606667757034,
+    0.015907656401395798,
+    0.054172664880752563,
+    0.05125487595796585,
+    -0.01661483570933342,
+    -0.04432370886206627,
+    0.01738034188747406,
+    -0.05417681857943535,
+    0.019381361082196236,
+    0.05400983244180679,
+    -0.030160771682858467,
+    -0.031096966937184334,
+    0.054356154054403305,
+    0.024228323251008987,
+    0.05071811005473137,
+    0.053401608020067215,
+    -0.0038436762988567352,
+    -0.05061020329594612,
+    -0.05030300095677376,
+    -0.03651478886604309,
+    -0.05435594916343689,
+    -0.05168606713414192,
+    -0.0543542243540287,
+    -0.05394776910543442,
+    0.021178433671593666,
+    -0.054160166531801224,
+    -0.007660519797354937,
+    0.05305223912000656,
+    -0.03350163251161575,
+    0.050970274955034256,
+    -0.05240680277347565,
+    0.0422002375125885,
+    -0.006772269494831562,
+    -0.04614701122045517,
+    0.05290147662162781,
+    0.05234468728303909,
+    -0.04292577877640724,
+    0.0428500659763813,
+    -0.05435624346137047,
+    -0.004034779500216246,
+    -0.05328846722841263,
+    -0.04470701888203621,
+    -0.04749486595392227,
+    0.04503704980015755,
+    -0.04176684468984604,
+    0.01162359956651926,
+    0.051454830914735794,
+    0.016955608502030373,
+    0.03456207737326622,
+    0.0019239876419305801,
+    -0.03178282827138901,
+    -0.05149420350790024,
+    0.05431191623210907,
+    0.05085359886288643,
+    -0.01715957745909691,
+    0.023264897987246513,
+    -0.012703419663012028,
+    -0.05369531363248825,
+    -0.05421468988060951,
+    0.00431648688390851,
+    0.05241316556930542,
+    0.01796429045498371,
+    0.012382399290800095,
+    0.01682005077600479,
+    0.022125722840428352,
+    -0.004674287047237158,
+    -0.05434813350439072,
+    -0.05435619503259659,
+    -0.0534842275083065,
+    -0.0527428537607193,
+    -0.03721741959452629,
+    -0.006411598529666662,
+    0.04859330505132675,
+    0.04063361883163452,
+    0.05435630679130554,
+    -0.01755465753376484,
+    0.05128856003284454,
+    -0.05435630679130554,
+    -0.05237318202853203,
+    -0.04923374205827713,
+    -0.04472741112112999,
+    -0.000736164569389075,
+    -0.03179917857050896,
+    0.047437332570552826,
+    0.02413577400147915,
+    -0.05349482223391533,
+    -0.04388981685042381,
+    0.028428928926587105,
+    0.05401870235800743,
+    0.054342322051525116,
+    0.04461405798792839,
+    0.010110502131283283,
+    0.03475760668516159,
+    0.050829969346523285,
+    0.05315196141600609,
+    -0.0543375089764595,
+    0.0538272000849247,
+    -0.026818349957466125,
+    -0.010909972712397575,
+    -0.0542290061712265,
+    0.05185858905315399,
+    0.053185801953077316,
+    -0.04288482293486595,
+    -0.000677451491355896,
+    -0.027421485632658005,
+    0.05402890220284462,
+    -0.05416421219706535,
+    -0.05435289815068245,
+    -0.0034700294490903616,
+    0.05435630679130554,
+    -0.020380143076181412,
+    -0.054212264716625214,
+    0.04871343448758125,
+    -0.05435624346137047,
+    0.0542750246822834,
+    -0.05006423965096474,
+    0.05341555178165436,
+    0.006148017011582851,
+    0.0481816902756691,
+    -0.04491934925317764,
+    0.05193551629781723,
+    -0.035640452057123184,
+    0.05318088456988335,
+    0.054353248327970505,
+    0.05200755596160889,
+    -0.030638137832283974,
+    -0.020037351176142693,
+    -0.04786090925335884,
+    -0.03209992125630379,
+    -0.0507381446659565,
+    0.04594380035996437,
+    -0.05318986251950264,
+    -0.03997395560145378,
+    -0.013648073188960552,
+    -0.050598353147506714,
+    -0.05324472486972809,
+    -0.05435442924499512,
+    -0.023496434092521667,
+    0.05244170129299164,
+    0.053265467286109924,
+    -0.045427240431308746,
+    0.007875562645494938,
+    0.03379310294985771,
+    0.053103458136320114,
+    0.050657350569963455,
+    -0.04999030381441116,
+    0.04736640304327011,
+    -0.03783165290951729,
+    -0.05429704487323761,
+    -0.021707193925976753,
+    -0.05072673037648201,
+    0.03336000442504883,
+    0.053865037858486176,
+    0.009560391306877136,
+    -0.0543498694896698,
+    0.05287259444594383,
+    0.015300861559808254,
+    0.04685357213020325,
+    -0.05389874055981636,
+    0.03828302398324013,
+    -0.037793029099702835,
+    -0.054353706538677216,
+    -0.050713445991277695,
+    -0.054352037608623505,
+    -0.0005624634213745594,
+    0.05435630679130554,
+    0.052322521805763245,
+    -0.0251079760491848,
+    -0.0009713026229292154,
+    0.05370363965630531,
+    -0.053758010268211365,
+    0.033486999571323395,
+    -0.04184364899992943,
+    -0.03159892559051514,
+    0.007341262884438038,
+    -0.04201424866914749,
+    -0.054356083273887634,
+    0.05328820273280144,
+    0.009922342374920845,
+    0.051285792142152786,
+    0.04723268002271652,
+    0.05377485230565071,
+    -0.05435577780008316,
+    -0.046820301562547684,
+    0.04247472062706947,
+    0.05414365604519844,
+    0.04972958564758301,
+    0.007791345007717609,
+    0.04711379110813141,
+    0.0017759539186954498,
+    0.032857660204172134,
+    0.053641997277736664,
+    -0.05404505878686905,
+    -0.05434871092438698,
+    -0.039344269782304764,
+    -0.04599492996931076,
+    -0.05410649999976158,
+    -0.05397200584411621,
+    -0.049288444221019745,
+    -0.05426102876663208,
+    0.010256633162498474,
+    -0.05435493215918541,
+    -0.05110621452331543,
+    -0.016932670027017593,
+    0.054355960339307785,
+    0.047089219093322754,
+    -0.05408354848623276,
+    0.05322127789258957,
+    -0.05136185511946678,
+    0.05434887483716011,
+    0.004006524104624987,
+    0.011645294725894928,
+    0.05216851457953453,
+    0.053937602788209915,
+    0.05352216586470604,
+    -0.05035491660237312,
+    0.05367745831608772,
+    0.054311398416757584,
+    -0.054353516548871994,
+    0.05173017457127571,
+    -0.05378178879618645,
+    0.009006212465465069,
+    0.04218852147459984,
+    -0.0538470633327961,
+    0.03548146039247513,
+    0.05435630679130554,
+    -0.05348041653633118,
+    0.0009057468269020319,
+    0.02474173717200756,
+    0.05418485775589943,
+    -0.04638208448886871,
+    0.053768739104270935,
+    -0.053087688982486725,
+    0.04065408185124397,
+    -0.016269966959953308,
+    -0.04741935804486275,
+    -0.05434331297874451,
+    -0.03978705778717995,
+    -0.05380978435277939,
+    0.02171892300248146,
+    -0.04792051017284393,
+    0.0497155487537384,
+    -0.00913790613412857,
+    0.018934495747089386,
+    -0.05323734134435654,
+    -0.05171091854572296,
+    0.05435630679130554,
+    -0.05359979346394539,
+    0.03058558888733387,
+    -0.048294756561517715,
+    0.05371914431452751,
+    -0.02580363303422928,
+    0.04702660068869591,
+    -0.05435629189014435,
+    0.01869579218327999,
+    0.054111700505018234,
+    -0.053804513067007065,
+    0.05435601994395256,
+    0.05299905315041542,
+    -0.03593132272362709,
+    0.054355062544345856,
+    0.014299661852419376,
+    0.05178752541542053,
+    -0.05434473603963852,
+    -0.05033937469124794,
+    0.052164070308208466,
+    0.04499390721321106,
+    0.05087200552225113,
+    -0.0012918696738779545,
+    -0.015420437790453434,
+    0.05392267182469368,
+    -0.043437469750642776,
+    0.05405385047197342,
+    0.04890027642250061,
+    -0.008955057710409164,
+    0.05349540337920189,
+    -0.017396295443177223,
+    0.043779049068689346,
+    0.05428104102611542,
+    0.04836411774158478,
+    -0.016590870916843414,
+    -0.017034009099006653,
+    0.04835786297917366,
+    0.05057913810014725,
+    -0.028717029839754105,
+    0.03792155161499977,
+    -0.04500534012913704,
+    0.039645254611968994,
+    0.039810456335544586,
+    -0.04240362346172333,
+    0.054263509809970856,
+    -0.053356271237134933,
+    -0.002238018438220024,
+    -0.01387769915163517,
+    0.030486227944493294,
+    -0.007752738427370787,
+    0.042547836899757385,
+    -0.05311641842126846,
+    -0.034560076892375946,
+    -0.027420049533247948,
+    0.0395972914993763,
+    0.05434967949986458,
+    0.0502486489713192,
+    -0.05332961678504944,
+    0.05420087277889252,
+    0.052984487265348434,
+    -0.021268514916300774,
+    -0.014444096013903618,
+    0.05433816462755203,
+    -0.043986231088638306,
+    0.05407368019223213,
+    -0.0211679395288229,
+    -0.05435630679130554,
+    -0.03196549415588379,
+    -0.023654965683817863,
+    -0.02744356542825699,
+    -0.053157560527324677,
+    0.053193598985672,
+    0.054057374596595764,
+    -0.0003820866986643523,
+    -0.05324681103229523,
+    0.05375653877854347,
+    0.05367797613143921,
+    0.019026322290301323,
+    -0.05435630679130554,
+    -0.018732476979494095,
+    -0.0534680113196373,
+    -0.03874020650982857,
+    0.05299589782953262,
+    -0.05239291489124298,
+    -0.05435630679130554,
+    0.05432972311973572,
+    -0.05435630679130554,
+    -0.04000508040189743,
+    0.05377883091568947,
+    -0.0543135441839695,
+    0.043592557311058044,
+    0.05378791689872742,
+    0.014057070016860962,
+    -0.02265874482691288,
+    -0.05427973344922066,
+    0.05392386019229889,
+    -0.0005754313315264881,
+    0.052741408348083496,
+    0.009334966540336609,
+    -0.05378938466310501,
+    0.05284656584262848,
+    0.054131753742694855,
+    0.02880205027759075,
+    -0.05340975522994995,
+    -0.01990155316889286,
+    -0.030785037204623222,
+    0.04108554124832153,
+    -0.054260898381471634,
+    0.04215995594859123,
+    0.05310438573360443,
+    -0.011516469530761242,
+    -0.05392582342028618,
+    -0.04591367021203041,
+    -0.04823334515094757,
+    0.05435630679130554,
+    0.03035304881632328,
+    -0.049325618892908096,
+    0.04230580851435661,
+    0.03066660650074482,
+    0.048607237637043,
+    0.04034674912691116,
+    0.04649727791547775,
+    0.03788963705301285,
+    -0.029207119718194008,
+    -0.012834202498197556,
+    0.053912337869405746,
+    0.05435630679130554,
+    -0.027373386546969414,
+    -0.05435630679130554,
+    0.04952528327703476,
+    0.05379030853509903,
+    0.03246133401989937,
+    0.03737349063158035,
+    0.04878775402903557,
+    0.0513426810503006,
+    0.008967860601842403,
+    -0.03761981427669525,
+    -0.0537756122648716,
+    0.050698172301054,
+    -0.05354626849293709,
+    0.02995469607412815,
+    -0.04200056195259094,
+    -0.03383976221084595,
+    0.05120418220758438,
+    -0.054356206208467484,
+    0.04884086921811104,
+    -0.049045711755752563,
+    0.05411728471517563,
+    -0.05435321107506752,
+    0.053606659173965454,
+    -0.05169305577874184,
+    0.053792860358953476,
+    -0.05427486076951027,
+    -0.051165033131837845,
+    -0.041837044060230255,
+    0.040646135807037354,
+    -0.05181822553277016,
+    -0.042818885296583176,
+    -0.04356659576296806,
+    -0.05435630679130554,
+    -0.0543067492544651,
+    0.05433079972863197,
+    0.04979289323091507,
+    -0.01787884719669819,
+    -0.05121080204844475,
+    -0.05407364293932915,
+    0.052644968032836914,
+    -0.05435630679130554,
+    -0.0532476045191288,
+    0.0377885103225708,
+    -0.051001664251089096,
+    -0.05414307862520218,
+    -0.011044301092624664,
+    -0.022752035409212112,
+    0.05435630679130554,
+    -0.04290834069252014,
+    -0.030706074088811874,
+    -0.05434736609458923,
+    0.05198964476585388,
+    0.05435365438461304,
+    0.053523920476436615,
+    -0.0537588857114315,
+    0.04261113330721855,
+    0.053694989532232285,
+    0.05227874964475632,
+    0.054353922605514526,
+    0.043831102550029755,
+    -0.04897885397076607,
+    0.05302738398313522,
+    -0.03261565789580345,
+    -0.05432245135307312,
+    0.053828515112400055,
+    -0.04402412101626396,
+    -0.05289914086461067,
+    0.050937578082084656,
+    -0.054304350167512894,
+    -0.05426614359021187,
+    -0.0543084554374218,
+    0.054220959544181824,
+    0.016599813476204872,
+    -0.030985526740550995,
+    -0.05371026322245598,
+    0.046115703880786896,
+    0.05405968055129051,
+    0.042599454522132874,
+    -0.05408705398440361,
+    -0.01416822336614132,
+    0.053744904696941376,
+    -0.02260897494852543,
+    0.042521826922893524,
+    0.04302390292286873,
+    0.03324446082115173,
+    0.016643954440951347,
+    0.04169725626707077,
+    0.017937473952770233,
+    -0.01186114177107811,
+    0.004560092464089394,
+    0.054329343140125275,
+    0.011579188518226147,
+    0.053883038461208344,
+    -0.05236445739865303,
+    0.012127872556447983,
+    0.0538058802485466,
+    -0.05304865911602974,
+    0.01131089311093092,
+    -0.05435624346137047,
+    -0.006451025605201721,
+    -0.007123611401766539,
+    0.012381598353385925,
+    -0.053012557327747345,
+    -0.03537632152438164,
+    0.05435605347156525,
+    -0.04230557754635811,
+    -0.054098546504974365
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs social media management; When working with: Trigger: Telegram Prompt; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for social media management in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Telegram",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram"
+  }
+}

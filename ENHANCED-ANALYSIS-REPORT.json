@@ -1,0 +1,32 @@
+{
+  "referenceCompliance": {
+    "workflowFieldsScore": 100,
+    "metaFieldsScore": 100,
+    "nodeFieldsScore": 100,
+    "idPatternsScore": 57.14285714285714,
+    "overallScore": 89.28571428571428
+  },
+  "structuralIssues": [],
+  "criticalProblems": [],
+  "missingFields": [
+    "tags",
+    "active",
+    "pinData"
+  ],
+  "recommendations": [
+    {
+      "priority": "MEDIUM",
+      "action": "ADD_RECOMMENDED_FIELDS",
+      "description": "Considerar agregar campos recomendados: tags, active, pinData",
+      "fix": "manual"
+    },
+    {
+      "priority": "MEDIUM",
+      "action": "STANDARDIZE_ID_PATTERNS",
+      "description": "Estandarizar patrones de ID según formato UUID",
+      "fix": "automatic"
+    }
+  ],
+  "fixes": [],
+  "comparisonWithReference": {}
+}

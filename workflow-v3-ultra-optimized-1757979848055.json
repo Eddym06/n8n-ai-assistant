@@ -1,0 +1,482 @@
+{
+  "nodes": [
+    {
+      "id": "default-webhook",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        1050,
+        2387
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "/webhook",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "0a1b2c3d-e4f5-4678-90ab-cdef01234567",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1050,
+        2503
+      ],
+      "parameters": {
+        "functionCode": "return items;",
+        "jsCode": "\n// Procesamiento general de datos\nconst items = $input.all();\n\nfor (const item of items) {\n  // Añadir timestamp de procesamiento\n  item.json.processedAt = new Date().toISOString();\n  \n  // Añadir ID único si no existe\n  if (!item.json.id) {\n    item.json.id = 'item_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);\n  }\n  \n  // Marcar como procesado\n  item.json.processed = true;\n}\n\nreturn items;",
+        "mode": "runOnceForAllItems"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "43f93429-c83c-4823-9e07-8d13a1e2ffb3",
+      "name": "Parse Telegram Message",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1050,
+        2618
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "3aa4217a-ab85-442c-9799-95befdad04db",
+      "name": "If Schedule Command",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1050,
+        2733
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c4bac866-fde3-4d5e-8ca8-090fa4194d51",
+      "name": "Prepare Schedule Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1050,
+        2963
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "886fb1af-b0f6-4099-8096-546cf6fa5513",
+      "name": "Create Calendar Event",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1050,
+        3072
+      ],
+      "parameters": {
+        "functionCode": "return items;",
+        "jsCode": "\n// Procesamiento general de datos\nconst items = $input.all();\n\nfor (const item of items) {\n  // Añadir timestamp de procesamiento\n  item.json.processedAt = new Date().toISOString();\n  \n  // Añadir ID único si no existe\n  if (!item.json.id) {\n    item.json.id = 'item_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);\n  }\n  \n  // Marcar como procesado\n  item.json.processed = true;\n}\n\nreturn items;",
+        "mode": "runOnceForAllItems"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d22c825c-6488-4e21-af60-17231ade13dc",
+      "name": "Confirm Schedule Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        1590,
+        1398
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "749f542e-c150-47a9-a57e-821e5d4ba6ba",
+      "name": "If Events Command",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1050,
+        2844
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "638b2a83-e1e8-43bf-8b1b-05b7cd392d86",
+      "name": "Get Calendar Events",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        1050,
+        3186
+      ],
+      "parameters": {
+        "functionCode": "return items;",
+        "jsCode": "\n// Procesamiento general de datos\nconst items = $input.all();\n\nfor (const item of items) {\n  // Añadir timestamp de procesamiento\n  item.json.processedAt = new Date().toISOString();\n  \n  // Añadir ID único si no existe\n  if (!item.json.id) {\n    item.json.id = 'item_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);\n  }\n  \n  // Marcar como procesado\n  item.json.processed = true;\n}\n\nreturn items;",
+        "mode": "runOnceForAllItems"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "7cba0a7d-8131-499b-bb7e-883103cbe6b4",
+      "name": "Format Events for Telegram",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        780,
+        1488
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "4cda65cd-5795-4049-8260-baf4dfea1291",
+      "name": "Send Events Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        -30,
+        1299
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "2c1e04fb-c7b0-4faf-99c4-3fa939f7b0ea",
+      "name": "If Email Command",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1050,
+        3310
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "006d1adc-2b2c-4a36-ac46-751d3767a62a",
+      "name": "Prepare Email Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1320,
+        5597
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "feef09a4-31a6-458b-81fd-6e613c76c057",
+      "name": "Send Confirmation Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        510,
+        5677
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "c7b08cd0-9014-4781-96a4-c4c4b6dd2a9c",
+      "name": "Confirm Email Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        -300,
+        1518
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "fbf0761c-7da5-49ad-a9c6-acdb0b2ba7ea",
+      "name": "Telegram Message",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        240,
+        1696
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Parse Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Telegram Message": {
+      "main": [
+        [
+          {
+            "node": "If Schedule Command",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Prepare Schedule Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Schedule Data": {
+      "main": [
+        [
+          {
+            "node": "Create Calendar Event",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Calendar Event": {
+      "main": [
+        [
+          {
+            "node": "Confirm Schedule Telegram",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Get Calendar Events",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Calendar Events": {
+      "main": [
+        [
+          {
+            "node": "Format Events for Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Events for Telegram": {
+      "main": [
+        [
+          {
+            "node": "Send Events Telegram",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If Email Command",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Prepare Email Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prepare Email Data": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Confirmation Email": {
+      "main": [
+        [
+          {
+            "node": "Confirm Email Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Schedule Command": {
+      "else": [
+        {
+          "node": "Confirm Schedule Telegram",
+          "type": "main",
+          "index": 0
+        }
+      ],
+      "main": [
+        [
+          {
+            "node": "Telegram Trigger",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Parse Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Email Command": {
+      "else": [
+        {
+          "node": "Confirm Email Telegram",
+          "type": "main",
+          "index": 0
+        }
+      ],
+      "main": [
+        [
+          {
+            "node": "Telegram Trigger",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Parse Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook Trigger": {
+      "main": [
+        [
+          {
+            "node": "Telegram Trigger",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If Events Command": {
+      "main": [
+        [
+          {
+            "node": "Telegram Trigger",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Parse Telegram Message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "_metadata": {
+    "validation": {
+      "score": 0,
+      "isValid": false,
+      "criticalErrors": 6,
+      "warnings": 1,
+      "suggestions": 1,
+      "timestamp": "2025-09-15T02:16:12.740Z"
+    },
+    "nodeConfiguration": {
+      "applied": true,
+      "configurationsApplied": 4,
+      "timestamp": "2025-09-15T02:16:12.789Z",
+      "agent": "IntelligentNodeConfigAgentV2",
+      "context": "email_processing",
+      "summary": "4 nodos configurados para email_processing"
+    }
+  },
+  "_systemInfo": {
+    "nodeConfiguration": {
+      "applied": true,
+      "timestamp": "2025-09-15T02:16:12.790Z",
+      "agent": "IntelligentNodeConfigAgent"
+    }
+  }
+}

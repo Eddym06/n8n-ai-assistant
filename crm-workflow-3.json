@@ -1,0 +1,358 @@
+{
+  "name": "Workflow Inteligente - 25/9/2025",
+  "active": false,
+  "nodes": [
+    {
+      "id": "intelligent-it854nh9o",
+      "name": "Webhook de Leads CRM",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        795.094881061582,
+        274.04368424236
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook-data",
+        "responseMode": "lastNode",
+        "options": {
+          "noResponseBody": false,
+          "rawBody": false,
+          "allowedOrigins": "*"
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-bvo6386bb",
+      "name": "Validate Order - CRM",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        207.28847847400863,
+        345.6311312178095
+      ],
+      "parameters": {
+        "conditions": [
+          {
+            "value1": "={{$json.data}}",
+            "operator": "isNotEmpty",
+            "value2": ""
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-5a5bfip5w",
+      "name": "Check Inventory - CRM",
+      "type": "n8n-nodes-base.postgres",
+      "position": [
+        498.4592626857657,
+        472.17973007931346
+      ],
+      "parameters": {
+        "options": {
+          "queryBatching": true,
+          "batchSize": 100
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "postgres": {
+          "id": "pg-creds",
+          "name": "PostgreSQL DB"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-qy2w9nmlq",
+      "name": "Process Payment - CRM",
+      "type": "n8n-nodes-base.stripe",
+      "position": [
+        720.8870798263687,
+        241.62001163650748
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {
+        "stripeApi": {
+          "id": "stripe-creds",
+          "name": "Stripe API"
+        }
+      },
+      "onError": "continueRegularOutput",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "continueOnFail": false
+    },
+    {
+      "id": "intelligent-wfmdkfvrk",
+      "name": "Generate Invoice - CRM",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        682.8835846117565,
+        284.1792158890863
+      ],
+      "parameters": {
+        "functionCode": "// Procesamiento de datos básico\nconst processedItems = items.map(item => {\n    return {\n        json: {\n            ...item.json,\n            processed: true,\n            processedAt: new Date().toISOString(),\n            workflowId: '{{$workflow.id}}',\n            executionId: '{{$execution.id}}'\n        }\n    };\n});\n\nreturn processedItems;"
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-65eaeadgw",
+      "name": "Send Confirmation - CRM",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        877.3186316991554,
+        572.6141050342692
+      ],
+      "parameters": {
+        "fromEmail": "noreply@company.com",
+        "toEmail": "={{$json.email}}",
+        "subject": "Notificación de {{$workflow.name}}",
+        "message": "Su solicitud ha sido procesada exitosamente por nuestro sistema.",
+        "options": {
+          "allowUnauthorizedCerts": false,
+          "appendAttribution": false
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "smtp": {
+          "id": "email-creds",
+          "name": "SMTP Server"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-armtihje3",
+      "name": "Update Inventory - CRM",
+      "type": "n8n-nodes-base.postgres",
+      "position": [
+        189.9243928275464,
+        400.13724426273535
+      ],
+      "parameters": {
+        "options": {
+          "queryBatching": true,
+          "batchSize": 100
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "postgres": {
+          "id": "pg-creds",
+          "name": "PostgreSQL DB"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-d50zzmcip",
+      "name": "Notify Fulfillment - CRM",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        257.39764538678463,
+        340.2958896919208
+      ],
+      "parameters": {
+        "channel": "#general",
+        "text": "📢 Notificación: {{$json.message || \"Evento procesado correctamente\"}}",
+        "username": "n8n-bot",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "slackApi": {
+          "id": "slack-creds",
+          "name": "Slack API"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-c60i9cabn",
+      "name": "Manejador Inteligente de Errores",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        254.67329080712489,
+        607.163864260931
+      ],
+      "parameters": {
+        "functionCode": "// Procesamiento de datos básico\nconst processedItems = items.map(item => {\n    return {\n        json: {\n            ...item.json,\n            processed: true,\n            processedAt: new Date().toISOString(),\n            workflowId: '{{$workflow.id}}',\n            executionId: '{{$execution.id}}'\n        }\n    };\n});\n\nreturn processedItems;"
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    }
+  ],
+  "connections": {
+    "Validate Order - CRM": {
+      "main": [
+        [
+          {
+            "node": "Check Inventory - CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Inventory - CRM": {
+      "main": [
+        [
+          {
+            "node": "Process Payment - CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Payment - CRM": {
+      "main": [
+        [
+          {
+            "node": "Generate Invoice - CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Invoice - CRM": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation - CRM",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Notify Fulfillment - CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Confirmation - CRM": {
+      "main": [
+        [
+          {
+            "node": "Update Inventory - CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Inventory - CRM": {
+      "main": [
+        [
+          {
+            "node": "Notify Fulfillment - CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Fulfillment - CRM": {
+      "main": [
+        [
+          {
+            "node": "Manejador Inteligente de Errores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-26T01:54:05.941Z",
+  "updatedAt": "2025-09-26T01:54:05.941Z",
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "",
+    "timezone": "Europe/Madrid"
+  },
+  "staticData": {},
+  "tags": [
+    "intelligent-agent",
+    "ai-generated",
+    "professional"
+  ],
+  "triggerCount": 0,
+  "versionId": "2.0.0",
+  "meta": {
+    "generatedBy": "intelligent-workflow-agent-v1.0",
+    "generatedAt": "2025-09-26T01:54:05.924Z",
+    "analysis": {
+      "domains": [
+        "crm"
+      ],
+      "complexity": "SIMPLE",
+      "intents": [],
+      "confidence": 0.4
+    },
+    "metrics": {
+      "nodeCount": 9,
+      "connectionCount": 7,
+      "estimatedExecutionTime": "6.66 segundos (estimación inteligente)",
+      "confidenceScore": 1
+    }
+  }
+}

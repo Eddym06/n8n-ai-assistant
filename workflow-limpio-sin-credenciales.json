@@ -1,0 +1,3205 @@
+{
+  "nodes": [
+    {
+      "id": "1",
+      "originalId": "1",
+      "name": "RH_Webhook Candidatos ATS",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -420,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "2",
+      "originalId": "2",
+      "name": "RH_Validacion Docs IA",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -420,
+        780
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "3",
+      "originalId": "3",
+      "name": "RH_IF Validacion Docs",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -280,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "4",
+      "originalId": "4",
+      "name": "RH_Notificar Rechazo Docs",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -420,
+        1120
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "5",
+      "originalId": "5",
+      "name": "RH_Verificacion Antecedentes HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        780
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "6",
+      "originalId": "6",
+      "name": "RH_Validacion Referencias Gmail",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        140,
+        780
+      ],
+      "parameters": {
+        "operation": "get",
+        "resource": "message"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "7",
+      "originalId": "7",
+      "name": "RH_Generacion Contrato Google Docs",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -140,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "8",
+      "originalId": "8",
+      "name": "RH_Creacion Usuario Active Directory HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        780
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "9",
+      "originalId": "9",
+      "name": "RH_Setup Correo Exchange HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        920
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "10",
+      "originalId": "10",
+      "name": "RH_Perfil Slack HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        920
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "11",
+      "originalId": "11",
+      "name": "RH_Registro PostgreSQL Empleados",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        140,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "12",
+      "originalId": "12",
+      "name": "RH_Credenciales Temporales Code",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        920
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "13",
+      "originalId": "13",
+      "name": "RH_Induccion Google Calendar",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        420,
+        920
+      ],
+      "parameters": {
+        "operation": "create"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "14",
+      "originalId": "14",
+      "name": "RH_Kit Bienvenida Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        1120
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "15",
+      "originalId": "15",
+      "name": "RH_VPN Accesos HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        1060
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "16",
+      "originalId": "16",
+      "name": "RH_Nomina Registro HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        1060
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "17",
+      "originalId": "17",
+      "name": "RH_Capacitaciones LMS HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        1060
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "18",
+      "originalId": "18",
+      "name": "RH_Seguro Medico Registro",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        1060
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "19",
+      "originalId": "19",
+      "name": "RH_Vacaciones Calendario",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        -420,
+        1200
+      ],
+      "parameters": {
+        "operation": "create"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "20",
+      "originalId": "20",
+      "name": "RH_Documentos Firmas Digitales",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        1200
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "21",
+      "originalId": "21",
+      "name": "Ventas_Webhook Leads Salesforce",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        420,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "22",
+      "originalId": "22",
+      "name": "Ventas_Scoring IA OpenAI",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        140,
+        1200
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "23",
+      "originalId": "23",
+      "name": "Ventas_Clasificacion Geografica IF",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        0,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "24",
+      "originalId": "24",
+      "name": "Ventas_Notificar Lead No Apto",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        140,
+        1120
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "25",
+      "originalId": "25",
+      "name": "Ventas_Asignacion Vendedores Algoritmo",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        420,
+        1200
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "26",
+      "originalId": "26",
+      "name": "Ventas_Email Personalizado Seguimiento",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        420,
+        1120
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "27",
+      "originalId": "27",
+      "name": "Ventas_Oportunidad CRM HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        1340
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "28",
+      "originalId": "28",
+      "name": "Ventas_Llamadas Sistema Telefonico",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        1340
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "29",
+      "originalId": "29",
+      "name": "Ventas_Propuesta PDF Generacion",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        1340
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "30",
+      "originalId": "30",
+      "name": "Ventas_Tracking Emails Apertura",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        420,
+        1340
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "31",
+      "originalId": "31",
+      "name": "Ventas_Notificaciones Push Mobile",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        1480
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "32",
+      "originalId": "32",
+      "name": "Ventas_Dashboard Power BI HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        1460
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "33",
+      "originalId": "33",
+      "name": "Ventas_Tarea Seguimiento HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        1480
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "34",
+      "originalId": "34",
+      "name": "Ventas_WhatsApp Business HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        1480
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "35",
+      "originalId": "35",
+      "name": "Ventas_Registro Interacciones DB",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -420,
+        240
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "36",
+      "originalId": "36",
+      "name": "Ventas_Reportes Automaticos",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -420,
+        1260
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "37",
+      "originalId": "37",
+      "name": "Ventas_Analisis Competencia IA",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        420,
+        1480
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "38",
+      "originalId": "38",
+      "name": "Ventas_Pricing Dinamico Code",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -420,
+        1620
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "39",
+      "originalId": "39",
+      "name": "Ventas_Forecasting Ventas",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        1620
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "40",
+      "originalId": "40",
+      "name": "Ventas_Territorio Optimizacion",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        1620
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "41",
+      "originalId": "41",
+      "name": "Ventas_Comisiones Calculo Automatico",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        420,
+        1620
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "42",
+      "originalId": "42",
+      "name": "Ventas_Pipeline Gestion",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        1760
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "43",
+      "originalId": "43",
+      "name": "Ventas_Cliente Segmentacion IA",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        -140,
+        1760
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "44",
+      "originalId": "44",
+      "name": "Ventas_Cross-selling Sugerencias",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        1760
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "45",
+      "originalId": "45",
+      "name": "Ventas_Retention Analisis",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        420,
+        1760
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "46",
+      "originalId": "46",
+      "name": "Fin_Webhook Facturas Sistema Contable",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -140,
+        240
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "47",
+      "originalId": "47",
+      "name": "Fin_Validacion Fiscal IF",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        280,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "48",
+      "originalId": "48",
+      "name": "Fin_Notificar Factura Invalida",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        1260
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "49",
+      "originalId": "49",
+      "name": "Fin_Verificacion Credito Bureau HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        1900
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "50",
+      "originalId": "50",
+      "name": "Fin_Impuestos Calculo Code",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        1900
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "51",
+      "originalId": "51",
+      "name": "Fin_XML Fiscal Generacion",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        1900
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "52",
+      "originalId": "52",
+      "name": "Fin_SAT Timbrado HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        1900
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "53",
+      "originalId": "53",
+      "name": "Fin_Repositorio Documental",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        140,
+        240
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "54",
+      "originalId": "54",
+      "name": "Fin_SMS Cliente Notificacion",
+      "type": "n8n-nodes-base.twilio",
+      "position": [
+        140,
+        1260
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "55",
+      "originalId": "55",
+      "name": "Fin_Libro Mayor Registro",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        420,
+        240
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "56",
+      "originalId": "56",
+      "name": "Fin_Flujo Caja Actualizacion",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -420,
+        380
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "57",
+      "originalId": "57",
+      "name": "Fin_Asiento Contable Automatico",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        2040
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "58",
+      "originalId": "58",
+      "name": "Fin_Banca Electronica HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        2040
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "59",
+      "originalId": "59",
+      "name": "Fin_Estados Financieros",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        2040
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "60",
+      "originalId": "60",
+      "name": "Fin_Vencimientos Alertas",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        420,
+        1260
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "61",
+      "originalId": "61",
+      "name": "Fin_Conciliacion Bancaria",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        420,
+        2040
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "62",
+      "originalId": "62",
+      "name": "Fin_Presupuestos Control",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -140,
+        380
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "63",
+      "originalId": "63",
+      "name": "Fin_Gastos Aprobacion Workflow IF",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -280,
+        580
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "64",
+      "originalId": "64",
+      "name": "Fin_Aprobar Gasto",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        2180
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "65",
+      "originalId": "65",
+      "name": "Fin_Rechazar Gasto",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        2180
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "66",
+      "originalId": "66",
+      "name": "Fin_Inversiones Analisis",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        2180
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "67",
+      "originalId": "67",
+      "name": "Fin_Riesgos Evaluacion IA",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        420,
+        2180
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "68",
+      "originalId": "68",
+      "name": "Fin_Auditoria Trail Automatico",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        140,
+        380
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "69",
+      "originalId": "69",
+      "name": "Fin_Compliance Regulatorio",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -420,
+        2320
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "70",
+      "originalId": "70",
+      "name": "Fin_Reportes Fiscales",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -420,
+        1400
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "71",
+      "originalId": "71",
+      "name": "Ops_Webhook Ordenes Compra",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        420,
+        380
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "72",
+      "originalId": "72",
+      "name": "Ops_Inventario Validacion IF Multiple",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        0,
+        580
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "73",
+      "originalId": "73",
+      "name": "Ops_Notificar Stock Insuficiente",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        1400
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "74",
+      "originalId": "74",
+      "name": "Ops_Proveedores Verificacion HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        2320
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "75",
+      "originalId": "75",
+      "name": "Ops_Costos Envio Calculo",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        2320
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "76",
+      "originalId": "76",
+      "name": "Ops_Orden Produccion Generacion",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        2320
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "77",
+      "originalId": "77",
+      "name": "Ops_MRP Programacion HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        2460
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "78",
+      "originalId": "78",
+      "name": "Ops_Etiquetas Envio",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        2460
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "79",
+      "originalId": "79",
+      "name": "Ops_Transportistas Integracion HTTP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        2460
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "80",
+      "originalId": "80",
+      "name": "Ops_Tracking Paquetes",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        2460
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "81",
+      "originalId": "81",
+      "name": "Ops_Entrega Notificaciones",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        140,
+        1400
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "82",
+      "originalId": "82",
+      "name": "Ops_Inventario Actualizacion Automatica",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        -420,
+        520
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "83",
+      "originalId": "83",
+      "name": "Ops_Calidad Reportes",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -420,
+        2600
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "84",
+      "originalId": "84",
+      "name": "Ops_Temperatura Control IoT",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        2600
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "85",
+      "originalId": "85",
+      "name": "Ops_Devoluciones Gestion",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        2600
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "86",
+      "originalId": "86",
+      "name": "Ops_KPIs Operativos",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        420,
+        2600
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "87",
+      "originalId": "87",
+      "name": "Ops_Mantenimiento Preventivo Programado",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        2740
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "88",
+      "originalId": "88",
+      "name": "Ops_Almacen Optimizacion Algoritmo",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        2740
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "89",
+      "originalId": "89",
+      "name": "Ops_Rutas Distribucion IA",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        140,
+        2740
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "90",
+      "originalId": "90",
+      "name": "Ops_Sustainability Metricas",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        420,
+        2740
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "91",
+      "originalId": "91",
+      "name": "Ops_Safety Protocolos Automatizados",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -420,
+        2880
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "92",
+      "originalId": "92",
+      "name": "Ops_Vendor Management",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        2880
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "93",
+      "originalId": "93",
+      "name": "Ops_Procurement Automatizado",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        2880
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "94",
+      "originalId": "94",
+      "name": "Ops_Asset Tracking RFID",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        2880
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "95",
+      "originalId": "95",
+      "name": "Ops_Production Scheduling",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        3020
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "96",
+      "originalId": "96",
+      "name": "Ops_Quality Assurance Automatizada",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        3020
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "97",
+      "originalId": "97",
+      "name": "Ops_Logistics Coordination",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        3020
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "98",
+      "originalId": "98",
+      "name": "Ops_Supply Chain Visibility",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        3020
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "99",
+      "originalId": "99",
+      "name": "Ops_Demand Forecasting IA",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        -420,
+        3160
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "100",
+      "originalId": "100",
+      "name": "Ops_Capacity Planning",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        3160
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "101",
+      "originalId": "101",
+      "name": "Sop_Webhook Tickets Helpdesk",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -140,
+        520
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "102",
+      "originalId": "102",
+      "name": "Sop_Clasificacion Tipo IF",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        280,
+        580
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "103",
+      "originalId": "103",
+      "name": "Sop_Notificar Ticket Invalido",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        420,
+        1400
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "104",
+      "originalId": "104",
+      "name": "Sop_Prioridad Asignacion Algoritmo",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        3160
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "105",
+      "originalId": "105",
+      "name": "Sop_Escalamiento Tiempo Automatico",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        420,
+        3160
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "106",
+      "originalId": "106",
+      "name": "Sop_Knowledge Base Busqueda",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        3300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "107",
+      "originalId": "107",
+      "name": "Sop_IA Respuesta Generacion",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        -140,
+        3300
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "108",
+      "originalId": "108",
+      "name": "Sop_Solucion Cliente Envio",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -420,
+        1540
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "109",
+      "originalId": "109",
+      "name": "Sop_Seguimiento Programado",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        3300
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "110",
+      "originalId": "110",
+      "name": "Sop_Satisfaccion Encuesta",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        -140,
+        1540
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "111",
+      "originalId": "111",
+      "name": "Sop_Sentimientos Analisis IA",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        420,
+        3300
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "112",
+      "originalId": "112",
+      "name": "Sop_FAQ Actualizacion",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        3440
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "113",
+      "originalId": "113",
+      "name": "Sop_Supervisores Notificacion",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        140,
+        1540
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "114",
+      "originalId": "114",
+      "name": "Sop_Chat Vivo Integracion",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        3440
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "115",
+      "originalId": "115",
+      "name": "Sop_Documentacion Creacion",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        140,
+        520
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "116",
+      "originalId": "116",
+      "name": "Sop_Resolucion Metricas",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        420,
+        520
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "117",
+      "originalId": "117",
+      "name": "Sop_SLA Monitoring",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        140,
+        3440
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "118",
+      "originalId": "118",
+      "name": "Sop_Chatbot Integracion",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        420,
+        3440
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "119",
+      "originalId": "119",
+      "name": "Sop_Remote Assistance",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -420,
+        3580
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "120",
+      "originalId": "120",
+      "name": "Sop_Problem Escalation",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        -140,
+        3580
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "121",
+      "originalId": "121",
+      "name": "Central_Merge RH",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        140,
+        3580
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "122",
+      "originalId": "122",
+      "name": "Central_Merge Ventas",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        420,
+        3580
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "123",
+      "originalId": "123",
+      "name": "Central_Merge Financiero",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        -420,
+        3720
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "124",
+      "originalId": "124",
+      "name": "Central_Merge Operaciones",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        -140,
+        3720
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "125",
+      "originalId": "125",
+      "name": "Central_Merge Soporte",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        140,
+        3720
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "126",
+      "originalId": "126",
+      "name": "Central_Merge Todos Modulos",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        420,
+        3720
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "127",
+      "originalId": "127",
+      "name": "Central_Metricas Consolidacion Masiva",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -420,
+        3860
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "128",
+      "originalId": "128",
+      "name": "Central_Dashboard Ejecutivo Generacion",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        140,
+        1460
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "129",
+      "originalId": "129",
+      "name": "Central_Stakeholders Notificaciones",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        420,
+        1540
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "130",
+      "originalId": "130",
+      "name": "Central_Strategic Insights IA",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        -140,
+        3860
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "RH_Webhook Candidatos ATS": {
+      "main": [
+        [
+          {
+            "node": "RH_Validacion Docs IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Webhook Leads Salesforce": {
+      "main": [
+        [
+          {
+            "node": "RH_Validacion Docs IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Webhook Facturas Sistema Contable": {
+      "main": [
+        [
+          {
+            "node": "RH_Validacion Docs IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Webhook Ordenes Compra": {
+      "main": [
+        [
+          {
+            "node": "RH_Validacion Docs IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Webhook Tickets Helpdesk": {
+      "main": [
+        [
+          {
+            "node": "RH_Validacion Docs IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Central_Strategic Insights IA": {
+      "main": [
+        [
+          {
+            "node": "RH_Validacion Referencias Gmail",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RH_Kit Bienvenida Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Ventas_Email Personalizado Seguimiento",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Ventas_Tracking Emails Apertura",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Validacion Docs IA": {
+      "main": [
+        [
+          {
+            "node": "RH_Notificar Rechazo Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Notificar Rechazo Docs": {
+      "main": [
+        [
+          {
+            "node": "RH_Verificacion Antecedentes HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Verificacion Antecedentes HTTP": {
+      "main": [
+        [
+          {
+            "node": "RH_Generacion Contrato Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Generacion Contrato Google Docs": {
+      "main": [
+        [
+          {
+            "node": "RH_Creacion Usuario Active Directory HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Creacion Usuario Active Directory HTTP": {
+      "main": [
+        [
+          {
+            "node": "RH_Setup Correo Exchange HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Setup Correo Exchange HTTP": {
+      "main": [
+        [
+          {
+            "node": "RH_Perfil Slack HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Perfil Slack HTTP": {
+      "main": [
+        [
+          {
+            "node": "RH_Registro PostgreSQL Empleados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Registro PostgreSQL Empleados": {
+      "main": [
+        [
+          {
+            "node": "RH_Credenciales Temporales Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Credenciales Temporales Code": {
+      "main": [
+        [
+          {
+            "node": "RH_Induccion Google Calendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Induccion Google Calendar": {
+      "main": [
+        [
+          {
+            "node": "RH_VPN Accesos HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_VPN Accesos HTTP": {
+      "main": [
+        [
+          {
+            "node": "RH_Nomina Registro HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Nomina Registro HTTP": {
+      "main": [
+        [
+          {
+            "node": "RH_Capacitaciones LMS HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Capacitaciones LMS HTTP": {
+      "main": [
+        [
+          {
+            "node": "RH_Seguro Medico Registro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Seguro Medico Registro": {
+      "main": [
+        [
+          {
+            "node": "RH_Vacaciones Calendario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Vacaciones Calendario": {
+      "main": [
+        [
+          {
+            "node": "RH_Documentos Firmas Digitales",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RH_Documentos Firmas Digitales": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Scoring IA OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Scoring IA OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Notificar Lead No Apto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Notificar Lead No Apto": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Asignacion Vendedores Algoritmo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Asignacion Vendedores Algoritmo": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Oportunidad CRM HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Oportunidad CRM HTTP": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Llamadas Sistema Telefonico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Llamadas Sistema Telefonico": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Propuesta PDF Generacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Propuesta PDF Generacion": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Notificaciones Push Mobile",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Notificaciones Push Mobile": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Dashboard Power BI HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Dashboard Power BI HTTP": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Tarea Seguimiento HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Tarea Seguimiento HTTP": {
+      "main": [
+        [
+          {
+            "node": "Ventas_WhatsApp Business HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_WhatsApp Business HTTP": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Registro Interacciones DB",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Registro Interacciones DB": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Reportes Automaticos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Reportes Automaticos": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Analisis Competencia IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Analisis Competencia IA": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Pricing Dinamico Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Pricing Dinamico Code": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Forecasting Ventas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Forecasting Ventas": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Territorio Optimizacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Territorio Optimizacion": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Comisiones Calculo Automatico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Comisiones Calculo Automatico": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Pipeline Gestion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Pipeline Gestion": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Cliente Segmentacion IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Cliente Segmentacion IA": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Cross-selling Sugerencias",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Cross-selling Sugerencias": {
+      "main": [
+        [
+          {
+            "node": "Ventas_Retention Analisis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ventas_Retention Analisis": {
+      "main": [
+        [
+          {
+            "node": "Fin_Notificar Factura Invalida",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Notificar Factura Invalida": {
+      "main": [
+        [
+          {
+            "node": "Fin_Verificacion Credito Bureau HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Verificacion Credito Bureau HTTP": {
+      "main": [
+        [
+          {
+            "node": "Fin_Impuestos Calculo Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Impuestos Calculo Code": {
+      "main": [
+        [
+          {
+            "node": "Fin_XML Fiscal Generacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_XML Fiscal Generacion": {
+      "main": [
+        [
+          {
+            "node": "Fin_SAT Timbrado HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_SAT Timbrado HTTP": {
+      "main": [
+        [
+          {
+            "node": "Fin_Repositorio Documental",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Repositorio Documental": {
+      "main": [
+        [
+          {
+            "node": "Fin_SMS Cliente Notificacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_SMS Cliente Notificacion": {
+      "main": [
+        [
+          {
+            "node": "Fin_Libro Mayor Registro",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Libro Mayor Registro": {
+      "main": [
+        [
+          {
+            "node": "Fin_Flujo Caja Actualizacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Flujo Caja Actualizacion": {
+      "main": [
+        [
+          {
+            "node": "Fin_Asiento Contable Automatico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Asiento Contable Automatico": {
+      "main": [
+        [
+          {
+            "node": "Fin_Banca Electronica HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Banca Electronica HTTP": {
+      "main": [
+        [
+          {
+            "node": "Fin_Estados Financieros",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Estados Financieros": {
+      "main": [
+        [
+          {
+            "node": "Fin_Vencimientos Alertas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Vencimientos Alertas": {
+      "main": [
+        [
+          {
+            "node": "Fin_Conciliacion Bancaria",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Conciliacion Bancaria": {
+      "main": [
+        [
+          {
+            "node": "Fin_Presupuestos Control",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Presupuestos Control": {
+      "main": [
+        [
+          {
+            "node": "Fin_Aprobar Gasto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Aprobar Gasto": {
+      "main": [
+        [
+          {
+            "node": "Fin_Rechazar Gasto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Rechazar Gasto": {
+      "main": [
+        [
+          {
+            "node": "Fin_Inversiones Analisis",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Inversiones Analisis": {
+      "main": [
+        [
+          {
+            "node": "Fin_Riesgos Evaluacion IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Riesgos Evaluacion IA": {
+      "main": [
+        [
+          {
+            "node": "Fin_Auditoria Trail Automatico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Auditoria Trail Automatico": {
+      "main": [
+        [
+          {
+            "node": "Fin_Compliance Regulatorio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Compliance Regulatorio": {
+      "main": [
+        [
+          {
+            "node": "Fin_Reportes Fiscales",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fin_Reportes Fiscales": {
+      "main": [
+        [
+          {
+            "node": "Ops_Notificar Stock Insuficiente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Notificar Stock Insuficiente": {
+      "main": [
+        [
+          {
+            "node": "Ops_Proveedores Verificacion HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Proveedores Verificacion HTTP": {
+      "main": [
+        [
+          {
+            "node": "Ops_Costos Envio Calculo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Costos Envio Calculo": {
+      "main": [
+        [
+          {
+            "node": "Ops_Orden Produccion Generacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Orden Produccion Generacion": {
+      "main": [
+        [
+          {
+            "node": "Ops_MRP Programacion HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_MRP Programacion HTTP": {
+      "main": [
+        [
+          {
+            "node": "Ops_Etiquetas Envio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Etiquetas Envio": {
+      "main": [
+        [
+          {
+            "node": "Ops_Transportistas Integracion HTTP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Transportistas Integracion HTTP": {
+      "main": [
+        [
+          {
+            "node": "Ops_Tracking Paquetes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Tracking Paquetes": {
+      "main": [
+        [
+          {
+            "node": "Ops_Entrega Notificaciones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Entrega Notificaciones": {
+      "main": [
+        [
+          {
+            "node": "Ops_Inventario Actualizacion Automatica",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Inventario Actualizacion Automatica": {
+      "main": [
+        [
+          {
+            "node": "Ops_Calidad Reportes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Calidad Reportes": {
+      "main": [
+        [
+          {
+            "node": "Ops_Temperatura Control IoT",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Temperatura Control IoT": {
+      "main": [
+        [
+          {
+            "node": "Ops_Devoluciones Gestion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Devoluciones Gestion": {
+      "main": [
+        [
+          {
+            "node": "Ops_KPIs Operativos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_KPIs Operativos": {
+      "main": [
+        [
+          {
+            "node": "Ops_Mantenimiento Preventivo Programado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Mantenimiento Preventivo Programado": {
+      "main": [
+        [
+          {
+            "node": "Ops_Almacen Optimizacion Algoritmo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Almacen Optimizacion Algoritmo": {
+      "main": [
+        [
+          {
+            "node": "Ops_Rutas Distribucion IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Rutas Distribucion IA": {
+      "main": [
+        [
+          {
+            "node": "Ops_Sustainability Metricas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Sustainability Metricas": {
+      "main": [
+        [
+          {
+            "node": "Ops_Safety Protocolos Automatizados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Safety Protocolos Automatizados": {
+      "main": [
+        [
+          {
+            "node": "Ops_Vendor Management",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Vendor Management": {
+      "main": [
+        [
+          {
+            "node": "Ops_Procurement Automatizado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Procurement Automatizado": {
+      "main": [
+        [
+          {
+            "node": "Ops_Asset Tracking RFID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Asset Tracking RFID": {
+      "main": [
+        [
+          {
+            "node": "Ops_Production Scheduling",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Production Scheduling": {
+      "main": [
+        [
+          {
+            "node": "Ops_Quality Assurance Automatizada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Quality Assurance Automatizada": {
+      "main": [
+        [
+          {
+            "node": "Ops_Logistics Coordination",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Logistics Coordination": {
+      "main": [
+        [
+          {
+            "node": "Ops_Supply Chain Visibility",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Supply Chain Visibility": {
+      "main": [
+        [
+          {
+            "node": "Ops_Demand Forecasting IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Demand Forecasting IA": {
+      "main": [
+        [
+          {
+            "node": "Ops_Capacity Planning",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ops_Capacity Planning": {
+      "main": [
+        [
+          {
+            "node": "Sop_Notificar Ticket Invalido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Notificar Ticket Invalido": {
+      "main": [
+        [
+          {
+            "node": "Sop_Prioridad Asignacion Algoritmo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Prioridad Asignacion Algoritmo": {
+      "main": [
+        [
+          {
+            "node": "Sop_Escalamiento Tiempo Automatico",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Escalamiento Tiempo Automatico": {
+      "main": [
+        [
+          {
+            "node": "Sop_Knowledge Base Busqueda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Knowledge Base Busqueda": {
+      "main": [
+        [
+          {
+            "node": "Sop_IA Respuesta Generacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_IA Respuesta Generacion": {
+      "main": [
+        [
+          {
+            "node": "Sop_Solucion Cliente Envio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Solucion Cliente Envio": {
+      "main": [
+        [
+          {
+            "node": "Sop_Seguimiento Programado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Seguimiento Programado": {
+      "main": [
+        [
+          {
+            "node": "Sop_Satisfaccion Encuesta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Satisfaccion Encuesta": {
+      "main": [
+        [
+          {
+            "node": "Sop_Sentimientos Analisis IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Sentimientos Analisis IA": {
+      "main": [
+        [
+          {
+            "node": "Sop_FAQ Actualizacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_FAQ Actualizacion": {
+      "main": [
+        [
+          {
+            "node": "Sop_Supervisores Notificacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Supervisores Notificacion": {
+      "main": [
+        [
+          {
+            "node": "Sop_Chat Vivo Integracion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Chat Vivo Integracion": {
+      "main": [
+        [
+          {
+            "node": "Sop_Documentacion Creacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Documentacion Creacion": {
+      "main": [
+        [
+          {
+            "node": "Sop_Resolucion Metricas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Resolucion Metricas": {
+      "main": [
+        [
+          {
+            "node": "Sop_SLA Monitoring",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_SLA Monitoring": {
+      "main": [
+        [
+          {
+            "node": "Sop_Chatbot Integracion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Chatbot Integracion": {
+      "main": [
+        [
+          {
+            "node": "Sop_Remote Assistance",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Remote Assistance": {
+      "main": [
+        [
+          {
+            "node": "Sop_Problem Escalation",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sop_Problem Escalation": {
+      "main": [
+        [
+          {
+            "node": "Central_Metricas Consolidacion Masiva",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Central_Metricas Consolidacion Masiva": {
+      "main": [
+        [
+          {
+            "node": "Central_Dashboard Ejecutivo Generacion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Central_Dashboard Ejecutivo Generacion": {
+      "main": [
+        [
+          {
+            "node": "Central_Stakeholders Notificaciones",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Central_Stakeholders Notificaciones": {
+      "main": [
+        [
+          {
+            "node": "Central_Strategic Insights IA",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

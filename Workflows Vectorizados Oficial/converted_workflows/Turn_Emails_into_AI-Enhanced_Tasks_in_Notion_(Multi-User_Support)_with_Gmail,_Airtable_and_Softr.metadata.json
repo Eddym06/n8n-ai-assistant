@@ -1,0 +1,1088 @@
+{
+  "workflow_info": {
+    "id": "30r9acI1XVIIwAMi",
+    "name": "mails2notion V2",
+    "display_name": "mails2notion V2",
+    "file_name": "Turn_Emails_into_AI-Enhanced_Tasks_in_Notion_(Multi-User_Support)_with_Gmail,_Airtable_and_Softr.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\Turn_Emails_into_AI-Enhanced_Tasks_in_Notion_(Multi-User_Support)_with_Gmail,_Airtable_and_Softr.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "c6df6ddb3ec7"
+  },
+  "structure": {
+    "total_nodes": 38,
+    "node_types": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.toolCalculator",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.airtable"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.gmailTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 13
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.airtable",
+        "count": 2
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Gmail Trigger",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          900,
+          220
+        ]
+      },
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          920,
+          600
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2560,
+          240
+        ]
+      },
+      {
+        "name": "Calculator",
+        "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+        "position": [
+          2700,
+          240
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          2820,
+          240
+        ]
+      },
+      {
+        "name": "Add Label \"Processed\"",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          3860,
+          20
+        ]
+      },
+      {
+        "name": "Active Routes Only",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          2000,
+          20
+        ]
+      },
+      {
+        "name": "Extract Route ID",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1560,
+          220
+        ]
+      },
+      {
+        "name": "Deactivate Route",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          3420,
+          220
+        ]
+      },
+      {
+        "name": "Add Label \"Error\"",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          3860,
+          220
+        ]
+      },
+      {
+        "name": "Send notification about deactivated route",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          3640,
+          220
+        ]
+      },
+      {
+        "name": "Send notification about missing route",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          3640,
+          420
+        ]
+      },
+      {
+        "name": "Get Route by ID",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          1780,
+          220
+        ]
+      },
+      {
+        "name": "Create Notion Page",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3200,
+          20
+        ]
+      },
+      {
+        "name": "Filter for unprocessed mails",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1340,
+          220
+        ]
+      },
+      {
+        "name": "Required labels",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1360,
+          600
+        ]
+      },
+      {
+        "name": "Globals",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1120,
+          220
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          840,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1060,
+          60
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1720,
+          60
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          840,
+          140
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1500,
+          140
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1280,
+          140
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2920,
+          -120
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3140,
+          -120
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2160,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1940,
+          -80
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2000,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3580,
+          100
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3800,
+          -60
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3360,
+          120
+        ]
+      },
+      {
+        "name": "Format Notion Page Blocks",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2980,
+          20
+        ]
+      },
+      {
+        "name": "Get all labels",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1140,
+          600
+        ]
+      },
+      {
+        "name": "Structured Output Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          2440,
+          240
+        ]
+      },
+      {
+        "name": "Calculator1",
+        "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+        "position": [
+          2320,
+          240
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2180,
+          240
+        ]
+      },
+      {
+        "name": "Generate Actionable Task",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2220,
+          20
+        ]
+      },
+      {
+        "name": "Get Summary & Meta Data",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2600,
+          20
+        ]
+      }
+    ],
+    "connections_count": 22,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 36
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "email automation",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1190,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "sticky note12",
+      "sticky note5",
+      "filter for unprocessed mails",
+      "required labels",
+      "generate actionable task",
+      "send notification about deactivated route",
+      "sticky note7",
+      "gmailTrigger",
+      "sticky note11",
+      "structured output parser1",
+      "send notification about missing route",
+      "sticky note3",
+      "structured output parser",
+      "active routes only",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "stickyNote",
+      "get all labels",
+      "openai chat model1",
+      "ai-ml",
+      "sticky note6",
+      "globals",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "calculator1",
+      "add label \"processed\"",
+      "sticky note10",
+      "add label \"error\"",
+      "httpRequest",
+      "get summary & meta data",
+      "sticky note2",
+      "create notion page",
+      "email automation",
+      "code",
+      "deactivate route",
+      "format notion page blocks",
+      "sticky note9",
+      "openai chat model",
+      "set",
+      "gmail trigger",
+      "sticky note4",
+      "extract route id",
+      "get route by id",
+      "@n8n/n8n nodes langchain.toolCalculator",
+      "sticky note",
+      "@n8n/n8n nodes langchain.agent",
+      "no operation, do nothing",
+      "sticky note8",
+      "gmail",
+      "complex",
+      "filter",
+      "manualTrigger",
+      "noOp",
+      "when clicking ‘test workflow’",
+      "sticky note1",
+      "calculator",
+      "airtable"
+    ],
+    "description": "'mails2notion V2' es un workflow diseñado para email automation con 38 nodos con 2 disparadores que ejecuta: OpenAI Chat Model, Calculator, Structured Output Parser en la categoría de ai-ml.",
+    "semantic_content": "Workflow: mails2notion V2. Nodos: OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Calculator (@n8n/n8n-nodes-langchain.toolCalculator), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Add Label \"Processed\" (gmail), Active Routes Only (filter), Extract Route ID (set), Deactivate Route (airtable), Add Label \"Error\" (gmail), Send notification about deactivated route (gmail), Send notification about missing route (gmail), Get Route by ID (airtable), Create Notion Page (httpRequest), Gmail Trigger (gmailTrigger), Filter for unprocessed mails (filter), When clicking ‘Test workflow’ (manualTrigger), Required labels (filter), Globals (set), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), No Operation, do nothing (noOp), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), Sticky Note12 (stickyNote), Format Notion Page Blocks (code), Get all labels (gmail), Structured Output Parser1 (@n8n/n8n-nodes-langchain.outputParserStructured), Calculator1 (@n8n/n8n-nodes-langchain.toolCalculator), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Generate Actionable Task (@n8n/n8n-nodes-langchain.agent), Get Summary & Meta Data (@n8n/n8n-nodes-langchain.agent). Propósito: email automation. Categoría: ai-ml. Disparadores: Gmail Trigger, When clicking ‘Test workflow’",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "Calculator",
+      "@n8n/n8n-nodes-langchain.toolCalculator",
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "Gmail Trigger",
+      "OpenAI Chat Model",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "Structured Output Parser"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.airtable",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.gmailtrigger",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.manualtrigger",
+      "@n8n/n8n-nodes-langchain.toolcalculator",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "turn_emails_into_ai",
+      "into",
+      "tasks",
+      "(multi-user",
+      "and",
+      "with",
+      "enhanced_tasks_in_notion_(multi",
+      "turn",
+      "notion",
+      "support)",
+      "gmail,",
+      "user_support)_with_gmail,_airtable_and_softr",
+      "softr",
+      "ai-enhanced",
+      "airtable",
+      "emails"
+    ],
+    "alternative_names": [
+      "mails2notion V2"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "email automation"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 63.86554621848739,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 82.77310924369748
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:27.022114"
+  },
+  "semantic_vector": [
+    -0.054264944046735764,
+    -0.04651104286313057,
+    0.013553079217672348,
+    -0.053208813071250916,
+    -0.046356819570064545,
+    -0.05332734435796738,
+    0.039991721510887146,
+    -0.015209917910397053,
+    -0.04536377266049385,
+    0.05540749058127403,
+    -0.03767978772521019,
+    -0.03771399334073067,
+    0.011940564960241318,
+    -0.05229560658335686,
+    -0.053511619567871094,
+    0.05560384318232536,
+    0.02067485637962818,
+    0.04698754847049713,
+    -0.05155440419912338,
+    -0.02333429455757141,
+    -0.028896614909172058,
+    0.040828850120306015,
+    0.03399300575256348,
+    -0.05188922584056854,
+    -0.04673069342970848,
+    0.012948897667229176,
+    -0.05414796993136406,
+    0.04095112159848213,
+    -0.05416755750775337,
+    0.053396113216876984,
+    0.04932084307074547,
+    -0.02328592911362648,
+    0.05048049986362457,
+    -0.046660441905260086,
+    0.043523624539375305,
+    0.023458417505025864,
+    -0.0342654250562191,
+    0.00962919369339943,
+    -0.040162343531847,
+    -0.052956175059080124,
+    0.028702057898044586,
+    0.05370552837848663,
+    -0.03220076113939285,
+    0.04540496692061424,
+    0.055600859224796295,
+    0.0533839650452137,
+    0.036556702107191086,
+    0.010503551922738552,
+    -0.05492711439728737,
+    -0.045457787811756134,
+    -0.053911689668893814,
+    -0.05403100326657295,
+    -0.05552064627408981,
+    -0.05106493458151817,
+    -0.055041953921318054,
+    -0.053939610719680786,
+    0.04697030782699585,
+    -0.011176404543220997,
+    0.02360832877457142,
+    -0.033647555857896805,
+    0.046468451619148254,
+    -0.0014189055655151606,
+    0.0489744134247303,
+    0.05543852224946022,
+    0.04906408488750458,
+    0.03241999074816704,
+    0.05337177962064743,
+    -0.04971732571721077,
+    0.054634448140859604,
+    -0.04224039986729622,
+    -0.05560275912284851,
+    -0.04699316248297691,
+    0.03981349244713783,
+    0.04304494336247444,
+    0.045324742794036865,
+    0.04588353633880615,
+    0.052525635808706284,
+    -0.054606322199106216,
+    -0.05016668513417244,
+    0.03783315420150757,
+    0.04035795107483864,
+    0.002851573284715414,
+    0.011626111343502998,
+    -0.05187598988413811,
+    0.03443377465009689,
+    0.03733367472887039,
+    0.030356628820300102,
+    -0.05226485803723335,
+    0.015385277569293976,
+    0.05182741954922676,
+    -0.012898251414299011,
+    0.04090767353773117,
+    0.051678530871868134,
+    -0.051909804344177246,
+    0.05100033059716225,
+    0.05444394797086716,
+    -0.02479380927979946,
+    0.04716501384973526,
+    -0.05530091002583504,
+    -0.05559482052922249,
+    0.055167343467473984,
+    -0.04775957390666008,
+    -0.0516183003783226,
+    0.05520130321383476,
+    0.05001925677061081,
+    0.015296263620257378,
+    0.05559031292796135,
+    0.054290805011987686,
+    0.029913567006587982,
+    -0.05537162721157074,
+    -0.04382011294364929,
+    -0.055146098136901855,
+    0.0026602030266076326,
+    0.03593200445175171,
+    -0.01937735453248024,
+    0.040491268038749695,
+    -0.05401737242937088,
+    -0.028346290811896324,
+    0.05548136681318283,
+    0.026085807010531425,
+    -0.04453535005450249,
+    0.049558840692043304,
+    -0.05391702800989151,
+    0.04795464500784874,
+    0.055471599102020264,
+    0.03343220800161362,
+    -0.023700887337327003,
+    -0.0004893260193057358,
+    0.03601159155368805,
+    -0.0102080674842,
+    0.010480440221726894,
+    0.05083173140883446,
+    0.03960765525698662,
+    -0.045669954270124435,
+    0.026033606380224228,
+    -0.017907582223415375,
+    0.03269676864147186,
+    0.03131438046693802,
+    -0.032121967524290085,
+    -0.05426288768649101,
+    0.012622056528925896,
+    0.0556037463247776,
+    0.0184433925896883,
+    0.002566153882071376,
+    -0.05000057816505432,
+    -0.05557502806186676,
+    0.05430769547820091,
+    -0.0008605935145169497,
+    0.05522908642888069,
+    0.04136780649423599,
+    -0.05529605597257614,
+    -0.05269971862435341,
+    0.05412919819355011,
+    -0.05333627015352249,
+    0.05555327236652374,
+    0.05542610213160515,
+    -0.0031510943081229925,
+    -0.05530596151947975,
+    -0.007778910454362631,
+    -0.0110126081854105,
+    -0.054834943264722824,
+    -0.0551137775182724,
+    0.02393385022878647,
+    0.023504886776208878,
+    0.046463094651699066,
+    0.009040514938533306,
+    -0.055444300174713135,
+    -0.04551290348172188,
+    -0.05423783138394356,
+    -0.032825399190187454,
+    0.031599801033735275,
+    -0.0554291307926178,
+    -0.03984817862510681,
+    0.04139501601457596,
+    -0.054327093064785004,
+    0.05065071955323219,
+    0.03835492208600044,
+    -0.04897315427660942,
+    0.0468185693025589,
+    -0.047763481736183167,
+    -0.025186752900481224,
+    0.026937196031212807,
+    -0.05559128150343895,
+    -0.023918043822050095,
+    0.05546179041266441,
+    0.04899337515234947,
+    -0.05559234693646431,
+    0.05385972559452057,
+    -0.012992915697395802,
+    0.04608007147908211,
+    -0.0388152115046978,
+    0.055198051035404205,
+    -0.03742542117834091,
+    -0.05547969788312912,
+    -0.05554497241973877,
+    -0.055101487785577774,
+    0.043760668486356735,
+    0.05560384318232536,
+    -0.048656709492206573,
+    -0.032690249383449554,
+    0.04120560362935066,
+    0.049378033727407455,
+    0.02057831734418869,
+    0.038917891681194305,
+    0.03920880705118179,
+    -0.015458241105079651,
+    -0.027137596160173416,
+    0.03321799263358116,
+    -0.0553976409137249,
+    -0.05249482020735741,
+    0.032792624086141586,
+    0.052698150277137756,
+    0.052075158804655075,
+    0.04923154413700104,
+    -0.0556001141667366,
+    -0.05509907752275467,
+    -0.040444448590278625,
+    0.0404062420129776,
+    0.04799361154437065,
+    0.008276675827801228,
+    -0.02131684310734272,
+    0.04844304174184799,
+    0.028021829202771187,
+    0.028528738766908646,
+    -0.039459872990846634,
+    -0.04684198647737503,
+    -0.05483056977391243,
+    -0.053668063133955,
+    -0.05342414975166321,
+    -0.055586859583854675,
+    0.05302223190665245,
+    -0.050482191145420074,
+    0.013058128766715527,
+    -0.05560113862156868,
+    0.009090956300497055,
+    0.029401367530226707,
+    0.05560034513473511,
+    0.05542406067252159,
+    -0.053935691714286804,
+    -0.023082047700881958,
+    -0.0029716631397604942,
+    0.05553240701556206,
+    -0.004943698178976774,
+    -0.008733658120036125,
+    0.04182549566030502,
+    0.055389393121004105,
+    0.023757239803671837,
+    0.005008467473089695,
+    0.053047191351652145,
+    0.05556577071547508,
+    -0.055602069944143295,
+    0.04809575527906418,
+    -0.05249354615807533,
+    0.050078388303518295,
+    0.05519169196486473,
+    -0.055600497871637344,
+    -0.026339711621403694,
+    0.05560384318232536,
+    -0.054744165390729904,
+    -0.03784835338592529,
+    -0.016578057780861855,
+    0.034771472215652466,
+    -0.047986287623643875,
+    0.03159843012690544,
+    -0.021244358271360397,
+    0.020523959770798683,
+    0.011184542439877987,
+    0.04982835054397583,
+    -0.05559305101633072,
+    0.0554872527718544,
+    -0.05529150366783142,
+    0.030066490173339844,
+    -0.05495994910597801,
+    0.024930456653237343,
+    0.05554303899407387,
+    -0.003811584785580635,
+    -0.037900760769844055,
+    0.05503753945231438,
+    0.055602267384529114,
+    -0.01393905933946371,
+    -0.04565512388944626,
+    0.01475755125284195,
+    0.0518781840801239,
+    0.05461176857352257,
+    -0.026227762922644615,
+    -0.05094063654541969,
+    0.045006994158029556,
+    0.05556424707174301,
+    -0.012696009129285812,
+    0.054809920489788055,
+    -0.041783951222896576,
+    0.0404452420771122,
+    0.055598385632038116,
+    -0.05519133433699608,
+    -0.019888456910848618,
+    -0.050586387515068054,
+    0.023133084177970886,
+    -0.04919016733765602,
+    0.005720219109207392,
+    0.052585795521736145,
+    0.0458979532122612,
+    -0.015226378105580807,
+    0.02028501220047474,
+    -0.046611230820417404,
+    0.05422549694776535,
+    -0.03995431214570999,
+    0.054380785673856735,
+    -0.04886947572231293,
+    0.040539756417274475,
+    0.02525402046740055,
+    0.027556879445910454,
+    0.03566357493400574,
+    0.050230722874403,
+    0.015478421002626419,
+    0.05484577640891075,
+    -0.055602654814720154,
+    0.040184903889894485,
+    -0.05540352687239647,
+    -0.047332558780908585,
+    -0.04328812658786774,
+    0.05454717203974724,
+    -0.04919564723968506,
+    0.05235300958156586,
+    -0.0440044142305851,
+    0.010001887567341328,
+    -0.007288635708391666,
+    0.051095567643642426,
+    -0.01573689468204975,
+    0.05456501618027687,
+    -0.039817292243242264,
+    -0.014304663985967636,
+    -0.05509135499596596,
+    0.04256170988082886,
+    0.05556758493185043,
+    0.03755442798137665,
+    0.04809097573161125,
+    0.055556993931531906,
+    0.055590610951185226,
+    0.05195804312825203,
+    0.04723118245601654,
+    -0.03692800924181938,
+    -0.05551780387759209,
+    -0.051234614104032516,
+    -0.05375545099377632,
+    -0.055603813380002975,
+    -0.04448322579264641,
+    -0.04439263045787811,
+    -0.02314639650285244,
+    0.023113613948225975,
+    0.026346025988459587,
+    0.03686835616827011,
+    0.05193234607577324,
+    -0.055374663323163986,
+    0.05450056865811348,
+    0.055125582963228226,
+    -0.048999883234500885,
+    -0.05560288578271866,
+    0.05100336670875549,
+    0.006188598927110434,
+    0.055315643548965454,
+    0.05356008559465408,
+    -0.055398158729076385,
+    -0.05560119450092316,
+    0.05422661453485489,
+    -0.054512642323970795,
+    0.05219157040119171,
+    -0.0019912957213819027,
+    -0.054596755653619766,
+    0.05194880813360214,
+    -0.04977165162563324,
+    0.015203532762825489,
+    -0.03294356167316437,
+    -0.0514116995036602,
+    0.054033029824495316,
+    0.039839934557676315,
+    0.048638902604579926,
+    0.0014500123215839267,
+    -0.05513502284884453,
+    -0.011304354295134544,
+    -0.044657666236162186,
+    -0.03729087859392166,
+    0.05008821561932564,
+    -0.04750249162316322,
+    0.032808009535074234,
+    0.05496019870042801,
+    -0.047133613377809525,
+    0.05047624185681343,
+    0.013128099031746387,
+    0.03895966336131096,
+    -0.05543601140379906,
+    0.021037600934505463,
+    -0.055588606745004654,
+    0.055540021508932114,
+    0.055603206157684326,
+    -0.053593698889017105,
+    0.0517449788749218,
+    -0.033874936401844025,
+    0.05111807957291603,
+    0.03993706405162811,
+    -0.00032445366377942264,
+    0.05186161398887634,
+    0.05554080381989479,
+    -0.055488914251327515,
+    0.0544942282140255,
+    -0.047679003328084946,
+    -0.05419514700770378,
+    -0.05556135252118111,
+    -0.04459242895245552,
+    0.05447988212108612,
+    0.048089876770973206,
+    0.037368692457675934,
+    0.047373466193675995,
+    -0.051622189581394196,
+    -0.0009517654543742537,
+    -0.04185766726732254,
+    0.014719448983669281,
+    0.05349865183234215,
+    -0.05504763498902321,
+    0.04526420310139656,
+    -0.012388507835566998,
+    -0.055398739874362946,
+    -0.04862944409251213,
+    -0.05364932492375374,
+    0.05429055169224739,
+    -0.019506962969899178,
+    0.051118768751621246,
+    -0.054834168404340744,
+    0.05548008158802986,
+    -0.05367496982216835,
+    0.0039222403429448605,
+    -0.0447198860347271,
+    0.04463556781411171,
+    -0.031311649829149246,
+    0.04406452178955078,
+    -0.055527254939079285,
+    -0.05552531033754349,
+    -0.05492541939020157,
+    -0.055589351803064346,
+    -0.05419611558318138,
+    -0.03747759759426117,
+    -0.03579622134566307,
+    -0.04353383556008339,
+    -0.03678014501929283,
+    0.031195955350995064,
+    0.026057593524456024,
+    -0.05471488833427429,
+    -0.05384444817900658,
+    0.008510857820510864,
+    -0.053538985550403595,
+    -0.05295797437429428,
+    -0.04121554270386696,
+    -0.028009705245494843,
+    0.05544041842222214,
+    0.055329933762550354,
+    0.014405453577637672,
+    -0.05557399243116379,
+    -0.0354248471558094,
+    0.05531105771660805,
+    0.007976630702614784,
+    -0.046424079686403275,
+    -0.02547740377485752,
+    0.045236773788928986,
+    0.05499686300754547,
+    0.054170720279216766,
+    -0.04730808362364769,
+    -0.04694559797644615,
+    0.055433448404073715,
+    0.012025373056530952,
+    -0.0038217054679989815,
+    0.05560380965471268,
+    0.026436079293489456,
+    -0.021933281794190407,
+    0.039404962211847305,
+    -0.0026921508833765984,
+    -0.04681450501084328,
+    0.05086646229028702,
+    0.0550617091357708,
+    0.05388567969202995,
+    0.03306744620203972,
+    -0.036107610911130905,
+    -0.05402221903204918,
+    0.052694790065288544,
+    -0.05175605043768883,
+    -0.05412599816918373,
+    0.05364901199936867,
+    -0.02922832779586315,
+    0.043139830231666565,
+    -0.011231287382543087,
+    -0.051437702029943466,
+    0.055525679141283035,
+    -0.04750092327594757,
+    0.0525619238615036,
+    0.04605729877948761,
+    0.0345960408449173,
+    -0.0509125180542469,
+    0.05508427321910858,
+    0.05194883048534393,
+    0.05484839901328087,
+    -0.054280441254377365,
+    0.05367433652281761,
+    -0.03728394955396652,
+    -0.019573982805013657,
+    0.055122677236795425,
+    -0.05560176447033882,
+    0.024048341438174248,
+    0.022111985832452774,
+    0.04395832493901253,
+    -0.05174540728330612,
+    -0.02110196091234684,
+    0.05560304597020149,
+    -0.055186472833156586,
+    -0.0019661900587379932
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs email automation; When working with: Gmail Trigger, When clicking ‘Test workflow’; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for email automation in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

@@ -1,0 +1,930 @@
+{
+  "name": "análise de licitação",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2192,
+        208
+      ],
+      "id": "3fb3c31a-be83-4d98-9e1e-7daada001a40",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-pro",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        768,
+        736
+      ],
+      "id": "298a3a87-efc1-4b7c-942f-96af9f084ebd",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "QzGJPvEbYe5VjIn8",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"lote_processado_id\": \"LOTE-20250819-001\",\n  \"resumo_lote\": {\n    \"total_recebido\": 3,\n    \"total_fit\": 2,\n    \"total_nao_fit\": 1\n  },\n  \"resultados_analise\": [\n    {\n      \"id_licitacao\": \"46587275000174-1-000567/2025\",\n      \"analise_resultado\": {\n        \"is_fit\": true,\n        \"justificativa\": \"Desenvolvimento direto. O objeto descreve claramente a necessidade de um 'sistema de ensino' com componentes 'digitais'. O valor é muito significativo.\",\n        \"classificacao\": {\n          \"prioridade\": \"P1 (Alta)\",\n          \"modalidade\": \"Concorrência - Presencial\",\n          \"Valor\": \"548.021,00\",\n          \"Objeto da compra\": \"texto\",\n          \"Ano de compra\": \"ano\",\n          \"Data da Inclusão\": \"15/05/2025\",\n          \"Data Publicação PNCP\": \"20/05/2025\",\n          \"Abertura da Proposta\": \"25/05/2025\",\n          \"Encerramento da proposta\": \"30/11/2025\",\n          \"tipo_oportunidade\": \"Desenvolvimento Direto\"\n        }\n      }\n    },\n    {\n      \"id_licitacao\": \"83334672000160-1-000012/2025\",\n      \"analise_resultado\": {\n        \"is_fit\": false,\n        \"justificativa\": \"Falso positivo. A palavra-chave 'plataforma' refere-se ao sistema de licitações do governo, não a um produto a ser desenvolvido. O objeto é obra de engenharia.\",\n        \"classificacao\": null\n      }\n    },\n    {\n      \"id_licitacao\": \"31844889000117-1-000123/2025\",\n      \"analise_resultado\": {\n        \"is_fit\": true,\n        \"justificativa\": \"Oportunidade indireta. Contratos de publicidade com alto valor invariavelmente necessitam de peças digitais (hotsites, landing pages). Representa uma oportunidade para atuar em parceria com a agência vencedora.\",\n        \"classificacao\": {\n          \"prioridade\": \"P2 (Média)\",\n          \"tipo_oportunidade\": \"Oportunidade Indireta\"\n        }\n      }\n    }\n  ]\n}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.3,
+      "position": [
+        1280,
+        736
+      ],
+      "id": "ad390390-ffc1-4ee6-b611-0a017be18118",
+      "name": "Structured Output Parser"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.data }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=1. Papel e Meta Principal\n\nVocê é um Analista Qualificador Sênior de Oportunidades GovTech, o último e mais importante filtro em um sistema de prospecção automatizado. Sua única meta é realizar a análise final e decisiva sobre licitações pré-filtradas, determinando com altíssima precisão se elas representam uma oportunidade de negócio real para uma agência de desenvolvimento web e qual seu nível de prioridade.\n\nVocê não é um simples filtro de palavras-chave; você é um especialista em interpretação de contexto e estratégia de negócios.\n\n2. Contexto de Entrada\n\nVocê receberá um texto formatado contendo os dados de uma única licitação que já passou por um filtro inicial baseado em palavras-chave. Sua tarefa é ir além dessa triagem inicial e fazer a validação final.\n\n3. Modelo de Negócio (Seus Critérios de \"Fit\")\n\nUma oportunidade é considerada um \"fit\" se ela se alinhar com um dos seguintes serviços:\n\nDesenvolvimento Direto: Criação ou redesenho de sites, portais, plataformas web, sistemas online, intranets.\n\nContratos de Manutenção: Serviços contínuos de atualização, suporte e evolução de sites ou sistemas existentes.\n\nOportunidades Indiretas: Contratos de comunicação digital, publicidade ou propaganda que, implicitamente, exigirão a criação de ativos digitais (hotsites, landing pages, etc.).\n\n4. Critérios de Priorização (Como Classificar o Valor)\n\nVocê deve classificar cada oportunidade real em um dos três níveis:\n\nPrioridade Alta (P1):\n\nDescrição: Projetos de desenvolvimento direto (criação/redesenho de um portal, plataforma, etc.).\n\nCaracterísticas: O escopo é claro, o objeto da licitação é explicitamente sobre desenvolvimento web e o valor estimado é significativo (geralmente acima de R$ 150.000). Esta é uma oportunidade \"pão com manteiga\" que deve ser atacada imediatamente.\n\nPrioridade Média (P2):\n\nDescrição: Contratos de manutenção, projetos de menor escopo ou oportunidades indiretas.\n\nCaracterísticas: O valor é moderado, ou o trabalho principal é recorrente (manutenção), ou a oportunidade virá através de uma parceria (ex: fornecer o desenvolvimento para uma agência de publicidade que ganhar a licitação). São oportunidades valiosas, mas não com a mesma urgência da P1.\n\nPrioridade Baixa (P3):\n\nDescrição: Oportunidades com escopo muito incerto ou valor muito baixo.\n\nCaracterísticas: O objeto é vago (ex: \"serviços de informática\"), o valor é baixo (ex: < R$ 20.000), ou exigiria uma investigação muito profunda para entender se há um \"fit\". A equipe deve olhar, mas sem gastar muito tempo.\n\n\nÉ importante vc coletar os dados:\nObjeto da compra: {{ $json.data[1].objetoCompra }},\nAno de compra: {{ $json.data[0].anoCompra }},\nData da Inclusão: {{ $json.data[0].dataInclusao }},\nData Publicação PNCP: {{ $json.data[0].dataPublicacaoPncp }},\nAbertura da Proposta:{{ $json.data[0].dataAberturaProposta }},\nEncerramento da proposta: {{ $json.data[0].dataEncerramentoProposta }},\nModalidade: {{ $json.data[1].modalidadeNome }},\nValor: {{ $json.data[1].valorTotalEstimado }}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.1,
+      "position": [
+        912,
+        208
+      ],
+      "id": "121e3826-0045-4d25-9073-02fa9a5e8858",
+      "name": "🧠 Analisador de Oportunidades"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Este código gera as datas de início e fim para a nossa busca na API.\n// Ele foi ajustado para uma execução SEMANAL, buscando os últimos 8 dias\n// para criar uma sobreposição segura e garantir que nenhuma licitação seja perdida.\n\n// Função auxiliar para formatar uma data no formato YYYYMMDD, exigido pela API.\nfunction formatarData(data) {\n  const ano = data.getFullYear();\n  // getMonth() retorna de 0 a 11, então somamos 1.\n  // padStart garante que o mês e o dia tenham sempre dois dígitos (ex: 08).\n  const mes = String(data.getMonth() + 1).padStart(2, '0');\n  const dia = String(data.getDate()).padStart(2, '0');\n  \n  return `${ano}${mes}${dia}`;\n}\n\n// Pega a data de hoje para ser a nossa data final.\nconst dataFinal = new Date();\n\n// Cria uma nova data e ajusta para 8 dias no passado (para a busca semanal).\nconst dataInicial = new Date();\ndataInicial.setDate(dataFinal.getDate() - 8);\n\n// Formata as duas datas no padrão correto.\nconst dataInicialFormatada = formatarData(dataInicial);\nconst dataFinalFormatada = formatarData(dataFinal);\n\n// Retorna os dados no formato que o n8n espera.\n// O próximo nó poderá acessar esses valores como 'dataInicial' e 'dataFinal'.\nreturn [{\n  json: {\n    dataInicial: dataInicialFormatada,\n    dataFinal: dataFinalFormatada\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -1712,
+        208
+      ],
+      "id": "5c423ee7-9c08-4001-9835-41212142e510",
+      "name": "📆 Calcula Intervalo de Datas1"
+    },
+    {
+      "parameters": {
+        "url": "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "dataInicial",
+              "value": "={{ $json.dataInicial }}"
+            },
+            {
+              "name": "dataFinal",
+              "value": "={{ $json.dataFinal }}"
+            },
+            {
+              "name": "codigoModalidadeContratacao",
+              "value": "5"
+            },
+            {
+              "name": "codigoModoDisputa",
+              "value": "1"
+            },
+            {
+              "name": "pagina",
+              "value": "1"
+            },
+            {
+              "name": "tamanhoPagina",
+              "value": "50"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -1280,
+        208
+      ],
+      "id": "2f3917fe-1045-4d49-b74e-222171e1d797",
+      "name": "📡 1ª Chamada – Meta-dados"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Este código recebe a resposta da PRIMEIRA chamada da API\n// e cria uma lista com todos os números de página que precisam ser buscados.\n\n// A resposta do primeiro nó 'HTTP Request' chega em 'items[0]'.\nconst primeiraResposta = items[0].json;\n\n// Pega o número total de páginas da resposta.\nconst totalDePaginas = primeiraResposta.totalPaginas;\n\n// Array que vai guardar os itens para o loop.\nconst paginasParaBuscar = [];\n\n// Verifica se existe mais de uma página para buscar.\nif (totalDePaginas > 0) {\n  // Cria um loop que vai de 1 até o número total de páginas.\n  for (let i = 1; i <= totalDePaginas; i++) {\n    // Para cada número, cria um objeto com a propriedade 'pagina'.\n    // O próximo nó no n8n poderá acessar esse valor como 'json.pagina'.\n    paginasParaBuscar.push({\n      json: {\n        pagina: i\n      }\n    });\n  }\n}\n\n// Retorna a lista completa de páginas. O n8n vai executar os próximos\n// nós uma vez para cada item desta lista.\nreturn paginasParaBuscar;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -832,
+        208
+      ],
+      "id": "6b730a13-5500-4dea-af9a-1f9250892cf1",
+      "name": "🔄 Gera Loop de Páginas"
+    },
+    {
+      "parameters": {
+        "jsCode": "// =================================================================\n// Versão Otimizada do Filtro de Licitações\n// Agora compatível com múltiplas entradas no n8n\n// =================================================================\n\n// 1. Palavras-Chave de Inclusão (Alta Confiança)\nconst palavrasChaveInclusao = [\n  'portal', 'website', 'hotsite', 'desenvolvimento web', 'intranet',\n  'comunicação digital', 'comunicação institucional', 'marketing digital', \n  'agência de publicidade', 'agência de propaganda', 'serviços de publicidade',\n  'solução web', 'aplicativo', 'redesenho de site', 'produção de audiovisual'\n];\n\n// 2. Palavras-Chave Ambíguas (Precisam de verificação de contexto)\nconst palavrasChaveAmbiguas = ['plataforma', 'sistema', 'manutenção'];\n\n// 3. Padrões de Exclusão\nconst padroesExclusao = {\n  plataforma: ['concreto', 'metálica', 'elevatória', 'obra', 'engenharia', 'construção', 'estrutural'],\n  sistema: [\n    'irrigação', 'segurança', 'cftv', 'ar condicionado', 'elétrico', 'hidráulico', 'pavimentação', 'viário',\n    'compras.gov', 'pncp', 'comprasnet',\n    'transporte público', 'mobilidade urbana', 'transporte coletivo'\n  ],\n  manutenção: ['predial', 'veículos', 'equipamentos', 'ar condicionado', 'estradas', 'rodovias', 'prédio', 'edifício']\n};\n\nconst licitacoesFiltradas = [];\n\n// 🔄 Agora percorre TODOS os items de entrada\nfor (const item of items) {\n  const todasLicitacoes = item.json.data;\n\n  if (todasLicitacoes && todasLicitacoes.length > 0) {\n    for (const licitacao of todasLicitacoes) {\n      const textoParaAnalisar = (\n        licitacao.objetoCompra + ' ' + \n        (licitacao.informacaoComplementar || '') + ' ' +\n        (licitacao.justificativaPresencial || '')\n      ).toLowerCase();\n      \n      let encontrou = false;\n      let motivo = ''; \n\n      // 1. Palavras de alta confiança\n      const palavraInclusaoEncontrada = palavrasChaveInclusao.find(palavra => textoParaAnalisar.includes(palavra));\n      if (palavraInclusaoEncontrada) {\n        encontrou = true;\n        motivo = `Inclusão Direta: '${palavraInclusaoEncontrada}'`;\n      }\n\n      // 2. Ambíguas com contexto\n      if (!encontrou) {\n        for (const palavraAmbigua of palavrasChaveAmbiguas) {\n          if (textoParaAnalisar.includes(palavraAmbigua)) {\n            const exclusoes = padroesExclusao[palavraAmbigua];\n            if (!exclusoes.some(ex => textoParaAnalisar.includes(ex))) {\n              encontrou = true;\n              motivo = `Inclusão por Contexto: '${palavraAmbigua}'`;\n              break;\n            }\n          }\n        }\n      }\n      \n      // 3. Se passou pelo filtro, adiciona no retorno\n      if (encontrou) {\n        licitacao.motivoFiltro = motivo;\n        licitacoesFiltradas.push({ json: licitacao });\n      }\n    }\n  }\n}\n\nreturn licitacoesFiltradas;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        208
+      ],
+      "id": "7e50965c-f929-4321-9a80-77281a65f44c",
+      "name": "🎯 Filtro GovTech",
+      "executeOnce": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "aggregate": "aggregateAllItemData",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        432,
+        208
+      ],
+      "id": "44d384c7-e798-489f-866a-7228b29555ee",
+      "name": "📦 Agrega Licitações1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// =================================================================\n// ETAPA FINAL: ENCONTRAR O CAMINHO PARA O EDITAL (VERSÃO OTIMIZADA)\n// Este código usa a estrutura de URL descoberta para criar um link direto\n// para a página do edital no portal do PNCP.\n// =================================================================\n\n// A lista de licitações pré-filtradas chega em 'items'.\nconst oportunidades = items;\nconst resultadosFinais = [];\n\nfor (const item of oportunidades) {\n  const licitacao = item.json;\n  \n  let linkFinal = '';\n\n  // --- NOVA ESTRATÉGIA: CONSTRUÇÃO DE URL DIRETA ---\n\n  // 1. TENTATIVA 1: O \"Link Direto PNCP\" (Método Preferencial)\n  // Tenta extrair os dados do 'numeroControlePNCP' para montar a URL.\n  // Exemplo de ID: 07782840000100-1-000144/2025\n  try {\n    const numeroControle = licitacao.numeroControle;\n    const partesPrincipais = numeroControle.split('/');\n    const ano = partesPrincipais[1];\n    \n    const partesID = partesPrincipais[0].split('-');\n    const cnpj = partesID[0];\n    // Remove os zeros à esquerda do sequencial (ex: '000144' vira '144')\n    const sequencial = parseInt(partesID[2], 10);\n\n    // Se todas as partes foram encontradas, monta a URL direta.\n    if (cnpj && ano && sequencial) {\n      linkFinal = `https://pncp.gov.br/app/editais/${cnpj}/${ano}/${sequencial}`;\n    }\n  } catch (error) {\n    // Se a estrutura do ID for inesperada, o linkFinal continuará vazio.\n    // O código então passará para as tentativas de fallback.\n    console.log(`Não foi possível parsear o ID: ${licitacao.numeroControle}`);\n  }\n\n\n  // 2. TENTATIVA 2: O \"Link de Ouro\" (Fallback)\n  // Se a construção da URL direta falhar, tenta usar o link já fornecido.\n  if (!linkFinal) {\n    const linkDiretoDoFiltro = licitacao.linkEdital;\n    if (linkDiretoDoFiltro && linkDiretoDoFiltro.startsWith('http') && !linkDiretoDoFiltro.includes('google.com')) {\n      linkFinal = linkDiretoDoFiltro;\n    }\n  }\n  \n  // 3. TENTATIVA 3: A \"Busca Inteligente\" (Último Recurso)\n  // Se tudo mais falhar, constrói a busca no Google.\n  if (!linkFinal) {\n    const orgao = licitacao.orgao;\n    const processo = licitacao.numeroControle;\n    const query = encodeURIComponent(`edital licitação pncp \"${processo}\" \"${orgao}\"`);\n    linkFinal = `https://www.google.com/search?q=${query}`;\n  }\n  \n  // Adiciona o link final ao objeto da licitação.\n  resultadosFinais.push({\n    json: {\n      ...licitacao, // Mantém todos os dados da licitação que já tínhamos\n      linkParaEdital: linkFinal\n    }\n  });\n}\n\n// Retorna a lista de oportunidades enriquecida com o link para o edital.\nreturn resultadosFinais;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1584,
+        208
+      ],
+      "id": "c6cd5e45-fa7b-4a1a-b8d3-9306506e1443",
+      "name": "🚪 Enriquece com Link do Edital"
+    },
+    {
+      "parameters": {
+        "url": "https://pncp.gov.br/api/consulta/v1/contratacoes/publicacao",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "dataInicial",
+              "value": "={{ $('📆 Calcula Intervalo de Datas1').first().json.dataInicial }}"
+            },
+            {
+              "name": "dataFinal",
+              "value": "={{ $('📆 Calcula Intervalo de Datas1').first().json.dataFinal }}"
+            },
+            {
+              "name": "codigoModalidadeContratacao",
+              "value": "5"
+            },
+            {
+              "name": "codigoModoDisputa",
+              "value": "1"
+            },
+            {
+              "name": "pagina",
+              "value": "={{ $json.pagina }}"
+            },
+            {
+              "name": "tamanhoPagina",
+              "value": "50"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -400,
+        208
+      ],
+      "id": "2e47f844-1af1-4655-a95c-21e070540970",
+      "name": "📡 2ª Chamada – Busca Detalhada",
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "content": "## Visão Geral do Fluxo de Trabalho\n\nEste fluxo de trabalho automatiza a prospecção de licitações GovTech, filtrando oportunidades relevantes e enriquecendo-as com links para os editais. Ele opera em várias etapas:\n\n1.  **Geração de Datas**: Calcula o intervalo de datas para a busca na API.\n2.  **Chamada de Metadados**: Realiza a primeira chamada à API para obter metadados das licitações.\n3.  **Geração de Loop de Páginas**: Prepara os dados para iterar por todas as páginas de resultados.\n4.  **Busca Detalhada**: Realiza chamadas detalhadas para cada página de licitações.\n5.  **Filtro GovTech**: Aplica um filtro inteligente para identificar licitações relevantes.\n6.  **Agregação**: Consolida os dados das licitações filtradas.\n7.  **Análise de Oportunidades**: Utiliza um modelo de IA para qualificar as oportunidades.\n8.  **Enriquecimento de Link**: Adiciona o link direto para o edital de cada licitação.",
+        "height": 656,
+        "width": 508
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "name": "Visão Geral do Fluxo",
+      "position": [
+        -2384,
+        -256
+      ],
+      "id": "generated-1eff21c8-eebc-432d-9202-e72c01421cf8"
+    },
+    {
+      "parameters": {
+        "content": "## 📆 Calcula Intervalo de Datas\n\nEste nó `Code` gera as datas de início e fim para a busca na API do PNCP. Ele calcula um intervalo de 8 dias retroativos a partir da data atual, garantindo uma sobreposição segura para não perder nenhuma licitação em execuções semanais. As datas são formatadas como YYYYMMDD.",
+        "height": 420,
+        "width": 380,
+        "color": 5
+      },
+      "name": "Nota: Calcula Intervalo de Datas1",
+      "position": [
+        -1840,
+        -16
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "id": "generated-1232365c-46f8-487f-a4b4-9ce0e8540b6c"
+    },
+    {
+      "parameters": {
+        "content": "## 📡 1ª Chamada – Meta-dados\n\nEste nó `HTTP Request` faz a primeira chamada à API do PNCP para obter os metadados das licitações. Ele usa as datas geradas pelo nó anterior e define parâmetros como modalidade de contratação (Pregão Eletrônico), modo de disputa (Aberto) e tamanho da página. O objetivo é descobrir o número total de páginas de resultados.",
+        "height": 424,
+        "width": 400,
+        "color": 5
+      },
+      "name": "Nota: 1ª Chamada – Meta-dados",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -1424,
+        -16
+      ],
+      "id": "generated-ef979a39-92f9-4b49-ac88-b5051df33d82"
+    },
+    {
+      "parameters": {
+        "content": "## 🔄 Gera Loop de Páginas\n\nEste nó `Code` processa a resposta da primeira chamada da API. Ele extrai o `totalPaginas` e cria uma lista de itens, onde cada item representa um número de página. Isso permite que os nós subsequentes iterem por todas as páginas de resultados da API, buscando os detalhes de cada licitação.",
+        "height": 420,
+        "width": 400,
+        "color": 5
+      },
+      "position": [
+        -992,
+        -16
+      ],
+      "name": "Nota: Gera Loop de Páginas",
+      "type": "n8n-nodes-base.stickyNote",
+      "id": "generated-6bb75b57-78a5-46ef-bea6-eb70859a8057"
+    },
+    {
+      "parameters": {
+        "content": "## 📡 2ª Chamada – Busca Detalhada\n\nEste nó `HTTP Request` é executado em um loop para cada página de resultados identificada pelo nó 'Gera Loop de Páginas'. Ele faz chamadas detalhadas à API do PNCP, buscando as licitações de cada página. Os dados de `dataInicial`, `dataFinal` e `pagina` são passados dinamicamente.",
+        "height": 420,
+        "width": 400,
+        "color": 5
+      },
+      "name": "Nota: 2ª Chamada – Busca Detalhada",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -560,
+        -16
+      ],
+      "id": "generated-f5e226bc-0c5a-4923-badf-3c34e231c187"
+    },
+    {
+      "parameters": {
+        "content": "## 🎯 Filtro GovTech\n\nEste nó `Code` aplica um filtro inteligente às licitações recebidas. Ele utiliza listas de palavras-chave de inclusão (alta confiança) e ambíguas, além de padrões de exclusão, para determinar se uma licitação é relevante para o segmento GovTech. Licitações que passam pelo filtro são marcadas com um `motivoFiltro`.",
+        "height": 424,
+        "width": 400,
+        "color": 5
+      },
+      "position": [
+        -144,
+        -16
+      ],
+      "name": "Nota: Filtro GovTech",
+      "type": "n8n-nodes-base.stickyNote",
+      "id": "generated-e28611ab-3f78-4eaa-942d-5d3f34f01c37"
+    },
+    {
+      "parameters": {
+        "content": "## 📦 Agrega Licitações\n\nEste nó `Aggregate` consolida todos os itens de licitação que passaram pelo filtro. Ele coleta os dados de todas as licitações filtradas em um único item, sob o campo `data`. Isso é crucial para que o nó de análise de IA possa processar um lote completo de oportunidades de uma vez.",
+        "height": 432,
+        "width": 400,
+        "color": 5
+      },
+      "position": [
+        272,
+        -16
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "name": "Nota: Agrega Licitações1",
+      "id": "generated-5885d95f-1b66-41ce-838a-802b5698c72f"
+    },
+    {
+      "parameters": {
+        "content": "## 🧠 Analisador de Oportunidades\n\nEste nó `AI Agent` é o coração da análise. Ele utiliza um modelo de linguagem (Google Gemini) e um `Structured Output Parser` para qualificar as licitações agregadas. O agente atua como um 'Analista Qualificador Sênior de Oportunidades GovTech', determinando se cada licitação é um 'fit' e atribuindo uma prioridade (P1, P2, P3) com base em critérios de desenvolvimento direto, manutenção ou oportunidades indiretas. O `systemMessage` detalha o papel e os critérios de análise do agente.",
+        "height": 424,
+        "width": 672,
+        "color": 4
+      },
+      "name": "Nota: Analisador de Oportunidades",
+      "position": [
+        688,
+        -16
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "id": "generated-af781cd3-a21a-4fde-bbfd-5b0cd50317f4"
+    },
+    {
+      "parameters": {
+        "content": "## Google Gemini Chat Model\n\nEste nó configura o modelo de chat do Google Gemini, que é utilizado pelo nó 'Analisador de Oportunidades' para realizar a análise de texto das licitações. Ele especifica o modelo (`models/gemini-2.5-pro`) e as credenciais de acesso à API do Google Gemini (PaLM).",
+        "height": 416,
+        "width": 416,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "name": "Nota: Google Gemini Chat Model",
+      "position": [
+        624,
+        480
+      ],
+      "id": "generated-8ea32de7-d189-4509-acf6-efe979c8ceb0"
+    },
+    {
+      "parameters": {
+        "content": "## Structured Output Parser\n\nEste nó `Output Parser` define a estrutura de saída esperada do modelo de IA. Ele garante que a resposta do Gemini seja formatada em um JSON específico, contendo informações como `lote_processado_id`, `resumo_lote` e `resultados_analise` para cada licitação, incluindo `is_fit`, `justificativa` e `classificacao` (prioridade e tipo de oportunidade).",
+        "height": 424,
+        "width": 464,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "name": "Nota: Structured Output Parser",
+      "position": [
+        1072,
+        480
+      ],
+      "id": "generated-013ae798-f429-437d-acb6-a5c26b4c1da8"
+    },
+    {
+      "parameters": {
+        "content": "## 🚪 Enriquece com Link do Edital\n\nEste nó `Code` é a etapa final, responsável por adicionar o link direto para o edital de cada licitação qualificada. Ele tenta construir a URL diretamente a partir do `numeroControlePNCP`, usa um link já fornecido como fallback, e, como último recurso, gera uma busca no Google para encontrar o edital. O objetivo é fornecer acesso rápido ao documento original da licitação.",
+        "height": 428,
+        "width": 496,
+        "color": 5
+      },
+      "name": "Nota: Enriquece com Link do Edital",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1376,
+        -16
+      ],
+      "id": "generated-81f50acc-0b83-4186-8fe4-28894b577466"
+    },
+    {
+      "parameters": {
+        "batchSize": "=1",
+        "options": {
+          "reset": false
+        }
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2448,
+        208
+      ],
+      "id": "b6e6be38-6ee1-4a85-bc9f-6cd5877b5fef",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output.resultados_analise",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        2016,
+        208
+      ],
+      "id": "95a811be-4529-4aa3-b5e5-64f96ed15ff8",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "11Zb_V2CLg2TF25dZVTOjxYrFvCDlrsqw8eAU99wk0ZQ",
+          "mode": "list",
+          "cachedResultName": "Busca Licitação",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11Zb_V2CLg2TF25dZVTOjxYrFvCDlrsqw8eAU99wk0ZQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11Zb_V2CLg2TF25dZVTOjxYrFvCDlrsqw8eAU99wk0ZQ/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id_licitação": "={{ $('Loop Over Items').item.json.id_licitacao }}",
+            "prioridade": "={{ $('Loop Over Items').item.json.analise_resultado.classificacao.prioridade }}",
+            "tipo": "={{ $('Loop Over Items').item.json.analise_resultado.classificacao.tipo_oportunidade }}",
+            "justificativa": "={{ $('Loop Over Items').item.json.analise_resultado.justificativa }}",
+            "Objeto": "={{ $('Loop Over Items').item.json.analise_resultado.classificacao[\"Objeto da compra\"] }}",
+            "Data inclusão": "={{ $json[\"Data Inclusão\"] }}",
+            "Publicação PNCP": "={{ $json[\"Data Publicação PNCP\"] }}",
+            "Abertura proposta": "={{ $json[\"Data Abertura\"] }}",
+            "Encerramento": "={{ $json[\"Data Encerramento\"] }}",
+            "valor": "={{ $json.Valor }}",
+            "modalidade": "={{ $('Loop Over Items').item.json.analise_resultado.classificacao.modalidade }}"
+          },
+          "matchingColumns": [
+            "id_licitação"
+          ],
+          "schema": [
+            {
+              "id": "id_licitação",
+              "displayName": "id_licitação",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "prioridade",
+              "displayName": "prioridade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "tipo",
+              "displayName": "tipo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "modalidade",
+              "displayName": "modalidade",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "valor",
+              "displayName": "valor",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Objeto",
+              "displayName": "Objeto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Data inclusão",
+              "displayName": "Data inclusão",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Publicação PNCP",
+              "displayName": "Publicação PNCP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Abertura proposta",
+              "displayName": "Abertura proposta",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Encerramento",
+              "displayName": "Encerramento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "justificativa",
+              "displayName": "justificativa",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.6,
+      "position": [
+        3456,
+        224
+      ],
+      "id": "ba3ce832-776d-46d1-bb4b-9d12f47b294b",
+      "name": "Append or update row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "xfooM1XN9uWBx5js",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3968,
+        224
+      ],
+      "id": "5b7d94f8-64c3-4cd2-a44d-d6d775703502",
+      "name": "Wait",
+      "webhookId": "1c3f7257-6dec-4650-963d-9fa94f331ddf"
+    },
+    {
+      "parameters": {
+        "content": "## Split Out\n\nEste nó `Split Out` é usado para dividir a saída do nó anterior (`🚪 Enriquece com Link do Edital`) em itens individuais. Ele extrai especificamente o array `output.resultados_analise`, criando um item separado para cada resultado de análise de licitação. Isso é essencial para processar cada licitação individualmente nos nós subsequentes.",
+        "height": 424,
+        "width": 400,
+        "color": 5
+      },
+      "name": "Nota: Split Out",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1888,
+        -16
+      ],
+      "id": "generated-c88661d8-8672-4be9-8f6d-9b9338ae7cc0"
+    },
+    {
+      "parameters": {
+        "content": "## Loop Over Items\n\nEste nó `Loop Over Items` (Split In Batches) processa os itens um por um, permitindo que as operações subsequentes, como a atualização da planilha e o tempo de espera, sejam executadas para cada licitação individualmente. O tamanho do lote é definido como 1 para garantir o processamento sequencial.",
+        "height": 424,
+        "width": 400,
+        "color": 5
+      },
+      "name": "Nota: Loop Over Items",
+      "position": [
+        2304,
+        -16
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "id": "generated-b3c918ac-135b-4323-a4f7-945c5ad82319"
+    },
+    {
+      "parameters": {
+        "content": "## Append or update row in sheet\n\nEste nó `Google Sheets` é responsável por adicionar ou atualizar uma linha na planilha do Google Sheets. Ele utiliza os dados de cada licitação processada (ID da licitação, prioridade, tipo e justificativa) para registrar as informações na planilha. O nó está configurado para usar o ID da licitação como a coluna de correspondência para atualizar entradas existentes ou adicionar novas.",
+        "height": 424,
+        "width": 512,
+        "color": 4
+      },
+      "name": "Nota: Append or update row in sheet",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3248,
+        -16
+      ],
+      "id": "generated-6e126f4c-8cea-4669-9e34-caafeac43ec1"
+    },
+    {
+      "parameters": {
+        "content": "## Wait\n\nEste nó `Wait` introduz um atraso de 5 segundos no fluxo de trabalho. Ele é crucial para evitar sobrecarregar a API do Google Sheets ou outras APIs, garantindo que as operações sejam executadas em um ritmo controlado e respeitando os limites de taxa de requisições.",
+        "height": 424,
+        "width": 480,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3776,
+        -16
+      ],
+      "name": "Nota: Wait",
+      "id": "generated-77a7586c-c7f1-48b7-b9e2-cd4d1da20570"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "859c111a-f419-4e8d-b4bb-40ddd4c5b6b8",
+              "name": "Valor",
+              "value": "={{ $json.analise_resultado.classificacao.Valor.toNumber().format('pt-BR', {'style': 'currency', 'currency': 'BRL'})}}",
+              "type": "string"
+            },
+            {
+              "id": "e217fe62-fd7a-4fe2-bc92-99a3ce261bfc",
+              "name": "Data Inclusão",
+              "value": "={{ $json.analise_resultado.classificacao[\"Data da Inclusão\"].toDateTime().toDateTime().format('dd-MM-yyyy') }}",
+              "type": "string"
+            },
+            {
+              "id": "d0a20be7-ec41-45e5-916d-3417ebad7592",
+              "name": "Data Publicação PNCP",
+              "value": "={{ $json.analise_resultado.classificacao[\"Data Publicação PNCP\"].toDateTime().format('dd-MM-yyyy') }}",
+              "type": "string"
+            },
+            {
+              "id": "8a0b73c7-f56e-4622-b972-7304d99795de",
+              "name": "Data Abertura",
+              "value": "={{ $json.analise_resultado.classificacao[\"Abertura da Proposta\"].toDateTime().toDateTime().format('dd-MM-yyyy') }}",
+              "type": "string"
+            },
+            {
+              "id": "a648f078-b318-4129-b626-fc6b91acea92",
+              "name": "Data Encerramento",
+              "value": "={{ $json.analise_resultado.classificacao[\"Encerramento da proposta\"].toDateTime().toDateTime().format('dd-MM-yyyy') }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2896,
+        224
+      ],
+      "id": "52df3932-72c2-4a21-aa84-eda4f5f99d7f",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "content": "## Edição de Campos (Edit Fields)\n\nEste nó é utilizado para **modificar, adicionar ou remover campos** nos dados que passam por ele.\nVocê pode:\n- **Renomear** campos existentes.\n- **Definir novos valores** para campos.\n\nÉ útil para padronizar dados antes de enviá-los para outros sistemas ou para preparar os dados para uma análise específica.\n",
+        "height": 424,
+        "width": 508
+      },
+      "name": "Sticky Note - Edit Fields",
+      "position": [
+        2720,
+        -16
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "id": "generated-401e314c-08ff-4cfd-bb14-b34ca2e43b65"
+    }
+  ],
+  "pinData": {
+    "When clicking ‘Execute workflow’": [
+      {
+        "json": {}
+      }
+    ]
+  },
+  "connections": {
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "🧠 Analisador de Oportunidades",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "📆 Calcula Intervalo de Datas1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "🧠 Analisador de Oportunidades",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🧠 Analisador de Oportunidades": {
+      "main": [
+        [
+          {
+            "node": "🚪 Enriquece com Link do Edital",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📆 Calcula Intervalo de Datas1": {
+      "main": [
+        [
+          {
+            "node": "📡 1ª Chamada – Meta-dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📡 1ª Chamada – Meta-dados": {
+      "main": [
+        [
+          {
+            "node": "🔄 Gera Loop de Páginas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🔄 Gera Loop de Páginas": {
+      "main": [
+        [
+          {
+            "node": "📡 2ª Chamada – Busca Detalhada",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🎯 Filtro GovTech": {
+      "main": [
+        [
+          {
+            "node": "📦 Agrega Licitações1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📦 Agrega Licitações1": {
+      "main": [
+        [
+          {
+            "node": "🧠 Analisador de Oportunidades",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "📡 2ª Chamada – Busca Detalhada": {
+      "main": [
+        [
+          {
+            "node": "🎯 Filtro GovTech",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "🚪 Enriquece com Link do Edital": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Append or update row in sheet": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Append or update row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "126c3317-f234-4a84-a1ad-9a57e10e9a96",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "f493109ba826b573a88fd143df6e6181e549f9ff7116a8b16df55c5334d73ef4"
+  },
+  "id": "WdQqjr5yJK1go2qN",
+  "tags": []
+}

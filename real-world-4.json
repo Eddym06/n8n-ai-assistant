@@ -1,0 +1,365 @@
+{
+  "name": "Workflow Inteligente - 25/9/2025",
+  "active": false,
+  "nodes": [
+    {
+      "id": "intelligent-jym2sdcuc",
+      "name": "Webhook de Pedidos",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        600.4011570258494,
+        351.2285192178657
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "new-order",
+        "responseMode": "lastNode",
+        "options": {
+          "noResponseBody": false,
+          "rawBody": false,
+          "allowedOrigins": "*"
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-re83su4ne",
+      "name": "Validate Order - E-commerce",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        695.3308192988997,
+        101.466881371906
+      ],
+      "parameters": {
+        "conditions": [
+          {
+            "value1": "={{$json.amount}}",
+            "operator": "largerEqual",
+            "value2": "0"
+          },
+          {
+            "value1": "={{$json.quantity}}",
+            "operator": "largerEqual",
+            "value2": "1",
+            "type": "and"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-gfi4ry309",
+      "name": "Check Inventory - E-commerce",
+      "type": "n8n-nodes-base.postgres",
+      "position": [
+        369.58028160024145,
+        245.23061198852938
+      ],
+      "parameters": {
+        "options": {
+          "queryBatching": true,
+          "batchSize": 100
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "postgres": {
+          "id": "pg-creds",
+          "name": "PostgreSQL DB"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-1a7uu2txm",
+      "name": "Process Payment - E-commerce",
+      "type": "n8n-nodes-base.stripe",
+      "position": [
+        335.96386884467165,
+        653.2414924407141
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {
+        "stripeApi": {
+          "id": "stripe-creds",
+          "name": "Stripe API"
+        }
+      },
+      "onError": "continueRegularOutput",
+      "alwaysOutputData": true,
+      "retryOnFail": true,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "continueOnFail": false
+    },
+    {
+      "id": "intelligent-sobdney2f",
+      "name": "Generate Invoice - E-commerce",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        296.23871787519215,
+        121.31111516009213
+      ],
+      "parameters": {
+        "functionCode": "// Procesamiento de datos básico\nconst processedItems = items.map(item => {\n    return {\n        json: {\n            ...item.json,\n            processed: true,\n            processedAt: new Date().toISOString(),\n            workflowId: '{{$workflow.id}}',\n            executionId: '{{$execution.id}}'\n        }\n    };\n});\n\nreturn processedItems;"
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-srfpbmg4v",
+      "name": "Send Confirmation - E-commerce",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        454.0492731550193,
+        377.0636651605028
+      ],
+      "parameters": {
+        "fromEmail": "noreply@company.com",
+        "toEmail": "={{$json.email}}",
+        "subject": "Confirmación de pedido #{{$json.orderId}}",
+        "message": "Su solicitud ha sido procesada exitosamente por nuestro sistema.",
+        "options": {
+          "allowUnauthorizedCerts": false,
+          "appendAttribution": false
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "smtp": {
+          "id": "email-creds",
+          "name": "SMTP Server"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-xkd4hekfr",
+      "name": "Update Inventory - E-commerce",
+      "type": "n8n-nodes-base.postgres",
+      "position": [
+        868.6153819587894,
+        179.68501301427384
+      ],
+      "parameters": {
+        "options": {
+          "queryBatching": true,
+          "batchSize": 100
+        }
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "postgres": {
+          "id": "pg-creds",
+          "name": "PostgreSQL DB"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-fqnog2ovd",
+      "name": "Notify Fulfillment - E-commerce",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        852.6625390327433,
+        253.17586914534357
+      ],
+      "parameters": {
+        "channel": "#general",
+        "text": "📢 Notificación: {{$json.message || \"Evento procesado correctamente\"}}",
+        "username": "n8n-bot",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "slackApi": {
+          "id": "slack-creds",
+          "name": "Slack API"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "intelligent-2zwlno1i1",
+      "name": "Manejador Inteligente de Errores",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        798.050074061063,
+        103.88017620659102
+      ],
+      "parameters": {
+        "functionCode": "// Procesamiento de datos básico\nconst processedItems = items.map(item => {\n    return {\n        json: {\n            ...item.json,\n            processed: true,\n            processedAt: new Date().toISOString(),\n            workflowId: '{{$workflow.id}}',\n            executionId: '{{$execution.id}}'\n        }\n    };\n});\n\nreturn processedItems;"
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    }
+  ],
+  "connections": {
+    "Validate Order - E-commerce": {
+      "main": [
+        [
+          {
+            "node": "Check Inventory - E-commerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Inventory - E-commerce": {
+      "main": [
+        [
+          {
+            "node": "Process Payment - E-commerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Process Payment - E-commerce": {
+      "main": [
+        [
+          {
+            "node": "Generate Invoice - E-commerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Invoice - E-commerce": {
+      "main": [
+        [
+          {
+            "node": "Send Confirmation - E-commerce",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Notify Fulfillment - E-commerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Confirmation - E-commerce": {
+      "main": [
+        [
+          {
+            "node": "Update Inventory - E-commerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Inventory - E-commerce": {
+      "main": [
+        [
+          {
+            "node": "Notify Fulfillment - E-commerce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Fulfillment - E-commerce": {
+      "main": [
+        [
+          {
+            "node": "Manejador Inteligente de Errores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-26T01:54:05.960Z",
+  "updatedAt": "2025-09-26T01:54:05.960Z",
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "",
+    "timezone": "Europe/Madrid"
+  },
+  "staticData": {},
+  "tags": [
+    "intelligent-agent",
+    "ai-generated",
+    "professional"
+  ],
+  "triggerCount": 0,
+  "versionId": "2.0.0",
+  "meta": {
+    "generatedBy": "intelligent-workflow-agent-v1.0",
+    "generatedAt": "2025-09-26T01:54:05.960Z",
+    "analysis": {
+      "domains": [
+        "ecommerce",
+        "crm"
+      ],
+      "complexity": "SIMPLE",
+      "intents": [],
+      "confidence": 1
+    },
+    "metrics": {
+      "nodeCount": 9,
+      "connectionCount": 7,
+      "estimatedExecutionTime": "6.66 segundos (estimación inteligente)",
+      "confidenceScore": 1
+    }
+  }
+}

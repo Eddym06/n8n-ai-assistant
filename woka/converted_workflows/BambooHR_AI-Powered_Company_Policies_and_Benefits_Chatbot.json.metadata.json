@@ -1,0 +1,1110 @@
+{
+  "workflow_info": {
+    "id": "dYjQS1bJmVSAxNnj",
+    "name": "BambooHR AI-Powered Company Policies and Benefits Chatbot",
+    "file_name": "BambooHR_AI-Powered_Company_Policies_and_Benefits_Chatbot.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\BambooHR_AI-Powered_Company_Policies_and_Benefits_Chatbot.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "84bc335634c6"
+  },
+  "structure": {
+    "total_nodes": 50,
+    "node_types": [
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.bambooHr",
+      "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.aggregate",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.manualTrigger",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader"
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          760,
+          560
+        ]
+      },
+      {
+        "name": "Employee initiates a conversation",
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "position": [
+          760,
+          1140
+        ]
+      },
+      {
+        "name": "AI-Powered HR Benefits and Company Policies Chatbot",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          1640,
+          1340
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          2080,
+          740
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          1860,
+          740
+        ]
+      },
+      {
+        "name": "Recursive Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          2060,
+          880
+        ]
+      },
+      {
+        "name": "Window Buffer Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          1000,
+          1340
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          840,
+          1340
+        ]
+      },
+      {
+        "name": "Vector Store Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "position": [
+          1120,
+          1380
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1220,
+          1600
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          940,
+          1700
+        ]
+      },
+      {
+        "name": "Employee Lookup Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          1440,
+          1360
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1960,
+          1500
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2980,
+          1600
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model4",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3700,
+          1620
+        ]
+      },
+      {
+        "name": "Auto-fixing Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          3880,
+          1600
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model5",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3780,
+          1700
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          4080,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          680,
+          460
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          680,
+          1080
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1580,
+          1075.4375994898523
+        ]
+      },
+      {
+        "name": "GET all files",
+        "type": "n8n-nodes-base.bambooHr",
+        "position": [
+          960,
+          560
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          920,
+          720
+        ]
+      },
+      {
+        "name": "Filter out files from undesired categories",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1160,
+          560
+        ]
+      },
+      {
+        "name": "Split out individual files",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1360,
+          560
+        ]
+      },
+      {
+        "name": "Filter out non-pdf files",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1560,
+          560
+        ]
+      },
+      {
+        "name": "Download file from BambooHR",
+        "type": "n8n-nodes-base.bambooHr",
+        "position": [
+          1760,
+          560
+        ]
+      },
+      {
+        "name": "Supabase Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "position": [
+          1960,
+          560
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1600,
+          1140
+        ]
+      },
+      {
+        "name": "Supabase Vector Store Retrieval",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "position": [
+          940,
+          1540
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          680,
+          1880
+        ]
+      },
+      {
+        "name": "Text Classifier",
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "position": [
+          1840,
+          1340
+        ]
+      },
+      {
+        "name": "GET all employees",
+        "type": "n8n-nodes-base.bambooHr",
+        "position": [
+          2260,
+          1240
+        ]
+      },
+      {
+        "name": "Filter out other employees",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          2460,
+          1240
+        ]
+      },
+      {
+        "name": "Stringify employee record for response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2660,
+          1240
+        ]
+      },
+      {
+        "name": "GET all employees (second path)",
+        "type": "n8n-nodes-base.bambooHr",
+        "position": [
+          2260,
+          1440
+        ]
+      },
+      {
+        "name": "Extract departments",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2460,
+          1440
+        ]
+      },
+      {
+        "name": "Ensure uniqueness in department list",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2660,
+          1440
+        ]
+      },
+      {
+        "name": "Extract department",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          2860,
+          1440
+        ]
+      },
+      {
+        "name": "Retrieve all employees",
+        "type": "n8n-nodes-base.bambooHr",
+        "position": [
+          3220,
+          1440
+        ]
+      },
+      {
+        "name": "Filter out other departments",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          3420,
+          1440
+        ]
+      },
+      {
+        "name": "Extract relevant employee fields",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          3620,
+          1440
+        ]
+      },
+      {
+        "name": "Identify most senior employee",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          3800,
+          1440
+        ]
+      },
+      {
+        "name": "Format name for response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4160,
+          1440
+        ]
+      },
+      {
+        "name": "HR AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1040,
+          1140
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1600,
+          1660
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2240,
+          1140
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2240,
+          1620
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4020,
+          1320
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          700,
+          940
+        ]
+      }
+    ],
+    "connections_count": 35
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "complexity_score": 1630,
+    "keywords": [
+      "openai chat model1",
+      "extract departments",
+      "sticky note8",
+      "@n8n/n8n nodes langchain.outputParserAutofixing",
+      "openai chat model",
+      "sticky note",
+      "bambooHr",
+      "embeddings openai1",
+      "employee lookup tool",
+      "openai chat model5",
+      "file processing",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "ensure uniqueness in department list",
+      "text classifier",
+      "stringify employee record for response",
+      "openai chat model2",
+      "sticky note7",
+      "sticky note1",
+      "sticky note9",
+      "ai-ml",
+      "supabase vector store retrieval",
+      "identify most senior employee",
+      "supabase vector store",
+      "default data loader",
+      "splitOut",
+      "@n8n/n8n nodes langchain.textClassifier",
+      "@n8n/n8n nodes langchain.embeddingsOpenAi",
+      "vector store tool",
+      "filter out other employees",
+      "complex",
+      "auto-fixing output parser",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.toolVectorStore",
+      "format name for response",
+      "sticky note10",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "filter out non-pdf files",
+      "@n8n/n8n nodes langchain.chatTrigger",
+      "openai chat model4",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "sticky note3",
+      "executeWorkflowTrigger",
+      "download file from bamboohr",
+      "ai-powered hr benefits and company policies chatbot",
+      "extract department",
+      "get all employees (second path)",
+      "sticky note5",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "hr ai agent",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "@n8n/n8n nodes langchain.agent",
+      "openai chat model3",
+      "get all files",
+      "retrieve all employees",
+      "when clicking ‘test workflow’",
+      "split out individual files",
+      "@n8n/n8n nodes langchain.toolWorkflow",
+      "aggregate",
+      "filter out other departments",
+      "filter",
+      "set",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "filter out files from undesired categories",
+      "sticky note4",
+      "extract relevant employee fields",
+      "structured output parser",
+      "get all employees",
+      "stickyNote",
+      "sticky note2",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "manualTrigger",
+      "@n8n/n8n nodes langchain.vectorStoreSupabase",
+      "embeddings openai",
+      "recursive character text splitter",
+      "employee initiates a conversation",
+      "window buffer memory"
+    ],
+    "description": "'BambooHR AI-Powered Company Policies and Benefits Chatbot' es un workflow diseñado para file processing con 50 nodos con 3 disparadores que ejecuta: Default Data Loader, Embeddings OpenAI, Recursive Character Text Splitter en la categoría de ai-ml.",
+    "semantic_content": "Workflow: BambooHR AI-Powered Company Policies and Benefits Chatbot. Nodos: When clicking ‘Test workflow’ (manualTrigger), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Embeddings OpenAI (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Recursive Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), Window Buffer Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Vector Store Tool (@n8n/n8n-nodes-langchain.toolVectorStore), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Embeddings OpenAI1 (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Employee Lookup Tool (@n8n/n8n-nodes-langchain.toolWorkflow), OpenAI Chat Model2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), OpenAI Chat Model3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), OpenAI Chat Model4 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Auto-fixing Output Parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), OpenAI Chat Model5 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), GET all files (bambooHr), Sticky Note3 (stickyNote), Filter out files from undesired categories (filter), Split out individual files (splitOut), Filter out non-pdf files (filter), Download file from BambooHR (bambooHr), Supabase Vector Store (@n8n/n8n-nodes-langchain.vectorStoreSupabase), Sticky Note4 (stickyNote), Employee initiates a conversation (@n8n/n8n-nodes-langchain.chatTrigger), Supabase Vector Store Retrieval (@n8n/n8n-nodes-langchain.vectorStoreSupabase), Sticky Note5 (stickyNote), AI-Powered HR Benefits and Company Policies Chatbot (executeWorkflowTrigger), Text Classifier (@n8n/n8n-nodes-langchain.textClassifier), GET all employees (bambooHr), Filter out other employees (filter), Stringify employee record for response (set), GET all employees (second path) (bambooHr), Extract departments (aggregate), Ensure uniqueness in department list (set), Extract department (@n8n/n8n-nodes-langchain.informationExtractor), Retrieve all employees (bambooHr), Filter out other departments (filter), Extract relevant employee fields (aggregate), Identify most senior employee (@n8n/n8n-nodes-langchain.chainLlm), Format name for response (set), HR AI Agent (@n8n/n8n-nodes-langchain.agent), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Sticky Note10 (stickyNote). Propósito: file processing. Categoría: ai-ml. Disparadores: When clicking ‘Test workflow’, Employee initiates a conversation, AI-Powered HR Benefits and Company Policies Chatbot"
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": false,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 61.34969325153374,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 82.26993865030676
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T03:59:03.163304"
+  },
+  "semantic_vector": [
+    -0.05287916958332062,
+    -0.05479590222239494,
+    0.04465329647064209,
+    0.0021608234383165836,
+    -0.05117065832018852,
+    -0.05283717066049576,
+    0.05002906545996666,
+    -0.05368310958147049,
+    -0.05505721643567085,
+    0.05145814269781113,
+    0.016425156965851784,
+    0.046484120190143585,
+    -0.03028787672519684,
+    -0.05475926771759987,
+    -0.051884643733501434,
+    0.05507706105709076,
+    0.05012577399611473,
+    0.005317856557667255,
+    -0.054861269891262054,
+    0.015031635761260986,
+    0.022858787328004837,
+    0.027614587917923927,
+    0.003967843018472195,
+    -0.04872928559780121,
+    -0.0489179864525795,
+    -0.04660865664482117,
+    -0.05504493787884712,
+    0.054000627249479294,
+    -0.046307921409606934,
+    0.05289238691329956,
+    0.054868996143341064,
+    -0.025852397084236145,
+    0.05040585249662399,
+    0.0006840660935267806,
+    0.028312431648373604,
+    -0.040392570197582245,
+    0.013365224003791809,
+    -0.015378688462078571,
+    -0.04237746819853783,
+    -0.03754081577062607,
+    0.0014282375341281295,
+    0.04349185526371002,
+    -0.009856186807155609,
+    0.041937604546546936,
+    0.05505969375371933,
+    0.05504186823964119,
+    0.031205862760543823,
+    -0.042482808232307434,
+    -0.039593469351530075,
+    -0.025576669722795486,
+    -0.05143045634031296,
+    0.011191892437636852,
+    -0.05507361516356468,
+    0.007031335961073637,
+    -0.04247260093688965,
+    -0.03991423174738884,
+    0.054972510784864426,
+    0.05168967321515083,
+    0.006259451154619455,
+    0.010420589707791805,
+    0.04448390007019043,
+    0.004422344267368317,
+    -0.051548197865486145,
+    0.05507388710975647,
+    0.05463031679391861,
+    0.035728394985198975,
+    0.05502454191446304,
+    -0.05483003705739975,
+    0.05350823700428009,
+    -0.040559109300374985,
+    -0.054602451622486115,
+    0.05259862542152405,
+    0.04253055900335312,
+    0.05480440706014633,
+    -0.029806112870573997,
+    -0.05507644638419151,
+    0.05188566818833351,
+    -0.054717548191547394,
+    -0.05200004577636719,
+    0.013715031556785107,
+    0.01338212937116623,
+    0.0460844486951828,
+    0.038691285997629166,
+    -0.05430641025304794,
+    -0.03305063769221306,
+    -0.006081684026867151,
+    0.028551019728183746,
+    -0.051170263439416885,
+    -0.033197082579135895,
+    0.03929685428738594,
+    0.044027864933013916,
+    0.05454249680042267,
+    0.05474160239100456,
+    0.047303445637226105,
+    -0.021848225966095924,
+    -0.022443721070885658,
+    -0.04832269996404648,
+    0.05497980862855911,
+    -0.05350866541266441,
+    -0.055060047656297684,
+    0.020320484414696693,
+    -0.03097088262438774,
+    -0.04605628177523613,
+    0.05479702726006508,
+    -0.04465464502573013,
+    0.05498090386390686,
+    0.0548301599919796,
+    0.051730163395404816,
+    -0.009792969562113285,
+    -0.03646054118871689,
+    -0.04350860044360161,
+    -0.05471426993608475,
+    0.007858016528189182,
+    -0.04770708829164505,
+    -0.021910320967435837,
+    0.0362146832048893,
+    -0.05505281686782837,
+    -0.05430760234594345,
+    0.044222988188266754,
+    0.050591204315423965,
+    -0.054723579436540604,
+    0.051424477249383926,
+    0.028244251385331154,
+    0.034514617174863815,
+    0.05505303665995598,
+    0.043301910161972046,
+    -0.01333730760961771,
+    0.03394049033522606,
+    0.03941900283098221,
+    0.04207141697406769,
+    -0.03581089526414871,
+    -0.036055177450180054,
+    0.05231425538659096,
+    -0.04431570693850517,
+    0.051538050174713135,
+    -0.0112563231959939,
+    -0.028439616784453392,
+    -0.05157753825187683,
+    -0.04864124208688736,
+    -0.05503685027360916,
+    -0.016949083656072617,
+    0.05507694557309151,
+    0.006073612719774246,
+    0.03838406503200531,
+    -0.051766108721494675,
+    -0.05502953752875328,
+    0.05494220182299614,
+    -0.02945723757147789,
+    0.054341841489076614,
+    0.030798858031630516,
+    -0.054351214319467545,
+    -0.047306984663009644,
+    0.036503374576568604,
+    -0.0455460324883461,
+    0.05507385730743408,
+    0.055070843547582626,
+    -0.04230670630931854,
+    -0.05504385009407997,
+    -0.051475346088409424,
+    -0.05371730029582977,
+    -0.0538615807890892,
+    -0.054702069610357285,
+    0.04365447163581848,
+    0.054462980479002,
+    -0.018942253664135933,
+    -0.0500139519572258,
+    -0.04413672164082527,
+    0.04342840611934662,
+    -0.054767027497291565,
+    -0.05112544074654579,
+    0.05444275587797165,
+    -0.042568761855363846,
+    -0.026858843863010406,
+    0.04946961998939514,
+    -0.045731011778116226,
+    0.05321453884243965,
+    0.043048497289419174,
+    -0.05233059078454971,
+    0.01484056655317545,
+    -0.054548054933547974,
+    0.017127571627497673,
+    0.05306677147746086,
+    -0.05467697232961655,
+    0.003743292298167944,
+    0.05504467338323593,
+    0.05462953820824623,
+    -0.0550578273832798,
+    0.05455551669001579,
+    -0.038895126432180405,
+    -0.024578744545578957,
+    0.05312062427401543,
+    0.0016546502010896802,
+    -0.0035673484671860933,
+    -0.050921712070703506,
+    -0.05489419400691986,
+    -0.055015742778778076,
+    0.031243901699781418,
+    0.05507706105709076,
+    0.013463357463479042,
+    0.0018128037918359041,
+    0.049735408276319504,
+    0.0533849373459816,
+    0.04837420582771301,
+    0.020020030438899994,
+    0.014678804203867912,
+    -0.05073091760277748,
+    -0.007556667551398277,
+    0.038931481540203094,
+    -0.05488470941781998,
+    -0.051137883216142654,
+    0.05258667469024658,
+    0.055058471858501434,
+    0.05200621113181114,
+    0.05465865507721901,
+    -0.05507604777812958,
+    -0.03580227121710777,
+    -0.05107763037085533,
+    0.053883589804172516,
+    0.05151090398430824,
+    -0.04788864776492119,
+    0.04701528325676918,
+    0.0035610601771622896,
+    0.03835415467619896,
+    0.05443456023931503,
+    -0.0359685979783535,
+    -0.05506616458296776,
+    -0.0400114506483078,
+    -0.0549195371568203,
+    0.00987772736698389,
+    -0.055036209523677826,
+    0.03750164061784744,
+    -0.052889853715896606,
+    -0.05297951027750969,
+    -0.055076900869607925,
+    0.039620541036129,
+    0.05471775308251381,
+    0.055076003074645996,
+    0.05506424605846405,
+    -0.04613400250673294,
+    0.0487087182700634,
+    -0.0239479411393404,
+    0.03763549029827118,
+    -0.01160943042486906,
+    0.01943754218518734,
+    0.05064057558774948,
+    0.05485530570149422,
+    0.053626060485839844,
+    0.002849652897566557,
+    0.05433344841003418,
+    0.05506684631109238,
+    -0.054620739072561264,
+    -0.038579538464546204,
+    0.050942566245794296,
+    0.04531361907720566,
+    0.05468360334634781,
+    -0.0549909807741642,
+    0.051521800458431244,
+    0.05507706105709076,
+    -0.019145453348755836,
+    0.04986089468002319,
+    0.041101958602666855,
+    0.027735635638237,
+    0.006710490211844444,
+    0.0545366071164608,
+    -0.016825702041387558,
+    -0.0002462333650328219,
+    -0.04994052276015282,
+    -0.042922236025333405,
+    -0.05501433089375496,
+    0.05372260883450508,
+    -0.05472806468605995,
+    -0.006690275389701128,
+    -0.051880769431591034,
+    0.04718273878097534,
+    0.055060721933841705,
+    -0.04869122430682182,
+    -0.054624687880277634,
+    -0.05287618562579155,
+    0.05507674813270569,
+    0.05298012122511864,
+    -0.054499302059412,
+    -0.023216981440782547,
+    0.03426410257816315,
+    0.0037922095507383347,
+    0.046412378549575806,
+    0.0019454993307590485,
+    0.026630224660038948,
+    0.05490949749946594,
+    0.038722313940525055,
+    0.04252322390675545,
+    -0.03712127357721329,
+    0.049045659601688385,
+    0.05507580190896988,
+    -0.05449236184358597,
+    0.05136803537607193,
+    -0.053262628614902496,
+    -0.05308949947357178,
+    -0.02564983069896698,
+    -0.05189043655991554,
+    0.047665275633335114,
+    -0.03728743642568588,
+    0.015192830003798008,
+    0.04359741881489754,
+    -0.022579241544008255,
+    -0.05365576222538948,
+    0.05305490642786026,
+    0.051686760038137436,
+    0.03654060885310173,
+    0.05023422837257385,
+    -0.03845588117837906,
+    -0.04612651467323303,
+    -0.04146142303943634,
+    -0.03914402797818184,
+    -0.052291300147771835,
+    0.05425255373120308,
+    -0.052293576300144196,
+    0.005993888713419437,
+    -0.04031601920723915,
+    0.04148535430431366,
+    0.029749969020485878,
+    -0.044104788452386856,
+    -0.05265112966299057,
+    0.017955923452973366,
+    -0.0425436832010746,
+    0.04413912817835808,
+    0.03130713477730751,
+    0.046915747225284576,
+    -0.05198686569929123,
+    0.0035139734391123056,
+    0.004528022836893797,
+    0.048850949853658676,
+    -0.05421989783644676,
+    -0.008585442788898945,
+    0.05495695024728775,
+    -0.023362651467323303,
+    0.05441988259553909,
+    0.0490165539085865,
+    -0.019858289510011673,
+    0.05478927120566368,
+    -0.05371428653597832,
+    -0.05193352699279785,
+    -0.0531344935297966,
+    0.03569716960191727,
+    -0.04846109077334404,
+    -0.05507702752947807,
+    -0.02051735855638981,
+    0.04203690588474274,
+    0.017893224954605103,
+    0.014630932360887527,
+    0.050447989255189896,
+    0.044638436287641525,
+    0.015911605209112167,
+    0.007623509969562292,
+    -0.034988220781087875,
+    -0.007711996790021658,
+    -0.05494716018438339,
+    -0.05507706105709076,
+    -0.04832226783037186,
+    -0.024861427024006844,
+    0.05481921136379242,
+    0.05130484327673912,
+    -0.05430206283926964,
+    -0.055076997727155685,
+    0.054271016269922256,
+    0.020615940913558006,
+    0.055019479244947433,
+    0.052135564386844635,
+    -0.009105867706239223,
+    -0.0034663155674934387,
+    -0.014179703779518604,
+    0.03521059453487396,
+    -0.05386652052402496,
+    -0.02497939206659794,
+    0.054724372923374176,
+    0.05501772463321686,
+    0.051482100039720535,
+    -0.046752844005823135,
+    -0.05468408018350601,
+    -0.04899091646075249,
+    -0.05398402363061905,
+    -0.03867737203836441,
+    0.05374716967344284,
+    -0.020439384505152702,
+    -0.0504550002515316,
+    0.012572535313665867,
+    -0.054874151945114136,
+    0.05410193279385567,
+    -0.05064097419381142,
+    0.04911961778998375,
+    -0.054561566561460495,
+    0.047274116426706314,
+    -0.05153437703847885,
+    0.04780997708439827,
+    0.03505533188581467,
+    -0.028734944760799408,
+    0.054156649857759476,
+    -0.003982486203312874,
+    -0.05292397737503052,
+    0.030829770490527153,
+    0.033975839614868164,
+    0.04904559999704361,
+    0.05506551265716553,
+    -0.05480425804853439,
+    0.05504271760582924,
+    -0.049163978546857834,
+    -0.04284556955099106,
+    -0.05506348982453346,
+    0.03364472836256027,
+    0.052550844848155975,
+    -0.04003279283642769,
+    0.05381147563457489,
+    -0.014310698956251144,
+    -0.03994021192193031,
+    -0.04075653851032257,
+    0.052345216274261475,
+    0.0017087357118725777,
+    0.05418623611330986,
+    -0.03753475472331047,
+    -0.05443930998444557,
+    0.0265590101480484,
+    -0.05336662009358406,
+    -0.04934745281934738,
+    -0.05461489409208298,
+    0.051176317036151886,
+    -0.016821350902318954,
+    0.008539545349776745,
+    -0.054956428706645966,
+    0.05506807193160057,
+    -0.017947761341929436,
+    -0.03823737055063248,
+    -0.05334625020623207,
+    0.029657484963536263,
+    -0.019602026790380478,
+    -0.003299902193248272,
+    -0.055043209344148636,
+    -0.05346279591321945,
+    -0.05446935445070267,
+    -0.049397047609090805,
+    -0.04735534265637398,
+    -0.038108162581920624,
+    -0.05336389318108559,
+    -0.05440540239214897,
+    -0.018660446628928185,
+    -0.05303889885544777,
+    -0.020109819248318672,
+    -0.04210767149925232,
+    -0.011209333315491676,
+    -0.05313189700245857,
+    -0.0541013740003109,
+    -0.051498688757419586,
+    0.05501563847064972,
+    0.04785361886024475,
+    0.055075280368328094,
+    0.05363687872886658,
+    0.04444914683699608,
+    -0.05507699027657509,
+    0.05153472721576691,
+    0.05507383495569229,
+    -0.016123590990900993,
+    -0.05461660400032997,
+    0.04541017487645149,
+    0.05283007770776749,
+    0.05489511042833328,
+    0.054888103157281876,
+    0.00405582319945097,
+    -0.05358177050948143,
+    0.05469704046845436,
+    0.02776440978050232,
+    -0.048581600189208984,
+    0.054418280720710754,
+    0.054177407175302505,
+    -0.045617517083883286,
+    0.05461541563272476,
+    0.0194604080170393,
+    -0.050237953662872314,
+    0.05407692492008209,
+    0.025554029271006584,
+    0.03051747940480709,
+    0.027093105018138885,
+    -0.05474284663796425,
+    -0.05429518222808838,
+    0.05486973002552986,
+    -0.0035271698143333197,
+    -0.054786186665296555,
+    0.05244225636124611,
+    0.05507389456033707,
+    0.034738101065158844,
+    -0.01834113337099552,
+    0.04161856323480606,
+    0.04695845767855644,
+    -0.03142240270972252,
+    0.010744509287178516,
+    -0.04849705100059509,
+    0.05345015972852707,
+    -0.05481047183275223,
+    0.05506500229239464,
+    -0.0116738798096776,
+    0.047444138675928116,
+    -0.05492866039276123,
+    0.042396917939186096,
+    -0.016230570152401924,
+    -0.011927321553230286,
+    0.05394495278596878,
+    -0.05507706105709076,
+    -0.048461467027664185,
+    -0.026667287573218346,
+    -0.05228165537118912,
+    -0.03672555088996887,
+    0.010620658285915852,
+    0.05507706105709076,
+    -0.049453772604465485,
+    -0.01290733739733696
+  ],
+  "search_tags": [
+    "uses:@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+    "uses:stickyNote",
+    "uses:@n8n/n8n-nodes-langchain.outputParserStructured",
+    "uses:@n8n/n8n-nodes-langchain.toolWorkflow",
+    "uses:manualTrigger",
+    "trigger:@n8n/n8n-nodes-langchain.chatTrigger",
+    "uses:filter",
+    "uses:@n8n/n8n-nodes-langchain.informationExtractor",
+    "uses:@n8n/n8n-nodes-langchain.outputParserAutofixing",
+    "uses:aggregate",
+    "trigger:executeWorkflowTrigger",
+    "uses:@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+    "uses:@n8n/n8n-nodes-langchain.toolVectorStore",
+    "uses:@n8n/n8n-nodes-langchain.agent",
+    "uses:executeWorkflowTrigger",
+    "uses:@n8n/n8n-nodes-langchain.lmChatOpenAi",
+    "uses:@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+    "uses:@n8n/n8n-nodes-langchain.memoryBufferWindow",
+    "uses:splitOut",
+    "uses:@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+    "complexity:high",
+    "uses:set",
+    "category:ai-ml",
+    "uses:bambooHr",
+    "purpose:file-processing",
+    "uses:@n8n/n8n-nodes-langchain.chatTrigger",
+    "uses:@n8n/n8n-nodes-langchain.textClassifier",
+    "trigger:manualTrigger",
+    "uses:@n8n/n8n-nodes-langchain.chainLlm"
+  ],
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

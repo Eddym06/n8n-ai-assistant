@@ -1,0 +1,1039 @@
+{
+  "workflow_info": {
+    "id": "siXUnQhJpCJ9rHzu",
+    "name": "Auto-Tag Blog Posts in WordPress with AI",
+    "display_name": "Auto-Tag Blog Posts in WordPress with AI",
+    "file_name": "1980_Splitout_Code_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\1980_Splitout_Code_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "49a5c2a9b580"
+  },
+  "structure": {
+    "total_nodes": 32,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.wordpress",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.wordpress",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 10
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "RSS Feed Trigger",
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "position": [
+          3140,
+          320
+        ]
+      },
+      {
+        "name": "Demo Usage in Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          1780,
+          320
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3260,
+          480
+        ]
+      },
+      {
+        "name": "Auto-fixing Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          3460,
+          540
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3360,
+          680
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          3560,
+          760
+        ]
+      },
+      {
+        "name": "Return article details",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4140,
+          320
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2200,
+          840
+        ]
+      },
+      {
+        "name": "Loop over articles",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          1980,
+          320
+        ]
+      },
+      {
+        "name": "SET initial record",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2200,
+          440
+        ]
+      },
+      {
+        "name": "GET WP tags",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2440,
+          440
+        ]
+      },
+      {
+        "name": "POST WP tags",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2420,
+          840
+        ]
+      },
+      {
+        "name": "GET updated WP tags",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2700,
+          840
+        ]
+      },
+      {
+        "name": "Keep matches",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          2200,
+          1040
+        ]
+      },
+      {
+        "name": "Combine tag_ids",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2420,
+          1040
+        ]
+      },
+      {
+        "name": "Combine slugs",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2700,
+          440
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2440,
+          640
+        ]
+      },
+      {
+        "name": "MOCK article",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3740,
+          320
+        ]
+      },
+      {
+        "name": "Return missing tags",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2200,
+          640
+        ]
+      },
+      {
+        "name": "Wordpress",
+        "type": "n8n-nodes-base.wordpress",
+        "position": [
+          4360,
+          320
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3000,
+          200
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1680,
+          198.96245932022566
+        ]
+      },
+      {
+        "name": "Auto-Tag Posts in WordPress",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          3940,
+          320
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2640,
+          140
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3040,
+          980
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3900,
+          500
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2640,
+          660
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1960,
+          540
+        ]
+      },
+      {
+        "name": "Generate tags for article",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          3360,
+          320
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1600,
+          1040
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2600,
+          1200
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4400,
+          1155.7364351382535
+        ]
+      }
+    ],
+    "connections_count": 21,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 30
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 945,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "demo usage in another workflow",
+      "executeWorkflow",
+      "wordpress",
+      "return missing tags",
+      "sticky note5",
+      "get wp tags",
+      "combine slugs",
+      "return article details",
+      "sticky note7",
+      "set initial record",
+      "keep matches",
+      "sticky note3",
+      "openai chat model1",
+      "structured output parser",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "@n8n/n8n nodes langchain.outputParserAutofixing",
+      "stickyNote",
+      "ai-ml",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "loop over articles",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "get updated wp tags",
+      "mock article",
+      "rssFeedReadTrigger",
+      "httpRequest",
+      "aggregate",
+      "webhook integration",
+      "generate tags for article",
+      "splitInBatches",
+      "code",
+      "rss feed trigger",
+      "sticky note9",
+      "openai chat model",
+      "set",
+      "sticky note4",
+      "post wp tags",
+      "split out",
+      "combine tag_ids",
+      "sticky note",
+      "auto-fixing output parser",
+      "sticky note8",
+      "complex",
+      "filter",
+      "sticky note1",
+      "sticky note2",
+      "auto-tag posts in wordpress",
+      "splitOut",
+      "executeWorkflowTrigger"
+    ],
+    "description": "'Auto-Tag Blog Posts in WordPress with AI' es un workflow diseñado para webhook integration con 32 nodos con 2 disparadores que ejecuta: OpenAI Chat Model, Auto-fixing Output Parser, OpenAI Chat Model1 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Auto-Tag Blog Posts in WordPress with AI. Nodos: OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Auto-fixing Output Parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), RSS Feed Trigger (rssFeedReadTrigger), Return article details (set), Split Out (splitOut), Loop over articles (splitInBatches), SET initial record (set), GET WP tags (httpRequest), POST WP tags (httpRequest), GET updated WP tags (httpRequest), Keep matches (filter), Combine tag_ids (aggregate), Combine slugs (aggregate), If (if), MOCK article (set), Return missing tags (code), Wordpress (wordpress), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Demo Usage in Another Workflow (executeWorkflowTrigger), Auto-Tag Posts in WordPress (executeWorkflow), Sticky Note (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Generate tags for article (@n8n/n8n-nodes-langchain.chainLlm), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: RSS Feed Trigger, Demo Usage in Another Workflow",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "RSS Feed Trigger",
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "Auto-fixing Output Parser",
+      "Demo Usage in Another Workflow",
+      "OpenAI Chat Model",
+      "OpenAI Chat Model1",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.rssFeedReadTrigger"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.rssfeedreadtrigger",
+      "n8n-nodes-base.httprequest",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.outputparserautofixing",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.wordpress",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.aggregate"
+    ],
+    "search_terms": [
+      "code",
+      "webhook",
+      "1980",
+      "1980_splitout_code_automation_webhook",
+      "automation",
+      "splitout"
+    ],
+    "alternative_names": [
+      "Auto-Tag Blog Posts in WordPress with AI"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 67.72486772486772,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 83.54497354497354
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 0.9999999403953552,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:18.707005"
+  },
+  "semantic_vector": [
+    -0.030782019719481468,
+    -0.055060453712940216,
+    0.03540404513478279,
+    -0.056478533893823624,
+    -0.034991152584552765,
+    -0.05614308640360832,
+    0.05200337618589401,
+    -0.010592830367386341,
+    -0.03089728020131588,
+    0.05666331946849823,
+    -0.009515843354165554,
+    0.048597149550914764,
+    -0.055920328944921494,
+    -0.03625292330980301,
+    -0.05668636038899422,
+    0.056851908564567566,
+    0.056743621826171875,
+    0.03189708665013313,
+    -0.05672305449843407,
+    0.04876658692955971,
+    -0.009374549612402916,
+    0.055743999779224396,
+    0.014042410999536514,
+    0.009206282906234264,
+    -0.02651345729827881,
+    0.05546388775110245,
+    -0.0566885769367218,
+    0.041521888226270676,
+    -0.05405697971582413,
+    0.05165407434105873,
+    -0.021043356508016586,
+    -0.00139856175519526,
+    0.05490361899137497,
+    0.04755951836705208,
+    0.052461519837379456,
+    0.056243088096380234,
+    -0.04364839941263199,
+    0.03813901171088219,
+    -0.031896039843559265,
+    -0.03735331818461418,
+    -0.0339449867606163,
+    0.05428830906748772,
+    0.008518052287399769,
+    0.007726381532847881,
+    0.056850023567676544,
+    0.056426651775836945,
+    0.046199772506952286,
+    0.04330041632056236,
+    -0.05665864050388336,
+    -0.035985417664051056,
+    -0.006615322083234787,
+    -0.0008359506027773023,
+    -0.056794434785842896,
+    -0.04281759634613991,
+    -0.05682450905442238,
+    -0.05662505701184273,
+    0.055775582790374756,
+    -0.006860112771391869,
+    -0.022614572197198868,
+    0.05126439779996872,
+    0.04611595347523689,
+    0.0509333610534668,
+    -0.013849195092916489,
+    0.056278541684150696,
+    0.051489803940057755,
+    0.014076451770961285,
+    0.05416349321603775,
+    -0.05474359914660454,
+    0.05648497864603996,
+    -0.0428905114531517,
+    -0.05685034021735191,
+    0.003154212376102805,
+    0.02943531423807144,
+    0.05574291944503784,
+    0.021415600553154945,
+    0.04260219633579254,
+    0.04052439704537392,
+    -0.047299861907958984,
+    -0.025982152670621872,
+    0.019656863063573837,
+    0.050609517842531204,
+    0.0039238459430634975,
+    0.010789474472403526,
+    -0.05672379955649376,
+    0.05523354932665825,
+    0.032905180007219315,
+    0.049010392278432846,
+    0.008030791766941547,
+    0.0027467908803373575,
+    -0.019745154306292534,
+    -0.015223443508148193,
+    0.03772132843732834,
+    0.04888841137290001,
+    -0.050488147884607315,
+    0.04989442974328995,
+    0.048179447650909424,
+    -0.04599114507436752,
+    0.04832448810338974,
+    -0.05641281232237816,
+    -0.05685027688741684,
+    -0.0004965507541783154,
+    -0.019560283049941063,
+    0.013393856585025787,
+    0.04664568230509758,
+    0.05658024922013283,
+    0.055559709668159485,
+    0.0568518228828907,
+    0.05609902739524841,
+    -0.024722328409552574,
+    -0.05684440955519676,
+    -0.05672326311469078,
+    -0.044245071709156036,
+    0.006417891010642052,
+    0.0491291843354702,
+    0.026860589161515236,
+    0.035516250878572464,
+    -0.02964894473552704,
+    -0.05650367960333824,
+    0.04938586428761482,
+    0.04800635203719139,
+    0.024466415867209435,
+    0.053413670510053635,
+    -0.04219576716423035,
+    -0.023009683936834335,
+    0.05214618146419525,
+    0.03894798830151558,
+    -0.054263461381196976,
+    -0.012912026606500149,
+    0.04405372962355614,
+    -0.03949398174881935,
+    0.0479707308113575,
+    -0.03184550255537033,
+    0.04455946013331413,
+    0.05616873875260353,
+    0.05641944706439972,
+    -0.05578278377652168,
+    0.013214626349508762,
+    0.029183220118284225,
+    -0.04571815952658653,
+    -0.05634995549917221,
+    -0.025495752692222595,
+    0.05684845522046089,
+    -0.0521891787648201,
+    0.014798671007156372,
+    -0.05575496703386307,
+    -0.05685165524482727,
+    0.05402177572250366,
+    -0.006379934959113598,
+    0.05676180124282837,
+    0.015233987011015415,
+    -0.03311105817556381,
+    -0.05651692673563957,
+    -0.049958329647779465,
+    0.005792894400656223,
+    0.056129347532987595,
+    0.056763432919979095,
+    0.008799404837191105,
+    -0.0566842257976532,
+    0.013672279193997383,
+    -0.055317144840955734,
+    -0.05385551229119301,
+    -0.05278181657195091,
+    0.04297846928238869,
+    0.052930183708667755,
+    0.05395292863249779,
+    -0.05503346025943756,
+    -0.05074135214090347,
+    0.05562754347920418,
+    -0.056087952107191086,
+    -0.05684585124254227,
+    0.05666249245405197,
+    0.029068659991025925,
+    -0.048407621681690216,
+    0.03773863613605499,
+    0.044120077043771744,
+    0.046153657138347626,
+    0.0062455423176288605,
+    -0.0482020266354084,
+    0.04273881018161774,
+    -0.05494359880685806,
+    -0.013614450581371784,
+    -0.05505773797631264,
+    -0.055267561227083206,
+    0.011273744516074657,
+    0.05683927610516548,
+    0.03382137045264244,
+    -0.05562347546219826,
+    0.05674498528242111,
+    -0.04799595847725868,
+    0.007166782394051552,
+    -0.02471730299293995,
+    0.0265913438051939,
+    0.0018216433236375451,
+    -0.056487709283828735,
+    -0.056812480092048645,
+    -0.056727003306150436,
+    0.034225575625896454,
+    0.056851908564567566,
+    -0.012944049201905727,
+    -0.006163523066788912,
+    0.054777611047029495,
+    -0.00973085779696703,
+    -0.05684155598282814,
+    -0.03037189319729805,
+    0.050889164209365845,
+    0.03924526646733284,
+    0.04119550809264183,
+    -0.04358375445008278,
+    -0.056841377168893814,
+    -0.05236566439270973,
+    0.016413679346442223,
+    0.03923283517360687,
+    0.05361132696270943,
+    0.020726338028907776,
+    -0.05684687942266464,
+    -0.0565914586186409,
+    -0.019990283995866776,
+    0.0512428879737854,
+    0.05663764476776123,
+    0.002728821709752083,
+    -0.04201003536581993,
+    0.056628741323947906,
+    -0.018083935603499413,
+    0.04561294615268707,
+    -0.04480913281440735,
+    -0.05654170364141464,
+    -0.03853455185890198,
+    -0.04811136797070503,
+    -0.05284455046057701,
+    -0.0567101314663887,
+    -0.010746391490101814,
+    -0.05662941560149193,
+    -0.052845340222120285,
+    -0.05684340372681618,
+    0.0012512692483142018,
+    -0.016075510531663895,
+    0.05684645473957062,
+    0.05681857094168663,
+    -0.05674612894654274,
+    0.016944430768489838,
+    -0.053315483033657074,
+    0.056164681911468506,
+    -0.004540962167084217,
+    -0.05098617076873779,
+    0.03347300365567207,
+    0.05643989518284798,
+    0.056035056710243225,
+    0.0346599742770195,
+    -0.007123775780200958,
+    0.05685083940625191,
+    -0.05678272247314453,
+    0.05101848393678665,
+    -0.024634288623929024,
+    -0.015603933483362198,
+    0.05092019960284233,
+    -0.050317395478487015,
+    0.008161244913935661,
+    0.05685184895992279,
+    -0.037787195295095444,
+    0.03231189772486687,
+    -0.055119454860687256,
+    0.05169463902711868,
+    -0.029363922774791718,
+    0.031485386192798615,
+    0.04827435314655304,
+    -0.022529929876327515,
+    -0.02852647192776203,
+    0.02514437399804592,
+    -0.05598847195506096,
+    0.05539584159851074,
+    -0.05537119507789612,
+    0.03807644173502922,
+    -0.03709159046411514,
+    0.04937431216239929,
+    0.055480606853961945,
+    0.013882490806281567,
+    -0.04468490555882454,
+    0.036562468856573105,
+    0.05685167759656906,
+    0.015400386415421963,
+    0.026159925386309624,
+    0.056386396288871765,
+    0.056792110204696655,
+    0.023347076028585434,
+    0.03555568680167198,
+    -0.05666234344244003,
+    -0.03912561386823654,
+    0.0564725436270237,
+    -0.015556911006569862,
+    0.05685145780444145,
+    0.01099284179508686,
+    -0.007278233300894499,
+    0.05685162544250488,
+    -0.05076422914862633,
+    -0.014874186366796494,
+    -0.05550823733210564,
+    0.02627497911453247,
+    0.03939962014555931,
+    0.019605914130806923,
+    0.034262631088495255,
+    -0.04345957934856415,
+    0.04160620644688606,
+    0.055602170526981354,
+    -0.056774139404296875,
+    0.056727372109889984,
+    0.05452334135770798,
+    0.008909913711249828,
+    0.00809101015329361,
+    -0.014403457753360271,
+    -0.04170592129230499,
+    -0.003748041344806552,
+    0.045596107840538025,
+    -0.004154170863330364,
+    -0.001977271167561412,
+    0.04486848786473274,
+    -0.05553733929991722,
+    0.04968719929456711,
+    -0.04323326796293259,
+    -0.04508882015943527,
+    0.043302807956933975,
+    0.056839559227228165,
+    -0.05668698623776436,
+    0.0554894357919693,
+    -0.04979327321052551,
+    0.04819287359714508,
+    -0.008450349792838097,
+    0.032273825258016586,
+    0.012861396186053753,
+    0.052687473595142365,
+    -0.05620810016989708,
+    -0.02493388019502163,
+    -0.05679233744740486,
+    -0.05187065526843071,
+    0.05664011090993881,
+    0.05643763393163681,
+    0.04986885190010071,
+    0.055632542818784714,
+    0.05604194477200508,
+    0.02994929999113083,
+    -0.0458667054772377,
+    0.05384454503655434,
+    -0.05573776736855507,
+    -0.05561559274792671,
+    -0.04837735742330551,
+    -0.056851908564567566,
+    -0.02579505555331707,
+    -0.025788558647036552,
+    0.004374070093035698,
+    -0.05350302904844284,
+    0.05277504026889801,
+    -0.0121274059638381,
+    0.05675997585058212,
+    0.020929817110300064,
+    -0.028879713267087936,
+    0.05589279159903526,
+    -0.05665207281708717,
+    -0.0568513497710228,
+    -0.05502690002322197,
+    0.00016259655239991844,
+    0.05409761890769005,
+    0.05205128714442253,
+    -0.05566588044166565,
+    -0.05685180425643921,
+    0.05585488677024841,
+    -0.056851908564567566,
+    0.056785695254802704,
+    0.016752874478697777,
+    -0.05565306544303894,
+    0.01194870937615633,
+    -0.053867850452661514,
+    0.022650059312582016,
+    -0.05596912279725075,
+    -0.04928096383810043,
+    0.05671340227127075,
+    0.04122469201683998,
+    0.050723396241664886,
+    -0.013077635318040848,
+    -0.055495232343673706,
+    -0.038820188492536545,
+    0.02218581549823284,
+    -0.0118129076436162,
+    0.0457020178437233,
+    -0.01182488165795803,
+    0.051760852336883545,
+    0.04385538771748543,
+    -0.03349214419722557,
+    0.055588122457265854,
+    -0.05127949267625809,
+    -0.03298516198992729,
+    -0.056799985468387604,
+    -0.01379301305860281,
+    -0.04456077888607979,
+    0.056851908564567566,
+    0.055787745863199234,
+    -0.04459625855088234,
+    0.03789104148745537,
+    -0.03612178936600685,
+    0.041606102138757706,
+    0.04456661269068718,
+    -0.002997939707711339,
+    0.03228924423456192,
+    0.020349951460957527,
+    -0.017360394820570946,
+    0.0395432710647583,
+    -0.01815829612314701,
+    -0.04832421988248825,
+    -0.05684864521026611,
+    -0.024580467492341995,
+    0.054636768996715546,
+    0.04623161256313324,
+    0.019237341359257698,
+    0.04470975697040558,
+    0.025067325681447983,
+    0.032051924616098404,
+    -0.04410183057188988,
+    -0.0033581098541617393,
+    0.04458458721637726,
+    -0.05533413589000702,
+    0.028913132846355438,
+    -0.04206253960728645,
+    -0.053709726780653,
+    0.04095832258462906,
+    -0.05645221471786499,
+    -0.049588508903980255,
+    0.010802114382386208,
+    0.05312231555581093,
+    -0.0561867281794548,
+    0.04426284506917,
+    0.055848605930805206,
+    -0.04664139449596405,
+    -0.036947645246982574,
+    0.028593892231583595,
+    -0.007851654663681984,
+    0.03621992468833923,
+    -0.05663811415433884,
+    -0.05552632361650467,
+    -0.04500604048371315,
+    -0.05682920664548874,
+    -0.05653541162610054,
+    0.054960474371910095,
+    -0.03127940371632576,
+    -0.05457598716020584,
+    -0.021260108798742294,
+    -0.05545245483517647,
+    0.05295731499791145,
+    -0.04678191617131233,
+    -0.038221653550863266,
+    -0.033840324729681015,
+    -0.052966777235269547,
+    -0.0567571222782135,
+    0.05044272541999817,
+    -0.055027805268764496,
+    0.056848812848329544,
+    0.05138929560780525,
+    -0.02438255585730076,
+    -0.056735578924417496,
+    0.055436521768569946,
+    0.056808412075042725,
+    -0.02314664237201214,
+    -0.03410880267620087,
+    0.04370851442217827,
+    0.049483101814985275,
+    0.0559917688369751,
+    0.05644650384783745,
+    -0.05181954801082611,
+    -0.054644037038087845,
+    0.03451063483953476,
+    -0.056429993361234665,
+    -0.054240480065345764,
+    0.054431915283203125,
+    0.01896468736231327,
+    -0.029335644096136093,
+    0.050803862512111664,
+    -0.03424323350191116,
+    -0.055999837815761566,
+    -0.05267069861292839,
+    0.028926361352205276,
+    0.053785741329193115,
+    -0.04324506223201752,
+    -0.05667959526181221,
+    -0.042200054973363876,
+    0.05644659325480461,
+    0.013852433301508427,
+    -0.05668828636407852,
+    0.033628854900598526,
+    0.03992658481001854,
+    -0.019412251189351082,
+    -0.03904140740633011,
+    0.011822452768683434,
+    0.05664133280515671,
+    0.008877049200236797,
+    0.05383722484111786,
+    -0.006695962511003017,
+    0.010339785367250443,
+    -0.055655721575021744,
+    0.05679946020245552,
+    0.013960079289972782,
+    0.05641582980751991,
+    -0.0505836196243763,
+    -0.044323790818452835,
+    0.05678334832191467,
+    -0.05637193098664284,
+    0.05666637048125267,
+    -0.05682704597711563,
+    0.016245096921920776,
+    -0.023824289441108704,
+    0.03908121585845947,
+    -0.05359859764575958,
+    -0.050203945487737656,
+    0.056851793080568314,
+    -0.04723202437162399,
+    -0.05527019873261452
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: RSS Feed Trigger, Demo Usage in Another Workflow; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

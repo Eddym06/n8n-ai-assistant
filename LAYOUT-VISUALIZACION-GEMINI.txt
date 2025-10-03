@@ -1,0 +1,70 @@
+📊 VISUALIZACIÓN DEL LAYOUT OPTIMIZADO - WORKFLOW GEMINI
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+NIVEL 1 [X: 100]     NIVEL 2 [X: 450]     NIVEL 3 [X: 800]     NIVEL 4 [X: 1150]
+┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐
+│ Y: -170         │   │                 │   │                 │   │                 │
+│ Telegram        │   │                 │   │                 │   │                 │
+│ Webhook Trigger │   │                 │   │                 │   │                 │
+└─────────────────┘   │                 │   │                 │   │                 │
+┌─────────────────┐   │                 │   │                 │   │                 │
+│ Y: 10           │   │ Y: 100          │   │ Y: 100          │   │ Y: 100          │
+│ Validate        │   │ Parse Telegram  │   │ Save Client     │   │ Create Google   │
+│ Client Data     │───│ Message         │───│ Data to Sheets  │───│ Calendar Event  │
+└─────────────────┘   │                 │   │                 │   │                 │
+┌─────────────────┐   │                 │   │                 │   │                 │
+│ Y: 190          │   │                 │   │                 │   │                 │
+│ Check Calendar  │   │                 │   │                 │   │                 │
+│ Event Success   │   │                 │   │                 │   │                 │
+└─────────────────┘   │                 │   │                 │   │                 │
+┌─────────────────┐   │                 │   │                 │   │                 │
+│ Y: 370          │   │                 │   │                 │   │                 │
+│ Merge Log Data  │   │                 │   │                 │   │                 │
+└─────────────────┘   └─────────────────┘   └─────────────────┘   └─────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+NIVEL 5 [X: 1500]    NIVEL 6 [X: 1850]    NIVEL 7 [X: 2200]    NIVEL 8 [X: 2550]
+┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐   ┌─────────────────┐
+│ Y: 100          │   │ Y: 100          │   │ Y: 100          │   │ Y: 100          │
+│ Log Interaction │   │ Prepare Log     │   │ Prepare Log     │   │ Prepare Log     │
+│ Details         │───│ Invalid Data    │───│ Calendar Error  │───│ Success         │
+└─────────────────┘   └─────────────────┘   └─────────────────┘   └─────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+                                        NIVEL 9 [X: 2900] - SALIDAS MÚLTIPLES
+                    ┌─────────────────────────────────────────────────────────────┐
+                    │                                                             │
+┌─────────────────┐ │ Y: -350                    Y: -170                    Y: 10 │
+│                 │ │ Send Telegram              Send Internal              Send   │
+│                 │ │ Invalid Data               Alert Invalid Data         Telegram│
+│ Prepare Log     │─┤                                                       Calendar│
+│ Success         │ │                                                       Error   │
+│                 │ │                                                             │
+│                 │ │ Y: 190                     Y: 370                     Y: 550 │
+└─────────────────┘ │ Send Internal              Send Team                  Send   │
+                    │ Alert Calendar Error       Notification Email         Telegram│
+                    │                                                        Confirm │
+                    └─────────────────────────────────────────────────────────────┘
+
+═══════════════════════════════════════════════════════════════════════════════════
+
+🎯 FLUJO PRINCIPAL (De izquierda a derecha):
+Trigger → Parse → Sheets → Calendar → Log → Prepare → Success → [6 Salidas]
+
+📊 ESTADÍSTICAS DEL LAYOUT:
+• Anchura total: 2,800px (9 niveles × 350px spacing)
+• Altura total: 900px (desde Y: -350 hasta Y: +550)
+• Conexiones: 13/13 válidas (100% perfecto)
+• Tiempo optimización: 1ms
+
+🏆 CARACTERÍSTICAS DESTACADAS:
+✅ Pipeline lineal perfecto
+✅ Sin conexiones inversas
+✅ Organización por funciones
+✅ Múltiples salidas organizadas
+✅ Espaciado profesional constante
+
+═══════════════════════════════════════════════════════════════════════════════════

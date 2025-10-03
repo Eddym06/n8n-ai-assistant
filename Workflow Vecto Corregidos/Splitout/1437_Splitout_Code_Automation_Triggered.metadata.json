@@ -1,0 +1,1126 @@
+{
+  "workflow_info": {
+    "id": "dDAqkobn2pqgdl2N",
+    "name": "AI Logo Sheet Extractor to Airtable",
+    "display_name": "AI Logo Sheet Extractor to Airtable",
+    "file_name": "1437_Splitout_Code_Automation_Triggered.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\1437_Splitout_Code_Automation_Triggered.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true,
+    "fingerprint": "30fac0bed709"
+  },
+  "structure": {
+    "total_nodes": 44,
+    "node_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.crypto",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.html",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.airtable"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.crypto",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.html",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 11
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.airtable",
+        "count": 5
+      }
+    ],
+    "triggers": [
+      {
+        "name": "On form submission",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          -660,
+          -220
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Retrieve and Parser Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -180,
+          -220
+        ]
+      },
+      {
+        "name": "JSON it",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          220,
+          -220
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          40,
+          20
+        ]
+      },
+      {
+        "name": "Check if Attribute exists",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          1380,
+          0
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1620,
+          80
+        ]
+      },
+      {
+        "name": "Map Attribute ID",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1840,
+          80
+        ]
+      },
+      {
+        "name": "Loop Over Attributes",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          720,
+          -40
+        ]
+      },
+      {
+        "name": "All Attributes",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          940,
+          -60
+        ]
+      },
+      {
+        "name": "Wait for Attribute Creation",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1120,
+          -200
+        ]
+      },
+      {
+        "name": "Change each Attribute to the corresponding RecID",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1340,
+          -200
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          600,
+          -280
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -260,
+          -360
+        ]
+      },
+      {
+        "name": "Split Out Tools",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          440,
+          -220
+        ]
+      },
+      {
+        "name": "Split Out each Attribute String",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1140,
+          100
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2120,
+          -280
+        ]
+      },
+      {
+        "name": "Generate Unique Hash for Name",
+        "type": "n8n-nodes-base.crypto",
+        "position": [
+          2180,
+          -200
+        ]
+      },
+      {
+        "name": "Create if not Exist",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          2400,
+          -100
+        ]
+      },
+      {
+        "name": "Merge Old Data + RecID",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2820,
+          -180
+        ]
+      },
+      {
+        "name": "Only what we need",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          -100
+        ]
+      },
+      {
+        "name": "Determine Attributes we should save",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3040,
+          -180
+        ]
+      },
+      {
+        "name": "Split Out similar",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          3300,
+          20
+        ]
+      },
+      {
+        "name": "Merge1",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          3960,
+          0
+        ]
+      },
+      {
+        "name": "Generate Unique Hash for Similar",
+        "type": "n8n-nodes-base.crypto",
+        "position": [
+          3520,
+          -100
+        ]
+      },
+      {
+        "name": "It Should exists",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          3740,
+          -100
+        ]
+      },
+      {
+        "name": "All Similar",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4180,
+          0
+        ]
+      },
+      {
+        "name": "Merge2",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          4400,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3200,
+          -280
+        ]
+      },
+      {
+        "name": "Change each Smiliar to the corresponding RecID",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          4600,
+          -160
+        ]
+      },
+      {
+        "name": "Determine Similar we should save",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          4880,
+          -160
+        ]
+      },
+      {
+        "name": "Save all this juicy data",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          5120,
+          -160
+        ]
+      },
+      {
+        "name": "Map Agent Input",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -440,
+          -220
+        ]
+      },
+      {
+        "name": "gpt-4o",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -200,
+          20
+        ]
+      },
+      {
+        "name": "Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1440,
+          -580
+        ]
+      },
+      {
+        "name": "Table: Tools",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1340,
+          340
+        ]
+      },
+      {
+        "name": "Table: Attributes",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1000,
+          340
+        ]
+      },
+      {
+        "name": "Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1440,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1420,
+          580
+        ]
+      },
+      {
+        "name": "make it a readable list",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          -420,
+          800
+        ]
+      },
+      {
+        "name": "Get Schema",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          -640,
+          800
+        ]
+      },
+      {
+        "name": "Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -720,
+          660
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1080,
+          580
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -160,
+          -460
+        ]
+      },
+      {
+        "name": "Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2440,
+          -580
+        ]
+      }
+    ],
+    "connections_count": 31,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 43
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "ai and machine learning",
+    "use_cases": [],
+    "complexity_score": 1150,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "wait for attribute creation",
+      "note1",
+      "create if not exist",
+      "it should exists",
+      "sticky note5",
+      "map attribute id",
+      "gpt-4o",
+      "determine attributes we should save",
+      "merge2",
+      "formTrigger",
+      "on form submission",
+      "sticky note3",
+      "structured output parser",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "stickyNote",
+      "save all this juicy data",
+      "note3",
+      "sticky note6",
+      "retrieve and parser agent",
+      "split out similar",
+      "change each attribute to the corresponding recid",
+      "merge1",
+      "split out each attribute string",
+      "all attributes",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "get schema",
+      "html",
+      "sticky note2",
+      "generate unique hash for name",
+      "splitInBatches",
+      "code",
+      "crypto",
+      "table: tools",
+      "loop over attributes",
+      "ai and machine learning",
+      "sticky note4",
+      "set",
+      "merge",
+      "change each smiliar to the corresponding recid",
+      "splitOut",
+      "note",
+      "split out tools",
+      "only what we need",
+      "map agent input",
+      "merge old data + recid",
+      "table: attributes",
+      "sticky note",
+      "@n8n/n8n nodes langchain.agent",
+      "check if attribute exists",
+      "make it a readable list",
+      "all similar",
+      "complex",
+      "generate unique hash for similar",
+      "airtable",
+      "determine similar we should save",
+      "note4",
+      "noOp",
+      "sticky note1",
+      "json it"
+    ],
+    "description": "'AI Logo Sheet Extractor to Airtable' es un workflow diseñado para ai and machine learning con 44 nodos activado por On form submission que ejecuta: Retrieve and Parser Agent, JSON it, Structured Output Parser en la categoría de ai-ml.",
+    "semantic_content": "Workflow: AI Logo Sheet Extractor to Airtable. Nodos: On form submission (formTrigger), Retrieve and Parser Agent (@n8n/n8n-nodes-langchain.agent), JSON it (set), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Check if Attribute exists (airtable), Merge (merge), Map Attribute ID (set), Loop Over Attributes (splitInBatches), All Attributes (set), Wait for Attribute Creation (merge), Change each Attribute to the corresponding RecID (code), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Split Out Tools (splitOut), Split Out each Attribute String (splitOut), Sticky Note2 (stickyNote), Generate Unique Hash for Name (crypto), Create if not Exist (airtable), Merge Old Data + RecID (merge), Only what we need (set), Determine Attributes we should save (code), Split Out similar (splitOut), Merge1 (merge), Generate Unique Hash for Similar (crypto), It Should exists (airtable), All Similar (set), Merge2 (merge), Sticky Note3 (stickyNote), Change each Smiliar to the corresponding RecID (code), Determine Similar we should save (code), Save all this juicy data (airtable), Map Agent Input (set), gpt-4o (@n8n/n8n-nodes-langchain.lmChatOpenAi), Note3 (stickyNote), Table: Tools (noOp), Table: Attributes (noOp), Note (stickyNote), Sticky Note4 (stickyNote), make it a readable list (html), Get Schema (airtable), Note1 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Note4 (stickyNote). Propósito: ai and machine learning. Categoría: ai-ml. Disparadores: On form submission",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.formTrigger",
+      "Retrieve and Parser Agent",
+      "n8n-nodes-base.set",
+      "On form submission",
+      "JSON it",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "Structured Output Parser"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.airtable",
+      "n8n-nodes-base.noop",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.formtrigger",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.html",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.crypto",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "code",
+      "1437",
+      "triggered",
+      "automation",
+      "splitout",
+      "1437_splitout_code_automation_triggered"
+    ],
+    "alternative_names": [
+      "AI Logo Sheet Extractor to Airtable"
+    ],
+    "related_concepts": [
+      "ai and machine learning",
+      "ai-ml"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": true,
+    "has_http_requests": false,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.formTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 76.52173913043478,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 85.30434782608695
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:18.181092"
+  },
+  "semantic_vector": [
+    -0.043524522334337234,
+    -0.05943102389574051,
+    -0.008654196746647358,
+    -0.05506093055009842,
+    0.05017131194472313,
+    -0.0476195402443409,
+    0.03219245746731758,
+    -0.024037128314375877,
+    -0.057989683002233505,
+    0.059290386736392975,
+    -0.02949925698339939,
+    -0.057398222386837006,
+    0.033487167209386826,
+    0.04253843426704407,
+    -0.028394972905516624,
+    0.05944766849279404,
+    0.0585472472012043,
+    -0.05932740867137909,
+    0.05751483142375946,
+    -0.04545137286186218,
+    -0.033224646002054214,
+    0.03857261687517166,
+    0.0434686504304409,
+    0.04352206364274025,
+    0.04683142527937889,
+    -0.05843675881624222,
+    -0.03675420954823494,
+    0.05925741046667099,
+    -0.04114368185400963,
+    0.04977179318666458,
+    0.05844306945800781,
+    -0.04459342733025551,
+    0.028619449585676193,
+    -0.011725696735084057,
+    -0.021608196198940277,
+    -0.01823968067765236,
+    -0.038579802960157394,
+    0.0358131118118763,
+    0.004939809907227755,
+    -0.04466370865702629,
+    -0.05785788968205452,
+    -0.034174997359514236,
+    0.030719555914402008,
+    0.02148468606173992,
+    0.059446707367897034,
+    -0.04728897660970688,
+    -0.01858566701412201,
+    -0.05528213083744049,
+    -0.05333418399095535,
+    -0.056939538568258286,
+    -0.038867104798555374,
+    -0.02375822514295578,
+    -0.057453133165836334,
+    -0.04065563529729843,
+    -0.017559152096509933,
+    -0.05932341888546944,
+    0.05488111823797226,
+    -0.01536985021084547,
+    0.03990427404642105,
+    0.04047488048672676,
+    -0.04729102551937103,
+    0.002781989285722375,
+    0.006416390649974346,
+    0.04318784177303314,
+    -0.05586759373545647,
+    0.056660301983356476,
+    0.058334916830062866,
+    -0.008777876384556293,
+    0.052565328776836395,
+    0.01608174294233322,
+    -0.05933590605854988,
+    0.04601956531405449,
+    -0.006052142940461636,
+    0.05926912650465965,
+    -0.04550877586007118,
+    0.04667985811829567,
+    0.05177612975239754,
+    -0.05738646164536476,
+    -0.04586654528975487,
+    0.024300871416926384,
+    0.05053273215889931,
+    -0.004432349000126123,
+    -0.0007932857843115926,
+    -0.05667795613408089,
+    0.05519343167543411,
+    0.0548635795712471,
+    0.03223426640033722,
+    -0.042709946632385254,
+    -0.04787610098719597,
+    -0.008149073459208012,
+    0.01422030758112669,
+    -0.035517264157533646,
+    0.037706051021814346,
+    -0.033344484865665436,
+    0.05521464720368385,
+    -0.04887642711400986,
+    -0.042529478669166565,
+    0.009694243781268597,
+    -0.048219241201877594,
+    -0.059447310864925385,
+    0.02563362568616867,
+    -0.013255813159048557,
+    0.051200322806835175,
+    0.058168843388557434,
+    0.05685250833630562,
+    0.05548248440027237,
+    0.05923514813184738,
+    0.009462131187319756,
+    -0.03557681664824486,
+    -0.04759293794631958,
+    -0.018034515902400017,
+    -0.03952630236744881,
+    -0.04736893251538277,
+    0.019309399649500847,
+    0.02026653103530407,
+    -0.01148783229291439,
+    -0.0212432611733675,
+    -0.0015584913780912757,
+    0.033290453255176544,
+    0.007740834727883339,
+    0.010728657245635986,
+    0.034893035888671875,
+    -0.0034490579273551702,
+    0.047883473336696625,
+    0.05245847627520561,
+    0.05357617512345314,
+    -0.04173460602760315,
+    0.054734691977500916,
+    0.05683929845690727,
+    -0.0408802330493927,
+    -0.040592677891254425,
+    0.05173398554325104,
+    0.027708638459444046,
+    -0.02380026876926422,
+    0.05854317918419838,
+    0.01443865429610014,
+    -0.057138584554195404,
+    0.0259645227342844,
+    -0.009389537386596203,
+    -0.05942229926586151,
+    0.026437973603606224,
+    0.059447601437568665,
+    -0.047511473298072815,
+    -0.007810872979462147,
+    -0.0008408729918301105,
+    -0.05944613367319107,
+    0.04982598498463631,
+    -0.025042574852705002,
+    0.041196875274181366,
+    0.037603337317705154,
+    -0.04855843633413315,
+    -0.057279691100120544,
+    -0.005681023932993412,
+    -0.04942850396037102,
+    0.0576762780547142,
+    0.059447031468153,
+    -0.01893777772784233,
+    -0.05939419940114021,
+    0.05551466718316078,
+    -0.04198645427823067,
+    -0.0594165213406086,
+    -0.05622321367263794,
+    -0.004753329791128635,
+    0.0593251958489418,
+    -0.042631734162569046,
+    -0.05802881345152855,
+    -0.05570348724722862,
+    0.059364721179008484,
+    -0.022292479872703552,
+    -0.024036528542637825,
+    0.0427691750228405,
+    0.02808249182999134,
+    0.055500395596027374,
+    0.055796246975660324,
+    -0.05569235235452652,
+    0.03317875787615776,
+    -0.04473350942134857,
+    0.03518002852797508,
+    0.030121710151433945,
+    -0.05409744381904602,
+    0.05181204900145531,
+    0.05073908343911171,
+    -0.05821768566966057,
+    0.040876321494579315,
+    0.001455022837035358,
+    -0.02502439171075821,
+    -0.05925130099058151,
+    0.05942162871360779,
+    -0.036651890724897385,
+    0.05862283706665039,
+    0.04728550836443901,
+    0.03142959251999855,
+    -0.03883945569396019,
+    -0.05917767435312271,
+    -0.05472305789589882,
+    -0.058025017380714417,
+    -0.0008553392835892737,
+    0.05944766849279404,
+    0.042793434113264084,
+    -0.057167623192071915,
+    0.052794214338064194,
+    0.05853702500462532,
+    -0.05839597433805466,
+    0.03785962238907814,
+    0.04940761998295784,
+    -0.012148630805313587,
+    -0.038826845586299896,
+    -0.032958921045064926,
+    -0.05944351851940155,
+    0.01736569032073021,
+    0.04216615855693817,
+    0.029153533279895782,
+    0.03408033400774002,
+    0.026601364836096764,
+    -0.05941833183169365,
+    -0.05699199438095093,
+    0.048859044909477234,
+    0.05526381731033325,
+    -0.03711262717843056,
+    0.04497266188263893,
+    -0.006109509151428938,
+    -0.01763923279941082,
+    -0.005294769536703825,
+    0.05520147830247879,
+    -0.013649470172822475,
+    -0.05779045820236206,
+    -0.056834347546100616,
+    -0.0539410337805748,
+    -0.056235481053590775,
+    -0.059309035539627075,
+    -0.03157127648591995,
+    -0.05445202812552452,
+    0.001854727859608829,
+    -0.059447649866342545,
+    0.054812200367450714,
+    0.058187082409858704,
+    0.059447649866342545,
+    0.059420350939035416,
+    -0.04677674174308777,
+    0.004821500740945339,
+    0.04582103714346886,
+    0.05630096048116684,
+    -0.05941871181130409,
+    0.02757413499057293,
+    0.025165777653455734,
+    0.052619945257902145,
+    0.05604389309883118,
+    0.05450540408492088,
+    0.04217395558953285,
+    0.059447064995765686,
+    -0.05891720578074455,
+    -0.017999961972236633,
+    0.004299748223274946,
+    -0.04531467705965042,
+    -0.006013570819050074,
+    -0.05917254462838173,
+    -0.02695857733488083,
+    0.05944766849279404,
+    -0.0017435649642720819,
+    0.046802956610918045,
+    -0.033804237842559814,
+    0.0091724107041955,
+    0.027372291311621666,
+    -0.019867291674017906,
+    0.04814569652080536,
+    0.05900321528315544,
+    0.004786538425832987,
+    -0.04984467476606369,
+    -0.05668389052152634,
+    0.02294081449508667,
+    -0.05489249527454376,
+    0.046111561357975006,
+    -0.040702249854803085,
+    0.057059597223997116,
+    0.043560612946748734,
+    0.011130079627037048,
+    -0.02227216772735119,
+    0.04714510217308998,
+    0.059447646141052246,
+    0.057148274034261703,
+    0.03334574028849602,
+    0.04051569849252701,
+    0.0279875285923481,
+    -0.006075058598071337,
+    -0.04053721949458122,
+    -0.0593784935772419,
+    0.033616647124290466,
+    0.05064838379621506,
+    -0.04021899774670601,
+    0.058033835142850876,
+    -0.05210205167531967,
+    0.04666624963283539,
+    0.05848872289061546,
+    0.01835205778479576,
+    0.05452347919344902,
+    -0.05699872225522995,
+    0.05143168196082115,
+    -0.05598370358347893,
+    0.00669955275952816,
+    -0.0029437290504574776,
+    -0.05867098644375801,
+    0.03378758952021599,
+    0.0580160990357399,
+    -0.05155475437641144,
+    0.04369300231337547,
+    0.024596398696303368,
+    -0.004836621228605509,
+    -0.024707701057195663,
+    0.05644248053431511,
+    -0.04093072935938835,
+    -0.036309827119112015,
+    -0.009671607986092567,
+    0.05142704397439957,
+    -0.04733487591147423,
+    0.030291682109236717,
+    -0.03673342615365982,
+    0.04996993765234947,
+    0.04152948781847954,
+    0.0586504191160202,
+    -0.05117468908429146,
+    0.021856142207980156,
+    -0.05605052039027214,
+    -0.028743814677000046,
+    -0.05374528467655182,
+    0.05361809954047203,
+    -0.034707263112068176,
+    0.053374744951725006,
+    -0.007557992357760668,
+    -0.013899379409849644,
+    -0.047594618052244186,
+    -0.03485409542918205,
+    -0.05059412866830826,
+    -0.03703276813030243,
+    0.059358783066272736,
+    -0.05850919708609581,
+    0.013935252092778683,
+    0.042569179087877274,
+    -0.05508269742131233,
+    0.056948307901620865,
+    -0.05066019296646118,
+    -0.001292896457016468,
+    -0.034311916679143906,
+    0.03132489323616028,
+    -0.046099703758955,
+    -0.05944766849279404,
+    0.032260723412036896,
+    0.04792000353336334,
+    -0.007128104567527771,
+    -0.058600880205631256,
+    0.046446554362773895,
+    0.040687207132577896,
+    0.017871249467134476,
+    0.04531651735305786,
+    0.053339336067438126,
+    -0.024753231555223465,
+    -0.01649998500943184,
+    -0.05944758653640747,
+    0.04939595237374306,
+    -0.032294388860464096,
+    -0.04775495454668999,
+    0.01306351087987423,
+    0.0031606091652065516,
+    -0.059447646141052246,
+    0.059266746044158936,
+    0.002394256182014942,
+    0.058769017457962036,
+    0.04353543743491173,
+    -0.029047565534710884,
+    0.05921871215105057,
+    -0.04716085270047188,
+    -0.0428326390683651,
+    -0.05298479273915291,
+    -0.05688384920358658,
+    0.05093912407755852,
+    0.056554071605205536,
+    0.05255845561623573,
+    -0.03315320611000061,
+    -0.05752229318022728,
+    0.0047800615429878235,
+    -0.039356689900159836,
+    -0.04229150712490082,
+    0.059380244463682175,
+    0.050560493022203445,
+    -0.05544789135456085,
+    0.010907446965575218,
+    0.014579433016479015,
+    0.057305000722408295,
+    0.05126320943236351,
+    0.05106986314058304,
+    -0.05904746800661087,
+    -0.05588116869330406,
+    -0.003977434244006872,
+    0.04867209494113922,
+    -0.038728196173906326,
+    -0.05496734008193016,
+    0.05791190639138222,
+    -0.007104735821485519,
+    0.020555680617690086,
+    0.019132452085614204,
+    0.029137518256902695,
+    0.057110920548439026,
+    0.04314226284623146,
+    -0.05794236436486244,
+    0.059357013553380966,
+    -0.0321800634264946,
+    0.027899613603949547,
+    -0.059389419853687286,
+    0.04939183220267296,
+    0.054369281977415085,
+    -0.05628957599401474,
+    -0.038258522748947144,
+    -0.04213375970721245,
+    0.010821932926774025,
+    -0.024210885167121887,
+    0.057442620396614075,
+    -0.052478644996881485,
+    -0.054047513753175735,
+    -0.025631049647927284,
+    -0.030382877215743065,
+    0.059106722474098206,
+    0.027760382741689682,
+    0.04234003648161888,
+    -0.05042852461338043,
+    0.003571232547983527,
+    0.009905788116157055,
+    0.01563584990799427,
+    -0.05768909677863121,
+    0.0593760646879673,
+    -0.051633965224027634,
+    0.019972188398241997,
+    0.027593152597546577,
+    0.045514266937971115,
+    -0.057446401566267014,
+    -0.010655940510332584,
+    -0.05887031555175781,
+    -0.054322827607393265,
+    -0.05836367607116699,
+    -0.0528227724134922,
+    -0.05932680517435074,
+    -0.012455977499485016,
+    0.047588832676410675,
+    -0.05227293819189072,
+    -0.04542446881532669,
+    -0.047019775956869125,
+    0.004506747703999281,
+    -0.05573707073926926,
+    0.04207649454474449,
+    -0.05459776520729065,
+    -0.057927388697862625,
+    -0.020768236368894577,
+    0.024016784504055977,
+    0.05501830577850342,
+    0.05944763123989105,
+    0.05239814519882202,
+    0.01786227710545063,
+    -0.05944477394223213,
+    -0.017692187801003456,
+    0.05736192688345909,
+    0.03431551158428192,
+    -0.023307209834456444,
+    -0.010673362761735916,
+    0.05850864574313164,
+    0.05908152088522911,
+    0.059421293437480927,
+    -0.03444373235106468,
+    -0.055513571947813034,
+    0.054244253784418106,
+    -0.04071525111794472,
+    -0.03130721300840378,
+    0.018330024555325508,
+    0.04730852693319321,
+    -0.028059005737304688,
+    -0.026689140126109123,
+    -0.04672204330563545,
+    -0.04686462879180908,
+    0.040100712329149246,
+    0.024666661396622658,
+    0.04838737100362778,
+    -0.017331434413790703,
+    -0.059314191341400146,
+    0.0006285592680796981,
+    0.05733377858996391,
+    0.030975935980677605,
+    -0.05686558783054352,
+    -0.016602983698248863,
+    0.0594242624938488,
+    0.044092725962400436,
+    -0.053539276123046875,
+    -0.038196250796318054,
+    0.05123529210686684,
+    -0.02117747999727726,
+    0.04999683052301407,
+    -0.036767758429050446,
+    0.024284668266773224,
+    -0.05924830958247185,
+    0.05029197037220001,
+    0.039356496185064316,
+    0.059290699660778046,
+    -0.05756741017103195,
+    -0.054787490516901016,
+    0.039515331387519836,
+    0.04782472178339958,
+    0.05386703461408615,
+    -0.05944762006402016,
+    -0.04230888560414314,
+    -0.04979469254612923,
+    -0.05088833346962929,
+    0.04022739827632904,
+    -0.030369767919182777,
+    0.05944763123989105,
+    -0.034184642136096954,
+    -0.05734449625015259
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs ai and machine learning; When working with: On form submission; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for ai and machine learning in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

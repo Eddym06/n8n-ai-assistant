@@ -1,0 +1,111 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -224,
+        -32
+      ],
+      "id": "06da7840-d59c-44b4-9333-336bea94b580",
+      "name": "When chat message received",
+      "webhookId": "4e3c4b97-821e-4172-853b-f5ab12b5707e"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "Debes de responder con una descripcion de la emocion del usuario\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        144,
+        -48
+      ],
+      "id": "116da314-3259-4804-bdf9-c99a0cb97661",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        240,
+        240
+      ],
+      "id": "ff466109-3796-4202-891f-3d670c592ed8",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        16,
+        160
+      ],
+      "id": "b6d5aea3-743b-490a-a357-85dd104a9bbc",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "zrz5nYKdCIiCqc4y",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5622de63-501b-4dce-8561-8e24d5daff68",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d184c9c2952841341b4fe9a215faefda442234c824bc854116a19c4a09f3f2a5"
+  },
+  "id": "fgdhfeIXOGWEb0Bz",
+  "tags": []
+}

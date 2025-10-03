@@ -1,0 +1,1679 @@
+{
+  "nodes": [
+    {
+      "id": "webhook-pedidos-trigger",
+      "name": "Webhook de Pedidos (Shopify/WooCommerce)",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        -260
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "new-order",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "normalizar-datos-pedido",
+      "name": "Normalizar Datos Pedido",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        450,
+        -260
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "orderId",
+            "value": "={{ $json.body.id || $json.body.order_id }}"
+          },
+          {
+            "name": "customerEmail",
+            "value": "={{ $json.body.customer.email || $json.body.billing.email }}"
+          },
+          {
+            "name": "shippingAddress",
+            "value": "={{ $json.body.shipping_address || $json.body.shipping }}"
+          },
+          {
+            "name": "products",
+            "value": "={{ $json.body.line_items || $json.body.items }}"
+          },
+          {
+            "name": "totalAmount",
+            "value": "={{ $json.body.total_price || $json.body.total }}"
+          },
+          {
+            "name": "paymentStatus",
+            "value": "={{ $json.body.financial_status || $json.body.status }}"
+          }
+        ],
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "validar-datos-pedido",
+      "name": "Validar Datos Pedido",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        800,
+        -170
+      ],
+      "parameters": {
+        "functionCode": "const order = $input.first().json;\n\nlet isValid = true;\nlet validationErrors = [];\n\nif (!order.customerEmail || !order.customerEmail.includes('@')) {\n  isValid = false;\n  validationErrors.push('Email inválido');\n}\n\nif (!order.shippingAddress || !order.shippingAddress.address1) {\n  isValid = false;\n  validationErrors.push('Dirección de envío inválida');\n}\n\nif (!order.products || order.products.length === 0) {\n  isValid = false;\n  validationErrors.push('No hay productos en el pedido');\n}\n\nreturn [{ json: { ...order, isValid, validationErrors } }];"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "if-datos-pedido-validos",
+      "name": "Datos Pedido Válidos?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1150,
+        -170
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.isValid }}",
+              "operation": "true"
+            }
+          ]
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "gmail-solicitar-correccion",
+      "name": "Gmail: Solicitar Corrección Datos",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        1500,
+        -170
+      ],
+      "parameters": {
+        "operation": "send",
+        "to": "={{ $json.customerEmail }}",
+        "subject": "Corrección de Datos de tu Pedido #{{ $json.orderId }}",
+        "body": "Hola,\n\nHemos detectado un problema con los datos de tu pedido #{{ $json.orderId }}. Por favor, revisa tu información de contacto y dirección de envío. Errores: {{ $json.validationErrors.join(', ') }}\n\nGracias,\nTu Tienda",
+        "options": {}
+      },
+      "credentials": {
+        "gmailApi": {
+          "id": "gmail-credentials-id",
+          "name": "Gmail Account"
+        }
+      }
+    },
+    {
+      "id": "slack-alerta-datos-invalidos",
+      "name": "Slack: Alerta Datos Inválidos",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1850,
+        190
+      ],
+      "parameters": {
+        "channel": "#pedidos-alertas",
+        "text": "🚨 Alerta: Datos de pedido inválidos para #{{ $json.orderId }}. Errores: {{ $json.validationErrors.join(', ') }}. Cliente: {{ $json.customerEmail }}",
+        "options": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials-id",
+          "name": "Slack Account"
+        }
+      }
+    },
+    {
+      "id": "mongodb-log-datos-invalidos",
+      "name": "MongoDB: Log Datos Inválidos",
+      "type": "n8n-nodes-base.mongoDb",
+      "position": [
+        2200,
+        190
+      ],
+      "parameters": {
+        "collection": "order_logs",
+        "operation": "insertOne",
+        "document": "={{ JSON.stringify({ orderId: $json.orderId, status: 'invalid_data', errors: $json.validationErrors, timestamp: new Date() }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "mongoDb": {
+          "id": "mongodb-credentials-id",
+          "name": "MongoDB Account"
+        }
+      }
+    },
+    {
+      "id": "if-cliente-vip",
+      "name": "Cliente VIP?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1500,
+        -350
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.customerEmail }}",
+              "operation": "endsWith",
+              "value2": "@vip.com"
+            }
+          ]
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "set-proceso-vip",
+      "name": "Set: Proceso VIP",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1850,
+        10
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "isVIP",
+            "value": "true"
+          }
+        ],
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "airtable-verificar-inventario",
+      "name": "Airtable: Verificar Inventario",
+      "type": "n8n-nodes-base.airtable",
+      "position": [
+        2200,
+        10
+      ],
+      "parameters": {
+        "baseId": "airtable-base-id",
+        "tableId": "Productos",
+        "operation": "getAll",
+        "options": {
+          "filterByFormula": "={{ $json.products.map(p => `RECORD_ID() = '${p.product_id}'`).join(' OR ') }}"
+        }
+      },
+      "credentials": {
+        "airtableApi": {
+          "id": "airtable-credentials-id",
+          "name": "Airtable Account"
+        }
+      }
+    },
+    {
+      "id": "if-inventario-suficiente",
+      "name": "Inventario Suficiente?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        2550,
+        10
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json.products.every(p => $node['Airtable: Verificar Inventario'].json.find(item => item.id === p.product_id && item.fields.Stock >= p.quantity)) }}",
+              "operation": "true"
+            }
+          ]
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "slack-alerta-inventario-bajo",
+      "name": "Slack: Alerta Inventario Bajo",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        2900,
+        100
+      ],
+      "parameters": {
+        "channel": "#inventario-alertas",
+        "text": "⚠️ Alerta: Inventario insuficiente para pedido #{{ $json.orderId }}. Productos afectados: {{ $json.products.filter(p => !$node['Airtable: Verificar Inventario'].json.find(item => item.id === p.product_id && item.fields.Stock >= p.quantity)).map(p => p.name).join(', ') }}",
+        "options": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials-id",
+          "name": "Slack Account"
+        }
+      }
+    },
+    {
+      "id": "discord-notificar-proveedores",
+      "name": "Discord: Notificar Proveedores",
+      "type": "n8n-nodes-base.discord",
+      "position": [
+        3250,
+        190
+      ],
+      "parameters": {
+        "channelId": "discord-channel-id",
+        "text": "📦 Urgente: Pedido #{{ $json.orderId }} con inventario bajo. Productos a reponer: {{ $json.products.filter(p => !$node['Airtable: Verificar Inventario'].json.find(item => item.id === p.product_id && item.fields.Stock >= p.quantity)).map(p => p.name).join(', ') }}",
+        "options": {}
+      },
+      "credentials": {
+        "discordApi": {
+          "id": "discord-credentials-id",
+          "name": "Discord Account"
+        }
+      }
+    },
+    {
+      "id": "gmail-notificar-cliente-inventario",
+      "name": "Gmail: Notificar Cliente Inventario",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        3600,
+        190
+      ],
+      "parameters": {
+        "operation": "send",
+        "to": "={{ $json.customerEmail }}",
+        "subject": "Actualización de tu Pedido #{{ $json.orderId }} - Inventario",
+        "body": "Hola,\n\nLamentamos informarte que algunos productos de tu pedido #{{ $json.orderId }} están temporalmente fuera de stock. Te notificaremos tan pronto como estén disponibles. Productos afectados: {{ $json.products.filter(p => !$node['Airtable: Verificar Inventario'].json.find(item => item.id === p.product_id && item.fields.Stock >= p.quantity)).map(p => p.name).join(', ') }}\n\nGracias por tu paciencia,\nTu Tienda",
+        "options": {}
+      },
+      "credentials": {
+        "gmailApi": {
+          "id": "gmail-credentials-id",
+          "name": "Gmail Account"
+        }
+      }
+    },
+    {
+      "id": "mongodb-log-inventario-insuficiente",
+      "name": "MongoDB: Log Inventario Insuficiente",
+      "type": "n8n-nodes-base.mongoDb",
+      "position": [
+        3950,
+        280
+      ],
+      "parameters": {
+        "collection": "order_logs",
+        "operation": "insertOne",
+        "document": "={{ JSON.stringify({ orderId: $json.orderId, status: 'insufficient_inventory', products: $json.products.filter(p => !$node['Airtable: Verificar Inventario'].json.find(item => item.id === p.product_id && item.fields.Stock >= p.quantity)).map(p => p.name), timestamp: new Date() }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "mongoDb": {
+          "id": "mongodb-credentials-id",
+          "name": "MongoDB Account"
+        }
+      }
+    },
+    {
+      "id": "function-calcular-totales",
+      "name": "Function: Calcular Totales (Impuestos, Envío, Descuentos)",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        2900,
+        -80
+      ],
+      "parameters": {
+        "functionCode": "const order = $input.first().json;\n\nlet subtotal = order.products.reduce((sum, p) => sum + (p.price * p.quantity), 0);\nlet shippingCost = 10; // Ejemplo\nlet taxRate = 0.08; // Ejemplo 8%\nlet discount = 0; // Ejemplo\n\n// Aplicar cupones/descuentos (lógica más compleja aquí)\nif (order.couponCode === 'SAVE10') {\n  discount = subtotal * 0.10;\n}\n\nlet taxes = (subtotal - discount + shippingCost) * taxRate;\nlet finalTotal = subtotal - discount + shippingCost + taxes;\n\nreturn [{ json: { ...order, subtotal, shippingCost, taxes, discount, finalTotal } }];"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "stripe-verificar-pago",
+      "name": "Stripe: Verificar Pago",
+      "type": "n8n-nodes-base.stripe",
+      "position": [
+        3250,
+        10
+      ],
+      "parameters": {
+        "operation": "retrieveCharge",
+        "id": "={{ $json.paymentIntentId || $json.body.payment_intent }}",
+        "options": {}
+      },
+      "credentials": {
+        "stripeApi": {
+          "id": "stripe-credentials-id",
+          "name": "Stripe Account"
+        }
+      }
+    },
+    {
+      "id": "if-pago-aprobado",
+      "name": "Pago Aprobado?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        3600,
+        10
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node['Stripe: Verificar Pago'].json.status }}",
+              "operation": "equalTo",
+              "value2": "succeeded"
+            }
+          ]
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "gmail-notificar-pago-fallido",
+      "name": "Gmail: Notificar Pago Fallido",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        3950,
+        100
+      ],
+      "parameters": {
+        "operation": "send",
+        "to": "={{ $json.customerEmail }}",
+        "subject": "Problema con el Pago de tu Pedido #{{ $json.orderId }}",
+        "body": "Hola,\n\nHa habido un problema al procesar el pago de tu pedido #{{ $json.orderId }}. Por favor, revisa tus detalles de pago o intenta con otro método.\n\nGracias,\nTu Tienda",
+        "options": {}
+      },
+      "credentials": {
+        "gmailApi": {
+          "id": "gmail-credentials-id",
+          "name": "Gmail Account"
+        }
+      }
+    },
+    {
+      "id": "slack-alerta-pago-fallido",
+      "name": "Slack: Alerta Pago Fallido",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        4300,
+        190
+      ],
+      "parameters": {
+        "channel": "#pagos-alertas",
+        "text": "🚨 Alerta: Pago fallido para pedido #{{ $json.orderId }}. Cliente: {{ $json.customerEmail }}",
+        "options": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials-id",
+          "name": "Slack Account"
+        }
+      }
+    },
+    {
+      "id": "mongodb-log-pago-fallido",
+      "name": "MongoDB: Log Pago Fallido",
+      "type": "n8n-nodes-base.mongoDb",
+      "position": [
+        4650,
+        190
+      ],
+      "parameters": {
+        "collection": "order_logs",
+        "operation": "insertOne",
+        "document": "={{ JSON.stringify({ orderId: $json.orderId, status: 'payment_failed', customerEmail: $json.customerEmail, timestamp: new Date() }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "mongoDb": {
+          "id": "mongodb-credentials-id",
+          "name": "MongoDB Account"
+        }
+      }
+    },
+    {
+      "id": "google-sheets-registrar-pedido",
+      "name": "Google Sheets: Registrar Pedido",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        3950,
+        -80
+      ],
+      "parameters": {
+        "operation": "append",
+        "spreadsheetId": "google-sheets-id",
+        "sheetName": "Pedidos",
+        "data": "={{ JSON.stringify([['orderId', 'customerEmail', 'totalAmount', 'status', 'timestamp'], [$json.orderId, $json.customerEmail, $json.finalTotal, 'procesado', new Date().toISOString()]]) }}",
+        "options": {},
+        "sheetId": "0"
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-credentials-id",
+          "name": "Google Sheets Account"
+        }
+      }
+    },
+    {
+      "id": "airtable-actualizar-inventario",
+      "name": "Airtable: Actualizar Inventario",
+      "type": "n8n-nodes-base.airtable",
+      "position": [
+        4300,
+        10
+      ],
+      "parameters": {
+        "baseId": "airtable-base-id",
+        "tableId": "Productos",
+        "operation": "update",
+        "records": "={{ $json.products.map(p => ({ id: p.product_id, fields: { Stock: $node['Airtable: Verificar Inventario'].json.find(item => item.id === p.product_id).fields.Stock - p.quantity } })) }}",
+        "options": {}
+      },
+      "credentials": {
+        "airtableApi": {
+          "id": "airtable-credentials-id",
+          "name": "Airtable Account"
+        }
+      }
+    },
+    {
+      "id": "google-calendar-agendar-entrega",
+      "name": "Google Calendar: Agendar Entrega",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        4650,
+        10
+      ],
+      "parameters": {
+        "operation": "create",
+        "calendarId": "primary",
+        "title": "Entrega Pedido #{{ $json.orderId }}",
+        "description": "Cliente: {{ $json.customerEmail }}\nDirección: {{ $json.shippingAddress.address1 }}, {{ $json.shippingAddress.city }}",
+        "startDateTime": "={{ new Date(Date.now() + 2 * 24 * 60 * 60 * 1000).toISOString() }}",
+        "endDateTime": "={{ new Date(Date.now() + 2 * 24 * 60 * 60 * 1000 + 60 * 60 * 1000).toISOString() }}",
+        "options": {}
+      },
+      "credentials": {
+        "googleCalendarOAuth2Api": {
+          "id": "google-calendar-credentials-id",
+          "name": "Google Calendar Account"
+        }
+      }
+    },
+    {
+      "id": "gmail-confirmacion-cliente",
+      "name": "Gmail: Confirmación Cliente",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        5000,
+        100
+      ],
+      "parameters": {
+        "operation": "send",
+        "to": "={{ $json.customerEmail }}",
+        "subject": "¡Tu Pedido #{{ $json.orderId }} ha sido Confirmado!",
+        "body": "Hola,\n\n¡Gracias por tu compra! Tu pedido #{{ $json.orderId }} ha sido confirmado y está siendo procesado. Te enviaremos una notificación cuando esté en camino.\n\nTotal: {{ $json.finalTotal }} {{ $json.currency || 'USD' }}\n\nSaludos,\nTu Tienda",
+        "options": {}
+      },
+      "credentials": {
+        "gmailApi": {
+          "id": "gmail-credentials-id",
+          "name": "Gmail Account"
+        }
+      }
+    },
+    {
+      "id": "whatsapp-business-mensaje-cliente",
+      "name": "WhatsApp Business: Mensaje Cliente",
+      "type": "n8n-nodes-base.whatsappBusiness",
+      "position": [
+        5350,
+        100
+      ],
+      "parameters": {
+        "operation": "sendTemplate",
+        "phoneNumberId": "whatsapp-phone-number-id",
+        "to": "={{ $json.customerPhone }}",
+        "templateName": "order_confirmation",
+        "languageCode": "es",
+        "components": [
+          {
+            "type": "body",
+            "parameters": [
+              {
+                "type": "text",
+                "text": "={{ $json.orderId }}"
+              },
+              {
+                "type": "text",
+                "text": "={{ $json.finalTotal }}"
+              }
+            ]
+          }
+        ]
+      },
+      "credentials": {
+        "whatsappBusinessApi": {
+          "id": "whatsapp-credentials-id",
+          "name": "WhatsApp Business Account"
+        }
+      }
+    },
+    {
+      "id": "slack-notificacion-equipo",
+      "name": "Slack: Notificación Equipo",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        5700,
+        100
+      ],
+      "parameters": {
+        "channel": "#pedidos-nuevos",
+        "text": "🎉 Nuevo Pedido #{{ $json.orderId }} de {{ $json.customerEmail }} por {{ $json.finalTotal }} {{ $json.currency || 'USD' }}",
+        "options": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials-id",
+          "name": "Slack Account"
+        }
+      }
+    },
+    {
+      "id": "notion-actualizar-dashboard",
+      "name": "Notion: Actualizar Dashboard",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        6050,
+        100
+      ],
+      "parameters": {
+        "operation": "createPage",
+        "databaseId": "notion-database-id",
+        "properties": [
+          {
+            "name": "Order ID",
+            "value": "={{ $json.orderId }}"
+          },
+          {
+            "name": "Customer Email",
+            "value": "={{ $json.customerEmail }}"
+          },
+          {
+            "name": "Total",
+            "value": "={{ $json.finalTotal }}"
+          },
+          {
+            "name": "Status",
+            "value": "Processed"
+          }
+        ],
+        "options": {}
+      },
+      "credentials": {
+        "notionApi": {
+          "id": "notion-credentials-id",
+          "name": "Notion Account"
+        }
+      }
+    },
+    {
+      "id": "http-request-deteccion-fraude",
+      "name": "HTTP Request: Detección Fraude",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        6400,
+        100
+      ],
+      "parameters": {
+        "url": "https://api.fraud-detection.com/check",
+        "method": "POST",
+        "bodyParameters": {
+          "orderId": "={{ $json.orderId }}",
+          "customerEmail": "={{ $json.customerEmail }}",
+          "totalAmount": "={{ $json.finalTotal }}",
+          "shippingAddress": "={{ $json.shippingAddress }}"
+        },
+        "options": {}
+      },
+      "credentials": {
+        "httpBasicAuth": {
+          "id": "fraud-detection-credentials-id",
+          "name": "Fraud Detection API"
+        }
+      }
+    },
+    {
+      "id": "if-fraude-detectado",
+      "name": "Fraude Detectado?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        6750,
+        100
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node['HTTP Request: Detección Fraude'].json.isFraud }}",
+              "operation": "true"
+            }
+          ]
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "slack-alerta-fraude",
+      "name": "Slack: Alerta Fraude",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        7100,
+        100
+      ],
+      "parameters": {
+        "channel": "#fraude-alertas",
+        "text": "🚨 ALERTA DE FRAUDE: Pedido #{{ $json.orderId }} detectado como potencial fraude. Cliente: {{ $json.customerEmail }}",
+        "options": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials-id",
+          "name": "Slack Account"
+        }
+      }
+    },
+    {
+      "id": "mongodb-log-pedido-procesado",
+      "name": "MongoDB: Log Pedido Procesado",
+      "type": "n8n-nodes-base.mongoDb",
+      "position": [
+        7450,
+        100
+      ],
+      "parameters": {
+        "collection": "order_logs",
+        "operation": "insertOne",
+        "document": "={{ JSON.stringify({ orderId: $json.orderId, status: 'processed', customerEmail: $json.customerEmail, total: $json.finalTotal, timestamp: new Date() }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "mongoDb": {
+          "id": "mongodb-credentials-id",
+          "name": "MongoDB Account"
+        }
+      }
+    },
+    {
+      "id": "cron-verificacion-inventario-programada",
+      "name": "Cron: Verificación Inventario Programada",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        100,
+        -80
+      ],
+      "parameters": {
+        "interval": "hours",
+        "value": 1,
+        "options": {},
+        "cronExpression": "0 */6 * * *"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "airtable-obtener-inventario-completo",
+      "name": "Airtable: Obtener Inventario Completo",
+      "type": "n8n-nodes-base.airtable",
+      "position": [
+        450,
+        -80
+      ],
+      "parameters": {
+        "baseId": "airtable-base-id",
+        "tableId": "Productos",
+        "operation": "getAll",
+        "options": {}
+      },
+      "credentials": {
+        "airtableApi": {
+          "id": "airtable-credentials-id",
+          "name": "Airtable Account"
+        }
+      }
+    },
+    {
+      "id": "function-identificar-productos-bajos",
+      "name": "Function: Identificar Productos Bajos",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        800,
+        10
+      ],
+      "parameters": {
+        "functionCode": "const products = $input.all();\nconst lowStockThreshold = 10; // Define tu umbral de stock bajo\n\nconst lowStockProducts = products.filter(p => p.json.fields.Stock <= lowStockThreshold);\n\nreturn lowStockProducts;"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "loop-over-items-productos-bajos",
+      "name": "Loop Over Items: Procesar Productos Bajos",
+      "type": "n8n-nodes-base.loopOverItems",
+      "position": [
+        1150,
+        10
+      ],
+      "parameters": {
+        "batchSize": 10
+      },
+      "credentials": {}
+    },
+    {
+      "id": "discord-alerta-inventario-bajo-discord",
+      "name": "Discord: Alerta Inventario Bajo Discord",
+      "type": "n8n-nodes-base.discord",
+      "position": [
+        1500,
+        10
+      ],
+      "parameters": {
+        "channelId": "discord-channel-id",
+        "text": "⚠️ Inventario bajo para {{ $json.fields.Name }}. Stock actual: {{ $json.fields.Stock }}",
+        "options": {}
+      },
+      "credentials": {
+        "discordApi": {
+          "id": "discord-credentials-id",
+          "name": "Discord Account"
+        }
+      }
+    },
+    {
+      "id": "slack-notificar-proveedor-slack",
+      "name": "Slack: Notificar Proveedor Slack",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1500,
+        190
+      ],
+      "parameters": {
+        "channel": "#proveedores-alertas",
+        "text": "📢 Reponer stock de {{ $json.fields.Name }}. Stock actual: {{ $json.fields.Stock }}. Contactar a proveedor: {{ $json.fields.SupplierEmail }}",
+        "options": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials-id",
+          "name": "Slack Account"
+        }
+      }
+    },
+    {
+      "id": "stripe-trigger-pagos-completados-directo",
+      "name": "Stripe Trigger: Pagos Completados (Directo)",
+      "type": "n8n-nodes-base.stripeTrigger",
+      "position": [
+        100,
+        100
+      ],
+      "parameters": {
+        "events": [
+          "charge.succeeded"
+        ],
+        "options": {}
+      },
+      "credentials": {
+        "stripeApi": {
+          "id": "stripe-credentials-id",
+          "name": "Stripe Account"
+        }
+      }
+    },
+    {
+      "id": "mongodb-log-pago-stripe-directo",
+      "name": "MongoDB: Log Pago Stripe Directo",
+      "type": "n8n-nodes-base.mongoDb",
+      "position": [
+        450,
+        100
+      ],
+      "parameters": {
+        "collection": "payment_logs",
+        "operation": "insertOne",
+        "document": "={{ JSON.stringify({ eventId: $json.id, type: $json.type, amount: $json.data.object.amount, currency: $json.data.object.currency, customer: $json.data.object.customer, timestamp: new Date() }) }}",
+        "options": {}
+      },
+      "credentials": {
+        "mongoDb": {
+          "id": "mongodb-credentials-id",
+          "name": "MongoDB Account"
+        }
+      }
+    },
+    {
+      "id": "webhook-reviews-trigger",
+      "name": "Webhook: Reviews Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        280
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "new-review",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "credentials": {}
+    },
+    {
+      "id": "openai-analizar-sentimiento",
+      "name": "OpenAI: Analizar Sentimiento",
+      "type": "n8n-nodes-base.openAi",
+      "position": [
+        450,
+        280
+      ],
+      "parameters": {
+        "model": "gpt-3.5-turbo",
+        "operation": "chat",
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un analista de sentimiento. Clasifica el siguiente texto como 'Positivo', 'Negativo' o 'Neutral'."
+          },
+          {
+            "role": "user",
+            "content": "Analiza el sentimiento de la siguiente reseña: \"{{ $json.body.reviewText }}\""
+          }
+        ],
+        "options": {}
+      },
+      "credentials": {
+        "openAiApi": {
+          "id": "openai-credentials-id",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "id": "notion-registrar-sentimiento",
+      "name": "Notion: Registrar Sentimiento",
+      "type": "n8n-nodes-base.notion",
+      "position": [
+        800,
+        190
+      ],
+      "parameters": {
+        "operation": "createPage",
+        "databaseId": "notion-reviews-database-id",
+        "properties": [
+          {
+            "name": "Review Text",
+            "value": "={{ $json.body.reviewText }}"
+          },
+          {
+            "name": "Sentiment",
+            "value": "={{ $node['OpenAI: Analizar Sentimiento'].json.choices[0].message.content }}"
+          },
+          {
+            "name": "Product ID",
+            "value": "={{ $json.body.productId }}"
+          }
+        ],
+        "options": {}
+      },
+      "credentials": {
+        "notionApi": {
+          "id": "notion-credentials-id",
+          "name": "Notion Account"
+        }
+      }
+    },
+    {
+      "id": "if-review-negativa",
+      "name": "If: Review Negativa?",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        1150,
+        190
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $node['OpenAI: Analizar Sentimiento'].json.choices[0].message.content }}",
+              "operation": "equalTo",
+              "value2": "Negativo"
+            }
+          ]
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "slack-alerta-review-negativa",
+      "name": "Slack: Alerta Review Negativa",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1500,
+        370
+      ],
+      "parameters": {
+        "channel": "#reviews-alertas",
+        "text": "😡 Nueva reseña NEGATIVA para producto {{ $json.body.productId }}: \"{{ $json.body.reviewText }}\"",
+        "options": {}
+      },
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials-id",
+          "name": "Slack Account"
+        }
+      }
+    },
+    {
+      "id": "cron-reporte-diario-backup",
+      "name": "Cron: Reporte Diario y Backup",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        100,
+        460
+      ],
+      "parameters": {
+        "interval": "days",
+        "value": 1,
+        "options": {
+          "atHour": 23,
+          "atMinute": 59
+        },
+        "cronExpression": "0 */6 * * *"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "google-sheets-obtener-datos-reporte",
+      "name": "Google Sheets: Obtener Datos Reporte",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        450,
+        460
+      ],
+      "parameters": {
+        "operation": "getAll",
+        "spreadsheetId": "google-sheets-id",
+        "sheetName": "Pedidos",
+        "options": {},
+        "sheetId": "0"
+      },
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "google-sheets-credentials-id",
+          "name": "Google Sheets Account"
+        }
+      }
+    },
+    {
+      "id": "function-generar-resumen-reporte",
+      "name": "Function: Generar Resumen Reporte",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        800,
+        370
+      ],
+      "parameters": {
+        "functionCode": "const orders = $input.all().map(item => item.json);\n\nconst totalOrders = orders.length;\nconst totalRevenue = orders.reduce((sum, order) => sum + parseFloat(order.totalAmount), 0);\nconst processedOrders = orders.filter(order => order.status === 'procesado').length;\n\nreturn [{ json: { totalOrders, totalRevenue, processedOrders, reportDate: new Date().toISOString().split('T')[0] } }];"
+      },
+      "credentials": {}
+    },
+    {
+      "id": "gmail-enviar-reporte-diario",
+      "name": "Gmail: Enviar Reporte Diario",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        1150,
+        370
+      ],
+      "parameters": {
+        "operation": "send",
+        "to": "admin@yourstore.com",
+        "subject": "Reporte Diario de Pedidos - {{ $json.reportDate }}",
+        "body": "Hola Admin,\n\nAquí está el resumen de pedidos para el día {{ $json.reportDate }}:\n\n- Total de Pedidos: {{ $json.totalOrders }}\n- Ingresos Totales: {{ $json.totalRevenue }} USD\n- Pedidos Procesados: {{ $json.processedOrders }}\n\nSaludos,\nTu Sistema n8n",
+        "options": {}
+      },
+      "credentials": {
+        "gmailApi": {
+          "id": "gmail-credentials-id",
+          "name": "Gmail Account"
+        }
+      }
+    },
+    {
+      "id": "google-drive-backup-logs",
+      "name": "Google Drive: Backup Logs",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [
+        1500,
+        550
+      ],
+      "parameters": {
+        "operation": "upload",
+        "fileName": "order_logs_backup_{{ $json.reportDate }}.json",
+        "fileContent": "={{ JSON.stringify($node['MongoDB: Log Pedido Procesado'].json) }}",
+        "folderId": "google-drive-folder-id",
+        "options": {}
+      },
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "google-drive-credentials-id",
+          "name": "Google Drive Account"
+        }
+      }
+    },
+    {
+      "id": "http-request-datadog-alerta-error",
+      "name": "HTTP Request: DataDog Alerta Error",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2550,
+        190
+      ],
+      "parameters": {
+        "url": "https://api.datadoghq.com/api/v1/events",
+        "method": "POST",
+        "bodyParameters": {
+          "title": "n8n Workflow Error",
+          "text": "Error en el procesamiento de pedido #{{ $json.orderId }}. Detalles: {{ $json.status }}",
+          "tags": [
+            "n8n",
+            "ecommerce",
+            "error"
+          ],
+          "priority": "normal",
+          "alert_type": "error"
+        },
+        "options": {},
+        "authentication": "headerAuth",
+        "headerAuth": {
+          "name": "DD-API-KEY",
+          "value": "datadog-api-key"
+        }
+      },
+      "credentials": {}
+    },
+    {
+      "id": "twilio-sms-alerta-critica",
+      "name": "Twilio: SMS Alerta Crítica",
+      "type": "n8n-nodes-base.twilio",
+      "position": [
+        2900,
+        280
+      ],
+      "parameters": {
+        "operation": "sendMessage",
+        "to": "+1234567890",
+        "from": "+1098765432",
+        "body": "🚨 n8n CRÍTICO: Error en pedido #{{ $json.orderId }}. Revisar logs. Status: {{ $json.status }}",
+        "options": {}
+      },
+      "credentials": {
+        "twilioApi": {
+          "id": "twilio-credentials-id",
+          "name": "Twilio Account"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Webhook de Pedidos (Shopify/WooCommerce)": {
+      "main": [
+        [
+          {
+            "node": "Normalizar Datos Pedido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Normalizar Datos Pedido": {
+      "main": [
+        [
+          {
+            "node": "Validar Datos Pedido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Datos Pedido": {
+      "main": [
+        [
+          {
+            "node": "Datos Pedido Válidos?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Datos Pedido Válidos?": {
+      "main": [
+        [
+          {
+            "node": "Cliente VIP?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail: Solicitar Corrección Datos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Solicitar Corrección Datos": {
+      "main": [
+        [
+          {
+            "node": "Slack: Alerta Datos Inválidos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack: Alerta Datos Inválidos": {
+      "main": [
+        [
+          {
+            "node": "MongoDB: Log Datos Inválidos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB: Log Datos Inválidos": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request: DataDog Alerta Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cliente VIP?": {
+      "main": [
+        [
+          {
+            "node": "Set: Proceso VIP",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Airtable: Verificar Inventario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set: Proceso VIP": {
+      "main": [
+        [
+          {
+            "node": "Airtable: Verificar Inventario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable: Verificar Inventario": {
+      "main": [
+        [
+          {
+            "node": "Inventario Suficiente?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inventario Suficiente?": {
+      "main": [
+        [
+          {
+            "node": "Function: Calcular Totales (Impuestos, Envío, Descuentos)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Slack: Alerta Inventario Bajo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack: Alerta Inventario Bajo": {
+      "main": [
+        [
+          {
+            "node": "Discord: Notificar Proveedores",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Discord: Notificar Proveedores": {
+      "main": [
+        [
+          {
+            "node": "Gmail: Notificar Cliente Inventario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Notificar Cliente Inventario": {
+      "main": [
+        [
+          {
+            "node": "MongoDB: Log Inventario Insuficiente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB: Log Inventario Insuficiente": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request: DataDog Alerta Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function: Calcular Totales (Impuestos, Envío, Descuentos)": {
+      "main": [
+        [
+          {
+            "node": "Stripe: Verificar Pago",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe: Verificar Pago": {
+      "main": [
+        [
+          {
+            "node": "Pago Aprobado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pago Aprobado?": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets: Registrar Pedido",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Gmail: Notificar Pago Fallido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Notificar Pago Fallido": {
+      "main": [
+        [
+          {
+            "node": "Slack: Alerta Pago Fallido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack: Alerta Pago Fallido": {
+      "main": [
+        [
+          {
+            "node": "MongoDB: Log Pago Fallido",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB: Log Pago Fallido": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request: DataDog Alerta Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets: Registrar Pedido": {
+      "main": [
+        [
+          {
+            "node": "Airtable: Actualizar Inventario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable: Actualizar Inventario": {
+      "main": [
+        [
+          {
+            "node": "Google Calendar: Agendar Entrega",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar: Agendar Entrega": {
+      "main": [
+        [
+          {
+            "node": "Gmail: Confirmación Cliente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Confirmación Cliente": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Business: Mensaje Cliente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "WhatsApp Business: Mensaje Cliente": {
+      "main": [
+        [
+          {
+            "node": "Slack: Notificación Equipo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack: Notificación Equipo": {
+      "main": [
+        [
+          {
+            "node": "Notion: Actualizar Dashboard",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion: Actualizar Dashboard": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request: Detección Fraude",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request: Detección Fraude": {
+      "main": [
+        [
+          {
+            "node": "Fraude Detectado?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Fraude Detectado?": {
+      "main": [
+        [
+          {
+            "node": "Slack: Alerta Fraude",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "MongoDB: Log Pedido Procesado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack: Alerta Fraude": {
+      "main": [
+        [
+          {
+            "node": "MongoDB: Log Pedido Procesado",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB: Log Pedido Procesado": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request: DataDog Alerta Error",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron: Verificación Inventario Programada": {
+      "main": [
+        [
+          {
+            "node": "Airtable: Obtener Inventario Completo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable: Obtener Inventario Completo": {
+      "main": [
+        [
+          {
+            "node": "Function: Identificar Productos Bajos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function: Identificar Productos Bajos": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items: Procesar Productos Bajos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items: Procesar Productos Bajos": {
+      "main": [
+        [
+          {
+            "node": "Discord: Alerta Inventario Bajo Discord",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Slack: Notificar Proveedor Slack",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stripe Trigger: Pagos Completados (Directo)": {
+      "main": [
+        [
+          {
+            "node": "MongoDB: Log Pago Stripe Directo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook: Reviews Webhook": {
+      "main": [
+        [
+          {
+            "node": "OpenAI: Analizar Sentimiento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI: Analizar Sentimiento": {
+      "main": [
+        [
+          {
+            "node": "Notion: Registrar Sentimiento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion: Registrar Sentimiento": {
+      "main": [
+        [
+          {
+            "node": "If: Review Negativa?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If: Review Negativa?": {
+      "main": [
+        [
+          {
+            "node": "Slack: Alerta Review Negativa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron: Reporte Diario y Backup": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets: Obtener Datos Reporte",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets: Obtener Datos Reporte": {
+      "main": [
+        [
+          {
+            "node": "Function: Generar Resumen Reporte",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function: Generar Resumen Reporte": {
+      "main": [
+        [
+          {
+            "node": "Gmail: Enviar Reporte Diario",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Enviar Reporte Diario": {
+      "main": [
+        [
+          {
+            "node": "Google Drive: Backup Logs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request: DataDog Alerta Error": {
+      "main": [
+        [
+          {
+            "node": "Twilio: SMS Alerta Crítica",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

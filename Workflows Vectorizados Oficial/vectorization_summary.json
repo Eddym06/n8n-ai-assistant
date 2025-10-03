@@ -1,0 +1,1200 @@
+{
+  "vectorization_info": {
+    "version": "3.0.0",
+    "generated_at": "2025-09-25T11:11:32.258017",
+    "processing_time_seconds": 28.596264,
+    "embedding_model": "universal-sentence-encoder-v4"
+  },
+  "statistics": {
+    "workflows_processed": 2904,
+    "workflows_filtered_out": 190,
+    "categories_found": 0,
+    "total_nodes_analyzed": 41771,
+    "vectorization_time": 0,
+    "start_time": "2025-09-25T11:11:03.661758"
+  },
+  "categories": [
+    {
+      "name": "Aggregate",
+      "total_workflows": 16,
+      "valid_workflows": 16,
+      "filtered_workflows": 0,
+      "keywords_count": 165
+    },
+    {
+      "name": "Airtable",
+      "total_workflows": 4,
+      "valid_workflows": 4,
+      "filtered_workflows": 0,
+      "keywords_count": 42
+    },
+    {
+      "name": "Airtabletool",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 22
+    },
+    {
+      "name": "Airtoptool",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 32
+    },
+    {
+      "name": "Asana",
+      "total_workflows": 3,
+      "valid_workflows": 2,
+      "filtered_workflows": 1,
+      "keywords_count": 21
+    },
+    {
+      "name": "Automate",
+      "total_workflows": 5,
+      "valid_workflows": 1,
+      "filtered_workflows": 4,
+      "keywords_count": 17
+    },
+    {
+      "name": "Automation",
+      "total_workflows": 6,
+      "valid_workflows": 1,
+      "filtered_workflows": 5,
+      "keywords_count": 13
+    },
+    {
+      "name": "Autopilot",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 14
+    },
+    {
+      "name": "Awsrekognition",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 14
+    },
+    {
+      "name": "Awss3",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 32
+    },
+    {
+      "name": "Awstextract",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 10
+    },
+    {
+      "name": "Bannerbear",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 25
+    },
+    {
+      "name": "Baserow",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 16
+    },
+    {
+      "name": "Bitly",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 197
+    },
+    {
+      "name": "Bitwarden",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 7
+    },
+    {
+      "name": "Calendly",
+      "total_workflows": 7,
+      "valid_workflows": 5,
+      "filtered_workflows": 2,
+      "keywords_count": 57
+    },
+    {
+      "name": "Clickup",
+      "total_workflows": 3,
+      "valid_workflows": 2,
+      "filtered_workflows": 1,
+      "keywords_count": 23
+    },
+    {
+      "name": "Clockify",
+      "total_workflows": 3,
+      "valid_workflows": 1,
+      "filtered_workflows": 2,
+      "keywords_count": 10
+    },
+    {
+      "name": "Code",
+      "total_workflows": 183,
+      "valid_workflows": 183,
+      "filtered_workflows": 0,
+      "keywords_count": 1840
+    },
+    {
+      "name": "Coingecko",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 15
+    },
+    {
+      "name": "Comparedatasets",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 21
+    },
+    {
+      "name": "Compression",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 26
+    },
+    {
+      "name": "Converttofile",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 73
+    },
+    {
+      "name": "Cortex",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 19
+    },
+    {
+      "name": "Cron",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 6
+    },
+    {
+      "name": "Crypto",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 34
+    },
+    {
+      "name": "Datetime",
+      "total_workflows": 18,
+      "valid_workflows": 18,
+      "filtered_workflows": 0,
+      "keywords_count": 238
+    },
+    {
+      "name": "Debughelper",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 48
+    },
+    {
+      "name": "Deep",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 101
+    },
+    {
+      "name": "Discord",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 25
+    },
+    {
+      "name": "Discordtool",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 38
+    },
+    {
+      "name": "Dropbox",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 26
+    },
+    {
+      "name": "Editimage",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 24
+    },
+    {
+      "name": "Elasticsearch",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 12
+    },
+    {
+      "name": "Emailreadimap",
+      "total_workflows": 8,
+      "valid_workflows": 7,
+      "filtered_workflows": 1,
+      "keywords_count": 68
+    },
+    {
+      "name": "Emailsend",
+      "total_workflows": 2,
+      "valid_workflows": 1,
+      "filtered_workflows": 1,
+      "keywords_count": 28
+    },
+    {
+      "name": "Emelia",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 6
+    },
+    {
+      "name": "Error",
+      "total_workflows": 17,
+      "valid_workflows": 13,
+      "filtered_workflows": 4,
+      "keywords_count": 96
+    },
+    {
+      "name": "Executecommand",
+      "total_workflows": 5,
+      "valid_workflows": 5,
+      "filtered_workflows": 0,
+      "keywords_count": 53
+    },
+    {
+      "name": "Executeworkflow",
+      "total_workflows": 9,
+      "valid_workflows": 9,
+      "filtered_workflows": 0,
+      "keywords_count": 124
+    },
+    {
+      "name": "Executiondata",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 38
+    },
+    {
+      "name": "Extractfromfile",
+      "total_workflows": 21,
+      "valid_workflows": 21,
+      "filtered_workflows": 0,
+      "keywords_count": 215
+    },
+    {
+      "name": "Facebookleadads",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 9
+    },
+    {
+      "name": "Figma",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 10
+    },
+    {
+      "name": "Filter",
+      "total_workflows": 23,
+      "valid_workflows": 23,
+      "filtered_workflows": 0,
+      "keywords_count": 299
+    },
+    {
+      "name": "Form",
+      "total_workflows": 23,
+      "valid_workflows": 23,
+      "filtered_workflows": 0,
+      "keywords_count": 194
+    },
+    {
+      "name": "Functionitem",
+      "total_workflows": 13,
+      "valid_workflows": 13,
+      "filtered_workflows": 0,
+      "keywords_count": 173
+    },
+    {
+      "name": "Getresponse",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 7
+    },
+    {
+      "name": "Github",
+      "total_workflows": 9,
+      "valid_workflows": 7,
+      "filtered_workflows": 2,
+      "keywords_count": 96
+    },
+    {
+      "name": "Gitlab",
+      "total_workflows": 4,
+      "valid_workflows": 3,
+      "filtered_workflows": 1,
+      "keywords_count": 77
+    },
+    {
+      "name": "Gmail",
+      "total_workflows": 8,
+      "valid_workflows": 8,
+      "filtered_workflows": 0,
+      "keywords_count": 73
+    },
+    {
+      "name": "Gmailtool",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 83
+    },
+    {
+      "name": "Googleanalytics",
+      "total_workflows": 4,
+      "valid_workflows": 4,
+      "filtered_workflows": 0,
+      "keywords_count": 49
+    },
+    {
+      "name": "Googlebigquery",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 24
+    },
+    {
+      "name": "Googlecalendar",
+      "total_workflows": 8,
+      "valid_workflows": 8,
+      "filtered_workflows": 0,
+      "keywords_count": 149
+    },
+    {
+      "name": "Googlecalendartool",
+      "total_workflows": 5,
+      "valid_workflows": 5,
+      "filtered_workflows": 0,
+      "keywords_count": 65
+    },
+    {
+      "name": "Googlecontacts",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 13
+    },
+    {
+      "name": "Googledocs",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 116
+    },
+    {
+      "name": "Googledrive",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 35
+    },
+    {
+      "name": "Googledrivetool",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 30
+    },
+    {
+      "name": "Googlesheets",
+      "total_workflows": 26,
+      "valid_workflows": 24,
+      "filtered_workflows": 2,
+      "keywords_count": 152
+    },
+    {
+      "name": "Googlesheetstool",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 15
+    },
+    {
+      "name": "Googleslides",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 56
+    },
+    {
+      "name": "Googletasks",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 33
+    },
+    {
+      "name": "Googletaskstool",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 57
+    },
+    {
+      "name": "Googletranslate",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 36
+    },
+    {
+      "name": "Gotowebinar",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 7
+    },
+    {
+      "name": "Graphql",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 12
+    },
+    {
+      "name": "Grist",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 12
+    },
+    {
+      "name": "Http",
+      "total_workflows": 176,
+      "valid_workflows": 173,
+      "filtered_workflows": 3,
+      "keywords_count": 975
+    },
+    {
+      "name": "Hubspot",
+      "total_workflows": 7,
+      "valid_workflows": 6,
+      "filtered_workflows": 1,
+      "keywords_count": 73
+    },
+    {
+      "name": "Humanticai",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 9
+    },
+    {
+      "name": "Hunter",
+      "total_workflows": 5,
+      "valid_workflows": 5,
+      "filtered_workflows": 0,
+      "keywords_count": 46
+    },
+    {
+      "name": "Intercom",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 23
+    },
+    {
+      "name": "Interval",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 7
+    },
+    {
+      "name": "Jira",
+      "total_workflows": 2,
+      "valid_workflows": 1,
+      "filtered_workflows": 1,
+      "keywords_count": 16
+    },
+    {
+      "name": "Jiratool",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 55
+    },
+    {
+      "name": "Lemlist",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 42
+    },
+    {
+      "name": "Limit",
+      "total_workflows": 22,
+      "valid_workflows": 22,
+      "filtered_workflows": 0,
+      "keywords_count": 428
+    },
+    {
+      "name": "Linkedin",
+      "total_workflows": 13,
+      "valid_workflows": 13,
+      "filtered_workflows": 0,
+      "keywords_count": 255
+    },
+    {
+      "name": "Localfile",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 98
+    },
+    {
+      "name": "Mailcheck",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 7
+    },
+    {
+      "name": "Mailchimp",
+      "total_workflows": 2,
+      "valid_workflows": 1,
+      "filtered_workflows": 1,
+      "keywords_count": 6
+    },
+    {
+      "name": "Mailerlite",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 16
+    },
+    {
+      "name": "Mailjet",
+      "total_workflows": 2,
+      "valid_workflows": 1,
+      "filtered_workflows": 1,
+      "keywords_count": 14
+    },
+    {
+      "name": "Manual",
+      "total_workflows": 391,
+      "valid_workflows": 299,
+      "filtered_workflows": 92,
+      "keywords_count": 1158
+    },
+    {
+      "name": "Markdown",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 38
+    },
+    {
+      "name": "Matrix",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 11
+    },
+    {
+      "name": "Mattermost",
+      "total_workflows": 24,
+      "valid_workflows": 18,
+      "filtered_workflows": 6,
+      "keywords_count": 69
+    },
+    {
+      "name": "Mautic",
+      "total_workflows": 8,
+      "valid_workflows": 7,
+      "filtered_workflows": 1,
+      "keywords_count": 97
+    },
+    {
+      "name": "Microsoftexcel",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 22
+    },
+    {
+      "name": "Microsoftonedrive",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 37
+    },
+    {
+      "name": "Microsoftoutlook",
+      "total_workflows": 4,
+      "valid_workflows": 4,
+      "filtered_workflows": 0,
+      "keywords_count": 47
+    },
+    {
+      "name": "Microsofttodo",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 57
+    },
+    {
+      "name": "Mondaycom",
+      "total_workflows": 4,
+      "valid_workflows": 4,
+      "filtered_workflows": 0,
+      "keywords_count": 83
+    },
+    {
+      "name": "Mongodbtool",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 18
+    },
+    {
+      "name": "Mysqltool",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 21
+    },
+    {
+      "name": "N8ntrainingcustomermessenger",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 24
+    },
+    {
+      "name": "Netlify",
+      "total_workflows": 3,
+      "valid_workflows": 1,
+      "filtered_workflows": 2,
+      "keywords_count": 7
+    },
+    {
+      "name": "Nocodb",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 26
+    },
+    {
+      "name": "Noop",
+      "total_workflows": 24,
+      "valid_workflows": 24,
+      "filtered_workflows": 0,
+      "keywords_count": 196
+    },
+    {
+      "name": "Notion",
+      "total_workflows": 3,
+      "valid_workflows": 2,
+      "filtered_workflows": 1,
+      "keywords_count": 34
+    },
+    {
+      "name": "Odoo",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 58
+    },
+    {
+      "name": "Openai",
+      "total_workflows": 8,
+      "valid_workflows": 8,
+      "filtered_workflows": 0,
+      "keywords_count": 54
+    },
+    {
+      "name": "Openweathermap",
+      "total_workflows": 13,
+      "valid_workflows": 13,
+      "filtered_workflows": 0,
+      "keywords_count": 31
+    },
+    {
+      "name": "Pipedrive",
+      "total_workflows": 3,
+      "valid_workflows": 2,
+      "filtered_workflows": 1,
+      "keywords_count": 32
+    },
+    {
+      "name": "Postgres",
+      "total_workflows": 12,
+      "valid_workflows": 12,
+      "filtered_workflows": 0,
+      "keywords_count": 242
+    },
+    {
+      "name": "Postgrestool",
+      "total_workflows": 5,
+      "valid_workflows": 5,
+      "filtered_workflows": 0,
+      "keywords_count": 27
+    },
+    {
+      "name": "Process",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 9
+    },
+    {
+      "name": "Quickbooks",
+      "total_workflows": 2,
+      "valid_workflows": 1,
+      "filtered_workflows": 1,
+      "keywords_count": 6
+    },
+    {
+      "name": "Raindrop",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 7
+    },
+    {
+      "name": "Readbinaryfile",
+      "total_workflows": 5,
+      "valid_workflows": 5,
+      "filtered_workflows": 0,
+      "keywords_count": 36
+    },
+    {
+      "name": "Readbinaryfiles",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 53
+    },
+    {
+      "name": "Redis",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 54
+    },
+    {
+      "name": "Removeduplicates",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 25
+    },
+    {
+      "name": "Respondtowebhook",
+      "total_workflows": 26,
+      "valid_workflows": 25,
+      "filtered_workflows": 1,
+      "keywords_count": 131
+    },
+    {
+      "name": "Rssfeedread",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 83
+    },
+    {
+      "name": "Schedule",
+      "total_workflows": 52,
+      "valid_workflows": 52,
+      "filtered_workflows": 0,
+      "keywords_count": 439
+    },
+    {
+      "name": "Send",
+      "total_workflows": 3,
+      "valid_workflows": 2,
+      "filtered_workflows": 1,
+      "keywords_count": 18
+    },
+    {
+      "name": "Shopify",
+      "total_workflows": 10,
+      "valid_workflows": 7,
+      "filtered_workflows": 3,
+      "keywords_count": 53
+    },
+    {
+      "name": "Signl4",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 18
+    },
+    {
+      "name": "Slack",
+      "total_workflows": 18,
+      "valid_workflows": 17,
+      "filtered_workflows": 1,
+      "keywords_count": 181
+    },
+    {
+      "name": "Splitinbatches",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 17
+    },
+    {
+      "name": "Splitout",
+      "total_workflows": 194,
+      "valid_workflows": 194,
+      "filtered_workflows": 0,
+      "keywords_count": 2201
+    },
+    {
+      "name": "Stickynote",
+      "total_workflows": 57,
+      "valid_workflows": 57,
+      "filtered_workflows": 0,
+      "keywords_count": 402
+    },
+    {
+      "name": "Stopanderror",
+      "total_workflows": 24,
+      "valid_workflows": 24,
+      "filtered_workflows": 0,
+      "keywords_count": 484
+    },
+    {
+      "name": "Strapi",
+      "total_workflows": 4,
+      "valid_workflows": 4,
+      "filtered_workflows": 0,
+      "keywords_count": 71
+    },
+    {
+      "name": "Summarize",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 84
+    },
+    {
+      "name": "Supabase",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 49
+    },
+    {
+      "name": "Telegram",
+      "total_workflows": 118,
+      "valid_workflows": 118,
+      "filtered_workflows": 0,
+      "keywords_count": 1313
+    },
+    {
+      "name": "Telegramtool",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 53
+    },
+    {
+      "name": "Todoist",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 39
+    },
+    {
+      "name": "Travisci",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 9
+    },
+    {
+      "name": "Trello",
+      "total_workflows": 5,
+      "valid_workflows": 4,
+      "filtered_workflows": 1,
+      "keywords_count": 51
+    },
+    {
+      "name": "Twilio",
+      "total_workflows": 4,
+      "valid_workflows": 3,
+      "filtered_workflows": 1,
+      "keywords_count": 34
+    },
+    {
+      "name": "Twitter",
+      "total_workflows": 3,
+      "valid_workflows": 2,
+      "filtered_workflows": 1,
+      "keywords_count": 20
+    },
+    {
+      "name": "Twittertool",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 14
+    },
+    {
+      "name": "Typeform",
+      "total_workflows": 4,
+      "valid_workflows": 2,
+      "filtered_workflows": 2,
+      "keywords_count": 22
+    },
+    {
+      "name": "Uptimerobot",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 7
+    },
+    {
+      "name": "Wait",
+      "total_workflows": 104,
+      "valid_workflows": 104,
+      "filtered_workflows": 0,
+      "keywords_count": 1449
+    },
+    {
+      "name": "Webhook",
+      "total_workflows": 65,
+      "valid_workflows": 65,
+      "filtered_workflows": 0,
+      "keywords_count": 1008
+    },
+    {
+      "name": "Whatsapp",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 32
+    },
+    {
+      "name": "WhatsApp ChatBot",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 46
+    },
+    {
+      "name": "Wise",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 14
+    },
+    {
+      "name": "Woocommerce",
+      "total_workflows": 3,
+      "valid_workflows": 2,
+      "filtered_workflows": 1,
+      "keywords_count": 10
+    },
+    {
+      "name": "Woocommercetool",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 45
+    },
+    {
+      "name": "Wordpress",
+      "total_workflows": 5,
+      "valid_workflows": 5,
+      "filtered_workflows": 0,
+      "keywords_count": 66
+    },
+    {
+      "name": "Writebinaryfile",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 15
+    },
+    {
+      "name": "Xml",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 8
+    },
+    {
+      "name": "Youtube",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 11
+    },
+    {
+      "name": "Zendesk",
+      "total_workflows": 6,
+      "valid_workflows": 5,
+      "filtered_workflows": 1,
+      "keywords_count": 44
+    },
+    {
+      "name": "Zohocrm",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 15
+    },
+    {
+      "name": "Automatización General",
+      "total_workflows": 23,
+      "valid_workflows": 19,
+      "filtered_workflows": 4,
+      "keywords_count": 370
+    },
+    {
+      "name": "Base de Datos",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 56
+    },
+    {
+      "name": "Chatbots y Mensajería",
+      "total_workflows": 20,
+      "valid_workflows": 20,
+      "filtered_workflows": 0,
+      "keywords_count": 299
+    },
+    {
+      "name": "Email y Comunicación",
+      "total_workflows": 11,
+      "valid_workflows": 11,
+      "filtered_workflows": 0,
+      "keywords_count": 335
+    },
+    {
+      "name": "Gestión de Contenido",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 245
+    },
+    {
+      "name": "Gestión de Datos",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 77
+    },
+    {
+      "name": "Gestión de Tiempo",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 20
+    },
+    {
+      "name": "Investigación y Análisis",
+      "total_workflows": 19,
+      "valid_workflows": 19,
+      "filtered_workflows": 0,
+      "keywords_count": 293
+    },
+    {
+      "name": "Multimedia",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 102
+    },
+    {
+      "name": "Redes Sociales",
+      "total_workflows": 9,
+      "valid_workflows": 9,
+      "filtered_workflows": 0,
+      "keywords_count": 257
+    },
+    {
+      "name": "Ventas y CRM",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 50
+    },
+    {
+      "name": "Web Scraping",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 64
+    },
+    {
+      "name": "Agente de Licitaciones",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 47
+    },
+    {
+      "name": "consulta-cnpj",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 21
+    },
+    {
+      "name": "converted_workflows",
+      "total_workflows": 295,
+      "valid_workflows": 295,
+      "filtered_workflows": 0,
+      "keywords_count": 3061
+    },
+    {
+      "name": "extras",
+      "total_workflows": 448,
+      "valid_workflows": 448,
+      "filtered_workflows": 0,
+      "keywords_count": 2158
+    }
+  ],
+  "totals": {
+    "categories_processed": 168,
+    "total_workflows_found": 2868,
+    "total_valid_workflows": 2714,
+    "total_filtered_workflows": 154
+  }
+}

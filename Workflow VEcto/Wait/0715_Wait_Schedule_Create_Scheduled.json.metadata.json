@@ -1,0 +1,1094 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "file_name": "0715_Wait_Schedule_Create_Scheduled.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait\\0715_Wait_Schedule_Create_Scheduled.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false
+  },
+  "structure": {
+    "total_nodes": 54,
+    "node_types": [
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.discord",
+      "n8n-nodes-base.compareDatasets",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.youTube",
+      "n8n-nodes-base.removeDuplicates",
+      "n8n-nodes-base.supabase",
+      "n8n-nodes-base.spotify"
+    ],
+    "triggers": [
+      {
+        "name": "Every day at noon",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          20,
+          1220
+        ]
+      },
+      {
+        "name": "Every day at noon + 1mn",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          20,
+          960
+        ]
+      },
+      {
+        "name": "Every hour",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          20,
+          1580
+        ]
+      },
+      {
+        "name": "Every day at midnight",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          40,
+          2620
+        ]
+      },
+      {
+        "name": "Every month",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          40,
+          3280
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Get playlist snapshot",
+        "type": "n8n-nodes-base.spotify",
+        "position": [
+          380,
+          1580
+        ]
+      },
+      {
+        "name": "Get playlist snapshot1",
+        "type": "n8n-nodes-base.spotify",
+        "position": [
+          720,
+          1580
+        ]
+      },
+      {
+        "name": "If different snapshot",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          900,
+          1580
+        ]
+      },
+      {
+        "name": "Get all musics",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          1220,
+          1600
+        ]
+      },
+      {
+        "name": "Update to_delete to true",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          1700,
+          1620
+        ]
+      },
+      {
+        "name": "Add music",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          1700,
+          1400
+        ]
+      },
+      {
+        "name": "Compare Datasets",
+        "type": "n8n-nodes-base.compareDatasets",
+        "position": [
+          1460,
+          1540
+        ]
+      },
+      {
+        "name": "Spotify",
+        "type": "n8n-nodes-base.spotify",
+        "position": [
+          1220,
+          1440
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1220,
+          1800
+        ]
+      },
+      {
+        "name": "Get all musics not in youtube playlist",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          400,
+          960
+        ]
+      },
+      {
+        "name": "Wait 1 hour",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          560,
+          1580
+        ]
+      },
+      {
+        "name": "variables",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          200,
+          1580
+        ]
+      },
+      {
+        "name": "Search video",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          2500,
+          1420
+        ]
+      },
+      {
+        "name": "Get video duration",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          3020,
+          1420
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          2840,
+          1420
+        ]
+      },
+      {
+        "name": "If video duration ~= music duration",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3240,
+          1420
+        ]
+      },
+      {
+        "name": "Add music to playlist",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          3460,
+          1400
+        ]
+      },
+      {
+        "name": "Add youtube id to row",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          3640,
+          1400
+        ]
+      },
+      {
+        "name": "Discord",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          4040,
+          1400
+        ]
+      },
+      {
+        "name": "Discord1",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          4040,
+          1020
+        ]
+      },
+      {
+        "name": "Set youtube id to NOTFOUND if no matching",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          3320,
+          1020
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          3060,
+          1220
+        ]
+      },
+      {
+        "name": "If no result",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2660,
+          1420
+        ]
+      },
+      {
+        "name": "data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1900,
+          1340
+        ]
+      },
+      {
+        "name": "variables2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          560,
+          1220
+        ]
+      },
+      {
+        "name": "variables1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          200,
+          960
+        ]
+      },
+      {
+        "name": "Loop Over Items1",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          2120,
+          1400
+        ]
+      },
+      {
+        "name": "data1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2320,
+          1420
+        ]
+      },
+      {
+        "name": "Get playlist items",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          540,
+          2600
+        ]
+      },
+      {
+        "name": "Playlist items to be deleted",
+        "type": "n8n-nodes-base.compareDatasets",
+        "position": [
+          840,
+          2700
+        ]
+      },
+      {
+        "name": "Get all musics that should be in playlist",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          540,
+          2400
+        ]
+      },
+      {
+        "name": "Remove Duplicates",
+        "type": "n8n-nodes-base.removeDuplicates",
+        "position": [
+          1080,
+          2700
+        ]
+      },
+      {
+        "name": "Remove video from playlist",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          1240,
+          2700
+        ]
+      },
+      {
+        "name": "Check for deleted videos",
+        "type": "n8n-nodes-base.compareDatasets",
+        "position": [
+          820,
+          2480
+        ]
+      },
+      {
+        "name": "Set youtube_video_id to null",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          1080,
+          2440
+        ]
+      },
+      {
+        "name": "Get all musics to be deleted",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          540,
+          2820
+        ]
+      },
+      {
+        "name": "Delete music",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          1400,
+          2700
+        ]
+      },
+      {
+        "name": "variables3",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          240,
+          2620
+        ]
+      },
+      {
+        "name": "Reset NOTFOUND id to NULL",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          420,
+          3280
+        ]
+      },
+      {
+        "name": "variables4",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          220,
+          3280
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2040,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -20,
+          1440
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1360,
+          1120
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1100,
+          700
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -20,
+          620
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3840,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          120
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          2200
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          3080
+        ]
+      }
+    ],
+    "connections_count": 38
+  },
+  "semantic_info": {
+    "category": "social-media",
+    "purpose": "monitoring and alerts",
+    "complexity_score": 1065,
+    "quality_score": 0.75,
+    "keywords": [
+      "aggregate",
+      "loop over items1",
+      "get all musics",
+      "no operation, do nothing",
+      "get playlist items",
+      "loop over items",
+      "sticky note5",
+      "add music",
+      "set youtube_video_id to null",
+      "get playlist snapshot",
+      "variables1",
+      "every month",
+      "sticky note4",
+      "if video duration ~= music duration",
+      "every day at midnight",
+      "if no result",
+      "every hour",
+      "check for deleted videos",
+      "remove video from playlist",
+      "add music to playlist",
+      "compare datasets",
+      "sticky note2",
+      "remove duplicates",
+      "data",
+      "every day at noon",
+      "variables4",
+      "compareDatasets",
+      "data1",
+      "noOp",
+      "stickyNote",
+      "sticky note7",
+      "playlist items to be deleted",
+      "spotify",
+      "wait",
+      "get playlist snapshot1",
+      "variables2",
+      "get all musics that should be in playlist",
+      "get all musics to be deleted",
+      "sticky note6",
+      "social-media",
+      "sticky note3",
+      "splitInBatches",
+      "variables3",
+      "get all musics not in youtube playlist",
+      "search video",
+      "variables",
+      "delete music",
+      "monitoring and alerts",
+      "set youtube id to notfound if no matching",
+      "sticky note1",
+      "sticky note8",
+      "reset notfound id to null",
+      "set",
+      "removeDuplicates",
+      "if different snapshot",
+      "update to_delete to true",
+      "every day at noon + 1mn",
+      "discord1",
+      "supabase",
+      "discord",
+      "scheduleTrigger",
+      "get video duration",
+      "wait 1 hour",
+      "sticky note",
+      "complex",
+      "youTube",
+      "add youtube id to row"
+    ],
+    "description": "Este workflow diseñado para monitoring and alerts con 54 nodos con 5 disparadores que ejecuta: Get playlist snapshot, Get playlist snapshot1, If different snapshot en la categoría de social-media.",
+    "semantic_content": "Nodos: Get playlist snapshot (spotify), Get playlist snapshot1 (spotify), If different snapshot (if), Get all musics (supabase), Update to_delete to true (supabase), Add music (supabase), Compare Datasets (compareDatasets), Spotify (spotify), No Operation, do nothing (noOp), Get all musics not in youtube playlist (supabase), Every day at noon (scheduleTrigger), Every day at noon + 1mn (scheduleTrigger), Every hour (scheduleTrigger), Wait 1 hour (wait), variables (set), Search video (youTube), Get video duration (youTube), Loop Over Items (splitInBatches), If video duration ~= music duration (if), Add music to playlist (youTube), Add youtube id to row (supabase), Discord (discord), Discord1 (discord), Set youtube id to NOTFOUND if no matching (supabase), Aggregate (aggregate), If no result (if), data (set), variables2 (set), variables1 (set), Loop Over Items1 (splitInBatches), data1 (set), Get playlist items (youTube), Playlist items to be deleted (compareDatasets), Get all musics that should be in playlist (supabase), Remove Duplicates (removeDuplicates), Remove video from playlist (youTube), Check for deleted videos (compareDatasets), Set youtube_video_id to null (supabase), Get all musics to be deleted (supabase), Delete music (supabase), Every day at midnight (scheduleTrigger), variables3 (set), Reset NOTFOUND id to NULL (supabase), variables4 (set), Every month (scheduleTrigger), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note6 (stickyNote). Propósito: monitoring and alerts. Categoría: social-media. Disparadores: Every day at noon, Every day at noon + 1mn, Every hour, Every day at midnight, Every month"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": true,
+    "has_conditional_logic": true,
+    "has_error_handling": false
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:45.757958"
+  },
+  "semantic_vector": [
+    -0.05120013654232025,
+    -0.05168899521231651,
+    0.055588990449905396,
+    -0.04133471101522446,
+    0.04487627372145653,
+    0.03993477672338486,
+    0.05468100309371948,
+    0.055368345230817795,
+    -0.04777068644762039,
+    0.05440271273255348,
+    0.0036011366173624992,
+    0.05120597779750824,
+    -0.024093031883239746,
+    -0.055523429065942764,
+    -0.022834492847323418,
+    0.05558893829584122,
+    0.03537964075803757,
+    0.04679135978221893,
+    -0.05221980810165405,
+    0.00670239282771945,
+    -0.046659838408231735,
+    0.04956026002764702,
+    0.042554572224617004,
+    -0.04561876878142357,
+    -0.055588990449905396,
+    0.05555516108870506,
+    -0.05161185935139656,
+    0.03692527115345001,
+    -0.0521114245057106,
+    -0.002905831439420581,
+    -0.054460905492305756,
+    -0.010734779760241508,
+    0.03988724574446678,
+    0.021494464948773384,
+    0.05014871805906296,
+    0.05051138624548912,
+    0.043932732194662094,
+    -0.0551920048892498,
+    -0.018276527523994446,
+    0.007774659898132086,
+    -0.022292355075478554,
+    0.05468948185443878,
+    0.054178476333618164,
+    0.011660778895020485,
+    0.053626157343387604,
+    0.04031966254115105,
+    0.05429434776306152,
+    -0.020593835040926933,
+    -0.05383511260151863,
+    -0.024054940789937973,
+    -0.055112868547439575,
+    -0.03359285742044449,
+    -0.05558543652296066,
+    0.027117423713207245,
+    -0.03815846145153046,
+    -0.047287967056035995,
+    -0.012452404014766216,
+    0.04366512596607208,
+    -0.045806579291820526,
+    0.05144168809056282,
+    0.002521111164242029,
+    0.028945064172148705,
+    0.0477607361972332,
+    -0.010313626378774643,
+    0.046255677938461304,
+    0.04905546456575394,
+    0.023399552330374718,
+    -0.04120360314846039,
+    0.054667066782712936,
+    -0.011017348617315292,
+    -0.05519033968448639,
+    -0.05558723583817482,
+    -0.0498184897005558,
+    0.05552899092435837,
+    -0.02107078954577446,
+    0.054287225008010864,
+    -0.0014643501490354538,
+    -0.025105226784944534,
+    -0.04268826171755791,
+    0.029680242761969566,
+    0.0541204959154129,
+    -0.004591701552271843,
+    0.04560561850667,
+    -0.05206410214304924,
+    0.05453159287571907,
+    -0.009122730232775211,
+    -0.029408589005470276,
+    0.05275233834981918,
+    -0.05090201273560524,
+    -0.0552658848464489,
+    -0.010611950419843197,
+    -0.028785906732082367,
+    0.04392863065004349,
+    0.05101750046014786,
+    -0.04844100773334503,
+    -0.05264614149928093,
+    -0.004044988192617893,
+    0.030809631571173668,
+    -0.055531203746795654,
+    -0.02715243212878704,
+    0.03707635775208473,
+    -0.05264241248369217,
+    0.04864419251680374,
+    -0.015423761680722237,
+    0.045099977403879166,
+    0.05443568527698517,
+    0.03893836587667465,
+    0.05253365635871887,
+    -0.03713439032435417,
+    -0.055587027221918106,
+    -0.0019399707671254873,
+    -0.03680714964866638,
+    0.053219541907310486,
+    0.047293536365032196,
+    0.015650590881705284,
+    0.04818239435553551,
+    0.054055336862802505,
+    -0.05470681190490723,
+    -0.05396966636180878,
+    -0.0467739999294281,
+    0.04505851864814758,
+    0.055420245975255966,
+    0.027376556769013405,
+    -0.04441974312067032,
+    0.05414273217320442,
+    -0.03678716719150543,
+    -0.053929269313812256,
+    -0.055588990449905396,
+    0.03377915918827057,
+    -0.05398852750658989,
+    0.022835630923509598,
+    -0.041325028985738754,
+    0.04963840916752815,
+    -0.03191571310162544,
+    -0.04889737069606781,
+    0.008560989052057266,
+    -0.04753381386399269,
+    -0.004130661487579346,
+    -0.047280870378017426,
+    0.025317365303635597,
+    0.00854568462818861,
+    0.055588990449905396,
+    0.0551321804523468,
+    -0.055588990449905396,
+    -0.05256100371479988,
+    -0.05484313890337944,
+    0.055564794689416885,
+    -0.044857025146484375,
+    0.034872643649578094,
+    -0.0009875959949567914,
+    -0.04496396705508232,
+    -0.05518125742673874,
+    -0.0186001043766737,
+    -0.0490565225481987,
+    0.05556749179959297,
+    0.055569835007190704,
+    -0.05537107586860657,
+    -0.035506390035152435,
+    0.016599470749497414,
+    0.03816259652376175,
+    -0.05519242584705353,
+    -0.05244246497750282,
+    0.0540253184735775,
+    0.051182545721530914,
+    0.05033058673143387,
+    -0.053472645580768585,
+    -0.04724821075797081,
+    0.022888721898198128,
+    -0.0555599182844162,
+    -0.05302619934082031,
+    0.055410709232091904,
+    -0.03774261474609375,
+    0.0373791828751564,
+    0.02333672158420086,
+    -0.05549083650112152,
+    0.05505327135324478,
+    -0.03568393737077713,
+    -0.05114501714706421,
+    0.04273089021444321,
+    -0.05518979951739311,
+    0.022283727303147316,
+    0.0537765771150589,
+    -0.0536886490881443,
+    0.049283839762210846,
+    0.0554196834564209,
+    0.036643531173467636,
+    -0.05558018758893013,
+    0.024184053763747215,
+    0.05258124694228172,
+    0.046722933650016785,
+    -0.055475976318120956,
+    0.05530164763331413,
+    -0.038038481026887894,
+    -0.05558890476822853,
+    -0.05321333557367325,
+    -0.0550575852394104,
+    0.050432126969099045,
+    0.055588990449905396,
+    0.04964439198374748,
+    -0.045910391956567764,
+    0.05527905374765396,
+    0.052934978157281876,
+    -0.023585638031363487,
+    0.04698649048805237,
+    0.04403778165578842,
+    -0.029655463993549347,
+    -0.049113985151052475,
+    0.021332917734980583,
+    -0.05374656245112419,
+    -0.02893320471048355,
+    0.006731266621500254,
+    -0.007728622294962406,
+    0.04926196485757828,
+    0.05513983592391014,
+    -0.05557114630937576,
+    -0.05415380001068115,
+    -0.028168339282274246,
+    0.053308628499507904,
+    0.01456761360168457,
+    -0.05546354874968529,
+    0.020308218896389008,
+    0.05216532573103905,
+    -0.01500079408288002,
+    0.018884463235735893,
+    0.05558271333575249,
+    -0.0531623475253582,
+    -0.024677881971001625,
+    -0.022377703338861465,
+    -0.025508156046271324,
+    -0.05486016348004341,
+    0.05518597364425659,
+    -0.05460641533136368,
+    -0.03927600011229515,
+    -0.0555889718234539,
+    0.03279745206236839,
+    -0.013700650073587894,
+    0.05546879395842552,
+    0.055528104305267334,
+    -0.05225054919719696,
+    -0.048824820667505264,
+    -0.05485553294420242,
+    0.04028084874153137,
+    0.04821566119790077,
+    0.046865131705999374,
+    0.04421151056885719,
+    0.05557549372315407,
+    0.053344253450632095,
+    0.013367321342229843,
+    0.05251195654273033,
+    0.05521739274263382,
+    -0.055586930364370346,
+    -0.04024147242307663,
+    -0.055544812232255936,
+    -0.000742440577596426,
+    0.04918565973639488,
+    -0.007845496758818626,
+    0.05426172539591789,
+    0.055588990449905396,
+    0.05451928451657295,
+    0.017254674807190895,
+    -0.05403806269168854,
+    -0.0241101011633873,
+    0.002455285983160138,
+    0.05536426976323128,
+    -0.03978202864527702,
+    0.04928680509328842,
+    -0.0489114411175251,
+    0.026851851493120193,
+    -0.0531017892062664,
+    0.054648417979478836,
+    -0.04641294106841087,
+    -0.054231274873018265,
+    -0.05002027004957199,
+    -0.05301256105303764,
+    -0.017757540568709373,
+    0.044137679040431976,
+    0.0054611992090940475,
+    0.055562086403369904,
+    0.055588990449905396,
+    0.055584151297807693,
+    0.03730294480919838,
+    0.027427101507782936,
+    0.05391421169042587,
+    0.05471823737025261,
+    0.04871349409222603,
+    -0.055588990449905396,
+    0.04148776829242706,
+    0.039177946746349335,
+    -0.03803488239645958,
+    0.053735487163066864,
+    -0.04312576726078987,
+    -0.03828863799571991,
+    0.05548437312245369,
+    0.054279737174510956,
+    0.034266144037246704,
+    0.046287622302770615,
+    -0.055224549025297165,
+    -0.054593246430158615,
+    0.054191071540117264,
+    -0.029018156230449677,
+    -0.008989464491605759,
+    0.05529666319489479,
+    0.055438339710235596,
+    0.00457718363031745,
+    0.027393095195293427,
+    0.05330796167254448,
+    0.054332613945007324,
+    0.055516429245471954,
+    0.05334850773215294,
+    -0.05419355630874634,
+    -0.04960153251886368,
+    -0.03691515699028969,
+    -0.04741034284234047,
+    0.04333837702870369,
+    0.050367385149002075,
+    0.052705127745866776,
+    0.03080262988805771,
+    0.035929832607507706,
+    -0.02635657787322998,
+    0.008416264317929745,
+    0.05509207025170326,
+    -0.05297189950942993,
+    0.05514992028474808,
+    0.055435143411159515,
+    0.008405984379351139,
+    -0.017346471548080444,
+    0.05549066141247749,
+    -0.0354725643992424,
+    0.008468376472592354,
+    0.039827775210142136,
+    -0.05530687794089317,
+    -0.01993430033326149,
+    -0.04734496399760246,
+    0.055434733629226685,
+    0.039788711816072464,
+    -0.009782525710761547,
+    0.05483167618513107,
+    -0.035559821873903275,
+    -0.032377976924180984,
+    -0.02927890047430992,
+    0.05536070093512535,
+    0.050740163773298264,
+    0.030223362147808075,
+    -0.012088614515960217,
+    -0.05551514774560928,
+    -0.0183383971452713,
+    0.04701540991663933,
+    -0.01891958899796009,
+    -0.026951851323246956,
+    -0.05364237353205681,
+    0.05006484314799309,
+    0.04569957032799721,
+    0.016119923442602158,
+    -0.02873537689447403,
+    0.053817883133888245,
+    0.035009343177080154,
+    -0.05558833107352257,
+    0.03943045809864998,
+    0.053144849836826324,
+    0.05049978196620941,
+    0.052301403135061264,
+    -0.04892927408218384,
+    -0.05504091456532478,
+    0.05537264421582222,
+    -0.053945571184158325,
+    0.03926866874098778,
+    -0.00027529007638804615,
+    -0.010776229202747345,
+    -0.008559348993003368,
+    -0.05153607577085495,
+    -0.037306539714336395,
+    -0.0530298575758934,
+    -0.05481796711683273,
+    0.05493307113647461,
+    -0.019976608455181122,
+    0.044130682945251465,
+    -0.049045953899621964,
+    -0.05527820438146591,
+    -0.01647002436220646,
+    0.05540761351585388,
+    0.03312169387936592,
+    0.04050266370177269,
+    -0.022508161142468452,
+    0.021349899470806122,
+    0.049026742577552795,
+    -0.03854353353381157,
+    0.03532705456018448,
+    0.05193715915083885,
+    0.043674495071172714,
+    -0.05278262495994568,
+    -0.053403303027153015,
+    -0.0011320060584694147,
+    0.050531353801488876,
+    0.03798750415444374,
+    -0.05263407900929451,
+    -0.025225352495908737,
+    0.01831933483481407,
+    0.03892688453197479,
+    -0.03699653223156929,
+    0.041481826454401016,
+    0.03576681390404701,
+    0.05270887166261673,
+    0.02056312747299671,
+    0.04420716315507889,
+    0.05558861047029495,
+    0.04706760495901108,
+    -0.05531812459230423,
+    0.05341073125600815,
+    0.0539102628827095,
+    0.053879380226135254,
+    0.006081130355596542,
+    0.055346935987472534,
+    0.018691066652536392,
+    0.050757136195898056,
+    0.0056147086434066296,
+    -0.055470436811447144,
+    -0.02577551081776619,
+    -0.05523663014173508,
+    -0.03706330806016922,
+    0.05419965460896492,
+    -0.014862730167806149,
+    -0.031866058707237244,
+    -0.0555889718234539,
+    -0.0392533577978611,
+    -0.05542600527405739,
+    0.0443354994058609,
+    -0.05530336871743202,
+    0.0484139546751976,
+    -0.018291432410478592,
+    0.05339658632874489,
+    0.036202967166900635,
+    -0.05239240452647209,
+    0.014667097479104996,
+    0.055588990449905396,
+    -0.052230484783649445,
+    -0.05274515971541405,
+    -0.015611369162797928,
+    -0.05270928144454956,
+    -0.05515888333320618,
+    -0.04626106098294258,
+    0.054532524198293686,
+    0.05185628682374954,
+    0.016645772382616997,
+    -0.025416299700737,
+    0.05421194061636925,
+    -0.05393930897116661,
+    -0.04498414695262909,
+    0.024403095245361328,
+    -0.05173034220933914,
+    -0.05550360307097435,
+    0.0520101822912693,
+    -0.037802960723638535,
+    0.055562328547239304,
+    -0.05150390416383743,
+    0.05390981212258339,
+    -0.05460779741406441,
+    -0.05558164045214653,
+    0.05468590185046196,
+    -0.05041637271642685,
+    0.04760682210326195,
+    -0.005627017933875322,
+    0.05485929921269417,
+    0.021586662158370018,
+    0.04962741211056709,
+    0.011889449320733547,
+    -0.04219996556639671,
+    0.05341878905892372,
+    -0.019578708335757256,
+    -0.05438854917883873,
+    0.05080253258347511,
+    0.05557279661297798,
+    -0.049062952399253845,
+    0.03457842767238617,
+    0.04341690614819527,
+    -0.05141114816069603,
+    -0.04033501073718071,
+    0.05557120218873024,
+    0.044476091861724854,
+    -0.018262818455696106,
+    -0.05558895692229271,
+    0.03004811517894268,
+    0.034307003021240234,
+    -0.0555635429918766,
+    -0.05142286792397499,
+    -0.05217067152261734,
+    0.028187386691570282,
+    0.031964924186468124,
+    -0.054299481213092804,
+    0.03522610291838646,
+    -0.010476231575012207,
+    0.03572619706392288,
+    0.05423758178949356,
+    0.02846716158092022,
+    -0.015430648811161518,
+    -0.05558301880955696,
+    0.05434183403849602,
+    0.05359058082103729,
+    0.029623640701174736,
+    -0.03242369368672371,
+    0.03084290400147438,
+    -0.01100858859717846,
+    -0.05556650087237358,
+    0.055549055337905884,
+    -0.05558892711997032,
+    -0.014618856832385063,
+    0.0509774386882782,
+    -0.05553320795297623,
+    -0.017652105540037155,
+    0.012412721291184425,
+    0.055381208658218384,
+    -0.055559467524290085,
+    -0.0383027121424675
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "uses:scheduleTrigger",
+    "uses:wait",
+    "uses:splitInBatches",
+    "uses:aggregate",
+    "uses:set",
+    "uses:noOp",
+    "uses:discord",
+    "uses:if",
+    "purpose:monitoring-and-alerts",
+    "trigger:scheduleTrigger",
+    "uses:compareDatasets",
+    "category:social-media",
+    "complexity:high",
+    "uses:spotify",
+    "uses:youTube",
+    "uses:removeDuplicates",
+    "uses:supabase"
+  ],
+  "category_info": {
+    "category_name": "Wait",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait"
+  }
+}

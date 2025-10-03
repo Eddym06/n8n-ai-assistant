@@ -1,0 +1,2423 @@
+{
+  "workflow_info": {
+    "id": "Sjsj7bTIWeJd7CKU",
+    "name": "Agente MM PROTEGE",
+    "display_name": "Agente MM PROTEGE",
+    "file_name": "Agente_MM_PROTEGE.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\Agente_MM_PROTEGE.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true,
+    "fingerprint": "0a7a6b97666f"
+  },
+  "structure": {
+    "total_nodes": 169,
+    "node_types": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.convertToFile",
+      "n8n-nodes-base.googleDriveTrigger",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-evolution-api.evolutionApi",
+      "n8n-nodes-base.googleCalendar",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.extractFromFile",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.crypto",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.redis",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.webhook",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+      "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.supabase",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.dateTime"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.convertToFile",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-evolution-api.evolutionApi",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.googleCalendar",
+        "count": 9
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 14
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.crypto",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.redis",
+        "count": 9
+      },
+      {
+        "type": "n8n-nodes-base.summarize",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.supabase",
+        "count": 16
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 11
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 32
+      },
+      {
+        "type": "n8n-nodes-base.dateTime",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "File Created",
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "position": [
+          -5520,
+          2260
+        ]
+      },
+      {
+        "name": "File Updated",
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "position": [
+          -5520,
+          2460
+        ]
+      },
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -5560,
+          1660
+        ]
+      },
+      {
+        "name": "Execute Workflow Trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -3040,
+          1820
+        ]
+      },
+      {
+        "name": "Schedule Trigger1",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -3060,
+          2720
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          120,
+          1600
+        ]
+      },
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          -3720,
+          2540
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          -3800,
+          2600
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -20,
+          1740
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5580,
+          2040
+        ]
+      },
+      {
+        "name": "Download File",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          -4620,
+          2320
+        ]
+      },
+      {
+        "name": "Extract Document Text",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          -4200,
+          2520
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          -160,
+          1720
+        ]
+      },
+      {
+        "name": "Set File ID",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -5340,
+          2300
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1060,
+          840
+        ]
+      },
+      {
+        "name": "Extract PDF Text",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          -4200,
+          2140
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -4060,
+          2320
+        ]
+      },
+      {
+        "name": "Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+        "position": [
+          -3580,
+          2640
+        ]
+      },
+      {
+        "name": "Summarize",
+        "type": "n8n-nodes-base.summarize",
+        "position": [
+          -3920,
+          2320
+        ]
+      },
+      {
+        "name": "Switch",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -4440,
+          2320
+        ]
+      },
+      {
+        "name": "Insert into Supabase Vectorstore",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "position": [
+          -3740,
+          2320
+        ]
+      },
+      {
+        "name": "Supabase Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "position": [
+          -180,
+          1600
+        ]
+      },
+      {
+        "name": "Extract from Excel",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          -4200,
+          2320
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1080,
+          820
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -220,
+          1460
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5600,
+          2020
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5580,
+          2720
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5560,
+          2160
+        ]
+      },
+      {
+        "name": "OpenAI3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          220,
+          860
+        ]
+      },
+      {
+        "name": "Loop Over Items3",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          640,
+          700
+        ]
+      },
+      {
+        "name": "OutputParser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          340,
+          860
+        ]
+      },
+      {
+        "name": "Parser  Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          180,
+          700
+        ]
+      },
+      {
+        "name": "Sticky Note18",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          0,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note19",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          20,
+          440
+        ]
+      },
+      {
+        "name": "Sticky Note22",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3940,
+          1000
+        ]
+      },
+      {
+        "name": "Sticky Note23",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3920,
+          1020
+        ]
+      },
+      {
+        "name": "Switch3",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -380,
+          920
+        ]
+      },
+      {
+        "name": "Sticky Note26",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5120,
+          1000
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -1020,
+          1220
+        ]
+      },
+      {
+        "name": "Atendente",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -900,
+          1020
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -4800,
+          2300
+        ]
+      },
+      {
+        "name": "Postgres Chat Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "position": [
+          -880,
+          1220
+        ]
+      },
+      {
+        "name": "Webhook EVO",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -5520,
+          1220
+        ]
+      },
+      {
+        "name": "Sticky Note42",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -4320,
+          1000
+        ]
+      },
+      {
+        "name": "Sticky Note43",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -4300,
+          1020
+        ]
+      },
+      {
+        "name": "Switch2",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -560,
+          1060
+        ]
+      },
+      {
+        "name": "Evolution API",
+        "type": "n8n-nodes-evolution-api.evolutionApi",
+        "position": [
+          860,
+          720
+        ]
+      },
+      {
+        "name": "Merge1",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          660,
+          180
+        ]
+      },
+      {
+        "name": "If4",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          200,
+          140
+        ]
+      },
+      {
+        "name": "Sticky Note54",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sticky Note55",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          20,
+          20
+        ]
+      },
+      {
+        "name": "Evolution API5",
+        "type": "n8n-nodes-evolution-api.evolutionApi",
+        "position": [
+          220,
+          520
+        ]
+      },
+      {
+        "name": "ListChats-Supabase",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -5400,
+          1660
+        ]
+      },
+      {
+        "name": "ListMessages-Supabase",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -5000,
+          1680
+        ]
+      },
+      {
+        "name": "DisableMessage-Supabase",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -3600,
+          1780
+        ]
+      },
+      {
+        "name": "SetConfig",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -3880,
+          1480
+        ]
+      },
+      {
+        "name": "Basic LLM Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -4200,
+          1480
+        ]
+      },
+      {
+        "name": "Text Classifier",
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "position": [
+          -4520,
+          1680
+        ]
+      },
+      {
+        "name": "Aggregate1",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -4840,
+          1680
+        ]
+      },
+      {
+        "name": "Code4",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -4660,
+          1680
+        ]
+      },
+      {
+        "name": "Supabase2",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -3880,
+          1660
+        ]
+      },
+      {
+        "name": "Loop Over Items2",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -5200,
+          1660
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model4",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -4080,
+          1620
+        ]
+      },
+      {
+        "name": "Wait2",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          -3740,
+          1780
+        ]
+      },
+      {
+        "name": "Sticky Note58",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5600,
+          1460
+        ]
+      },
+      {
+        "name": "Sticky Note59",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5580,
+          1480
+        ]
+      },
+      {
+        "name": "Evolution API6",
+        "type": "n8n-nodes-evolution-api.evolutionApi",
+        "position": [
+          -3740,
+          1480
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -4520,
+          1840
+        ]
+      },
+      {
+        "name": "Busca Telefone",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          60,
+          140
+        ]
+      },
+      {
+        "name": "Adiciona CHAT supabase",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          440,
+          80
+        ]
+      },
+      {
+        "name": "Atualiza CHAT Supabase",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          440,
+          240
+        ]
+      },
+      {
+        "name": "Cria Histórico Supabase",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          840,
+          180
+        ]
+      },
+      {
+        "name": "Menos que 240 Caracteres",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          40,
+          620
+        ]
+      },
+      {
+        "name": "Split de Mensagem",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          480,
+          700
+        ]
+      },
+      {
+        "name": "1 segundo",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1000,
+          720
+        ]
+      },
+      {
+        "name": "Retorna ID do arquivo",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -4980,
+          2300
+        ]
+      },
+      {
+        "name": "Deleta linhas antigas do documento",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -5180,
+          2300
+        ]
+      },
+      {
+        "name": "Sticky Note32",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5600,
+          1000
+        ]
+      },
+      {
+        "name": "Sticky Note67",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5580,
+          1020
+        ]
+      },
+      {
+        "name": "Delete Memory",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          1000,
+          180
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3040,
+          1560
+        ]
+      },
+      {
+        "name": "Disponibilidade",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -2060,
+          1640
+        ]
+      },
+      {
+        "name": "Marca",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -1560,
+          1640
+        ]
+      },
+      {
+        "name": "Já tem um evento",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -2520,
+          1580
+        ]
+      },
+      {
+        "name": "Google Calendar1",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -2300,
+          1820
+        ]
+      },
+      {
+        "name": "Google Calendar3",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -1740,
+          2000
+        ]
+      },
+      {
+        "name": "Verifica evento",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -2520,
+          1820
+        ]
+      },
+      {
+        "name": "Verifica evento1",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -1940,
+          2000
+        ]
+      },
+      {
+        "name": "If6",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -2340,
+          2020
+        ]
+      },
+      {
+        "name": "Disponibilidade1",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -2540,
+          2020
+        ]
+      },
+      {
+        "name": "Edit Fields6",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -2040,
+          1480
+        ]
+      },
+      {
+        "name": "If5",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -2320,
+          1580
+        ]
+      },
+      {
+        "name": "Edit Fields7",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -2100,
+          1820
+        ]
+      },
+      {
+        "name": "Edit Fields9",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1560,
+          1800
+        ]
+      },
+      {
+        "name": "Switch4",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -2780,
+          1820
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3120,
+          1460
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1860,
+          1640
+        ]
+      },
+      {
+        "name": "Edit Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1560,
+          2000
+        ]
+      },
+      {
+        "name": "criar_reuniao",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          -1080,
+          1520
+        ]
+      },
+      {
+        "name": "cancelar_reuniao",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          -780,
+          1520
+        ]
+      },
+      {
+        "name": "buscar_documentos",
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "position": [
+          -100,
+          1480
+        ]
+      },
+      {
+        "name": "Google Calendar",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          -2840,
+          2720
+        ]
+      },
+      {
+        "name": "5 Minutos antes",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -2380,
+          2900
+        ]
+      },
+      {
+        "name": "2 Hora antes",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -2380,
+          2640
+        ]
+      },
+      {
+        "name": "If7",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -2180,
+          2640
+        ]
+      },
+      {
+        "name": "If8",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -2180,
+          2900
+        ]
+      },
+      {
+        "name": "Edit Fields5",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1940,
+          2620
+        ]
+      },
+      {
+        "name": "Atendente1",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -1600,
+          2600
+        ]
+      },
+      {
+        "name": "Postgres Chat Memory1",
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "position": [
+          -1480,
+          2780
+        ]
+      },
+      {
+        "name": "Atendente2",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -1600,
+          2900
+        ]
+      },
+      {
+        "name": "Edit Fields2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1980,
+          2880
+        ]
+      },
+      {
+        "name": "Evolution API7",
+        "type": "n8n-nodes-evolution-api.evolutionApi",
+        "position": [
+          -1200,
+          2760
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3100,
+          2320
+        ]
+      },
+      {
+        "name": "Sticky Note27",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3080,
+          2360
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model5",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -1720,
+          2800
+        ]
+      },
+      {
+        "name": "Loop Over Items4",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -2620,
+          2720
+        ]
+      },
+      {
+        "name": "Wait",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          -1040,
+          2920
+        ]
+      },
+      {
+        "name": "Supabase",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -3900,
+          1180
+        ]
+      },
+      {
+        "name": "If1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -3720,
+          1180
+        ]
+      },
+      {
+        "name": "Gerar sessionID",
+        "type": "n8n-nodes-base.crypto",
+        "position": [
+          -3600,
+          1280
+        ]
+      },
+      {
+        "name": "Supabase1",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -3460,
+          1280
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2280,
+          820
+        ]
+      },
+      {
+        "name": "Sticky Note20",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3180,
+          820
+        ]
+      },
+      {
+        "name": "Code1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -3340,
+          1120
+        ]
+      },
+      {
+        "name": "Date & Time1",
+        "type": "n8n-nodes-base.dateTime",
+        "position": [
+          -4100,
+          1180
+        ]
+      },
+      {
+        "name": "Convert to File1",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          -2980,
+          1280
+        ]
+      },
+      {
+        "name": "Edit Fields3",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -3120,
+          1280
+        ]
+      },
+      {
+        "name": "If3",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -2680,
+          1280
+        ]
+      },
+      {
+        "name": "Redis4",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -2420,
+          1300
+        ]
+      },
+      {
+        "name": "Redis5",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -2420,
+          1160
+        ]
+      },
+      {
+        "name": "Switch1",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -3160,
+          1040
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1920,
+          860
+        ]
+      },
+      {
+        "name": "OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          -2820,
+          1280
+        ]
+      },
+      {
+        "name": "Compara Get Memory1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1580,
+          1080
+        ]
+      },
+      {
+        "name": "Text Memory1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -2420,
+          840
+        ]
+      },
+      {
+        "name": "Audio Memory1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -2420,
+          1000
+        ]
+      },
+      {
+        "name": "Edit Fields8",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1760,
+          1080
+        ]
+      },
+      {
+        "name": "Wait3",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          -2080,
+          1080
+        ]
+      },
+      {
+        "name": "Get Memory 1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -2240,
+          1080
+        ]
+      },
+      {
+        "name": "Get Memory 2",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -1920,
+          1080
+        ]
+      },
+      {
+        "name": "Get Dados",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -3500,
+          1120
+        ]
+      },
+      {
+        "name": "Variáveis",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -4260,
+          1180
+        ]
+      },
+      {
+        "name": "dados_para_atendimento_humano1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -5040,
+          1180
+        ]
+      },
+      {
+        "name": "Switch Block",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -4500,
+          1280
+        ]
+      },
+      {
+        "name": "Switch6",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -4860,
+          1180
+        ]
+      },
+      {
+        "name": "PARA IA",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -4660,
+          1120
+        ]
+      },
+      {
+        "name": "Verificar Atendimento",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -4660,
+          1280
+        ]
+      },
+      {
+        "name": "Mensagem Completa",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -1360,
+          1060
+        ]
+      },
+      {
+        "name": "Convert to File",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          -2780,
+          1080
+        ]
+      },
+      {
+        "name": "OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          -2600,
+          1080
+        ]
+      },
+      {
+        "name": "Sticky Note46",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -5100,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3160,
+          840
+        ]
+      },
+      {
+        "name": "Edit Fields1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -2940,
+          1080
+        ]
+      },
+      {
+        "name": "ListChats-Supabase2",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          120,
+          1160
+        ]
+      },
+      {
+        "name": "ListMessages-Supabase2",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          640,
+          1180
+        ]
+      },
+      {
+        "name": "Aggregate2",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          900,
+          1180
+        ]
+      },
+      {
+        "name": "Code6",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1140,
+          1180
+        ]
+      },
+      {
+        "name": "Loop Over Items6",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          360,
+          1160
+        ]
+      },
+      {
+        "name": "Basic LLM Chain1",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1380,
+          1160
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model6",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1340,
+          1340
+        ]
+      },
+      {
+        "name": "Sticky Note47",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -220,
+          1040
+        ]
+      },
+      {
+        "name": "Sticky Note51",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          1060
+        ]
+      },
+      {
+        "name": "Evolution API4",
+        "type": "n8n-nodes-evolution-api.evolutionApi",
+        "position": [
+          -140,
+          1160
+        ]
+      },
+      {
+        "name": "Evolution API8",
+        "type": "n8n-nodes-evolution-api.evolutionApi",
+        "position": [
+          1720,
+          1160
+        ]
+      },
+      {
+        "name": "If2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -5300,
+          1220
+        ]
+      },
+      {
+        "name": "reagendar_reuniao",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          -940,
+          1520
+        ]
+      },
+      {
+        "name": "Edit Fields10",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1300,
+          1640
+        ]
+      },
+      {
+        "name": "Supabase4",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -1760,
+          2880
+        ]
+      },
+      {
+        "name": "Supabase3",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          -1760,
+          2620
+        ]
+      }
+    ],
+    "connections_count": 127,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 5,
+      "action_count": 164
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "use_cases": [
+      "Scheduled automation"
+    ],
+    "complexity_score": 3970,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "delete memory",
+      "googleDrive",
+      "sticky note54",
+      "listchats-supabase2",
+      "schedule trigger1",
+      "sticky note7",
+      "loop over items4",
+      "sticky note42",
+      "atualiza chat supabase",
+      "openai chat model1",
+      "stickyNote",
+      "switch4",
+      "@n8n/n8n nodes langchain.embeddingsOpenAi",
+      "webhook",
+      "sticky note51",
+      "disponibilidade",
+      "@n8n/n8n nodes langchain.toolWorkflow",
+      "get memory 1",
+      "default data loader",
+      "evolution api7",
+      "openai chat model3",
+      "deleta linhas antigas do documento",
+      "get memory 2",
+      "disponibilidade1",
+      "gerar sessionid",
+      "aggregate2",
+      "convert to file",
+      "@n8n/n8n nodes langchain.vectorStoreSupabase",
+      "merge",
+      "googleCalendar",
+      "menos que 240 caracteres",
+      "supabase",
+      "download file",
+      "if7",
+      "basic llm chain1",
+      "extract pdf text",
+      "dateTime",
+      "openai1",
+      "extract from excel",
+      "openai chat model6",
+      "cria histórico supabase",
+      "supabase3",
+      "openai3",
+      "executeWorkflowTrigger",
+      "googleDriveTrigger",
+      "cancelar_reuniao",
+      "openai chat model4",
+      "edit fields5",
+      "verificar atendimento",
+      "if5",
+      "1 segundo",
+      "character text splitter",
+      "date & time1",
+      "evolution api",
+      "extractFromFile",
+      "merge1",
+      "file updated",
+      "evolution api8",
+      "aggregate",
+      "listmessages-supabase",
+      "execute workflow trigger",
+      "if1",
+      "insert into supabase vectorstore",
+      "webhook evo",
+      "crypto",
+      "loop over items2",
+      "convert to file1",
+      "openai chat model",
+      "google calendar",
+      "atendente1",
+      "redis4",
+      "audio memory1",
+      "@n8n/n8n nodes langchain.agent",
+      "get dados",
+      "edit fields2",
+      "embeddings openai1",
+      "busca telefone",
+      "listmessages-supabase2",
+      "verifica evento",
+      "sticky note59",
+      "set file id",
+      "if3",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "@n8n/n8n nodes langchain.textSplitterCharacterTextSplitter",
+      "sticky note5",
+      "sticky note18",
+      "sticky note27",
+      "sticky note26",
+      "supabase1",
+      "sticky note23",
+      "summarize",
+      "sticky note12",
+      "edit fields",
+      "disablemessage-supabase",
+      "switch",
+      "aggregate1",
+      "sticky note3",
+      "edit fields1",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "switch3",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "já tem um evento",
+      "openai",
+      "sticky note43",
+      "supabase4",
+      "supabase2",
+      "schedule trigger",
+      "dados_para_atendimento_humano1",
+      "@n8n/n8n nodes langchain.textClassifier",
+      "outputparser1",
+      "if8",
+      "n8n nodes evolution api.evolutionApi",
+      "verifica evento1",
+      "mensagem completa",
+      "splitInBatches",
+      "code",
+      "redis",
+      "sticky note15",
+      "sticky note17",
+      "sticky note46",
+      "sticky note9",
+      "sticky note4",
+      "set",
+      "loop over items6",
+      "evolution api6",
+      "sticky note32",
+      "compara get memory1",
+      "wait",
+      "variáveis",
+      "criar_reuniao",
+      "edit fields3",
+      "wait2",
+      "sticky note47",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "embeddings openai",
+      "complex",
+      "code4",
+      "switch2",
+      "atendente2",
+      "5 minutos antes",
+      "redis5",
+      "text memory1",
+      "sticky note1",
+      "sticky note2",
+      "supabase vector store",
+      "sticky note22",
+      "google calendar3",
+      "sticky note20",
+      "splitOut",
+      "switch block",
+      "loop over items3",
+      "adiciona chat supabase",
+      "marca",
+      "evolution api4",
+      "basic llm chain",
+      "code1",
+      "@n8n/n8n nodes langchain.memoryPostgresChat",
+      "switch6",
+      "listchats-supabase",
+      "file processing",
+      "postgres chat memory",
+      "2 hora antes",
+      "google calendar1",
+      "postgres chat memory1",
+      "openai chat model5",
+      "sticky note55",
+      "setconfig",
+      "reagendar_reuniao",
+      "edit fields10",
+      "sticky note6",
+      "convertToFile",
+      "scheduleTrigger",
+      "buscar_documentos",
+      "switch1",
+      "if2",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "sticky note67",
+      "sticky note10",
+      "@n8n/n8n nodes langchain.toolVectorStore",
+      "code6",
+      "if4",
+      "extract document text",
+      "parser  chain",
+      "edit fields7",
+      "text classifier",
+      "split de mensagem",
+      "edit fields6",
+      "edit fields8",
+      "atendente",
+      "sticky note19",
+      "file created",
+      "sticky note8",
+      "retorna id do arquivo",
+      "wait3",
+      "edit fields9",
+      "if6",
+      "filter",
+      "evolution api5",
+      "para ia",
+      "sticky note58",
+      "loop over items"
+    ],
+    "description": "'Agente MM PROTEGE' es un workflow diseñado para file processing con 169 nodos con 5 disparadores que ejecuta: OpenAI Chat Model1, Default Data Loader, Embeddings OpenAI1 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Agente MM PROTEGE. Nodos: OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Embeddings OpenAI1 (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Download File (googleDrive), File Created (googleDriveTrigger), File Updated (googleDriveTrigger), Extract Document Text (extractFromFile), Embeddings OpenAI (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Set File ID (set), Sticky Note2 (stickyNote), Extract PDF Text (extractFromFile), Aggregate (aggregate), Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter), Summarize (summarize), Switch (switch), Insert into Supabase Vectorstore (@n8n/n8n-nodes-langchain.vectorStoreSupabase), Supabase Vector Store (@n8n/n8n-nodes-langchain.vectorStoreSupabase), Extract from Excel (extractFromFile), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note12 (stickyNote), Sticky Note10 (stickyNote), OpenAI3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Loop Over Items3 (splitInBatches), OutputParser1 (@n8n/n8n-nodes-langchain.outputParserStructured), Parser  Chain (@n8n/n8n-nodes-langchain.chainLlm), Sticky Note18 (stickyNote), Sticky Note19 (stickyNote), Sticky Note22 (stickyNote), Sticky Note23 (stickyNote), Switch3 (switch), Sticky Note26 (stickyNote), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Atendente (@n8n/n8n-nodes-langchain.agent), Loop Over Items (splitInBatches), Postgres Chat Memory (@n8n/n8n-nodes-langchain.memoryPostgresChat), Webhook EVO (webhook), Sticky Note42 (stickyNote), Sticky Note43 (stickyNote), Switch2 (switch), Evolution API (n8n-nodes-evolution-api.evolutionApi), Merge1 (merge), If4 (if), Sticky Note54 (stickyNote), Sticky Note55 (stickyNote), Evolution API5 (n8n-nodes-evolution-api.evolutionApi), ListChats-Supabase (supabase), ListMessages-Supabase (supabase), Schedule Trigger (scheduleTrigger), DisableMessage-Supabase (supabase), SetConfig (set), Basic LLM Chain (@n8n/n8n-nodes-langchain.chainLlm), Text Classifier (@n8n/n8n-nodes-langchain.textClassifier), Aggregate1 (aggregate), Code4 (code), Supabase2 (supabase), Loop Over Items2 (splitInBatches), OpenAI Chat Model4 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Wait2 (wait), Sticky Note58 (stickyNote), Sticky Note59 (stickyNote), Evolution API6 (n8n-nodes-evolution-api.evolutionApi), OpenAI Chat Model3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Busca Telefone (supabase), Adiciona CHAT supabase (supabase), Atualiza CHAT Supabase (supabase), Cria Histórico Supabase (supabase), Menos que 240 Caracteres (if), Split de Mensagem (splitOut), 1 segundo (wait), Retorna ID do arquivo (code), Deleta linhas antigas do documento (supabase), Sticky Note32 (stickyNote), Sticky Note67 (stickyNote), Delete Memory (redis), Sticky Note15 (stickyNote), Execute Workflow Trigger (executeWorkflowTrigger), Disponibilidade (googleCalendar), Marca (googleCalendar), Já tem um evento (googleCalendar), Google Calendar1 (googleCalendar), Google Calendar3 (googleCalendar), Verifica evento (googleCalendar), Verifica evento1 (googleCalendar), If6 (if), Disponibilidade1 (googleCalendar), Edit Fields6 (set), If5 (if), Edit Fields7 (set), Edit Fields9 (set), Switch4 (switch), Sticky Note8 (stickyNote), If (if), Edit Fields (set), criar_reuniao (@n8n/n8n-nodes-langchain.toolWorkflow), cancelar_reuniao (@n8n/n8n-nodes-langchain.toolWorkflow), buscar_documentos (@n8n/n8n-nodes-langchain.toolVectorStore), Google Calendar (googleCalendar), 5 Minutos antes (filter), 2 Hora antes (filter), If7 (if), If8 (if), Edit Fields5 (set), Atendente1 (@n8n/n8n-nodes-langchain.agent), Postgres Chat Memory1 (@n8n/n8n-nodes-langchain.memoryPostgresChat), Atendente2 (@n8n/n8n-nodes-langchain.agent), Edit Fields2 (set), Evolution API7 (n8n-nodes-evolution-api.evolutionApi), Sticky Note7 (stickyNote), Sticky Note27 (stickyNote), Schedule Trigger1 (scheduleTrigger), OpenAI Chat Model5 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Loop Over Items4 (splitInBatches), Wait (wait), Supabase (supabase), If1 (if), Gerar sessionID (crypto), Supabase1 (supabase), Sticky Note17 (stickyNote), Sticky Note20 (stickyNote), Code1 (code), Date & Time1 (dateTime), Convert to File1 (convertToFile), Edit Fields3 (set), If3 (if), Redis4 (redis), Redis5 (redis), Switch1 (switch), Sticky Note3 (stickyNote), OpenAI1 (@n8n/n8n-nodes-langchain.openAi), Compara Get Memory1 (if), Text Memory1 (redis), Audio Memory1 (redis), Edit Fields8 (set), Wait3 (wait), Get Memory 1 (redis), Get Memory 2 (redis), Get Dados (supabase), Variáveis (set), dados_para_atendimento_humano1 (set), Switch Block (switch), Switch6 (switch), PARA IA (redis), Verificar Atendimento (redis), Mensagem Completa (code), Convert to File (convertToFile), OpenAI (@n8n/n8n-nodes-langchain.openAi), Sticky Note46 (stickyNote), Sticky Note9 (stickyNote), Edit Fields1 (set), ListChats-Supabase2 (supabase), ListMessages-Supabase2 (supabase), Aggregate2 (aggregate), Code6 (code), Loop Over Items6 (splitInBatches), Basic LLM Chain1 (@n8n/n8n-nodes-langchain.chainLlm), OpenAI Chat Model6 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Sticky Note47 (stickyNote), Sticky Note51 (stickyNote), Evolution API4 (n8n-nodes-evolution-api.evolutionApi), Evolution API8 (n8n-nodes-evolution-api.evolutionApi), If2 (if), reagendar_reuniao (@n8n/n8n-nodes-langchain.toolWorkflow), Edit Fields10 (set), Supabase4 (supabase), Supabase3 (supabase). Propósito: file processing. Categoría: ai-ml. Disparadores: File Created, File Updated, Schedule Trigger, Execute Workflow Trigger, Schedule Trigger1",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "File Created",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "Execute Workflow Trigger",
+      "Schedule Trigger",
+      "Embeddings OpenAI1",
+      "Schedule Trigger1",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.googleDriveTrigger",
+      "OpenAI Chat Model1",
+      "Default Data Loader",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "File Updated"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.memorypostgreschat",
+      "@n8n/n8n-nodes-langchain.vectorstoresupabase",
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "@n8n/n8n-nodes-langchain.textsplittercharactertextsplitter",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "@n8n/n8n-nodes-langchain.toolvectorstore",
+      "n8n-nodes-base.googledrivetrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.crypto",
+      "@n8n/n8n-nodes-langchain.textclassifier",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.datetime",
+      "n8n-nodes-evolution-api.evolutionapi",
+      "n8n-nodes-base.redis",
+      "n8n-nodes-base.googlecalendar",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.toolworkflow",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.extractfromfile",
+      "n8n-nodes-base.supabase",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.converttofile",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.embeddingsopenai",
+      "n8n-nodes-base.splitinbatches"
+    ],
+    "search_terms": [
+      "agente_mm_protege",
+      "protege",
+      "agente"
+    ],
+    "alternative_names": [
+      "Agente MM PROTEGE"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": true,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.googleDriveTrigger",
+      "n8n-nodes-base.googleDriveTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 85.13853904282117,
+    "best_practices_score": 50.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 82.02770780856423
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.889384"
+  },
+  "semantic_vector": [
+    -0.05061094090342522,
+    -0.046293728053569794,
+    -0.03137274459004402,
+    0.02605908364057541,
+    -0.007894006557762623,
+    -0.05140259116888046,
+    0.05096510797739029,
+    -0.048081908375024796,
+    -0.051419857889413834,
+    0.051417358219623566,
+    -0.05024230480194092,
+    0.010477833449840546,
+    -0.0500749871134758,
+    -0.050742387771606445,
+    -0.050288740545511246,
+    0.0514199398458004,
+    0.05082869157195091,
+    -0.05005268007516861,
+    -0.05133478716015816,
+    0.016282599419355392,
+    0.04760671779513359,
+    -0.011045502498745918,
+    0.012442126870155334,
+    0.04032453894615173,
+    -0.04004167392849922,
+    -0.036452289670705795,
+    -0.04441843926906586,
+    0.051275718957185745,
+    -0.051407456398010254,
+    0.049206916242837906,
+    0.051395662128925323,
+    -0.04854494333267212,
+    0.05085153132677078,
+    -0.003166656941175461,
+    0.04434746876358986,
+    -0.033543333411216736,
+    -0.048948775976896286,
+    0.040635548532009125,
+    -0.05129151791334152,
+    0.031832147389650345,
+    -0.024927135556936264,
+    0.041172366589307785,
+    -0.0507858507335186,
+    0.05137499421834946,
+    0.0514199398458004,
+    0.04041228070855141,
+    0.01977970078587532,
+    0.04464588314294815,
+    -0.05109263211488724,
+    -0.05131896585226059,
+    -0.030775373801589012,
+    0.029763907194137573,
+    -0.0514199398458004,
+    -0.05141904950141907,
+    -0.04754986613988876,
+    -0.03909587860107422,
+    0.051219306886196136,
+    0.00483745988458395,
+    -0.050450652837753296,
+    -0.0033563931938260794,
+    0.046819135546684265,
+    -0.0510062538087368,
+    0.012245552614331245,
+    0.05105544254183769,
+    -0.029060568660497665,
+    -0.02214946411550045,
+    0.05141017958521843,
+    -0.01026567630469799,
+    0.051392167806625366,
+    -0.04612799733877182,
+    -0.05138475075364113,
+    -0.044649649411439896,
+    0.02578687109053135,
+    0.051419369876384735,
+    -0.03370441123843193,
+    0.05115309730172157,
+    0.0514192096889019,
+    -0.051341552287340164,
+    -0.044974200427532196,
+    -0.05136532709002495,
+    0.04613759368658066,
+    0.030859412625432014,
+    0.047836627811193466,
+    -0.05140528827905655,
+    -0.003213509451597929,
+    0.04459226876497269,
+    0.047287777066230774,
+    -0.047900859266519547,
+    0.005825697910040617,
+    0.028821952641010284,
+    -0.04732687771320343,
+    0.03458106890320778,
+    0.04865431413054466,
+    -0.048258766531944275,
+    -0.01922418177127838,
+    0.04930008947849274,
+    -0.04511222615838051,
+    0.0514199398458004,
+    -0.050670426338911057,
+    -0.05141774192452431,
+    0.05139467120170593,
+    -0.0475490503013134,
+    0.012191115878522396,
+    0.0015113226836547256,
+    0.05139482766389847,
+    0.048664677888154984,
+    0.05141599103808403,
+    0.011726340278983116,
+    -0.05085211992263794,
+    -0.04897530376911163,
+    -0.014157194644212723,
+    -0.051419924944639206,
+    -0.04837457090616226,
+    0.026516122743487358,
+    0.051349762827157974,
+    0.04600147530436516,
+    -0.049976080656051636,
+    -0.05116105452179909,
+    0.051207251846790314,
+    0.04776797443628311,
+    0.004857070744037628,
+    0.05096742510795593,
+    0.05047989636659622,
+    -0.0028861891478300095,
+    0.05141989514231682,
+    -0.042201194912195206,
+    -0.012033991515636444,
+    -0.004448466468602419,
+    0.05078082159161568,
+    -0.05141473561525345,
+    -0.050875473767519,
+    0.05055544525384903,
+    0.05141547694802284,
+    0.020551174879074097,
+    0.05013273283839226,
+    -0.03891574963927269,
+    0.03827495872974396,
+    0.03461612015962601,
+    -0.05006558820605278,
+    -0.05080096423625946,
+    -0.04925781115889549,
+    0.0514199398458004,
+    0.0432065986096859,
+    -0.028521602973341942,
+    -0.0291725043207407,
+    -0.0514199398458004,
+    -0.024525122717022896,
+    -0.02152799442410469,
+    0.05140947178006172,
+    0.04928973689675331,
+    -0.05135168880224228,
+    -0.05141889676451683,
+    0.05133784934878349,
+    -0.02081453986465931,
+    0.04834672063589096,
+    0.0514199398458004,
+    -0.04451368376612663,
+    -0.0514199398458004,
+    -0.04884815216064453,
+    -0.04768768325448036,
+    -0.0514199398458004,
+    -0.0514199398458004,
+    0.051406703889369965,
+    0.038792625069618225,
+    0.04867283254861832,
+    -0.014166614972054958,
+    -0.05140751972794533,
+    -0.0018487703055143356,
+    -0.051399149000644684,
+    0.04685094580054283,
+    0.05141768604516983,
+    -0.051313553005456924,
+    -0.039166808128356934,
+    -0.028280582278966904,
+    -0.051416534930467606,
+    0.0479738712310791,
+    -0.050721731036901474,
+    0.03176704794168472,
+    0.006426858250051737,
+    -0.05065950006246567,
+    0.047116514295339584,
+    0.04416504502296448,
+    -0.05141753330826759,
+    -0.04841171205043793,
+    0.04707034304738045,
+    0.050775688141584396,
+    -0.051401250064373016,
+    0.05141981318593025,
+    0.047762736678123474,
+    -0.024556197226047516,
+    0.00630596186965704,
+    0.05016055703163147,
+    -0.051287561655044556,
+    -0.05139808729290962,
+    -0.0514117069542408,
+    -0.0514184795320034,
+    0.0017099392134696245,
+    0.0514199398458004,
+    0.0508226715028286,
+    -0.014552718959748745,
+    0.05034959688782692,
+    0.051352500915527344,
+    -0.05129065737128258,
+    0.051416393369436264,
+    0.026269221678376198,
+    0.027418894693255424,
+    -0.03885912522673607,
+    0.020463263615965843,
+    -0.05141977593302727,
+    -0.051314663141965866,
+    0.05089423432946205,
+    0.05139850080013275,
+    0.05137946829199791,
+    0.04376921430230141,
+    -0.0514199398458004,
+    -0.049599431455135345,
+    0.0429549403488636,
+    0.04671568423509598,
+    -0.05128447711467743,
+    0.028666162863373756,
+    -0.04781499132514,
+    0.049856919795274734,
+    0.04735240340232849,
+    -0.05097842589020729,
+    -0.045275092124938965,
+    -0.051419809460639954,
+    -0.051419638097286224,
+    -0.05141642317175865,
+    -0.05004870146512985,
+    -0.0513940192759037,
+    -0.0005710225668735802,
+    -0.038110073655843735,
+    0.04634665325284004,
+    -0.0514199398458004,
+    -0.008175423368811607,
+    0.041917990893125534,
+    0.0514199398458004,
+    0.051242366433143616,
+    -0.05089082568883896,
+    0.0399097241461277,
+    0.05100117623806,
+    0.035498734563589096,
+    -0.02683647722005844,
+    0.04556301236152649,
+    0.04313299432396889,
+    0.05127421393990517,
+    0.049640871584415436,
+    0.04991403967142105,
+    0.05138693377375603,
+    0.0514199398458004,
+    -0.05138631537556648,
+    0.04714473336935043,
+    -0.03174663335084915,
+    -0.051227867603302,
+    0.01290143746882677,
+    -0.0514199398458004,
+    0.05045590549707413,
+    0.0514199398458004,
+    0.046911273151636124,
+    0.039324015378952026,
+    0.031770724803209305,
+    -0.0017905067652463913,
+    0.04040961712598801,
+    0.051342543214559555,
+    0.0466100238263607,
+    0.04806915298104286,
+    0.038423698395490646,
+    0.048225369304418564,
+    -0.05134233087301254,
+    0.05137038230895996,
+    -0.051416873931884766,
+    0.051419809460639954,
+    -0.05087224021553993,
+    0.04428836330771446,
+    0.051419697701931,
+    -0.047073040157556534,
+    -0.050914715975522995,
+    0.04844367131590843,
+    0.0514199398458004,
+    0.05119075998663902,
+    -0.026539791375398636,
+    0.04969429224729538,
+    0.051403436809778214,
+    -0.04154166579246521,
+    0.010054878890514374,
+    -0.05111987516283989,
+    -0.04580821841955185,
+    0.05141809210181236,
+    -0.05136970430612564,
+    0.05139634385704994,
+    -0.04984333738684654,
+    0.045785918831825256,
+    0.051417719572782516,
+    -0.042118318378925323,
+    0.03999803587794304,
+    -0.05140699818730354,
+    -0.0292962696403265,
+    0.04012751206755638,
+    -0.0504845529794693,
+    0.04905058443546295,
+    -0.0058880764991045,
+    -0.04841723293066025,
+    0.04922046512365341,
+    -0.050643324851989746,
+    -0.04452243447303772,
+    -0.02777995727956295,
+    0.049464404582977295,
+    0.03524467349052429,
+    0.02276693470776081,
+    -0.0425003319978714,
+    0.048440754413604736,
+    0.051088396459817886,
+    -0.042882323265075684,
+    -0.035983528941869736,
+    0.045265115797519684,
+    -0.05132320895791054,
+    0.04821433499455452,
+    -0.037538353353738785,
+    -0.003415850456804037,
+    -0.01924535073339939,
+    0.032253462821245193,
+    -0.05141400918364525,
+    0.051419515162706375,
+    0.018152615055441856,
+    0.0514085553586483,
+    -0.05013773590326309,
+    0.05109662935137749,
+    -0.04615211486816406,
+    -0.05029565468430519,
+    0.017307395115494728,
+    -0.04781636223196983,
+    -0.046291057020425797,
+    -0.02874460443854332,
+    0.0514199398458004,
+    0.04673722758889198,
+    0.04448077455163002,
+    0.051208410412073135,
+    0.047304313629865646,
+    0.051418595016002655,
+    -0.025492539629340172,
+    -0.05132847651839256,
+    -0.05141501873731613,
+    -0.003714338643476367,
+    -0.03920789808034897,
+    -0.0514199398458004,
+    -0.05030196160078049,
+    -0.05104905366897583,
+    -0.049391329288482666,
+    -0.049043793231248856,
+    -0.025754353031516075,
+    0.05140972137451172,
+    0.0067139132879674435,
+    0.051402412354946136,
+    -0.04019560664892197,
+    0.05097627267241478,
+    0.004998345393687487,
+    -0.0514199398458004,
+    0.051275402307510376,
+    0.03444915637373924,
+    0.051419250667095184,
+    0.05138392373919487,
+    -0.05126431956887245,
+    -0.05141899734735489,
+    0.05139395594596863,
+    -0.004787167999893427,
+    0.051395971328020096,
+    0.05087200552225113,
+    -0.04928811267018318,
+    0.05081526190042496,
+    -0.03784980997443199,
+    -0.04575418308377266,
+    0.037138763815164566,
+    -0.03352191671729088,
+    0.038552604615688324,
+    0.04987495392560959,
+    0.04515581205487251,
+    -0.046796172857284546,
+    -0.05141562223434448,
+    0.03480846807360649,
+    -0.05086473748087883,
+    0.037579238414764404,
+    0.04901159554719925,
+    0.051098745316267014,
+    -0.04798392578959465,
+    -0.048418935388326645,
+    -0.051184605807065964,
+    0.051363177597522736,
+    0.050240784883499146,
+    0.027055807411670685,
+    -0.05138230323791504,
+    0.03593422472476959,
+    0.0073730661533772945,
+    0.051419470459222794,
+    0.04920365288853645,
+    -0.04818643257021904,
+    0.051221925765275955,
+    -0.047351159155368805,
+    -0.03632662445306778,
+    0.049045465886592865,
+    0.001427110517397523,
+    0.01844296231865883,
+    0.05140265077352524,
+    -0.050915490835905075,
+    0.0501021072268486,
+    -0.050204306840896606,
+    0.027643276378512383,
+    -0.05141833797097206,
+    0.049553826451301575,
+    0.050900109112262726,
+    0.021162845194339752,
+    -0.05027100816369057,
+    0.0508614219725132,
+    0.007944008335471153,
+    -0.04442137852311134,
+    0.022732757031917572,
+    -0.05052310228347778,
+    0.03145977854728699,
+    -0.05141991749405861,
+    -0.04932229220867157,
+    0.01614680141210556,
+    -0.0486430749297142,
+    -0.006509103812277317,
+    -0.05105387046933174,
+    0.05113455280661583,
+    -0.050602417439222336,
+    0.051350973546504974,
+    -0.051419347524642944,
+    0.05125875398516655,
+    -0.05128980427980423,
+    0.044898029416799545,
+    0.029958492144942284,
+    -0.049258437007665634,
+    0.043344929814338684,
+    0.05140737071633339,
+    -0.05104486271739006,
+    -0.016039017587900162,
+    -0.05141507461667061,
+    -0.05141090974211693,
+    -0.05141991376876831,
+    0.04548852518200874,
+    0.03768480196595192,
+    -0.02086503803730011,
+    -0.029178274795413017,
+    0.04910576343536377,
+    -0.0072335111908614635,
+    -0.041180092841386795,
+    -0.049299340695142746,
+    -0.048065055161714554,
+    -0.042486950755119324,
+    -0.05135418102145195,
+    -0.04580014944076538,
+    -0.03277532383799553,
+    0.0514199398458004,
+    0.045582666993141174,
+    -0.017580270767211914,
+    -0.0514199398458004,
+    -0.04658162221312523,
+    0.0514199398458004,
+    -0.035143110901117325,
+    -0.05120620131492615,
+    -0.013395053334534168,
+    0.05137879401445389,
+    0.051034193485975266,
+    0.04011556878685951,
+    0.04415775090456009,
+    -0.0363302156329155,
+    0.05127129331231117,
+    -0.05136282742023468,
+    0.04708057641983032,
+    0.05141883343458176,
+    -0.004028669558465481,
+    -0.04738840460777283,
+    0.04296351969242096,
+    0.05127701908349991,
+    -0.04567840322852135,
+    0.051123060286045074,
+    0.05130184814333916,
+    0.03496871143579483,
+    0.02040681429207325,
+    -0.050440479069948196,
+    -0.051387909799814224,
+    0.051382992416620255,
+    -0.03154231235384941,
+    -0.051092665642499924,
+    0.04204881563782692,
+    0.05135635286569595,
+    -0.01847326010465622,
+    -0.029932716861367226,
+    -0.04021218791604042,
+    0.0512816496193409,
+    -0.051267120987176895,
+    0.050973307341337204,
+    -0.04948905482888222,
+    0.04920094087719917,
+    -0.051419083029031754,
+    0.05141986161470413,
+    0.05137583613395691,
+    0.04333655536174774,
+    -0.051411163061857224,
+    0.051306333392858505,
+    0.025356577709317207,
+    -0.02741253189742565,
+    0.05003310739994049,
+    -0.0514199398458004,
+    0.030296197161078453,
+    0.04557856172323227,
+    0.014805668964982033,
+    -0.051246218383312225,
+    -0.046178970485925674,
+    0.051419030874967575,
+    -0.05018646642565727,
+    -0.05116676166653633
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: File Created, File Updated, Schedule Trigger, Execute Workflow Trigger, Schedule Trigger1; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for file processing in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

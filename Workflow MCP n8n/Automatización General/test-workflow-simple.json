@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "test-webhook",
+      "name": "Test Webhook Simple",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "test-simple"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "test-set",
+      "name": "Test Set Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        300,
+        100
+      ],
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "test_message",
+              "value": "Hello from test workflow"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Test Webhook Simple": {
+      "main": [
+        [
+          {
+            "node": "Test Set Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

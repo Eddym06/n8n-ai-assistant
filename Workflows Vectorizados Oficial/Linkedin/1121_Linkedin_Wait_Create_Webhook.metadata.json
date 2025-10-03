@@ -1,0 +1,1209 @@
+{
+  "workflow_info": {
+    "id": "744G7emgZe0pXaPB",
+    "name": "Hacker News to Video Template - AlexK1919",
+    "display_name": "Hacker News to Video Template - AlexK1919",
+    "file_name": "1121_Linkedin_Wait_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Linkedin\\1121_Linkedin_Wait_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "e379f5a87bee"
+  },
+  "structure": {
+    "total_nodes": 48,
+    "node_types": [
+      "n8n-nodes-base.youTube",
+      "n8n-nodes-base.linkedIn",
+      "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "n8n-nodes-base.s3",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.hackerNews",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.limit",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.microsoftOneDrive",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.dropbox",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.twitter",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.youTube",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.linkedIn",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.s3",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.hackerNews",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 14
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.limit",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.microsoftOneDrive",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.dropbox",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.twitter",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 9
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -320,
+          300
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Hacker News",
+        "type": "n8n-nodes-base.hackerNews",
+        "position": [
+          -20,
+          300
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          440,
+          300
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          720,
+          580
+        ]
+      },
+      {
+        "name": "HTTP Request1",
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "position": [
+          900,
+          580
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          1080,
+          580
+        ]
+      },
+      {
+        "name": "Upload to Minio",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          4240,
+          1080
+        ]
+      },
+      {
+        "name": "News1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2180,
+          320
+        ]
+      },
+      {
+        "name": "Leo - Improve Prompt",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2720,
+          100
+        ]
+      },
+      {
+        "name": "Leo - Get imageId",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3320,
+          100
+        ]
+      },
+      {
+        "name": "Runway - Create Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2520,
+          300
+        ]
+      },
+      {
+        "name": "Runway - Get Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2920,
+          300
+        ]
+      },
+      {
+        "name": "Wait2",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          2720,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -160,
+          -40
+        ]
+      },
+      {
+        "name": "If Topic",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1100,
+          320
+        ]
+      },
+      {
+        "name": "Get Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1500,
+          320
+        ]
+      },
+      {
+        "name": "Prompt Settings1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2520,
+          100
+        ]
+      },
+      {
+        "name": "Leo - Generate Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2920,
+          100
+        ]
+      },
+      {
+        "name": "Wait1",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3120,
+          100
+        ]
+      },
+      {
+        "name": "Limit",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          240,
+          300
+        ]
+      },
+      {
+        "name": "Image Analysis",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          1300,
+          320
+        ]
+      },
+      {
+        "name": "Wait3",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3080,
+          1020
+        ]
+      },
+      {
+        "name": "Article Analysis",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          740,
+          300
+        ]
+      },
+      {
+        "name": "Dropbox",
+        "type": "n8n-nodes-base.dropbox",
+        "position": [
+          3640,
+          1080
+        ]
+      },
+      {
+        "name": "Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          3840,
+          1080
+        ]
+      },
+      {
+        "name": "Microsoft OneDrive",
+        "type": "n8n-nodes-base.microsoftOneDrive",
+        "position": [
+          4040,
+          1080
+        ]
+      },
+      {
+        "name": "YouTube",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          3640,
+          1500
+        ]
+      },
+      {
+        "name": "X",
+        "type": "n8n-nodes-base.twitter",
+        "position": [
+          3840,
+          1500
+        ]
+      },
+      {
+        "name": "Instagram",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4240,
+          1500
+        ]
+      },
+      {
+        "name": "LinkedIn",
+        "type": "n8n-nodes-base.linkedIn",
+        "position": [
+          4040,
+          1500
+        ]
+      },
+      {
+        "name": "Leo - Improve Prompt2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2720,
+          500
+        ]
+      },
+      {
+        "name": "Wait4",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          2720,
+          700
+        ]
+      },
+      {
+        "name": "Wait6",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3120,
+          500
+        ]
+      },
+      {
+        "name": "Leo - Generate Image2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2920,
+          500
+        ]
+      },
+      {
+        "name": "Leo - Get imageId2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3320,
+          500
+        ]
+      },
+      {
+        "name": "Runway - Create Video2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2520,
+          700
+        ]
+      },
+      {
+        "name": "Runway - Get Video2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2920,
+          700
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3580,
+          940
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3580,
+          1360
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2420,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2420,
+          940
+        ]
+      },
+      {
+        "name": "Cre - Generate Video1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2880,
+          1020
+        ]
+      },
+      {
+        "name": "Cre - Get Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3280,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          660,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          -40
+        ]
+      },
+      {
+        "name": "Article Prep",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          1820,
+          320
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -620,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3280,
+          1180
+        ]
+      }
+    ],
+    "connections_count": 36,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 47
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "social media management",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1620,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "dropbox",
+      "social media management",
+      "googleDrive",
+      "sticky note5",
+      "leo - get imageid",
+      "linkedin",
+      "runway - create video",
+      "google drive",
+      "prompt settings1",
+      "wait4",
+      "sticky note7",
+      "article analysis",
+      "get image",
+      "upload to minio",
+      "image analysis",
+      "cre - get video",
+      "integration",
+      "sticky note3",
+      "structured output parser",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "stickyNote",
+      "youTube",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "microsoftOneDrive",
+      "youtube",
+      "http request1",
+      "httpRequest",
+      "openai chat model3",
+      "sticky note2",
+      "if topic",
+      "cre - generate video1",
+      "splitInBatches",
+      "news1",
+      "runway - get video",
+      "wait1",
+      "article prep",
+      "hackerNews",
+      "set",
+      "twitter",
+      "wait6",
+      "linkedIn",
+      "limit",
+      "runway - create video2",
+      "sticky note4",
+      "leo - improve prompt2",
+      "leo - improve prompt",
+      "wait",
+      "hacker news",
+      "instagram",
+      "wait2",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "@n8n/n8n nodes langchain.agent",
+      "sticky note8",
+      "wait3",
+      "runway - get video2",
+      "leo - get imageid2",
+      "complex",
+      "leo - generate image2",
+      "manualTrigger",
+      "leo - generate image",
+      "sticky note1",
+      "when clicking ‘test workflow’",
+      "@n8n/n8n nodes langchain.toolHttpRequest",
+      "microsoft onedrive",
+      "loop over items"
+    ],
+    "description": "'Hacker News to Video Template - AlexK1919' es un workflow diseñado para social media management con 48 nodos activado por When clicking ‘Test workflow’ que ejecuta: Hacker News, Loop Over Items, OpenAI Chat Model3 en la categoría de integration.",
+    "semantic_content": "Workflow: Hacker News to Video Template - AlexK1919. Nodos: When clicking ‘Test workflow’ (manualTrigger), Hacker News (hackerNews), Loop Over Items (splitInBatches), OpenAI Chat Model3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), HTTP Request1 (@n8n/n8n-nodes-langchain.toolHttpRequest), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Upload to Minio (s3), News1 (set), Leo - Improve Prompt (httpRequest), Leo - Get imageId (httpRequest), Runway - Create Video (httpRequest), Runway - Get Video (httpRequest), Wait2 (wait), Sticky Note (stickyNote), If Topic (if), Get Image (httpRequest), Prompt Settings1 (set), Leo - Generate Image (httpRequest), Wait1 (wait), Limit (limit), Image Analysis (@n8n/n8n-nodes-langchain.openAi), Wait3 (wait), Article Analysis (@n8n/n8n-nodes-langchain.agent), Dropbox (dropbox), Google Drive (googleDrive), Microsoft OneDrive (microsoftOneDrive), YouTube (youTube), X (twitter), Instagram (httpRequest), LinkedIn (linkedIn), Leo - Improve Prompt2 (httpRequest), Wait4 (wait), Wait6 (wait), Leo - Generate Image2 (httpRequest), Leo - Get imageId2 (httpRequest), Runway - Create Video2 (httpRequest), Runway - Get Video2 (httpRequest), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Cre - Generate Video1 (httpRequest), Cre - Get Video (httpRequest), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Article Prep (@n8n/n8n-nodes-langchain.openAi), Sticky Note5 (stickyNote), Sticky Note8 (stickyNote). Propósito: social media management. Categoría: integration. Disparadores: When clicking ‘Test workflow’",
+    "business_context": "Social Media"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "OpenAI Chat Model3",
+      "n8n-nodes-base.hackerNews",
+      "n8n-nodes-base.manualTrigger",
+      "Loop Over Items",
+      "Hacker News",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.splitInBatches"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "@n8n/n8n-nodes-langchain.toolhttprequest",
+      "n8n-nodes-base.manualtrigger",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.s3",
+      "n8n-nodes-base.microsoftonedrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.hackernews",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.limit",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.youtube",
+      "n8n-nodes-base.dropbox",
+      "n8n-nodes-base.linkedin",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.twitter",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitinbatches"
+    ],
+    "search_terms": [
+      "create",
+      "1121_linkedin_wait_create_webhook",
+      "1121",
+      "webhook",
+      "linkedin",
+      "wait"
+    ],
+    "alternative_names": [
+      "Hacker News to Video Template - AlexK1919"
+    ],
+    "related_concepts": [
+      "social media management",
+      "integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 59.25925925925925,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 81.85185185185185
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:11.624065"
+  },
+  "semantic_vector": [
+    -0.024659186601638794,
+    -0.04741862416267395,
+    0.05361060053110123,
+    -0.056673020124435425,
+    0.034173399209976196,
+    0.033083267509937286,
+    -0.010718856006860733,
+    0.0557762049138546,
+    -0.054330162703990936,
+    0.046945009380578995,
+    -0.049146417528390884,
+    -0.04276283457875252,
+    0.04247839376330376,
+    -0.05680292472243309,
+    -0.04627787321805954,
+    0.05705353617668152,
+    0.057033322751522064,
+    0.03403525799512863,
+    0.026861291378736496,
+    0.007798599079251289,
+    0.04492032155394554,
+    -0.030988087877631187,
+    0.036049891263246536,
+    -0.045778363943099976,
+    -0.01289947610348463,
+    0.0543486513197422,
+    -0.051749780774116516,
+    0.0355299673974514,
+    -0.0549735464155674,
+    -0.039657510817050934,
+    0.010600399225950241,
+    -0.012463662773370743,
+    -0.03917694836854935,
+    -0.05233369767665863,
+    0.04608540236949921,
+    -0.044502802193164825,
+    -0.04145233705639839,
+    0.007803783286362886,
+    0.032479315996170044,
+    -0.05477804318070412,
+    -0.010904690250754356,
+    0.055797677487134933,
+    -0.03067747876048088,
+    -0.0364341139793396,
+    0.057009801268577576,
+    0.0514913946390152,
+    0.05181127041578293,
+    0.04857252538204193,
+    -0.012325232848525047,
+    -0.038184717297554016,
+    -0.048632487654685974,
+    -0.0521002821624279,
+    -0.057053204625844955,
+    -0.05561042204499245,
+    -0.057047124952077866,
+    -0.05679825693368912,
+    0.047405876219272614,
+    -0.027975765988230705,
+    -0.030907539650797844,
+    0.03873801603913307,
+    0.05561085790395737,
+    0.04375838115811348,
+    -0.05650484189391136,
+    0.05482602119445801,
+    0.050710611045360565,
+    0.004275124985724688,
+    0.05176354944705963,
+    -0.004815623164176941,
+    0.04975854232907295,
+    0.02229565940797329,
+    -0.05705105885863304,
+    -0.03600360453128815,
+    -0.052941154688596725,
+    0.03500552475452423,
+    -0.02889297716319561,
+    -0.051850974559783936,
+    -0.04928014054894447,
+    -0.029306728392839432,
+    0.028221631422638893,
+    0.04472982510924339,
+    0.05373312160372734,
+    0.04383166879415512,
+    -0.018305590376257896,
+    0.008662122301757336,
+    0.056488461792469025,
+    0.014581291005015373,
+    0.01205451600253582,
+    -0.05021793767809868,
+    -0.00647131260484457,
+    -0.056248582899570465,
+    -0.00848393514752388,
+    0.055068567395210266,
+    0.006414955947548151,
+    0.037878379225730896,
+    0.05642862990498543,
+    -0.013078686781227589,
+    0.043997928500175476,
+    0.0546310618519783,
+    -0.057043928653001785,
+    -0.0570090189576149,
+    -0.04180104285478592,
+    -0.045523740351200104,
+    -0.03248191997408867,
+    0.0031592119485139847,
+    0.05698078125715256,
+    -0.04773560166358948,
+    0.057053156197071075,
+    0.013618231751024723,
+    0.05665409564971924,
+    -0.057053420692682266,
+    -0.0379943922162056,
+    -0.0469985157251358,
+    0.03385401889681816,
+    0.04446076229214668,
+    0.005236308090388775,
+    0.015779312700033188,
+    -0.053905364125967026,
+    -0.05563925579190254,
+    -0.03840164840221405,
+    0.050547145307064056,
+    0.024712450802326202,
+    0.0034360522404313087,
+    0.05480055510997772,
+    0.05689072236418724,
+    0.05482778325676918,
+    0.04804094508290291,
+    0.03230860084295273,
+    -0.05625682324171066,
+    0.04898101091384888,
+    0.018938332796096802,
+    -0.04081450402736664,
+    -0.05320126190781593,
+    0.05579148977994919,
+    -0.012985987588763237,
+    -0.04485144838690758,
+    -0.022831376641988754,
+    0.041862841695547104,
+    0.051951609551906586,
+    -0.054786309599876404,
+    -0.05703723058104515,
+    -0.054149191826581955,
+    0.05705353617668152,
+    -0.0010845011565834284,
+    0.04620126634836197,
+    -0.036663495004177094,
+    -0.05704302340745926,
+    0.05685187131166458,
+    -0.035249508917331696,
+    0.0322965644299984,
+    -0.038542721420526505,
+    0.009403002448379993,
+    -0.055630166083574295,
+    -0.0061582843773067,
+    0.0028505665250122547,
+    0.02877841331064701,
+    0.05681536719202995,
+    -0.014356500469148159,
+    -0.04332110285758972,
+    -0.04481129348278046,
+    0.016295121982693672,
+    -0.02806865982711315,
+    -0.022067327052354813,
+    0.050656162202358246,
+    -0.0492921844124794,
+    -0.029136043041944504,
+    0.006055493373423815,
+    -0.0555165596306324,
+    0.029034530743956566,
+    -0.05690097436308861,
+    -0.04923645779490471,
+    0.05640694126486778,
+    0.05099044740200043,
+    -0.05626468360424042,
+    0.020411381497979164,
+    -0.04823089390993118,
+    0.05704938620328903,
+    0.055660638958215714,
+    -0.049459122121334076,
+    0.05163820832967758,
+    0.03109973482787609,
+    -0.05607638880610466,
+    -0.04325743392109871,
+    -0.056786514818668365,
+    0.025569409132003784,
+    0.05702180787920952,
+    -0.018865948542952538,
+    -0.057045359164476395,
+    0.05100346356630325,
+    0.040007296949625015,
+    0.01925814151763916,
+    0.0031777494587004185,
+    0.05165671184659004,
+    0.03752852976322174,
+    -0.05634118616580963,
+    -0.03802856057882309,
+    -0.05699401721358299,
+    -0.04190317168831825,
+    0.05705353617668152,
+    0.04750349745154381,
+    -0.03255516290664673,
+    0.03658432886004448,
+    0.053738806396722794,
+    -0.05487453565001488,
+    0.03922595828771591,
+    -0.03467614948749542,
+    -0.03621715307235718,
+    -0.04425734654068947,
+    0.02459414303302765,
+    -0.05678359791636467,
+    -0.04956798255443573,
+    0.046354345977306366,
+    0.004720310214906931,
+    0.04724045842885971,
+    0.009272786788642406,
+    -0.05705215409398079,
+    -0.0565275177359581,
+    -0.01654970832169056,
+    0.04717447981238365,
+    0.045443665236234665,
+    -0.02690722420811653,
+    0.05144922062754631,
+    0.052257783710956573,
+    0.029049275442957878,
+    0.047061823308467865,
+    -0.05324225872755051,
+    -0.0569867342710495,
+    -0.0421992763876915,
+    -0.055685609579086304,
+    -0.05658210441470146,
+    -0.0478166900575161,
+    -0.013236752711236477,
+    -0.055244080722332,
+    0.01355069037526846,
+    -0.05704735219478607,
+    -0.05579353868961334,
+    0.05579054728150368,
+    0.056873805820941925,
+    0.05671169236302376,
+    -0.05579853057861328,
+    -0.009500292129814625,
+    -0.056119322776794434,
+    0.05683450028300285,
+    0.054083120077848434,
+    0.03474803641438484,
+    0.026363305747509003,
+    0.056851521134376526,
+    0.056615617126226425,
+    0.055333271622657776,
+    0.05529363453388214,
+    0.05676200985908508,
+    -0.05705100670456886,
+    0.05068652331829071,
+    -0.05203314125537872,
+    -0.008372259326279163,
+    0.05469135195016861,
+    0.035730261355638504,
+    -0.015579337254166603,
+    0.05705353617668152,
+    -0.01585618034005165,
+    0.037033338099718094,
+    0.029268937185406685,
+    0.042032480239868164,
+    0.032573409378528595,
+    0.054926447570323944,
+    -0.022728174924850464,
+    0.028377337381243706,
+    0.006897240411490202,
+    -0.002154495334252715,
+    -0.056944672018289566,
+    0.05093002691864967,
+    -0.05604428052902222,
+    -0.011709310114383698,
+    -0.05462576448917389,
+    0.04163825884461403,
+    0.0557643324136734,
+    0.05027131363749504,
+    -0.055836960673332214,
+    -0.0569404698908329,
+    0.057051096111536026,
+    -0.05085870623588562,
+    -0.05467907711863518,
+    -0.003397840540856123,
+    0.05699360743165016,
+    0.012459778226912022,
+    -0.011113948188722134,
+    -0.05702069774270058,
+    -0.011383586563169956,
+    0.057027656584978104,
+    -0.043681856244802475,
+    0.057045985013246536,
+    -0.006772868800908327,
+    0.019738873466849327,
+    0.05704579874873161,
+    -0.009792234748601913,
+    0.015573777258396149,
+    -0.055987171828746796,
+    -0.007310008630156517,
+    -0.028545590117573738,
+    0.048714518547058105,
+    0.05505819618701935,
+    -0.05306842923164368,
+    0.03887037932872772,
+    0.05447907745838165,
+    0.009509281255304813,
+    0.015233146026730537,
+    0.056997813284397125,
+    0.004148476291447878,
+    -0.011066153645515442,
+    0.032286737114191055,
+    -0.05376576632261276,
+    0.052980996668338776,
+    0.05061410740017891,
+    0.029223671182990074,
+    -0.03174484893679619,
+    -0.0024228831753134727,
+    -0.038054559379816055,
+    0.05415162071585655,
+    -0.022685032337903976,
+    -0.04866524785757065,
+    0.05450122058391571,
+    0.05305509269237518,
+    -0.018382197245955467,
+    0.05033032223582268,
+    -0.05596441775560379,
+    0.03091549128293991,
+    -0.055734723806381226,
+    0.05510149151086807,
+    -0.054746124893426895,
+    0.04555840790271759,
+    -0.02470102533698082,
+    0.04910864681005478,
+    -0.05445311218500137,
+    -0.030102552846074104,
+    0.057004790753126144,
+    0.03504236415028572,
+    -0.030566338449716568,
+    0.05281670764088631,
+    0.053926002234220505,
+    0.05184188485145569,
+    -0.027863599359989166,
+    0.05692584067583084,
+    -0.048576995730400085,
+    -0.001872908789664507,
+    -0.03990904614329338,
+    -0.05705351009964943,
+    0.02914264425635338,
+    -0.021507754921913147,
+    -0.0391521081328392,
+    -0.03743123635649681,
+    0.05547161400318146,
+    0.046802036464214325,
+    0.046108800917863846,
+    -0.054119713604450226,
+    0.05643434450030327,
+    0.05584194138646126,
+    -0.05415299907326698,
+    -0.057052768766880035,
+    0.010925639420747757,
+    -0.04510979726910591,
+    0.05459770932793617,
+    0.05396685376763344,
+    -0.05694299936294556,
+    -0.05704038590192795,
+    0.05610385164618492,
+    -0.05704445764422417,
+    0.05480171740055084,
+    0.04525596275925636,
+    -0.05681104585528374,
+    0.017330767586827278,
+    0.032439589500427246,
+    -0.003922352567315102,
+    -0.05569620430469513,
+    -0.055649831891059875,
+    0.055671315640211105,
+    -0.005381952039897442,
+    0.039355307817459106,
+    -0.05680718272924423,
+    -0.04578516632318497,
+    -0.04058147594332695,
+    0.0496356375515461,
+    0.027091486379504204,
+    -0.05060425400733948,
+    -0.04312955215573311,
+    -0.0063730692490935326,
+    0.03673934563994408,
+    -0.05573471635580063,
+    0.04906129464507103,
+    0.03971518576145172,
+    -0.0224177036434412,
+    -0.03897099569439888,
+    -0.0381297692656517,
+    -0.05647115781903267,
+    0.05705351382493973,
+    0.040215346962213516,
+    -0.05311049893498421,
+    0.0024851865600794554,
+    -0.008602853864431381,
+    -0.044171497225761414,
+    0.04120989516377449,
+    0.055251967161893845,
+    0.045036960393190384,
+    -0.01042877696454525,
+    -0.011223837733268738,
+    0.05428105220198631,
+    0.05703866481781006,
+    0.021915219724178314,
+    -0.056988924741744995,
+    0.034523822367191315,
+    0.05195064842700958,
+    0.05280889943242073,
+    -0.009028274565935135,
+    0.05213708057999611,
+    0.023260435089468956,
+    0.03432272747159004,
+    -0.013119269162416458,
+    -0.05452157184481621,
+    -0.02030705101788044,
+    -0.05618342384696007,
+    0.05470326542854309,
+    -0.02407176047563553,
+    -0.013760545291006565,
+    -0.05404006317257881,
+    -0.057006221264600754,
+    0.022300805896520615,
+    -0.03446531668305397,
+    0.05551227927207947,
+    -0.05704881250858307,
+    -0.04237113147974014,
+    0.04142582789063454,
+    0.05437985062599182,
+    -0.0550127737224102,
+    -0.025256799533963203,
+    -0.0533641092479229,
+    0.05055593326687813,
+    -0.05643944442272186,
+    -0.04648686572909355,
+    -0.05416033789515495,
+    -0.0570533312857151,
+    -0.05657508969306946,
+    0.056110743433237076,
+    0.04818589612841606,
+    -0.040025658905506134,
+    0.03203389421105385,
+    -0.05066429451107979,
+    0.05524143949151039,
+    -0.05704301595687866,
+    -0.014330531470477581,
+    -0.035805169492959976,
+    -0.04556853696703911,
+    -0.05601967126131058,
+    -0.02403225377202034,
+    -0.03611070290207863,
+    0.05701255425810814,
+    -0.006245514843612909,
+    0.04772287979722023,
+    -0.057048190385103226,
+    0.018095459789037704,
+    0.05702967569231987,
+    0.018579548224806786,
+    -0.05599016696214676,
+    0.050919175148010254,
+    0.0524122416973114,
+    0.056926093995571136,
+    0.05701569467782974,
+    0.0034743081778287888,
+    -0.04539172351360321,
+    0.05030307546257973,
+    0.05035824328660965,
+    -0.05416404828429222,
+    0.04751003161072731,
+    -0.006699294783174992,
+    -0.023774228990077972,
+    0.05564364418387413,
+    -0.055722642689943314,
+    -0.056809309870004654,
+    -0.056238144636154175,
+    0.05672762542963028,
+    0.04760994389653206,
+    0.046924885362386703,
+    -0.05435453727841377,
+    -0.056524261832237244,
+    0.05218503996729851,
+    0.004838194232434034,
+    -0.057011671364307404,
+    0.032216876745224,
+    0.055452458560466766,
+    -0.02503138966858387,
+    0.055745914578437805,
+    0.04506261274218559,
+    -0.022238820791244507,
+    -0.04182051122188568,
+    0.05529743432998657,
+    0.0133545882999897,
+    0.04721184819936752,
+    -0.0336541086435318,
+    0.056865107268095016,
+    0.0045862686820328236,
+    0.046335939317941666,
+    -0.05542001128196716,
+    0.05663292109966278,
+    0.0563664548099041,
+    -0.034638453274965286,
+    0.012165318243205547,
+    -0.057049140334129333,
+    0.013292957097291946,
+    -0.02503987029194832,
+    0.040621913969516754,
+    -0.007112870458513498,
+    -0.0071820830926299095,
+    0.057049740105867386,
+    -0.051961563527584076,
+    -0.05562931299209595
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs social media management; When working with: When clicking ‘Test workflow’; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for social media management in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Linkedin",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Linkedin"
+  }
+}

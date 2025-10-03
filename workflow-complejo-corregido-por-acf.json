@@ -1,0 +1,436 @@
+{
+  "name": "Workflow E-commerce Complejo - INTENCIONALMENTE ROTO",
+  "nodes": [
+    {
+      "id": "webhook_order",
+      "name": "Webhook Order Received",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "order-webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "parse_order",
+      "name": "Parse Order Data",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        300,
+        100
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "for (const item of items) { item.json.order_total = parseFloat(item.json.total || 0); item.json.customer_type = item.json.customer_id ? 'existing' : 'new'; } return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "check_payment_status",
+      "name": "IF - Check Payment Status",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        500,
+        100
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{ $json.payment_status }}",
+              "operation": "equal",
+              "value2": "completed"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "check_inventory",
+      "name": "Check Product Inventory",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        700,
+        50
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://inventory-api.example.com/check/{{ $json.product_id }}",
+        "options": {}
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "if_inventory_available",
+      "name": "IF - Inventory Available",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        900,
+        50
+      ],
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "{{ $json.stock_quantity }}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "if_high_value_order",
+      "name": "IF - High Value Order",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        500,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "{{ $json.order_total }}",
+              "operation": "larger",
+              "value2": 500
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "merge_order_paths",
+      "name": "Merge Order Processing Paths",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        1100,
+        200
+      ],
+      "parameters": {
+        "mode": "multiplex"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "save_to_crm",
+      "name": "Save Customer to CRM",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        900,
+        400
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://crm-api.example.com/customers",
+        "body": {
+          "customer_data": "{{ $json }}"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "send_confirmation_email",
+      "name": "Send Order Confirmation Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        1300,
+        100
+      ],
+      "parameters": {
+        "toEmail": "{{ $json.customer_email }}",
+        "subject": "Order Confirmation #{{ $json.order_id }}",
+        "text": "Thank you for your order!"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "charge_payment",
+      "name": "Charge Payment Gateway",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        700,
+        200
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://payment-gateway.example.com/charge",
+        "body": {
+          "amount": "{{ $json.order_total }}",
+          "currency": "USD"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "update_inventory",
+      "name": "Update Product Inventory",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1100,
+        50
+      ],
+      "parameters": {
+        "method": "PUT",
+        "url": "https://inventory-api.example.com/update/{{ $json.product_id }}",
+        "body": {
+          "reduce_quantity": "{{ $json.quantity }}"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "merge_notification_paths",
+      "name": "Merge Notification Paths",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        1500,
+        300
+      ],
+      "parameters": {
+        "mode": "multiplex"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "notify_slack_high_value",
+      "name": "Notify Slack High Value Order",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        1300,
+        400
+      ],
+      "parameters": {
+        "channel": "#sales",
+        "text": "🚨 High value order received: ${{ $json.order_total }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "send_sms_notification",
+      "name": "Send SMS to Customer",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1300,
+        500
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://sms-api.example.com/send",
+        "body": {
+          "to": "{{ $json.customer_phone }}",
+          "message": "Your order #{{ $json.order_id }} is being processed!"
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "log_to_analytics",
+      "name": "Log to Analytics Platform",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        1700,
+        200
+      ],
+      "parameters": {
+        "method": "POST",
+        "url": "https://analytics.example.com/events",
+        "body": {
+          "event_type": "order_processed",
+          "order_data": "{{ $json }}"
+        }
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook Order Received": {
+      "main": [
+        [
+          {
+            "node": "Parse Order Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Order Data": {
+      "main": [
+        [
+          {
+            "node": "IF - Check Payment Status",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Save Customer to CRM",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "IF - High Value Order",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF - Check Payment Status": {
+      "main": [
+        [
+          {
+            "node": "Check Product Inventory",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Charge Payment Gateway",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge Order Processing Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Product Inventory": {
+      "main": [
+        [
+          {
+            "node": "IF - Inventory Available",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Charge Payment Gateway": {
+      "main": [
+        [
+          {
+            "node": "Merge Order Processing Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Order Processing Paths": {
+      "main": [
+        [
+          {
+            "node": "Check Product Inventory",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF - Inventory Available": {
+      "main": [
+        [
+          {
+            "node": "Update Product Inventory",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Product Inventory": {
+      "main": [
+        [
+          {
+            "node": "Merge Notification Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF - High Value Order": {
+      "main": [
+        [
+          {
+            "node": "Notify Slack High Value Order",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notify Slack High Value Order": {
+      "main": [
+        [
+          {
+            "node": "Merge Notification Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Save Customer to CRM": {
+      "main": [
+        [
+          {
+            "node": "Merge Notification Paths",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge Notification Paths": {
+      "main": [
+        [
+          {
+            "node": "Send Order Confirmation Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send SMS to Customer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Order Confirmation Email": {
+      "main": [
+        [
+          {
+            "node": "Log to Analytics Platform",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send SMS to Customer": {
+      "main": [
+        [
+          {
+            "node": "Log to Analytics Platform",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

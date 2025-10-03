@@ -1,0 +1,509 @@
+{
+  "summary": {
+    "successRate": 100,
+    "averageDuration": 126,
+    "totalTests": 26,
+    "generatedAt": "2025-09-26T01:54:05.970Z"
+  },
+  "results": [
+    {
+      "category": "Basic Generation",
+      "prompt": "Crear un webhook que reciba datos y los envíe por email",
+      "success": true,
+      "duration": 154,
+      "metrics": {
+        "nodeCount": 1,
+        "connectionCount": 0,
+        "hasIntegrations": false,
+        "hasValidation": false,
+        "hasNotifications": false,
+        "confidence": 0.62
+      },
+      "timestamp": "2025-09-26T01:54:05.623Z"
+    },
+    {
+      "category": "Advanced CRM",
+      "prompt": "Sistema CRM completo: webhook de leads, validación, enriquecimiento, Salesforce, email de bienvenida y notificación a ventas",
+      "success": true,
+      "duration": 132,
+      "metrics": {
+        "nodeCount": 7,
+        "connectionCount": 2,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "crmFeatures": [
+          "Lead Capture",
+          "Validation",
+          "Salesforce Integration",
+          "Email Automation",
+          "Data Enrichment"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.626Z"
+    },
+    {
+      "category": "Complex Ecommerce",
+      "prompt": "Procesamiento completo de pedidos: webhook, validación, inventario, pago con Stripe, facturación, confirmación y fulfillment",
+      "success": true,
+      "duration": 123,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "ecommerceFeatures": [
+          "Payment Processing",
+          "Inventory Management",
+          "Order Confirmation",
+          "Invoice Generation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.638Z"
+    },
+    {
+      "category": "Communication",
+      "prompt": "Sistema de newsletters automático con segmentación de audiencia y personalización",
+      "success": true,
+      "duration": 130,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 0.8999999999999999,
+        "commFeatures": [
+          "Email Marketing",
+          "Team Notifications",
+          "Content Personalization"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.643Z"
+    },
+    {
+      "category": "Data Processing",
+      "prompt": "ETL completo: extracción de múltiples fuentes, transformación con reglas de negocio y carga a data warehouse",
+      "success": true,
+      "duration": 125,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 0.8999999999999999,
+        "dataFeatures": [
+          "Database Operations",
+          "Data Transformation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.645Z"
+    },
+    {
+      "category": "Performance Optimization",
+      "prompt": "Sistema empresarial completo: CRM, E-commerce, inventario, facturación, analytics, notificaciones, reportes y dashboards",
+      "success": true,
+      "duration": 127,
+      "metrics": {
+        "generationTime": 127,
+        "nodeCount": 1,
+        "connectionCount": 0,
+        "memoryEfficiency": 1,
+        "executionOptimization": "Bueno"
+      },
+      "timestamp": "2025-09-26T01:54:05.655Z"
+    },
+    {
+      "category": "Error Handling",
+      "prompt": "",
+      "success": true,
+      "duration": 119,
+      "metrics": null,
+      "timestamp": "2025-09-26T01:54:05.658Z"
+    },
+    {
+      "category": "Real World",
+      "prompt": "Automatización completa para una startup SaaS: onboarding de usuarios, pagos recurrentes, soporte, analytics y retención",
+      "success": true,
+      "duration": 131,
+      "metrics": {
+        "nodeCount": 10,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "realWorldFeatures": [
+          "Complex Business Logic",
+          "Enterprise Integrations",
+          "Multi-step Automation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.672Z"
+    },
+    {
+      "category": "Basic Generation",
+      "prompt": "Sistema simple de validación de datos de entrada",
+      "success": true,
+      "duration": 138,
+      "metrics": {
+        "nodeCount": 7,
+        "connectionCount": 0,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 0.8200000000000001
+      },
+      "timestamp": "2025-09-26T01:54:05.761Z"
+    },
+    {
+      "category": "Advanced CRM",
+      "prompt": "Pipeline de lead scoring automático con validación multi-nivel y análisis predictivo",
+      "success": true,
+      "duration": 145,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "crmFeatures": [
+          "Lead Capture",
+          "Validation",
+          "Email Automation",
+          "Data Enrichment"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.773Z"
+    },
+    {
+      "category": "Complex Ecommerce",
+      "prompt": "Sistema de carrito abandonado con remarketing automático y recuperación de ventas",
+      "success": true,
+      "duration": 151,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "ecommerceFeatures": [
+          "Payment Processing",
+          "Inventory Management",
+          "Order Confirmation",
+          "Invoice Generation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.792Z"
+    },
+    {
+      "category": "Communication",
+      "prompt": "Chatbot para soporte con escalado automático a agentes humanos",
+      "success": true,
+      "duration": 153,
+      "metrics": {
+        "nodeCount": 0,
+        "connectionCount": 0,
+        "hasIntegrations": false,
+        "hasValidation": false,
+        "hasNotifications": false,
+        "confidence": 0.5,
+        "commFeatures": []
+      },
+      "timestamp": "2025-09-26T01:54:05.808Z"
+    },
+    {
+      "category": "Data Processing",
+      "prompt": "Sistema de análisis en tiempo real con alertas automáticas",
+      "success": true,
+      "duration": 166,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 0.8999999999999999,
+        "dataFeatures": [
+          "Database Operations",
+          "Data Transformation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.812Z"
+    },
+    {
+      "category": "Intelligent Learning",
+      "prompt": "CRM inteligente para leads con validación multi-nivel",
+      "success": true,
+      "duration": 166,
+      "metrics": {
+        "qualityImproved": true,
+        "speedImproved": false,
+        "complexityHandled": true,
+        "intelligenceApplied": true
+      },
+      "timestamp": "2025-09-26T01:54:05.813Z"
+    },
+    {
+      "category": "Error Handling",
+      "prompt": "asdf qwerty zxcv",
+      "success": true,
+      "duration": 155,
+      "metrics": null,
+      "timestamp": "2025-09-26T01:54:05.813Z"
+    },
+    {
+      "category": "Workflow Adaptation",
+      "prompt": "Sistema CRM avanzado con AI, analytics predictivo y automatización completa",
+      "success": true,
+      "duration": 0,
+      "metrics": {
+        "adapted": true,
+        "nodesAdded": 4,
+        "newFeatures": [
+          "postgres",
+          "stripe"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.838Z"
+    },
+    {
+      "category": "Real World",
+      "prompt": "Sistema para una agencia de marketing: gestión de leads, campañas automatizadas, reportes de ROI y facturación a clientes",
+      "success": true,
+      "duration": 164,
+      "metrics": {
+        "nodeCount": 11,
+        "connectionCount": 1,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 0.74,
+        "realWorldFeatures": [
+          "Complex Business Logic",
+          "Enterprise Integrations"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.839Z"
+    },
+    {
+      "category": "Basic Generation",
+      "prompt": "Notificación automática en Slack cuando llegue información",
+      "success": true,
+      "duration": 180,
+      "metrics": {
+        "nodeCount": 1,
+        "connectionCount": 0,
+        "hasIntegrations": false,
+        "hasValidation": false,
+        "hasNotifications": false,
+        "confidence": 0.62
+      },
+      "timestamp": "2025-09-26T01:54:05.941Z"
+    },
+    {
+      "category": "Advanced CRM",
+      "prompt": "Automatización de seguimiento de prospectos con segmentación inteligente y nurturing personalizado",
+      "success": true,
+      "duration": 164,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "crmFeatures": [
+          "Lead Capture",
+          "Validation",
+          "Email Automation",
+          "Data Enrichment"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.942Z"
+    },
+    {
+      "category": "Complex Ecommerce",
+      "prompt": "Gestión de devoluciones con procesamiento de reembolsos y actualización de inventario",
+      "success": true,
+      "duration": 149,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "ecommerceFeatures": [
+          "Payment Processing",
+          "Inventory Management",
+          "Order Confirmation",
+          "Invoice Generation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.944Z"
+    },
+    {
+      "category": "Communication",
+      "prompt": "Campaña de email marketing con A/B testing y análisis de engagement",
+      "success": true,
+      "duration": 137,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "commFeatures": [
+          "Email Marketing",
+          "Team Notifications",
+          "Content Personalization"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.945Z"
+    },
+    {
+      "category": "Data Processing",
+      "prompt": "Generación automática de reportes con visualizaciones y distribución por email",
+      "success": true,
+      "duration": 133,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "dataFeatures": [
+          "Database Operations",
+          "Data Transformation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.945Z"
+    },
+    {
+      "category": "Error Handling",
+      "prompt": "workflow con 1000 nodos diferentes y complejos",
+      "success": true,
+      "duration": 132,
+      "metrics": null,
+      "timestamp": "2025-09-26T01:54:05.945Z"
+    },
+    {
+      "category": "Real World",
+      "prompt": "Plataforma de e-learning: registro de estudiantes, gestión de cursos, seguimiento de progreso y certificaciones automáticas",
+      "success": true,
+      "duration": 70,
+      "metrics": {
+        "nodeCount": 12,
+        "connectionCount": 1,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 0.5,
+        "realWorldFeatures": [
+          "Complex Business Logic",
+          "Enterprise Integrations"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.947Z"
+    },
+    {
+      "category": "Error Handling",
+      "prompt": "sistema",
+      "success": true,
+      "duration": 15,
+      "metrics": null,
+      "timestamp": "2025-09-26T01:54:05.960Z"
+    },
+    {
+      "category": "Real World",
+      "prompt": "Sistema de gestión para restaurante: reservas, pedidos online, inventario, pagos y programa de fidelidad",
+      "success": true,
+      "duration": 4,
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "hasIntegrations": true,
+        "hasValidation": true,
+        "hasNotifications": true,
+        "confidence": 1,
+        "realWorldFeatures": [
+          "Complex Business Logic",
+          "Enterprise Integrations",
+          "Multi-step Automation"
+        ]
+      },
+      "timestamp": "2025-09-26T01:54:05.961Z"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Basic Generation",
+      "successRate": 1,
+      "averageDuration": 157.33333333333334,
+      "testCount": 3
+    },
+    {
+      "name": "Advanced CRM",
+      "successRate": 1,
+      "averageDuration": 147,
+      "testCount": 3
+    },
+    {
+      "name": "Complex Ecommerce",
+      "successRate": 1,
+      "averageDuration": 141,
+      "testCount": 3
+    },
+    {
+      "name": "Communication",
+      "successRate": 1,
+      "averageDuration": 140,
+      "testCount": 3
+    },
+    {
+      "name": "Data Processing",
+      "successRate": 1,
+      "averageDuration": 141.33333333333334,
+      "testCount": 3
+    },
+    {
+      "name": "Performance Optimization",
+      "successRate": 1,
+      "averageDuration": 127,
+      "testCount": 1
+    },
+    {
+      "name": "Error Handling",
+      "successRate": 1,
+      "averageDuration": 105.25,
+      "testCount": 4
+    },
+    {
+      "name": "Real World",
+      "successRate": 1,
+      "averageDuration": 92.25,
+      "testCount": 4
+    },
+    {
+      "name": "Intelligent Learning",
+      "successRate": 1,
+      "averageDuration": 166,
+      "testCount": 1
+    },
+    {
+      "name": "Workflow Adaptation",
+      "successRate": 1,
+      "averageDuration": 0,
+      "testCount": 1
+    }
+  ]
+}

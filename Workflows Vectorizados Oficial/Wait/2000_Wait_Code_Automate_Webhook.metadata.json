@@ -1,0 +1,1031 @@
+{
+  "workflow_info": {
+    "id": "wLbJ7rE6vQzizCp2",
+    "name": "Youtube_Automation",
+    "display_name": "Youtube_Automation",
+    "file_name": "2000_Wait_Code_Automate_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait\\2000_Wait_Code_Automate_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true,
+    "fingerprint": "0aad388c2eb3"
+  },
+  "structure": {
+    "total_nodes": 33,
+    "node_types": [
+      "n8n-nodes-base.youTube",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.removeDuplicates",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.splitInBatches"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.youTube",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.removeDuplicates",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 3
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -2260,
+          300
+        ]
+      },
+      {
+        "name": "Every Day",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -2260,
+          60
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Fetch Latest Videos",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          -60,
+          40
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          160,
+          40
+        ]
+      },
+      {
+        "name": "YT Title",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          2220,
+          120
+        ]
+      },
+      {
+        "name": "Create Description",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          1920,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2660,
+          -20
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1920,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -540,
+          -560
+        ]
+      },
+      {
+        "name": "2.5FlashPrev",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          2220,
+          0
+        ]
+      },
+      {
+        "name": "YT Tags",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2220,
+          -120
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2340,
+          -140
+        ]
+      },
+      {
+        "name": "3s",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          2920,
+          140
+        ]
+      },
+      {
+        "name": "gettitle",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          -780,
+          200
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1040,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -600,
+          -80
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1320,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -80,
+          -140
+        ]
+      },
+      {
+        "name": "Set Publish Date",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          -600,
+          280
+        ]
+      },
+      {
+        "name": "Get Videos to reschedule",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          -1880,
+          40
+        ]
+      },
+      {
+        "name": "Get video Ids seperated",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -1660,
+          40
+        ]
+      },
+      {
+        "name": "Loop over Video IDs",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -1440,
+          40
+        ]
+      },
+      {
+        "name": "Get Video Data",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          -1220,
+          60
+        ]
+      },
+      {
+        "name": "Return Private Videos",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -1220,
+          -120
+        ]
+      },
+      {
+        "name": "4s",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          -260,
+          240
+        ]
+      },
+      {
+        "name": "Loop over All Videos not Published",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -1020,
+          60
+        ]
+      },
+      {
+        "name": "get video id",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          380,
+          80
+        ]
+      },
+      {
+        "name": "Remove Duplicates from previous Runs",
+        "type": "n8n-nodes-base.removeDuplicates",
+        "position": [
+          600,
+          80
+        ]
+      },
+      {
+        "name": "new video?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          820,
+          80
+        ]
+      },
+      {
+        "name": "getLatestVideoID",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          1000,
+          160
+        ]
+      },
+      {
+        "name": "Get Transcript",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1320,
+          120
+        ]
+      },
+      {
+        "name": "Adjust Transcript Format",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1600,
+          120
+        ]
+      },
+      {
+        "name": "Update Video's Metadata",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          2660,
+          140
+        ]
+      }
+    ],
+    "connections_count": 25,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 31
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution",
+      "Scheduled automation"
+    ],
+    "complexity_score": 955,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "sticky note5",
+      "get video ids seperated",
+      "loop over all videos not published",
+      "update video's metadata",
+      "sticky note7",
+      "fetch latest videos",
+      "get transcript",
+      "sticky note3",
+      "ai-ml",
+      "stickyNote",
+      "get videos to reschedule",
+      "youTube",
+      "return private videos",
+      "sticky note6",
+      "gettitle",
+      "loop over video ids",
+      "remove duplicates from previous runs",
+      "scheduleTrigger",
+      "create description",
+      "webhook integration",
+      "httpRequest",
+      "sticky note2",
+      "new video?",
+      "removeDuplicates",
+      "yt title",
+      "splitInBatches",
+      "code",
+      "2.5flashprev",
+      "yt tags",
+      "every day",
+      "get video data",
+      "sticky note4",
+      "set",
+      "wait",
+      "get video id",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "@n8n/n8n nodes langchain.agent",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "complex",
+      "set publish date",
+      "adjust transcript format",
+      "manualTrigger",
+      "sticky note1",
+      "when clicking ‘test workflow’",
+      "getlatestvideoid",
+      "loop over items"
+    ],
+    "description": "'Youtube_Automation' es un workflow diseñado para webhook integration con 33 nodos con 2 disparadores que ejecuta: Fetch Latest Videos, Loop Over Items, YT Title en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Youtube_Automation. Nodos: Fetch Latest Videos (youTube), Loop Over Items (splitInBatches), YT Title (@n8n/n8n-nodes-langchain.openAi), Create Description (@n8n/n8n-nodes-langchain.openAi), When clicking ‘Test workflow’ (manualTrigger), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), 2.5FlashPrev (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), YT Tags (@n8n/n8n-nodes-langchain.agent), Sticky Note4 (stickyNote), 3s (wait), gettitle (youTube), Sticky Note (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Set Publish Date (youTube), Every Day (scheduleTrigger), Get Videos to reschedule (youTube), Get video Ids seperated (code), Loop over Video IDs (splitInBatches), Get Video Data (youTube), Return Private Videos (code), 4s (wait), Loop over All Videos not Published (splitInBatches), get video id (set), Remove Duplicates from previous Runs (removeDuplicates), new video? (if), getLatestVideoID (youTube), Get Transcript (httpRequest), Adjust Transcript Format (code), Update Video's Metadata (youTube). Propósito: webhook integration. Categoría: ai-ml. Disparadores: When clicking ‘Test workflow’, Every Day",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "n8n-nodes-base.youTube",
+      "YT Title",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "Loop Over Items",
+      "Fetch Latest Videos",
+      "n8n-nodes-base.splitInBatches",
+      "Every Day"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.removeduplicates",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.youtube",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "code",
+      "2000",
+      "webhook",
+      "2000_wait_code_automate_webhook",
+      "automate",
+      "wait"
+    ],
+    "alternative_names": [
+      "Youtube_Automation"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 69.10994764397905,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 83.82198952879581
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:22.501529"
+  },
+  "semantic_vector": [
+    -0.05469655245542526,
+    -0.05031692981719971,
+    0.05447402596473694,
+    -0.055457212030887604,
+    0.03592801094055176,
+    0.05277683958411217,
+    0.03403032571077347,
+    0.05634799972176552,
+    -0.055269937962293625,
+    0.05615949258208275,
+    -0.0403658002614975,
+    0.03030349314212799,
+    -0.046073757112026215,
+    -0.0560433529317379,
+    -0.05059460178017616,
+    0.05635107681155205,
+    0.055338215082883835,
+    -0.016028519719839096,
+    -0.05475567281246185,
+    0.010097210295498371,
+    0.0003739314852282405,
+    0.02091703750193119,
+    0.041088446974754333,
+    0.031494006514549255,
+    -0.05635007098317146,
+    0.04241374507546425,
+    -0.056158579885959625,
+    0.05470256134867668,
+    -0.0461944155395031,
+    -0.03203205019235611,
+    0.02570829913020134,
+    -0.04896480217576027,
+    0.04620404168963432,
+    0.03393007069826126,
+    0.0446297787129879,
+    0.05579885095357895,
+    -0.03893246501684189,
+    -0.053233448415994644,
+    0.0029187637846916914,
+    0.014766804873943329,
+    -0.046294648200273514,
+    0.046821173280477524,
+    -0.03389016166329384,
+    0.0006392973009496927,
+    0.056179244071245193,
+    0.04030386731028557,
+    0.05445026233792305,
+    -0.02534438855946064,
+    -0.05537256971001625,
+    -0.05609466880559921,
+    -0.054259251803159714,
+    -0.031628433614969254,
+    -0.05634954199194908,
+    -0.010107118636369705,
+    -0.04758770763874054,
+    -0.050317633897066116,
+    0.016191987320780754,
+    -0.03983187675476074,
+    -0.049197155982255936,
+    0.05553359165787697,
+    -0.0010677713435143232,
+    -0.028285477310419083,
+    -0.0032522007822990417,
+    0.04486304521560669,
+    0.030322669073939323,
+    0.011556548997759819,
+    0.03640058636665344,
+    0.04364381730556488,
+    0.05464479699730873,
+    0.043318070471286774,
+    -0.05629061907529831,
+    -0.0555218867957592,
+    -0.05623846501111984,
+    0.055597491562366486,
+    0.0013639279641211033,
+    0.02100830152630806,
+    0.03725213557481766,
+    0.019288651645183563,
+    -0.041687510907649994,
+    0.02430747263133526,
+    0.04706711322069168,
+    0.0328834243118763,
+    -0.0036997529678046703,
+    -0.04734951630234718,
+    0.05463100224733353,
+    0.041206587105989456,
+    -0.05103404447436333,
+    0.035440653562545776,
+    0.025372236967086792,
+    -0.05525243654847145,
+    -0.03649849072098732,
+    0.034391555935144424,
+    0.019694089889526367,
+    -0.03017110377550125,
+    0.036476630717515945,
+    -0.04137115925550461,
+    0.018047410994768143,
+    0.028228016570210457,
+    -0.056313879787921906,
+    -0.056197162717580795,
+    -0.05541074275970459,
+    -0.05244665592908859,
+    0.043258558958768845,
+    -0.0018846235470846295,
+    0.056275613605976105,
+    0.03670584037899971,
+    0.056085143238306046,
+    0.04417606070637703,
+    0.04302562400698662,
+    -0.05635052174329758,
+    0.03312297537922859,
+    -0.03758986294269562,
+    0.029065432026982307,
+    0.04900755360722542,
+    0.01192596834152937,
+    0.036419231444597244,
+    0.0563482940196991,
+    -0.05622763931751251,
+    -0.0094018978998065,
+    -0.02001895196735859,
+    0.05165306478738785,
+    0.05074237287044525,
+    -0.01852353848516941,
+    0.052360475063323975,
+    0.04570569843053818,
+    0.04816105589270592,
+    -0.04595978185534477,
+    -0.05635104328393936,
+    0.047072574496269226,
+    -0.05320536345243454,
+    -0.042318228632211685,
+    -0.04327685758471489,
+    0.0319812037050724,
+    0.055908203125,
+    0.0010656157974153757,
+    -0.011631597764790058,
+    -0.04040336236357689,
+    -0.012100021354854107,
+    -0.046596549451351166,
+    -0.053027328103780746,
+    0.028529111295938492,
+    0.05635107681155205,
+    0.04168996959924698,
+    -0.05586065351963043,
+    -0.05521879345178604,
+    -0.05627885460853577,
+    0.05632327124476433,
+    -0.05584454536437988,
+    0.05610327422618866,
+    0.019665371626615524,
+    -0.0006182101205922663,
+    -0.05591815337538719,
+    -0.013032942079007626,
+    -0.05406444892287254,
+    0.0560167022049427,
+    0.05630972236394882,
+    -0.023687034845352173,
+    -0.046684809029102325,
+    0.053474556654691696,
+    -0.04459794610738754,
+    -0.0554501973092556,
+    -0.054089147597551346,
+    0.05604284629225731,
+    0.054309356957674026,
+    0.05280861631035805,
+    -0.02779058925807476,
+    -0.05428416654467583,
+    0.006771639920771122,
+    -0.05633710324764252,
+    -0.05629382282495499,
+    0.05634039267897606,
+    0.027540629729628563,
+    -0.02307721972465515,
+    0.02972486987709999,
+    -0.055965356528759,
+    0.054886382073163986,
+    -0.006827392149716616,
+    0.016591751947999,
+    0.03547661378979683,
+    -0.054445892572402954,
+    0.003726080060005188,
+    -0.048060473054647446,
+    -0.05548660829663277,
+    0.05531534552574158,
+    0.05565226450562477,
+    -0.052547842264175415,
+    -0.05566108971834183,
+    0.05494939535856247,
+    -0.05397689342498779,
+    0.05439576506614685,
+    -0.05598524585366249,
+    0.05467700585722923,
+    0.004374316893517971,
+    -0.007251276168972254,
+    -0.053554728627204895,
+    -0.05565201863646507,
+    -0.007052510045468807,
+    0.05635107681155205,
+    -0.020090948790311813,
+    -0.023812774568796158,
+    0.05629286542534828,
+    0.044614315032958984,
+    -0.04305487126111984,
+    0.042773179709911346,
+    0.05236279219388962,
+    -0.047537535429000854,
+    0.02122386172413826,
+    -0.0236410740762949,
+    -0.05632929876446724,
+    -0.049916867166757584,
+    0.00013272553042043,
+    0.051285270601511,
+    0.013548077084124088,
+    0.05614357441663742,
+    -0.05625924840569496,
+    -0.05591561272740364,
+    0.012737461365759373,
+    0.028711987659335136,
+    0.05575350672006607,
+    -0.023305444046854973,
+    0.007488816976547241,
+    0.05229105427861214,
+    -0.007301438599824905,
+    0.04887273162603378,
+    -0.055207911878824234,
+    -0.05551508441567421,
+    -0.01658407598733902,
+    -0.01736115850508213,
+    -0.05618617683649063,
+    -0.05628184229135513,
+    0.03883323818445206,
+    -0.05626778304576874,
+    -0.03447616472840309,
+    -0.05633799731731415,
+    0.009817725047469139,
+    -0.05156734958291054,
+    0.05633997917175293,
+    0.05627744644880295,
+    -0.051702313125133514,
+    0.004398229997605085,
+    -0.056201621890068054,
+    0.04934224113821983,
+    0.0348798967897892,
+    0.04758995771408081,
+    0.04898066073656082,
+    0.05630892887711525,
+    0.05498751997947693,
+    -0.009026581421494484,
+    0.05469471216201782,
+    0.05625375732779503,
+    -0.056350138038396835,
+    0.042171627283096313,
+    -0.05459883436560631,
+    -0.0011828443966805935,
+    0.023311244323849678,
+    -0.02813134156167507,
+    0.031949594616889954,
+    0.05635107681155205,
+    0.051358599215745926,
+    -0.01719491370022297,
+    -0.048032358288764954,
+    0.03493484482169151,
+    -0.03682177886366844,
+    0.027763860300183296,
+    -0.003531214315444231,
+    0.04683355614542961,
+    -0.04253780096769333,
+    0.009783383458852768,
+    -0.05416523292660713,
+    0.03466302156448364,
+    -0.05009922757744789,
+    -0.03614300116896629,
+    -0.05624476447701454,
+    -0.051143206655979156,
+    0.05204131826758385,
+    0.051348257809877396,
+    -0.029808932915329933,
+    0.02170214056968689,
+    0.056350670754909515,
+    0.047086600214242935,
+    0.045027706772089005,
+    -0.004695285577327013,
+    0.055611394345760345,
+    0.055562667548656464,
+    0.03779030591249466,
+    -0.05635107681155205,
+    0.013307349756360054,
+    0.05616365373134613,
+    -0.015566365793347359,
+    0.05601782351732254,
+    -0.03177547827363014,
+    -0.0400908999145031,
+    0.056278642266988754,
+    -0.017046693712472916,
+    0.003785890294238925,
+    -0.015248609706759453,
+    -0.056350838392972946,
+    -0.02495509944856167,
+    0.03760676458477974,
+    -0.008219189941883087,
+    -0.05361269786953926,
+    0.05556667596101761,
+    0.05600591003894806,
+    0.009199226275086403,
+    0.029034044593572617,
+    0.05366357043385506,
+    0.043114203959703445,
+    0.052132293581962585,
+    0.04485202580690384,
+    -0.034053463488817215,
+    -0.04598493129014969,
+    -0.046279292553663254,
+    0.04537732154130936,
+    0.0063246507197618484,
+    0.051800765097141266,
+    0.01726786606013775,
+    0.03241024911403656,
+    -0.005873003043234348,
+    -0.030230054631829262,
+    0.03430960699915886,
+    -0.026002584025263786,
+    -0.04765399545431137,
+    0.0522359274327755,
+    -0.051726195961236954,
+    0.010992645286023617,
+    -0.04973195865750313,
+    0.052923161536455154,
+    -0.03651465103030205,
+    0.05336923152208328,
+    -0.042989619076251984,
+    -0.03341558575630188,
+    -0.05378374829888344,
+    -0.05380234122276306,
+    0.056326724588871,
+    0.026808112859725952,
+    0.051346104592084885,
+    0.05442727357149124,
+    0.048298150300979614,
+    0.01555126067250967,
+    -0.04818780720233917,
+    0.056040044873952866,
+    -0.05558357015252113,
+    -0.03905545920133591,
+    0.05127671733498573,
+    -0.05633966997265816,
+    -0.00847393274307251,
+    0.035516273230314255,
+    -0.020689593628048897,
+    -0.05624765530228615,
+    0.01575973816215992,
+    0.03753795847296715,
+    -0.0438406877219677,
+    0.049977950751781464,
+    -0.008105569519102573,
+    0.05358712747693062,
+    -0.0257087554782629,
+    -0.056348685175180435,
+    -0.0036313068121671677,
+    0.024708345532417297,
+    -0.003514024894684553,
+    0.05497865378856659,
+    -0.05592595040798187,
+    -0.05575930327177048,
+    0.056048985570669174,
+    -0.056343626230955124,
+    0.053339630365371704,
+    0.00940762646496296,
+    -0.05584878474473953,
+    0.04946623370051384,
+    -0.051592834293842316,
+    0.008277829736471176,
+    -0.05612125247716904,
+    -0.05354280397295952,
+    0.035829074680805206,
+    -0.05413706228137016,
+    0.0011429657461121678,
+    -0.05495704337954521,
+    -0.0548466220498085,
+    0.025058645755052567,
+    0.052114978432655334,
+    0.043741002678871155,
+    -0.00025540703791193664,
+    -0.04296402633190155,
+    0.011294848285615444,
+    0.03883364424109459,
+    -0.0402001328766346,
+    0.01582236960530281,
+    0.05608147010207176,
+    0.05103321373462677,
+    -0.05616144463419914,
+    -0.05066059157252312,
+    -0.04037101939320564,
+    0.05635054036974907,
+    0.031969863921403885,
+    -0.047608256340026855,
+    0.007781501859426498,
+    0.009063879027962685,
+    0.0334462970495224,
+    0.013501401990652084,
+    0.03652730584144592,
+    0.04734554886817932,
+    0.05467485636472702,
+    0.047309521585702896,
+    0.05300411209464073,
+    0.05635107681155205,
+    0.023734182119369507,
+    -0.05633570998907089,
+    0.03597775846719742,
+    0.05527043715119362,
+    0.05611547827720642,
+    0.017203567549586296,
+    0.05545569583773613,
+    0.025975991040468216,
+    0.052044693380594254,
+    0.04605498164892197,
+    -0.05621890351176262,
+    -0.024061957374215126,
+    -0.056166231632232666,
+    0.023947400972247124,
+    0.05246955156326294,
+    -0.04902680963277817,
+    -0.03220978006720543,
+    -0.05635107681155205,
+    0.03612940385937691,
+    -0.054345425218343735,
+    0.05102160573005676,
+    -0.05626968666911125,
+    0.03962419554591179,
+    -0.05511971563100815,
+    0.04446622356772423,
+    -0.05491609871387482,
+    -0.04340122267603874,
+    -0.04955672845244408,
+    0.05628766119480133,
+    -0.054748453199863434,
+    -0.053629592061042786,
+    -0.02936658449470997,
+    -0.056296542286872864,
+    -0.05630023404955864,
+    0.039291344583034515,
+    0.054698020219802856,
+    0.0012334716739133,
+    -0.029808267951011658,
+    -0.05387534946203232,
+    0.0543692521750927,
+    -0.04490624740719795,
+    -0.04399925097823143,
+    -0.05159154534339905,
+    -0.05592389032244682,
+    -0.05520016327500343,
+    0.055802032351493835,
+    0.03280780836939812,
+    0.056330859661102295,
+    0.042762722820043564,
+    0.053300950676202774,
+    -0.05628393217921257,
+    0.05312711000442505,
+    0.055977530777454376,
+    -0.04593494534492493,
+    -0.04840044677257538,
+    0.03850622847676277,
+    0.055455490946769714,
+    0.04346791282296181,
+    0.05228935182094574,
+    -0.004163263365626335,
+    -0.03830075263977051,
+    0.05578544735908508,
+    -0.012264903634786606,
+    -0.05601442605257034,
+    0.05353197827935219,
+    0.05498776212334633,
+    -0.05476567521691322,
+    0.05068012699484825,
+    -0.043154556304216385,
+    -0.05625144764780998,
+    -0.015480879694223404,
+    0.05618133023381233,
+    0.047647107392549515,
+    0.00030852321651764214,
+    -0.0563480444252491,
+    0.002875320380553603,
+    0.05277666077017784,
+    -0.042234960943460464,
+    -0.04620062932372093,
+    -0.04226899519562721,
+    0.05623779073357582,
+    0.038890767842531204,
+    0.0004553081525955349,
+    0.030361536890268326,
+    0.054891642183065414,
+    0.03424384072422981,
+    0.053915247321128845,
+    0.05166475102305412,
+    -0.04664766788482666,
+    -0.05624109506607056,
+    0.0542730987071991,
+    0.05174087733030319,
+    0.05046486109495163,
+    -0.047883041203022,
+    0.03340425342321396,
+    0.018814165145158768,
+    -0.05633160471916199,
+    0.03495202958583832,
+    -0.0563497319817543,
+    0.013102947734296322,
+    0.055191002786159515,
+    -0.05502072721719742,
+    -0.05395500734448433,
+    -0.04776066914200783,
+    0.05627734586596489,
+    -0.05632978305220604,
+    -0.045462362468242645
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking ‘Test workflow’, Every Day; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Wait",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait"
+  }
+}

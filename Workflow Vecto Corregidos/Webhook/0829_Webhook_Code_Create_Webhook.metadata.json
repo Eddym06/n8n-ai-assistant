@@ -1,0 +1,1514 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Webhook Code Create Webhook",
+    "file_name": "0829_Webhook_Code_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Webhook\\0829_Webhook_Code_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "fef09ac0b95c"
+  },
+  "structure": {
+    "total_nodes": 92,
+    "node_types": [
+      "n8n-nodes-base.googleCalendar",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.airtable",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.itemLists"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleCalendar",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 17
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 37
+      },
+      {
+        "type": "n8n-nodes-base.airtable",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.itemLists",
+        "count": 2
+      }
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "Input Arguments",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          520,
+          740
+        ]
+      },
+      {
+        "name": "Format response",
+        "type": "n8n-nodes-base.itemLists",
+        "position": [
+          2000,
+          840
+        ]
+      },
+      {
+        "name": "Sort",
+        "type": "n8n-nodes-base.itemLists",
+        "position": [
+          1760,
+          840
+        ]
+      },
+      {
+        "name": "Available Start Times & Ranges",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2240,
+          840
+        ]
+      },
+      {
+        "name": "Flatten Slots",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2460,
+          840
+        ]
+      },
+      {
+        "name": "Enrich Date",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2680,
+          840
+        ]
+      },
+      {
+        "name": "Build Response Payload",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2900,
+          840
+        ]
+      },
+      {
+        "name": "Booking Payload",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1980,
+          1400
+        ]
+      },
+      {
+        "name": "Success Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2200,
+          1400
+        ]
+      },
+      {
+        "name": "Add Friendly Error",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1980,
+          1760
+        ]
+      },
+      {
+        "name": "Error Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2200,
+          1760
+        ]
+      },
+      {
+        "name": "Escape Json",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1260,
+          1580
+        ]
+      },
+      {
+        "name": "Has all information",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          940,
+          1800
+        ]
+      },
+      {
+        "name": "Respond with Error",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          1480,
+          1900
+        ]
+      },
+      {
+        "name": "Build Error Response Payload",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1260,
+          1900
+        ]
+      },
+      {
+        "name": "Build Error Response Payload2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1560,
+          2840
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          260,
+          620
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          740,
+          920
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1320,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1280,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2140,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3280,
+          1000
+        ]
+      },
+      {
+        "name": "Sticky Note BookSlot Webhook",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          380,
+          1680
+        ]
+      },
+      {
+        "name": "Sticky Note BookSlot Check",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          880,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note BookSlot Error",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1440,
+          2060
+        ]
+      },
+      {
+        "name": "Sticky Note BookSlot GCal",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1660,
+          1740
+        ]
+      },
+      {
+        "name": "Sticky Note BookSlot Error Handle",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1920,
+          1920
+        ]
+      },
+      {
+        "name": "Sticky Note BookSlot Response",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2420,
+          1740
+        ]
+      },
+      {
+        "name": "Sticky Note BookSlot Airtable",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3100,
+          1740
+        ]
+      },
+      {
+        "name": "Sticky Note CancelSlot Webhook",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          440,
+          3480
+        ]
+      },
+      {
+        "name": "Sticky Note CancelSlot Check",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          960,
+          3780
+        ]
+      },
+      {
+        "name": "Sticky Note CancelSlot Error",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1520,
+          3940
+        ]
+      },
+      {
+        "name": "Sticky Note CancelSlot Search",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1300,
+          3440
+        ]
+      },
+      {
+        "name": "Sticky Note CancelSlot GCal Delete",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1720,
+          3720
+        ]
+      },
+      {
+        "name": "Sticky Note CancelSlot Airtable Update",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2060,
+          3400
+        ]
+      },
+      {
+        "name": "Sticky Note CancelSlot Response",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2380,
+          3740
+        ]
+      },
+      {
+        "name": "Sticky Note UpdateSlot Webhook",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          460,
+          2600
+        ]
+      },
+      {
+        "name": "Sticky Note UpdateSlot Check",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1000,
+          2900
+        ]
+      },
+      {
+        "name": "Sticky Note UpdateSlot Error",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1500,
+          3020
+        ]
+      },
+      {
+        "name": "Sticky Note UpdateSlot Search",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1580,
+          2460
+        ]
+      },
+      {
+        "name": "Sticky Note UpdateSlot GCal Update",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1940,
+          2720
+        ]
+      },
+      {
+        "name": "Sticky Note UpdateSlot Airtable Update",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2240,
+          2320
+        ]
+      },
+      {
+        "name": "Sticky Note UpdateSlot Response",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2720,
+          2460
+        ]
+      },
+      {
+        "name": "Sticky Note CallResults Webhook",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          440,
+          4160
+        ]
+      },
+      {
+        "name": "Sticky Note CallResults Airtable",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          860,
+          4460
+        ]
+      },
+      {
+        "name": "Getslot_tool",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          260,
+          740
+        ]
+      },
+      {
+        "name": "Check Availability",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          800,
+          740
+        ]
+      },
+      {
+        "name": "Response",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          1540,
+          640
+        ]
+      },
+      {
+        "name": "Check if time is available or not",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1020,
+          740
+        ]
+      },
+      {
+        "name": "Time available (true) & Call_id",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1320,
+          640
+        ]
+      },
+      {
+        "name": "Get All Calendar Events",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          1320,
+          840
+        ]
+      },
+      {
+        "name": "Extract start, end and name",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1540,
+          840
+        ]
+      },
+      {
+        "name": "Convert into Json format for Vapi",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3120,
+          840
+        ]
+      },
+      {
+        "name": "Response to Vapi",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          3360,
+          840
+        ]
+      },
+      {
+        "name": "bookslots_tool",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          400,
+          1800
+        ]
+      },
+      {
+        "name": "Input Arguments from booking tools",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          720,
+          1800
+        ]
+      },
+      {
+        "name": "Convert time to CST America / Chicago",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1480,
+          1580
+        ]
+      },
+      {
+        "name": "Create Event",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          1700,
+          1580
+        ]
+      },
+      {
+        "name": "Respond to Vapi",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          2480,
+          1580
+        ]
+      },
+      {
+        "name": "If the booking is confirmed then true",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2700,
+          1580
+        ]
+      },
+      {
+        "name": "Information to be Saved in Airtable",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2940,
+          1560
+        ]
+      },
+      {
+        "name": "Logs the confirmed booking details",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          3160,
+          1560
+        ]
+      },
+      {
+        "name": "Updateslots_tool",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          460,
+          2720
+        ]
+      },
+      {
+        "name": "Input Arguments from updateslot tool",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          840,
+          2720
+        ]
+      },
+      {
+        "name": "Checks if required info is provided.",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1060,
+          2720
+        ]
+      },
+      {
+        "name": "Finds original appointment",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          1600,
+          2560
+        ]
+      },
+      {
+        "name": "Response with Error",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          1780,
+          2840
+        ]
+      },
+      {
+        "name": "Update Event",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          1980,
+          2560
+        ]
+      },
+      {
+        "name": "Updates Airtable record",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          2280,
+          2440
+        ]
+      },
+      {
+        "name": "Response & call_id",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2620,
+          2580
+        ]
+      },
+      {
+        "name": "Respond to Vapi about Updating slots",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          2820,
+          2580
+        ]
+      },
+      {
+        "name": "CancelSlots_tool",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          440,
+          3620
+        ]
+      },
+      {
+        "name": "Input Arguments from cancelslot tool",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          800,
+          3620
+        ]
+      },
+      {
+        "name": "Checks if required info is provided for cancelation",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1020,
+          3620
+        ]
+      },
+      {
+        "name": "Finds the appointment record",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          1300,
+          3560
+        ]
+      },
+      {
+        "name": "Build Error Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1300,
+          3780
+        ]
+      },
+      {
+        "name": "Respond with Error to Vapi",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          1500,
+          3780
+        ]
+      },
+      {
+        "name": "Delete Event",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          1720,
+          3560
+        ]
+      },
+      {
+        "name": "Update Airtable record",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          1940,
+          3440
+        ]
+      },
+      {
+        "name": "Call_id & Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2160,
+          3580
+        ]
+      },
+      {
+        "name": "Respond to Vapi about cancelation",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          2400,
+          3580
+        ]
+      },
+      {
+        "name": "call_results",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          440,
+          4300
+        ]
+      },
+      {
+        "name": "All Input Arguments",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          720,
+          4300
+        ]
+      },
+      {
+        "name": "Save all information",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          900,
+          4300
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1800,
+          1980
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          280,
+          900
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          400,
+          1960
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          460,
+          2880
+        ]
+      },
+      {
+        "name": "Sticky Note18",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          440,
+          3780
+        ]
+      },
+      {
+        "name": "Sticky Note19",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          440,
+          4440
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1800,
+          340
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          40,
+          300
+        ]
+      }
+    ],
+    "connections_count": 46,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 0,
+      "action_count": 92
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "event management",
+    "use_cases": [],
+    "complexity_score": 1985,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "extract start, end and name",
+      "enrich date",
+      "sticky note7",
+      "check availability",
+      "success response",
+      "stickyNote",
+      "sticky note updateslot error",
+      "respond to vapi",
+      "finds the appointment record",
+      "webhook",
+      "check if time is available or not",
+      "finds original appointment",
+      "booking payload",
+      "googleCalendar",
+      "sticky note bookslot gcal",
+      "response",
+      "sticky note cancelslot webhook",
+      "respond to vapi about cancelation",
+      "updates airtable record",
+      "response with error",
+      "convert into json format for vapi",
+      "airtable",
+      "call_results",
+      "checks if required info is provided.",
+      "checks if required info is provided for cancelation",
+      "input arguments from booking tools",
+      "escape json",
+      "build error response payload2",
+      "input arguments from cancelslot tool",
+      "time available (true) & call_id",
+      "respond with error to vapi",
+      "response to vapi",
+      "sticky note bookslot response",
+      "sticky note cancelslot search",
+      "sticky note cancelslot error",
+      "sticky note cancelslot response",
+      "update airtable record",
+      "respond with error",
+      "build error response payload",
+      "all input arguments",
+      "sort",
+      "sticky note5",
+      "create event",
+      "sticky note18",
+      "build response payload",
+      "sticky note bookslot check",
+      "sticky note12",
+      "getslot_tool",
+      "get all calendar events",
+      "has all information",
+      "integration",
+      "sticky note3",
+      "bookslots_tool",
+      "sticky note updateslot gcal update",
+      "input arguments from updateslot tool",
+      "logs the confirmed booking details",
+      "save all information",
+      "flatten slots",
+      "updateslots_tool",
+      "sticky note updateslot check",
+      "delete event",
+      "code",
+      "cancelslots_tool",
+      "sticky note15",
+      "sticky note17",
+      "sticky note9",
+      "sticky note4",
+      "set",
+      "if the booking is confirmed then true",
+      "sticky note",
+      "sticky note cancelslot airtable update",
+      "add friendly error",
+      "sticky note cancelslot gcal delete",
+      "response & call_id",
+      "complex",
+      "event management",
+      "sticky note1",
+      "sticky note2",
+      "format response",
+      "sticky note callresults airtable",
+      "build error response",
+      "sticky note updateslot airtable update",
+      "sticky note16",
+      "update event",
+      "sticky note bookslot error",
+      "respondToWebhook",
+      "input arguments",
+      "error response",
+      "respond to vapi about updating slots",
+      "sticky note updateslot response",
+      "sticky note cancelslot check",
+      "convert time to cst america / chicago",
+      "available start times & ranges",
+      "sticky note bookslot webhook",
+      "sticky note bookslot airtable",
+      "sticky note19",
+      "sticky note bookslot error handle",
+      "information to be saved in airtable",
+      "itemLists",
+      "call_id & response",
+      "sticky note callresults webhook",
+      "sticky note updateslot webhook",
+      "sticky note updateslot search"
+    ],
+    "description": "Este workflow diseñado para event management con 92 nodos que ejecuta: Input Arguments, Format response, Sort en la categoría de integration.",
+    "semantic_content": "Nodos: Input Arguments (set), Format response (itemLists), Sort (itemLists), Available Start Times & Ranges (code), Flatten Slots (code), Enrich Date (code), Build Response Payload (set), Booking Payload (set), Success Response (set), Add Friendly Error (code), Error Response (set), Escape Json (code), Has all information (if), Respond with Error (respondToWebhook), Build Error Response Payload (set), Build Error Response Payload2 (set), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note BookSlot Webhook (stickyNote), Sticky Note BookSlot Check (stickyNote), Sticky Note BookSlot Error (stickyNote), Sticky Note BookSlot GCal (stickyNote), Sticky Note BookSlot Error Handle (stickyNote), Sticky Note BookSlot Response (stickyNote), Sticky Note BookSlot Airtable (stickyNote), Sticky Note CancelSlot Webhook (stickyNote), Sticky Note CancelSlot Check (stickyNote), Sticky Note CancelSlot Error (stickyNote), Sticky Note CancelSlot Search (stickyNote), Sticky Note CancelSlot GCal Delete (stickyNote), Sticky Note CancelSlot Airtable Update (stickyNote), Sticky Note CancelSlot Response (stickyNote), Sticky Note UpdateSlot Webhook (stickyNote), Sticky Note UpdateSlot Check (stickyNote), Sticky Note UpdateSlot Error (stickyNote), Sticky Note UpdateSlot Search (stickyNote), Sticky Note UpdateSlot GCal Update (stickyNote), Sticky Note UpdateSlot Airtable Update (stickyNote), Sticky Note UpdateSlot Response (stickyNote), Sticky Note CallResults Webhook (stickyNote), Sticky Note CallResults Airtable (stickyNote), Getslot_tool (webhook), Check Availability (googleCalendar), Response (respondToWebhook), Check if time is available or not (if), Time available (true) & Call_id (set), Get All Calendar Events (googleCalendar), Extract start, end and name (set), Convert into Json format for Vapi (code), Response to Vapi (respondToWebhook), bookslots_tool (webhook), Input Arguments from booking tools (set), Convert time to CST America / Chicago (code), Create Event (googleCalendar), Respond to Vapi (respondToWebhook), If the booking is confirmed then true (if), Information to be Saved in Airtable (set), Logs the confirmed booking details (airtable), Updateslots_tool (webhook), Input Arguments from updateslot tool (set), Checks if required info is provided. (if), Finds original appointment (airtable), Response with Error (respondToWebhook), Update Event (googleCalendar), Updates Airtable record (airtable), Response & call_id (set), Respond to Vapi about Updating slots (respondToWebhook), CancelSlots_tool (webhook), Input Arguments from cancelslot tool (set), Checks if required info is provided for cancelation (if), Finds the appointment record (airtable), Build Error Response (set), Respond with Error to Vapi (respondToWebhook), Delete Event (googleCalendar), Update Airtable record (airtable), Call_id & Response (set), Respond to Vapi about cancelation (respondToWebhook), call_results (webhook), All Input Arguments (set), Save all information (airtable), Sticky Note7 (stickyNote), Sticky Note15 (stickyNote), Sticky Note16 (stickyNote), Sticky Note17 (stickyNote), Sticky Note18 (stickyNote), Sticky Note19 (stickyNote), Sticky Note9 (stickyNote), Sticky Note12 (stickyNote). Propósito: event management. Categoría: integration",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Input Arguments",
+      "Sort",
+      "n8n-nodes-base.set",
+      "Format response",
+      "n8n-nodes-base.itemLists"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.airtable",
+      "n8n-nodes-base.itemlists",
+      "n8n-nodes-base.respondtowebhook",
+      "n8n-nodes-base.googlecalendar",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "create",
+      "0829",
+      "code",
+      "webhook",
+      "0829_webhook_code_create_webhook"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "event management",
+      "integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 50.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 92.69521410579345,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 76.03904282115869
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:23.085321"
+  },
+  "semantic_vector": [
+    -0.053652018308639526,
+    -0.05220736190676689,
+    0.02902432344853878,
+    -0.04295989125967026,
+    0.03670111671090126,
+    -0.052629414945840836,
+    0.05399484559893608,
+    -0.03771859034895897,
+    -0.05374285206198692,
+    0.05342281982302666,
+    -0.0520656518638134,
+    -0.050576090812683105,
+    -0.047610681504011154,
+    -0.053908709436655045,
+    -0.05027693882584572,
+    0.05408049747347832,
+    0.05368412286043167,
+    0.05040900781750679,
+    -0.05081973969936371,
+    0.023902831599116325,
+    -0.009642727673053741,
+    0.04385143890976906,
+    -0.03722896799445152,
+    0.042542632669210434,
+    -0.022478090599179268,
+    0.02169426903128624,
+    -0.051395270973443985,
+    -0.029683781787753105,
+    -0.030037719756364822,
+    -0.014187829568982124,
+    -0.017579540610313416,
+    -0.006288012024015188,
+    0.01926320791244507,
+    -0.03818276524543762,
+    -0.051263391971588135,
+    -0.047446440905332565,
+    -0.015188870020210743,
+    -0.0011084724683314562,
+    0.04867773503065109,
+    -0.04743998497724533,
+    -0.03586631640791893,
+    -0.024092741310596466,
+    0.051146432757377625,
+    0.044397298246622086,
+    0.05406156927347183,
+    0.05153794586658478,
+    0.039339110255241394,
+    0.040283046662807465,
+    -0.0540013313293457,
+    -0.052503734827041626,
+    -0.05206943675875664,
+    -0.03512897342443466,
+    -0.05407934635877609,
+    -0.054079290479421616,
+    -0.038527872413396835,
+    -0.03919997066259384,
+    0.05128861963748932,
+    -0.006483992096036673,
+    0.03632455691695213,
+    -0.022566702216863632,
+    0.05106727033853531,
+    -0.052196893841028214,
+    -0.0345853827893734,
+    0.04082069545984268,
+    0.023553432896733284,
+    -0.0534035786986351,
+    0.04635941982269287,
+    -0.008846021257340908,
+    0.053943030536174774,
+    0.038749177008867264,
+    -0.048662200570106506,
+    -0.053591351956129074,
+    0.04884590581059456,
+    0.05363878980278969,
+    -0.05405557155609131,
+    0.045621357858181,
+    0.053948868066072464,
+    -0.05407536402344704,
+    0.053770825266838074,
+    0.03763797506690025,
+    0.05143674090504646,
+    0.02240225486457348,
+    0.04595087096095085,
+    -0.05299243703484535,
+    0.04064420610666275,
+    0.04401914402842522,
+    0.044286977499723434,
+    -0.051979321986436844,
+    0.05217164754867554,
+    -0.009404683485627174,
+    0.04067937284708023,
+    0.044108156114816666,
+    -0.04045282304286957,
+    -0.05140959843993187,
+    0.04368596896529198,
+    0.031443167477846146,
+    0.00125623878557235,
+    0.051882676780223846,
+    -0.05406811460852623,
+    -0.054052188992500305,
+    0.0009843051666393876,
+    -0.05299229547381401,
+    -0.006494742818176746,
+    0.04352831840515137,
+    0.05240493267774582,
+    -0.027772219851613045,
+    0.04221378266811371,
+    0.04419609159231186,
+    -0.03002409264445305,
+    -0.05365971103310585,
+    0.015192868188023567,
+    -0.053156062960624695,
+    0.026257473975419998,
+    -0.008105764165520668,
+    0.05054109916090965,
+    -0.028003670275211334,
+    -0.05392169579863548,
+    1.6263909856206737e-05,
+    0.014546464197337627,
+    -0.034974806010723114,
+    -0.0311172753572464,
+    0.018935471773147583,
+    0.004033180885016918,
+    -0.009180768392980099,
+    0.054079148918390274,
+    0.017999881878495216,
+    0.00021632124844472855,
+    -0.031385935842990875,
+    0.005646378733217716,
+    -0.05397294834256172,
+    -0.052449099719524384,
+    0.05372326076030731,
+    0.05184938758611679,
+    -0.04913313686847687,
+    0.04698222130537033,
+    -0.04047973081469536,
+    -0.053187739104032516,
+    0.01758197508752346,
+    -0.052021972835063934,
+    -0.05241077393293381,
+    -0.037522222846746445,
+    0.05408049747347832,
+    0.014075594022870064,
+    -0.05045461654663086,
+    0.019447196274995804,
+    -0.05406705290079117,
+    0.03512588143348694,
+    -0.006560564041137695,
+    0.04376445338129997,
+    0.03907289355993271,
+    0.019716506823897362,
+    -0.05403642728924751,
+    0.05382315814495087,
+    0.01868578977882862,
+    0.04731188341975212,
+    0.054052241146564484,
+    -0.042936380952596664,
+    -0.053930070251226425,
+    -0.05229472368955612,
+    -0.054044995456933975,
+    -0.05407940596342087,
+    -0.054073553532361984,
+    0.02188948169350624,
+    -0.05329422280192375,
+    0.048059966415166855,
+    -0.0039345500990748405,
+    -0.053960464894771576,
+    -0.016345495358109474,
+    -0.05401128903031349,
+    0.04890039563179016,
+    0.05394984036684036,
+    -0.05407983809709549,
+    -0.0013418073067441583,
+    0.01974613405764103,
+    -0.05407939478754997,
+    0.05394827574491501,
+    -0.05127565190196037,
+    -0.043779920786619186,
+    0.031289830803871155,
+    -0.043320607393980026,
+    -0.054039135575294495,
+    0.053953107446432114,
+    -0.054049499332904816,
+    0.05139358714222908,
+    0.034382063895463943,
+    0.031578123569488525,
+    -0.054071005433797836,
+    0.05396849289536476,
+    -0.04088793694972992,
+    0.043130062520504,
+    -0.005037855356931686,
+    0.05275211110711098,
+    0.03360782563686371,
+    -0.054011669009923935,
+    -0.05404643714427948,
+    -0.05406586825847626,
+    0.053412314504384995,
+    0.05408049747347832,
+    0.0414019413292408,
+    0.0438743494451046,
+    0.0535525381565094,
+    0.05380697175860405,
+    0.04436059668660164,
+    0.053667210042476654,
+    0.05142929032444954,
+    -0.03563084825873375,
+    -0.05171183869242668,
+    0.041670434176921844,
+    -0.054077357053756714,
+    -0.054013412445783615,
+    0.053684525191783905,
+    0.04883879795670509,
+    0.05154207721352577,
+    0.053900256752967834,
+    -0.05408039316534996,
+    -0.052977304905653,
+    -0.0448741614818573,
+    0.047557663172483444,
+    -0.04045505449175835,
+    -0.032343555241823196,
+    -0.053207237273454666,
+    0.05332472175359726,
+    0.021607782691717148,
+    -0.054014306515455246,
+    -0.025500161573290825,
+    -0.05407603457570076,
+    -0.05377449840307236,
+    -0.05387607589364052,
+    -0.053550075739622116,
+    -0.05402690917253494,
+    0.01083835307508707,
+    -0.03363213688135147,
+    0.053158488124608994,
+    -0.05408040061593056,
+    0.010919825173914433,
+    0.04854704067111015,
+    0.05408049747347832,
+    0.054080408066511154,
+    -0.053106632083654404,
+    -0.05278840288519859,
+    0.05351070314645767,
+    0.05058906227350235,
+    0.03900875151157379,
+    0.05118450149893761,
+    -0.035565055906772614,
+    0.053878918290138245,
+    0.05404851585626602,
+    -0.02226146124303341,
+    0.053090900182724,
+    0.05407984182238579,
+    -0.05339246615767479,
+    0.04661893844604492,
+    -0.05391473323106766,
+    -0.027402255684137344,
+    0.031220298260450363,
+    -0.053996261209249496,
+    0.05091726407408714,
+    0.05408049747347832,
+    0.014875449240207672,
+    0.048209793865680695,
+    0.03686093911528587,
+    0.046378955245018005,
+    -0.05404815450310707,
+    0.03709997609257698,
+    0.04809270054101944,
+    0.03921648487448692,
+    -0.05197133868932724,
+    0.02391921728849411,
+    -0.05403288081288338,
+    0.049936916679143906,
+    -0.05406353622674942,
+    0.05406508222222328,
+    -0.047269586473703384,
+    0.049423083662986755,
+    0.054073989391326904,
+    -0.0020439017098397017,
+    -0.05381585285067558,
+    0.0528804250061512,
+    0.054078999906778336,
+    0.024037271738052368,
+    -0.04370615631341934,
+    0.05279171094298363,
+    0.054062191396951675,
+    0.027295084670186043,
+    -0.04563376307487488,
+    -0.05395589768886566,
+    0.05181073397397995,
+    0.05401486158370972,
+    -0.05403294041752815,
+    0.044726982712745667,
+    -0.053984541445970535,
+    0.04984864220023155,
+    0.05237783491611481,
+    0.03800220787525177,
+    0.05373496189713478,
+    -0.037070512771606445,
+    -0.004450960084795952,
+    -0.04945117607712746,
+    -0.04965006560087204,
+    -0.019661879166960716,
+    0.03682393953204155,
+    0.05297195538878441,
+    0.040808554738759995,
+    -0.038545235991477966,
+    -0.04482262581586838,
+    -0.02995165064930916,
+    0.05005543306469917,
+    0.022305767983198166,
+    0.05196048691868782,
+    -0.012097426690161228,
+    0.044496167451143265,
+    0.05049481242895126,
+    0.018023019656538963,
+    0.04855041205883026,
+    0.016017721965909004,
+    -0.05406204238533974,
+    0.0540049709379673,
+    -0.04347647354006767,
+    -0.02687966823577881,
+    0.027746131643652916,
+    -0.025221671909093857,
+    -0.054019995033741,
+    0.054037198424339294,
+    -0.04534492269158363,
+    0.05384806543588638,
+    0.01716802455484867,
+    0.04314924031496048,
+    0.044647637754678726,
+    0.002167848404496908,
+    -0.05264781042933464,
+    0.04757143184542656,
+    -0.053708065301179886,
+    -0.028800422325730324,
+    0.054063256829977036,
+    0.03480549156665802,
+    -0.02315012365579605,
+    0.05403827130794525,
+    -0.04461027309298515,
+    0.053323760628700256,
+    -0.053036533296108246,
+    -0.048938531428575516,
+    -0.051099419593811035,
+    0.04983704537153244,
+    -0.025750916451215744,
+    -0.05408046767115593,
+    -0.016091182827949524,
+    -0.05397793650627136,
+    -0.00024955443223007023,
+    -0.050500717014074326,
+    -0.05316011607646942,
+    0.05397684499621391,
+    -0.012065218761563301,
+    0.048030953854322433,
+    0.05334382504224777,
+    0.019420292228460312,
+    0.005719298962503672,
+    -0.05408044904470444,
+    0.05407480150461197,
+    0.05375327542424202,
+    0.05334459990262985,
+    0.04515078291296959,
+    -0.04734206572175026,
+    -0.054080478847026825,
+    0.047863349318504333,
+    0.0060103535652160645,
+    0.05400136113166809,
+    0.03553704172372818,
+    -0.04840725287795067,
+    0.05407845601439476,
+    0.04998404532670975,
+    -0.038169387727975845,
+    -0.04270937293767929,
+    -0.05395276099443436,
+    0.04607958346605301,
+    0.05371338501572609,
+    0.047660816460847855,
+    -0.0525258332490921,
+    -0.05385495349764824,
+    -0.03184306621551514,
+    -0.00902453251183033,
+    0.04715212434530258,
+    0.05407793074846268,
+    -0.05145829916000366,
+    -0.029887579381465912,
+    -0.027933988720178604,
+    -0.053982388228178024,
+    0.05291946977376938,
+    0.05191332846879959,
+    -0.05331908538937569,
+    -0.05252508819103241,
+    0.04767948016524315,
+    -0.03270503878593445,
+    0.05129767581820488,
+    0.04567980766296387,
+    -0.027963895350694656,
+    0.019764943048357964,
+    -0.030384955927729607,
+    0.03692968189716339,
+    0.01860823668539524,
+    -0.05362062528729439,
+    0.029899515211582184,
+    0.05402874946594238,
+    -0.054077111184597015,
+    0.0537443570792675,
+    -0.02255915477871895,
+    0.050961390137672424,
+    -0.05340142920613289,
+    0.052470747381448746,
+    0.04177122935652733,
+    0.05402889475226402,
+    0.008217033930122852,
+    0.04640740528702736,
+    0.042775023728609085,
+    -0.05008269473910332,
+    0.05385316163301468,
+    -0.05068254843354225,
+    0.043808527290821075,
+    -0.04571564123034477,
+    -0.0335778072476387,
+    -0.01713106967508793,
+    -0.035930879414081573,
+    -0.04106977581977844,
+    -0.05067846179008484,
+    0.05207275226712227,
+    0.02014458365738392,
+    0.03887718915939331,
+    -0.053752824664115906,
+    0.050969332456588745,
+    0.017453566193580627,
+    0.031843747943639755,
+    0.043593332171440125,
+    0.03876255825161934,
+    0.03653014078736305,
+    0.054073747247457504,
+    -0.0523967370390892,
+    -0.05200082063674927,
+    -0.04813854768872261,
+    -0.053922850638628006,
+    -0.05334540456533432,
+    0.05392078682780266,
+    0.053247321397066116,
+    -0.023334093391895294,
+    0.04247637838125229,
+    -0.047856561839580536,
+    0.006195303052663803,
+    -0.05306435748934746,
+    -0.05322050303220749,
+    0.05279140919446945,
+    0.051749978214502335,
+    -0.05230015516281128,
+    -0.018353017047047615,
+    -0.004778414964675903,
+    0.054078392684459686,
+    0.04508323222398758,
+    -0.03805135563015938,
+    -0.05408048257231712,
+    -0.044627077877521515,
+    0.05407655984163284,
+    0.008546818047761917,
+    0.00030862895073369145,
+    0.03977009281516075,
+    0.04686729982495308,
+    -0.013524560257792473,
+    0.05363951250910759,
+    5.129149940330535e-05,
+    -0.04800982400774956,
+    0.0540669821202755,
+    -0.050678882747888565,
+    -0.04437246173620224,
+    0.054075099527835846,
+    0.046761441975831985,
+    -0.05013532191514969,
+    -0.002172491978853941,
+    0.020527252927422523,
+    -0.045926257967948914,
+    -0.0442986823618412,
+    0.05330406874418259,
+    0.05124523118138313,
+    0.03296831622719765,
+    -0.05068134516477585,
+    0.03991137072443962,
+    0.043679870665073395,
+    -0.0011869539739564061,
+    -0.054048582911491394,
+    0.04244087636470795,
+    -0.04253462702035904,
+    -0.020753217861056328,
+    -0.013938785530626774,
+    0.03710852935910225,
+    0.048590391874313354,
+    -0.0029273657128214836,
+    0.04836897924542427,
+    -0.05326632037758827,
+    0.046713974326848984,
+    -0.05327446758747101,
+    0.05397781729698181,
+    0.04784400761127472,
+    0.05406292900443077,
+    -0.05313512310385704,
+    0.05208844691514969,
+    -0.03969227895140648,
+    -0.009329716674983501,
+    0.05406801030039787,
+    -0.05408049747347832,
+    0.05183205008506775,
+    0.02207009121775627,
+    -0.051515769213438034,
+    -0.0025892637204378843,
+    -0.00543959392234683,
+    0.05407964810729027,
+    -0.04926232248544693,
+    -0.038912490010261536
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs event management; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for event management in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Webhook",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Webhook"
+  }
+}

@@ -1,0 +1,1073 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Limit Webhook Automation Webhook",
+    "file_name": "0674_Limit_Webhook_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Limit\\0674_Limit_Webhook_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "a0ff3be125bf"
+  },
+  "structure": {
+    "total_nodes": 40,
+    "node_types": [
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmailTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 14
+      },
+      {
+        "type": "n8n-nodes-base.limit",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Gmail Trigger",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          -680,
+          -140
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gmail - Extract Received Headers",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          200,
+          -80
+        ]
+      },
+      {
+        "name": "Gmail - Extract Original From IP",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          620,
+          -80
+        ]
+      },
+      {
+        "name": "Gmail - Original IP Found?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          840,
+          -20
+        ]
+      },
+      {
+        "name": "Gmail - Query IP Quality Score API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1080,
+          -160
+        ]
+      },
+      {
+        "name": "Gmail - Query IP API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1280,
+          -160
+        ]
+      },
+      {
+        "name": "Gmail - Authentication-Results Header?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1480,
+          -20
+        ]
+      },
+      {
+        "name": "Gmail - Received-SPF Header?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1820,
+          620
+        ]
+      },
+      {
+        "name": "Gmail - Extract Authentication-Results Header",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1840,
+          -180
+        ]
+      },
+      {
+        "name": "Gmail - Extract Received-SPF Header",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2160,
+          460
+        ]
+      },
+      {
+        "name": "Gmail - Determine Auth Values",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2560,
+          -180
+        ]
+      },
+      {
+        "name": "Gmail - Set SPF Value",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          460
+        ]
+      },
+      {
+        "name": "Gmail - No SPF Found",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          640
+        ]
+      },
+      {
+        "name": "Gmail - Format Output",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3520,
+          100
+        ]
+      },
+      {
+        "name": "Gmail - DKIM Signature Found",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          820
+        ]
+      },
+      {
+        "name": "Gmail - DKIM-Signature Header?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1820,
+          900
+        ]
+      },
+      {
+        "name": "Gmail - No DKIM Signature Found",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          1020
+        ]
+      },
+      {
+        "name": "Gmail - Set DMARC Value",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          1240
+        ]
+      },
+      {
+        "name": "Gmail - Extract DMARC Header",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2260,
+          1240
+        ]
+      },
+      {
+        "name": "Gmail - DMARC Header?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1820,
+          1340
+        ]
+      },
+      {
+        "name": "Gmail - No DMARC Header",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2600,
+          1440
+        ]
+      },
+      {
+        "name": "Set Gmail Headers Here",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -320,
+          -140
+        ]
+      },
+      {
+        "name": "Format Individual Auth Outputs1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3280,
+          100
+        ]
+      },
+      {
+        "name": "Format Combined Auth Output1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3100,
+          -80
+        ]
+      },
+      {
+        "name": "Gmail - Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -673,
+          541
+        ]
+      },
+      {
+        "name": "Gmail - Remove Extra Received Headers",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          420,
+          -80
+        ]
+      },
+      {
+        "name": "Gmail - Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2880,
+          100
+        ]
+      },
+      {
+        "name": "Gmail - Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          3100,
+          100
+        ]
+      },
+      {
+        "name": "Gmail - Set Headers",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          0,
+          -80
+        ]
+      },
+      {
+        "name": "Gmail - Respond to Webhook",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          3800,
+          100
+        ]
+      },
+      {
+        "name": "Aggregate Received-SPF Headers1",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2380,
+          460
+        ]
+      },
+      {
+        "name": "Set Gmail Webhook Headers Here",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -233,
+          541
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -722.5965764931168,
+          -597.9994506078199
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -82,
+          -524.2941123664101
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          800,
+          -599.6286292747894
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1735,
+          -551.4521798091497
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2773,
+          -500.1753788350808
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1733,
+          -1
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -721.3492584351117,
+          60
+        ]
+      },
+      {
+        "name": "Skip IP Check",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1160,
+          80
+        ]
+      }
+    ],
+    "connections_count": 32,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 39
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 985,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "gmail - original ip found?",
+      "gmail - set spf value",
+      "gmail - respond to webhook",
+      "gmail - set dmarc value",
+      "gmail - determine auth values",
+      "sticky note5",
+      "set gmail headers here",
+      "gmailTrigger",
+      "aggregate received-spf headers1",
+      "integration",
+      "gmail - aggregate",
+      "gmail - extract received-spf header",
+      "sticky note3",
+      "stickyNote",
+      "gmail - dkim signature found",
+      "respondToWebhook",
+      "webhook",
+      "sticky note6",
+      "gmail - query ip api",
+      "gmail - extract original from ip",
+      "gmail - extract received headers",
+      "gmail - extract authentication-results header",
+      "gmail - no dkim signature found",
+      "httpRequest",
+      "aggregate",
+      "format individual auth outputs1",
+      "webhook integration",
+      "gmail - extract dmarc header",
+      "skip ip check",
+      "gmail - no spf found",
+      "code",
+      "gmail - dkim-signature header?",
+      "sticky note4",
+      "set",
+      "gmail trigger",
+      "gmail - format output",
+      "limit",
+      "merge",
+      "gmail - remove extra received headers",
+      "gmail - set headers",
+      "gmail - query ip quality score api",
+      "gmail - merge",
+      "gmail - received-spf header?",
+      "gmail - authentication-results header?",
+      "sticky note",
+      "complex",
+      "gmail - webhook",
+      "set gmail webhook headers here",
+      "gmail - dmarc header?",
+      "noOp",
+      "sticky note2",
+      "sticky note1",
+      "gmail - no dmarc header",
+      "format combined auth output1"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 40 nodos activado por Gmail Trigger que ejecuta: Gmail - Extract Received Headers, Gmail - Extract Original From IP, Gmail - Original IP Found? en la categoría de integration.",
+    "semantic_content": "Nodos: Gmail Trigger (gmailTrigger), Gmail - Extract Received Headers (code), Gmail - Extract Original From IP (set), Gmail - Original IP Found? (if), Gmail - Query IP Quality Score API (httpRequest), Gmail - Query IP API (httpRequest), Gmail - Authentication-Results Header? (if), Gmail - Received-SPF Header? (if), Gmail - Extract Authentication-Results Header (code), Gmail - Extract Received-SPF Header (code), Gmail - Determine Auth Values (set), Gmail - Set SPF Value (set), Gmail - No SPF Found (set), Gmail - Format Output (set), Gmail - DKIM Signature Found (set), Gmail - DKIM-Signature Header? (if), Gmail - No DKIM Signature Found (set), Gmail - Set DMARC Value (set), Gmail - Extract DMARC Header (code), Gmail - DMARC Header? (if), Gmail - No DMARC Header (set), Set Gmail Headers Here (set), Format Individual Auth Outputs1 (set), Format Combined Auth Output1 (set), Gmail - Webhook (webhook), Gmail - Remove Extra Received Headers (limit), Gmail - Merge (merge), Gmail - Aggregate (aggregate), Gmail - Set Headers (set), Gmail - Respond to Webhook (respondToWebhook), Aggregate Received-SPF Headers1 (aggregate), Set Gmail Webhook Headers Here (set), Sticky Note (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note1 (stickyNote), Skip IP Check (noOp). Propósito: webhook integration. Categoría: integration. Disparadores: Gmail Trigger",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.set",
+      "Gmail Trigger",
+      "n8n-nodes-base.code",
+      "Gmail - Extract Received Headers",
+      "n8n-nodes-base.if",
+      "Gmail - Original IP Found?",
+      "Gmail - Extract Original From IP"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.respondtowebhook",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.gmailtrigger",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.aggregate"
+    ],
+    "search_terms": [
+      "0674",
+      "webhook",
+      "automation",
+      "limit",
+      "0674_limit_webhook_automation_webhook"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.gmailTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 81.21827411167513,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.99365482233503
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:11.346505"
+  },
+  "semantic_vector": [
+    -0.04841231554746628,
+    -0.01022205501794815,
+    0.044906921684741974,
+    0.0005169174983166158,
+    0.03819528594613075,
+    -0.049258049577474594,
+    0.04931848123669624,
+    -0.04790345951914787,
+    -0.048316940665245056,
+    0.049208756536245346,
+    -0.0492929182946682,
+    0.0344773605465889,
+    -0.04179332032799721,
+    -0.04773544892668724,
+    -0.04931972548365593,
+    0.049320727586746216,
+    -0.002908420981839299,
+    0.0021372423507273197,
+    0.03512846678495407,
+    -0.043515995144844055,
+    0.0311927180737257,
+    -0.0054589430801570415,
+    0.04929734766483307,
+    0.04669182002544403,
+    0.043246157467365265,
+    0.04836743697524071,
+    0.04928262159228325,
+    -0.04916396364569664,
+    0.03617725148797035,
+    0.04932054132223129,
+    0.049307871609926224,
+    0.02732965722680092,
+    0.049289390444755554,
+    -0.02498258836567402,
+    0.04932042956352234,
+    -0.049169398844242096,
+    -0.026504235342144966,
+    0.048185888677835464,
+    -0.049320682883262634,
+    -0.04927065968513489,
+    0.04931984841823578,
+    0.04901332035660744,
+    -0.039933089166879654,
+    0.049320727586746216,
+    0.049320727586746216,
+    -0.04897714778780937,
+    -0.047944843769073486,
+    0.04932055622339249,
+    -0.03847270458936691,
+    -0.049320727586746216,
+    0.03869006037712097,
+    -0.017327219247817993,
+    -0.0493057519197464,
+    -0.048991333693265915,
+    -0.049320727586746216,
+    0.04931572452187538,
+    0.02984749712049961,
+    0.04930388927459717,
+    -0.047091275453567505,
+    0.008778276853263378,
+    0.047325000166893005,
+    -0.04930737987160683,
+    0.03816968947649002,
+    0.049319833517074585,
+    0.049307677894830704,
+    -0.0385311096906662,
+    0.049298662692308426,
+    -0.04858507588505745,
+    0.04931926727294922,
+    -0.04309006407856941,
+    -0.049320705235004425,
+    0.04929032921791077,
+    -0.009206666611135006,
+    0.047219350934028625,
+    0.049006156623363495,
+    0.0492916963994503,
+    0.04931323602795601,
+    -0.04924573749303818,
+    -0.049320582300424576,
+    0.046040453016757965,
+    -0.03078480064868927,
+    0.03195808455348015,
+    -0.04777565598487854,
+    -0.049227748066186905,
+    -0.04166708514094353,
+    0.009085246361792088,
+    -0.04830431565642357,
+    -0.0390806570649147,
+    0.04890827089548111,
+    -0.002863239264115691,
+    -0.04932021722197533,
+    -0.04506256803870201,
+    0.048625554889440536,
+    0.04541756212711334,
+    0.04920259863138199,
+    0.04907088354229927,
+    0.04777488112449646,
+    0.04931912198662758,
+    -0.04931724816560745,
+    -0.049320708960294724,
+    0.049320682883262634,
+    -0.02811378613114357,
+    -0.049059201031923294,
+    0.04704512283205986,
+    0.017063960433006287,
+    -0.044963277876377106,
+    0.049320727586746216,
+    -0.01598449796438217,
+    0.04927843064069748,
+    -0.049320727586746216,
+    0.049296341836452484,
+    -0.04617214947938919,
+    -0.04878818616271019,
+    0.024289557710289955,
+    -0.049320317804813385,
+    0.0492960624396801,
+    -0.049316857010126114,
+    0.028228316456079483,
+    0.049317698925733566,
+    -0.049218159168958664,
+    -0.04931996762752533,
+    0.040632620453834534,
+    -0.04071721062064171,
+    0.011297624558210373,
+    0.04932047054171562,
+    -0.046713266521692276,
+    -0.04924286529421806,
+    0.005177406128495932,
+    0.048816923052072525,
+    -0.047726720571517944,
+    0.00593956233933568,
+    0.049308206886053085,
+    0.04755556955933571,
+    0.049320582300424576,
+    0.04878935217857361,
+    0.04930277541279793,
+    0.011728508397936821,
+    0.049288101494312286,
+    0.002624597167596221,
+    -0.04926304519176483,
+    0.019588924944400787,
+    0.049320727586746216,
+    0.04903504624962807,
+    -0.04929288849234581,
+    0.04881115257740021,
+    -0.049320727586746216,
+    -0.03996715694665909,
+    0.024132343009114265,
+    0.048835255205631256,
+    0.04932063817977905,
+    -0.04919591173529625,
+    -0.014429566450417042,
+    0.049320708960294724,
+    -0.04930901154875755,
+    0.0493074432015419,
+    0.04932054132223129,
+    -0.044826485216617584,
+    -0.049320727586746216,
+    -0.045409828424453735,
+    0.04932049661874771,
+    -0.046782754361629486,
+    -0.04931384325027466,
+    -0.035711001604795456,
+    0.04915814474225044,
+    0.049302875995635986,
+    -0.021693000569939613,
+    -0.04932063817977905,
+    -0.049318213015794754,
+    -0.04930119216442108,
+    0.03703707084059715,
+    -0.019225843250751495,
+    -0.049274951219558716,
+    -0.03981982544064522,
+    0.04598075523972511,
+    -0.04902388155460358,
+    -0.0254899300634861,
+    -0.044544193893671036,
+    0.04903456196188927,
+    0.04590047523379326,
+    -0.04877505823969841,
+    0.04920734092593193,
+    0.04930562525987625,
+    -0.04932045564055443,
+    -0.049002766609191895,
+    0.015494536608457565,
+    0.020231911912560463,
+    -0.04932044446468353,
+    0.04925414174795151,
+    0.009507888928055763,
+    0.04930045083165169,
+    -0.04455756023526192,
+    0.04930435121059418,
+    -0.049284473061561584,
+    -0.049320727586746216,
+    -0.049320727586746216,
+    -0.049286700785160065,
+    0.029730726033449173,
+    0.049320727586746216,
+    0.0406305268406868,
+    -0.036595799028873444,
+    -0.04725920036435127,
+    0.049249522387981415,
+    -0.049320124089717865,
+    0.025691693648695946,
+    0.04210811108350754,
+    -0.011421017348766327,
+    -0.003341984935104847,
+    0.04875500500202179,
+    -0.04932064190506935,
+    -0.04472673684358597,
+    0.014517160132527351,
+    -0.04130179435014725,
+    -0.04237796738743782,
+    0.04820137843489647,
+    -0.04931529611349106,
+    -0.049317866563797,
+    0.049178823828697205,
+    0.049319058656692505,
+    -0.004992193076759577,
+    -0.01939469575881958,
+    -0.031799688935279846,
+    -0.037956323474645615,
+    0.04921470209956169,
+    -0.04294917732477188,
+    -0.04858054593205452,
+    -0.03857652470469475,
+    -0.04932020604610443,
+    -0.049308791756629944,
+    0.04115811735391617,
+    -0.04239165782928467,
+    0.04636528715491295,
+    -0.049305107444524765,
+    0.04931310936808586,
+    -0.049320727586746216,
+    -0.027515893802046776,
+    -0.04932054877281189,
+    0.049320727586746216,
+    0.01577245257794857,
+    -0.04341621696949005,
+    0.046463385224342346,
+    0.049314361065626144,
+    0.04932060092687607,
+    -0.04903849586844444,
+    -0.04910355806350708,
+    0.049320727586746216,
+    0.04561656713485718,
+    -0.04932023212313652,
+    -0.040245406329631805,
+    -0.019549788907170296,
+    0.049320727586746216,
+    -0.049320727586746216,
+    0.04900693893432617,
+    -0.04930202290415764,
+    -0.02465936914086342,
+    0.014155746437609196,
+    -0.049320727586746216,
+    -0.04930397868156433,
+    0.049320727586746216,
+    -0.03642149269580841,
+    0.049195460975170135,
+    0.04930424317717552,
+    -0.019897012040019035,
+    -0.048998646438121796,
+    0.049293648451566696,
+    -0.04185899347066879,
+    0.04931940138339996,
+    0.04928542673587799,
+    -0.0271152351051569,
+    -0.04931202158331871,
+    0.049313027411699295,
+    -0.049319252371788025,
+    0.049211058765649796,
+    -0.04860039800405502,
+    -0.0321771502494812,
+    0.040877606719732285,
+    -0.049313053488731384,
+    0.03716433420777321,
+    0.04932064935564995,
+    0.049320727586746216,
+    0.028469840064644814,
+    0.04922106862068176,
+    -0.04919695109128952,
+    -0.019865019246935844,
+    0.03172145411372185,
+    0.048323679715394974,
+    -0.049320727586746216,
+    -0.006548350676894188,
+    0.049258437007665634,
+    -0.04931941628456116,
+    0.04931968078017235,
+    0.02437465265393257,
+    0.03734295815229416,
+    0.049320727586746216,
+    -0.04932062700390816,
+    -0.04391436651349068,
+    -0.049320727586746216,
+    0.04840509966015816,
+    -0.04438477382063866,
+    0.04759278893470764,
+    0.04931756854057312,
+    0.0483819842338562,
+    0.04867534339427948,
+    0.0490594319999218,
+    -0.04912342131137848,
+    0.0492885522544384,
+    -0.049312904477119446,
+    0.0492701455950737,
+    -0.04840638488531113,
+    -0.0484929159283638,
+    0.04932023212313652,
+    0.04932063817977905,
+    -0.048223257064819336,
+    0.04780818149447441,
+    0.042635947465896606,
+    0.049320485442876816,
+    -0.049320727586746216,
+    0.04722962528467178,
+    -0.04925871267914772,
+    -0.02896307036280632,
+    -0.0493195541203022,
+    0.049313995987176895,
+    -0.04560738056898117,
+    0.04922295734286308,
+    0.04930306226015091,
+    0.04931575432419777,
+    -0.003852539462968707,
+    0.035752072930336,
+    0.04737347364425659,
+    -0.015420696698129177,
+    0.04916127026081085,
+    -0.041825342923402786,
+    -0.013775372877717018,
+    0.04929102584719658,
+    0.049320727586746216,
+    0.04769706726074219,
+    0.04883028566837311,
+    0.049320727586746216,
+    0.049320727586746216,
+    0.048073071986436844,
+    0.028968453407287598,
+    -0.04223748669028282,
+    -0.04932060465216637,
+    0.049291517585515976,
+    -0.04931926354765892,
+    -0.049320727586746216,
+    -0.009529094211757183,
+    -0.04892374947667122,
+    -0.04916718974709511,
+    0.03598059341311455,
+    -0.04931348189711571,
+    -0.003069776576012373,
+    0.048058368265628815,
+    -0.04932072013616562,
+    0.02809326723217964,
+    0.04931559041142464,
+    -0.049313269555568695,
+    -0.049320727586746216,
+    0.048927247524261475,
+    -0.0478023923933506,
+    0.049320727586746216,
+    0.04897824674844742,
+    -0.049312010407447815,
+    -0.049320727586746216,
+    0.04931474104523659,
+    -0.049320727586746216,
+    -0.04143258184194565,
+    0.04426545649766922,
+    -0.049312591552734375,
+    0.04914093762636185,
+    -0.048302434384822845,
+    -0.04775242879986763,
+    -0.03957464173436165,
+    -0.04923194274306297,
+    0.049320608377456665,
+    -0.027431989088654518,
+    0.004555867053568363,
+    -0.04391494765877724,
+    -0.04931443929672241,
+    0.023243432864546776,
+    -0.045106492936611176,
+    -0.04869399219751358,
+    -0.04912193492054939,
+    0.024417448788881302,
+    0.049320586025714874,
+    0.044636957347393036,
+    0.04489714652299881,
+    0.047023169696331024,
+    0.04417360946536064,
+    0.048504844307899475,
+    -0.04932069033384323,
+    0.048708606511354446,
+    -0.049304381012916565,
+    0.049320727586746216,
+    0.049320727586746216,
+    -0.049319151788949966,
+    0.04796402528882027,
+    -0.04882191866636276,
+    0.04923090711236,
+    -0.048465829342603683,
+    0.022817064076662064,
+    0.04785795509815216,
+    0.049089282751083374,
+    -0.049320727586746216,
+    -0.021627508103847504,
+    -0.04891398549079895,
+    -0.04111300781369209,
+    -0.049320727586746216,
+    -0.049261853098869324,
+    0.049320630729198456,
+    -0.03331661596894264,
+    -0.021081741899251938,
+    0.0492531917989254,
+    -0.049297548830509186,
+    -0.02894178032875061,
+    -0.048717692494392395,
+    -0.04931294173002243,
+    0.049320727586746216,
+    -0.049311116337776184,
+    0.04379886016249657,
+    0.04889534041285515,
+    -0.04929476976394653,
+    -0.04146508499979973,
+    0.04913926124572754,
+    0.010051421821117401,
+    -0.014175322838127613,
+    0.049320608377456665,
+    0.0491766519844532,
+    0.049320727586746216,
+    -0.049320727586746216,
+    0.049302611500024796,
+    0.031640395522117615,
+    -0.049319006502628326,
+    -0.02235315926373005,
+    -0.04931148886680603,
+    -0.04898418113589287,
+    -0.049308743327856064,
+    -0.049319833517074585,
+    -0.049320727586746216,
+    -0.04931196570396423,
+    -0.049320727586746216,
+    0.018091602250933647,
+    0.044180046766996384,
+    -0.04922871291637421,
+    0.049297161400318146,
+    0.049320243299007416,
+    -0.04932038113474846,
+    0.04355958104133606,
+    -0.040440529584884644,
+    -0.04926418885588646,
+    0.04926689341664314,
+    -0.04844050854444504,
+    -0.04928325116634369,
+    0.049320727586746216,
+    0.04932049289345741,
+    0.04894186556339264,
+    -0.049320727586746216,
+    -0.029507096856832504,
+    0.049320727586746216,
+    0.026658128947019577,
+    -0.000573718105442822,
+    0.04857242479920387,
+    0.04931728541851044,
+    0.0477878712117672,
+    0.04905927553772926,
+    0.0004929434508085251,
+    0.04927804693579674,
+    -0.04617784544825554,
+    0.049318280071020126,
+    -0.046117283403873444,
+    0.049320727586746216,
+    -0.007005819585174322,
+    -0.049268193542957306,
+    0.04930604621767998,
+    0.04819933697581291,
+    -0.04816771298646927,
+    -0.04854824021458626,
+    0.04921424388885498,
+    0.04607915133237839,
+    0.048860400915145874,
+    0.04925346001982689,
+    -0.049320727586746216,
+    0.04932025820016861,
+    -0.037567660212516785,
+    -0.02807355299592018,
+    0.04899319261312485,
+    -0.049320727586746216,
+    0.04922118037939072,
+    0.04929344356060028,
+    -0.049320727586746216,
+    0.049320727586746216,
+    -0.049316857010126114,
+    0.03497711196541786,
+    0.017626391723752022,
+    0.018581245094537735,
+    -0.04929066076874733,
+    0.049287065863609314,
+    0.04535390064120293,
+    0.03696022555232048,
+    -0.049317240715026855,
+    0.049320727586746216,
+    0.0402868278324604,
+    0.047812361270189285,
+    0.046843960881233215,
+    -0.049320727586746216,
+    -0.041736453771591187,
+    0.0009093245025724173,
+    0.04932049661874771,
+    -0.04928966239094734,
+    0.047767963260412216,
+    0.04931753873825073,
+    -0.04885876178741455,
+    -0.04168887063860893
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Gmail Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Limit",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Limit"
+  }
+}

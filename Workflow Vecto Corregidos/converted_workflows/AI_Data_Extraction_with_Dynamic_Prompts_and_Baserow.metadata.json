@@ -1,0 +1,1124 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Ai Data Extraction With Dynamic Prompts And Baserow",
+    "file_name": "AI_Data_Extraction_with_Dynamic_Prompts_and_Baserow.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\AI_Data_Extraction_with_Dynamic_Prompts_and_Baserow.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "2970f6124509"
+  },
+  "structure": {
+    "total_nodes": 45,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 15
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "Baserow Event",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -1180,
+          -140
+        ]
+      },
+      {
+        "name": "Event Type",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -220,
+          -140
+        ]
+      },
+      {
+        "name": "Table Fields API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -900,
+          -140
+        ]
+      },
+      {
+        "name": "Get Prompt Fields",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -720,
+          -140
+        ]
+      },
+      {
+        "name": "Get Event Body",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -380,
+          -140
+        ]
+      },
+      {
+        "name": "List Table API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          480,
+          220
+        ]
+      },
+      {
+        "name": "Get Valid Rows",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          640,
+          220
+        ]
+      },
+      {
+        "name": "Get File Data",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1320,
+          320
+        ]
+      },
+      {
+        "name": "Extract from File",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          1480,
+          320
+        ]
+      },
+      {
+        "name": "Update Row",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2280,
+          380
+        ]
+      },
+      {
+        "name": "Get Result",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2100,
+          380
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          900,
+          220
+        ]
+      },
+      {
+        "name": "Row Reference",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1080,
+          320
+        ]
+      },
+      {
+        "name": "Generate Field Value",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1640,
+          320
+        ]
+      },
+      {
+        "name": "Get Row",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          640,
+          -420
+        ]
+      },
+      {
+        "name": "Rows to List",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          320,
+          -420
+        ]
+      },
+      {
+        "name": "Fields to Update",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1640,
+          -300
+        ]
+      },
+      {
+        "name": "Loop Over Items1",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          900,
+          -420
+        ]
+      },
+      {
+        "name": "Row Ref",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1080,
+          -300
+        ]
+      },
+      {
+        "name": "Get File Data1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1320,
+          -300
+        ]
+      },
+      {
+        "name": "Extract from File1",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          1480,
+          -300
+        ]
+      },
+      {
+        "name": "Update Row1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2440,
+          -260
+        ]
+      },
+      {
+        "name": "Get Result1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2260,
+          -260
+        ]
+      },
+      {
+        "name": "Generate Field Value1",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1800,
+          -300
+        ]
+      },
+      {
+        "name": "Filter Valid Rows",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          480,
+          -420
+        ]
+      },
+      {
+        "name": "Filter Valid Fields",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          320,
+          220
+        ]
+      },
+      {
+        "name": "Event Ref",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          160,
+          220
+        ]
+      },
+      {
+        "name": "Event Ref1",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          160,
+          -420
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1000,
+          -340
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -260,
+          -440
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -320,
+          140
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1780,
+          -1060
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -500,
+          -340
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          100,
+          -620
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2140,
+          -480
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1260,
+          -580
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          820,
+          -580
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          100,
+          40
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1260,
+          140
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1800,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          820,
+          40
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1640,
+          500
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1980,
+          200
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1780,
+          -1200
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1200,
+          -1280
+        ]
+      }
+    ],
+    "connections_count": 30,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 0,
+      "action_count": 45
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 1170,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "sticky note12",
+      "sticky note5",
+      "rows to list",
+      "sticky note7",
+      "sticky note11",
+      "switch",
+      "get prompt fields",
+      "integration",
+      "sticky note3",
+      "filter valid rows",
+      "openai chat model1",
+      "stickyNote",
+      "extract from file1",
+      "event type",
+      "extract from file",
+      "event ref1",
+      "webhook",
+      "get result",
+      "extractFromFile",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "get file data1",
+      "sticky note6",
+      "update row",
+      "row reference",
+      "list table api",
+      "generate field value",
+      "fields to update",
+      "get result1",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "table fields api",
+      "sticky note10",
+      "event ref",
+      "httpRequest",
+      "webhook integration",
+      "sticky note2",
+      "get valid rows",
+      "code",
+      "splitInBatches",
+      "sticky note9",
+      "sticky note4",
+      "set",
+      "openai chat model",
+      "sticky note13",
+      "row ref",
+      "get event body",
+      "update row1",
+      "get row",
+      "sticky note",
+      "generate field value1",
+      "sticky note8",
+      "get file data",
+      "complex",
+      "filter valid fields",
+      "baserow event",
+      "filter",
+      "sticky note14",
+      "noOp",
+      "loop over items1",
+      "sticky note1",
+      "splitOut",
+      "loop over items"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 45 nodos que ejecuta: Baserow Event, Event Type, Table Fields API en la categoría de integration.",
+    "semantic_content": "Nodos: Baserow Event (webhook), Event Type (switch), Table Fields API (httpRequest), Get Prompt Fields (code), Get Event Body (set), List Table API (httpRequest), Get Valid Rows (code), Get File Data (httpRequest), Extract from File (extractFromFile), Update Row (httpRequest), Get Result (set), Loop Over Items (splitInBatches), Row Reference (noOp), Generate Field Value (@n8n/n8n-nodes-langchain.chainLlm), Get Row (httpRequest), Rows to List (splitOut), Fields to Update (code), Loop Over Items1 (splitInBatches), Row Ref (noOp), Get File Data1 (httpRequest), Extract from File1 (extractFromFile), Update Row1 (httpRequest), Get Result1 (set), Generate Field Value1 (@n8n/n8n-nodes-langchain.chainLlm), Filter Valid Rows (filter), Filter Valid Fields (filter), Event Ref (noOp), Event Ref1 (noOp), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Sticky Note12 (stickyNote), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Sticky Note13 (stickyNote), Sticky Note6 (stickyNote), Sticky Note14 (stickyNote). Propósito: webhook integration. Categoría: integration",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Baserow Event",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.webhook",
+      "Event Type",
+      "Table Fields API"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.extractfromfile",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "data",
+      "and",
+      "with",
+      "baserow",
+      "dynamic",
+      "extraction",
+      "ai_data_extraction_with_dynamic_prompts_and_baserow",
+      "prompts"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 50.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 76.92307692307693,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 72.88461538461539
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:25.167414"
+  },
+  "semantic_vector": [
+    -0.04676699638366699,
+    -0.025637244805693626,
+    0.05247294530272484,
+    -0.05688558146357536,
+    -0.04615504667162895,
+    -0.044926613569259644,
+    0.05705219507217407,
+    -0.029403401538729668,
+    -0.05532320961356163,
+    0.056842077523469925,
+    -0.046187449246644974,
+    0.035747841000556946,
+    -0.05465126782655716,
+    0.03842862322926521,
+    -0.04478607699275017,
+    0.05802394449710846,
+    0.05355314910411835,
+    -0.04144303500652313,
+    -0.05571131780743599,
+    0.006837789434939623,
+    -0.0022043874487280846,
+    0.037951335310935974,
+    -0.04372626543045044,
+    0.006135432980954647,
+    0.028284290805459023,
+    -0.03345687687397003,
+    -0.053934548050165176,
+    0.04992959275841713,
+    0.013119694776833057,
+    0.030256640166044235,
+    0.011245357804000378,
+    0.013915459625422955,
+    0.04934742674231529,
+    -0.020986249670386314,
+    0.05216024070978165,
+    0.041078124195337296,
+    -0.03680964186787605,
+    0.056722939014434814,
+    -0.04503596946597099,
+    0.035231709480285645,
+    -0.025626949965953827,
+    0.04588737711310387,
+    0.010661241598427296,
+    0.019302669912576675,
+    0.05802394449710846,
+    0.04842685908079147,
+    0.0030661008786410093,
+    0.05423310771584511,
+    -0.05477549508213997,
+    -0.046695344150066376,
+    -0.05014763027429581,
+    0.015317434445023537,
+    -0.05789558216929436,
+    -0.05500202625989914,
+    -0.05721399188041687,
+    -0.05382932722568512,
+    0.03743263706564903,
+    -0.011820868588984013,
+    -0.03225844353437424,
+    0.0206911638379097,
+    0.051840174943208694,
+    -0.047844547778367996,
+    -0.0019540239591151476,
+    0.05597405880689621,
+    0.05253344774246216,
+    0.007848422974348068,
+    0.05800070986151695,
+    -0.022775381803512573,
+    0.05782122164964676,
+    -0.01798471063375473,
+    -0.05801144987344742,
+    0.006086929235607386,
+    -0.015562653541564941,
+    0.05767086148262024,
+    -0.04756372049450874,
+    0.04650808125734329,
+    0.058008354157209396,
+    -0.05750560760498047,
+    -0.05585503950715065,
+    0.015629488974809647,
+    0.05460057407617569,
+    -0.030903656035661697,
+    -0.03066411055624485,
+    -0.0477760024368763,
+    0.05762958526611328,
+    0.038737643510103226,
+    0.03411334380507469,
+    -0.011878212913870811,
+    0.04465032368898392,
+    0.02765342779457569,
+    -0.012259435839951038,
+    0.053107067942619324,
+    0.025382528081536293,
+    -0.049442823976278305,
+    0.041092995554208755,
+    0.02347501926124096,
+    0.012351162731647491,
+    0.0544019378721714,
+    -0.057977255433797836,
+    -0.05795588344335556,
+    0.04673009365797043,
+    -0.05550431087613106,
+    0.03575664386153221,
+    -0.03714270144701004,
+    0.057790931314229965,
+    0.056024741381406784,
+    0.05791081488132477,
+    0.029714437201619148,
+    -0.05055239051580429,
+    -0.05604862421751022,
+    0.030433034524321556,
+    -0.02442830614745617,
+    -0.05417436361312866,
+    0.022544682025909424,
+    0.05268138647079468,
+    0.012423397973179817,
+    -0.055475253611803055,
+    -0.05711337924003601,
+    0.021316668018698692,
+    0.03075743466615677,
+    -0.017796877771615982,
+    0.043361034244298935,
+    -0.007941224612295628,
+    -0.04686915501952171,
+    0.05621766671538353,
+    -0.0034172548912465572,
+    -0.007358856033533812,
+    0.040926702320575714,
+    0.05062979459762573,
+    -0.03983144834637642,
+    0.02017827145755291,
+    0.03475981578230858,
+    0.009797999635338783,
+    -0.03647683560848236,
+    0.048565540462732315,
+    -0.0463375598192215,
+    -0.01143061276525259,
+    0.05080720782279968,
+    -0.047367360442876816,
+    -0.05796297267079353,
+    -0.019300512969493866,
+    0.05802076309919357,
+    0.0012054082471877337,
+    -0.010047518648207188,
+    -0.055952634662389755,
+    -0.05802394449710846,
+    0.010821103118360043,
+    -0.04571482539176941,
+    0.057742971926927567,
+    0.04708673059940338,
+    0.03176179155707359,
+    -0.05704061686992645,
+    0.047471512109041214,
+    0.04334653168916702,
+    0.05632323399186134,
+    0.05778057500720024,
+    -0.026290014386177063,
+    -0.05796565115451813,
+    -0.01939759962260723,
+    -0.0485646016895771,
+    -0.058008212596178055,
+    -0.0577620267868042,
+    0.04472964629530907,
+    -0.05508699640631676,
+    0.027334118261933327,
+    -0.05681214854121208,
+    -0.05469455197453499,
+    0.028087295591831207,
+    -0.055860843509435654,
+    -0.016323264688253403,
+    0.05758408457040787,
+    -0.028460849076509476,
+    -0.04380929842591286,
+    0.04921375960111618,
+    -0.05785064771771431,
+    0.055622316896915436,
+    -0.04630504548549652,
+    -0.055806148797273636,
+    0.03248058259487152,
+    -0.021860890090465546,
+    -0.05640626326203346,
+    0.04935756325721741,
+    -0.057565975934267044,
+    0.045557573437690735,
+    0.057786375284194946,
+    0.02828300930559635,
+    -0.057945333421230316,
+    0.05802110582590103,
+    -0.01516347099095583,
+    -0.012671086937189102,
+    -0.04884302243590355,
+    0.0442032553255558,
+    0.0024426300078630447,
+    -0.05785858631134033,
+    -0.057784296572208405,
+    -0.056740522384643555,
+    0.04843221604824066,
+    0.05802394449710846,
+    0.0034690164029598236,
+    -0.014805376529693604,
+    0.055540602654218674,
+    0.052245188504457474,
+    -0.004855895880609751,
+    0.04666275531053543,
+    0.04729003086686134,
+    0.043699365109205246,
+    -0.021111438050866127,
+    -0.008712166920304298,
+    -0.058003980666399,
+    -0.05703692138195038,
+    0.0321694016456604,
+    0.037093937397003174,
+    -0.03447829931974411,
+    0.015757428482174873,
+    -0.058018192648887634,
+    -0.05746641382575035,
+    0.0041892034932971,
+    0.038446228951215744,
+    0.01713690534234047,
+    0.016558468341827393,
+    -0.05788121744990349,
+    0.05797535553574562,
+    -0.002051294082775712,
+    0.028007101267576218,
+    0.008186561055481434,
+    -0.05750483646988869,
+    -0.04555325210094452,
+    -0.05773084610700607,
+    -0.04188862442970276,
+    -0.057982273399829865,
+    0.034299787133932114,
+    -0.048119693994522095,
+    -0.013975654728710651,
+    -0.05802273377776146,
+    0.04678293690085411,
+    0.04333203285932541,
+    0.058023832738399506,
+    0.058023449033498764,
+    -0.049714647233486176,
+    -0.02661672979593277,
+    0.029264099895954132,
+    0.038367316126823425,
+    0.05405106768012047,
+    0.05545304715633392,
+    0.04010071977972984,
+    0.04932656139135361,
+    0.057350195944309235,
+    -0.04708746820688248,
+    0.05398691073060036,
+    0.05802290886640549,
+    -0.056837473064661026,
+    0.04842385649681091,
+    0.02958902157843113,
+    -0.056524548679590225,
+    -0.00023771497944835573,
+    -0.05343666300177574,
+    0.03435518965125084,
+    0.05802391096949577,
+    0.01801947131752968,
+    0.028559600934386253,
+    0.048438943922519684,
+    0.03978998214006424,
+    -0.043462738394737244,
+    0.05012130364775658,
+    0.04066441208124161,
+    -0.02284090779721737,
+    -0.00027711340226233006,
+    0.028123531490564346,
+    -0.057857464998960495,
+    0.024065542966127396,
+    -0.05783739686012268,
+    0.014340291731059551,
+    -0.057803235948085785,
+    0.04010263457894325,
+    0.0579608753323555,
+    0.001630484010092914,
+    -0.05697852373123169,
+    0.028212588280439377,
+    0.058023855090141296,
+    0.03133215010166168,
+    0.02636171691119671,
+    -0.009260989725589752,
+    0.047017280012369156,
+    -0.006837646476924419,
+    -0.0067603872157633305,
+    -0.05799682065844536,
+    -0.015567666850984097,
+    0.058003127574920654,
+    -0.0576077401638031,
+    0.05784204602241516,
+    -0.0317688025534153,
+    -0.015079354867339134,
+    0.05796588212251663,
+    -0.05637035518884659,
+    0.03374619781970978,
+    -0.04671790078282356,
+    -0.019360100850462914,
+    -0.04563043266534805,
+    -0.009237105026841164,
+    0.017482861876487732,
+    -0.015572268515825272,
+    0.05598340556025505,
+    0.05592559278011322,
+    0.017141085118055344,
+    0.05288258194923401,
+    0.04183722659945488,
+    0.038485702127218246,
+    0.032073725014925,
+    -0.0302406195551157,
+    -0.05488333851099014,
+    0.04886139556765556,
+    0.036132194101810455,
+    -0.024713966995477676,
+    0.004279436077922583,
+    0.04396713897585869,
+    -0.053544119000434875,
+    0.04014093428850174,
+    -0.05234353616833687,
+    -0.01661737449467182,
+    -0.019193151965737343,
+    0.05442218482494354,
+    -0.0520821288228035,
+    0.057971157133579254,
+    -0.054088059812784195,
+    0.055299364030361176,
+    -0.022234005853533745,
+    0.04244362935423851,
+    -0.04983282461762428,
+    0.026470091193914413,
+    -0.04590040072798729,
+    -0.04345731437206268,
+    -0.05538579076528549,
+    -0.022357972338795662,
+    0.058003224432468414,
+    0.002695209113880992,
+    0.04939885064959526,
+    0.05777417868375778,
+    -0.018035955727100372,
+    0.05629568547010422,
+    -0.04944402351975441,
+    0.027304479852318764,
+    -0.05794708803296089,
+    0.030747875571250916,
+    -0.02635631337761879,
+    -0.05802394449710846,
+    -0.056423529982566833,
+    -0.053302038460969925,
+    -0.052422888576984406,
+    -0.0572110116481781,
+    -0.028658509254455566,
+    0.046278465539216995,
+    0.016161024570465088,
+    0.01641528680920601,
+    0.03442102298140526,
+    0.0429314523935318,
+    -0.057630505412817,
+    -0.05802382901310921,
+    0.05767013505101204,
+    0.05455648526549339,
+    0.05787910893559456,
+    0.05794771760702133,
+    -0.05736079066991806,
+    -0.05802394449710846,
+    0.05717374011874199,
+    -0.056666288524866104,
+    0.0579843707382679,
+    0.030454756692051888,
+    -0.05060487240552902,
+    0.05580667406320572,
+    0.03657495975494385,
+    0.051613081246614456,
+    -0.057600948959589005,
+    -0.02954450435936451,
+    0.04586596414446831,
+    0.045600637793540955,
+    -0.023394905030727386,
+    -0.05569450929760933,
+    -0.05571445822715759,
+    -0.04233483970165253,
+    -0.030689772218465805,
+    -0.036966681480407715,
+    0.0570010170340538,
+    0.008237299509346485,
+    -0.043488163501024246,
+    -0.008831694722175598,
+    -0.05606410279870033,
+    0.05691421404480934,
+    0.0016066953539848328,
+    -0.04707193374633789,
+    -0.04922528564929962,
+    -0.01704636961221695,
+    -0.04823549836874008,
+    0.0576118528842926,
+    -0.004669372458010912,
+    -0.05429806932806969,
+    -0.006464689504355192,
+    -0.050572942942380905,
+    0.05403094366192818,
+    0.05562073364853859,
+    -0.01536515261977911,
+    0.046424053609371185,
+    0.04888788238167763,
+    -0.056810203939676285,
+    0.04361548647284508,
+    -0.040301479399204254,
+    -0.017125140875577927,
+    -0.05797576159238815,
+    0.024193860590457916,
+    0.05186474323272705,
+    0.04836675152182579,
+    -0.022572707384824753,
+    0.05566055327653885,
+    0.02966315485537052,
+    -0.010861010290682316,
+    0.04878613352775574,
+    -0.035051826387643814,
+    0.04364936426281929,
+    -0.054892390966415405,
+    -0.04626874253153801,
+    -0.016972701996564865,
+    -0.05207345262169838,
+    -0.05684131383895874,
+    -0.05520521104335785,
+    0.04365919157862663,
+    -0.006560039706528187,
+    0.05046990141272545,
+    -0.05789045989513397,
+    0.05772503465414047,
+    0.01961407996714115,
+    -0.022870156913995743,
+    -0.05652289465069771,
+    -0.03793611750006676,
+    0.033584002405405045,
+    0.050768811255693436,
+    -0.057956892997026443,
+    -0.055964358150959015,
+    -0.056748487055301666,
+    -0.057995181530714035,
+    -0.055674318224191666,
+    0.026750437915325165,
+    0.02971769869327545,
+    -0.05632695183157921,
+    -0.018456676974892616,
+    -0.050666775554418564,
+    0.0009246155386790633,
+    -0.057076506316661835,
+    -0.054549239575862885,
+    0.0565900020301342,
+    0.028091609477996826,
+    -0.056224364787340164,
+    0.03021363727748394,
+    0.027250081300735474,
+    0.05802394449710846,
+    0.009632507339119911,
+    -0.03356695920228958,
+    -0.0580238401889801,
+    0.043632831424474716,
+    0.05802150443196297,
+    -0.03903847187757492,
+    -0.05376897752285004,
+    0.0137172881513834,
+    0.0564778633415699,
+    0.02601456828415394,
+    0.057911064475774765,
+    0.007236781995743513,
+    -0.041161198168992996,
+    0.05684572458267212,
+    -0.055137764662504196,
+    -0.05568947643041611,
+    0.0577816367149353,
+    -0.0357900895178318,
+    -0.05700545012950897,
+    0.03929775580763817,
+    -0.0515141598880291,
+    -0.049171507358551025,
+    -0.05743291601538658,
+    0.057448625564575195,
+    0.052692800760269165,
+    -0.021903758868575096,
+    -0.057759787887334824,
+    -0.04729112982749939,
+    0.05057891830801964,
+    0.03592059761285782,
+    -0.03382495790719986,
+    0.05661187320947647,
+    0.010747493244707584,
+    -0.01955578103661537,
+    -0.0520525798201561,
+    0.040207795798778534,
+    0.051042865961790085,
+    -0.05251206085085869,
+    0.05391158536076546,
+    -0.055499546229839325,
+    0.046314992010593414,
+    -0.057081080973148346,
+    0.05801370367407799,
+    0.007234921213239431,
+    0.05773915722966194,
+    -0.057172633707523346,
+    0.05556333437561989,
+    0.044361263513565063,
+    -0.013192604295909405,
+    0.054103363305330276,
+    -0.058023758232593536,
+    0.042143166065216064,
+    -0.051138985902071,
+    0.010865859687328339,
+    -0.0357072576880455,
+    0.03783951327204704,
+    0.05802379921078682,
+    -0.05136313661932945,
+    -0.04517437145113945
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

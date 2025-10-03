@@ -1,0 +1,1126 @@
+{
+  "workflow_info": {
+    "id": "3ycewf83b8KVQi8N",
+    "name": "Deep Research Report Generation Using Open Router, Google Search, Webhook/Telegram and Notion",
+    "display_name": "Deep Research Report Generation Using Open Router, Google Search, Webhook/Telegram and Notion",
+    "file_name": "2054_Deep_Research_Report_Generation_With_Open_Router_Google_Search_Webhook_Telegram_and_Notion.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Deep\\2054_Deep_Research_Report_Generation_With_Open_Router_Google_Search_Webhook_Telegram_and_Notion.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "961669b09e49"
+  },
+  "structure": {
+    "total_nodes": 38,
+    "node_types": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.markdown",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.telegramTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.notion",
+      "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.aggregate",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.markdown",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.telegramTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.notion",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Telegram Trigger",
+        "type": "n8n-nodes-base.telegramTrigger",
+        "position": [
+          -860,
+          180
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Simple Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          -480,
+          480
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          -320,
+          480
+        ]
+      },
+      {
+        "name": "Switch",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -220,
+          300
+        ]
+      },
+      {
+        "name": "Strategy Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -560,
+          300
+        ]
+      },
+      {
+        "name": "Search Query Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          880,
+          400
+        ]
+      },
+      {
+        "name": "Structured Output Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          1060,
+          580
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1240,
+          500
+        ]
+      },
+      {
+        "name": "Loop Over Queries",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          1420,
+          500
+        ]
+      },
+      {
+        "name": "HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1640,
+          600
+        ]
+      },
+      {
+        "name": "Edit Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1860,
+          600
+        ]
+      },
+      {
+        "name": "OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          2060,
+          600
+        ]
+      },
+      {
+        "name": "HTTP Request1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2420,
+          600
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1620,
+          240
+        ]
+      },
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1820,
+          240
+        ]
+      },
+      {
+        "name": "OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          300,
+          420
+        ]
+      },
+      {
+        "name": "Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          660,
+          440
+        ]
+      },
+      {
+        "name": "Notion1",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          4400,
+          320
+        ]
+      },
+      {
+        "name": "HTTP Request2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4120,
+          520
+        ]
+      },
+      {
+        "name": "Convert to HTML",
+        "type": "n8n-nodes-base.markdown",
+        "position": [
+          2440,
+          340
+        ]
+      },
+      {
+        "name": "HTML to Array",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2660,
+          340
+        ]
+      },
+      {
+        "name": "Tags to Items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2860,
+          380
+        ]
+      },
+      {
+        "name": "Notion Block Generator",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          3040,
+          360
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          3040,
+          540
+        ]
+      },
+      {
+        "name": "Parse JSON blocks",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3380,
+          360
+        ]
+      },
+      {
+        "name": "Valid Blocks",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          3580,
+          360
+        ]
+      },
+      {
+        "name": "For Each Block...",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          3900,
+          400
+        ]
+      },
+      {
+        "name": "Get Existing Row",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          2220,
+          260
+        ]
+      },
+      {
+        "name": "Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          420
+        ]
+      },
+      {
+        "name": "Aggregate1",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          4120,
+          300
+        ]
+      },
+      {
+        "name": "OpenRouter Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "position": [
+          -640,
+          480
+        ]
+      },
+      {
+        "name": "OpenRouter Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "position": [
+          860,
+          580
+        ]
+      },
+      {
+        "name": "OpenRouter Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "position": [
+          1800,
+          400
+        ]
+      },
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -860,
+          360
+        ]
+      },
+      {
+        "name": "Respond to Webhook",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          20,
+          160
+        ]
+      },
+      {
+        "name": "Respond to Webhook1",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          -60,
+          420
+        ]
+      },
+      {
+        "name": "HTTP Request3",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4640,
+          500
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          120,
+          -920
+        ]
+      }
+    ],
+    "connections_count": 35,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 37
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 1415,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "telegramTrigger",
+      "@n8n/n8n nodes langchain.lmChatOpenRouter",
+      "notion block generator",
+      "valid blocks",
+      "edit fields",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "loop over queries",
+      "simple memory",
+      "structured output parser1",
+      "switch",
+      "google gemini chat model",
+      "parse json blocks",
+      "aggregate1",
+      "structured output parser",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "stickyNote",
+      "respondToWebhook",
+      "webhook",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "convert to html",
+      "openai",
+      "http request2",
+      "notion",
+      "telegram trigger",
+      "get existing row",
+      "strategy agent",
+      "openrouter chat model",
+      "http request3",
+      "for each block...",
+      "search query agent",
+      "http request1",
+      "notion1",
+      "httpRequest",
+      "aggregate",
+      "webhook integration",
+      "openrouter chat model2",
+      "openrouter chat model1",
+      "splitInBatches",
+      "code",
+      "tags to items",
+      "http request",
+      "set",
+      "split out",
+      "markdown",
+      "ai agent",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "@n8n/n8n nodes langchain.agent",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "respond to webhook",
+      "complex",
+      "filter",
+      "openai1",
+      "respond to webhook1",
+      "splitOut",
+      "html to array"
+    ],
+    "description": "'Deep Research Report Generation Using Open Router, Google Search, Webhook/Telegram and Notion' es un workflow diseñado para webhook integration con 38 nodos activado por Telegram Trigger que ejecuta: Simple Memory, Structured Output Parser, Switch en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Deep Research Report Generation Using Open Router, Google Search, Webhook/Telegram and Notion. Nodos: Telegram Trigger (telegramTrigger), Simple Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Switch (switch), Strategy Agent (@n8n/n8n-nodes-langchain.agent), Search Query Agent (@n8n/n8n-nodes-langchain.agent), Structured Output Parser1 (@n8n/n8n-nodes-langchain.outputParserStructured), Split Out (splitOut), Loop Over Queries (splitInBatches), HTTP Request (httpRequest), Edit Fields (set), OpenAI (@n8n/n8n-nodes-langchain.openAi), HTTP Request1 (httpRequest), Aggregate (aggregate), AI Agent (@n8n/n8n-nodes-langchain.agent), OpenAI1 (@n8n/n8n-nodes-langchain.openAi), Notion (notion), Notion1 (notion), HTTP Request2 (httpRequest), Convert to HTML (markdown), HTML to Array (set), Tags to Items (splitOut), Notion Block Generator (@n8n/n8n-nodes-langchain.chainLlm), Google Gemini Chat Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Parse JSON blocks (set), Valid Blocks (filter), For Each Block... (splitInBatches), Get Existing Row (notion), Code (code), Aggregate1 (aggregate), OpenRouter Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenRouter), OpenRouter Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenRouter), OpenRouter Chat Model2 (@n8n/n8n-nodes-langchain.lmChatOpenRouter), Webhook (webhook), Respond to Webhook (respondToWebhook), Respond to Webhook1 (respondToWebhook), HTTP Request3 (httpRequest), Sticky Note (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Telegram Trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Switch",
+      "n8n-nodes-base.telegramTrigger",
+      "Telegram Trigger",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "Simple Memory",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.switch",
+      "Structured Output Parser"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.respondtowebhook",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.markdown",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.telegramtrigger",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.notion",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.lmchatopenrouter",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.splitinbatches"
+    ],
+    "search_terms": [
+      "google",
+      "and",
+      "search",
+      "webhook",
+      "generation",
+      "2054_deep_research_report_generation_with_open_router_google_search_webhook_telegram_and_notion",
+      "with",
+      "telegram",
+      "research",
+      "notion",
+      "deep",
+      "2054",
+      "report",
+      "open",
+      "router"
+    ],
+    "alternative_names": [
+      "Deep Research Report Generation Using Open Router, Google Search, Webhook/Telegram and Notion"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.telegramTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 53.71024734982333,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 80.74204946996467
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:07.038290"
+  },
+  "semantic_vector": [
+    0.03654458001255989,
+    -0.056488294154405594,
+    -0.030232515186071396,
+    -0.05350486561655998,
+    -0.05661918595433235,
+    -0.027249203994870186,
+    -0.04862874373793602,
+    -0.021585902199149132,
+    -0.05767893046140671,
+    0.05949552357196808,
+    0.028657112270593643,
+    -0.02333848364651203,
+    0.018764255568385124,
+    -0.0511762797832489,
+    0.03890317305922508,
+    0.06096912920475006,
+    0.06047085300087929,
+    -0.030810480937361717,
+    -0.058134593069553375,
+    -0.04623867943882942,
+    -0.03494050353765488,
+    0.05101097375154495,
+    0.008796277455985546,
+    0.0060319360345602036,
+    -0.008251801133155823,
+    0.036124661564826965,
+    0.011301005259156227,
+    0.04195116460323334,
+    -0.019353389739990234,
+    -0.011738216504454613,
+    0.06078745052218437,
+    -0.021426811814308167,
+    -0.03370607644319534,
+    0.01850307732820511,
+    0.05299641191959381,
+    -0.012857054360210896,
+    0.011860732920467854,
+    0.03253015875816345,
+    -0.046583063900470734,
+    -0.06076240912079811,
+    0.00357184000313282,
+    0.05745089054107666,
+    -0.05222504585981369,
+    0.04985567182302475,
+    0.060966942459344864,
+    0.04926687851548195,
+    -0.04873370751738548,
+    -0.016051752492785454,
+    -0.044749658554792404,
+    -0.05196709558367729,
+    0.01746620424091816,
+    0.019621875137090683,
+    -0.06092092767357826,
+    -0.055747564882040024,
+    -0.06056472659111023,
+    -0.05585275962948799,
+    0.06001480668783188,
+    -0.024296453222632408,
+    0.02030569314956665,
+    0.032695189118385315,
+    0.056235190480947495,
+    -0.04387766867876053,
+    -0.014977041631937027,
+    0.0596940778195858,
+    0.04207375645637512,
+    -0.008049341849982738,
+    0.06028911471366882,
+    -0.053139686584472656,
+    0.004799898713827133,
+    -0.05925457924604416,
+    -0.06091867759823799,
+    0.05762852728366852,
+    0.058471035212278366,
+    0.05824288725852966,
+    -0.05715711787343025,
+    0.052322205156087875,
+    0.059458814561367035,
+    -0.05658702924847603,
+    0.021868830546736717,
+    0.017004501074552536,
+    0.05421386659145355,
+    0.022563748061656952,
+    -0.021380148828029633,
+    -0.054618410766124725,
+    0.04053087905049324,
+    0.05116725340485573,
+    -0.028804287314414978,
+    -0.049297135323286057,
+    -0.0370028130710125,
+    -0.030831865966320038,
+    -0.05906996503472328,
+    -0.024799304082989693,
+    0.05928608030080795,
+    -0.0166176687926054,
+    -0.014665266498923302,
+    -0.02119644731283188,
+    0.051215119659900665,
+    0.052865270525217056,
+    -0.060666147619485855,
+    -0.060919567942619324,
+    0.051932066679000854,
+    -0.016011031344532967,
+    0.004300655331462622,
+    0.04716477543115616,
+    0.06002175062894821,
+    0.05165598541498184,
+    0.06096912920475006,
+    0.057957619428634644,
+    -0.02863140217959881,
+    -0.060956913977861404,
+    0.018842609599232674,
+    -0.06076648458838463,
+    -0.0007107067503966391,
+    -0.018150694668293,
+    -0.03620366379618645,
+    -0.0033432457130402327,
+    -0.05733168125152588,
+    -0.04541360214352608,
+    0.032789453864097595,
+    0.06002656742930412,
+    0.033452216535806656,
+    0.06068306043744087,
+    0.04124320670962334,
+    -0.007268036250025034,
+    0.060575924813747406,
+    0.045039817690849304,
+    -0.026289841160178185,
+    0.052351582795381546,
+    0.04613233357667923,
+    0.04933050274848938,
+    0.046885453164577484,
+    -0.032875701785087585,
+    0.04989239200949669,
+    -0.035538189113140106,
+    0.03301732987165451,
+    -0.05831557884812355,
+    0.0065606446005403996,
+    -0.007258609402924776,
+    -0.05761269852519035,
+    -0.06096797063946724,
+    0.040047455579042435,
+    0.060968656092882156,
+    -0.04631931707262993,
+    0.0008753481670282781,
+    0.05786901339888573,
+    -0.06096908077597618,
+    0.021572237834334373,
+    0.03341447561979294,
+    0.003935491666197777,
+    -0.05083690956234932,
+    -0.038267768919467926,
+    -0.033065445721149445,
+    0.013714676722884178,
+    -0.059610627591609955,
+    0.051251888275146484,
+    0.06051814183592796,
+    0.016356199979782104,
+    -0.05980629101395607,
+    -0.018597254529595375,
+    -0.017441410571336746,
+    -0.038077108561992645,
+    -0.027316968888044357,
+    0.05786636099219322,
+    0.051669251173734665,
+    0.007172513287514448,
+    -0.06062110513448715,
+    -0.04842871055006981,
+    0.03989625349640846,
+    -0.057296887040138245,
+    0.04226279258728027,
+    0.03330294415354729,
+    0.035799540579319,
+    -0.05572082847356796,
+    0.05709657445549965,
+    0.024909554049372673,
+    0.017907874658703804,
+    0.026597509160637856,
+    0.00836960505694151,
+    0.044537123292684555,
+    -0.05851880460977554,
+    -0.05311949923634529,
+    -0.0504671074450016,
+    -0.05989785119891167,
+    -0.03495429828763008,
+    0.060031503438949585,
+    0.05257689207792282,
+    -0.06085805594921112,
+    0.060524873435497284,
+    0.052530527114868164,
+    0.015336798503994942,
+    0.03401301056146622,
+    0.03818037733435631,
+    -0.01105773076415062,
+    -0.06063329055905342,
+    -0.05926551669836044,
+    -0.06084326654672623,
+    0.013673657551407814,
+    0.06096912920475006,
+    0.031104009598493576,
+    -0.015249132178723812,
+    0.008164686150848866,
+    0.0363709032535553,
+    -0.060879021883010864,
+    -0.02106756716966629,
+    0.010997890494763851,
+    -0.010528749786317348,
+    0.048145510256290436,
+    0.01923062838613987,
+    -0.06096126139163971,
+    0.05084272101521492,
+    0.020643554627895355,
+    0.05911188945174217,
+    0.04825169965624809,
+    0.05622376501560211,
+    -0.0609419159591198,
+    -0.05447214096784592,
+    0.03458964824676514,
+    0.05454293265938759,
+    0.058339923620224,
+    -0.036668479442596436,
+    0.02948484569787979,
+    0.045681074261665344,
+    0.04622568562626839,
+    0.055788230150938034,
+    -0.04950335621833801,
+    -0.06056834012269974,
+    0.01996188424527645,
+    -0.055513009428977966,
+    -0.05859731137752533,
+    -0.05948718637228012,
+    0.005337685812264681,
+    -0.06024835258722305,
+    -0.06046999618411064,
+    -0.06096849963068962,
+    0.060342978686094284,
+    0.05452808737754822,
+    0.06096816435456276,
+    0.04654843360185623,
+    -0.049247920513153076,
+    0.019444309175014496,
+    0.0005454698693938553,
+    0.0608963780105114,
+    -0.010078644379973412,
+    -0.037763744592666626,
+    -0.012780766934156418,
+    0.05870116874575615,
+    0.04107626527547836,
+    0.012538552284240723,
+    0.041865382343530655,
+    0.06093216314911842,
+    -0.06088445708155632,
+    0.02002924308180809,
+    -0.012060735374689102,
+    0.0016050041886046529,
+    0.04179815575480461,
+    -0.055042508989572525,
+    0.04252088814973831,
+    0.06096912920475006,
+    -0.029784763231873512,
+    -0.016101472079753876,
+    0.04674472287297249,
+    0.04542802646756172,
+    0.020854555070400238,
+    0.06070438027381897,
+    0.004771923180669546,
+    0.05755789950489998,
+    0.013188340701162815,
+    -0.037259072065353394,
+    -0.0475408136844635,
+    0.00040406337939202785,
+    -0.05738933011889458,
+    -0.003890461754053831,
+    -0.01304195262491703,
+    0.05879966542124748,
+    0.00808880664408207,
+    -0.04970325902104378,
+    -0.060745950788259506,
+    -0.005850248970091343,
+    0.06096700206398964,
+    0.03674975037574768,
+    -0.05399762839078903,
+    0.04750711843371391,
+    0.044683605432510376,
+    -0.054988935589790344,
+    0.013316619209945202,
+    -0.055230747908353806,
+    0.05683470144867897,
+    0.05581735447049141,
+    -0.05346223711967468,
+    0.060968779027462006,
+    0.05545012280344963,
+    0.011812909506261349,
+    0.060966625809669495,
+    0.012118831276893616,
+    0.05225794389843941,
+    -0.060552291572093964,
+    0.027340134605765343,
+    0.023865027353167534,
+    0.060053978115320206,
+    0.04341217502951622,
+    -0.009515332989394665,
+    -0.031460683792829514,
+    0.05847562476992607,
+    -0.037166718393564224,
+    0.018214151263237,
+    0.04654639959335327,
+    0.059779711067676544,
+    -0.02528449334204197,
+    0.022585397586226463,
+    -0.05681592971086502,
+    0.019829213619232178,
+    0.029128747060894966,
+    -0.03698960691690445,
+    -0.0602099783718586,
+    0.00884458888322115,
+    -0.03658358380198479,
+    0.019179657101631165,
+    -0.011760846711695194,
+    0.015636060386896133,
+    0.01962851732969284,
+    0.050109248608350754,
+    -0.06023230403661728,
+    0.05964738503098488,
+    -0.0568770132958889,
+    0.03373649716377258,
+    -0.018462341278791428,
+    0.03493834286928177,
+    -0.03424529358744621,
+    -0.002080655423924327,
+    0.017317911610007286,
+    0.025238847360014915,
+    -0.0555652379989624,
+    -0.007982472889125347,
+    0.06084176152944565,
+    -0.0015060554724186659,
+    0.02442159131169319,
+    0.04438558965921402,
+    0.055987175554037094,
+    0.05195677652955055,
+    -0.03989432752132416,
+    -0.05168178677558899,
+    -0.05064864456653595,
+    0.05086354538798332,
+    -0.0502760112285614,
+    -0.06096912920475006,
+    -0.035630010068416595,
+    0.0463101901113987,
+    0.04374171048402786,
+    -0.0545438788831234,
+    0.04961451143026352,
+    -0.029803087934851646,
+    0.03810684382915497,
+    -0.027550170198082924,
+    0.05290845409035683,
+    0.05640449747443199,
+    0.014307309873402119,
+    -0.060968928039073944,
+    -0.018041081726551056,
+    -0.0017915216740220785,
+    0.058069393038749695,
+    0.05623093247413635,
+    -0.02495417930185795,
+    -0.060968950390815735,
+    0.05981976538896561,
+    -0.060960933566093445,
+    0.05954365432262421,
+    0.05381322279572487,
+    -0.04874930530786514,
+    0.038165610283613205,
+    0.005744014400988817,
+    0.04633698984980583,
+    -0.05895249545574188,
+    -0.0417882539331913,
+    0.05983211472630501,
+    0.05902829021215439,
+    0.045539505779743195,
+    -0.039350587874650955,
+    -0.06039668619632721,
+    0.03520699590444565,
+    -0.02790290303528309,
+    -0.032643936574459076,
+    0.01817646250128746,
+    0.01380009762942791,
+    -0.014821937307715416,
+    -0.013876786455512047,
+    -0.05415961891412735,
+    0.04528244584798813,
+    -0.05273771658539772,
+    -0.047312140464782715,
+    -0.06067120283842087,
+    -0.025132417678833008,
+    -0.058513280004262924,
+    0.06096896156668663,
+    0.05578357353806496,
+    -0.0257867444306612,
+    0.059907007962465286,
+    -0.046425312757492065,
+    -0.05770745500922203,
+    0.06083296239376068,
+    0.0038387917447835207,
+    0.037110697478055954,
+    -0.05914411321282387,
+    -0.0002859971427824348,
+    0.01959039643406868,
+    0.019745556637644768,
+    -0.02612461894750595,
+    -0.06096641346812248,
+    0.04316946119070053,
+    0.05581318587064743,
+    0.04636066034436226,
+    -0.009480273351073265,
+    -0.04960384592413902,
+    -0.00862022116780281,
+    0.05217204615473747,
+    -0.05623422935605049,
+    -0.02579917199909687,
+    0.04739787429571152,
+    -0.038798488676548004,
+    -0.04211746156215668,
+    -0.042027976363897324,
+    -0.003811074420809746,
+    0.023639820516109467,
+    -0.04038473591208458,
+    0.05705946311354637,
+    -0.02805987186729908,
+    0.052219096571207047,
+    -0.06067850440740585,
+    0.06050703674554825,
+    -0.03968789428472519,
+    0.04221891611814499,
+    -0.057864803820848465,
+    -0.02941032499074936,
+    -0.050054244697093964,
+    -0.043993912637233734,
+    -0.058854926377534866,
+    -0.01622536964714527,
+    -0.04629236459732056,
+    -0.060953959822654724,
+    -0.0348554365336895,
+    -0.04417433962225914,
+    -0.025053488090634346,
+    -0.05585528537631035,
+    -0.018802251666784286,
+    -0.05331148952245712,
+    0.057337816804647446,
+    -0.06096482649445534,
+    -0.040691886097192764,
+    0.05643361806869507,
+    -0.0497567355632782,
+    -0.052234336733818054,
+    -0.013257387094199657,
+    -0.05631962791085243,
+    0.06096900999546051,
+    -0.015290223993360996,
+    0.02362687513232231,
+    -0.060955312103033066,
+    -0.01335224974900484,
+    0.060966163873672485,
+    0.012058422900736332,
+    -0.05968945845961571,
+    0.040199585258960724,
+    0.05187961086630821,
+    0.060855623334646225,
+    0.06083286926150322,
+    0.014723779633641243,
+    -0.03609781339764595,
+    0.028587311506271362,
+    0.022352315485477448,
+    -0.05355243384838104,
+    0.05369924008846283,
+    -0.030909230932593346,
+    -0.06035640090703964,
+    0.0432119220495224,
+    0.02142000012099743,
+    -0.04044308513402939,
+    -0.016711831092834473,
+    -0.040364157408475876,
+    0.04486488923430443,
+    -0.03515028581023216,
+    -0.017376109957695007,
+    -0.05079099163413048,
+    0.06024562567472458,
+    -0.048917256295681,
+    -0.06072235479950905,
+    -0.014976007863879204,
+    0.06090810149908066,
+    0.0195148978382349,
+    -0.05727747455239296,
+    0.01667673885822296,
+    0.04514480009675026,
+    0.006057030521333218,
+    0.04120797663927078,
+    -0.025728482753038406,
+    0.050304628908634186,
+    0.01255111861974001,
+    0.060439735651016235,
+    -0.01261594332754612,
+    0.04278498888015747,
+    -0.056909460574388504,
+    0.05918918550014496,
+    0.04793494939804077,
+    -0.05926898121833801,
+    0.057891782373189926,
+    -0.060968536883592606,
+    -0.007733890786767006,
+    0.022087151184678078,
+    0.055207058787345886,
+    0.021654926240444183,
+    -0.047180891036987305,
+    0.06096719577908516,
+    -0.028296854346990585,
+    -0.04537062719464302
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Telegram Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Deep",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Deep"
+  }
+}

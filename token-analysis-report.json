@@ -1,0 +1,31 @@
+{
+  "prompts": [
+    {
+      "name": "PROMPT PRINCIPAL - Extension Server OFICIAL",
+      "type": "Principal",
+      "agent": "Extension Server",
+      "model": "gemini-2.5-pro",
+      "tokens": 10128,
+      "length": 35446,
+      "snippet": "⚡ INSTRUCCIONES CRÍTICAS ULTRA-AVANZADAS:\n========================================\n🎯 GENERA UN WORKFLOW ENTERPRISE DE 10-25 NODOS COMPLETAMENTE FUNCI..."
+    }
+  ],
+  "totalTokens": 10128,
+  "agentBreakdown": {
+    "Extension Server": {
+      "count": 1,
+      "totalTokens": 10128,
+      "prompts": [
+        {
+          "name": "PROMPT PRINCIPAL - Extension Server OFICIAL",
+          "type": "Principal",
+          "agent": "Extension Server",
+          "model": "gemini-2.5-pro",
+          "tokens": 10128,
+          "length": 35446,
+          "snippet": "⚡ INSTRUCCIONES CRÍTICAS ULTRA-AVANZADAS:\n========================================\n🎯 GENERA UN WORKFLOW ENTERPRISE DE 10-25 NODOS COMPLETAMENTE FUNCI..."
+        }
+      ]
+    }
+  }
+}

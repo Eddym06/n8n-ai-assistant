@@ -1,0 +1,108 @@
+{
+  "vectorization_info": {
+    "version": "2.0.0",
+    "generated_at": "2025-09-25T02:27:59.360393",
+    "processing_time_seconds": 0.907209,
+    "embedding_model": "universal-sentence-encoder-v4"
+  },
+  "statistics": {
+    "workflows_processed": 103,
+    "workflows_filtered_out": 4,
+    "categories_found": 12,
+    "total_nodes_analyzed": 2257,
+    "vectorization_time": 0,
+    "start_time": "2025-09-25T02:27:58.453187"
+  },
+  "categories": [
+    {
+      "name": "Automatización General",
+      "total_workflows": 23,
+      "valid_workflows": 19,
+      "filtered_workflows": 4,
+      "keywords_count": 370
+    },
+    {
+      "name": "Base de Datos",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 56
+    },
+    {
+      "name": "Chatbots y Mensajería",
+      "total_workflows": 20,
+      "valid_workflows": 20,
+      "filtered_workflows": 0,
+      "keywords_count": 299
+    },
+    {
+      "name": "Email y Comunicación",
+      "total_workflows": 11,
+      "valid_workflows": 11,
+      "filtered_workflows": 0,
+      "keywords_count": 334
+    },
+    {
+      "name": "Gestión de Contenido",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 246
+    },
+    {
+      "name": "Gestión de Datos",
+      "total_workflows": 2,
+      "valid_workflows": 2,
+      "filtered_workflows": 0,
+      "keywords_count": 77
+    },
+    {
+      "name": "Gestión de Tiempo",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 20
+    },
+    {
+      "name": "Investigación y Análisis",
+      "total_workflows": 19,
+      "valid_workflows": 19,
+      "filtered_workflows": 0,
+      "keywords_count": 293
+    },
+    {
+      "name": "Multimedia",
+      "total_workflows": 6,
+      "valid_workflows": 6,
+      "filtered_workflows": 0,
+      "keywords_count": 101
+    },
+    {
+      "name": "Redes Sociales",
+      "total_workflows": 9,
+      "valid_workflows": 9,
+      "filtered_workflows": 0,
+      "keywords_count": 257
+    },
+    {
+      "name": "Ventas y CRM",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 50
+    },
+    {
+      "name": "Web Scraping",
+      "total_workflows": 3,
+      "valid_workflows": 3,
+      "filtered_workflows": 0,
+      "keywords_count": 63
+    }
+  ],
+  "totals": {
+    "categories_processed": 12,
+    "total_workflows_found": 103,
+    "total_valid_workflows": 99,
+    "total_filtered_workflows": 4
+  }
+}

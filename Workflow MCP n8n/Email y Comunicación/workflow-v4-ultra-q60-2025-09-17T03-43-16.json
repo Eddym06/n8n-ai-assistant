@@ -1,0 +1,597 @@
+{
+  "nodes": [
+    {
+      "id": "a1b2c3d4-e5f6-4789-8123-567890abcdef",
+      "name": "Webhook_Data_Receiver",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        -61
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b2c3d4e5-f6a7-4890-9234-67890abcdef1",
+      "name": "Set_Initial_Data_Prep",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        100,
+        283
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c3d4e5f6-a7b8-4901-a345-7890abcdef12",
+      "name": "HTTP_API_Call",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        100,
+        397
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d4e5f6a7-b8c9-4012-b456-890abcdef123",
+      "name": "If_API_Response_Success",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        100,
+        56
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "300b2d8f-8143-4bf6-9f8e-8845bb68d4c6",
+      "name": "Gmail_Success_Notification",
+      "type": "n8n-nodes-base.gmail",
+      "position": [
+        370,
+        448
+      ],
+      "parameters": {
+        "operation": "get",
+        "resource": "message"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "9627cc90-a615-46a6-aa62-5c5362f306ce",
+      "name": "Slack_Success_Log",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        100,
+        973
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "e0854e1c-51be-4b96-9b39-5a52acc84be9",
+      "name": "Telegram_Error_Alert",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        100,
+        1087
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "83880018-c4a7-45cd-9115-dc6efd12e2ed",
+      "name": "Function_Log_Error_Details",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        910,
+        514
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c9d0e1f2-a3b4-4567-8901-3abcdef45678",
+      "name": "Cron_Scheduled_Check",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        370,
+        333
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "d0e1f2a3-b4c5-4678-9012-4abcdef56789",
+      "name": "Google_Sheets_Read_Pending",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        100,
+        514
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "7eef8389-3310-47b0-a06d-9562ea202d3b",
+      "name": "Set_Transform_Sheet_Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        100,
+        627
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d322c7d2-a03c-4c53-aa09-524ee7459ed9",
+      "name": "If_Has_Pending_Items",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        100,
+        171
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "effdb842-d910-44c0-8ab9-38e1696fb9fe",
+      "name": "Google_Calendar_Create_Events",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        370,
+        562
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "1bfac72a-38c2-4aa4-a966-6a37c2303d10",
+      "name": "Email_Send_Summary",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        640,
+        708
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "605e36e6-fe0f-4a1d-adea-0cbff0117eef",
+      "name": "Slack_No_Pending_Notification",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        100,
+        1201
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "b1a8ca91-6bdf-4f0d-adcd-f1df799d5efc",
+      "name": "Telegram_Command_Listener",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        910,
+        630
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "f6936a77-2abd-4f63-bf72-2f3aa5607420",
+      "name": "If_Telegram_Command_Type",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        640,
+        592
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "921a5eb5-4d3a-456f-91e5-d13bf5ab2f7a",
+      "name": "HTTP_Get_System_Status",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        100,
+        746
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "a9b0c1d2-e3f4-4567-8901-3abcdef45678",
+      "name": "Telegram_Reply_Status",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        100,
+        1316
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b0c1d2e3-f4a5-4678-9012-4abcdef56789",
+      "name": "Google_Sheets_Read_Report",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        100,
+        861
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "4e61a020-300a-4100-9c44-5ea6fc611806",
+      "name": "Function_Format_Report",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        370,
+        679
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "4e59e404-a1ce-4b57-8751-e5934165302c",
+      "name": "Telegram_Send_Report",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        640,
+        821
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook_Data_Receiver": {
+      "main": [
+        [
+          {
+            "node": "Set_Initial_Data_Prep",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set_Initial_Data_Prep": {
+      "main": [
+        [
+          {
+            "node": "HTTP_API_Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP_API_Call": {
+      "main": [
+        [
+          {
+            "node": "If_API_Response_Success",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail_Success_Notification": {
+      "main": [
+        [
+          {
+            "node": "Slack_Success_Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram_Error_Alert": {
+      "main": [
+        [
+          {
+            "node": "Function_Log_Error_Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron_Scheduled_Check": {
+      "main": [
+        [
+          {
+            "node": "Google_Sheets_Read_Pending",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google_Sheets_Read_Pending": {
+      "main": [
+        [
+          {
+            "node": "Set_Transform_Sheet_Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set_Transform_Sheet_Data": {
+      "main": [
+        [
+          {
+            "node": "If_Has_Pending_Items",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google_Calendar_Create_Events",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google_Calendar_Create_Events": {
+      "main": [
+        [
+          {
+            "node": "Email_Send_Summary",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram_Command_Listener",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram_Command_Listener": {
+      "main": [
+        [
+          {
+            "node": "If_Telegram_Command_Type",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "HTTP_Get_System_Status",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP_Get_System_Status": {
+      "main": [
+        [
+          {
+            "node": "Telegram_Reply_Status",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google_Sheets_Read_Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google_Sheets_Read_Report": {
+      "main": [
+        [
+          {
+            "node": "Function_Format_Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function_Format_Report": {
+      "main": [
+        [
+          {
+            "node": "Telegram_Send_Report",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gmail_Success_Notification",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram_Error_Alert",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack_No_Pending_Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If_API_Response_Success": {
+      "else": [
+        {
+          "node": "Set_Initial_Data_Prep",
+          "type": "main",
+          "index": 0
+        }
+      ],
+      "main": [
+        [
+          {
+            "node": "Set_Initial_Data_Prep",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP_API_Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If_Has_Pending_Items": {
+      "main": [
+        [
+          {
+            "node": "Set_Initial_Data_Prep",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP_API_Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ],
+      "else": [
+        {
+          "node": "Slack_No_Pending_Notification",
+          "type": "main",
+          "index": 0
+        }
+      ]
+    },
+    "If_Telegram_Command_Type": {
+      "main": [
+        [
+          {
+            "node": "Set_Initial_Data_Prep",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP_API_Call",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ],
+      "else": [
+        {
+          "node": "Telegram_Error_Alert",
+          "type": "main",
+          "index": 0
+        }
+      ]
+    }
+  },
+  "settings": {},
+  "metadata": {
+    "v4Enhancement": true,
+    "generationMethod": "v4-context-enhanced",
+    "v4UltraProcessed": true,
+    "version": "4.0.0-ultra-integration",
+    "processingPhases": [
+      "context",
+      "enhancement",
+      "generation",
+      "correction",
+      "positioning"
+    ],
+    "qualityScore": 60,
+    "timestamp": "2025-09-17T03:43:16.366Z"
+  }
+}

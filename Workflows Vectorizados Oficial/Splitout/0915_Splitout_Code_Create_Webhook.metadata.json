@@ -1,0 +1,1144 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Splitout Code Create Webhook",
+    "file_name": "0915_Splitout_Code_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\0915_Splitout_Code_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "2310f9221e85"
+  },
+  "structure": {
+    "total_nodes": 46,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 9
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 10
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -160,
+          40
+        ]
+      },
+      {
+        "name": "When Executed by Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -160,
+          575
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Get list of owners",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          280,
+          40
+        ]
+      },
+      {
+        "name": "Get list of clients for owner",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          280,
+          575
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -210,
+          -260
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          720,
+          575
+        ]
+      },
+      {
+        "name": "Edit",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          60,
+          575
+        ]
+      },
+      {
+        "name": "Increment Page",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          500,
+          500
+        ]
+      },
+      {
+        "name": "Split Out1",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1160,
+          575
+        ]
+      },
+      {
+        "name": "Merge al the entries",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          940,
+          575
+        ]
+      },
+      {
+        "name": "If linkedin url is empty",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1820,
+          40
+        ]
+      },
+      {
+        "name": "if new post",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3580,
+          40
+        ]
+      },
+      {
+        "name": "Get list of clients",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          940,
+          40
+        ]
+      },
+      {
+        "name": "Get last post",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          3140,
+          40
+        ]
+      },
+      {
+        "name": "Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          4680,
+          140
+        ]
+      },
+      {
+        "name": "Search for user by link",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2920,
+          140
+        ]
+      },
+      {
+        "name": "Do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2480,
+          -160
+        ]
+      },
+      {
+        "name": "Merge profileURL",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2700,
+          140
+        ]
+      },
+      {
+        "name": "Set last_post",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3360,
+          40
+        ]
+      },
+      {
+        "name": "Set last_position",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3360,
+          240
+        ]
+      },
+      {
+        "name": "if new position",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3580,
+          240
+        ]
+      },
+      {
+        "name": "Set data here",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          60,
+          40
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          220,
+          -260
+        ]
+      },
+      {
+        "name": "Change this for testing",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1160,
+          40
+        ]
+      },
+      {
+        "name": "Create entry with email",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1380,
+          40
+        ]
+      },
+      {
+        "name": "Get rows from document",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1600,
+          40
+        ]
+      },
+      {
+        "name": "Search for user profile by names",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2040,
+          -60
+        ]
+      },
+      {
+        "name": "Profile URL not found?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2260,
+          -60
+        ]
+      },
+      {
+        "name": "Set the profile URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2480,
+          40
+        ]
+      },
+      {
+        "name": "Set the profile URL1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2480,
+          240
+        ]
+      },
+      {
+        "name": "Update last post",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          3800,
+          40
+        ]
+      },
+      {
+        "name": "Updates last position",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          3800,
+          240
+        ]
+      },
+      {
+        "name": "Set post_updated",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4020,
+          40
+        ]
+      },
+      {
+        "name": "Set position_updated",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4020,
+          240
+        ]
+      },
+      {
+        "name": "Generate the email text",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          4460,
+          140
+        ]
+      },
+      {
+        "name": "Merge on email",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          4240,
+          140
+        ]
+      },
+      {
+        "name": "Split Out owners",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          500,
+          40
+        ]
+      },
+      {
+        "name": "Get current owner",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          720,
+          40
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          880,
+          -260
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1120,
+          -260
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1320,
+          -260
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3080,
+          -240
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1960,
+          -240
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4200,
+          -240
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -220,
+          400
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -200,
+          -480
+        ]
+      }
+    ],
+    "connections_count": 34,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 44
+    }
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1080,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "executeWorkflow",
+      "edit",
+      "set last_position",
+      "if new position",
+      "sticky note5",
+      "set last_post",
+      "get list of owners",
+      "sticky note7",
+      "split out owners",
+      "set the profile url",
+      "search for user by link",
+      "get list of clients",
+      "sticky note3",
+      "stickyNote",
+      "do nothing",
+      "split out1",
+      "if new post",
+      "increment page",
+      "sticky note6",
+      "productivity",
+      "if linkedin url is empty",
+      "set position_updated",
+      "sticky note10",
+      "change this for testing",
+      "webhook integration",
+      "httpRequest",
+      "sticky note2",
+      "set the profile url1",
+      "code",
+      "merge on email",
+      "profile url not found?",
+      "sticky note4",
+      "set",
+      "merge",
+      "update last post",
+      "updates last position",
+      "create entry with email",
+      "get list of clients for owner",
+      "sticky note",
+      "get current owner",
+      "get rows from document",
+      "googleSheets",
+      "generate the email text",
+      "gmail",
+      "search for user profile by names",
+      "set data here",
+      "sticky note8",
+      "complex",
+      "set post_updated",
+      "filter",
+      "manualTrigger",
+      "merge al the entries",
+      "noOp",
+      "when clicking ‘test workflow’",
+      "sticky note1",
+      "merge profileurl",
+      "get last post",
+      "splitOut",
+      "executeWorkflowTrigger",
+      "when executed by another workflow"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 46 nodos con 2 disparadores que ejecuta: Get list of owners, Get list of clients for owner, Sticky Note1 en la categoría de productivity.",
+    "semantic_content": "Nodos: When clicking ‘Test workflow’ (manualTrigger), Get list of owners (httpRequest), Get list of clients for owner (httpRequest), Sticky Note1 (stickyNote), If (if), Edit (set), Increment Page (set), Split Out1 (splitOut), Merge al the entries (code), If linkedin url is empty (if), if new post (if), Get list of clients (executeWorkflow), When Executed by Another Workflow (executeWorkflowTrigger), Get last post (executeWorkflow), Gmail (gmail), Search for user by link (httpRequest), Do nothing (noOp), Merge profileURL (code), Set last_post (set), Set last_position (set), if new position (if), Set data here (set), Sticky Note (stickyNote), Change this for testing (filter), Create entry with email (googleSheets), Get rows from document (googleSheets), Search for user profile by names (httpRequest), Profile URL not found? (if), Set the profile URL (set), Set the profile URL1 (set), Update last post (googleSheets), Updates last position (googleSheets), Set post_updated (set), Set position_updated (set), Generate the email text (code), Merge on email (merge), Split Out owners (splitOut), Get current owner (filter), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note10 (stickyNote), Sticky Note8 (stickyNote). Propósito: webhook integration. Categoría: productivity. Disparadores: When clicking ‘Test workflow’, When Executed by Another Workflow",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "When Executed by Another Workflow",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.manualTrigger",
+      "Get list of clients for owner",
+      "Sticky Note1",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "Get list of owners"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "create",
+      "0915",
+      "0915_splitout_code_create_webhook",
+      "code",
+      "webhook",
+      "splitout"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "productivity",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 85.18518518518519,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 80.78703703703704
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:17.856288"
+  },
+  "semantic_vector": [
+    -0.0374620258808136,
+    -0.05615938827395439,
+    0.034183699637651443,
+    -0.05811511352658272,
+    -0.008623645640909672,
+    0.0014327624812722206,
+    0.042219534516334534,
+    -0.04509482532739639,
+    -0.05786936730146408,
+    0.05767237767577171,
+    -0.04216136038303375,
+    0.03031814470887184,
+    0.035195205360651016,
+    -0.009778643026947975,
+    -0.04514060914516449,
+    0.05919376015663147,
+    0.0454586036503315,
+    -0.015705611556768417,
+    0.0404784195125103,
+    0.012121196836233139,
+    -0.05190853029489517,
+    0.029236217960715294,
+    0.058583106845617294,
+    -0.023259581997990608,
+    0.03581160306930542,
+    0.030145345255732536,
+    -0.04252569377422333,
+    0.05790514126420021,
+    -0.05740124359726906,
+    0.029684536159038544,
+    -0.013093600049614906,
+    -0.03272099420428276,
+    0.04306721314787865,
+    -0.05356219410896301,
+    0.05714854225516319,
+    0.004899705294519663,
+    -0.012440374121069908,
+    -0.037165187299251556,
+    0.028943095356225967,
+    -0.04030928388237953,
+    -0.01701505109667778,
+    0.047619808465242386,
+    -0.024763574823737144,
+    -0.010290258564054966,
+    0.0591936856508255,
+    0.02620100788772106,
+    0.02146255411207676,
+    0.023999273777008057,
+    -0.0431651845574379,
+    -0.04070139303803444,
+    -0.0576256699860096,
+    0.006638311315327883,
+    -0.05890228971838951,
+    -0.05658343434333801,
+    -0.05683339759707451,
+    -0.057094771414995193,
+    -0.01895179972052574,
+    -0.05184745043516159,
+    0.030808337032794952,
+    0.040651772171258926,
+    0.041490424424409866,
+    0.011977880261838436,
+    -0.05664994567632675,
+    0.05783579498529434,
+    -0.005401992704719305,
+    0.020857414230704308,
+    0.056652236729860306,
+    -0.020079467445611954,
+    0.057441551238298416,
+    -0.04534202441573143,
+    -0.05882512405514717,
+    -0.05264410004019737,
+    0.02102946862578392,
+    0.051883503794670105,
+    -0.008336433209478855,
+    -0.02712513506412506,
+    0.055149342864751816,
+    -0.050172124058008194,
+    -0.04775697737932205,
+    0.049802348017692566,
+    0.056227561086416245,
+    0.01691386289894581,
+    -0.004573888145387173,
+    -0.011684795841574669,
+    0.0400274433195591,
+    0.01235244981944561,
+    -0.001922494382597506,
+    -0.036455653607845306,
+    0.01483011245727539,
+    -0.00858515314757824,
+    -0.05130554363131523,
+    0.029250897467136383,
+    0.009479839354753494,
+    -0.04541569575667381,
+    0.049714166671037674,
+    -0.04625711962580681,
+    0.04746069759130478,
+    -0.028705976903438568,
+    -0.05913732200860977,
+    -0.0591927208006382,
+    0.058006517589092255,
+    0.006469124928116798,
+    0.0513024739921093,
+    0.05627799034118652,
+    -0.007497444748878479,
+    -0.0199477206915617,
+    0.059169769287109375,
+    0.043961960822343826,
+    0.04907858371734619,
+    -0.05919202044606209,
+    0.014322125352919102,
+    -0.026378575712442398,
+    -0.024664537981152534,
+    0.05580069124698639,
+    -0.04764382913708687,
+    -0.0017459503142163157,
+    -0.054712988436222076,
+    0.009744253940880299,
+    0.05810244008898735,
+    0.045831099152565,
+    -0.0317496694624424,
+    0.054624199867248535,
+    0.010233400389552116,
+    0.019077137112617493,
+    0.05762723088264465,
+    0.00913758110255003,
+    -0.037520915269851685,
+    0.048609409481287,
+    -0.0014451269526034594,
+    -0.04832179844379425,
+    -0.036747269332408905,
+    0.046407267451286316,
+    0.04846423119306564,
+    -0.017437512055039406,
+    0.05641085281968117,
+    -0.05564858391880989,
+    -0.057593490928411484,
+    0.010382842272520065,
+    -0.056249503046274185,
+    -0.05908386409282684,
+    -0.04514748230576515,
+    0.05919373780488968,
+    -0.047083962708711624,
+    0.027265174314379692,
+    -0.05102313682436943,
+    -0.05908961221575737,
+    0.05678220093250275,
+    -0.047288473695516586,
+    0.05470951274037361,
+    -0.025433385744690895,
+    -0.039213404059410095,
+    -0.04120420664548874,
+    0.058831486850976944,
+    -0.04236204922199249,
+    0.058708321303129196,
+    0.05907546356320381,
+    -0.019988328218460083,
+    -0.05876362323760986,
+    0.05492965877056122,
+    -0.051019906997680664,
+    -0.05905211716890335,
+    -0.05867382884025574,
+    -0.014314010739326477,
+    0.054449744522571564,
+    0.016382690519094467,
+    -0.03706229478120804,
+    -0.053803667426109314,
+    -0.00039176837890408933,
+    -0.05517009273171425,
+    -0.05048263818025589,
+    0.022693824023008347,
+    -0.04771695286035538,
+    0.04213448986411095,
+    0.04870644211769104,
+    -0.055561363697052,
+    0.049214161932468414,
+    0.026046153157949448,
+    -0.0497128926217556,
+    0.057566020637750626,
+    -0.03542695194482803,
+    0.03447544202208519,
+    0.03478221967816353,
+    -0.0232885479927063,
+    0.020901666954159737,
+    0.04197493940591812,
+    -0.0030613758135586977,
+    -0.059052009135484695,
+    0.059138793498277664,
+    0.04913618043065071,
+    0.057190973311662674,
+    -0.054817456752061844,
+    0.04515320807695389,
+    -0.01574958860874176,
+    -0.05919098109006882,
+    -0.059179503470659256,
+    -0.0580589696764946,
+    0.004364949185401201,
+    0.05919376015663147,
+    0.021625956520438194,
+    -0.019231898710131645,
+    0.04454890638589859,
+    0.057580579072237015,
+    0.04024671018123627,
+    0.05445120483636856,
+    0.0564110241830349,
+    -0.0034836288541555405,
+    -0.04389563202857971,
+    -0.03294152393937111,
+    -0.05899820849299431,
+    -0.03381272032856941,
+    0.05636303871870041,
+    0.046460457146167755,
+    0.0586126334965229,
+    0.05547746270895004,
+    -0.05918524041771889,
+    -0.05830496922135353,
+    0.024483665823936462,
+    0.05221657082438469,
+    0.04278833419084549,
+    0.015090526081621647,
+    -0.05337601527571678,
+    0.058433353900909424,
+    0.014570379629731178,
+    -0.04921557754278183,
+    0.0062733665108680725,
+    -0.05833747237920761,
+    -0.04260699823498726,
+    -0.051103074103593826,
+    -0.058913715183734894,
+    -0.0514863021671772,
+    0.037864748388528824,
+    -0.05841870978474617,
+    0.039980676025152206,
+    -0.05919376015663147,
+    0.05123833194375038,
+    0.056012243032455444,
+    0.05919370800256729,
+    0.05658343434333801,
+    -0.05828894302248955,
+    -0.05313339829444885,
+    -0.040815018117427826,
+    0.04400881752371788,
+    -0.04862881079316139,
+    0.05276445671916008,
+    0.04762124642729759,
+    0.057116854935884476,
+    0.03452586382627487,
+    0.039269618690013885,
+    0.057174939662218094,
+    0.0590604692697525,
+    -0.05904102325439453,
+    0.04614870622754097,
+    -0.03394953906536102,
+    0.033484432846307755,
+    0.04936777800321579,
+    -0.05771360918879509,
+    -0.05438266694545746,
+    0.05919376015663147,
+    -0.05862228199839592,
+    0.04672228544950485,
+    -0.0006235092296265066,
+    -0.022376056760549545,
+    -0.04517907649278641,
+    -0.026725996285676956,
+    -0.034210268408060074,
+    0.045330960303545,
+    -0.009085009805858135,
+    -0.023607321083545685,
+    -0.05019237473607063,
+    0.05175386369228363,
+    -0.05813943222165108,
+    0.05087994784116745,
+    -0.055279411375522614,
+    0.055532056838274,
+    0.03933123126626015,
+    0.04993010312318802,
+    0.014630167745053768,
+    0.058376699686050415,
+    0.05919376015663147,
+    -0.0042335703037679195,
+    0.014627569355070591,
+    -0.020277228206396103,
+    0.05140313506126404,
+    0.030165407806634903,
+    -0.03359105810523033,
+    -0.05888963118195534,
+    -0.045310597866773605,
+    0.05912814661860466,
+    -0.04863970726728439,
+    0.05788926035165787,
+    -0.04247921332716942,
+    0.04042325168848038,
+    0.05907857418060303,
+    -0.055487945675849915,
+    0.057128529995679855,
+    -0.05837901681661606,
+    0.05677895247936249,
+    -0.05646760016679764,
+    -0.004030780401080847,
+    0.038947392255067825,
+    -0.03439537435770035,
+    0.008047254756093025,
+    0.05819101631641388,
+    -0.03555922582745552,
+    0.058267105370759964,
+    -0.011532673612236977,
+    0.0573006197810173,
+    -0.035025790333747864,
+    0.023557789623737335,
+    0.016212577000260353,
+    0.030074842274188995,
+    0.03068455308675766,
+    0.05641616880893707,
+    -0.017083507031202316,
+    0.04364786669611931,
+    -0.05889049917459488,
+    0.05179167911410332,
+    0.006042686756700277,
+    0.05234740674495697,
+    -0.04705037176609039,
+    0.005267146974802017,
+    -0.05593276768922806,
+    0.05174832418560982,
+    -0.030972816050052643,
+    0.054870229214429855,
+    0.03305569663643837,
+    0.054290857166051865,
+    -0.05159532651305199,
+    0.05769213289022446,
+    0.006137049291282892,
+    -0.03638053685426712,
+    -0.05448034778237343,
+    0.03580561652779579,
+    0.05848655849695206,
+    0.006219919770956039,
+    0.053146179765462875,
+    0.058131515979766846,
+    0.03967231884598732,
+    0.05209598317742348,
+    -0.03270112723112106,
+    0.029234696179628372,
+    -0.05408278852701187,
+    -0.05352048575878143,
+    -0.037401773035526276,
+    -0.05919376015663147,
+    -0.03832452371716499,
+    -0.04896357282996178,
+    0.004436990711838007,
+    -0.03749117627739906,
+    -0.012871861457824707,
+    0.03783367574214935,
+    0.023510292172431946,
+    -0.04747353121638298,
+    0.05590596795082092,
+    0.03055475652217865,
+    -0.058533333241939545,
+    -0.059193648397922516,
+    0.04108408838510513,
+    0.05574679747223854,
+    0.039073459804058075,
+    0.051934368908405304,
+    -0.05647488310933113,
+    -0.05919376015663147,
+    0.059113916009664536,
+    -0.05739699676632881,
+    0.042989592999219894,
+    0.053105998784303665,
+    -0.05850239843130112,
+    0.05869404599070549,
+    -0.05801602825522423,
+    -0.02484120801091194,
+    -0.044149234890937805,
+    -0.05744514986872673,
+    0.058646440505981445,
+    0.042929500341415405,
+    0.05641943961381912,
+    -0.040511347353458405,
+    -0.0539715401828289,
+    -0.0015961003955453634,
+    -0.05528378486633301,
+    0.051074206829071045,
+    0.05125334858894348,
+    -0.004994223825633526,
+    -0.0213023629039526,
+    0.02197517827153206,
+    -0.0065831635147333145,
+    0.0574364997446537,
+    -0.04599987342953682,
+    -0.034825798124074936,
+    -0.055433254688978195,
+    -0.01911582238972187,
+    -0.05604210123419762,
+    0.05866897106170654,
+    0.05660983547568321,
+    -0.051146551966667175,
+    0.032503578811883926,
+    0.046587929129600525,
+    0.05526360124349594,
+    -0.047702621668577194,
+    0.03948621079325676,
+    0.05485743284225464,
+    0.0038782197516411543,
+    -0.05807255581021309,
+    0.05075481906533241,
+    0.02373085729777813,
+    -0.046947311609983444,
+    -0.05916402116417885,
+    0.00810139998793602,
+    0.05843639001250267,
+    -0.0319405198097229,
+    -0.04049006476998329,
+    0.03567015379667282,
+    0.008348789066076279,
+    0.01636461913585663,
+    0.01705549657344818,
+    -0.03564038500189781,
+    0.05672696977853775,
+    -0.0572289414703846,
+    -0.04429959878325462,
+    0.040508706122636795,
+    -0.006953708361834288,
+    0.003701774636283517,
+    -0.05424286052584648,
+    -0.00020290024986024946,
+    -0.0006695346091873944,
+    -0.0007356071728281677,
+    -0.05812234804034233,
+    0.05886796489357948,
+    0.0022230769973248243,
+    0.03140835464000702,
+    0.017245104536414146,
+    0.008215157315135002,
+    -0.021906109526753426,
+    0.058370742946863174,
+    -0.051820021122694016,
+    -0.057783521711826324,
+    -0.04629459232091904,
+    -0.05910639092326164,
+    -0.059073783457279205,
+    0.029029008001089096,
+    0.026111841201782227,
+    -0.0566042922437191,
+    0.05453791469335556,
+    -0.02016034908592701,
+    0.03048933669924736,
+    -0.05904510244727135,
+    -0.03983859345316887,
+    -0.015191960148513317,
+    -0.0019902819767594337,
+    -0.05603447183966637,
+    -0.008433915674686432,
+    -0.013944153673946857,
+    0.0591936931014061,
+    0.059081077575683594,
+    0.017297077924013138,
+    -0.05919022858142853,
+    -0.0455789715051651,
+    0.05892647057771683,
+    -0.04824626445770264,
+    -0.005201874300837517,
+    0.016064418479800224,
+    0.0172068253159523,
+    0.05856302008032799,
+    0.05916323512792587,
+    0.021228430792689323,
+    -0.056506186723709106,
+    0.05916565656661987,
+    0.03840159252285957,
+    -0.03152241185307503,
+    0.059181224554777145,
+    0.053212713450193405,
+    -0.009068911895155907,
+    -0.026206357404589653,
+    0.02005176991224289,
+    -0.056663986295461655,
+    -0.05591427907347679,
+    0.05772174522280693,
+    0.0008582613081671298,
+    -0.052776142954826355,
+    -0.05320703238248825,
+    -0.056219909340143204,
+    0.035165201872587204,
+    -0.04236095771193504,
+    -0.05561044439673424,
+    -0.039211172610521317,
+    0.04330672323703766,
+    -0.026893461123108864,
+    -0.028455719351768494,
+    -0.0410565584897995,
+    0.05337357521057129,
+    -0.028210781514644623,
+    0.05759285390377045,
+    -0.008007056079804897,
+    0.050530094653367996,
+    -0.057388678193092346,
+    0.0378248356282711,
+    0.05723849684000015,
+    0.05478513613343239,
+    -0.03650612011551857,
+    0.05468051880598068,
+    0.03946451470255852,
+    -0.027303509414196014,
+    0.0558851957321167,
+    -0.05919374153017998,
+    0.006239584647119045,
+    -0.05457131564617157,
+    -0.024111513048410416,
+    0.029808029532432556,
+    0.008906434290111065,
+    0.05919376015663147,
+    -0.05079670995473862,
+    -0.053941432386636734
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking ‘Test workflow’, When Executed by Another Workflow; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in productivity context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

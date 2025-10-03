@@ -1,0 +1,1055 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "file_name": "0926_Code_Webhook_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code\\0926_Code_Webhook_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false
+  },
+  "structure": {
+    "total_nodes": 51,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.itemLists",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.supabase"
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "Append Material Request",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          6780,
+          3240
+        ]
+      },
+      {
+        "name": "Get Approvals",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          5900,
+          4060
+        ]
+      },
+      {
+        "name": "Standardize Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          6120,
+          3400
+        ]
+      },
+      {
+        "name": "Update Stock",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          7440,
+          3860
+        ]
+      },
+      {
+        "name": "Receive Issue Request",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          5900,
+          3400
+        ]
+      },
+      {
+        "name": "Send Approval Request",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          7660,
+          3400
+        ]
+      },
+      {
+        "name": "Prepare Approval",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          7440,
+          3400
+        ]
+      },
+      {
+        "name": "Create Record Issue",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          6780,
+          3560
+        ]
+      },
+      {
+        "name": "Search Product ID",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          7000,
+          3560
+        ]
+      },
+      {
+        "name": "Searck Issues",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          6560,
+          4220
+        ]
+      },
+      {
+        "name": "Update Current Stck",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          7680,
+          3740
+        ]
+      },
+      {
+        "name": "Merge Lookups",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          7220,
+          3400
+        ]
+      },
+      {
+        "name": "Update Current Stock1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7660,
+          3960
+        ]
+      },
+      {
+        "name": "LookUp Current stock1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7880,
+          3960
+        ]
+      },
+      {
+        "name": "Low stock Detection1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          8100,
+          3960
+        ]
+      },
+      {
+        "name": "Merge1",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          6780,
+          4060
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          5840,
+          3060
+        ]
+      },
+      {
+        "name": "Append Raw Materials",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          6660,
+          1820
+        ]
+      },
+      {
+        "name": "Calculate Total Price",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          6340,
+          2040
+        ]
+      },
+      {
+        "name": "Calculate Updated Current Stock",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          7640,
+          1840
+        ]
+      },
+      {
+        "name": "Validate Quantity Received",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          6840,
+          1820
+        ]
+      },
+      {
+        "name": "Initialize New Product stock",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7860,
+          2200
+        ]
+      },
+      {
+        "name": "Update Current Stock",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7860,
+          1940
+        ]
+      },
+      {
+        "name": "LookUp Current stock",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          8080,
+          1940
+        ]
+      },
+      {
+        "name": "New Row Current Stock",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          7860,
+          2520
+        ]
+      },
+      {
+        "name": "Current Stock Update",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          7860,
+          1720
+        ]
+      },
+      {
+        "name": "Search Current Stock",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          6960,
+          2260
+        ]
+      },
+      {
+        "name": "Format response",
+        "type": "n8n-nodes-base.itemLists",
+        "position": [
+          7620,
+          2220
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          7200,
+          2040
+        ]
+      },
+      {
+        "name": "Low stock Detection2",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          8380,
+          1940
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          5820,
+          1620
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          8720,
+          1620
+        ]
+      },
+      {
+        "name": "Receive Raw Materials Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          5940,
+          2040
+        ]
+      },
+      {
+        "name": "Standardize Raw Material Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          6160,
+          2040
+        ]
+      },
+      {
+        "name": "Lookup Existing Stock",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7000,
+          1820
+        ]
+      },
+      {
+        "name": "Check If Product ID Exists",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          7420,
+          2040
+        ]
+      },
+      {
+        "name": "New Record Row",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          6700,
+          2260
+        ]
+      },
+      {
+        "name": "Trigger Low Stock Alert",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          8200,
+          2280
+        ]
+      },
+      {
+        "name": "Send Low Stock Email Alert",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          8440,
+          2260
+        ]
+      },
+      {
+        "name": "Low Stock Email Alert",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          8540,
+          3940
+        ]
+      },
+      {
+        "name": "Validate Issue Request Data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          6340,
+          3400
+        ]
+      },
+      {
+        "name": "Verify Requested Quantity",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          6560,
+          3400
+        ]
+      },
+      {
+        "name": "Check Available Stock for Issue",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7000,
+          3240
+        ]
+      },
+      {
+        "name": "Format Approval Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          6120,
+          4060
+        ]
+      },
+      {
+        "name": "Verify Approval Data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          6340,
+          4060
+        ]
+      },
+      {
+        "name": "Retrieve Issue Request Details",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          6560,
+          3840
+        ]
+      },
+      {
+        "name": "Process Approval Decision",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          6980,
+          4060
+        ]
+      },
+      {
+        "name": "Get Stock for Issue Update from Current",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7220,
+          3780
+        ]
+      },
+      {
+        "name": "Update Stock After Issue",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          7240,
+          4040
+        ]
+      },
+      {
+        "name": "Materials Issue Table Update",
+        "type": "n8n-nodes-base.supabase",
+        "position": [
+          7220,
+          4260
+        ]
+      },
+      {
+        "name": "Is Stock is Low",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          8300,
+          3960
+        ]
+      }
+    ],
+    "connections_count": 39
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "email automation",
+    "complexity_score": 1280,
+    "quality_score": 0.5,
+    "keywords": [
+      "lookup current stock",
+      "update current stck",
+      "receive raw materials webhook",
+      "new record row",
+      "trigger low stock alert",
+      "get stock for issue update from current",
+      "webhook",
+      "append raw materials",
+      "calculate total price",
+      "itemLists",
+      "sticky note4",
+      "email automation",
+      "productivity",
+      "check if product id exists",
+      "retrieve issue request details",
+      "update current stock1",
+      "verify requested quantity",
+      "search product id",
+      "get approvals",
+      "update current stock",
+      "check available stock for issue",
+      "format approval response",
+      "append material request",
+      "format response",
+      "sticky note2",
+      "lookup existing stock",
+      "low stock email alert",
+      "search current stock",
+      "low stock detection2",
+      "googleSheets",
+      "stickyNote",
+      "update stock after issue",
+      "send approval request",
+      "materials issue table update",
+      "low stock detection1",
+      "is stock is low",
+      "code",
+      "merge",
+      "initialize new product stock",
+      "gmail",
+      "update stock",
+      "prepare approval",
+      "send low stock email alert",
+      "create record issue",
+      "searck issues",
+      "merge1",
+      "lookup current stock1",
+      "calculate updated current stock",
+      "current stock update",
+      "verify approval data",
+      "process approval decision",
+      "standardize data",
+      "validate issue request data",
+      "set",
+      "merge lookups",
+      "new row current stock",
+      "validate quantity received",
+      "standardize raw material data",
+      "supabase",
+      "sticky note",
+      "complex",
+      "receive issue request"
+    ],
+    "description": "Este workflow diseñado para email automation con 51 nodos que ejecuta: Append Material Request, Get Approvals, Standardize Data en la categoría de productivity.",
+    "semantic_content": "Nodos: Append Material Request (googleSheets), Get Approvals (webhook), Standardize Data (set), Update Stock (code), Receive Issue Request (webhook), Send Approval Request (gmail), Prepare Approval (code), Create Record Issue (supabase), Search Product ID (supabase), Searck Issues (supabase), Update Current Stck (supabase), Merge Lookups (merge), Update Current Stock1 (googleSheets), LookUp Current stock1 (googleSheets), Low stock Detection1 (code), Merge1 (merge), Sticky Note (stickyNote), Append Raw Materials (googleSheets), Calculate Total Price (code), Calculate Updated Current Stock (code), Validate Quantity Received (code), Initialize New Product stock (googleSheets), Update Current Stock (googleSheets), LookUp Current stock (googleSheets), New Row Current Stock (supabase), Current Stock Update (supabase), Search Current Stock (supabase), Format response (itemLists), Merge (merge), Low stock Detection2 (code), Sticky Note4 (stickyNote), Sticky Note2 (stickyNote), Receive Raw Materials Webhook (webhook), Standardize Raw Material Data (set), Lookup Existing Stock (googleSheets), Check If Product ID Exists (if), New Record Row (supabase), Trigger Low Stock Alert (if), Send Low Stock Email Alert (gmail), Low Stock Email Alert (gmail), Validate Issue Request Data (code), Verify Requested Quantity (code), Check Available Stock for Issue (googleSheets), Format Approval Response (set), Verify Approval Data (code), Retrieve Issue Request Details (googleSheets), Process Approval Decision (if), Get Stock for Issue Update from Current (googleSheets), Update Stock After Issue (googleSheets), Materials Issue Table Update (supabase), Is Stock is Low (if). Propósito: email automation. Categoría: productivity"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": false,
+    "has_conditional_logic": true,
+    "has_error_handling": false
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:37.138962"
+  },
+  "semantic_vector": [
+    -0.024856895208358765,
+    -0.05595783889293671,
+    0.039080314338207245,
+    0.023806646466255188,
+    -0.04748596251010895,
+    0.005046777427196503,
+    0.049228206276893616,
+    -0.042234763503074646,
+    -0.05595856532454491,
+    -0.037027757614851,
+    0.008858995512127876,
+    -0.013658272102475166,
+    -0.018938036635518074,
+    -0.050250932574272156,
+    -0.02082369662821293,
+    0.055965591222047806,
+    0.0557188019156456,
+    -0.05007261782884598,
+    0.051196590065956116,
+    -0.044683780521154404,
+    -0.039111148566007614,
+    0.05520135536789894,
+    0.055420614778995514,
+    -0.05586717277765274,
+    0.05341104790568352,
+    -0.01363037247210741,
+    0.013283446431159973,
+    0.05479012057185173,
+    0.02146739512681961,
+    0.050020504742860794,
+    -0.016330506652593613,
+    -0.04028688743710518,
+    0.017896967008709908,
+    -0.05574554577469826,
+    0.002632051007822156,
+    -0.05181167647242546,
+    -0.05593255162239075,
+    -0.0023752013221383095,
+    0.005935057066380978,
+    -0.0559389665722847,
+    0.055648237466812134,
+    0.05155502259731293,
+    0.04444001242518425,
+    0.04420900717377663,
+    0.05592614784836769,
+    0.01971927285194397,
+    -0.012222026474773884,
+    0.041802454739809036,
+    -0.04368522763252258,
+    0.05273286625742912,
+    -0.05557800084352493,
+    0.0321183018386364,
+    -0.05595807731151581,
+    -0.03938381373882294,
+    -0.055559221655130386,
+    0.009242947213351727,
+    0.04609788954257965,
+    0.01716689206659794,
+    -0.02356121875345707,
+    -0.03819654509425163,
+    0.05348991975188255,
+    0.04854665696620941,
+    0.012307584285736084,
+    0.05538079887628555,
+    -0.05338137969374657,
+    0.038558606058359146,
+    0.019528118893504143,
+    0.054593510925769806,
+    0.04360441863536835,
+    0.000745836179703474,
+    -0.055739738047122955,
+    -0.05306466296315193,
+    0.0016188068548217416,
+    0.05565397068858147,
+    -0.054603174328804016,
+    -0.05562799423933029,
+    0.052451543509960175,
+    -0.05556333065032959,
+    0.02831261046230793,
+    -0.009657965041697025,
+    0.04598201811313629,
+    0.041043855249881744,
+    0.03943172097206116,
+    -0.05344386771321297,
+    0.02721521072089672,
+    0.026400890201330185,
+    -0.024576572701334953,
+    0.0032716430723667145,
+    0.005218748934566975,
+    0.00454300781711936,
+    -0.013012455776333809,
+    0.055902861058712006,
+    -0.03525906428694725,
+    0.05452970787882805,
+    -0.022231122478842735,
+    -0.05595558136701584,
+    0.030024737119674683,
+    0.008979198522865772,
+    -0.05540461093187332,
+    -0.055875543504953384,
+    0.04955015704035759,
+    -0.04702945426106453,
+    -0.05080382898449898,
+    -0.0545974001288414,
+    0.05170697346329689,
+    -0.0505654513835907,
+    0.05310429260134697,
+    0.040505144745111465,
+    -0.040583278983831406,
+    -0.04795902967453003,
+    -0.022995440289378166,
+    -0.0401584655046463,
+    0.03368035703897476,
+    0.017209798097610474,
+    -0.05514204502105713,
+    0.008866661228239536,
+    -0.05533358082175255,
+    -0.05591179057955742,
+    -0.008192535489797592,
+    -0.0330156646668911,
+    -0.030538005754351616,
+    0.055892862379550934,
+    -0.003665067721158266,
+    -0.0050519718788564205,
+    0.055803608149290085,
+    -0.03608333319425583,
+    -0.023835813626646996,
+    0.011812116019427776,
+    0.006339947693049908,
+    -0.0519249252974987,
+    0.055788423866033554,
+    -0.0410948321223259,
+    0.042462058365345,
+    -0.0385265089571476,
+    0.029845790937542915,
+    -0.054675593972206116,
+    -0.05595441535115242,
+    0.04267469793558121,
+    0.013376782648265362,
+    -0.05584852769970894,
+    0.04774399474263191,
+    0.05596550926566124,
+    0.040020428597927094,
+    0.05283549427986145,
+    -0.002392697846516967,
+    -0.055952366441488266,
+    0.05509461835026741,
+    -0.0392754040658474,
+    0.032719552516937256,
+    0.05545114353299141,
+    -0.04373684152960777,
+    -0.02591182105243206,
+    0.022802777588367462,
+    -0.0558537133038044,
+    0.055249836295843124,
+    0.055941566824913025,
+    -0.02442384697496891,
+    -0.055013254284858704,
+    0.05242433771491051,
+    -0.054645322263240814,
+    -0.05596529692411423,
+    -0.04626767337322235,
+    -0.05584106594324112,
+    0.04621809348464012,
+    0.05568766966462135,
+    -0.05595206469297409,
+    -0.055908359587192535,
+    -0.021651506423950195,
+    -0.05580436810851097,
+    -0.053565170615911484,
+    -0.016451802104711533,
+    -0.05173881724476814,
+    -0.041138291358947754,
+    0.05236063525080681,
+    -0.055535510182380676,
+    0.023714937269687653,
+    -0.052620675414800644,
+    -0.0019423151388764381,
+    -0.04260457307100296,
+    -0.055724743753671646,
+    -0.023545950651168823,
+    -0.048611707985401154,
+    0.04328431561589241,
+    -0.045760150998830795,
+    0.055865298956632614,
+    0.05231040343642235,
+    -0.05533071607351303,
+    0.05537427216768265,
+    -0.03358153626322746,
+    0.055292222648859024,
+    -0.05467506870627403,
+    0.049653854221105576,
+    0.05210699886083603,
+    -0.05573023110628128,
+    -0.0559556782245636,
+    -0.055566977709531784,
+    0.05584742873907089,
+    0.055965591222047806,
+    0.050398170948028564,
+    0.04795712232589722,
+    0.054403990507125854,
+    0.05530927702784538,
+    0.055567190051078796,
+    0.02211465686559677,
+    0.055787455290555954,
+    0.007048928178846836,
+    -0.012817608192563057,
+    -0.03712685406208038,
+    -0.0559653714299202,
+    0.047606997191905975,
+    0.05524614453315735,
+    -0.03929943963885307,
+    0.05587621033191681,
+    0.005842415615916252,
+    -0.05595594272017479,
+    0.04143631085753441,
+    -0.04312204197049141,
+    0.05570250377058983,
+    0.05012717843055725,
+    -0.0470893569290638,
+    0.015713630244135857,
+    0.050999172031879425,
+    -0.04918919876217842,
+    0.04753538593649864,
+    0.0065335482358932495,
+    -0.055960215628147125,
+    0.024004442617297173,
+    0.026882462203502655,
+    -0.05413532629609108,
+    -0.05596331134438515,
+    0.032996248453855515,
+    -0.05596022680401802,
+    0.04831409454345703,
+    -0.05596543103456497,
+    0.055700793862342834,
+    0.055652063339948654,
+    0.055965591222047806,
+    0.05596546083688736,
+    -0.05548844859004021,
+    -0.05317412689328194,
+    -0.037207577377557755,
+    0.035683855414390564,
+    0.030770285055041313,
+    -0.02995418943464756,
+    0.055155470967292786,
+    0.055815715342760086,
+    0.055035658180713654,
+    -0.044339824467897415,
+    0.055680565536022186,
+    0.05596519261598587,
+    -0.0025102056097239256,
+    0.052859168499708176,
+    -0.018758032470941544,
+    0.0048333522863686085,
+    -0.014808242209255695,
+    0.01821504533290863,
+    -0.055868711322546005,
+    0.055965591222047806,
+    -0.04680716618895531,
+    -0.05382103845477104,
+    -0.009894358925521374,
+    0.03045651502907276,
+    -0.052624769508838654,
+    0.05592278391122818,
+    0.04331677407026291,
+    0.02034592255949974,
+    0.052274104207754135,
+    0.05591424182057381,
+    -0.054143957793712616,
+    0.04973309859633446,
+    -0.05472739413380623,
+    0.04099662974476814,
+    -0.049159493297338486,
+    -0.0076707275584340096,
+    0.0557824969291687,
+    0.03785242512822151,
+    -0.05592313036322594,
+    0.055916983634233475,
+    0.0559651143848896,
+    -0.05468794330954552,
+    -0.045090287923812866,
+    0.024655243381857872,
+    0.054570116102695465,
+    -0.05195741355419159,
+    -0.009814855642616749,
+    -0.0544092133641243,
+    0.05562228336930275,
+    0.05592795088887215,
+    -0.055858273059129715,
+    0.048409782350063324,
+    -0.021174507215619087,
+    0.05139429122209549,
+    0.05594922602176666,
+    0.008366873487830162,
+    0.055883508175611496,
+    -0.055095233023166656,
+    0.05566681548953056,
+    -0.055065423250198364,
+    -0.05344258248806,
+    0.05210364982485771,
+    -0.022855712100863457,
+    -0.03458602726459503,
+    -0.022554155439138412,
+    -0.03716173768043518,
+    0.05360705032944679,
+    -0.055231861770153046,
+    -0.027944814413785934,
+    0.035324860364198685,
+    0.05078038200736046,
+    0.028965914621949196,
+    0.010475346818566322,
+    -0.032491739839315414,
+    0.04524178057909012,
+    0.04911943897604942,
+    -0.05459202080965042,
+    -0.055538199841976166,
+    0.05566561594605446,
+    0.043341245502233505,
+    -0.022549016401171684,
+    -0.05589866265654564,
+    -0.05273947864770889,
+    -0.05572305992245674,
+    0.05581048130989075,
+    -0.013137311674654484,
+    0.05584373697638512,
+    0.028802426531910896,
+    0.04240274429321289,
+    -0.0505484864115715,
+    -0.039877381175756454,
+    0.028517359867691994,
+    0.04352753236889839,
+    -0.05573255941271782,
+    0.0011697480222210288,
+    0.05415919050574303,
+    0.05536092072725296,
+    -0.004053018521517515,
+    0.05346648767590523,
+    0.017734983935952187,
+    0.052542489022016525,
+    -0.05562969297170639,
+    -0.04874854162335396,
+    -0.05460922047495842,
+    -0.05493638664484024,
+    -0.010496529750525951,
+    -0.05596499890089035,
+    0.044851742684841156,
+    -0.05593947693705559,
+    0.020981943234801292,
+    -0.05595319718122482,
+    0.023138608783483505,
+    0.05295741558074951,
+    0.05542977899312973,
+    -0.05519019439816475,
+    -0.05005183443427086,
+    -0.03177177906036377,
+    -0.03153574839234352,
+    -0.05596419796347618,
+    -0.022257110103964806,
+    0.05002967268228531,
+    0.036473702639341354,
+    0.016657279804348946,
+    0.03394533693790436,
+    -0.055965591222047806,
+    0.055908095091581345,
+    -0.05286816135048866,
+    -0.010190337896347046,
+    0.05089722201228142,
+    -0.05595289543271065,
+    0.05563170090317726,
+    -0.05515845865011215,
+    0.015349802561104298,
+    -0.052217837423086166,
+    -0.05385615676641464,
+    0.04594353958964348,
+    0.03394121304154396,
+    0.051052629947662354,
+    0.01732529141008854,
+    -0.054541777819395065,
+    0.004879594314843416,
+    0.014148429036140442,
+    -0.05057966336607933,
+    -8.26479445095174e-05,
+    -0.0551038458943367,
+    0.05197114497423172,
+    -0.05003931745886803,
+    -0.05248813331127167,
+    0.05544179677963257,
+    -0.024930350482463837,
+    -0.05595868453383446,
+    -0.05492155998945236,
+    -0.05501163378357887,
+    -0.022703705355525017,
+    0.05349095165729523,
+    0.055933959782123566,
+    -0.019095158204436302,
+    0.055843375623226166,
+    0.011557993479073048,
+    0.0394851379096508,
+    -0.029702769592404366,
+    -0.006447221618145704,
+    0.04548778757452965,
+    -0.054395727813243866,
+    0.030920429155230522,
+    0.055596377700567245,
+    0.013865773566067219,
+    -0.03660961985588074,
+    -0.05595916137099266,
+    -0.055641982704401016,
+    0.05590726435184479,
+    0.0534060038626194,
+    0.031212875619530678,
+    0.055697277188301086,
+    -0.002011653268709779,
+    0.04175971820950508,
+    -0.010693646967411041,
+    0.043130192905664444,
+    0.04748482629656792,
+    -0.009207263588905334,
+    -0.030903300270438194,
+    0.02309909090399742,
+    -0.045977625995874405,
+    0.03439290449023247,
+    -0.00801151990890503,
+    -0.05086522176861763,
+    -0.041535623371601105,
+    -0.026151016354560852,
+    -0.05591670796275139,
+    0.05590944364666939,
+    0.031847137957811356,
+    0.055859219282865524,
+    -0.03635183721780777,
+    -0.04800472781062126,
+    0.05275567248463631,
+    0.055267635732889175,
+    -0.05033203959465027,
+    0.03222835436463356,
+    -0.0009879973949864507,
+    -0.05592556297779083,
+    -0.03005160763859749,
+    0.05533628910779953,
+    -0.009769433178007603,
+    -0.04097335785627365,
+    0.04731073975563049,
+    -0.05551641061902046,
+    0.0518067292869091,
+    -0.05593584105372429,
+    -0.0551927275955677,
+    -0.029630791395902634,
+    -0.03860647231340408,
+    0.016849767416715622,
+    -0.032135095447301865,
+    0.02231721021234989,
+    0.05596555024385452,
+    0.050749585032463074,
+    -0.047148969024419785,
+    -0.05596442148089409,
+    0.006909030955284834,
+    0.054634615778923035,
+    -0.00581316277384758,
+    -0.05140015482902527,
+    0.05416540056467056,
+    -0.044098690152168274,
+    0.05580863729119301,
+    0.05595758929848671,
+    -0.04214638099074364,
+    -0.05581110715866089,
+    0.05536772683262825,
+    0.019581371918320656,
+    -0.05596471577882767,
+    0.05591944605112076,
+    0.03459954261779785,
+    0.03165937587618828,
+    -0.05386731028556824,
+    0.023387402296066284,
+    -0.05473354458808899,
+    -0.02019640989601612,
+    -0.0006993960705585778,
+    0.04328496381640434,
+    -0.016498442739248276,
+    -0.05564730986952782,
+    -0.012978329323232174,
+    0.02590910531580448,
+    -0.02891719900071621,
+    -0.055709417909383774,
+    -0.051459718495607376,
+    0.05595722422003746,
+    -0.01907052844762802,
+    0.0034837587736546993,
+    -0.052008673548698425,
+    -0.011706249788403511,
+    0.042328059673309326,
+    0.015073252841830254,
+    0.02135765552520752,
+    0.043145228177309036,
+    -0.031173299998044968,
+    0.048810768872499466,
+    0.05315560847520828,
+    0.04483979195356369,
+    -0.04829603061079979,
+    0.002975841285660863,
+    0.05187531188130379,
+    -0.05485561490058899,
+    0.05583874136209488,
+    -0.055965591222047806,
+    0.013934806920588017,
+    -0.0328921377658844,
+    -0.052599791437387466,
+    -0.032150186598300934,
+    0.04554690420627594,
+    0.05595698580145836,
+    -0.05590519681572914,
+    -0.04838147759437561
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "purpose:email-automation",
+    "uses:set",
+    "uses:gmail",
+    "uses:code",
+    "category:productivity",
+    "uses:merge",
+    "uses:if",
+    "uses:itemLists",
+    "complexity:high",
+    "uses:webhook",
+    "uses:googleSheets",
+    "uses:supabase"
+  ],
+  "category_info": {
+    "category_name": "Code",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code"
+  }
+}

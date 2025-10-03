@@ -1,0 +1,1107 @@
+{
+  "workflow_info": {
+    "id": "HbjZ9cBPgDdnIRjG",
+    "name": "MiniBear Webhook",
+    "display_name": "MiniBear Webhook",
+    "file_name": "1494_Microsofttodo_Webhook_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Microsofttodo\\1494_Microsofttodo_Webhook_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true,
+    "fingerprint": "404bfbd4e8cd"
+  },
+  "structure": {
+    "total_nodes": 45,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.microsoftToDo",
+      "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.microsoftOneDrive",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.microsoftTeams"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 11
+      },
+      {
+        "type": "n8n-nodes-base.microsoftToDo",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.microsoftOneDrive",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 18
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.microsoftTeams",
+        "count": 2
+      }
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "Line Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -260,
+          -20
+        ]
+      },
+      {
+        "name": "Line Loading Animation",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          120,
+          -20
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -380,
+          -100
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          0,
+          -100
+        ]
+      },
+      {
+        "name": "Switch",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          500,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          380,
+          -100
+        ]
+      },
+      {
+        "name": "Get Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          900,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          820,
+          460
+        ]
+      },
+      {
+        "name": "Line Reply (image)",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3140,
+          200
+        ]
+      },
+      {
+        "name": "Line Reply (Text)",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1300,
+          -340
+        ]
+      },
+      {
+        "name": "Line Reply (Not Supported 2)",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          740
+        ]
+      },
+      {
+        "name": "Line Reply (Not Supported 1)",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          540
+        ]
+      },
+      {
+        "name": "OpenRouter Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "position": [
+          1060,
+          200
+        ]
+      },
+      {
+        "name": "Image Router",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1040,
+          80
+        ]
+      },
+      {
+        "name": "Microsoft Teams",
+        "type": "n8n-nodes-base.microsoftTeams",
+        "position": [
+          1020,
+          -340
+        ]
+      },
+      {
+        "name": "Microsoft To Do",
+        "type": "n8n-nodes-base.microsoftToDo",
+        "position": [
+          1020,
+          -600
+        ]
+      },
+      {
+        "name": "Line Reply (Text)1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1300,
+          -600
+        ]
+      },
+      {
+        "name": "If namecard",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1480,
+          80
+        ]
+      },
+      {
+        "name": "Other Images",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2440,
+          200
+        ]
+      },
+      {
+        "name": "Microsoft Teams1",
+        "type": "n8n-nodes-base.microsoftTeams",
+        "position": [
+          2880,
+          200
+        ]
+      },
+      {
+        "name": "OpenRouter Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "position": [
+          2460,
+          320
+        ]
+      },
+      {
+        "name": "Microsoft OneDrive",
+        "type": "n8n-nodes-base.microsoftOneDrive",
+        "position": [
+          1820,
+          200
+        ]
+      },
+      {
+        "name": "Microsoft OneDrive1",
+        "type": "n8n-nodes-base.microsoftOneDrive",
+        "position": [
+          2000,
+          200
+        ]
+      },
+      {
+        "name": "Get Image2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2260,
+          200
+        ]
+      },
+      {
+        "name": "Microsoft To Do1",
+        "type": "n8n-nodes-base.microsoftToDo",
+        "position": [
+          2400,
+          -260
+        ]
+      },
+      {
+        "name": "HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2960,
+          -260
+        ]
+      },
+      {
+        "name": "OpenRouter Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+        "position": [
+          2000,
+          -140
+        ]
+      },
+      {
+        "name": "NamecardExtract",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2000,
+          -260
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          2180,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1220,
+          -680
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1220,
+          -420
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          940,
+          -680
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          940,
+          -420
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2320,
+          -340
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2600,
+          -340
+        ]
+      },
+      {
+        "name": "Line Reply Namecard",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2680,
+          -260
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2880,
+          -340
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3080,
+          120
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2800,
+          120
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          840,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1780,
+          -380
+        ]
+      },
+      {
+        "name": "Get Image3",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1860,
+          -260
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1400,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2220,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          80
+        ]
+      }
+    ],
+    "connections_count": 21,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 0,
+      "action_count": 45
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 1195,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "line reply namecard",
+      "@n8n/n8n nodes langchain.lmChatOpenRouter",
+      "line reply (image)",
+      "sticky note12",
+      "get image3",
+      "sticky note16",
+      "line loading animation",
+      "microsoft to do",
+      "sticky note7",
+      "sticky note11",
+      "microsoft teams",
+      "get image",
+      "switch",
+      "integration",
+      "microsoft to do1",
+      "sticky note3",
+      "other images",
+      "structured output parser",
+      "stickyNote",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "webhook",
+      "sticky note6",
+      "line reply (text)1",
+      "microsoftTeams",
+      "openrouter chat model",
+      "microsoftToDo",
+      "microsoftOneDrive",
+      "line webhook",
+      "sticky note10",
+      "webhook integration",
+      "httpRequest",
+      "sticky note2",
+      "microsoft onedrive1",
+      "openrouter chat model2",
+      "get image2",
+      "line reply (not supported 2)",
+      "sticky note15",
+      "sticky note9",
+      "sticky note17",
+      "http request",
+      "sticky note4",
+      "if namecard",
+      "sticky note13",
+      "microsoft teams1",
+      "line reply (text)",
+      "line reply (not supported 1)",
+      "namecardextract",
+      "@n8n/n8n nodes langchain.agent",
+      "sticky note",
+      "sticky note8",
+      "openrouter chat model3",
+      "complex",
+      "image router",
+      "sticky note14",
+      "sticky note1",
+      "sticky note5",
+      "microsoft onedrive"
+    ],
+    "description": "'MiniBear Webhook' es un workflow diseñado para webhook integration con 45 nodos que ejecuta: Line Webhook, Line Loading Animation, Sticky Note1 en la categoría de integration.",
+    "semantic_content": "Workflow: MiniBear Webhook. Nodos: Line Webhook (webhook), Line Loading Animation (httpRequest), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Switch (switch), Sticky Note5 (stickyNote), Get Image (httpRequest), Sticky Note9 (stickyNote), Line Reply (image) (httpRequest), Line Reply (Text) (httpRequest), Line Reply (Not Supported 2) (httpRequest), Line Reply (Not Supported 1) (httpRequest), OpenRouter Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenRouter), Image Router (@n8n/n8n-nodes-langchain.agent), Microsoft Teams (microsoftTeams), Microsoft To Do (microsoftToDo), Line Reply (Text)1 (httpRequest), If namecard (if), Other Images (@n8n/n8n-nodes-langchain.agent), Microsoft Teams1 (microsoftTeams), OpenRouter Chat Model2 (@n8n/n8n-nodes-langchain.lmChatOpenRouter), Microsoft OneDrive (microsoftOneDrive), Microsoft OneDrive1 (microsoftOneDrive), Get Image2 (httpRequest), Microsoft To Do1 (microsoftToDo), HTTP Request (httpRequest), OpenRouter Chat Model3 (@n8n/n8n-nodes-langchain.lmChatOpenRouter), NamecardExtract (@n8n/n8n-nodes-langchain.agent), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Sticky Note (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Line Reply Namecard (httpRequest), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), Sticky Note12 (stickyNote), Sticky Note13 (stickyNote), Sticky Note14 (stickyNote), Get Image3 (httpRequest), Sticky Note15 (stickyNote), Sticky Note16 (stickyNote), Sticky Note17 (stickyNote). Propósito: webhook integration. Categoría: integration",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.httpRequest",
+      "Line Loading Animation",
+      "Sticky Note1",
+      "Line Webhook",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.webhook"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.microsoftonedrive",
+      "n8n-nodes-base.microsofttodo",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.lmchatopenrouter",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.microsoftteams"
+    ],
+    "search_terms": [
+      "1494",
+      "webhook",
+      "automation",
+      "microsofttodo",
+      "1494_microsofttodo_webhook_automation_webhook"
+    ],
+    "alternative_names": [
+      "MiniBear Webhook"
+    ],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 75.31380753138075,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 78.81276150627615
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:15.141146"
+  },
+  "semantic_vector": [
+    -0.045589372515678406,
+    0.04218284785747528,
+    -0.0115579254925251,
+    -0.04974796250462532,
+    -0.03604605421423912,
+    0.04153192415833473,
+    0.0562722310423851,
+    -0.02847701869904995,
+    -0.049002502113580704,
+    0.05590309947729111,
+    -0.055547162890434265,
+    0.019970742985606194,
+    -0.010433231480419636,
+    -0.049645937979221344,
+    -0.04539031162858009,
+    0.05705201253294945,
+    0.05620983988046646,
+    0.04094532132148743,
+    -0.05256325379014015,
+    -0.014842662960290909,
+    -0.03056078962981701,
+    -0.055852729827165604,
+    -0.04212236404418945,
+    -0.053040385246276855,
+    0.01874113827943802,
+    -0.050686877220869064,
+    -0.0470297746360302,
+    0.0529792383313179,
+    0.013171273283660412,
+    0.006363694556057453,
+    -0.019252555444836617,
+    -0.038671787828207016,
+    0.025933267548680305,
+    0.020292796194553375,
+    0.054137229919433594,
+    0.018228966742753983,
+    0.04139292612671852,
+    0.037844423204660416,
+    -0.055047545582056046,
+    -0.011282559484243393,
+    -0.016973169520497322,
+    0.04902970418334007,
+    -0.04888102412223816,
+    0.04412906989455223,
+    0.05704621970653534,
+    0.0562603697180748,
+    0.010392495431005955,
+    0.05329430475831032,
+    -0.05035749450325966,
+    0.05351701006293297,
+    -0.04206131771206856,
+    0.03911281004548073,
+    -0.05705060064792633,
+    -0.05568593367934227,
+    -0.05591268092393875,
+    -0.056899625808000565,
+    0.05299539491534233,
+    -0.01640816405415535,
+    0.012600777670741081,
+    0.032460734248161316,
+    0.025267619639635086,
+    0.03640028461813927,
+    -0.04661452770233154,
+    0.0527799054980278,
+    0.038339972496032715,
+    -0.043717846274375916,
+    0.056888286024332047,
+    0.03321746736764908,
+    0.057031042873859406,
+    -0.02783878520131111,
+    -0.057046301662921906,
+    -0.016264107078313828,
+    0.043210797011852264,
+    0.007959827780723572,
+    -0.05671112239360809,
+    0.05268578231334686,
+    0.016476783901453018,
+    -0.054776642471551895,
+    0.03012741357088089,
+    0.03480970486998558,
+    0.01936117373406887,
+    0.022773055359721184,
+    0.01420170720666647,
+    -0.03963015601038933,
+    0.05407364293932915,
+    0.04203270375728607,
+    0.044650208204984665,
+    -0.036744147539138794,
+    0.05306427925825119,
+    -0.04359238222241402,
+    -0.04668733477592468,
+    0.053353212773799896,
+    0.031148206442594528,
+    -0.04302211105823517,
+    0.0387142151594162,
+    0.03386729583144188,
+    0.04644196107983589,
+    0.05531157925724983,
+    -0.05700082704424858,
+    -0.056658659130334854,
+    0.0473492331802845,
+    -0.04921318590641022,
+    0.01886359415948391,
+    -0.04549282044172287,
+    0.05683092027902603,
+    0.029514623805880547,
+    0.05704100430011749,
+    0.05240953341126442,
+    -0.00867398176342249,
+    -0.05705036222934723,
+    0.00028380585717968643,
+    -0.054631564766168594,
+    0.0307809766381979,
+    -0.039289187639951706,
+    0.054782602936029434,
+    -0.03824300318956375,
+    -0.05126359686255455,
+    -0.056583549827337265,
+    0.00028939289040863514,
+    0.05657964199781418,
+    0.05073203146457672,
+    0.0499032698571682,
+    0.014175155200064182,
+    0.02944866754114628,
+    0.05644221231341362,
+    0.034953322261571884,
+    0.005482126958668232,
+    -0.04724489524960518,
+    0.024570735171437263,
+    -0.029159605503082275,
+    -0.05266178771853447,
+    0.02500685304403305,
+    0.056350335478782654,
+    -0.036498092114925385,
+    -0.01964658871293068,
+    -0.03370627760887146,
+    0.0478670597076416,
+    0.050702858716249466,
+    -0.05365026369690895,
+    -0.05699669197201729,
+    -0.05678944289684296,
+    0.05705210939049721,
+    -0.0045828064903616905,
+    0.04573826119303703,
+    -0.05589957907795906,
+    -0.0570513941347599,
+    0.04621478542685509,
+    -0.05456550791859627,
+    0.04079488292336464,
+    0.014267615042626858,
+    -0.008812269195914268,
+    -0.05681062117218971,
+    -0.04901686683297157,
+    0.04484463110566139,
+    0.047980278730392456,
+    0.05289117991924286,
+    0.050600893795490265,
+    -0.025317084044218063,
+    -0.05482780560851097,
+    -0.054648250341415405,
+    -0.055093914270401,
+    -0.051940783858299255,
+    0.05237984284758568,
+    -0.0008108582114800811,
+    0.04041609913110733,
+    -0.004366668406873941,
+    -0.056590065360069275,
+    0.041532114148139954,
+    -0.05445854738354683,
+    0.05018608272075653,
+    0.05682617425918579,
+    -0.03450601547956467,
+    -0.05555214360356331,
+    -0.022590236738324165,
+    -0.0553584098815918,
+    0.05401965603232384,
+    0.04398640990257263,
+    -0.05671124532818794,
+    0.05388079211115837,
+    0.007345055695623159,
+    -0.0569571852684021,
+    0.04923609644174576,
+    -0.057025980204343796,
+    0.05051896348595619,
+    0.056790366768836975,
+    0.053744178265333176,
+    -0.05704842507839203,
+    0.05660473555326462,
+    0.03259860724210739,
+    -0.02828742191195488,
+    -0.04313984513282776,
+    0.027855627238750458,
+    0.030578428879380226,
+    -0.057025060057640076,
+    -0.055452413856983185,
+    -0.05674384534358978,
+    -0.013619745150208473,
+    0.05705210939049721,
+    0.03932330757379532,
+    -0.031987160444259644,
+    0.04771529883146286,
+    0.0529559925198555,
+    0.026510193943977356,
+    0.036836691200733185,
+    0.0028729576151818037,
+    0.03224874660372734,
+    0.02209540829062462,
+    0.05591271445155144,
+    -0.05178780108690262,
+    -0.0557372123003006,
+    0.053101152181625366,
+    0.009903589263558388,
+    -0.014550244435667992,
+    0.019260233268141747,
+    -0.057047322392463684,
+    -0.05679766833782196,
+    -0.016440201550722122,
+    -0.013088696636259556,
+    -0.052845023572444916,
+    0.050570763647556305,
+    -0.05652441084384918,
+    0.056727200746536255,
+    0.03680375963449478,
+    0.0014925133436918259,
+    -0.020685765892267227,
+    -0.05692894011735916,
+    -0.02599465101957321,
+    -0.045090414583683014,
+    0.017189430072903633,
+    -0.05650269612669945,
+    -0.038202352821826935,
+    -0.05314824730157852,
+    -0.050669990479946136,
+    -0.05703148990869522,
+    -0.03453470766544342,
+    0.054684560745954514,
+    0.05699609965085983,
+    0.056628648191690445,
+    -0.05587073415517807,
+    -0.00898207537829876,
+    -0.0036199886817485094,
+    0.05540793016552925,
+    -0.01445664744824171,
+    0.05557378754019737,
+    -0.02698773890733719,
+    0.056661974638700485,
+    0.052826423197984695,
+    -0.0428774319589138,
+    0.05548546090722084,
+    0.056550804525613785,
+    -0.05704747140407562,
+    0.056022509932518005,
+    -0.042108770459890366,
+    0.035059329122304916,
+    0.05622945725917816,
+    -0.05641060322523117,
+    0.02419518493115902,
+    0.05705210939049721,
+    -0.0567486435174942,
+    -0.023324888199567795,
+    0.04149341210722923,
+    0.018315773457288742,
+    -0.03923650085926056,
+    0.05298212915658951,
+    0.006272574886679649,
+    0.005291900131851435,
+    0.053268514573574066,
+    0.04352562502026558,
+    -0.05675536394119263,
+    0.05523606017231941,
+    -0.05674770101904869,
+    0.055745773017406464,
+    -0.05704217031598091,
+    -0.03333784639835358,
+    0.056995827704668045,
+    0.03828450292348862,
+    -0.05702902004122734,
+    0.04014049097895622,
+    0.056846313178539276,
+    0.010843230411410332,
+    0.029294995591044426,
+    0.022990435361862183,
+    0.05699833109974861,
+    0.02296801097691059,
+    -0.044361017644405365,
+    -0.019731435924768448,
+    -0.00457386439666152,
+    0.057033125311136246,
+    -0.05596594884991646,
+    0.05703110620379448,
+    -0.04563245549798012,
+    0.018903201445937157,
+    0.05704416707158089,
+    -0.05632678419351578,
+    -0.013221502304077148,
+    -0.053015850484371185,
+    0.004609179217368364,
+    0.024164075031876564,
+    0.023249061778187752,
+    0.053504861891269684,
+    -0.012696502730250359,
+    -0.03439131751656532,
+    0.02271503023803234,
+    0.01136516872793436,
+    0.03233279287815094,
+    0.010555085726082325,
+    0.05050499737262726,
+    0.003975535277277231,
+    0.04558098316192627,
+    -0.05539628863334656,
+    0.05189718306064606,
+    0.0518801286816597,
+    0.045507632195949554,
+    0.027414537966251373,
+    0.0367472805082798,
+    -0.05442347377538681,
+    0.05121484398841858,
+    -0.03843313828110695,
+    -0.024601787328720093,
+    0.03898186981678009,
+    0.03686755523085594,
+    -0.05313822627067566,
+    0.05513852462172508,
+    -0.05198841542005539,
+    0.04042768478393555,
+    -0.05322716012597084,
+    0.053607333451509476,
+    -0.03864479437470436,
+    0.05525897815823555,
+    -0.041853174567222595,
+    0.02126331627368927,
+    -0.05495830997824669,
+    0.011868283152580261,
+    0.05700469762086868,
+    -0.010220657102763653,
+    -0.02112692967057228,
+    0.05694907531142235,
+    0.05671942979097366,
+    0.019518502056598663,
+    -0.050954338163137436,
+    0.01529858261346817,
+    -0.05689524859189987,
+    -0.03463933989405632,
+    -0.0562129020690918,
+    -0.05700713396072388,
+    -0.05355936661362648,
+    -0.03951232135295868,
+    -0.05531780794262886,
+    -0.012355639599263668,
+    -0.032966531813144684,
+    0.05608123168349266,
+    0.01751771755516529,
+    -0.05190467834472656,
+    0.05001195892691612,
+    0.054402515292167664,
+    -0.05062393099069595,
+    -0.05704415589570999,
+    0.05694527551531792,
+    -0.04644410312175751,
+    0.05581482872366905,
+    0.04767265170812607,
+    -0.055985793471336365,
+    -0.057015180587768555,
+    0.05278265103697777,
+    -0.05667266622185707,
+    0.05451527610421181,
+    0.043633751571178436,
+    -0.05433282256126404,
+    0.036451078951358795,
+    -0.01290026493370533,
+    0.054797977209091187,
+    -0.0437721386551857,
+    -0.05421323701739311,
+    0.042825330048799515,
+    0.05536133423447609,
+    0.03587505593895912,
+    -0.0434114970266819,
+    -0.056011199951171875,
+    -0.028550460934638977,
+    -0.026893243193626404,
+    0.037437912076711655,
+    0.05476338416337967,
+    -0.020428234711289406,
+    -0.02839331142604351,
+    0.050614140927791595,
+    -0.05664924159646034,
+    0.005713560152798891,
+    0.026424575597047806,
+    -0.04634275659918785,
+    0.054917290806770325,
+    -0.04222415015101433,
+    -0.05692604184150696,
+    0.057049840688705444,
+    0.047584716230630875,
+    0.009476625360548496,
+    -0.03037324734032154,
+    -0.010270648635923862,
+    0.055939074605703354,
+    0.0562187023460865,
+    0.018817085772752762,
+    0.05568689852952957,
+    0.05529791861772537,
+    -0.05702413618564606,
+    0.038922250270843506,
+    -0.04806538298726082,
+    0.05561802163720131,
+    -0.05656407028436661,
+    0.02726312167942524,
+    0.03679535537958145,
+    0.037202782928943634,
+    -0.027036543935537338,
+    0.041829224675893784,
+    0.04789949953556061,
+    0.035348787903785706,
+    -0.013605824671685696,
+    -0.008702064864337444,
+    0.03801283612847328,
+    -0.056715961545705795,
+    -0.01538686640560627,
+    -0.053482722491025925,
+    -0.05699450895190239,
+    -0.05598471313714981,
+    -0.053070977330207825,
+    0.024119026958942413,
+    -0.004056580364704132,
+    0.054459258913993835,
+    -0.05637669563293457,
+    -0.038264200091362,
+    0.05670583248138428,
+    -0.0322624109685421,
+    -0.04346678406000137,
+    -0.025189261883497238,
+    -0.05512690544128418,
+    0.045742012560367584,
+    -0.056778501719236374,
+    -0.0425122007727623,
+    -0.05581504479050636,
+    -0.05702267587184906,
+    -0.053823817521333694,
+    0.0361303947865963,
+    0.02789788693189621,
+    -0.052985552698373795,
+    -8.254878775915131e-05,
+    -0.05352047458291054,
+    0.03175308182835579,
+    -0.05681626498699188,
+    -0.05619385838508606,
+    0.05049050226807594,
+    0.012750552967190742,
+    -0.05670658499002457,
+    -0.04540281370282173,
+    0.006241242866963148,
+    0.05683686584234238,
+    0.05171479657292366,
+    -0.018824953585863113,
+    -0.057050518691539764,
+    0.028555048629641533,
+    0.05702710896730423,
+    0.04315786808729172,
+    -0.05673537030816078,
+    -0.011304260231554508,
+    0.022493556141853333,
+    0.05425762012600899,
+    0.055761173367500305,
+    0.03808997943997383,
+    -0.031090352684259415,
+    0.052756987512111664,
+    0.02528194524347782,
+    0.008427578955888748,
+    0.05704016983509064,
+    0.006497490219771862,
+    -0.0563032403588295,
+    0.028774788603186607,
+    -0.055799372494220734,
+    -0.05467408522963524,
+    -0.05311125889420509,
+    0.05701311677694321,
+    0.05023178458213806,
+    0.04192765802145004,
+    -0.04516894742846489,
+    -0.05659724771976471,
+    0.05325084179639816,
+    0.016210095956921577,
+    -0.055972564965486526,
+    0.041663095355033875,
+    0.0552498884499073,
+    0.04020995274186134,
+    0.01605970971286297,
+    -0.010454792529344559,
+    -0.010043589398264885,
+    -0.031138049438595772,
+    0.00718896696344018,
+    -0.03789863735437393,
+    -0.04840929061174393,
+    -0.046713318675756454,
+    0.05704599618911743,
+    0.0401436984539032,
+    0.05256533622741699,
+    -0.05557980388402939,
+    0.05624212697148323,
+    0.024005811661481857,
+    -0.04710271209478378,
+    0.052397988736629486,
+    -0.05704895406961441,
+    0.047580644488334656,
+    -0.0066451760940253735,
+    0.049320220947265625,
+    -0.019742721691727638,
+    -0.03453366830945015,
+    0.05696900188922882,
+    -0.0565168559551239,
+    -0.04771249741315842
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Microsofttodo",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Microsofttodo"
+  }
+}

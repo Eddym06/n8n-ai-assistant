@@ -1,0 +1,1103 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "2566-Conversational-Interviews-With-Ai-Agents-And-N8N-Forms",
+    "file_name": "2566-conversational-interviews-with-ai-agents-and-n8n-forms.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\extras\\2566-conversational-interviews-with-ai-agents-and-n8n-forms.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "9ee71675a146"
+  },
+  "structure": {
+    "total_nodes": 40,
+    "node_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.redis",
+      "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.form",
+      "@n8n/n8n-nodes-langchain.memoryManager",
+      "n8n-nodes-base.crypto",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.html",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.redis",
+        "count": 6
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.form",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryManager",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.crypto",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.html",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 10
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Start Interview",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          1880,
+          880
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Stop Interview?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3380,
+          920
+        ]
+      },
+      {
+        "name": "Generate Row",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3740,
+          1200
+        ]
+      },
+      {
+        "name": "Generate Row1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3580,
+          760
+        ]
+      },
+      {
+        "name": "Clear For Next Interview",
+        "type": "@n8n/n8n-nodes-langchain.memoryManager",
+        "position": [
+          3900,
+          760
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2580,
+          860
+        ]
+      },
+      {
+        "name": "Send Reply To Agent",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4060,
+          1200
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1880,
+          1060
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2840,
+          600
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3580,
+          1380
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3820,
+          460
+        ]
+      },
+      {
+        "name": "Get Answer",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          3580,
+          1200
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1280,
+          500
+        ]
+      },
+      {
+        "name": "Set Interview Topic",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2620,
+          880
+        ]
+      },
+      {
+        "name": "UUID",
+        "type": "n8n-nodes-base.crypto",
+        "position": [
+          2020,
+          880
+        ]
+      },
+      {
+        "name": "Generate Row2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2300,
+          880
+        ]
+      },
+      {
+        "name": "Create Session",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          2160,
+          880
+        ]
+      },
+      {
+        "name": "Update Session",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          2440,
+          880
+        ]
+      },
+      {
+        "name": "Update Session1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          3900,
+          1200
+        ]
+      },
+      {
+        "name": "Update Session2",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          3740,
+          760
+        ]
+      },
+      {
+        "name": "Valid Session?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          5080,
+          1240
+        ]
+      },
+      {
+        "name": "Respond to Webhook",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          5440,
+          1240
+        ]
+      },
+      {
+        "name": "Window Buffer Memory2",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          3000,
+          1120
+        ]
+      },
+      {
+        "name": "Window Buffer Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          3900,
+          920
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4180,
+          740
+        ]
+      },
+      {
+        "name": "Redirect to Completion Screen",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          4260,
+          760
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4640,
+          1220
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4580,
+          980
+        ]
+      },
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          4700,
+          1240
+        ]
+      },
+      {
+        "name": "404 Not Found",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          5260,
+          1320
+        ]
+      },
+      {
+        "name": "AI Researcher",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2900,
+          920
+        ]
+      },
+      {
+        "name": "Parse Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3220,
+          920
+        ]
+      },
+      {
+        "name": "Groq Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+        "position": [
+          2860,
+          1120
+        ]
+      },
+      {
+        "name": "Show Transcript",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          5260,
+          1140
+        ]
+      },
+      {
+        "name": "Save to Google Sheet",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          5040,
+          760
+        ]
+      },
+      {
+        "name": "Session to List",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          4700,
+          760
+        ]
+      },
+      {
+        "name": "Messages To JSON",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4860,
+          760
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4540,
+          420
+        ]
+      },
+      {
+        "name": "Query By Session",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          4920,
+          1240
+        ]
+      },
+      {
+        "name": "Get Session",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          4540,
+          760
+        ]
+      }
+    ],
+    "connections_count": 28,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 39
+    }
+  },
+  "semantic_info": {
+    "category": "data-processing",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 1025,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "@n8n/n8n nodes langchain.lmChatGroq",
+      "update session1",
+      "sticky note5",
+      "data-processing",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "404 not found",
+      "create session",
+      "sticky note7",
+      "formTrigger",
+      "sticky note3",
+      "stickyNote",
+      "respondToWebhook",
+      "stop interview?",
+      "webhook",
+      "sticky note6",
+      "clear for next interview",
+      "show transcript",
+      "set interview topic",
+      "redirect to completion screen",
+      "generate row1",
+      "generate row2",
+      "parse response",
+      "update session",
+      "groq chat model",
+      "session to list",
+      "webhook integration",
+      "html",
+      "form",
+      "send reply to agent",
+      "ai researcher",
+      "save to google sheet",
+      "get answer",
+      "redis",
+      "crypto",
+      "start interview",
+      "sticky note9",
+      "query by session",
+      "sticky note4",
+      "set",
+      "window buffer memory",
+      "uuid",
+      "@n8n/n8n nodes langchain.memoryManager",
+      "window buffer memory2",
+      "sticky note",
+      "@n8n/n8n nodes langchain.agent",
+      "update session2",
+      "googleSheets",
+      "respond to webhook",
+      "valid session?",
+      "sticky note8",
+      "complex",
+      "messages to json",
+      "sticky note1",
+      "sticky note2",
+      "generate row",
+      "splitOut",
+      "get session"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 40 nodos activado por Start Interview que ejecuta: Stop Interview?, Generate Row, Generate Row1 en la categoría de data-processing.",
+    "semantic_content": "Nodos: Stop Interview? (if), Generate Row (set), Generate Row1 (set), Clear For Next Interview (@n8n/n8n-nodes-langchain.memoryManager), Sticky Note (stickyNote), Send Reply To Agent (set), Sticky Note1 (stickyNote), Start Interview (formTrigger), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Get Answer (form), Sticky Note5 (stickyNote), Set Interview Topic (set), UUID (crypto), Generate Row2 (set), Create Session (redis), Update Session (redis), Update Session1 (redis), Update Session2 (redis), Valid Session? (if), Respond to Webhook (respondToWebhook), Window Buffer Memory2 (@n8n/n8n-nodes-langchain.memoryBufferWindow), Window Buffer Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), Sticky Note6 (stickyNote), Redirect to Completion Screen (form), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Webhook (webhook), 404 Not Found (html), AI Researcher (@n8n/n8n-nodes-langchain.agent), Parse Response (set), Groq Chat Model (@n8n/n8n-nodes-langchain.lmChatGroq), Show Transcript (html), Save to Google Sheet (googleSheets), Session to List (splitOut), Messages To JSON (set), Sticky Note9 (stickyNote), Query By Session (redis), Get Session (redis). Propósito: webhook integration. Categoría: data-processing. Disparadores: Start Interview",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.formTrigger",
+      "Start Interview",
+      "Stop Interview?",
+      "Generate Row1",
+      "n8n-nodes-base.set",
+      "Generate Row",
+      "n8n-nodes-base.if"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.redis",
+      "@n8n/n8n-nodes-langchain.memorymanager",
+      "n8n-nodes-base.respondtowebhook",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatgroq",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "n8n-nodes-base.form",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.formtrigger",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.html",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.crypto",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "and",
+      "forms",
+      "2566",
+      "with",
+      "agents",
+      "conversational",
+      "interviews",
+      "2566-conversational-interviews-with-ai-agents-and-n8n-forms",
+      "n8n"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "webhook integration",
+      "data-processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.formTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 78.04878048780488,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.35975609756098
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:29.690425"
+  },
+  "semantic_vector": [
+    -0.03012155182659626,
+    -0.030434153974056244,
+    -0.04776041954755783,
+    -0.05606907978653908,
+    0.015102417208254337,
+    -0.045111361891031265,
+    0.05509645864367485,
+    -0.031271640211343765,
+    -0.05729515105485916,
+    0.05771495774388313,
+    -0.047555193305015564,
+    -0.012696604244410992,
+    -0.047451168298721313,
+    -0.045099109411239624,
+    -0.042322058230638504,
+    0.057945411652326584,
+    0.056449130177497864,
+    -0.050801075994968414,
+    -0.05644206330180168,
+    -0.04833965376019478,
+    -0.055511049926280975,
+    0.04918176308274269,
+    0.0023156616371124983,
+    -0.01643672026693821,
+    -0.05343656986951828,
+    -0.049568627029657364,
+    -0.05194191634654999,
+    -0.020107313990592957,
+    0.009671136736869812,
+    -0.04877474531531334,
+    0.05729075148701668,
+    0.0045307050459086895,
+    -0.01821732521057129,
+    -0.04833827540278435,
+    0.016407543793320656,
+    -0.02367391064763069,
+    -0.008145935833454132,
+    -0.04797789826989174,
+    -0.05106145888566971,
+    -0.05032266676425934,
+    -0.053289417177438736,
+    0.04022842273116112,
+    -0.0013748793862760067,
+    -0.007562853861600161,
+    0.05794438347220421,
+    0.0028008599765598774,
+    -0.005581018049269915,
+    0.04194440692663193,
+    -0.0575408898293972,
+    -0.05788666009902954,
+    0.04950319230556488,
+    0.026158351451158524,
+    -0.05793085694313049,
+    -0.05689290165901184,
+    -0.05694783106446266,
+    -0.05678314343094826,
+    0.05449511110782623,
+    -0.03718965873122215,
+    -0.04581567272543907,
+    0.04227275773882866,
+    0.019924744963645935,
+    0.026538196951150894,
+    0.012270563282072544,
+    0.050149157643318176,
+    -0.011538304388523102,
+    0.04009542614221573,
+    0.052829887717962265,
+    0.051058366894721985,
+    0.04917043074965477,
+    0.031428415328264236,
+    -0.05687640979886055,
+    -0.048998817801475525,
+    0.019271260127425194,
+    0.05273010954260826,
+    -0.053418103605508804,
+    -0.02587832696735859,
+    0.05624227970838547,
+    -0.0570991188287735,
+    0.03613348305225372,
+    -0.020876392722129822,
+    0.05675399303436279,
+    -0.04354773461818695,
+    -0.028314683586359024,
+    -0.05325647071003914,
+    0.04901622608304024,
+    0.0014684516936540604,
+    0.00044005256495438516,
+    0.020052775740623474,
+    0.013932233676314354,
+    -0.027013318613171577,
+    0.04193470627069473,
+    0.02389354072511196,
+    -0.027473440393805504,
+    -0.040940895676612854,
+    0.04785357043147087,
+    0.007666892372071743,
+    0.02196655049920082,
+    -0.02172485925257206,
+    -0.05772704631090164,
+    -0.057912442833185196,
+    -0.013707132078707218,
+    -0.0447600819170475,
+    0.03290799632668495,
+    -0.016624940559267998,
+    -0.03426584228873253,
+    -0.03537943586707115,
+    0.05793914943933487,
+    0.057262521237134933,
+    -0.047313619405031204,
+    -0.05742548033595085,
+    -0.024757953360676765,
+    -0.003799890633672476,
+    -0.010186557658016682,
+    -0.005089391488581896,
+    0.02262122929096222,
+    -0.014255892485380173,
+    -0.045800793915987015,
+    -0.03351715952157974,
+    0.037218932062387466,
+    -0.05144895240664482,
+    -0.006340682506561279,
+    0.0008313074940815568,
+    0.05594702810049057,
+    -0.03038119524717331,
+    0.05759131535887718,
+    0.05306883156299591,
+    -0.05088796839118004,
+    0.005897208116948605,
+    0.04626774415373802,
+    -0.0483449250459671,
+    0.012089486233890057,
+    0.05104542151093483,
+    0.051512595266103745,
+    -0.055473003536462784,
+    -0.0046553281135857105,
+    -0.05706048756837845,
+    0.015968864783644676,
+    -0.00993336457759142,
+    -0.05253363400697708,
+    -0.05789041146636009,
+    -0.015265082940459251,
+    0.05794527754187584,
+    0.011111417785286903,
+    -0.055820826441049576,
+    0.05610261484980583,
+    -0.057935912162065506,
+    0.04158428683876991,
+    -0.01077308040112257,
+    0.04184558987617493,
+    -0.010074615478515625,
+    -0.04922471195459366,
+    -0.05755709111690521,
+    0.0539943091571331,
+    0.05342373251914978,
+    0.05115098878741264,
+    0.057295024394989014,
+    0.004043875262141228,
+    -0.05612233653664589,
+    -0.05348106473684311,
+    -0.026058237999677658,
+    -0.05310223624110222,
+    -0.05792384222149849,
+    0.03714842349290848,
+    0.032784655690193176,
+    0.05716481804847717,
+    -0.057446274906396866,
+    -0.05213526263833046,
+    -0.03795507922768593,
+    -0.05643915757536888,
+    0.03460250794887543,
+    0.043589793145656586,
+    0.008155486546456814,
+    -0.05337042361497879,
+    0.03088141605257988,
+    -0.05786627531051636,
+    0.04106840118765831,
+    -0.046473778784275055,
+    0.03388218954205513,
+    0.03853447362780571,
+    -0.03428073227405548,
+    -0.057735420763492584,
+    0.055239494889974594,
+    -0.0563679039478302,
+    0.02071250043809414,
+    0.054114144295454025,
+    0.056501615792512894,
+    -0.0575927272439003,
+    0.05688641592860222,
+    0.01431510504335165,
+    0.052866652607917786,
+    -0.01823669858276844,
+    0.04348694160580635,
+    0.016661478206515312,
+    -0.05794253200292587,
+    -0.05701031908392906,
+    -0.05779482424259186,
+    -0.029305139556527138,
+    0.057945411652326584,
+    0.055400703102350235,
+    0.015971733257174492,
+    0.057611528784036636,
+    0.05006536468863487,
+    -0.0576917789876461,
+    0.05637985095381737,
+    0.025827575474977493,
+    -0.03263641521334648,
+    -0.026609938591718674,
+    -0.04243386164307594,
+    -0.057905521243810654,
+    -0.034603070467710495,
+    0.03328342363238335,
+    0.056559957563877106,
+    0.03563298285007477,
+    0.0425889678299427,
+    -0.057943087071180344,
+    -0.057659000158309937,
+    0.016978230327367783,
+    0.05302382633090019,
+    -0.05336107313632965,
+    -0.03279490023851395,
+    -0.05751335993409157,
+    0.04996190220117569,
+    -0.008844061754643917,
+    -0.057572975754737854,
+    0.014270065352320671,
+    -0.05649217218160629,
+    -0.00761563703417778,
+    -0.0004122456884942949,
+    -0.057596344500780106,
+    -0.05767608433961868,
+    -0.05124857649207115,
+    -0.02893882617354393,
+    -0.026232732459902763,
+    -0.057938382029533386,
+    0.0224822536110878,
+    0.045651331543922424,
+    0.05791854113340378,
+    0.0577855184674263,
+    -0.05777948349714279,
+    0.0305497944355011,
+    0.014375844970345497,
+    0.042093854397535324,
+    0.050078749656677246,
+    0.05038771033287048,
+    -0.0458005890250206,
+    0.05700654536485672,
+    0.05299542471766472,
+    -0.028414258733391762,
+    0.04792691394686699,
+    0.057783566415309906,
+    -0.05753804370760918,
+    0.05310152843594551,
+    -0.02645709738135338,
+    0.021139848977327347,
+    0.027766916900873184,
+    -0.054342471063137054,
+    0.0360143668949604,
+    0.057945411652326584,
+    -0.03858993202447891,
+    0.04728046432137489,
+    0.05404670536518097,
+    0.055372707545757294,
+    0.002018790924921632,
+    0.013335001654922962,
+    0.02130136638879776,
+    0.05572318285703659,
+    0.020867912098765373,
+    0.029453132301568985,
+    -0.05366101861000061,
+    -0.01651659607887268,
+    -0.0554061196744442,
+    0.056123241782188416,
+    0.04597584530711174,
+    0.05713332071900368,
+    0.057704295963048935,
+    -0.017654184252023697,
+    -0.053638800978660583,
+    0.05316589027643204,
+    0.05793552100658417,
+    -0.029409309849143028,
+    -0.054499201476573944,
+    -0.03190199285745621,
+    0.0540502704679966,
+    -0.05127612501382828,
+    -0.05594909191131592,
+    -0.05657224729657173,
+    0.014650046825408936,
+    0.057891152799129486,
+    -0.05050978064537048,
+    0.05525769665837288,
+    -0.057676173746585846,
+    0.02734629437327385,
+    0.05788244679570198,
+    -0.03412048518657684,
+    0.054488200694322586,
+    -0.056576475501060486,
+    -0.04466506466269493,
+    0.057367485016584396,
+    0.01431044191122055,
+    0.0062766531482338905,
+    0.0007504078093916178,
+    -0.052522923797369,
+    0.05452331155538559,
+    -0.04763921722769737,
+    -0.03366430848836899,
+    -0.0312410369515419,
+    0.0386444553732872,
+    0.038270413875579834,
+    0.05710979551076889,
+    -0.04850146174430847,
+    0.0523207001388073,
+    -0.04115912318229675,
+    0.04197695851325989,
+    0.008555445820093155,
+    0.015313208103179932,
+    -0.03133125603199005,
+    0.05219867080450058,
+    -0.057471953332424164,
+    0.003825665218755603,
+    0.005724106449633837,
+    0.008036007173359394,
+    -0.05733043700456619,
+    0.05685419589281082,
+    -0.00039316253969445825,
+    0.056822601705789566,
+    0.016842132434248924,
+    0.05684541538357735,
+    0.04407148435711861,
+    0.012320034205913544,
+    -0.014636276289820671,
+    -0.049522481858730316,
+    -0.04512591287493706,
+    0.05625881254673004,
+    0.05781151354312897,
+    0.033775877207517624,
+    0.02275492250919342,
+    0.04882796108722687,
+    0.02203543297946453,
+    -0.01911238022148609,
+    -0.012403798289597034,
+    0.03935159370303154,
+    -0.03752991929650307,
+    0.024508804082870483,
+    0.01655474677681923,
+    -0.05794538930058479,
+    -0.050716325640678406,
+    -0.036949191242456436,
+    0.00027081859298050404,
+    -0.05618422478437424,
+    -0.05347509682178497,
+    0.05744408443570137,
+    0.008303605020046234,
+    0.052552729845047,
+    0.04766368493437767,
+    0.05144185200333595,
+    -0.05769546702504158,
+    -0.05794426426291466,
+    0.05787411704659462,
+    0.04993434250354767,
+    0.04284636676311493,
+    0.05574263632297516,
+    -0.05467459186911583,
+    -0.05794529616832733,
+    0.05661126226186752,
+    -0.053581345826387405,
+    0.0566229522228241,
+    0.023099971935153008,
+    -0.057287994772195816,
+    0.055962469428777695,
+    0.04615015536546707,
+    -0.042345866560935974,
+    -0.04316523298621178,
+    -0.0437355563044548,
+    0.04260164499282837,
+    0.0348903127014637,
+    0.04856734722852707,
+    -0.054435890167951584,
+    -0.056508537381887436,
+    0.00108185107819736,
+    -0.05440913140773773,
+    -0.005741042084991932,
+    -0.01451738178730011,
+    0.05147460475564003,
+    0.030713923275470734,
+    0.01747400499880314,
+    -0.056830935180187225,
+    0.04817015305161476,
+    0.05361476168036461,
+    0.0071747684851288795,
+    -0.056699238717556,
+    -0.040033385157585144,
+    0.021293440833687782,
+    0.0579378642141819,
+    -0.02216850407421589,
+    -0.04738138988614082,
+    0.03683922812342644,
+    0.012840498238801956,
+    -0.026746753603219986,
+    0.05339977890253067,
+    -0.052199024707078934,
+    0.0419926643371582,
+    0.051334649324417114,
+    -0.05479348450899124,
+    0.05709562823176384,
+    0.008851900696754456,
+    -0.03572271764278412,
+    -0.05769192799925804,
+    0.03596869483590126,
+    0.05654288828372955,
+    0.05760280415415764,
+    -0.01932356134057045,
+    0.008827864192426205,
+    0.05014968663454056,
+    -0.025818075984716415,
+    0.04364466294646263,
+    -0.03521330654621124,
+    0.056447312235832214,
+    -0.05668492615222931,
+    -0.05645068362355232,
+    0.0570235401391983,
+    -0.04383048042654991,
+    -0.03269624710083008,
+    -0.05697965621948242,
+    0.050423480570316315,
+    -0.056954365223646164,
+    -0.03717518597841263,
+    -0.054278578609228134,
+    0.01815228909254074,
+    -0.04554884880781174,
+    -0.038844622671604156,
+    -0.00115523103158921,
+    -0.0503779835999012,
+    -0.028021417558193207,
+    0.05777444317936897,
+    -0.05176926776766777,
+    -0.039048295468091965,
+    -0.05006466433405876,
+    -0.057629093527793884,
+    -0.05737613886594772,
+    0.0570095032453537,
+    -0.02774762734770775,
+    -0.0354183092713356,
+    0.009282933548092842,
+    0.04300697147846222,
+    0.05220640078186989,
+    -0.05793973058462143,
+    -0.057771481573581696,
+    0.009589280001819134,
+    0.0109172398224473,
+    -0.054423000663518906,
+    -0.05131438001990318,
+    -0.0385981947183609,
+    0.05794306844472885,
+    0.03088189847767353,
+    -0.04336808994412422,
+    -0.05794130638241768,
+    0.05654902011156082,
+    0.05778438225388527,
+    0.0008990856003947556,
+    -0.05747589096426964,
+    0.05573337897658348,
+    0.0511271208524704,
+    -0.0286096204072237,
+    0.05786213278770447,
+    0.021611403673887253,
+    -0.054869066923856735,
+    0.050852708518505096,
+    -0.05745959281921387,
+    -0.04640930891036987,
+    0.05786466598510742,
+    -0.04290778562426567,
+    -0.05696779489517212,
+    0.03541213274002075,
+    -0.050877895206213,
+    -0.00706477789208293,
+    -0.05068666860461235,
+    0.05740462988615036,
+    -0.01305778231471777,
+    0.01098208874464035,
+    -0.037172358483076096,
+    -0.039549194276332855,
+    0.047287266701459885,
+    0.04183194041252136,
+    -0.05337654799222946,
+    0.05450642108917236,
+    0.049628846347332,
+    0.02491292543709278,
+    -0.04892687872052193,
+    0.05320126935839653,
+    0.054099611937999725,
+    -0.04482346028089523,
+    0.05709236487746239,
+    -0.04348216578364372,
+    0.04672841355204582,
+    -0.056132085621356964,
+    0.05781672149896622,
+    0.042787835001945496,
+    0.05791810154914856,
+    -0.05381596460938454,
+    0.057687580585479736,
+    0.007106074132025242,
+    -0.03968450799584389,
+    0.05726141482591629,
+    -0.05794287845492363,
+    0.0010419453028589487,
+    0.03247185796499252,
+    0.01772509329020977,
+    -0.057750191539525986,
+    0.04294091463088989,
+    0.05794531852006912,
+    -0.010027258656919003,
+    -0.0552884116768837
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Start Interview; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in data-processing context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "extras",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\extras"
+  }
+}

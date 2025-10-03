@@ -1,0 +1,1094 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Telegram Redis Create Webhook",
+    "file_name": "0782_Telegram_Redis_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram\\0782_Telegram_Redis_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "554a0f5a0231"
+  },
+  "structure": {
+    "total_nodes": 40,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.telegramTrigger",
+      "n8n-nodes-base.redis",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "@n8n/n8n-nodes-langchain.memoryManager",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.telegram",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.executionData"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.telegramTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.redis",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 4
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryManager",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.telegram",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.executionData",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Telegram Trigger",
+        "type": "n8n-nodes-base.telegramTrigger",
+        "position": [
+          -1060,
+          2060
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Send Next Question",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2560,
+          1900
+        ]
+      },
+      {
+        "name": "Send Response",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          1540,
+          2540
+        ]
+      },
+      {
+        "name": "Has No Record?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          60,
+          2260
+        ]
+      },
+      {
+        "name": "Is Survey Continue?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1980,
+          2060
+        ]
+      },
+      {
+        "name": "Get State2",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -520,
+          2060
+        ]
+      },
+      {
+        "name": "Get Columns1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1440,
+          2060
+        ]
+      },
+      {
+        "name": "Set Variables1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -880,
+          2060
+        ]
+      },
+      {
+        "name": "Message Type1",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -320,
+          2060
+        ]
+      },
+      {
+        "name": "Get Command1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -120,
+          1760
+        ]
+      },
+      {
+        "name": "Bot Actions1",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          60,
+          1760
+        ]
+      },
+      {
+        "name": "Memory3",
+        "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+        "position": [
+          2220,
+          2060
+        ]
+      },
+      {
+        "name": "Get Survey State1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1620,
+          2060
+        ]
+      },
+      {
+        "name": "Reset Agent Memory1",
+        "type": "@n8n/n8n-nodes-langchain.memoryManager",
+        "position": [
+          2240,
+          1900
+        ]
+      },
+      {
+        "name": "Memory4",
+        "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+        "position": [
+          1120,
+          2700
+        ]
+      },
+      {
+        "name": "Start Session1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          440,
+          1620
+        ]
+      },
+      {
+        "name": "Get State3",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          1260,
+          2060
+        ]
+      },
+      {
+        "name": "Increment Index1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          1800,
+          2060
+        ]
+      },
+      {
+        "name": "Interview Agent1",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1040,
+          2540
+        ]
+      },
+      {
+        "name": "Get Record1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          -120,
+          2260
+        ]
+      },
+      {
+        "name": "Append Responses1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          440,
+          2440
+        ]
+      },
+      {
+        "name": "Update Answer2",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1360,
+          2540
+        ]
+      },
+      {
+        "name": "Get Last Bot Message1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          260,
+          2440
+        ]
+      },
+      {
+        "name": "Update Answer3",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1020,
+          2180
+        ]
+      },
+      {
+        "name": "Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1000,
+          2700
+        ]
+      },
+      {
+        "name": "Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          600,
+          2600
+        ]
+      },
+      {
+        "name": "Should Follow Up?1",
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "position": [
+          620,
+          2440
+        ]
+      },
+      {
+        "name": "Execution Data2",
+        "type": "n8n-nodes-base.executionData",
+        "position": [
+          -700,
+          2060
+        ]
+      },
+      {
+        "name": "Create Record2",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          260,
+          2060
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1120,
+          1820
+        ]
+      },
+      {
+        "name": "Send Start",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          600,
+          1620
+        ]
+      },
+      {
+        "name": "Send Start1",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          260,
+          1900
+        ]
+      },
+      {
+        "name": "Completed Survey",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2220,
+          2280
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -180,
+          1540
+        ]
+      },
+      {
+        "name": "Create Record1",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          280,
+          1620
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          520,
+          2180
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          980,
+          2340
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1200,
+          1820
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2160,
+          1680
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1740,
+          1300
+        ]
+      }
+    ],
+    "connections_count": 32,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 39
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 1030,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "telegramTrigger",
+      "append responses1",
+      "sticky note5",
+      "get state2",
+      "get survey state1",
+      "send start",
+      "sticky note7",
+      "get columns1",
+      "switch",
+      "create record1",
+      "increment index1",
+      "sticky note3",
+      "memory4",
+      "send start1",
+      "stickyNote",
+      "ai-ml",
+      "is survey continue?",
+      "get state3",
+      "get command1",
+      "send next question",
+      "sticky note6",
+      "telegram trigger",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "reset agent memory1",
+      "@n8n/n8n nodes langchain.textClassifier",
+      "create record2",
+      "webhook integration",
+      "httpRequest",
+      "model2",
+      "model3",
+      "executionData",
+      "has no record?",
+      "redis",
+      "update answer3",
+      "get record1",
+      "sticky note4",
+      "set",
+      "@n8n/n8n nodes langchain.memoryManager",
+      "get last bot message1",
+      "execution data2",
+      "bot actions1",
+      "interview agent1",
+      "@n8n/n8n nodes langchain.agent",
+      "googleSheets",
+      "sticky note8",
+      "@n8n/n8n nodes langchain.memoryRedisChat",
+      "telegram",
+      "set variables1",
+      "completed survey",
+      "complex",
+      "should follow up?1",
+      "sticky note2",
+      "message type1",
+      "send response",
+      "update answer2",
+      "memory3",
+      "start session1"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 40 nodos activado por Telegram Trigger que ejecuta: Send Next Question, Send Response, Has No Record? en la categoría de ai-ml.",
+    "semantic_content": "Nodos: Telegram Trigger (telegramTrigger), Send Next Question (telegram), Send Response (telegram), Has No Record? (if), Is Survey Continue? (if), Get State2 (redis), Get Columns1 (googleSheets), Set Variables1 (set), Message Type1 (switch), Get Command1 (set), Bot Actions1 (switch), Memory3 (@n8n/n8n-nodes-langchain.memoryRedisChat), Get Survey State1 (set), Reset Agent Memory1 (@n8n/n8n-nodes-langchain.memoryManager), Memory4 (@n8n/n8n-nodes-langchain.memoryRedisChat), Start Session1 (redis), Get State3 (redis), Increment Index1 (redis), Interview Agent1 (@n8n/n8n-nodes-langchain.agent), Get Record1 (googleSheets), Append Responses1 (set), Update Answer2 (httpRequest), Get Last Bot Message1 (redis), Update Answer3 (httpRequest), Model2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Model3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Should Follow Up?1 (@n8n/n8n-nodes-langchain.textClassifier), Execution Data2 (executionData), Create Record2 (googleSheets), Sticky Note8 (stickyNote), Send Start (telegram), Send Start1 (telegram), Completed Survey (telegram), Sticky Note2 (stickyNote), Create Record1 (googleSheets), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Telegram Trigger",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.telegramTrigger",
+      "Has No Record?",
+      "Telegram Trigger",
+      "Send Next Question",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.if",
+      "Send Response"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.telegramtrigger",
+      "n8n-nodes-base.redis",
+      "@n8n/n8n-nodes-langchain.memorymanager",
+      "@n8n/n8n-nodes-langchain.memoryredischat",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.executiondata",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.telegram",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.textclassifier"
+    ],
+    "search_terms": [
+      "create",
+      "redis",
+      "webhook",
+      "telegram",
+      "0782",
+      "0782_telegram_redis_create_webhook"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.telegramTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 77.66990291262135,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.28398058252426
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 0.9999999403953552,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:20.332066"
+  },
+  "semantic_vector": [
+    -0.0573405958712101,
+    -0.05680331960320473,
+    -0.05319676548242569,
+    -0.056851912289857864,
+    -0.027906125411391258,
+    -0.030715011060237885,
+    0.027416791766881943,
+    -0.056221283972263336,
+    -0.05586766451597214,
+    0.05856458470225334,
+    -0.01616710051894188,
+    -0.04962814971804619,
+    -0.02316945232450962,
+    -0.03482702746987343,
+    -0.033651623874902725,
+    0.0590968057513237,
+    0.05059032142162323,
+    -0.03969434276223183,
+    -0.0582149513065815,
+    0.000228070086450316,
+    -0.049616798758506775,
+    0.05197039246559143,
+    0.016255153343081474,
+    -0.04178701713681221,
+    -0.03346864506602287,
+    0.008881823159754276,
+    -0.0577203594148159,
+    0.04171167314052582,
+    0.03403352200984955,
+    0.029152322560548782,
+    0.05810798332095146,
+    -0.026786083355545998,
+    -0.05805645510554314,
+    -0.053793422877788544,
+    0.04114890843629837,
+    0.0028787238989025354,
+    0.04794285073876381,
+    0.004633281845599413,
+    -0.019536547362804413,
+    -0.053775910288095474,
+    -0.03581014648079872,
+    0.02828206494450569,
+    0.003593703266233206,
+    0.048032086342573166,
+    0.05908576026558876,
+    0.023817142471671104,
+    0.007391815539449453,
+    -0.004743403755128384,
+    -0.03802315518260002,
+    -0.05834919586777687,
+    -0.04826197400689125,
+    0.05601147934794426,
+    -0.05909259617328644,
+    -0.058372292667627335,
+    -0.057048216462135315,
+    -0.04415155574679375,
+    0.05789687857031822,
+    -0.03549715131521225,
+    0.003006086451932788,
+    0.05330532044172287,
+    -0.021990666165947914,
+    0.03991253674030304,
+    0.0007802877807989717,
+    0.045520711690187454,
+    0.03014720417559147,
+    0.021717669442296028,
+    0.05837298184633255,
+    0.03778202459216118,
+    0.03376536816358566,
+    -0.02819032035768032,
+    -0.054969146847724915,
+    -0.036986518651247025,
+    -0.017116935923695564,
+    0.057783786207437515,
+    -0.05254094675183296,
+    0.03332052752375603,
+    0.034770093858242035,
+    -0.05876878648996353,
+    0.04215969145298004,
+    -0.00397505285218358,
+    0.04837018996477127,
+    -0.0025222101248800755,
+    0.025079531595110893,
+    -0.056891802698373795,
+    0.044152699410915375,
+    0.004934461321681738,
+    0.001536548719741404,
+    0.02900010719895363,
+    -0.005990587640553713,
+    0.028205787762999535,
+    -0.05354077368974686,
+    0.014144171960651875,
+    -0.004744156263768673,
+    -0.021347688511013985,
+    0.05598079785704613,
+    -0.013452521525323391,
+    0.055204011499881744,
+    -0.0003329185419715941,
+    -0.058710865676403046,
+    -0.059087321162223816,
+    0.033985503017902374,
+    -0.03720276802778244,
+    0.0305684395134449,
+    0.02154075726866722,
+    -0.007164456881582737,
+    -0.00253970711492002,
+    0.059089820832014084,
+    0.05875960737466812,
+    -0.03534555062651634,
+    -0.055597517639398575,
+    -0.05300316587090492,
+    -0.047662924975156784,
+    -0.036390092223882675,
+    -0.02435385249555111,
+    0.03951835632324219,
+    -0.027628419920802116,
+    -0.056691937148571014,
+    -0.011277600191533566,
+    -0.015413768589496613,
+    -0.04336710646748543,
+    0.0360422246158123,
+    0.04019635170698166,
+    0.05502666160464287,
+    -0.027119457721710205,
+    0.05845068022608757,
+    0.055547695606946945,
+    0.03877699747681618,
+    0.049779653549194336,
+    0.0357593409717083,
+    -0.0347050242125988,
+    -0.021240808069705963,
+    0.029933631420135498,
+    0.05706154927611351,
+    -0.05899372324347496,
+    -0.024078447371721268,
+    -0.05765460431575775,
+    -0.00649554468691349,
+    0.017136575654149055,
+    -0.058175500482320786,
+    -0.058971017599105835,
+    -0.02708199806511402,
+    0.059096068143844604,
+    0.0400354340672493,
+    -0.041352905333042145,
+    0.05437270551919937,
+    -0.05908983200788498,
+    0.03938458114862442,
+    -0.004932403098791838,
+    -0.03310469910502434,
+    -0.028618276119232178,
+    -0.045807287096977234,
+    -0.05373420566320419,
+    0.04826370254158974,
+    0.05402333661913872,
+    0.01624774932861328,
+    0.05828766152262688,
+    -0.021162956953048706,
+    -0.05680813267827034,
+    -0.010539406910538673,
+    0.050713587552309036,
+    -0.05892655625939369,
+    -0.05901750177145004,
+    -0.004713024012744427,
+    0.030758902430534363,
+    0.05192025750875473,
+    -0.03445721045136452,
+    -0.058049678802490234,
+    -0.055612385272979736,
+    -0.05233132839202881,
+    0.05705501511693001,
+    0.0536770336329937,
+    0.015002022497355938,
+    -0.05736015364527702,
+    0.043017201125621796,
+    -0.0588812455534935,
+    0.052578166127204895,
+    -0.019739139825105667,
+    -0.011681088246405125,
+    -0.019540220499038696,
+    -0.05092371627688408,
+    -0.058687593787908554,
+    0.022899342700839043,
+    -0.052638642489910126,
+    -0.04767252877354622,
+    0.05763449892401695,
+    0.058634839951992035,
+    -0.05740486457943916,
+    0.05173276364803314,
+    0.038031332194805145,
+    0.05483393743634224,
+    -0.050822317600250244,
+    0.033935923129320145,
+    -0.036098696291446686,
+    -0.05907730758190155,
+    -0.05570541322231293,
+    -0.05821956321597099,
+    0.04266275465488434,
+    0.05909678712487221,
+    0.05787895992398262,
+    -0.03359031677246094,
+    -0.007025318685919046,
+    0.051233984529972076,
+    -0.057437002658843994,
+    0.0508609265089035,
+    -0.009399998933076859,
+    -0.020981386303901672,
+    -0.018236245959997177,
+    -0.023213928565382957,
+    -0.058550264686346054,
+    -0.0006906160269863904,
+    0.045165687799453735,
+    0.04955841228365898,
+    0.057918746024370193,
+    0.03398166224360466,
+    -0.059094127267599106,
+    -0.05232325568795204,
+    -0.041989926248788834,
+    0.04209468886256218,
+    -4.876117964158766e-05,
+    -0.012222519144415855,
+    -0.03704685717821121,
+    0.05186537653207779,
+    -0.0007645796285942197,
+    -0.047380249947309494,
+    -0.026067806407809258,
+    -0.05894673243165016,
+    -0.04726855084300041,
+    -0.05112713575363159,
+    -0.05769713968038559,
+    -0.058855168521404266,
+    0.027071943506598473,
+    -0.05660993233323097,
+    -0.0023313863202929497,
+    -0.059093575924634933,
+    0.03982699289917946,
+    -0.020495416596531868,
+    0.05904093012213707,
+    -0.003714514197781682,
+    -0.047944437712430954,
+    -0.043751783668994904,
+    -0.044092535972595215,
+    0.058699365705251694,
+    0.02932608127593994,
+    0.057318735867738724,
+    -0.032500870525836945,
+    0.058892395347356796,
+    0.05703527107834816,
+    0.010761335492134094,
+    0.034661684185266495,
+    0.05905674397945404,
+    -0.058010879904031754,
+    -0.03333907946944237,
+    -0.01566273719072342,
+    0.009022871032357216,
+    0.056758813560009,
+    -0.058577507734298706,
+    -0.015274078585207462,
+    0.05909676477313042,
+    -0.057334717363119125,
+    0.028715096414089203,
+    0.04541802406311035,
+    0.03363737091422081,
+    0.013851882889866829,
+    0.05752815678715706,
+    -0.013085277751088142,
+    0.03293997794389725,
+    0.05701529234647751,
+    0.05586087703704834,
+    -0.057596419006586075,
+    0.05607016757130623,
+    -0.058697279542684555,
+    0.054244738072156906,
+    0.036225754767656326,
+    0.043246183544397354,
+    0.058878958225250244,
+    -0.05821586772799492,
+    -0.05444827303290367,
+    0.058610349893569946,
+    0.05906692519783974,
+    -0.04021112620830536,
+    -0.04378952085971832,
+    0.009606728330254555,
+    0.05571633577346802,
+    -0.025628192350268364,
+    -0.0434989295899868,
+    -0.058127809315919876,
+    0.05029032379388809,
+    0.055350273847579956,
+    -0.05692537501454353,
+    0.05734202638268471,
+    -0.03837595880031586,
+    -0.025260798633098602,
+    0.058386825025081635,
+    0.000628919224254787,
+    0.05678234249353409,
+    -0.05756251513957977,
+    0.025197584182024002,
+    0.03896625339984894,
+    0.02761855348944664,
+    0.028322702273726463,
+    0.031021414324641228,
+    -0.050645627081394196,
+    0.04181195795536041,
+    -0.028870774433016777,
+    -0.03958696871995926,
+    -0.02803906984627247,
+    0.031585127115249634,
+    0.05350443720817566,
+    0.05710729956626892,
+    -0.056293074041604996,
+    0.05878158658742905,
+    0.027137018740177155,
+    -0.041672542691230774,
+    -0.011931774206459522,
+    0.023643754422664642,
+    -0.03419936075806618,
+    0.04167423024773598,
+    -0.04487541690468788,
+    -0.013582566753029823,
+    -0.05058992654085159,
+    0.0012944602640345693,
+    -0.045206379145383835,
+    0.05876568704843521,
+    0.042268067598342896,
+    0.058069996535778046,
+    0.004879691172391176,
+    0.058262452483177185,
+    -0.001184580149129033,
+    -0.023639783263206482,
+    -0.055027514696121216,
+    0.0011891063768416643,
+    -0.0567992702126503,
+    0.03825657069683075,
+    0.05607513338327408,
+    0.015302564948797226,
+    -0.029976706951856613,
+    0.05522053688764572,
+    0.05905580148100853,
+    -0.0368184819817543,
+    0.04913907125592232,
+    0.04413137957453728,
+    -0.05155047029256821,
+    0.007801237050443888,
+    -0.04326438903808594,
+    -0.05909630283713341,
+    -0.038783058524131775,
+    -0.05095182731747627,
+    0.05389312282204628,
+    -0.04522551968693733,
+    0.009333102963864803,
+    0.05854630097746849,
+    0.041411690413951874,
+    -0.05072776600718498,
+    0.05766616016626358,
+    0.029006216675043106,
+    -0.04008381441235542,
+    -0.05909421294927597,
+    0.055735599249601364,
+    0.025620445609092712,
+    0.05291060730814934,
+    0.05146630480885506,
+    -0.018775533884763718,
+    -0.0590946227312088,
+    0.0170426145195961,
+    -0.039061836898326874,
+    -0.03502384573221207,
+    0.006775807123631239,
+    -0.05169488117098808,
+    0.05386575311422348,
+    0.048590585589408875,
+    -0.011411434970796108,
+    -0.035245928913354874,
+    -0.0471201129257679,
+    0.055881671607494354,
+    0.057493966072797775,
+    0.037059418857097626,
+    -0.04928244650363922,
+    -0.05814773589372635,
+    0.046523161232471466,
+    0.02682606689631939,
+    -0.048644714057445526,
+    -0.04288629814982414,
+    0.036083485931158066,
+    0.016025440767407417,
+    -0.03903099149465561,
+    -0.05502031370997429,
+    0.051503848284482956,
+    0.0446658730506897,
+    -0.04441915079951286,
+    -0.057587672024965286,
+    -0.054887305945158005,
+    -0.05067526176571846,
+    0.056303706020116806,
+    0.056703079491853714,
+    -0.057695791125297546,
+    0.05537816137075424,
+    0.032260648906230927,
+    0.007167319767177105,
+    0.04181785508990288,
+    -0.047067806124687195,
+    0.04911685734987259,
+    0.055775709450244904,
+    -0.055303990840911865,
+    0.05856053903698921,
+    -0.030413201078772545,
+    -0.050212107598781586,
+    -0.05905275046825409,
+    0.032464515417814255,
+    0.030299698933959007,
+    0.052371371537446976,
+    -0.028785275295376778,
+    0.05506664514541626,
+    0.03955459222197533,
+    0.028742101043462753,
+    -0.03683555871248245,
+    0.00605232547968626,
+    0.0564102977514267,
+    -0.05013519898056984,
+    -0.013663016259670258,
+    0.004435824695974588,
+    -0.055165357887744904,
+    -0.051285695284605026,
+    -0.05803241953253746,
+    0.057614218443632126,
+    -0.011834296397864819,
+    -0.015938466414809227,
+    -0.058584798127412796,
+    0.03490012511610985,
+    -0.03906435891985893,
+    0.01966937631368637,
+    -0.05826415866613388,
+    0.00027445805608294904,
+    0.04545646533370018,
+    0.05834353342652321,
+    -0.04352611303329468,
+    -0.014750957489013672,
+    -0.039941951632499695,
+    -0.056627631187438965,
+    -0.0584723986685276,
+    0.04172243922948837,
+    -0.029139351099729538,
+    -0.04945136234164238,
+    0.010742251761257648,
+    -0.04558791592717171,
+    0.05424124374985695,
+    -0.05908829718828201,
+    -0.056128595024347305,
+    0.030675871297717094,
+    0.03688479959964752,
+    -0.05802007019519806,
+    -0.057945337146520615,
+    -0.03945399448275566,
+    0.05908973142504692,
+    -0.011223223991692066,
+    -0.029634227976202965,
+    -0.05905550718307495,
+    0.037720151245594025,
+    0.05900685489177704,
+    0.020972860977053642,
+    -0.054314617067575455,
+    0.032191548496484756,
+    0.04926115274429321,
+    0.03216845914721489,
+    0.0588722862303257,
+    0.02834421768784523,
+    -0.057816844433546066,
+    0.04472184181213379,
+    -0.04624810442328453,
+    -0.0437236912548542,
+    0.05909251421689987,
+    -0.048271674662828445,
+    -0.05659056454896927,
+    0.011335156857967377,
+    -0.041519418358802795,
+    -0.055977217853069305,
+    -0.047205597162246704,
+    0.05827051401138306,
+    0.03703352063894272,
+    0.01482756994664669,
+    0.019386662170290947,
+    -0.0580468475818634,
+    0.01805543154478073,
+    -0.04341675341129303,
+    -0.02732856571674347,
+    0.03955147787928581,
+    0.05506769195199013,
+    -0.04671315848827362,
+    -0.008565283380448818,
+    0.00884269643574953,
+    0.055853765457868576,
+    -0.03449680656194687,
+    0.058310627937316895,
+    -0.054141610860824585,
+    0.04973640665411949,
+    -0.05351034179329872,
+    0.05887923017144203,
+    0.05478755757212639,
+    0.05815334618091583,
+    -0.05532591789960861,
+    0.05728313699364662,
+    0.05810512602329254,
+    -0.05759507045149803,
+    0.058428358286619186,
+    -0.05903210863471031,
+    -0.03237209841609001,
+    0.04596454277634621,
+    0.03691578656435013,
+    -0.05772916600108147,
+    -0.0063895792700350285,
+    0.05909573659300804,
+    -0.04713672399520874,
+    -0.05887993425130844
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Telegram Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Telegram",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram"
+  }
+}

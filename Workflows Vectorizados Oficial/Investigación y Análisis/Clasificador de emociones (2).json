@@ -1,0 +1,639 @@
+{
+  "name": "Clasificador de emociones",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {
+          "responseMode": "responseNodes"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -992,
+        -1328
+      ],
+      "id": "343a56a5-bf4b-4a12-a488-f1e1a731b570",
+      "name": "When chat message received",
+      "webhookId": "4e3c4b97-821e-4172-853b-f5ab12b5707e"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        320,
+        -1456
+      ],
+      "id": "b9e15494-8fca-4b2e-9276-045c6c12167c",
+      "name": "Simple Memory3"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        304,
+        -1120
+      ],
+      "id": "1084afd8-48cb-47b2-850c-aef2cd9c85b5",
+      "name": "Simple Memory4"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        160,
+        -1472
+      ],
+      "id": "0990b481-33d5-4b28-9395-b0c0ad477887",
+      "name": "Google Gemini Chat Model4",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "zrz5nYKdCIiCqc4y",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        144,
+        -1136
+      ],
+      "id": "3d554a35-631c-46f2-9179-b49f384c767d",
+      "name": "Google Gemini Chat Model5",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "zrz5nYKdCIiCqc4y",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "Actúa como un clasificador experto en análisis de sentimientos. Tu tarea es identificar el estado emocional predominante del usuario a partir de su mensaje. Evalúa cuidadosamente el tono, el contexto, las expresiones lingüísticas y cualquier indicio semántico que revele su estado de ánimo. Clasifica el sentimiento en una sola de las siguientes categorías:\n- Felicidad\n- Tristeza\n- Enojo\nDevuelve únicamente el nombre de la emoción detectada, sin explicaciones, sin emojis, sin puntuación adicional.\nEjemplos de entrada y salida:\n- Entrada: \"¡Hoy fue increíble! Me ascendieron en el trabajo y todo salió perfecto.\"\nSalida: Felicidad\n- Entrada: \"No entiendo por qué todo me sale mal últimamente. Me siento vacío.\"\nSalida: Tristeza\n- Entrada: \"Estoy harto de que nadie escuche lo que digo. Siempre me ignoran.\"\nSalida: Enojo\n- Entrada: \"Me alegra que hayas venido, necesitaba hablar con alguien.\"\nSalida: Felicidad\n- Entrada: \"Otra vez se cayó el sistema y perdí todo mi progreso. Esto es inaceptable.\"\nSalida: Enojo\n- Entrada: \"Extraño mucho a mi familia, sobre todo en días como este.\"\nSalida: Tristeza\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -608,
+        -1328
+      ],
+      "id": "31110e1c-dac7-42bf-a247-0afe296f0845",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        -656,
+        -1152
+      ],
+      "id": "8e7a1d71-cb11-4a9d-9b34-9b8647c187f8",
+      "name": "Google Gemini Chat Model6",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "zrz5nYKdCIiCqc4y",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "eddym062806@gmail.com",
+        "subject": "Consuelo",
+        "message": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        608,
+        -1536
+      ],
+      "id": "5bd16ae7-c2b3-4798-bc1d-9811481d16f3",
+      "name": "Send a message3",
+      "webhookId": "477be49a-60e0-40a2-80d7-f6cb27804cec",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "S9ABRHlm9jC5lZOy",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "eddym062806@gmail.com",
+        "subject": "Consuelo",
+        "message": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        608,
+        -1328
+      ],
+      "id": "4b690ba3-deec-4de6-9871-ed8733c7e8a7",
+      "name": "Send a message4",
+      "webhookId": "477be49a-60e0-40a2-80d7-f6cb27804cec",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "S9ABRHlm9jC5lZOy",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "https://docs.google.com/document/d/1ZviIQhf0KRkxjKKrfgmRUrubwbNZd-VcoCoMb70Qnjw/edit?tab=t.0",
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "insert",
+              "text": "={{ $json.message }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1056,
+        -1328
+      ],
+      "id": "83069003-38c3-4679-bff3-b84377f47010",
+      "name": "Update a document1",
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "t1TG8nuvRZ0VoyIw",
+          "name": "Google Docs account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const aiAgentTrizteza3 = $(\"AI Agent Trizteza3\").all();\nconst whenChatMessageReceived = $(\"When chat message received\").all();\n\nconst aiAgentTrizteza3Message = aiAgentTrizteza3[0]?.json?.output;\nconst whenChatMessageReceivedMessage =\n  whenChatMessageReceived[0]?.json?.chatInput;\n\nconst message = aiAgentTrizteza3Message || whenChatMessageReceivedMessage;\n\nreturn [{ json: { message } }];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        864,
+        -1328
+      ],
+      "id": "9148c489-fd4a-45f9-9f3f-74b12c0ff297",
+      "name": "Code in JavaScript2"
+    },
+    {
+      "parameters": {
+        "message": "={{ $('Code in JavaScript2').item.json.message }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chat",
+      "typeVersion": 1,
+      "position": [
+        1264,
+        -1328
+      ],
+      "id": "b72c7233-221e-408c-859f-812dc51caac2",
+      "name": "Respond to Chat1"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.output }}",
+                    "rightValue": "Felicidad",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    },
+                    "id": "9a9bf9bb-ca74-4059-bae8-913f5d734d06"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "=Felicidad"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d6abdd2c-2371-4881-a7c3-06e6123ecc3a",
+                    "leftValue": "={{ $json.output }}",
+                    "rightValue": "Tristeza",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Tristeza"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "755f02e4-136c-4e1d-9753-8f55f35e17c3",
+                    "leftValue": "={{ $json.output }}",
+                    "rightValue": "Enojo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "contains"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Enojo"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -208,
+        -1344
+      ],
+      "id": "6938974c-75e5-4786-9aa7-fecfd2b02ac4",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $('When chat message received').item.json.chatInput }}",
+        "options": {
+          "systemMessage": "Responde siempre al usuario de la mejor manera."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        -1664
+      ],
+      "id": "40a8cd47-29bb-4ae4-9577-23b5d91e4cf1",
+      "name": "AI Agent Felicidad1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "= {{ $('When chat message received').item.json.chatInput }}",
+        "options": {
+          "systemMessage": "=Responde al usuario de forma triste y consoladora"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        -1328
+      ],
+      "id": "914d1587-8074-484b-bb90-32fe6dc28530",
+      "name": "AI Agent Trizteza2"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        304,
+        -736
+      ],
+      "id": "a0c76920-f08c-4b0d-a53e-29b369871aed",
+      "name": "Simple Memory5"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.5-flash-lite",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        80,
+        -736
+      ],
+      "id": "d861636b-bee7-4c4f-a522-f6df3897b66c",
+      "name": "Google Gemini Chat Model7",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "zrz5nYKdCIiCqc4y",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "eddym062806@gmail.com",
+        "subject": "Consuelo",
+        "message": "={{ $json.output }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        608,
+        -1104
+      ],
+      "id": "96bf3bb8-c617-49da-bcbe-1225de449e46",
+      "name": "Send a message5",
+      "webhookId": "477be49a-60e0-40a2-80d7-f6cb27804cec",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "S9ABRHlm9jC5lZOy",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "= {{ $('When chat message received').item.json.chatInput }}",
+        "options": {
+          "systemMessage": "=Responde al usuario de forma enojada y consoladora"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        208,
+        -960
+      ],
+      "id": "5fa8e698-592d-45a6-81c7-bf87abd0b6f4",
+      "name": "AI Agent Trizteza3"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory3": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent Felicidad1",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory4": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent Trizteza2",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent Felicidad1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent Trizteza2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message3": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message4": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update a document1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Chat1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript2": {
+      "main": [
+        [
+          {
+            "node": "Update a document1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent Felicidad1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent Trizteza2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent Trizteza3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent Felicidad1": {
+      "main": [
+        [
+          {
+            "node": "Send a message3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent Trizteza2": {
+      "main": [
+        [
+          {
+            "node": "Send a message4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory5": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent Trizteza3",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent Trizteza3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send a message5": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent Trizteza3": {
+      "main": [
+        [
+          {
+            "node": "Send a message5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner"
+  },
+  "versionId": "f15047b3-c1d3-4c8f-9237-727b6b17897d",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d184c9c2952841341b4fe9a215faefda442234c824bc854116a19c4a09f3f2a5"
+  },
+  "id": "fgdhfeIXOGWEb0Bz",
+  "tags": []
+}

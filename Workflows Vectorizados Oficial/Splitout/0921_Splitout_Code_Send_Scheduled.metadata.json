@@ -1,0 +1,1168 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Splitout Code Send Scheduled",
+    "file_name": "0921_Splitout_Code_Send_Scheduled.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\0921_Splitout_Code_Send_Scheduled.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "6d9e61a460fc"
+  },
+  "structure": {
+    "total_nodes": 47,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.scheduleTrigger",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.aggregate"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 5
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When Executed by Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -2200,
+          780
+        ]
+      },
+      {
+        "name": "Monday @ 6am",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -2400,
+          -160
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Get Last Week's Messages",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          -2200,
+          -160
+        ]
+      },
+      {
+        "name": "Simplify Message",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1320,
+          380
+        ]
+      },
+      {
+        "name": "Group By User",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -2000,
+          -160
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -1800,
+          -160
+        ]
+      },
+      {
+        "name": "Messages to Items",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -1540,
+          380
+        ]
+      },
+      {
+        "name": "Get User",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          -1760,
+          380
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -1100,
+          380
+        ]
+      },
+      {
+        "name": "Split Out1",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -1760,
+          780
+        ]
+      },
+      {
+        "name": "Get Thread",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          -1100,
+          780
+        ]
+      },
+      {
+        "name": "Aggregate1",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -440,
+          860
+        ]
+      },
+      {
+        "name": "Simplify Thread Comments",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -660,
+          780
+        ]
+      },
+      {
+        "name": "Filter",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -880,
+          780
+        ]
+      },
+      {
+        "name": "Message Ref",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1320,
+          780
+        ]
+      },
+      {
+        "name": "Split Out2",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -1320,
+          1080
+        ]
+      },
+      {
+        "name": "Map Reply UserIds",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1760,
+          1160
+        ]
+      },
+      {
+        "name": "Get Reply Users",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          -1100,
+          1080
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          -120,
+          1380
+        ]
+      },
+      {
+        "name": "Summarise Threads",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -220,
+          1160
+        ]
+      },
+      {
+        "name": "Aggregate2",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          160,
+          1160
+        ]
+      },
+      {
+        "name": "Aggregate Reply Users",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -880,
+          1080
+        ]
+      },
+      {
+        "name": "Reply Users",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -660,
+          1160
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          -460,
+          0
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -1540,
+          780
+        ]
+      },
+      {
+        "name": "Aggregate3",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1320,
+          580
+        ]
+      },
+      {
+        "name": "Aggregate4",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -1100,
+          580
+        ]
+      },
+      {
+        "name": "Switch",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -1980,
+          780
+        ]
+      },
+      {
+        "name": "Map Users to Messages",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          -1520,
+          -160
+        ]
+      },
+      {
+        "name": "Get User Info",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -880,
+          380
+        ]
+      },
+      {
+        "name": "Fetch Message Replies",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          -1300,
+          -160
+        ]
+      },
+      {
+        "name": "Has ReplyUsers?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1540,
+          1160
+        ]
+      },
+      {
+        "name": "Messages to Items1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -440,
+          1160
+        ]
+      },
+      {
+        "name": "Aggregate Results",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -760,
+          -160
+        ]
+      },
+      {
+        "name": "Team Member Weekly Report Agent",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -560,
+          -160
+        ]
+      },
+      {
+        "name": "Merge with Results",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -60,
+          -160
+        ]
+      },
+      {
+        "name": "Team Weekly Report Agent",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          160,
+          -160
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          240,
+          0
+        ]
+      },
+      {
+        "name": "Post Report in Team Channel",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          820,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2460,
+          -440
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1620,
+          -440
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -840,
+          -440
+        ]
+      },
+      {
+        "name": "Summarize Message Threads",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          -1080,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -160,
+          -440
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          540,
+          -440
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2460,
+          360
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2940,
+          -1380
+        ]
+      }
+    ],
+    "connections_count": 38,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 45
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "Team communication",
+      "Scheduled automation"
+    ],
+    "complexity_score": 1165,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "executeWorkflow",
+      "fetch message replies",
+      "group by user",
+      "message ref",
+      "sticky note5",
+      "split out2",
+      "get reply users",
+      "get user",
+      "google gemini chat model",
+      "switch",
+      "get last week's messages",
+      "aggregate1",
+      "reply users",
+      "get user info",
+      "stickyNote",
+      "team weekly report agent",
+      "sticky note3",
+      "map reply userids",
+      "split out1",
+      "ai-ml",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "messages to items",
+      "scheduleTrigger",
+      "simplify message",
+      "slack",
+      "map users to messages",
+      "summarise threads",
+      "messages to items1",
+      "webhook integration",
+      "google gemini chat model2",
+      "aggregate",
+      "has replyusers?",
+      "sticky note2",
+      "post report in team channel",
+      "code",
+      "splitInBatches",
+      "simplify thread comments",
+      "google gemini chat model1",
+      "aggregate results",
+      "merge with results",
+      "aggregate2",
+      "set",
+      "sticky note4",
+      "split out",
+      "aggregate4",
+      "aggregate3",
+      "team member weekly report agent",
+      "loop over items",
+      "sticky note",
+      "get thread",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "complex",
+      "monday @ 6am",
+      "filter",
+      "noOp",
+      "aggregate reply users",
+      "sticky note1",
+      "summarize message threads",
+      "splitOut",
+      "executeWorkflowTrigger",
+      "when executed by another workflow"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 47 nodos con 2 disparadores que ejecuta: Get Last Week's Messages, Simplify Message, Group By User en la categoría de ai-ml.",
+    "semantic_content": "Nodos: Get Last Week's Messages (slack), Simplify Message (set), Group By User (code), Split Out (splitOut), Messages to Items (code), Get User (slack), Aggregate (aggregate), Split Out1 (splitOut), Get Thread (slack), Aggregate1 (aggregate), Simplify Thread Comments (set), Filter (filter), Message Ref (noOp), Split Out2 (splitOut), Map Reply UserIds (set), Get Reply Users (slack), Google Gemini Chat Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Summarise Threads (@n8n/n8n-nodes-langchain.chainLlm), Aggregate2 (aggregate), Aggregate Reply Users (aggregate), Reply Users (set), Google Gemini Chat Model1 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Loop Over Items (splitInBatches), Aggregate3 (set), Aggregate4 (aggregate), When Executed by Another Workflow (executeWorkflowTrigger), Switch (switch), Map Users to Messages (executeWorkflow), Get User Info (set), Fetch Message Replies (executeWorkflow), Has ReplyUsers? (if), Messages to Items1 (code), Aggregate Results (set), Team Member Weekly Report Agent (@n8n/n8n-nodes-langchain.chainLlm), Merge with Results (set), Team Weekly Report Agent (@n8n/n8n-nodes-langchain.chainLlm), Google Gemini Chat Model2 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Post Report in Team Channel (slack), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Summarize Message Threads (executeWorkflow), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Monday @ 6am (scheduleTrigger), Sticky Note6 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: When Executed by Another Workflow, Monday @ 6am",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Get Last Week's Messages",
+      "When Executed by Another Workflow",
+      "Monday @ 6am",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.code",
+      "Simplify Message",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "Group By User"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.aggregate"
+    ],
+    "search_terms": [
+      "code",
+      "scheduled",
+      "splitout",
+      "0921_splitout_code_send_scheduled",
+      "send",
+      "0921"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": false,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 80.68669527896995,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.88733905579399
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:17.875541"
+  },
+  "semantic_vector": [
+    -0.05053730681538582,
+    -0.05595725402235985,
+    -0.03718038648366928,
+    -0.051337093114852905,
+    -0.024136265739798546,
+    -0.05590633302927017,
+    0.04043462499976158,
+    -0.04160904511809349,
+    -0.055422231554985046,
+    0.05595962330698967,
+    -0.010073279961943626,
+    -0.046361491084098816,
+    -0.017288710922002792,
+    -0.05067302659153938,
+    0.01605423353612423,
+    0.05623879283666611,
+    0.055925313383340836,
+    0.0406506285071373,
+    -0.05171056091785431,
+    0.05226467549800873,
+    -0.00273182918317616,
+    0.0500074066221714,
+    0.022281110286712646,
+    -0.04212506115436554,
+    0.00725675979629159,
+    0.011555852368474007,
+    -0.056149616837501526,
+    0.05283951386809349,
+    -0.05589709058403969,
+    0.055746398866176605,
+    0.05614353343844414,
+    0.02543634921312332,
+    -0.05347784236073494,
+    -0.024487754330039024,
+    0.0387025848031044,
+    -0.0018699421780183911,
+    0.04450799524784088,
+    -0.04572448879480362,
+    -0.012486178427934647,
+    -0.0515192486345768,
+    -0.024157533422112465,
+    0.055717311799526215,
+    0.008030477911233902,
+    0.05177714675664902,
+    0.0562300868332386,
+    0.05579797923564911,
+    0.05369577929377556,
+    -0.006692192982882261,
+    -0.03077053278684616,
+    -0.012795020826160908,
+    -0.022862480953335762,
+    0.05007481202483177,
+    -0.0562320277094841,
+    -0.05578212812542915,
+    0.02053491771221161,
+    -0.05564630776643753,
+    0.05314396321773529,
+    -0.05047646909952164,
+    -0.02164709009230137,
+    0.04676559194922447,
+    0.04388270527124405,
+    -0.05016312003135681,
+    0.007913794368505478,
+    0.05621041730046272,
+    -0.0017314791912212968,
+    0.04736257344484329,
+    0.05593886598944664,
+    -0.03819884732365608,
+    0.05526107922196388,
+    -0.055286675691604614,
+    -0.05532841756939888,
+    -0.04931768402457237,
+    0.013108045794069767,
+    0.05561860278248787,
+    -0.04878693446516991,
+    -0.04305092990398407,
+    0.05540440231561661,
+    -0.05364467203617096,
+    0.03960094600915909,
+    0.05520065128803253,
+    0.05344307795166969,
+    -0.015869073569774628,
+    -0.010225982405245304,
+    -0.05577541142702103,
+    0.03801324963569641,
+    0.04943212494254112,
+    -0.05108636990189552,
+    0.020838718861341476,
+    -0.02245938405394554,
+    -0.026400448754429817,
+    -0.03917877376079559,
+    -0.04179313778877258,
+    0.05407782644033432,
+    -0.0046564796939492226,
+    0.020413482561707497,
+    -0.0317738838493824,
+    -0.003854220500215888,
+    -0.016939064487814903,
+    -0.056155573576688766,
+    -0.056230511516332626,
+    0.05444256216287613,
+    -0.05346997082233429,
+    -0.008547657169401646,
+    0.054995931684970856,
+    0.04238530993461609,
+    0.05390704423189163,
+    0.056152887642383575,
+    0.05396471545100212,
+    -0.024841658771038055,
+    -0.05622795224189758,
+    -0.04539131745696068,
+    -0.05617286637425423,
+    0.032668497413396835,
+    -0.01838766410946846,
+    0.0144032659009099,
+    0.05064856633543968,
+    -0.05600311979651451,
+    -0.0555608794093132,
+    0.04987712949514389,
+    0.0030310279689729214,
+    -0.010135268792510033,
+    0.05605978146195412,
+    -0.051910657435655594,
+    0.0340423658490181,
+    0.05615776777267456,
+    0.01141949649900198,
+    -0.050780247896909714,
+    0.024099815636873245,
+    0.04287439212203026,
+    -0.02278617024421692,
+    0.005009635351598263,
+    -0.030030326917767525,
+    0.0469021238386631,
+    -0.017813563346862793,
+    0.049777962267398834,
+    -0.056227102875709534,
+    -0.013713524676859379,
+    -0.041558120399713516,
+    -0.04962095245718956,
+    -0.056219473481178284,
+    -0.001085443887859583,
+    0.056238725781440735,
+    0.012383232824504375,
+    -0.013591796159744263,
+    0.05266682058572769,
+    -0.05597905069589615,
+    0.05167779326438904,
+    -0.024706251919269562,
+    0.047674499452114105,
+    -0.01592394709587097,
+    0.027027279138565063,
+    -0.03614253178238869,
+    0.0380413755774498,
+    -0.022989140823483467,
+    0.05574768781661987,
+    0.05612560734152794,
+    -0.01738772913813591,
+    -0.055851198732852936,
+    -0.050737492740154266,
+    -0.05611810460686684,
+    -0.05574739724397659,
+    -0.055809855461120605,
+    0.04896189644932747,
+    0.055727459490299225,
+    -0.020595557987689972,
+    -0.04761793464422226,
+    -0.053644537925720215,
+    0.02980552241206169,
+    -0.05540461838245392,
+    0.006986099760979414,
+    0.05594784766435623,
+    -0.02104404754936695,
+    -0.05392813682556152,
+    0.05404830351471901,
+    -0.05502624064683914,
+    0.048157356679439545,
+    0.04322480782866478,
+    -0.05412702634930611,
+    0.04958333447575569,
+    -0.05601314827799797,
+    -0.048062682151794434,
+    0.04791124910116196,
+    -0.0554308257997036,
+    -0.00020811207650694996,
+    0.0560750812292099,
+    0.05462262034416199,
+    -0.05243837833404541,
+    0.022134598344564438,
+    -0.022394303232431412,
+    -0.004997780546545982,
+    0.03415559604763985,
+    -0.032088831067085266,
+    -0.05388765409588814,
+    -0.051534246653318405,
+    -0.05617723986506462,
+    -0.05622843652963638,
+    0.03923145681619644,
+    0.05623879283666611,
+    -0.014344453811645508,
+    0.028969591483473778,
+    0.051960498094558716,
+    0.031031958758831024,
+    0.05107078701257706,
+    0.017069045454263687,
+    -0.02398441731929779,
+    0.03701534494757652,
+    0.029920274391770363,
+    0.01166105642914772,
+    -0.05620715767145157,
+    -0.02119435928761959,
+    0.03347263112664223,
+    0.05562755465507507,
+    0.05485429987311363,
+    0.055208172649145126,
+    -0.0562344454228878,
+    -0.05489078909158707,
+    -0.048486944288015366,
+    0.0554707795381546,
+    0.05562811344861984,
+    -0.048978291451931,
+    0.04120756685733795,
+    0.05501045659184456,
+    0.034583013504743576,
+    0.036071449518203735,
+    -0.023499736562371254,
+    -0.05623180419206619,
+    -0.04431774094700813,
+    -0.05600851774215698,
+    -0.05135472118854523,
+    -0.0554984025657177,
+    0.04463186115026474,
+    -0.05160759761929512,
+    -0.03140291944146156,
+    -0.056234728544950485,
+    0.055614303797483444,
+    0.05536535382270813,
+    0.05623839795589447,
+    0.0561269074678421,
+    -0.055605411529541016,
+    0.04656844213604927,
+    -0.0467141717672348,
+    0.05614675208926201,
+    -0.050463270395994186,
+    0.05249336361885071,
+    0.041696302592754364,
+    0.05601320415735245,
+    0.04817810654640198,
+    0.02182423323392868,
+    0.05379163846373558,
+    0.05620095878839493,
+    -0.05535146966576576,
+    -0.014645389281213284,
+    0.027909239754080772,
+    0.010875919833779335,
+    0.05559609457850456,
+    -0.056186493486166,
+    0.02613765373826027,
+    0.05623879283666611,
+    -0.02296491339802742,
+    -0.04193131625652313,
+    -0.03397843614220619,
+    0.018370401114225388,
+    -0.0449877567589283,
+    0.05620776489377022,
+    -0.054539233446121216,
+    0.05246376618742943,
+    -0.01613486185669899,
+    0.033096134662628174,
+    -0.047873158007860184,
+    0.055120937526226044,
+    -0.056190088391304016,
+    0.024943720549345016,
+    -0.04864232614636421,
+    0.055811427533626556,
+    0.05393081158399582,
+    -0.03797993063926697,
+    -0.05550253018736839,
+    0.03645920380949974,
+    0.05620807036757469,
+    0.051951006054878235,
+    0.00126035010907799,
+    -0.04122048243880272,
+    0.056032270193099976,
+    0.03569352999329567,
+    0.03375770524144173,
+    -0.052481912076473236,
+    0.051475849002599716,
+    0.056060392409563065,
+    -0.04758347198367119,
+    0.04379883036017418,
+    -0.04968665540218353,
+    0.033071815967559814,
+    0.05621412768959999,
+    -0.05225127562880516,
+    -0.001973669044673443,
+    -0.047992218285799026,
+    -0.03126329556107521,
+    0.02710910327732563,
+    0.01852785050868988,
+    -0.042493849992752075,
+    0.01077528391033411,
+    -0.05262100696563721,
+    0.05459534749388695,
+    -0.015746470540761948,
+    -0.0024444744922220707,
+    -0.027484707534313202,
+    0.055617555975914,
+    0.05542560666799545,
+    0.05594795569777489,
+    0.05074240639805794,
+    0.011146605014801025,
+    -0.05400498956441879,
+    0.02765178494155407,
+    -0.05352900177240372,
+    0.04567837715148926,
+    -0.056163255125284195,
+    -0.015066456981003284,
+    0.0117084551602602,
+    0.04333015903830528,
+    -0.012080102227628231,
+    -0.025858398526906967,
+    -0.055942337960004807,
+    0.055989786982536316,
+    -0.04281795397400856,
+    0.04505747929215431,
+    -0.03358049690723419,
+    -0.0349101647734642,
+    -0.031445614993572235,
+    -0.038916099816560745,
+    -0.04781429469585419,
+    -0.04844214394688606,
+    -0.056153371930122375,
+    0.006363183259963989,
+    0.055663928389549255,
+    -0.030654925853013992,
+    0.05602659285068512,
+    0.052406881004571915,
+    0.05618143454194069,
+    -0.02296380326151848,
+    -0.05514255538582802,
+    0.023630766198039055,
+    -0.05487046763300896,
+    -0.010790490545332432,
+    0.018949825316667557,
+    -0.056238312274217606,
+    -0.012759527191519737,
+    0.04545317217707634,
+    0.04667998105287552,
+    -0.04307546466588974,
+    0.016206763684749603,
+    0.05393463000655174,
+    0.05198776349425316,
+    0.014542859047651291,
+    0.04478112608194351,
+    0.05258782580494881,
+    -0.006309261079877615,
+    -0.056238677352666855,
+    0.0195571631193161,
+    0.016521025449037552,
+    0.05005834996700287,
+    0.05523991212248802,
+    -0.05397329851984978,
+    -0.05623858794569969,
+    0.03775525838136673,
+    -0.0528566874563694,
+    0.056165363639593124,
+    0.03892584517598152,
+    -0.051382966339588165,
+    0.027230462059378624,
+    -0.013049036264419556,
+    0.030192339792847633,
+    -0.05158142372965813,
+    -0.0030397495720535517,
+    0.05556110665202141,
+    0.0562354139983654,
+    0.0559142604470253,
+    0.006407279521226883,
+    -0.056153081357479095,
+    -0.02940511144697666,
+    -0.05385174602270126,
+    -0.0348297581076622,
+    -0.021731313318014145,
+    -0.0427522249519825,
+    0.02411416731774807,
+    -0.04960239306092262,
+    -0.055707331746816635,
+    0.0556965246796608,
+    -0.05581621080636978,
+    -0.021462274715304375,
+    -0.055658552795648575,
+    -0.03168002516031265,
+    -0.05580563470721245,
+    0.05284734442830086,
+    0.0562213696539402,
+    -0.053472138941287994,
+    0.049387071281671524,
+    -0.04844382777810097,
+    -0.031142065301537514,
+    0.03182093799114227,
+    -0.03998767212033272,
+    -0.017425574362277985,
+    0.03707725927233696,
+    -0.020403409376740456,
+    0.0538136325776577,
+    0.006293631624430418,
+    -0.055724434554576874,
+    -0.05612903833389282,
+    0.0006806880701333284,
+    0.05348370596766472,
+    -0.011981884948909283,
+    0.05369636416435242,
+    -0.00522635830566287,
+    0.03867791220545769,
+    0.020825013518333435,
+    -0.02354125864803791,
+    0.046605683863162994,
+    0.05558491870760918,
+    -0.054792068898677826,
+    -0.05502217635512352,
+    -0.0516853928565979,
+    -0.052872590720653534,
+    0.013444908894598484,
+    -0.05543562024831772,
+    0.008798420429229736,
+    -0.048753827810287476,
+    0.026380468159914017,
+    -0.05613896623253822,
+    0.055930573493242264,
+    -0.04611237719655037,
+    0.017952430993318558,
+    -0.02034897729754448,
+    0.03925151750445366,
+    -0.033766355365514755,
+    0.05592822656035423,
+    -0.05480785295367241,
+    -0.055905066430568695,
+    -0.036874085664749146,
+    -0.05159377306699753,
+    -0.05618540197610855,
+    -0.05265925079584122,
+    -0.05196459963917732,
+    -0.052495185285806656,
+    -0.03586196526885033,
+    -0.053828828036785126,
+    0.05064646899700165,
+    -0.05615856871008873,
+    -0.05619087070226669,
+    0.030000492930412292,
+    -0.0017391364090144634,
+    -0.05602199211716652,
+    0.05297345295548439,
+    -0.034896381199359894,
+    0.05623740702867508,
+    0.05585859715938568,
+    0.051998335868120193,
+    -0.05623869225382805,
+    -0.018734440207481384,
+    0.056237708777189255,
+    0.032042115926742554,
+    -0.03469942882657051,
+    0.04165303707122803,
+    0.0556144155561924,
+    0.054852817207574844,
+    0.055721674114465714,
+    0.04923570901155472,
+    -0.05537568777799606,
+    0.04967502877116203,
+    0.05416515842080116,
+    -0.018977327272295952,
+    0.05623858422040939,
+    0.05437740311026573,
+    -0.05166858434677124,
+    0.03456883132457733,
+    0.04309680312871933,
+    -0.04582085832953453,
+    0.04466117173433304,
+    0.055265117436647415,
+    0.0071324557065963745,
+    -0.000461834337329492,
+    -0.028510401025414467,
+    -0.048075757920742035,
+    0.054429177194833755,
+    -0.045112691819667816,
+    -0.05512770637869835,
+    0.050616342574357986,
+    0.05463220179080963,
+    -0.05256485193967819,
+    -0.05574028193950653,
+    0.04231806844472885,
+    0.0345359705388546,
+    0.005251612979918718,
+    0.05201592296361923,
+    0.04104867950081825,
+    0.0007459847256541252,
+    -0.05609471723437309,
+    0.05415986105799675,
+    0.04469514638185501,
+    0.0544687956571579,
+    -0.053407423198223114,
+    0.007010796573013067,
+    0.03090439923107624,
+    -0.052453115582466125,
+    0.05615977570414543,
+    -0.056238558143377304,
+    -0.053003307431936264,
+    0.024674518033862114,
+    0.04955172911286354,
+    -0.04069932550191879,
+    -0.02271239645779133,
+    0.056238289922475815,
+    -0.046266891062259674,
+    -0.03453027084469795
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When Executed by Another Workflow, Monday @ 6am; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

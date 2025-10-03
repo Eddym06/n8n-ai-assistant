@@ -1,0 +1,428 @@
+{
+  "name": "Automated HR Service System with WhatsApp, GPT-4 Classification & Google Workspace",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "8654d46e-374a-4a70-89c7-0f2cd4f7358d",
+      "name": "WhatsApp Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        240,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "message_type",
+              "value": "={{ $json.body.type }}"
+            },
+            {
+              "name": "message_body",
+              "value": "={{ $json.body.text?.body || '' }}"
+            },
+            {
+              "name": "sender_phone",
+              "value": "={{ $json.body.from }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ce04a445-2c86-42a3-9100-fed62efa0135",
+      "name": "Extract Message Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        460,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "messages": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are an intelligent message classifier for a WhatsApp HR chatbot. Classify incoming messages into exactly one of these 5 categories by returning only a single number (1-5) with no text or formatting:\n\n1 = Leave request (e.g. \"I need leave tomorrow\")\n2 = HR query/policy/FAQ (e.g. \"How many leaves left?\")\n3 = Attendance via GPS (only if message type is 'location')\n4 = Escalation/complaint to dept head (e.g. \"Mail to IT\")\n5 = Shortlist candidates (e.g. \"Filter CVs for backend\")\n\nRules:\n- If type = \"text\": classify based on content\n- If type = \"location\": always return 3\n- If type = \"audio\" or \"image\": return 2\n- Return ONLY the number, nothing else"
+            },
+            {
+              "role": "user",
+              "content": "Message type: {{ $json.message_type }}\nMessage content: {{ $json.message_body }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fca8ea93-079c-49cc-bf9c-8b796bf46ab6",
+      "name": "LLM Message Classifier",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        680,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "category",
+              "value": "={{ $json.choices[0].message.content.trim() }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "13da2613-9548-4986-8919-2ab9d3509685",
+      "name": "Extract Category",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        900,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "routing": {
+          "rules": [
+            {
+              "condition": "={{ $json.category === '1' }}"
+            },
+            {
+              "condition": "={{ $json.category === '2' }}"
+            },
+            {
+              "condition": "={{ $json.category === '3' }}"
+            },
+            {
+              "condition": "={{ $json.category === '4' }}"
+            },
+            {
+              "condition": "={{ $json.category === '5' }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "24190ee6-14f2-4bbd-a31d-d88116395b81",
+      "name": "Switch Router",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "messages": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a Leave Management Agent. Analyze leave requests and determine approval based on:\n- Duration < 2 days: Auto-approve\n- Duration ≥ 2 days: Escalate to department head\n\nExtract leave details from the message and provide a structured response."
+            },
+            {
+              "role": "user",
+              "content": "Leave request: {{ $json.message_body }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4b77002e-ed9c-4048-a5f7-6f5caf7887e8",
+      "name": "Leave Agent",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "messages": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are an HR FAQ Chatbot. Answer employee questions about HR policies, procedures, benefits, and general workplace queries. Use the company knowledge base when relevant."
+            },
+            {
+              "role": "user",
+              "content": "Question: {{ $json.message_body }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2c160e79-cbe9-4699-9f3d-92742a01ac08",
+      "name": "HR FAQ Chatbot",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "messages": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are an Attendance Agent. Process GPS location data to mark employee attendance. Define office boundaries and determine if the location is within office premises."
+            },
+            {
+              "role": "user",
+              "content": "Location data: {{ $json }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "2d8b8180-a3e8-4e4f-bc89-d1ab29633f8d",
+      "name": "Attendance Agent",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "messages": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a Complaint/Request Escalation Agent. Generate professional emails to department heads for employee complaints and requests that need managerial attention."
+            },
+            {
+              "role": "user",
+              "content": "Complaint/Request: {{ $json.message_body }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4b77002e-ed9c-4048-a5f7-6f5caf7887e8",
+      "name": "Escalation Agent",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4",
+        "messages": {
+          "messages": [
+            {
+              "role": "system",
+              "content": "You are a Candidate Shortlisting Agent. Analyze job descriptions and candidate profiles to shortlist qualified applicants. Schedule interviews for selected candidates."
+            },
+            {
+              "role": "user",
+              "content": "Shortlisting request: {{ $json.message_body }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "13da2613-9548-4986-8919-2ab9d3509685",
+      "name": "Shortlisting Agent",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "to",
+              "value": "={{ $json.sender_phone }}"
+            },
+            {
+              "name": "body",
+              "value": "={{ $json.response }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ce9d9db1-2c14-4e2c-ae0d-495e5f91ce69",
+      "name": "WhatsApp Responder",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        1580,
+        300
+      ]
+    }
+  ],
+  "connections": {
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "Extract Message Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Message Data": {
+      "main": [
+        [
+          {
+            "node": "LLM Message Classifier",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LLM Message Classifier": {
+      "main": [
+        [
+          {
+            "node": "Extract Category",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract Category": {
+      "main": [
+        [
+          {
+            "node": "Switch Router",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch Router": {
+      "main": [
+        [
+          {
+            "node": "Leave Agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HR FAQ Chatbot",
+            "type": "main",
+            "index": 1
+          }
+        ],
+        [
+          {
+            "node": "Attendance Agent",
+            "type": "main",
+            "index": 2
+          }
+        ],
+        [
+          {
+            "node": "Escalation Agent",
+            "type": "main",
+            "index": 3
+          }
+        ],
+        [
+          {
+            "node": "Shortlisting Agent",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Leave Agent": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HR FAQ Chatbot": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Attendance Agent": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Escalation Agent": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Shortlisting Agent": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Responder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "staticData": null
+}

@@ -1,0 +1,1098 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Prevent concurrent workflow runs using Redis",
+    "display_name": "Prevent concurrent workflow runs using Redis",
+    "file_name": "0925_Stopanderror_Wait_Automate_Triggered.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror\\0925_Stopanderror_Wait_Automate_Triggered.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "3edca854a2ed"
+  },
+  "structure": {
+    "total_nodes": 43,
+    "node_types": [
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.redis",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.stopAndError"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 12
+      },
+      {
+        "type": "n8n-nodes-base.redis",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 12
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stopAndError",
+        "count": 2
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When Executed by Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -60,
+          720
+        ]
+      },
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -700,
+          1260
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Switch",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          380,
+          720
+        ]
+      },
+      {
+        "name": "If2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          420,
+          220
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -120,
+          -20
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          780,
+          -20
+        ]
+      },
+      {
+        "name": "Is Workflow Active",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          200,
+          220
+        ]
+      },
+      {
+        "name": "Set Workflow Active",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1360,
+          220
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1040,
+          440
+        ]
+      },
+      {
+        "name": "Set Workflow Finished",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1420,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -120,
+          440
+        ]
+      },
+      {
+        "name": "Get Key",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          600,
+          520
+        ]
+      },
+      {
+        "name": "Set Key",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          600,
+          720
+        ]
+      },
+      {
+        "name": "UnSet Key",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          600,
+          920
+        ]
+      },
+      {
+        "name": "Set Timeout",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          160,
+          720
+        ]
+      },
+      {
+        "name": "set continue",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          820,
+          720
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          340,
+          1360
+        ]
+      },
+      {
+        "name": "Is Workflow Active1",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          120,
+          1360
+        ]
+      },
+      {
+        "name": "Stop and Error",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          620,
+          1460
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          840,
+          1260
+        ]
+      },
+      {
+        "name": "Set Workflow Active1",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          620,
+          1260
+        ]
+      },
+      {
+        "name": "Set Workflow Finished1",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1560,
+          1260
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          760,
+          1160
+        ]
+      },
+      {
+        "name": "Wait",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1060,
+          1260
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -120,
+          1120
+        ]
+      },
+      {
+        "name": "If1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          180,
+          1920
+        ]
+      },
+      {
+        "name": "Is Workflow Active2",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          -20,
+          1920
+        ]
+      },
+      {
+        "name": "Stop and Error1",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          480,
+          2020
+        ]
+      },
+      {
+        "name": "Set Workflow Finished2",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1720,
+          1820
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          420,
+          1720
+        ]
+      },
+      {
+        "name": "Wait1",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          660,
+          1820
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -120,
+          1680
+        ]
+      },
+      {
+        "name": "Wait2",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1080,
+          1820
+        ]
+      },
+      {
+        "name": "Wait3",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1500,
+          1820
+        ]
+      },
+      {
+        "name": "Set Workflow \"started\"",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          480,
+          1820
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          840,
+          1720
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1260,
+          1720
+        ]
+      },
+      {
+        "name": "Set Workflow \"finishing\"",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1320,
+          1820
+        ]
+      },
+      {
+        "name": "Set Workflow \"loading\"",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          900,
+          1820
+        ]
+      },
+      {
+        "name": "Is Workflow Active3",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          40,
+          2400
+        ]
+      },
+      {
+        "name": "Switch1",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          260,
+          2380
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          0,
+          2280
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -800,
+          1140
+        ]
+      }
+    ],
+    "connections_count": 21,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 41
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 840,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "stop and error1",
+      "executeWorkflow",
+      "sticky note5",
+      "sticky note7",
+      "sticky note11",
+      "unset key",
+      "switch",
+      "is workflow active3",
+      "sticky note3",
+      "ai-ml",
+      "stickyNote",
+      "when clicking ‘test workflow’",
+      "sticky note6",
+      "set workflow active",
+      "get key",
+      "set timeout",
+      "set continue",
+      "if2",
+      "switch1",
+      "set workflow \"finishing\"",
+      "sticky note10",
+      "is workflow active",
+      "is workflow active2",
+      "webhook integration",
+      "set key",
+      "stopAndError",
+      "set workflow \"loading\"",
+      "set workflow finished2",
+      "if1",
+      "redis",
+      "wait1",
+      "sticky note9",
+      "set workflow active1",
+      "sticky note4",
+      "set",
+      "wait",
+      "set workflow finished1",
+      "set workflow finished",
+      "stop and error",
+      "wait2",
+      "sticky note",
+      "no operation, do nothing",
+      "sticky note8",
+      "wait3",
+      "complex",
+      "set workflow \"started\"",
+      "manualTrigger",
+      "noOp",
+      "sticky note2",
+      "sticky note1",
+      "is workflow active1",
+      "executeWorkflowTrigger",
+      "when executed by another workflow"
+    ],
+    "description": "'Prevent concurrent workflow runs using Redis' es un workflow diseñado para webhook integration con 43 nodos con 2 disparadores que ejecuta: Switch, If2, Sticky Note en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Prevent concurrent workflow runs using Redis. Nodos: When Executed by Another Workflow (executeWorkflowTrigger), Switch (switch), When clicking ‘Test workflow’ (manualTrigger), If2 (if), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Is Workflow Active (executeWorkflow), Set Workflow Active (executeWorkflow), Sticky Note2 (stickyNote), Set Workflow Finished (executeWorkflow), Sticky Note3 (stickyNote), Get Key (redis), Set Key (redis), UnSet Key (redis), Set Timeout (set), set continue (set), If (if), Is Workflow Active1 (executeWorkflow), Stop and Error (stopAndError), No Operation, do nothing (noOp), Set Workflow Active1 (executeWorkflow), Set Workflow Finished1 (executeWorkflow), Sticky Note4 (stickyNote), Wait (wait), Sticky Note5 (stickyNote), If1 (if), Is Workflow Active2 (executeWorkflow), Stop and Error1 (stopAndError), Set Workflow Finished2 (executeWorkflow), Sticky Note6 (stickyNote), Wait1 (wait), Sticky Note7 (stickyNote), Wait2 (wait), Wait3 (wait), Set Workflow \"started\" (executeWorkflow), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Set Workflow \"finishing\" (executeWorkflow), Set Workflow \"loading\" (executeWorkflow), Is Workflow Active3 (executeWorkflow), Switch1 (switch), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: When Executed by Another Workflow, When clicking ‘Test workflow’",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "Switch",
+      "When Executed by Another Workflow",
+      "n8n-nodes-base.manualTrigger",
+      "If2",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.stopanderror",
+      "n8n-nodes-base.redis",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "0925",
+      "0925_stopanderror_wait_automate_triggered",
+      "stopanderror",
+      "triggered",
+      "automate",
+      "wait"
+    ],
+    "alternative_names": [
+      "Prevent concurrent workflow runs using Redis"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": true,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": false,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 97.67441860465115,
+    "best_practices_score": 100.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 94.53488372093022
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:19.894236"
+  },
+  "semantic_vector": [
+    -0.05231582745909691,
+    -0.053457338362932205,
+    0.05217645689845085,
+    -0.05468696728348732,
+    -0.05195474624633789,
+    -0.05384375900030136,
+    0.04043162986636162,
+    -0.03861647844314575,
+    -0.01875506155192852,
+    0.054746415466070175,
+    -0.04806862398982048,
+    -0.032755665481090546,
+    0.04369887709617615,
+    -0.05017918720841408,
+    -0.05204899236559868,
+    0.05475145950913429,
+    0.05444056913256645,
+    0.04098658636212349,
+    -0.045228514820337296,
+    0.04952234774827957,
+    -0.030046654865145683,
+    0.025258395820856094,
+    0.050033148378133774,
+    -0.013951381668448448,
+    -0.054340675473213196,
+    0.006890426855534315,
+    -0.054505933076143265,
+    0.05423509329557419,
+    -0.054751235991716385,
+    -0.039607368409633636,
+    0.039801377803087234,
+    -0.05418538674712181,
+    0.05023034289479256,
+    -0.051040422171354294,
+    0.048910219222307205,
+    -0.025345560163259506,
+    0.04395090416073799,
+    -0.054664503782987595,
+    -0.013284829445183277,
+    0.00725426385179162,
+    -0.053397588431835175,
+    0.049811795353889465,
+    -0.04550261050462723,
+    0.04936514422297478,
+    0.05475090816617012,
+    0.05257759988307953,
+    0.032593950629234314,
+    0.05259820818901062,
+    -0.036740828305482864,
+    -0.043797269463539124,
+    -0.044127676635980606,
+    -0.03245067596435547,
+    -0.0546376034617424,
+    -0.027937645092606544,
+    -0.03365195915102959,
+    -0.05475056916475296,
+    0.04999937117099762,
+    0.017543941736221313,
+    -0.0166709553450346,
+    0.05243656411767006,
+    0.04870850220322609,
+    0.015191981568932533,
+    0.01920408010482788,
+    0.054739709943532944,
+    0.051019761711359024,
+    -0.005589764099568129,
+    0.049292970448732376,
+    0.04645814746618271,
+    0.05462656542658806,
+    -0.05177672207355499,
+    -0.05474558845162392,
+    -0.05474942922592163,
+    -0.0478796549141407,
+    -0.024440767243504524,
+    -0.03323297202587128,
+    -0.05474420636892319,
+    0.05304523557424545,
+    -0.05255261808633804,
+    -0.016825158149003983,
+    0.04781121760606766,
+    0.027756717056035995,
+    -0.054281026124954224,
+    -0.051964171230793,
+    -0.0105491504073143,
+    -0.03415967524051666,
+    -0.024362903088331223,
+    -0.003741586348041892,
+    -0.05452559515833855,
+    0.04983225092291832,
+    0.054504070430994034,
+    -0.035521745681762695,
+    -0.00938484538346529,
+    -0.052875686436891556,
+    -0.05386986583471298,
+    0.008007479831576347,
+    -0.05393783748149872,
+    -0.036192961037158966,
+    0.033569417893886566,
+    -0.05389837175607681,
+    -0.054751425981521606,
+    0.05426253750920296,
+    -0.04381788894534111,
+    0.041548267006874084,
+    0.05157514661550522,
+    -0.04099489375948906,
+    -0.016810312867164612,
+    0.043289247900247574,
+    0.04485667496919632,
+    0.03453991189599037,
+    0.001699673943221569,
+    -0.023076463490724564,
+    -0.029837770387530327,
+    0.0047281039878726006,
+    0.05468590185046196,
+    0.05315345525741577,
+    0.05258803069591522,
+    -0.039561085402965546,
+    0.0374770350754261,
+    0.05461253598332405,
+    0.05466240644454956,
+    -0.04828525707125664,
+    0.050321925431489944,
+    0.035577431321144104,
+    0.0517142154276371,
+    0.05439881980419159,
+    0.0517243854701519,
+    -0.04746128246188164,
+    0.03328009694814682,
+    0.03296859189867973,
+    -0.04548507183790207,
+    -0.05453617125749588,
+    -0.03894269838929176,
+    0.054470282047986984,
+    -0.054632361978292465,
+    0.03204192966222763,
+    -0.053600944578647614,
+    -0.008990319445729256,
+    -0.04480383172631264,
+    -0.05350755900144577,
+    -0.043345123529434204,
+    -0.05242428183555603,
+    0.05475134775042534,
+    -0.05223749205470085,
+    0.03717826306819916,
+    -0.05427510291337967,
+    -0.0546901635825634,
+    0.05309513211250305,
+    0.04292444884777069,
+    0.0543246753513813,
+    -0.003652493702247739,
+    -0.051436617970466614,
+    -0.054303716868162155,
+    0.050307486206293106,
+    -0.05037427321076393,
+    0.05221881344914436,
+    0.053232159465551376,
+    -0.006208084523677826,
+    -0.04437430202960968,
+    0.044069111347198486,
+    0.020338058471679688,
+    -0.05360538139939308,
+    -0.05465121194720268,
+    0.05120814964175224,
+    0.05422046035528183,
+    0.014534881338477135,
+    0.05388626083731651,
+    -0.05261059105396271,
+    0.014894390478730202,
+    0.0242571160197258,
+    -0.030929790809750557,
+    -0.014768623746931553,
+    -0.048235490918159485,
+    -0.0068462323397397995,
+    0.054621245712041855,
+    -0.054740920662879944,
+    0.054382920265197754,
+    -0.04950924217700958,
+    -0.05468648299574852,
+    0.04958677291870117,
+    -0.04987766966223717,
+    0.05035606771707535,
+    -0.019187044352293015,
+    -0.053446222096681595,
+    0.03933810442686081,
+    0.051964759826660156,
+    0.037681881338357925,
+    -0.054664790630340576,
+    0.05326072871685028,
+    -0.0175140630453825,
+    0.053468819707632065,
+    -0.05397874116897583,
+    0.04825196415185928,
+    -0.03995967656373978,
+    -0.054503489285707474,
+    -0.054699353873729706,
+    -0.05450372025370598,
+    -0.023042306303977966,
+    0.05475145950913429,
+    0.015634924173355103,
+    0.052411749958992004,
+    0.05472373962402344,
+    0.05406752973794937,
+    0.049891456961631775,
+    0.054089028388261795,
+    0.04659019038081169,
+    0.024589689448475838,
+    -0.05274512991309166,
+    0.02789171226322651,
+    -0.05475090071558952,
+    0.0003496664285194129,
+    0.03651554509997368,
+    0.054719917476177216,
+    0.04846081882715225,
+    -0.015225459821522236,
+    -0.05475109815597534,
+    -0.042991526424884796,
+    -0.012300262227654457,
+    -0.007807109504938126,
+    -0.017491502687335014,
+    0.03469220548868179,
+    -0.054160166531801224,
+    0.053573403507471085,
+    -0.024083184078335762,
+    -0.05367749184370041,
+    -0.019914541393518448,
+    -0.05460387468338013,
+    -0.05249612778425217,
+    -0.03854033723473549,
+    -0.05473051220178604,
+    -0.05454711616039276,
+    0.0529169999063015,
+    -0.05412828549742699,
+    0.04412173107266426,
+    -0.054747480899095535,
+    -0.042686812579631805,
+    0.05353664606809616,
+    0.05474922060966492,
+    0.04871978983283043,
+    -0.05455848574638367,
+    -0.040146611630916595,
+    -0.05455813929438591,
+    0.03341853246092796,
+    -0.04869230091571808,
+    0.042222652584314346,
+    0.002274623606353998,
+    0.05301851034164429,
+    0.048241350799798965,
+    0.028320759534835815,
+    0.016118867322802544,
+    0.05420040711760521,
+    -0.054643917828798294,
+    0.052538271993398666,
+    0.0379766970872879,
+    -0.040326572954654694,
+    0.054660260677337646,
+    0.017042571678757668,
+    0.02870754711329937,
+    0.05475145950913429,
+    -0.05287494510412216,
+    0.03589596599340439,
+    0.04660308361053467,
+    -0.027239078655838966,
+    -0.022216003388166428,
+    -0.05390152707695961,
+    0.0186667088419199,
+    0.02847026102244854,
+    0.010927533730864525,
+    0.021251272410154343,
+    -0.01775933988392353,
+    0.05461997538805008,
+    -0.05242135748267174,
+    0.046813685446977615,
+    -0.051328059285879135,
+    0.05452011898159981,
+    0.054723091423511505,
+    -0.049974534660577774,
+    -0.038379766047000885,
+    0.026886554434895515,
+    0.05475084111094475,
+    -0.030650902539491653,
+    0.009339065290987492,
+    0.02436186745762825,
+    0.054110847413539886,
+    -0.023523172363638878,
+    0.04941113665699959,
+    -0.05092411860823631,
+    0.012010063976049423,
+    0.054734040051698685,
+    0.051161691546440125,
+    0.052962157875299454,
+    -0.026098739355802536,
+    0.04286204278469086,
+    0.05469486489892006,
+    -0.013832975178956985,
+    0.05252289026975632,
+    -0.024700460955500603,
+    0.052269499748945236,
+    -0.05351252108812332,
+    0.030217798426747322,
+    0.0485483855009079,
+    0.0021883645094931126,
+    -0.02009270340204239,
+    0.04956815391778946,
+    -0.014698322862386703,
+    0.040374673902988434,
+    0.05298830568790436,
+    0.05462155491113663,
+    -0.024088146165013313,
+    0.007991497404873371,
+    -0.01404791884124279,
+    -0.04214058071374893,
+    -0.03477434441447258,
+    0.05321105942130089,
+    -0.04691638797521591,
+    0.041880834847688675,
+    -0.05474409461021423,
+    0.05424805358052254,
+    -0.023137325420975685,
+    -0.0391058586537838,
+    -0.02975291758775711,
+    -0.020944859832525253,
+    -0.03640305623412132,
+    0.04681697487831116,
+    0.0539264939725399,
+    0.03965289890766144,
+    -0.05412235110998154,
+    0.05430133640766144,
+    -0.04226049408316612,
+    0.054741594940423965,
+    -0.03292189911007881,
+    -0.05408846214413643,
+    -0.04334785044193268,
+    -0.053385596722364426,
+    0.054751262068748474,
+    0.027903199195861816,
+    0.051045458763837814,
+    0.05441264435648918,
+    -0.007534141186624765,
+    0.052594058215618134,
+    0.021973498165607452,
+    -0.041049402207136154,
+    -0.05383048951625824,
+    -0.05336278676986694,
+    0.043363820761442184,
+    -0.05475145950913429,
+    -0.03718550503253937,
+    -0.05057314410805702,
+    -0.05141538009047508,
+    0.03536324203014374,
+    0.04533170536160469,
+    0.04752708971500397,
+    0.052808232605457306,
+    0.05423478037118912,
+    -0.01788976788520813,
+    0.034390565007925034,
+    -0.05345536768436432,
+    -0.054751116782426834,
+    0.04467722401022911,
+    0.048117537051439285,
+    0.05431560426950455,
+    0.03909343481063843,
+    -0.05234943702816963,
+    -0.0547514371573925,
+    0.05127246305346489,
+    0.04043366760015488,
+    0.05426114797592163,
+    0.02051525190472603,
+    -0.05471930280327797,
+    0.05440487340092659,
+    -0.054272886365652084,
+    -0.0015514993574470282,
+    -0.013698713853955269,
+    -0.052306000143289566,
+    -0.0380372628569603,
+    -0.04747379571199417,
+    0.051799241453409195,
+    0.019383780658245087,
+    -0.040701091289520264,
+    -0.02429262548685074,
+    -0.05333448201417923,
+    0.009753689169883728,
+    0.05439600721001625,
+    0.029139326885342598,
+    -0.023287132382392883,
+    0.04034411534667015,
+    0.04473888501524925,
+    0.054629553109407425,
+    0.04659159481525421,
+    -0.052972421050071716,
+    -0.05445948988199234,
+    0.045435503125190735,
+    -0.054288432002067566,
+    0.054685454815626144,
+    0.053790055215358734,
+    -0.05376523360610008,
+    0.04968619346618652,
+    0.054428935050964355,
+    -0.008968682959675789,
+    0.04236550256609917,
+    0.0542735792696476,
+    0.053910091519355774,
+    0.05463549494743347,
+    -0.05315534770488739,
+    0.054743874818086624,
+    0.05142521113157272,
+    -0.04411249980330467,
+    -0.05462061986327171,
+    0.052738435566425323,
+    0.054272234439849854,
+    0.048555295914411545,
+    0.03156657516956329,
+    0.05413114279508591,
+    -0.05456757918000221,
+    -0.013105764053761959,
+    -0.035609710961580276,
+    0.026011215522885323,
+    0.017307478934526443,
+    -0.05365920066833496,
+    -0.007666846737265587,
+    -0.023254286497831345,
+    -0.024861998856067657,
+    -0.04699847474694252,
+    -0.05250362679362297,
+    0.05466463416814804,
+    -0.054470404982566833,
+    -0.047364212572574615,
+    -0.05470532923936844,
+    0.0496038943529129,
+    0.04652923345565796,
+    -0.03716763108968735,
+    -0.05449718236923218,
+    -0.006889916956424713,
+    -0.04512115195393562,
+    0.0547514446079731,
+    -0.053914885967969894,
+    -0.041417013853788376,
+    -0.05382336303591728,
+    -0.05464818701148033,
+    -0.05420495569705963,
+    0.006127993110567331,
+    0.013276385143399239,
+    -0.05110771954059601,
+    0.01492256484925747,
+    0.05215708911418915,
+    -0.0117364302277565,
+    -0.040009185671806335,
+    -0.054559964686632156,
+    -0.006484054494649172,
+    -0.038242049515247345,
+    -0.03806663677096367,
+    -0.04788271710276604,
+    0.024856990203261375,
+    0.054714884608983994,
+    0.05466289445757866,
+    0.0015964519698172808,
+    -0.05360858142375946,
+    -0.01781116984784603,
+    0.05469963699579239,
+    -0.0016490597045049071,
+    -0.04097370803356171,
+    0.03379246965050697,
+    0.04914524406194687,
+    0.05465254932641983,
+    0.05438806861639023,
+    -0.019060168415308,
+    -0.04702506214380264,
+    0.05446185544133186,
+    0.05140275880694389,
+    0.026203958317637444,
+    0.050611045211553574,
+    0.04952738434076309,
+    0.028317350894212723,
+    0.031160039827227592,
+    -0.04311572015285492,
+    -0.05266458913683891,
+    -0.03346068412065506,
+    0.05341720953583717,
+    0.05140087753534317,
+    -0.019632665440440178,
+    -0.05424792692065239,
+    -0.051402896642684937,
+    0.052930064499378204,
+    -0.03972773253917694,
+    -0.05304174870252609,
+    -0.030266309157013893,
+    0.04758565500378609,
+    -0.029705911874771118,
+    -0.04185594245791435,
+    -0.054212264716625214,
+    0.05467354878783226,
+    0.02585146203637123,
+    0.054618895053863525,
+    0.02536347135901451,
+    0.054541416466236115,
+    -0.02900179848074913,
+    0.05470351129770279,
+    0.054658591747283936,
+    0.05154590681195259,
+    -0.050066813826560974,
+    0.04194707050919533,
+    0.04917065054178238,
+    -0.05109363794326782,
+    0.03826751559972763,
+    -0.054751235991716385,
+    -0.019762281328439713,
+    -0.0004983985563740134,
+    -0.017550764605402946,
+    0.0064793601632118225,
+    -0.04901256039738655,
+    0.05475145950913429,
+    0.005582808051258326,
+    -0.018659837543964386
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When Executed by Another Workflow, When clicking ‘Test workflow’; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Stopanderror",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror"
+  }
+}

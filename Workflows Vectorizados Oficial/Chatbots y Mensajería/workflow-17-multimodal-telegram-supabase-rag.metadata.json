@@ -1,0 +1,1234 @@
+{
+  "workflow_info": {
+    "id": "pE6f3n6i6GUmSTgE",
+    "name": "Telegram AI Support Chatbot with Multi-Modal Inputs",
+    "display_name": "Telegram AI Support Chatbot with Multi-Modal Inputs",
+    "file_name": "workflow-17-multimodal-telegram-supabase-rag.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Chatbots y Mensajería\\workflow-17-multimodal-telegram-supabase-rag.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "9b2132eab98d"
+  },
+  "structure": {
+    "total_nodes": 51,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "n8n-nodes-base.telegram",
+      "@n8n/n8n-nodes-langchain.rerankerCohere",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.telegramTrigger",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.telegram",
+        "count": 10
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.rerankerCohere",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.telegramTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 4
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 3
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Telegram Trigger",
+        "type": "n8n-nodes-base.telegramTrigger",
+        "position": [
+          860,
+          489.5
+        ]
+      },
+      {
+        "name": "When clicking 'Execute workflow'",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          860,
+          -160
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Telegram",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          3896,
+          1156.5
+        ]
+      },
+      {
+        "name": "Download Audio",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2840,
+          500
+        ]
+      },
+      {
+        "name": "Translate to Text",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          3060,
+          500
+        ]
+      },
+      {
+        "name": "Download PDF",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2620,
+          1050
+        ]
+      },
+      {
+        "name": "Download Image",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2180,
+          1250
+        ]
+      },
+      {
+        "name": "Fix mimeType",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2400,
+          1250
+        ]
+      },
+      {
+        "name": "Download Photo",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2180,
+          700
+        ]
+      },
+      {
+        "name": "Fix mimeType1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2400,
+          700
+        ]
+      },
+      {
+        "name": "Photo to text",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          2620,
+          700
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1520,
+          1350
+        ]
+      },
+      {
+        "name": "Download Spreadsheet",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2620,
+          1650
+        ]
+      },
+      {
+        "name": "Extract from PDF",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2840,
+          1050
+        ]
+      },
+      {
+        "name": "Extract from Spreadsheet",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2840,
+          1650
+        ]
+      },
+      {
+        "name": "Typing…",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          1080,
+          379
+        ]
+      },
+      {
+        "name": "Supported Document File Types",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1300,
+          1350
+        ]
+      },
+      {
+        "name": "Group Similar Documents",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1740,
+          1550
+        ]
+      },
+      {
+        "name": "Input Message Router",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1080,
+          579
+        ]
+      },
+      {
+        "name": "Document Router",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1960,
+          1487
+        ]
+      },
+      {
+        "name": "Download JSON",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2620,
+          1850
+        ]
+      },
+      {
+        "name": "Extract from JSON",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2840,
+          1850
+        ]
+      },
+      {
+        "name": "Download XML",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2620,
+          2050
+        ]
+      },
+      {
+        "name": "Extract from XML",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2840,
+          2050
+        ]
+      },
+      {
+        "name": "Download Word Document",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2180,
+          1450
+        ]
+      },
+      {
+        "name": "File to Base64",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2400,
+          1450
+        ]
+      },
+      {
+        "name": "Convert to text (convertapi.com)",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2620,
+          1450
+        ]
+      },
+      {
+        "name": "Download Text",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2840,
+          1450
+        ]
+      },
+      {
+        "name": "Photo to text1",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          2620,
+          1250
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          1280
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          440
+        ]
+      },
+      {
+        "name": "Download file",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1080,
+          -160
+        ]
+      },
+      {
+        "name": "Default Data Loader1",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          1420,
+          62.5
+        ]
+      },
+      {
+        "name": "Recursive Character Text Splitter1",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          1508,
+          260
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3280,
+          1376.5
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          1300,
+          60
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          3548,
+          1576.5
+        ]
+      },
+      {
+        "name": "Postgres Chat Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "position": [
+          3400,
+          1376.5
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          300,
+          -140
+        ]
+      },
+      {
+        "name": "Reranker Cohere",
+        "type": "@n8n/n8n-nodes-langchain.rerankerCohere",
+        "position": [
+          3668,
+          1576.5
+        ]
+      },
+      {
+        "name": "Extract Text",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3060,
+          300
+        ]
+      },
+      {
+        "name": "Extract Text & Content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2840,
+          700
+        ]
+      },
+      {
+        "name": "Extract Error Message",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3060,
+          850
+        ]
+      },
+      {
+        "name": "Extract Text1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3060,
+          1650
+        ]
+      },
+      {
+        "name": "Extract Text2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3060,
+          1850
+        ]
+      },
+      {
+        "name": "Extract Text3",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3060,
+          2050
+        ]
+      },
+      {
+        "name": "Extract Text4",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3060,
+          1050
+        ]
+      },
+      {
+        "name": "Extract Text5",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3060,
+          1450
+        ]
+      },
+      {
+        "name": "Add to Supabase Vector DB",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "position": [
+          1316,
+          -160
+        ]
+      },
+      {
+        "name": "Knowledge Base AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          3312,
+          1156.5
+        ]
+      },
+      {
+        "name": "Supabase Vector Store Search",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "position": [
+          3520,
+          1379
+        ]
+      }
+    ],
+    "connections_count": 46,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 49
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1555,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "extract text2",
+      "telegramTrigger",
+      "extract text5",
+      "fix mimetype",
+      "googleDrive",
+      "extract from pdf",
+      "input message router",
+      "download text",
+      "@n8n/n8n nodes langchain.memoryPostgresChat",
+      "file processing",
+      "postgres chat memory",
+      "switch",
+      "photo to text",
+      "download json",
+      "extract text & content",
+      "openai chat model1",
+      "ai-ml",
+      "stickyNote",
+      "photo to text1",
+      "@n8n/n8n nodes langchain.embeddingsOpenAi",
+      "supabase vector store search",
+      "extractFromFile",
+      "telegram trigger",
+      "extract from spreadsheet",
+      "convert to text (convertapi.com)",
+      "extract error message",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "download spreadsheet",
+      "extract text1",
+      "@n8n/n8n nodes langchain.rerankerCohere",
+      "download word document",
+      "extract from xml",
+      "httpRequest",
+      "download image",
+      "add to supabase vector db",
+      "code",
+      "document router",
+      "extract text",
+      "download photo",
+      "download pdf",
+      "reranker cohere",
+      "sticky note4",
+      "set",
+      "file to base64",
+      "recursive character text splitter1",
+      "extract text4",
+      "@n8n/n8n nodes langchain.vectorStoreSupabase",
+      "extract text3",
+      "translate to text",
+      "supported document file types",
+      "default data loader1",
+      "download file",
+      "extract from json",
+      "embeddings openai",
+      "@n8n/n8n nodes langchain.openAi",
+      "@n8n/n8n nodes langchain.agent",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "embeddings openai1",
+      "telegram",
+      "when clicking 'execute workflow'",
+      "knowledge base ai agent",
+      "complex",
+      "typing…",
+      "fix mimetype1",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "manualTrigger",
+      "sticky note1",
+      "sticky note5",
+      "download xml",
+      "download audio",
+      "group similar documents"
+    ],
+    "description": "'Telegram AI Support Chatbot with Multi-Modal Inputs' es un workflow diseñado para file processing con 51 nodos con 2 disparadores que ejecuta: Telegram, Download Audio, Translate to Text en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Telegram AI Support Chatbot with Multi-Modal Inputs. Nodos: Telegram Trigger (telegramTrigger), Telegram (telegram), Download Audio (telegram), Translate to Text (@n8n/n8n-nodes-langchain.openAi), Download PDF (telegram), Download Image (telegram), Fix mimeType (code), Download Photo (telegram), Fix mimeType1 (code), Photo to text (@n8n/n8n-nodes-langchain.openAi), If (if), Download Spreadsheet (telegram), Extract from PDF (extractFromFile), Extract from Spreadsheet (extractFromFile), Typing… (telegram), Supported Document File Types (code), Group Similar Documents (code), Input Message Router (switch), Document Router (switch), Download JSON (telegram), Extract from JSON (extractFromFile), Download XML (telegram), Extract from XML (extractFromFile), Download Word Document (telegram), File to Base64 (extractFromFile), Convert to text (convertapi.com) (httpRequest), Download Text (httpRequest), Photo to text1 (@n8n/n8n-nodes-langchain.openAi), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), When clicking 'Execute workflow' (manualTrigger), Download file (googleDrive), Default Data Loader1 (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Recursive Character Text Splitter1 (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Embeddings OpenAI (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Embeddings OpenAI1 (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Postgres Chat Memory (@n8n/n8n-nodes-langchain.memoryPostgresChat), Sticky Note1 (stickyNote), Reranker Cohere (@n8n/n8n-nodes-langchain.rerankerCohere), Extract Text (set), Extract Text & Content (set), Extract Error Message (set), Extract Text1 (set), Extract Text2 (set), Extract Text3 (set), Extract Text4 (set), Extract Text5 (set), Add to Supabase Vector DB (@n8n/n8n-nodes-langchain.vectorStoreSupabase), Knowledge Base AI Agent (@n8n/n8n-nodes-langchain.agent), Supabase Vector Store Search (@n8n/n8n-nodes-langchain.vectorStoreSupabase). Propósito: file processing. Categoría: ai-ml. Disparadores: Telegram Trigger, When clicking 'Execute workflow'",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.telegramTrigger",
+      "Telegram Trigger",
+      "When clicking 'Execute workflow'",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.manualTrigger",
+      "Download Audio",
+      "Translate to Text",
+      "n8n-nodes-base.telegram",
+      "Telegram"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.memorypostgreschat",
+      "@n8n/n8n-nodes-langchain.vectorstoresupabase",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "n8n-nodes-base.manualtrigger",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.rerankercohere",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.telegramtrigger",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.extractfromfile",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.embeddingsopenai"
+    ],
+    "search_terms": [
+      "multimodal",
+      "telegram",
+      "rag",
+      "workflow-17-multimodal-telegram-supabase-rag",
+      "workflow",
+      "supabase"
+    ],
+    "alternative_names": [
+      "Telegram AI Support Chatbot with Multi-Modal Inputs"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": true,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.telegramTrigger",
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 65.59485530546624,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 83.11897106109325
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.092414"
+  },
+  "semantic_vector": [
+    -0.05232767015695572,
+    -0.05079616606235504,
+    0.037715669721364975,
+    -0.024778220802545547,
+    0.04408234357833862,
+    -0.04990819841623306,
+    -0.05173870176076889,
+    -0.03477438911795616,
+    -0.05282668024301529,
+    0.05239512398838997,
+    -0.03466050699353218,
+    -0.04709957540035248,
+    -0.051959287375211716,
+    -0.05170544981956482,
+    -0.0526273287832737,
+    0.052863072603940964,
+    0.030037155374884605,
+    -0.0527380108833313,
+    -0.05145690590143204,
+    0.029691699892282486,
+    0.02925090305507183,
+    -0.03860526159405708,
+    0.05283218249678612,
+    -0.05247240141034126,
+    0.05103737488389015,
+    0.05203218385577202,
+    0.04813206568360329,
+    0.0526280514895916,
+    -0.0283416248857975,
+    0.04808780178427696,
+    0.0528593510389328,
+    0.03983912244439125,
+    0.05018666014075279,
+    -0.05204396694898605,
+    -0.04137277975678444,
+    -0.052009217441082,
+    0.00884278491139412,
+    -0.044531404972076416,
+    -0.049375664442777634,
+    -0.05263925716280937,
+    0.0524379126727581,
+    0.04926079139113426,
+    -0.030523374676704407,
+    0.05277062952518463,
+    0.052863072603940964,
+    0.04701930657029152,
+    0.03842746466398239,
+    0.007465928327292204,
+    0.012805799022316933,
+    -0.05177506431937218,
+    -0.05279287323355675,
+    0.04106311872601509,
+    -0.052862100303173065,
+    -0.05282321572303772,
+    -0.05285317450761795,
+    -0.03989057615399361,
+    0.04658552631735802,
+    -0.03259124606847763,
+    0.02366495504975319,
+    0.052615825086832047,
+    0.05035267025232315,
+    0.04011528939008713,
+    -0.05178392305970192,
+    0.05265749990940094,
+    0.03777918592095375,
+    0.03382198140025139,
+    0.05285085737705231,
+    -0.05256538465619087,
+    -0.01746560074388981,
+    -0.051114555448293686,
+    -0.05196481570601463,
+    0.05153708904981613,
+    -0.048625994473695755,
+    -0.026975244283676147,
+    -0.03443587198853493,
+    0.03206542506814003,
+    0.028631379827857018,
+    -0.052162349224090576,
+    0.048842139542102814,
+    -0.029581472277641296,
+    -0.01589331403374672,
+    0.009985377080738544,
+    -0.029472338035702705,
+    -0.05240901932120323,
+    -0.0010781525634229183,
+    0.052207689732313156,
+    -0.044882096350193024,
+    0.026762889698147774,
+    -0.035035114735364914,
+    -0.004938346333801746,
+    -0.05284625664353371,
+    -0.014642531052231789,
+    0.04830222576856613,
+    0.051669634878635406,
+    0.0049718949012458324,
+    0.04451267048716545,
+    0.04940509796142578,
+    0.05205725133419037,
+    -0.0525532029569149,
+    -0.052863072603940964,
+    0.04363248869776726,
+    0.011898395605385303,
+    -0.044401295483112335,
+    0.05268274247646332,
+    0.03287338837981224,
+    0.04233093187212944,
+    0.052861735224723816,
+    0.0470195934176445,
+    -0.023710204288363457,
+    -0.05267072841525078,
+    -0.0518752783536911,
+    -0.052636682987213135,
+    -0.05142655223608017,
+    -0.0461590513586998,
+    -0.048982009291648865,
+    0.05251740664243698,
+    -0.05286158621311188,
+    -0.042996495962142944,
+    -0.035557739436626434,
+    -0.013311713002622128,
+    -0.052851352840662,
+    0.05098854377865791,
+    0.05271083861589432,
+    0.051946185529232025,
+    0.05283188074827194,
+    0.040487729012966156,
+    0.04142873361706734,
+    0.030155574902892113,
+    0.05264684185385704,
+    0.03798907995223999,
+    0.012653312645852566,
+    -0.007058706134557724,
+    -0.0013688508188351989,
+    0.05087285488843918,
+    0.033073779195547104,
+    -0.02536839246749878,
+    -0.05255868285894394,
+    0.04885581135749817,
+    -0.02400660701096058,
+    -0.05286182090640068,
+    -0.04764151573181152,
+    0.052863072603940964,
+    0.04562430828809738,
+    -0.009365648962557316,
+    0.030041037127375603,
+    -0.052863072603940964,
+    0.05249393358826637,
+    0.03837478160858154,
+    0.048879921436309814,
+    -0.01341102086007595,
+    0.03656142204999924,
+    -0.048698995262384415,
+    0.05284672603011131,
+    0.052808117121458054,
+    0.03162895143032074,
+    0.052842915058135986,
+    -0.004021453205496073,
+    -0.052862197160720825,
+    -0.05221497640013695,
+    0.050772059708833694,
+    -0.05275985598564148,
+    -0.052838340401649475,
+    0.015007305890321732,
+    -0.03917011246085167,
+    0.02157878316938877,
+    -0.0488518662750721,
+    -0.05285371467471123,
+    -0.051655448973178864,
+    -0.05283541977405548,
+    0.05253428593277931,
+    -0.04786998778581619,
+    -0.046448126435279846,
+    -0.052474286407232285,
+    -0.012494564987719059,
+    0.021898403763771057,
+    0.020036473870277405,
+    0.04720626398921013,
+    -0.020046139135956764,
+    -0.03694881871342659,
+    -0.013998409733176231,
+    -0.020995382219552994,
+    -0.04856960102915764,
+    -0.05272527039051056,
+    -0.05252866446971893,
+    0.05194989964365959,
+    0.052845828235149384,
+    -0.05286305770277977,
+    0.052547797560691833,
+    -0.019767243415117264,
+    0.044164542108774185,
+    -0.031149515882134438,
+    0.047269441187381744,
+    0.01660660095512867,
+    0.023083223029971123,
+    -0.052461426705121994,
+    -0.05272333323955536,
+    0.052861422300338745,
+    0.052863072603940964,
+    0.052713461220264435,
+    0.03830072656273842,
+    -0.05273137614130974,
+    0.049003344029188156,
+    -0.05284563824534416,
+    0.04996702820062637,
+    0.049691133201122284,
+    0.010472521185874939,
+    -0.0016389869851991534,
+    -0.04466792196035385,
+    -0.052862100303173065,
+    0.03972737118601799,
+    0.050079263746738434,
+    0.050615567713975906,
+    0.05110173299908638,
+    0.05088631063699722,
+    -0.0528627410531044,
+    -0.051614463329315186,
+    0.052545975893735886,
+    0.05285320803523064,
+    0.0016109028365463018,
+    -0.051240548491477966,
+    0.017209216952323914,
+    -0.022453144192695618,
+    0.05210934206843376,
+    0.052273329347372055,
+    0.007933626882731915,
+    -0.05286024138331413,
+    -0.052313100546598434,
+    -0.028705330565571785,
+    -0.052726708352565765,
+    -0.05283525586128235,
+    -0.03181319683790207,
+    -0.05177967995405197,
+    -0.04834665358066559,
+    -0.05286293476819992,
+    -0.052862443029880524,
+    0.049326010048389435,
+    0.052863072603940964,
+    0.04545466974377632,
+    -0.048083994537591934,
+    0.033492375165224075,
+    0.048690203577280045,
+    0.05285882577300072,
+    0.02309388853609562,
+    0.028757616877555847,
+    0.05068005248904228,
+    0.05273622274398804,
+    0.05068777874112129,
+    0.0288807712495327,
+    0.05249074101448059,
+    0.052862998098134995,
+    -0.052863072603940964,
+    0.05207885056734085,
+    -0.03245528042316437,
+    -0.03292737156152725,
+    -0.04702677205204964,
+    -0.052863042801618576,
+    -0.023031003773212433,
+    0.052863072603940964,
+    0.03720947727560997,
+    0.0504319965839386,
+    0.05286044627428055,
+    -0.038495615124702454,
+    -0.0464419424533844,
+    0.05286261811852455,
+    -0.0007097633788362145,
+    0.04957001656293869,
+    0.05258437991142273,
+    -0.03565656766295433,
+    -0.052862800657749176,
+    0.05181754752993584,
+    -0.05266335606575012,
+    0.020626282319426537,
+    0.04896111413836479,
+    -0.033162277191877365,
+    0.05285447835922241,
+    -0.05274182930588722,
+    -0.05266568437218666,
+    -0.04634886980056763,
+    0.052863072603940964,
+    -0.05243643373250961,
+    -0.05203261598944664,
+    -0.0523238405585289,
+    0.048204876482486725,
+    0.023220961913466454,
+    -0.02760150097310543,
+    -0.05067482590675354,
+    0.04920241981744766,
+    0.052195362746715546,
+    -0.05266893282532692,
+    0.05286097899079323,
+    0.05271800979971886,
+    0.004813395440578461,
+    0.052863072603940964,
+    -0.05122802034020424,
+    0.052650999277830124,
+    -0.052863072603940964,
+    0.027167491614818573,
+    0.04744798690080643,
+    0.017523955553770065,
+    0.05281727761030197,
+    -0.028269154950976372,
+    0.0018349203746765852,
+    0.05273846909403801,
+    -0.03416990861296654,
+    0.0249627698212862,
+    0.0527728796005249,
+    0.05231757089495659,
+    0.047123078256845474,
+    -0.0446525402367115,
+    0.014635104686021805,
+    0.05277755856513977,
+    0.04493692144751549,
+    -0.04767507314682007,
+    -0.05221198499202728,
+    0.05020545795559883,
+    -0.04998606815934181,
+    -0.021880317479372025,
+    -0.026763878762722015,
+    -0.051445122808218,
+    -0.050304461270570755,
+    0.0349956713616848,
+    -0.052623625844717026,
+    0.052579957991838455,
+    0.04837459698319435,
+    0.05255046859383583,
+    0.05285677686333656,
+    0.05220462381839752,
+    -0.04655842483043671,
+    -0.020024355500936508,
+    -0.052734773606061935,
+    0.03970339149236679,
+    0.0417306125164032,
+    -0.013163569383323193,
+    0.05286199972033501,
+    0.026463454589247704,
+    -0.04082112014293671,
+    0.052823398262262344,
+    0.05284595862030983,
+    0.052772656083106995,
+    -0.05258379876613617,
+    -0.04707521200180054,
+    -0.04969913139939308,
+    0.049227774143218994,
+    -0.05093461647629738,
+    -0.052863072603940964,
+    -0.04498283937573433,
+    -0.023368820548057556,
+    0.04658878222107887,
+    -0.049137841910123825,
+    0.05229002609848976,
+    0.05116954818367958,
+    0.02476511150598526,
+    -0.05280134454369545,
+    -0.013299494981765747,
+    0.03483638912439346,
+    0.044321298599243164,
+    -0.052863072603940964,
+    0.02471287176012993,
+    -0.0526617132127285,
+    0.05183424428105354,
+    0.05095302686095238,
+    -0.04539082199335098,
+    -0.052863072603940964,
+    0.052812445908784866,
+    -0.049310073256492615,
+    0.028465675190091133,
+    0.04806654527783394,
+    -0.03547976166009903,
+    0.05269663780927658,
+    0.05267181992530823,
+    0.04271247237920761,
+    0.04642416164278984,
+    -0.05160736292600632,
+    0.05279742553830147,
+    0.051766954362392426,
+    0.01351426262408495,
+    -0.04394856467843056,
+    -0.05285385623574257,
+    0.052793238312006,
+    0.0493403896689415,
+    -0.05226517096161842,
+    0.052467264235019684,
+    0.05190981924533844,
+    -0.014986454509198666,
+    -0.05158277601003647,
+    -0.05129583925008774,
+    0.05050421133637428,
+    -0.014252870343625546,
+    -0.03132707625627518,
+    -0.05276042968034744,
+    0.018177302554249763,
+    0.0021902236621826887,
+    0.052522167563438416,
+    0.04795898124575615,
+    0.0252379197627306,
+    0.05285867676138878,
+    -0.0031797215342521667,
+    0.052101053297519684,
+    0.04246523231267929,
+    0.023640617728233337,
+    0.05126204714179039,
+    0.052751876413822174,
+    -0.052777670323848724,
+    0.032504431903362274,
+    -0.033108457922935486,
+    -0.007468000520020723,
+    -0.052862949669361115,
+    0.036143094301223755,
+    0.05282791703939438,
+    0.019402099773287773,
+    0.021028876304626465,
+    0.04906739294528961,
+    0.043824728578329086,
+    -0.05013980343937874,
+    0.03536628931760788,
+    0.036777809262275696,
+    0.05203599855303764,
+    -0.05270447954535484,
+    -0.04681050404906273,
+    -0.04717151075601578,
+    -0.042324114590883255,
+    -0.011350378394126892,
+    -0.03816086798906326,
+    0.0527850016951561,
+    -0.010509666986763477,
+    0.04933405667543411,
+    -0.052800945937633514,
+    0.05282198265194893,
+    0.02476889081299305,
+    0.04811852425336838,
+    -0.05285074561834335,
+    -0.04522762820124626,
+    -0.02327691577374935,
+    -0.052559856325387955,
+    -0.05264923349022865,
+    -0.043393801897764206,
+    -0.0518229678273201,
+    -0.05286288261413574,
+    -0.05253579840064049,
+    0.02336033619940281,
+    -0.004421735182404518,
+    -0.052676599472761154,
+    -0.027462955564260483,
+    -0.05244271457195282,
+    -0.042487770318984985,
+    -0.05286253243684769,
+    -0.019246060401201248,
+    0.04902440309524536,
+    -0.052815038710832596,
+    -0.04172942414879799,
+    0.040743403136730194,
+    -0.03453749418258667,
+    0.052863072603940964,
+    -0.04076320305466652,
+    -0.05273760110139847,
+    -0.05286305770277977,
+    -0.03037015162408352,
+    0.052862875163555145,
+    0.021725904196500778,
+    -0.003937419503927231,
+    0.05101483315229416,
+    0.052568770945072174,
+    0.05238907411694527,
+    0.05285000801086426,
+    0.003284894861280918,
+    0.045133043080568314,
+    0.05164001137018204,
+    -0.038481615483760834,
+    -0.018483437597751617,
+    0.05286097154021263,
+    -0.04992413520812988,
+    -0.05281862989068031,
+    0.0527818538248539,
+    -0.017400382086634636,
+    -0.0088574243709445,
+    0.049369242042303085,
+    0.030118130147457123,
+    0.0341135635972023,
+    -0.04190712049603462,
+    -0.04781193658709526,
+    -0.0520286038517952,
+    0.051426373422145844,
+    0.0054852222092449665,
+    -0.05130139738321304,
+    0.021118532866239548,
+    0.05275610461831093,
+    0.01792074181139469,
+    -0.006292630452662706,
+    -0.03465922921895981,
+    -0.027535824105143547,
+    -0.04920453578233719,
+    0.023768659681081772,
+    -0.05284078046679497,
+    0.05282318964600563,
+    -0.051691941916942596,
+    0.05256044119596481,
+    -0.03345780819654465,
+    0.04697519168257713,
+    -0.05285768583416939,
+    0.051629163324832916,
+    0.04912961646914482,
+    -0.02200174331665039,
+    0.0311651062220335,
+    -0.052863072603940964,
+    -0.04832294583320618,
+    -0.015391828492283821,
+    -0.052863072603940964,
+    -0.048381298780441284,
+    0.0182682853192091,
+    0.052863072603940964,
+    -0.0501336045563221,
+    -0.052835047245025635
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: Telegram Trigger, When clicking 'Execute workflow'; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for file processing in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Chatbots y Mensajería",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Chatbots y Mensajería"
+  }
+}

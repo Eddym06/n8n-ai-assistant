@@ -1,0 +1,1148 @@
+{
+  "workflow_info": {
+    "id": "MfKB97VVSuXMo3Fm",
+    "name": "Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API",
+    "display_name": "Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API",
+    "file_name": "1395_Wait_Code_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait\\1395_Wait_Code_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "1ea14f74f835"
+  },
+  "structure": {
+    "total_nodes": 51,
+    "node_types": [
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 14
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 10
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 6
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking Test workflow",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          20,
+          -80
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "output1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3980,
+          260
+        ]
+      },
+      {
+        "name": "output2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4680,
+          240
+        ]
+      },
+      {
+        "name": "Get Prompt",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          600,
+          -80
+        ]
+      },
+      {
+        "name": "Basic Params",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          220,
+          -80
+        ]
+      },
+      {
+        "name": "Get Task ID of the First Image",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          380,
+          140
+        ]
+      },
+      {
+        "name": "Midjourney Generator of the First Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          160,
+          140
+        ]
+      },
+      {
+        "name": "Wait for the First Image Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          220,
+          400
+        ]
+      },
+      {
+        "name": "Verify the first image generation status",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          600,
+          400
+        ]
+      },
+      {
+        "name": "Get the First Image URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1000,
+          200
+        ]
+      },
+      {
+        "name": "Midjourney Generator of the Second Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1220,
+          200
+        ]
+      },
+      {
+        "name": "Midjourney Generator of the Third Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1920,
+          220
+        ]
+      },
+      {
+        "name": "Get the First Image Generation Status",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          800,
+          200
+        ]
+      },
+      {
+        "name": "Get the Second Image Generation Status",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1480,
+          220
+        ]
+      },
+      {
+        "name": "Get the Third Image Generation Status",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          2380,
+          220
+        ]
+      },
+      {
+        "name": "Get the Second Image URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1720,
+          220
+        ]
+      },
+      {
+        "name": "Get the Third Image URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2560,
+          220
+        ]
+      },
+      {
+        "name": "Wait for the Second Image Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          900,
+          440
+        ]
+      },
+      {
+        "name": "Get Task of the First Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          400
+        ]
+      },
+      {
+        "name": "Get Task of the Second Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1100,
+          440
+        ]
+      },
+      {
+        "name": "Verify the second image generation status",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1300,
+          440
+        ]
+      },
+      {
+        "name": "Verify the third image generation status",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2100,
+          460
+        ]
+      },
+      {
+        "name": "Get Task of the Third Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1880,
+          460
+        ]
+      },
+      {
+        "name": "Wait for the Third Image Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1680,
+          460
+        ]
+      },
+      {
+        "name": "Get three Image URLs",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2740,
+          220
+        ]
+      },
+      {
+        "name": "Generate the First Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2960,
+          40
+        ]
+      },
+      {
+        "name": "Generate the Second Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3160,
+          40
+        ]
+      },
+      {
+        "name": "Generate the Third Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3360,
+          40
+        ]
+      },
+      {
+        "name": "Final Video Combination",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          5700,
+          220
+        ]
+      },
+      {
+        "name": "Get the Third Video URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5480,
+          220
+        ]
+      },
+      {
+        "name": "Get Video Task IDs",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3560,
+          40
+        ]
+      },
+      {
+        "name": "Get the First Video Task",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3380,
+          420
+        ]
+      },
+      {
+        "name": "Verify the First Video Generation",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3580,
+          420
+        ]
+      },
+      {
+        "name": "Verify the Second Video Generation",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          4320,
+          420
+        ]
+      },
+      {
+        "name": "Verify the Third Video Generation",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          5040,
+          420
+        ]
+      },
+      {
+        "name": "Wait for Video Generation for at Least 4 min",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3780,
+          40
+        ]
+      },
+      {
+        "name": "Wait for the First Video Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3800,
+          440
+        ]
+      },
+      {
+        "name": "Wait for the Second Video Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          4480,
+          460
+        ]
+      },
+      {
+        "name": "Wait for the Third Video Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          5260,
+          460
+        ]
+      },
+      {
+        "name": "Get the First Video Generation",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          3800,
+          260
+        ]
+      },
+      {
+        "name": "Get the Second Video Generation",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          4520,
+          240
+        ]
+      },
+      {
+        "name": "Get the Third Video Generation",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          5280,
+          220
+        ]
+      },
+      {
+        "name": "Get the Second Video Task",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4160,
+          420
+        ]
+      },
+      {
+        "name": "Get the Third Video Task",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4840,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          20,
+          -280
+        ]
+      },
+      {
+        "name": "GPT-4o-mini Generate Image Scenario Prompt",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          -80
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          180,
+          660
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          880,
+          660
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1660,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2960,
+          -120
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          5640,
+          400
+        ]
+      }
+    ],
+    "connections_count": 44,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 50
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1420,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "generate the first video",
+      "get task id of the first image",
+      "gpt-4o-mini generate image scenario prompt",
+      "wait for the third image generation",
+      "get the third video generation",
+      "sticky note5",
+      "get the second video generation",
+      "get the first video task",
+      "output2",
+      "get the third image generation status",
+      "switch",
+      "verify the first video generation",
+      "integration",
+      "get the second image url",
+      "sticky note3",
+      "stickyNote",
+      "generate the second video",
+      "verify the second video generation",
+      "wait for the first image generation",
+      "get the first image generation status",
+      "generate the third video",
+      "get the second video task",
+      "get the third image url",
+      "get video task ids",
+      "get the third video url",
+      "webhook integration",
+      "httpRequest",
+      "midjourney generator of the second image",
+      "verify the third video generation",
+      "verify the second image generation status",
+      "code",
+      "get three image urls",
+      "when clicking test workflow",
+      "midjourney generator of the first image",
+      "wait for the second video generation",
+      "sticky note4",
+      "set",
+      "final video combination",
+      "basic params",
+      "verify the third image generation status",
+      "wait",
+      "wait for the first video generation",
+      "output1",
+      "wait for the third video generation",
+      "get prompt",
+      "verify the first image generation status",
+      "get the first image url",
+      "sticky note",
+      "get task of the first image",
+      "midjourney generator of the third image",
+      "get the first video generation",
+      "complex",
+      "wait for the second image generation",
+      "manualTrigger",
+      "get the second image generation status",
+      "sticky note1",
+      "sticky note2",
+      "get the third video task",
+      "wait for video generation for at least 4 min",
+      "get task of the second image",
+      "get task of the third image"
+    ],
+    "description": "'Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API' es un workflow diseñado para webhook integration con 51 nodos activado por When clicking Test workflow que ejecuta: output1, output2, Get Prompt en la categoría de integration.",
+    "semantic_content": "Workflow: Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API. Nodos: output1 (set), output2 (set), Get Prompt (code), Basic Params (set), Get Task ID of the First Image (set), Midjourney Generator of the First Image (httpRequest), Wait for the First Image Generation (wait), Verify the first image generation status (if), Get the First Image URL (set), Midjourney Generator of the Second Image (httpRequest), Midjourney Generator of the Third Image (httpRequest), Get the First Image Generation Status (switch), Get the Second Image Generation Status (switch), Get the Third Image Generation Status (switch), Get the Second Image URL (set), Get the Third Image URL (set), Wait for the Second Image Generation (wait), Get Task of the First Image (httpRequest), Get Task of the Second Image (httpRequest), Verify the second image generation status (if), Verify the third image generation status (if), Get Task of the Third Image (httpRequest), Wait for the Third Image Generation (wait), Get three Image URLs (set), Generate the First Video (httpRequest), Generate the Second Video (httpRequest), Generate the Third Video (httpRequest), Final Video Combination (httpRequest), Get the Third Video URL (set), Get Video Task IDs (set), Get the First Video Task (httpRequest), Verify the First Video Generation (if), Verify the Second Video Generation (if), Verify the Third Video Generation (if), Wait for Video Generation for at Least 4 min (wait), Wait for the First Video Generation (wait), Wait for the Second Video Generation (wait), Wait for the Third Video Generation (wait), Get the First Video Generation (switch), Get the Second Video Generation (switch), Get the Third Video Generation (switch), Get the Second Video Task (httpRequest), Get the Third Video Task (httpRequest), Sticky Note (stickyNote), When clicking Test workflow (manualTrigger), GPT-4o-mini Generate Image Scenario Prompt (httpRequest), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote). Propósito: webhook integration. Categoría: integration. Disparadores: When clicking Test workflow",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "output2",
+      "When clicking Test workflow",
+      "n8n-nodes-base.code",
+      "Get Prompt",
+      "output1"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "create",
+      "code",
+      "webhook",
+      "1395",
+      "wait",
+      "1395_wait_code_create_webhook"
+    ],
+    "alternative_names": [
+      "Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API"
+    ],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 71.83098591549296,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 84.36619718309859
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:22.221407"
+  },
+  "semantic_vector": [
+    -0.017412833869457245,
+    -0.03220703825354576,
+    -0.024532193318009377,
+    -0.03947210684418678,
+    -0.053322505205869675,
+    0.054480526596307755,
+    0.029410097748041153,
+    0.05448676645755768,
+    -0.054402705281972885,
+    0.05428164824843407,
+    -0.04685165360569954,
+    0.037701480090618134,
+    0.04398592561483383,
+    -0.04732571169734001,
+    0.05420307070016861,
+    0.05448676645755768,
+    0.03911415487527847,
+    -0.05352725088596344,
+    -0.054063256829977036,
+    -0.05336558446288109,
+    -0.05411062762141228,
+    0.05279186740517616,
+    0.054390598088502884,
+    -0.0007779438747093081,
+    -0.05321263149380684,
+    0.05391182005405426,
+    -0.0364849679172039,
+    0.054224882274866104,
+    0.04418157413601875,
+    -0.05358058586716652,
+    0.05211512744426727,
+    -0.054442569613456726,
+    0.054310522973537445,
+    0.05230521410703659,
+    0.05448530241847038,
+    0.05403856933116913,
+    -0.030351009219884872,
+    -0.05297650396823883,
+    -0.0484796017408371,
+    -0.002857593586668372,
+    0.05253038555383682,
+    0.02822338230907917,
+    -0.03397053852677345,
+    0.04751072824001312,
+    0.054485563188791275,
+    -0.047851406037807465,
+    0.02624291554093361,
+    0.05294423922896385,
+    -0.052334465086460114,
+    -0.053486231714487076,
+    -0.05428607016801834,
+    0.047514658421278,
+    -0.0544707365334034,
+    -0.054195575416088104,
+    -0.05441221967339516,
+    -0.05448333919048309,
+    -0.05185844004154205,
+    -0.05221240594983101,
+    -0.04997846111655235,
+    0.054452043026685715,
+    -0.0019920424092561007,
+    0.04499054327607155,
+    0.013067261315882206,
+    0.051257677376270294,
+    -0.0019406062783673406,
+    0.0011239481391385198,
+    0.054454851895570755,
+    0.040351156145334244,
+    0.051090043038129807,
+    0.054224371910095215,
+    -0.054486315697431564,
+    -0.05407309904694557,
+    -0.05409565195441246,
+    0.05413155257701874,
+    0.05027142912149429,
+    0.047232434153556824,
+    -0.0043861824087798595,
+    0.053695183247327805,
+    -0.05146099254488945,
+    -0.05224844813346863,
+    0.03031691163778305,
+    -0.023053228855133057,
+    -0.05392678081989288,
+    -0.017782114446163177,
+    0.05409889295697212,
+    0.00288330833427608,
+    -0.054429445415735245,
+    0.04832702875137329,
+    0.018329448997974396,
+    0.013207601383328438,
+    -0.05447760596871376,
+    -0.04722675681114197,
+    0.02290199138224125,
+    0.0529831126332283,
+    -0.022911978885531425,
+    -0.0537663958966732,
+    0.04540467634797096,
+    0.05314058065414429,
+    -0.05446410924196243,
+    -0.05444630607962608,
+    -0.0019816879648715258,
+    0.019737977534532547,
+    0.04873534291982651,
+    0.029782073572278023,
+    0.04279962554574013,
+    0.04918304458260536,
+    0.05444646254181862,
+    0.014009381644427776,
+    0.03808530047535896,
+    -0.05427953973412514,
+    -0.024166952818632126,
+    0.047584425657987595,
+    -0.03086070343852043,
+    0.053885314613580704,
+    0.03693149983882904,
+    0.0490831695497036,
+    0.05448488891124725,
+    -0.04811108857393265,
+    -0.050167299807071686,
+    0.05262698978185654,
+    0.054264672100543976,
+    0.054463572800159454,
+    0.05350533872842789,
+    0.05339863523840904,
+    -0.00923172663897276,
+    0.04229990020394325,
+    0.023066025227308273,
+    -0.045500628650188446,
+    0.054254211485385895,
+    -0.04963940754532814,
+    -0.05405951291322708,
+    -0.05426674708724022,
+    0.017529938369989395,
+    0.007170405238866806,
+    0.041081640869379044,
+    -0.05082041397690773,
+    -0.0544159896671772,
+    0.046911343932151794,
+    -0.05447976291179657,
+    -0.048874493688344955,
+    -0.0543740876019001,
+    0.05448676645755768,
+    0.04346536099910736,
+    -0.012364896014332771,
+    0.0233286302536726,
+    -0.05448676645755768,
+    0.051377687603235245,
+    -0.03460818901658058,
+    0.05447021871805191,
+    0.01378948986530304,
+    -0.035155102610588074,
+    -0.0486103855073452,
+    0.03615299239754677,
+    -0.053695570677518845,
+    0.049481987953186035,
+    0.05448661744594574,
+    0.053978756070137024,
+    -0.05135950446128845,
+    0.039825621992349625,
+    -0.03951113671064377,
+    0.004078025463968515,
+    -0.030407750979065895,
+    0.047139596194028854,
+    0.05448587238788605,
+    0.054075516760349274,
+    0.0472152903676033,
+    -0.05388769879937172,
+    0.048467304557561874,
+    -0.05442367494106293,
+    -0.05414123088121414,
+    0.03830273449420929,
+    0.054348189383745193,
+    -0.05054282024502754,
+    -0.04376314952969551,
+    0.05378640815615654,
+    0.04963110387325287,
+    -0.0518353134393692,
+    -0.009358350187540054,
+    0.05083112046122551,
+    -0.03696432337164879,
+    -0.05291317030787468,
+    0.010308514349162579,
+    -0.024806901812553406,
+    -0.005905745550990105,
+    0.05386004596948624,
+    -0.03418564423918724,
+    -0.054484013468027115,
+    0.05437702313065529,
+    -0.03328581526875496,
+    0.052439574152231216,
+    -0.04072374850511551,
+    0.008316664956510067,
+    0.0506681352853775,
+    -0.05378725379705429,
+    -0.051537901163101196,
+    -0.05394619703292847,
+    -0.011105161160230637,
+    0.05448676645755768,
+    0.049598462879657745,
+    0.04947851225733757,
+    0.052912529557943344,
+    0.03619403764605522,
+    -0.05200134590268135,
+    -0.042083755135536194,
+    0.05396786704659462,
+    -0.05410506948828697,
+    0.0006123732891865075,
+    -0.037151675671339035,
+    -0.05447998270392418,
+    0.05438175052404404,
+    -0.042068902403116226,
+    0.054347481578588486,
+    0.053195249289274216,
+    0.053719811141490936,
+    -0.05443044751882553,
+    -0.022599127143621445,
+    0.015829529613256454,
+    0.025584809482097626,
+    0.043958257883787155,
+    -0.016411026939749718,
+    -0.03406849130988121,
+    0.04605438560247421,
+    -0.007269139867275953,
+    0.048703230917453766,
+    -0.04934815317392349,
+    -0.05419817194342613,
+    -0.015023385174572468,
+    -0.019905082881450653,
+    -0.05423387512564659,
+    -0.053855814039707184,
+    -0.0027983994223177433,
+    -0.05445573106408119,
+    -0.009225926361978054,
+    -0.05448676645755768,
+    -0.03300201892852783,
+    0.04268520697951317,
+    0.054486460983753204,
+    0.0462070107460022,
+    -0.024980828166007996,
+    0.0025813686661422253,
+    -0.053302690386772156,
+    0.05446619912981987,
+    -0.005677484441548586,
+    0.006799151189625263,
+    -0.050669118762016296,
+    0.05387154966592789,
+    0.054426055401563644,
+    0.02716097980737686,
+    0.0251254141330719,
+    0.054287537932395935,
+    -0.05428158491849899,
+    0.049604304134845734,
+    -0.05024946108460426,
+    -0.0296971146017313,
+    -0.022740986198186874,
+    0.049872059375047684,
+    0.024169262498617172,
+    0.05448676645755768,
+    -0.03404921293258667,
+    0.010316084139049053,
+    0.04664470627903938,
+    0.053742364048957825,
+    -0.033988386392593384,
+    0.054374076426029205,
+    -0.049740198999643326,
+    0.028075097128748894,
+    0.004993762355297804,
+    -0.04303519427776337,
+    -0.04490358754992485,
+    0.05162651091814041,
+    0.0016486409585922956,
+    0.014827997423708439,
+    -0.012829095125198364,
+    0.054449670016765594,
+    -0.051042258739471436,
+    0.0336933359503746,
+    -0.03760148584842682,
+    -0.054356835782527924,
+    0.05448676645755768,
+    -0.054431695491075516,
+    0.021644847467541695,
+    -0.01504429243505001,
+    0.047142840921878815,
+    -0.027786677703261375,
+    0.05251237377524376,
+    -0.05448676645755768,
+    -0.0418371707201004,
+    0.05447665601968765,
+    -0.054092392325401306,
+    0.05448559671640396,
+    0.04880533739924431,
+    -0.053660616278648376,
+    0.053935445845127106,
+    0.05399176478385925,
+    0.035255491733551025,
+    -0.054120615124702454,
+    -0.042807403951883316,
+    -0.0027486770413815975,
+    0.05281555652618408,
+    0.016346238553524017,
+    -0.053270984441041946,
+    0.002057482721284032,
+    0.054185651242733,
+    0.015968088060617447,
+    0.05307186767458916,
+    0.053655318915843964,
+    -0.04753923788666725,
+    0.028230393305420876,
+    0.05426609143614769,
+    -0.05434557422995567,
+    0.04225219786167145,
+    0.004015768878161907,
+    0.052242498844861984,
+    -0.023490073159337044,
+    -0.015116756781935692,
+    0.03212159499526024,
+    0.05299479141831398,
+    0.05434832349419594,
+    0.051933303475379944,
+    0.018636643886566162,
+    0.019124865531921387,
+    0.04642315208911896,
+    0.048668891191482544,
+    -0.05394354090094566,
+    0.05439552292227745,
+    0.01282812375575304,
+    0.05422360077500343,
+    -0.0059043425135314465,
+    0.042949456721544266,
+    0.040267542004585266,
+    -0.04671541601419449,
+    -0.0243657398968935,
+    0.004642192739993334,
+    0.0544838011264801,
+    0.054097674787044525,
+    -0.030298398807644844,
+    0.03293219208717346,
+    0.03457055240869522,
+    0.028539834544062614,
+    0.040600959211587906,
+    0.046807460486888885,
+    -0.05448440462350845,
+    -0.049776747822761536,
+    -0.004238619934767485,
+    -0.05448676645755768,
+    -0.004628946539014578,
+    -0.04549957811832428,
+    -0.013996844179928303,
+    -0.05137495696544647,
+    0.05448676645755768,
+    0.05125579237937927,
+    0.015543011017143726,
+    0.03340369462966919,
+    0.03455400839447975,
+    0.04990183189511299,
+    0.008659785613417625,
+    -0.05448676645755768,
+    -0.03416981175541878,
+    -0.018791452050209045,
+    0.01762121170759201,
+    0.05180533975362778,
+    -0.051199015229940414,
+    -0.05448676645755768,
+    0.05448637530207634,
+    -0.05344627797603607,
+    -0.042223285883665085,
+    0.05438566952943802,
+    -0.053953301161527634,
+    0.054466892033815384,
+    -0.04631620645523071,
+    0.0013493234291672707,
+    -0.017745189368724823,
+    -0.05423741787672043,
+    -0.03887233883142471,
+    -0.05444693565368652,
+    0.052015967667102814,
+    -0.05188177153468132,
+    -0.039293073117733,
+    0.041093915700912476,
+    0.05308244749903679,
+    0.05394113436341286,
+    -0.027766188606619835,
+    0.04025799036026001,
+    -0.043271906673908234,
+    -0.03409825265407562,
+    -0.002493690699338913,
+    0.032530561089515686,
+    0.02304251305758953,
+    -0.052104901522397995,
+    -0.05440780147910118,
+    -0.05405103415250778,
+    -0.03993617370724678,
+    0.05448606610298157,
+    0.04666981101036072,
+    0.047016873955726624,
+    0.028714103624224663,
+    -0.027830880135297775,
+    -0.05173053219914436,
+    0.05315827950835228,
+    0.053195610642433167,
+    0.05321643501520157,
+    -0.0009204823873005807,
+    0.04553217440843582,
+    0.05312785133719444,
+    0.05448676645755768,
+    -0.05138198286294937,
+    -0.05448657274246216,
+    0.004202331881970167,
+    0.05379973724484444,
+    0.04250781983137131,
+    -0.048107780516147614,
+    0.0037172867450863123,
+    0.049009520560503006,
+    -0.04395774379372597,
+    0.05233870446681976,
+    -0.05447613447904587,
+    -0.02709939517080784,
+    -0.05447852239012718,
+    0.041281480342149734,
+    -0.02823024056851864,
+    -0.03027454763650894,
+    0.053849879652261734,
+    -0.05448482930660248,
+    0.05444718897342682,
+    -0.054461218416690826,
+    0.004766666796058416,
+    -0.05158280208706856,
+    0.05448201671242714,
+    -0.038427650928497314,
+    -0.021062271669507027,
+    -0.053799085319042206,
+    0.054386913776397705,
+    -0.054356422275304794,
+    0.054460834711790085,
+    -0.046796415001153946,
+    -0.048286646604537964,
+    -0.03990617021918297,
+    -0.0544268824160099,
+    -0.05448439344763756,
+    0.05384744331240654,
+    0.013507379218935966,
+    -0.046838946640491486,
+    0.040876440703868866,
+    -0.02944163978099823,
+    0.05158357694745064,
+    -0.05448676645755768,
+    -0.0534934364259243,
+    -0.024567440152168274,
+    -0.054229672998189926,
+    -0.03831836208701134,
+    -0.044885557144880295,
+    0.03330259025096893,
+    0.05448676645755768,
+    -0.024081170558929443,
+    -0.01696620136499405,
+    -0.05448584258556366,
+    -0.04601516202092171,
+    0.05443667992949486,
+    0.04363764822483063,
+    -0.050417203456163406,
+    -0.05446036159992218,
+    0.0474281907081604,
+    0.053737834095954895,
+    0.05448660999536514,
+    0.02535182610154152,
+    -0.051843415945768356,
+    0.054305173456668854,
+    -0.030625322833657265,
+    -0.04765237122774124,
+    -0.05387042090296745,
+    -0.03997112438082695,
+    -0.054024793207645416,
+    -0.019628914073109627,
+    -0.05158719792962074,
+    -0.05434670299291611,
+    -0.011123769916594028,
+    0.04485232010483742,
+    -0.0032598748803138733,
+    -0.039795760065317154,
+    -0.054483961313962936,
+    0.015960967168211937,
+    0.031779222190380096,
+    -0.05343494936823845,
+    -0.05193284898996353,
+    -0.04372775927186012,
+    0.054474812000989914,
+    0.04941285029053688,
+    0.016318347305059433,
+    0.054338254034519196,
+    0.03540680184960365,
+    -0.023899832740426064,
+    -0.014101352542638779,
+    -0.029363621026277542,
+    0.0188741572201252,
+    -0.022845666855573654,
+    0.05101025477051735,
+    -0.04833993315696716,
+    0.012797273695468903,
+    -0.051859889179468155,
+    0.04957124963402748,
+    -0.035827044397592545,
+    0.048294126987457275,
+    -0.004993731621652842,
+    -0.05448676645755768,
+    -0.0387830026447773,
+    -0.04590659216046333,
+    -0.046951066702604294,
+    -0.03922087326645851,
+    0.053139183670282364,
+    0.05448674038052559,
+    -0.05382620915770531,
+    -0.004703459329903126
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking Test workflow; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Wait",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "vectorization_info": {
+    "version": "3.0.0",
+    "generated_at": "2025-09-25T03:59:07.870597",
+    "processing_time_seconds": 5.758689,
+    "embedding_model": "universal-sentence-encoder-v4"
+  },
+  "statistics": {
+    "workflows_processed": 745,
+    "workflows_filtered_out": 0,
+    "categories_found": 4,
+    "total_nodes_analyzed": 9968,
+    "vectorization_time": 0,
+    "start_time": "2025-09-25T03:59:02.111911"
+  },
+  "categories": [
+    {
+      "name": "Agente de Licitaciones",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 47
+    },
+    {
+      "name": "consulta-cnpj",
+      "total_workflows": 1,
+      "valid_workflows": 1,
+      "filtered_workflows": 0,
+      "keywords_count": 21
+    },
+    {
+      "name": "converted_workflows",
+      "total_workflows": 295,
+      "valid_workflows": 295,
+      "filtered_workflows": 0,
+      "keywords_count": 3061
+    },
+    {
+      "name": "extras",
+      "total_workflows": 448,
+      "valid_workflows": 448,
+      "filtered_workflows": 0,
+      "keywords_count": 2158
+    }
+  ],
+  "totals": {
+    "categories_processed": 4,
+    "total_workflows_found": 745,
+    "total_valid_workflows": 745,
+    "total_filtered_workflows": 0
+  }
+}

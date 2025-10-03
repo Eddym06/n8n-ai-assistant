@@ -1,0 +1,1006 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Import Productboard Notes, Companies and Features into Snowflake",
+    "display_name": "Import Productboard Notes, Companies and Features into Snowflake",
+    "file_name": "0643_Splitout_Snowflake_Import_Scheduled.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\0643_Splitout_Snowflake_Import_Scheduled.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "1fbc93a7465f"
+  },
+  "structure": {
+    "total_nodes": 35,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.snowflake",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.splitInBatches"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.snowflake",
+        "count": 13
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 3
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          2980,
+          -180
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          5620,
+          1440
+        ]
+      },
+      {
+        "name": "Manual mapping feature",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4380,
+          -180
+        ]
+      },
+      {
+        "name": "get productboard companies",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4060,
+          220
+        ]
+      },
+      {
+        "name": "Manual mapping companies",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4760,
+          220
+        ]
+      },
+      {
+        "name": "get productboard notes",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4500,
+          640
+        ]
+      },
+      {
+        "name": "Manual mapping notes",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5200,
+          640
+        ]
+      },
+      {
+        "name": "Split features",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          3920,
+          -180
+        ]
+      },
+      {
+        "name": "Split companies",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          4300,
+          220
+        ]
+      },
+      {
+        "name": "Split notes",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          4740,
+          640
+        ]
+      },
+      {
+        "name": "Split features in notes",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          5400,
+          900
+        ]
+      },
+      {
+        "name": "Combine Feature ID + Note ID",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5640,
+          900
+        ]
+      },
+      {
+        "name": "get productboard features",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3680,
+          -180
+        ]
+      },
+      {
+        "name": "Update Productboard Notes",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          5940,
+          660
+        ]
+      },
+      {
+        "name": "Empty Table Productboard Notes",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          4260,
+          640
+        ]
+      },
+      {
+        "name": "[CREATE] PRODUCTBOARD_NOTES",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          3280,
+          1140
+        ]
+      },
+      {
+        "name": "[CREATE] PRODUCTBOARD_COMPANIES",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          3520,
+          1140
+        ]
+      },
+      {
+        "name": "Update Productboard Companies",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          5280,
+          220
+        ]
+      },
+      {
+        "name": "Manual mapping companies db",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5020,
+          220
+        ]
+      },
+      {
+        "name": "Manual mapping notes db",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5720,
+          660
+        ]
+      },
+      {
+        "name": "Empty Table Productboard Companies",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          3820,
+          220
+        ]
+      },
+      {
+        "name": "[CREATE] PRODUCTBOARD_NOTES_FEATURES",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          3760,
+          1140
+        ]
+      },
+      {
+        "name": "Manual mapping feature note IDs db",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          6160,
+          920
+        ]
+      },
+      {
+        "name": "Update Productboard Note and Feature IDs",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          6380,
+          920
+        ]
+      },
+      {
+        "name": "Empty Table Productboard Note and Feature IDs",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          4040,
+          640
+        ]
+      },
+      {
+        "name": "Loop Over Items notes",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          5460,
+          640
+        ]
+      },
+      {
+        "name": "Loop Over Items features notes",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          5900,
+          900
+        ]
+      },
+      {
+        "name": "[CREATE] PRODUCTBOARD_FEATURES",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          3040,
+          1140
+        ]
+      },
+      {
+        "name": "Empty Table Productboard Features",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          3440,
+          -180
+        ]
+      },
+      {
+        "name": "Loop Over Items features",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          4640,
+          -180
+        ]
+      },
+      {
+        "name": "Manual mapping features db",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4900,
+          -160
+        ]
+      },
+      {
+        "name": "Update Productboard Features",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          5140,
+          -160
+        ]
+      },
+      {
+        "name": "Slack",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          5900,
+          1220
+        ]
+      },
+      {
+        "name": "Count Notes Last 7 days and Unprocessed",
+        "type": "n8n-nodes-base.snowflake",
+        "position": [
+          5660,
+          1220
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2980,
+          1060
+        ]
+      }
+    ],
+    "connections_count": 28,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 34
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "Team communication",
+      "Scheduled automation"
+    ],
+    "complexity_score": 705,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "manual mapping notes",
+      "empty table productboard notes",
+      "empty table productboard note and feature ids",
+      "split notes",
+      "manual mapping notes db",
+      "manual mapping feature note ids db",
+      "integration",
+      "[create] productboard_companies",
+      "loop over items notes",
+      "stickyNote",
+      "manual mapping companies",
+      "scheduleTrigger",
+      "[create] productboard_notes",
+      "update productboard note and feature ids",
+      "slack",
+      "count notes last 7 days and unprocessed",
+      "update productboard notes",
+      "schedule trigger",
+      "webhook integration",
+      "httpRequest",
+      "manual mapping features db",
+      "combine feature id + note id",
+      "update productboard features",
+      "empty table productboard companies",
+      "splitInBatches",
+      "get productboard companies",
+      "set",
+      "split features in notes",
+      "split companies",
+      "loop over items features notes",
+      "get productboard notes",
+      "split features",
+      "manual mapping feature",
+      "[create] productboard_features",
+      "empty table productboard features",
+      "snowflake",
+      "complex",
+      "get productboard features",
+      "[create] productboard_notes_features",
+      "sticky note1",
+      "sticky note2",
+      "manual mapping companies db",
+      "update productboard companies",
+      "splitOut",
+      "loop over items features"
+    ],
+    "description": "'Import Productboard Notes, Companies and Features into Snowflake' es un workflow diseñado para webhook integration con 35 nodos activado por Schedule Trigger que ejecuta: Sticky Note1, Manual mapping feature, get productboard companies en la categoría de integration.",
+    "semantic_content": "Workflow: Import Productboard Notes, Companies and Features into Snowflake. Nodos: Sticky Note1 (stickyNote), Manual mapping feature (set), get productboard companies (httpRequest), Manual mapping companies (set), get productboard notes (httpRequest), Manual mapping notes (set), Split features (splitOut), Split companies (splitOut), Split notes (splitOut), Split features in notes (splitOut), Combine Feature ID + Note ID (set), get productboard features (httpRequest), Update Productboard Notes (snowflake), Empty Table Productboard Notes (snowflake), [CREATE] PRODUCTBOARD_NOTES (snowflake), [CREATE] PRODUCTBOARD_COMPANIES (snowflake), Update Productboard Companies (snowflake), Manual mapping companies db (set), Manual mapping notes db (set), Empty Table Productboard Companies (snowflake), [CREATE] PRODUCTBOARD_NOTES_FEATURES (snowflake), Manual mapping feature note IDs db (set), Update Productboard Note and Feature IDs (snowflake), Empty Table Productboard Note and Feature IDs (snowflake), Loop Over Items notes (splitInBatches), Loop Over Items features notes (splitInBatches), [CREATE] PRODUCTBOARD_FEATURES (snowflake), Empty Table Productboard Features (snowflake), Loop Over Items features (splitInBatches), Manual mapping features db (set), Update Productboard Features (snowflake), Schedule Trigger (scheduleTrigger), Slack (slack), Count Notes Last 7 days and Unprocessed (snowflake), Sticky Note2 (stickyNote). Propósito: webhook integration. Categoría: integration. Disparadores: Schedule Trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.httpRequest",
+      "Schedule Trigger",
+      "get productboard companies",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.scheduleTrigger",
+      "Manual mapping feature",
+      "Sticky Note1",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.snowflake",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "0643",
+      "import",
+      "snowflake",
+      "scheduled",
+      "0643_splitout_snowflake_import_scheduled",
+      "splitout"
+    ],
+    "alternative_names": [
+      "Import Productboard Notes, Companies and Features into Snowflake"
+    ],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": false,
+    "workflow_type": "api_integration",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 99.29078014184397,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 89.8581560283688
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 0.9999999403953552,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:17.452667"
+  },
+  "semantic_vector": [
+    -0.042570486664772034,
+    -0.05306577309966087,
+    -0.014035598374903202,
+    -0.0025948917027562857,
+    0.047766052186489105,
+    0.02344527840614319,
+    -0.04967363178730011,
+    0.05222552269697189,
+    -0.05306799337267876,
+    0.03758695349097252,
+    -0.05249769985675812,
+    -0.0530361607670784,
+    0.040773339569568634,
+    -0.05305775627493858,
+    -0.04672105982899666,
+    0.053069185465574265,
+    0.05306483432650566,
+    0.04271833971142769,
+    0.052182119339704514,
+    -0.031683869659900665,
+    0.01120632141828537,
+    0.030524374917149544,
+    0.04247903823852539,
+    0.0020797434262931347,
+    -0.0012932242825627327,
+    0.007832495495676994,
+    -0.024999238550662994,
+    0.05100928992033005,
+    -0.006327228154987097,
+    -0.02057589590549469,
+    0.051773831248283386,
+    -0.05300625413656235,
+    -0.052434664219617844,
+    -0.05241969972848892,
+    0.05282482132315636,
+    0.04954877495765686,
+    0.04286441206932068,
+    0.04054224491119385,
+    0.03796147182583809,
+    -0.0529160238802433,
+    -0.03215504065155983,
+    0.05300893262028694,
+    0.04420354589819908,
+    0.050086844712495804,
+    0.053003523498773575,
+    -0.0273771733045578,
+    0.029048524796962738,
+    -0.045364394783973694,
+    -0.02999245561659336,
+    -0.05267445370554924,
+    -0.018970400094985962,
+    -0.05265450477600098,
+    -0.05306871980428696,
+    -0.05117463693022728,
+    -0.05142718181014061,
+    -0.052463386207818985,
+    0.0530308373272419,
+    -0.03659239038825035,
+    -0.014274767599999905,
+    -0.04732596501708031,
+    -0.034125398844480515,
+    0.02701006829738617,
+    0.0273805670440197,
+    0.052816275507211685,
+    -0.011379740200936794,
+    0.019028300419449806,
+    0.03533328324556351,
+    -0.001233186456374824,
+    0.03217647597193718,
+    0.05146745219826698,
+    0.03931381180882454,
+    0.040322478860616684,
+    0.05288320779800415,
+    0.050617195665836334,
+    0.013436268083751202,
+    0.04012417420744896,
+    0.053065817803144455,
+    -0.05306330323219299,
+    0.02683166228234768,
+    -0.042849618941545486,
+    0.05306512862443924,
+    -0.051791876554489136,
+    0.04968683794140816,
+    -0.05306337773799896,
+    -0.015428438782691956,
+    0.04789523035287857,
+    0.023616347461938858,
+    0.016502629965543747,
+    0.04138264060020447,
+    0.051351483911275864,
+    0.052714962512254715,
+    0.05227064713835716,
+    0.052718620747327805,
+    -0.04847878962755203,
+    0.042534612119197845,
+    0.0128021826967597,
+    -0.052788861095905304,
+    0.05160202831029892,
+    -0.05116424337029457,
+    -0.05304890125989914,
+    -0.02597576566040516,
+    -0.04912123829126358,
+    0.01891733705997467,
+    -0.0504051148891449,
+    -0.016900114715099335,
+    0.009943353943526745,
+    0.052800633013248444,
+    -0.014371655881404877,
+    0.05301318317651749,
+    -0.05247701331973076,
+    0.052242428064346313,
+    -0.0529480054974556,
+    0.03337861970067024,
+    -0.0014475439675152302,
+    0.04582040384411812,
+    0.044827211648225784,
+    -0.04978763684630394,
+    -0.03592441976070404,
+    0.03783239424228668,
+    -0.053046807646751404,
+    0.05088818073272705,
+    -0.05280977115035057,
+    0.047833919525146484,
+    0.0504658967256546,
+    -0.013692734763026237,
+    -0.049602411687374115,
+    -0.05115210637450218,
+    0.019997388124465942,
+    0.05263124406337738,
+    -0.047083258628845215,
+    -0.05221841484308243,
+    0.04637134075164795,
+    0.008905147202312946,
+    -0.052039578557014465,
+    0.003913527354598045,
+    -0.04939744621515274,
+    -0.030917566269636154,
+    -0.037357233464717865,
+    -0.042680367827415466,
+    -0.053068988025188446,
+    -0.05287621170282364,
+    0.053069133311510086,
+    -0.051820963621139526,
+    -0.019110972061753273,
+    0.045538827776908875,
+    -0.05209239944815636,
+    0.05240191891789436,
+    0.046548739075660706,
+    0.053039297461509705,
+    0.05233962461352348,
+    -0.0521438829600811,
+    -0.05221531540155411,
+    -0.05266271531581879,
+    0.03518622741103172,
+    -0.045878876000642776,
+    0.053059447556734085,
+    0.026427090167999268,
+    -0.05190682038664818,
+    0.048815079033374786,
+    0.027394548058509827,
+    -0.053057193756103516,
+    -0.052372176200151443,
+    0.023988014087080956,
+    0.05302980914711952,
+    -0.0336797721683979,
+    -0.053064268082380295,
+    -0.006267963442951441,
+    0.039045657962560654,
+    -0.044402893632650375,
+    -0.05213364586234093,
+    0.052160944789648056,
+    0.042667921632528305,
+    0.051802538335323334,
+    -0.04591311141848564,
+    -0.052971359342336655,
+    0.04632704704999924,
+    -0.052006352692842484,
+    -0.04756133258342743,
+    0.04922843724489212,
+    -0.04904450476169586,
+    -0.05284493416547775,
+    0.02863931469619274,
+    -0.053012020885944366,
+    -0.05197429284453392,
+    0.05029706284403801,
+    -0.042433738708496094,
+    -0.05286489054560661,
+    -0.04988808184862137,
+    0.028761129826307297,
+    0.0526147298514843,
+    0.015976598486304283,
+    0.05294448882341385,
+    -0.039146728813648224,
+    -0.05299784988164902,
+    -0.053068775683641434,
+    -0.05306892469525337,
+    0.05146046355366707,
+    0.053069185465574265,
+    0.04317061975598335,
+    -0.05023575574159622,
+    0.05270794406533241,
+    0.05291704088449478,
+    -0.05291570723056793,
+    0.025171542540192604,
+    0.03760329261422157,
+    -0.052875787019729614,
+    0.036527492105960846,
+    -0.04280482977628708,
+    -0.05306071415543556,
+    -0.0014485710998997092,
+    0.05155915394425392,
+    0.04218611121177673,
+    0.03411504626274109,
+    0.052243422716856,
+    -0.05303281545639038,
+    -0.053058966994285583,
+    0.05158749222755432,
+    0.035215895622968674,
+    0.03177899122238159,
+    0.049727339297533035,
+    -0.05180078744888306,
+    -0.021106481552124023,
+    -0.05236884579062462,
+    0.029906002804636955,
+    -0.05181451886892319,
+    -0.053068820387125015,
+    0.03183693066239357,
+    -0.05277328938245773,
+    -0.053053971379995346,
+    -0.05306155979633331,
+    -0.05099638178944588,
+    -0.0522708036005497,
+    -0.053049784153699875,
+    -0.05306852608919144,
+    0.04189543426036835,
+    0.01687045767903328,
+    0.05306825414299965,
+    0.053069185465574265,
+    -0.050302036106586456,
+    -0.04507894814014435,
+    0.045011915266513824,
+    0.05292832478880882,
+    -0.007931453175842762,
+    -0.006304007489234209,
+    -0.05245397239923477,
+    0.04953663796186447,
+    0.04158823564648628,
+    -0.035994432866573334,
+    0.05063861235976219,
+    0.05305962637066841,
+    -0.052711986005306244,
+    0.04713764041662216,
+    -0.03992917016148567,
+    -0.005897201597690582,
+    0.05102251097559929,
+    -0.04866867884993553,
+    0.05038350448012352,
+    0.053069185465574265,
+    0.015007976442575455,
+    0.05306484177708626,
+    -0.008284216746687889,
+    0.04960830882191658,
+    -0.03484079986810684,
+    0.035418879240751266,
+    0.047343939542770386,
+    0.01585238054394722,
+    0.05146145448088646,
+    -0.053028762340545654,
+    -0.047102153301239014,
+    -0.0440344475209713,
+    -0.052837468683719635,
+    0.03748257830739021,
+    0.030471166595816612,
+    0.053044021129608154,
+    -0.04470858350396156,
+    -0.0529380664229393,
+    -0.05223466083407402,
+    -0.0034179335925728083,
+    0.05305817723274231,
+    0.045384254306554794,
+    -0.0021092239767313004,
+    0.051502980291843414,
+    0.027003195136785507,
+    0.0509786494076252,
+    -0.04139366373419762,
+    -0.04296876862645149,
+    0.05300356447696686,
+    0.05306828394532204,
+    -0.052422236651182175,
+    0.03992656618356705,
+    -0.049304187297821045,
+    0.031275324523448944,
+    0.05306439474225044,
+    0.05298551172018051,
+    0.04956170171499252,
+    0.046751417219638824,
+    0.01784074679017067,
+    0.0515594482421875,
+    0.04749073460698128,
+    0.051487620919942856,
+    -0.05153489485383034,
+    0.051108185201883316,
+    0.05286795645952225,
+    -0.04851275309920311,
+    0.03593997657299042,
+    0.05288715288043022,
+    0.028830884024500847,
+    0.009957498870790005,
+    0.03121117502450943,
+    -0.051373668015003204,
+    -0.0530620776116848,
+    -0.04215852916240692,
+    0.05238765850663185,
+    0.051760874688625336,
+    0.025647921487689018,
+    -0.05293974280357361,
+    0.04620790481567383,
+    0.04778052493929863,
+    0.052352774888277054,
+    0.052844416350126266,
+    0.00032820634078234434,
+    -0.0013852138072252274,
+    0.05302231013774872,
+    -0.04920611158013344,
+    0.0425451286137104,
+    -0.029348688200116158,
+    -0.016333211213350296,
+    0.05191035568714142,
+    -0.03412816673517227,
+    -0.0460294634103775,
+    -0.05300990119576454,
+    -0.02702525444328785,
+    0.01283652801066637,
+    0.05292775481939316,
+    -0.038351599127054214,
+    0.049935441464185715,
+    0.05290617048740387,
+    0.05274558812379837,
+    0.04096759483218193,
+    -0.05222111567854881,
+    -0.052669402211904526,
+    -0.01988508366048336,
+    0.05203908681869507,
+    -0.051422081887722015,
+    -0.053069185465574265,
+    0.026742437854409218,
+    0.04602443426847458,
+    -0.052804138511419296,
+    -0.052987612783908844,
+    0.02241145446896553,
+    0.052232105284929276,
+    0.04932677000761032,
+    0.0529518760740757,
+    -0.03936967998743057,
+    -0.0446707084774971,
+    -0.053016725927591324,
+    -0.053069163113832474,
+    -0.015634318813681602,
+    0.053009580820798874,
+    0.04982984811067581,
+    0.04675193876028061,
+    0.049781668931245804,
+    -0.05306847766041756,
+    0.05283099412918091,
+    0.036652904003858566,
+    0.04361413046717644,
+    0.04894449561834335,
+    -0.05294046178460121,
+    0.0380755215883255,
+    0.041807275265455246,
+    -0.0530683770775795,
+    0.024242958053946495,
+    -0.03236581012606621,
+    0.052826300263404846,
+    -0.0411875918507576,
+    0.05282319337129593,
+    -0.0527736060321331,
+    0.032904259860515594,
+    0.048450127243995667,
+    0.049978990107774734,
+    0.0256330743432045,
+    0.04518081247806549,
+    -0.05225753039121628,
+    0.03689410164952278,
+    -0.030660448595881462,
+    -0.0527830570936203,
+    0.043394818902015686,
+    0.037186793982982635,
+    -0.04931427910923958,
+    -0.05266575142741203,
+    -0.05266236141324043,
+    0.03235239163041115,
+    0.03860069811344147,
+    0.005360820330679417,
+    -0.05271589756011963,
+    0.03799759969115257,
+    0.030475139617919922,
+    0.03907899186015129,
+    0.04289841651916504,
+    0.043558135628700256,
+    0.02236591838300228,
+    -0.051796767860651016,
+    -0.053067147731781006,
+    0.053036391735076904,
+    -0.05027765780687332,
+    0.04081215336918831,
+    -0.05306617543101311,
+    0.038348522037267685,
+    0.05254371836781502,
+    -0.04366295412182808,
+    0.04308164864778519,
+    0.018467461690306664,
+    -0.04435227811336517,
+    0.02809356153011322,
+    -0.036648839712142944,
+    -0.051932599395513535,
+    -0.05296771600842476,
+    0.028508557006716728,
+    -0.04818107560276985,
+    0.006358350161463022,
+    0.05287604779005051,
+    0.044522058218717575,
+    -0.01155046932399273,
+    0.05286582186818123,
+    -0.05238557234406471,
+    -0.05186671391129494,
+    -0.05165631324052811,
+    0.052778635174036026,
+    0.0007516549085266888,
+    0.03645044192671776,
+    -0.05163604021072388,
+    -0.05306622013449669,
+    -0.034327734261751175,
+    0.05039175599813461,
+    -0.039996758103370667,
+    0.014932806603610516,
+    -0.04144294559955597,
+    -0.05295006185770035,
+    -0.05303942784667015,
+    0.040422070771455765,
+    0.04563005641102791,
+    0.026202570647001266,
+    -0.05047360435128212,
+    -0.010472104884684086,
+    0.0281441081315279,
+    -0.05296006798744202,
+    -0.05300618335604668,
+    0.03699582815170288,
+    -0.04870617017149925,
+    -0.053065285086631775,
+    0.01470340695232153,
+    -0.019671114161610603,
+    0.05306527391076088,
+    0.038743168115615845,
+    0.038673173636198044,
+    -0.05298098176717758,
+    -0.048988811671733856,
+    0.051615796983242035,
+    0.0489368662238121,
+    -0.05196498706936836,
+    0.02937425673007965,
+    0.052903588861227036,
+    0.02046801894903183,
+    0.053055811673402786,
+    -0.04387562721967697,
+    -0.0522124320268631,
+    0.03689413145184517,
+    -0.048150982707738876,
+    -0.03234725072979927,
+    0.03067094087600708,
+    0.0008560013375245035,
+    -0.05283906310796738,
+    0.04354768246412277,
+    0.04677658528089523,
+    -0.04204416275024414,
+    -0.051199063658714294,
+    0.04961168393492699,
+    0.05300627276301384,
+    -0.05238184332847595,
+    -0.05304278805851936,
+    -0.028631916269659996,
+    0.05136528238654137,
+    0.01756511814892292,
+    -0.05300430953502655,
+    -0.04974205419421196,
+    0.04156563803553581,
+    -0.047146473079919815,
+    -0.05146828666329384,
+    0.051210738718509674,
+    0.05292326584458351,
+    0.02416948974132538,
+    0.052767813205718994,
+    0.013004190288484097,
+    0.04319244250655174,
+    -0.026784520596265793,
+    0.05297394096851349,
+    0.005860022269189358,
+    0.045163340866565704,
+    -0.051317259669303894,
+    -0.05213700234889984,
+    0.04301922768354416,
+    0.0312638022005558,
+    0.05296400561928749,
+    -0.053068868815898895,
+    0.052547845989465714,
+    -0.04930062219500542,
+    -0.01770748570561409,
+    0.049112871289253235,
+    0.04930633306503296,
+    0.05306907743215561,
+    0.002560336608439684,
+    -0.0317382849752903
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Schedule Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

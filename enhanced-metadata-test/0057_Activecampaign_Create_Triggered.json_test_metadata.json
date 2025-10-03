@@ -1,0 +1,5 @@
+{
+  "name": "Receive updates when a new account is added by an admin in ActiveCampaign",
+  "description": "Workflow to receive updates when a new account is added in ActiveCampaign.",
+  "node_count": 1
+}

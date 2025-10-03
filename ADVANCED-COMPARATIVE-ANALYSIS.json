@@ -1,0 +1,440 @@
+{
+  "timestamp": "2025-09-12T13:32:20.075Z",
+  "reference": {
+    "file": "./workflows/Wait/1312_Wait_Schedule_Create_Webhook.json",
+    "structure": {
+      "rootProperties": [
+        "id",
+        "meta",
+        "name",
+        "tags",
+        "nodes",
+        "active",
+        "pinData",
+        "settings",
+        "versionId",
+        "connections"
+      ],
+      "hasId": true,
+      "hasMeta": true,
+      "hasName": true,
+      "hasTags": true,
+      "hasSettings": true,
+      "hasVersionId": true,
+      "metaFields": [
+        "instanceId"
+      ],
+      "instanceId": "03e9d14e9196363fe7191ce21dc0bb17387a6e755dcc9acc4f5904752919dca8",
+      "nodeCount": 18,
+      "nodeTypes": {
+        "n8n-nodes-base.scheduleTrigger": 1,
+        "n8n-nodes-base.itemLists": 3,
+        "n8n-nodes-base.httpRequest": 4,
+        "n8n-nodes-base.splitInBatches": 1,
+        "n8n-nodes-base.set": 1,
+        "n8n-nodes-base.jira": 1,
+        "n8n-nodes-base.slack": 1,
+        "n8n-nodes-base.stickyNote": 5,
+        "n8n-nodes-base.wait": 1
+      },
+      "nodeFields": [
+        "id",
+        "name",
+        "type",
+        "position",
+        "parameters",
+        "typeVersion",
+        "notes",
+        "notesInFlow",
+        "disabled",
+        "credentials",
+        "continueOnFail",
+        "webhookId"
+      ],
+      "nodeIdPattern": "UUID",
+      "hasDisabledNodes": true,
+      "hasNotesInFlow": true,
+      "hasCredentials": true,
+      "connectionCount": 13,
+      "connectionStructure": {},
+      "orphanNodes": [
+        "Sticky Note",
+        "Sticky Note1",
+        "Sticky Note2",
+        "Sticky Note3",
+        "Sticky Note4"
+      ],
+      "connectionTargetPattern": {
+        "hasType": true,
+        "hasIndex": true,
+        "exampleTarget": {
+          "node": "Look up SHA in Virustotal",
+          "type": "main",
+          "index": 0
+        }
+      },
+      "hasOriginalIdFields": false,
+      "hasUndefinedReferences": false,
+      "hasBackwardConnections": false
+    }
+  },
+  "generated": [
+    {
+      "file": "./generated-workflows/workflow-TEST-MINIMAL-FINAL.json",
+      "structure": {
+        "rootProperties": [
+          "name",
+          "nodes",
+          "connections",
+          "settings",
+          "meta"
+        ],
+        "hasId": false,
+        "hasMeta": true,
+        "hasName": true,
+        "hasTags": false,
+        "hasSettings": true,
+        "hasVersionId": false,
+        "metaFields": [
+          "templateCreatedBy",
+          "fixedBy",
+          "timestamp",
+          "description",
+          "testPurpose"
+        ],
+        "instanceId": null,
+        "nodeCount": 3,
+        "nodeTypes": {
+          "n8n-nodes-base.webhook": 1,
+          "n8n-nodes-base.code": 1,
+          "n8n-nodes-base.httpRequest": 1
+        },
+        "nodeFields": [
+          "id",
+          "name",
+          "type",
+          "position",
+          "parameters",
+          "typeVersion"
+        ],
+        "nodeIdPattern": "Custom",
+        "hasDisabledNodes": false,
+        "hasNotesInFlow": false,
+        "hasCredentials": false,
+        "connectionCount": 2,
+        "connectionStructure": {},
+        "orphanNodes": [],
+        "connectionTargetPattern": {
+          "hasType": true,
+          "hasIndex": true,
+          "exampleTarget": {
+            "node": "Code_Test",
+            "type": "main",
+            "index": 0
+          }
+        },
+        "hasOriginalIdFields": false,
+        "hasUndefinedReferences": false,
+        "hasBackwardConnections": false
+      }
+    },
+    {
+      "file": "./generated-workflows/workflow-empresarial-FUNCIONAL-FINAL.json",
+      "structure": {
+        "rootProperties": [
+          "name",
+          "nodes",
+          "connections",
+          "settings",
+          "meta"
+        ],
+        "hasId": false,
+        "hasMeta": true,
+        "hasName": true,
+        "hasTags": false,
+        "hasSettings": true,
+        "hasVersionId": false,
+        "metaFields": [
+          "templateCreatedBy",
+          "fixedBy",
+          "timestamp",
+          "originalFile",
+          "description",
+          "fixes"
+        ],
+        "instanceId": null,
+        "nodeCount": 10,
+        "nodeTypes": {
+          "n8n-nodes-base.webhook": 1,
+          "n8n-nodes-base.if": 1,
+          "n8n-nodes-base.code": 4,
+          "n8n-nodes-base.httpRequest": 4
+        },
+        "nodeFields": [
+          "id",
+          "name",
+          "type",
+          "position",
+          "parameters",
+          "typeVersion"
+        ],
+        "nodeIdPattern": "UUID",
+        "hasDisabledNodes": false,
+        "hasNotesInFlow": false,
+        "hasCredentials": false,
+        "connectionCount": 9,
+        "connectionStructure": {},
+        "orphanNodes": [],
+        "connectionTargetPattern": {
+          "hasType": true,
+          "hasIndex": true,
+          "exampleTarget": {
+            "node": "DocValidation_IF_InitialCheck",
+            "type": "main",
+            "index": 0
+          }
+        },
+        "hasOriginalIdFields": false,
+        "hasUndefinedReferences": false,
+        "hasBackwardConnections": false
+      }
+    },
+    {
+      "file": "./generated-workflows/workflow-ADVANCED-TEST-V2.json",
+      "structure": {
+        "rootProperties": [
+          "id",
+          "meta",
+          "name",
+          "tags",
+          "nodes",
+          "connections",
+          "active",
+          "settings",
+          "versionId"
+        ],
+        "hasId": true,
+        "hasMeta": true,
+        "hasName": true,
+        "hasTags": true,
+        "hasSettings": true,
+        "hasVersionId": true,
+        "metaFields": [
+          "instanceId"
+        ],
+        "instanceId": "9fe56c2f261342330a463071df583479ec928aa4ce6f8482be184c585cdafc8a",
+        "nodeCount": 4,
+        "nodeTypes": {
+          "n8n-nodes-base.scheduleTrigger": 1,
+          "n8n-nodes-base.code": 1,
+          "n8n-nodes-base.httpRequest": 1,
+          "n8n-nodes-base.wait": 1
+        },
+        "nodeFields": [
+          "id",
+          "name",
+          "type",
+          "position",
+          "parameters",
+          "typeVersion",
+          "notes",
+          "notesInFlow",
+          "continueOnFail"
+        ],
+        "nodeIdPattern": "UUID",
+        "hasDisabledNodes": false,
+        "hasNotesInFlow": true,
+        "hasCredentials": false,
+        "connectionCount": 3,
+        "connectionStructure": {},
+        "orphanNodes": [],
+        "connectionTargetPattern": {
+          "hasType": true,
+          "hasIndex": true,
+          "exampleTarget": {
+            "node": "Process Data",
+            "type": "main",
+            "index": 0
+          }
+        },
+        "hasOriginalIdFields": false,
+        "hasUndefinedReferences": false,
+        "hasBackwardConnections": false
+      }
+    },
+    {
+      "file": "./generated-workflows/workflow-ENTERPRISE-V2.json",
+      "structure": {
+        "rootProperties": [
+          "id",
+          "meta",
+          "name",
+          "tags",
+          "nodes",
+          "connections",
+          "active",
+          "settings",
+          "versionId"
+        ],
+        "hasId": true,
+        "hasMeta": true,
+        "hasName": true,
+        "hasTags": true,
+        "hasSettings": true,
+        "hasVersionId": true,
+        "metaFields": [
+          "instanceId"
+        ],
+        "instanceId": "846bbdd2f6b64369028e1c9483832417fba2303efdedcabb09aa90e06d8f835b",
+        "nodeCount": 8,
+        "nodeTypes": {
+          "n8n-nodes-base.webhook": 1,
+          "n8n-nodes-base.code": 3,
+          "n8n-nodes-base.splitInBatches": 1,
+          "n8n-nodes-base.httpRequest": 2,
+          "n8n-nodes-base.itemLists": 1
+        },
+        "nodeFields": [
+          "id",
+          "name",
+          "type",
+          "position",
+          "parameters",
+          "typeVersion",
+          "webhookId",
+          "notes",
+          "notesInFlow",
+          "continueOnFail",
+          "disabled"
+        ],
+        "nodeIdPattern": "UUID",
+        "hasDisabledNodes": true,
+        "hasNotesInFlow": true,
+        "hasCredentials": false,
+        "connectionCount": 6,
+        "connectionStructure": {},
+        "orphanNodes": [],
+        "connectionTargetPattern": {
+          "hasType": true,
+          "hasIndex": true,
+          "exampleTarget": {
+            "node": "Validate Input",
+            "type": "main",
+            "index": 0
+          }
+        },
+        "hasOriginalIdFields": false,
+        "hasUndefinedReferences": false,
+        "hasBackwardConnections": false
+      }
+    },
+    {
+      "file": "./generated-workflows/workflow-SECURITY-SYSTEM-V2.json",
+      "structure": {
+        "rootProperties": [
+          "id",
+          "meta",
+          "name",
+          "tags",
+          "nodes",
+          "connections",
+          "active",
+          "settings",
+          "versionId"
+        ],
+        "hasId": true,
+        "hasMeta": true,
+        "hasName": true,
+        "hasTags": true,
+        "hasSettings": true,
+        "hasVersionId": true,
+        "metaFields": [
+          "instanceId"
+        ],
+        "instanceId": "3fe116abac2d2a5cb7d356fd013a7d4a1737e2116408888ca50a8cb2b7d19a26",
+        "nodeCount": 8,
+        "nodeTypes": {
+          "n8n-nodes-base.webhook": 1,
+          "n8n-nodes-base.code": 4,
+          "n8n-nodes-base.httpRequest": 3
+        },
+        "nodeFields": [
+          "id",
+          "name",
+          "type",
+          "position",
+          "parameters",
+          "typeVersion",
+          "webhookId",
+          "notes",
+          "continueOnFail",
+          "disabled"
+        ],
+        "nodeIdPattern": "UUID",
+        "hasDisabledNodes": true,
+        "hasNotesInFlow": false,
+        "hasCredentials": false,
+        "connectionCount": 7,
+        "connectionStructure": {},
+        "orphanNodes": [],
+        "connectionTargetPattern": {
+          "hasType": true,
+          "hasIndex": true,
+          "exampleTarget": {
+            "node": "Parse Alert Data",
+            "type": "main",
+            "index": 0
+          }
+        },
+        "hasOriginalIdFields": false,
+        "hasUndefinedReferences": false,
+        "hasBackwardConnections": false
+      }
+    }
+  ],
+  "improvements": {
+    "requiredFields": {
+      "workflow": [
+        "id",
+        "meta",
+        "name",
+        "nodes",
+        "connections"
+      ],
+      "meta": [
+        "instanceId"
+      ],
+      "nodes": [
+        "id",
+        "name",
+        "type",
+        "position",
+        "parameters",
+        "typeVersion",
+        "notes",
+        "notesInFlow",
+        "disabled",
+        "credentials",
+        "continueOnFail",
+        "webhookId"
+      ]
+    },
+    "idPatterns": {
+      "workflow": "AlphaNumeric (16+ chars)",
+      "nodes": "UUID",
+      "versionId": "UUID format"
+    },
+    "criticalFixes": [
+      "Remove all originalId fields",
+      "Fix undefined node references",
+      "Ensure all connections point to existing nodes",
+      "Add proper meta.instanceId"
+    ],
+    "structuralImprovements": [
+      "Match reference connection structure",
+      "Use consistent node naming",
+      "Add proper typeVersion fields",
+      "Include settings.executionOrder"
+    ]
+  }
+}

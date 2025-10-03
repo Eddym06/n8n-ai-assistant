@@ -1,0 +1,1023 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Splitout Code Automation Scheduled",
+    "file_name": "0816_Splitout_Code_Automation_Scheduled.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\0816_Splitout_Code_Automation_Scheduled.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "dd5b6066fe86"
+  },
+  "structure": {
+    "total_nodes": 30,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.removeDuplicates",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "n8n-nodes-base.discord",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.noOp"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.removeDuplicates",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.discord",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When Executed by Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          1780,
+          180
+        ]
+      },
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1220,
+          40
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Spam Detection",
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "position": [
+          260,
+          100
+        ]
+      },
+      {
+        "name": "Get Recent Messages",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          -1020,
+          40
+        ]
+      },
+      {
+        "name": "Only Once",
+        "type": "n8n-nodes-base.removeDuplicates",
+        "position": [
+          -820,
+          40
+        ]
+      },
+      {
+        "name": "Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          240,
+          260
+        ]
+      },
+      {
+        "name": "Warn User",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          2880,
+          20
+        ]
+      },
+      {
+        "name": "Warn User Only",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          2540,
+          180
+        ]
+      },
+      {
+        "name": "Group By User",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -540,
+          100
+        ]
+      },
+      {
+        "name": "For Each User...",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -160,
+          100
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -360,
+          100
+        ]
+      },
+      {
+        "name": "Message to List",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          100,
+          100
+        ]
+      },
+      {
+        "name": "Notify Moderators with Send & Wait",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          1980,
+          180
+        ]
+      },
+      {
+        "name": "Flag as Spam",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          620,
+          0
+        ]
+      },
+      {
+        "name": "Flag as Not Spam",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          620,
+          200
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          800,
+          100
+        ]
+      },
+      {
+        "name": "Spam Messages Only",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1060,
+          100
+        ]
+      },
+      {
+        "name": "Has Flagged Messages?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1240,
+          180
+        ]
+      },
+      {
+        "name": "Get Message IDs",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2540,
+          20
+        ]
+      },
+      {
+        "name": "Delete Messages",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          2720,
+          20
+        ]
+      },
+      {
+        "name": "Receive Instructions",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          2180,
+          180
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1280,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -640,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          20,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1680,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2440,
+          -160
+        ]
+      },
+      {
+        "name": "Moderation Subworkflow",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1460,
+          200
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1000,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1700,
+          -580
+        ]
+      },
+      {
+        "name": "No Action Taken",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2540,
+          340
+        ]
+      }
+    ],
+    "connections_count": 22,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 28
+    }
+  },
+  "semantic_info": {
+    "category": "communication",
+    "purpose": "ai and machine learning",
+    "use_cases": [
+      "Scheduled automation"
+    ],
+    "complexity_score": 830,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "executeWorkflow",
+      "group by user",
+      "delete messages",
+      "sticky note5",
+      "message to list",
+      "switch",
+      "receive instructions",
+      "communication",
+      "get message ids",
+      "sticky note3",
+      "stickyNote",
+      "flag as not spam",
+      "sticky note6",
+      "no action taken",
+      "scheduleTrigger",
+      "spam detection",
+      "model",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "schedule trigger",
+      "for each user...",
+      "@n8n/n8n nodes langchain.textClassifier",
+      "discord",
+      "has flagged messages?",
+      "sticky note2",
+      "removeDuplicates",
+      "warn user",
+      "code",
+      "splitInBatches",
+      "ai and machine learning",
+      "warn user only",
+      "moderation subworkflow",
+      "sticky note4",
+      "set",
+      "split out",
+      "merge",
+      "spam messages only",
+      "sticky note",
+      "complex",
+      "only once",
+      "filter",
+      "flag as spam",
+      "get recent messages",
+      "noOp",
+      "sticky note1",
+      "notify moderators with send & wait",
+      "splitOut",
+      "executeWorkflowTrigger",
+      "when executed by another workflow"
+    ],
+    "description": "Este workflow diseñado para ai and machine learning con 30 nodos con 2 disparadores que ejecuta: Spam Detection, Get Recent Messages, Only Once en la categoría de communication.",
+    "semantic_content": "Nodos: Spam Detection (@n8n/n8n-nodes-langchain.textClassifier), Get Recent Messages (discord), Only Once (removeDuplicates), Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Warn User (discord), Warn User Only (discord), Group By User (code), For Each User... (splitInBatches), Split Out (splitOut), Message to List (code), Notify Moderators with Send & Wait (discord), Flag as Spam (set), Flag as Not Spam (set), Merge (merge), Spam Messages Only (filter), Has Flagged Messages? (if), Get Message IDs (code), Delete Messages (discord), Receive Instructions (switch), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Moderation Subworkflow (executeWorkflow), Sticky Note5 (stickyNote), When Executed by Another Workflow (executeWorkflowTrigger), Sticky Note6 (stickyNote), No Action Taken (noOp), Schedule Trigger (scheduleTrigger). Propósito: ai and machine learning. Categoría: communication. Disparadores: When Executed by Another Workflow, Schedule Trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When Executed by Another Workflow",
+      "Schedule Trigger",
+      "Only Once",
+      "n8n-nodes-base.removeDuplicates",
+      "n8n-nodes-base.scheduleTrigger",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "n8n-nodes-base.discord",
+      "Get Recent Messages",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "Spam Detection"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.removeduplicates",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.discord",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.splitout",
+      "@n8n/n8n-nodes-langchain.textclassifier"
+    ],
+    "search_terms": [
+      "0816_splitout_code_automation_scheduled",
+      "code",
+      "scheduled",
+      "automation",
+      "0816",
+      "splitout"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai and machine learning",
+      "communication"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": false,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 72.28915662650603,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 78.20783132530121
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:17.708733"
+  },
+  "semantic_vector": [
+    -0.04013797268271446,
+    -0.022466246038675308,
+    -0.04222225397825241,
+    -0.051274191588163376,
+    0.015376231633126736,
+    -0.05602405592799187,
+    -0.01342419721186161,
+    0.007360273972153664,
+    -0.006074175704270601,
+    0.05714508146047592,
+    0.025234362110495567,
+    -0.04390639811754227,
+    0.049300793558359146,
+    -0.05710415914654732,
+    -0.027851613238453865,
+    0.05822152644395828,
+    0.05194561928510666,
+    0.004745520185679197,
+    -0.05665472894906998,
+    0.050705358386039734,
+    -0.04000721126794815,
+    0.05554153397679329,
+    0.038964979350566864,
+    -0.05740087479352951,
+    -0.029949050396680832,
+    -0.043048031628131866,
+    -0.05766201391816139,
+    0.04730602726340294,
+    -0.05751648545265198,
+    0.05388205870985985,
+    0.05541202425956726,
+    0.04916700720787048,
+    -0.018547842279076576,
+    0.04912440851330757,
+    0.052804041653871536,
+    0.04579518735408783,
+    0.01597329042851925,
+    -0.04989441856741905,
+    0.021813280880451202,
+    -0.015318038873374462,
+    -0.05661465600132942,
+    0.044413574039936066,
+    -0.04332080855965614,
+    0.04703148454427719,
+    0.05815904214978218,
+    0.05791521444916725,
+    0.054155878722667694,
+    -0.048002008348703384,
+    -0.05812501907348633,
+    -0.05370257794857025,
+    -0.04750242456793785,
+    -0.0010358166182413697,
+    -0.0581999346613884,
+    -0.05731604993343353,
+    0.008176314644515514,
+    -0.046416494995355606,
+    0.021642060950398445,
+    -0.040603041648864746,
+    0.005639869254082441,
+    0.011654898524284363,
+    -0.01448553241789341,
+    0.03671814873814583,
+    -0.01459954958409071,
+    0.050840359181165695,
+    -0.05108499154448509,
+    0.04413139075040817,
+    0.05667591094970703,
+    0.03319104388356209,
+    0.056110162287950516,
+    -0.03182542324066162,
+    -0.05474335327744484,
+    -0.039087992161512375,
+    0.024983329698443413,
+    0.056693002581596375,
+    0.019410891458392143,
+    0.05546356737613678,
+    0.007746200542896986,
+    -0.037028659135103226,
+    -0.01628188230097294,
+    0.0419904962182045,
+    0.028444010764360428,
+    -0.027771173045039177,
+    0.04588579013943672,
+    -0.056948259472846985,
+    0.037813618779182434,
+    -0.01180857140570879,
+    0.010764852166175842,
+    0.01327946875244379,
+    -0.03943862393498421,
+    -0.029204480350017548,
+    -0.05731279402971268,
+    -0.03523049131035805,
+    -0.0009328516898676753,
+    0.018155574798583984,
+    -0.019858645275235176,
+    0.005697501823306084,
+    -0.04378141090273857,
+    -0.04508426785469055,
+    -0.05679800733923912,
+    -0.05812918767333031,
+    0.058088745921850204,
+    -0.04977310821413994,
+    -0.04751940071582794,
+    0.057763610035181046,
+    0.0157142523676157,
+    0.0504719540476799,
+    0.058174602687358856,
+    0.057340070605278015,
+    -0.051667261868715286,
+    -0.05821990966796875,
+    -0.02458280883729458,
+    -0.05786578729748726,
+    -0.027552451938390732,
+    0.014614901505410671,
+    -0.054234303534030914,
+    0.041339997202157974,
+    -0.057442162185907364,
+    -0.03995705395936966,
+    0.03745893016457558,
+    0.02747860550880432,
+    0.042881228029727936,
+    0.0513824038207531,
+    -0.054903388023376465,
+    -0.010000969283282757,
+    0.05805769935250282,
+    0.05536836385726929,
+    -0.0237849373370409,
+    -0.04873279482126236,
+    0.009506349451839924,
+    -0.051698703318834305,
+    0.00024209200637415051,
+    0.013709730468690395,
+    0.02976617030799389,
+    0.05010983347892761,
+    0.0022432587575167418,
+    -0.05679187923669815,
+    -0.012003286741673946,
+    -0.0166071318089962,
+    -0.012452027760446072,
+    -0.054939113557338715,
+    0.05815775319933891,
+    0.05822070688009262,
+    -0.012800675816833973,
+    -0.00714852986857295,
+    -0.021880947053432465,
+    -0.05787164717912674,
+    -0.03977404907345772,
+    -0.039985720068216324,
+    0.045426853001117706,
+    -0.05428954213857651,
+    -0.049292948096990585,
+    -0.04491272196173668,
+    0.05449383705854416,
+    -0.03837447613477707,
+    0.04795895144343376,
+    0.05796900764107704,
+    -0.015862172469496727,
+    -0.05380481109023094,
+    -0.0344075970351696,
+    -0.011644354090094566,
+    -0.05695098266005516,
+    -0.051580484956502914,
+    0.05374317243695259,
+    0.04452819377183914,
+    0.056853048503398895,
+    0.02045086957514286,
+    -0.058101095259189606,
+    -0.05660541355609894,
+    -0.05421380326151848,
+    -0.03333033621311188,
+    0.0564238615334034,
+    -0.058090630918741226,
+    -0.04980815574526787,
+    0.05138062685728073,
+    -0.05736410245299339,
+    0.05510009452700615,
+    -0.030750123783946037,
+    -0.05662833899259567,
+    0.023167874664068222,
+    -0.0580480732023716,
+    -0.04208258539438248,
+    0.05672153830528259,
+    -0.056092098355293274,
+    0.04643787443637848,
+    0.04844501242041588,
+    0.05768938735127449,
+    -0.057951439172029495,
+    0.03194897994399071,
+    -0.0059209647588431835,
+    0.0384538359940052,
+    -0.05023400858044624,
+    0.04361668974161148,
+    -0.0565670020878315,
+    -0.05784117430448532,
+    -0.05792411416769028,
+    -0.05810520052909851,
+    -0.00626456830650568,
+    0.058221567422151566,
+    0.0453551821410656,
+    0.017870044335722923,
+    0.05714094638824463,
+    0.053822729736566544,
+    0.05701971799135208,
+    -0.028378618881106377,
+    0.04484231397509575,
+    0.040640249848365784,
+    0.014642367139458656,
+    0.025654388591647148,
+    -0.05772634595632553,
+    -0.030072368681430817,
+    0.015526468865573406,
+    0.05784454941749573,
+    0.05814392864704132,
+    0.05626992881298065,
+    -0.0580856129527092,
+    -0.05066986382007599,
+    -0.05666356533765793,
+    0.0554095059633255,
+    0.021642183884978294,
+    0.02630789577960968,
+    0.005390074569731951,
+    0.03404536843299866,
+    0.04517601430416107,
+    0.023350147530436516,
+    -0.02605549991130829,
+    -0.055901963263750076,
+    -0.04853113368153572,
+    -0.05662177875638008,
+    0.04700322449207306,
+    -0.052941057831048965,
+    0.05741914361715317,
+    -0.05787157267332077,
+    0.02131103351712227,
+    -0.058209378272295,
+    0.04303974658250809,
+    0.00396771403029561,
+    0.05817680433392525,
+    0.023364342749118805,
+    -0.056046221405267715,
+    -0.04183145985007286,
+    -0.05659156292676926,
+    0.033974550664424896,
+    -0.050291016697883606,
+    0.048216965049505234,
+    -0.032041460275650024,
+    0.05809246003627777,
+    0.009180431254208088,
+    -0.013139176182448864,
+    0.042390964925289154,
+    0.05803021043539047,
+    -0.05821957811713219,
+    -0.03381311148405075,
+    0.015341709367930889,
+    -0.014185942709445953,
+    0.05755355581641197,
+    -0.05820732191205025,
+    0.007097324822098017,
+    0.05822142958641052,
+    -0.050279490649700165,
+    -0.033992938697338104,
+    -0.05537325143814087,
+    0.0040639787912368774,
+    -0.04750947281718254,
+    0.04996895790100098,
+    0.011275324039161205,
+    0.05570751428604126,
+    -0.05681633576750755,
+    0.04894227534532547,
+    -0.056069497019052505,
+    0.05811610445380211,
+    -0.05766968056559563,
+    -0.05434973165392876,
+    -0.05299017205834389,
+    -0.026796499267220497,
+    0.050814151763916016,
+    -0.0458439476788044,
+    0.0011536601232364774,
+    0.057929910719394684,
+    0.05820998549461365,
+    0.02423073910176754,
+    -0.0009164034272544086,
+    -0.054189518094062805,
+    0.05633571371436119,
+    0.020744837820529938,
+    0.025647610425949097,
+    -0.03444415703415871,
+    0.053522754460573196,
+    0.010553005151450634,
+    -0.04066642373800278,
+    -0.035726141184568405,
+    -0.040436383336782455,
+    -0.020544353872537613,
+    0.05811852216720581,
+    0.02548881061375141,
+    -0.022831620648503304,
+    -0.043070413172245026,
+    0.038667161017656326,
+    -0.0571194589138031,
+    0.005689837038516998,
+    -0.052526023238897324,
+    0.04135158658027649,
+    -0.05619124323129654,
+    0.03771167993545532,
+    -0.021252235397696495,
+    0.03061036206781864,
+    -0.008819018490612507,
+    0.05675443634390831,
+    0.05811787396669388,
+    0.02616996504366398,
+    -0.023716140538454056,
+    0.019633812829852104,
+    -0.05492250993847847,
+    -0.05191123113036156,
+    -0.012981193140149117,
+    0.054486893117427826,
+    -0.05030875280499458,
+    0.03993859887123108,
+    -0.011425432749092579,
+    -0.03230830654501915,
+    -0.05703664571046829,
+    -0.04989954084157944,
+    -0.050626352429389954,
+    0.055652935057878494,
+    -0.02478545345366001,
+    0.0149609399959445,
+    0.028105249628424644,
+    0.05671364814043045,
+    -0.04112710431218147,
+    0.055891428142786026,
+    -0.05632059648633003,
+    -0.03260349854826927,
+    -0.0578504279255867,
+    -0.052314747124910355,
+    0.05811295658349991,
+    -0.001603732816874981,
+    0.044184520840644836,
+    0.05803919956088066,
+    0.05817163363099098,
+    -0.0016292992513626814,
+    -0.03267993777990341,
+    0.025384994223713875,
+    -0.05774081498384476,
+    -0.04443938285112381,
+    0.001705975504592061,
+    -0.058046627789735794,
+    0.03252276033163071,
+    0.030721213668584824,
+    0.05007610842585564,
+    -0.040890876203775406,
+    0.02713749371469021,
+    0.05788297578692436,
+    0.005054530221968889,
+    -0.04901103675365448,
+    0.05816403776407242,
+    0.05801113322377205,
+    0.016166869550943375,
+    -0.05820751190185547,
+    -0.04414725676178932,
+    0.01632430963218212,
+    0.056310057640075684,
+    0.055464014410972595,
+    -0.03835083916783333,
+    -0.05792975053191185,
+    0.0027091014198958874,
+    -0.057723741978406906,
+    0.05662757530808449,
+    0.007267009001225233,
+    -0.041962508112192154,
+    0.03774750232696533,
+    0.024827849119901657,
+    0.016798030585050583,
+    0.04261355847120285,
+    -0.0439409576356411,
+    0.058118537068367004,
+    0.0579754039645195,
+    0.05343594774603844,
+    0.047339875251054764,
+    -0.05592585727572441,
+    -0.026071079075336456,
+    -0.047609928995370865,
+    -0.0022794613614678383,
+    0.0434897355735302,
+    -0.050476234406232834,
+    0.019249554723501205,
+    0.04633743688464165,
+    -0.043408188968896866,
+    0.05471484363079071,
+    -0.031482089310884476,
+    0.04393461346626282,
+    -0.035132501274347305,
+    -0.05018262565135956,
+    -0.056381143629550934,
+    -0.004613490309566259,
+    0.05766618624329567,
+    -0.056805964559316635,
+    -0.022390317171812057,
+    0.04172803834080696,
+    0.049800727516412735,
+    0.013964129611849785,
+    0.01631913334131241,
+    0.03543420881032944,
+    0.05006611347198486,
+    -0.05756239965558052,
+    0.05657625570893288,
+    -0.0504286028444767,
+    -0.05498083308339119,
+    -0.05708012729883194,
+    -0.016947489231824875,
+    0.043742891401052475,
+    0.00978945754468441,
+    0.05428999289870262,
+    0.00484082754701376,
+    -0.0002311694697709754,
+    0.05358117073774338,
+    -0.05493161827325821,
+    -0.019972514361143112,
+    0.043411076068878174,
+    -0.05460604652762413,
+    -0.05092541500926018,
+    -0.03875534236431122,
+    -0.05820014327764511,
+    -0.03900431469082832,
+    -0.05589897558093071,
+    -0.016416722908616066,
+    0.011984897777438164,
+    -0.009063775651156902,
+    -0.057219065725803375,
+    0.057959605008363724,
+    -0.03383498266339302,
+    0.003067473880946636,
+    -0.02657962404191494,
+    -0.005859216209501028,
+    -0.02727934718132019,
+    0.05734604597091675,
+    -0.055885352194309235,
+    -0.057987574487924576,
+    -0.04717642441391945,
+    -0.05720211938023567,
+    -0.05815666541457176,
+    0.016631973907351494,
+    -0.05558687821030617,
+    0.017040595412254333,
+    -0.018184930086135864,
+    -0.04911790415644646,
+    0.05087754875421524,
+    -0.05792287364602089,
+    -0.057443901896476746,
+    0.0520622581243515,
+    -0.03495462238788605,
+    -0.05791047587990761,
+    -0.01934795454144478,
+    -0.03659007325768471,
+    0.057555802166461945,
+    0.057194482535123825,
+    0.020747119560837746,
+    -0.05790994316339493,
+    0.0510350726544857,
+    0.05708673968911171,
+    -0.05774343013763428,
+    0.028053443878889084,
+    0.03677095100283623,
+    0.046810295432806015,
+    0.05749989300966263,
+    0.036043789237737656,
+    0.050485268235206604,
+    -0.052437685430049896,
+    0.056966520845890045,
+    -0.02333706244826317,
+    -0.037963058799505234,
+    0.058221567422151566,
+    0.05475063994526863,
+    -0.05718330293893814,
+    -0.014543532393872738,
+    0.018373850733041763,
+    -0.05374055355787277,
+    0.04707610607147217,
+    0.0580267570912838,
+    0.040156152099370956,
+    -0.014871945604681969,
+    -0.034788403660058975,
+    -0.0578053742647171,
+    0.05406385660171509,
+    -0.057107359170913696,
+    -0.052983708679676056,
+    0.05614592134952545,
+    0.0329122394323349,
+    0.028325576335191727,
+    -0.04312312230467796,
+    -0.05596103519201279,
+    0.05459565669298172,
+    -0.020885320380330086,
+    0.047631360590457916,
+    0.032494403421878815,
+    0.0147468326613307,
+    -0.05767739564180374,
+    0.05391819402575493,
+    0.056314948946237564,
+    0.058159805834293365,
+    -0.042315758764743805,
+    0.055711667984724045,
+    0.05704664811491966,
+    -0.045004405081272125,
+    0.05698727071285248,
+    -0.05817371606826782,
+    -0.0457923524081707,
+    0.050216194242239,
+    -0.02665923535823822,
+    -0.03863248974084854,
+    0.020966118201613426,
+    0.05815454572439194,
+    -0.05689872428774834,
+    -0.026501528918743134
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs ai and machine learning; When working with: When Executed by Another Workflow, Schedule Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for ai and machine learning in communication context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

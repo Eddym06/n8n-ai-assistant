@@ -1,0 +1,95 @@
+{
+  "nodes": [
+    {
+      "id": "imap-1",
+      "name": "IMAP Email",
+      "type": "n8n-nodes-base.imap",
+      "position": [
+        100,
+        -170
+      ],
+      "parameters": {
+        "host": "imap.example.com",
+        "port": 993,
+        "secure": true,
+        "username": "your_email@example.com",
+        "password": "your_password",
+        "mailbox": "INBOX",
+        "fetchOptions": {
+          "limit": 10
+        }
+      },
+      "credentials": {
+        "imap": {
+          "host": "imap.example.com",
+          "port": 993,
+          "secure": true,
+          "username": "your_email@example.com",
+          "password": "your_password"
+        }
+      }
+    },
+    {
+      "id": "set-1",
+      "name": "Set Email Data",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        100,
+        10
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "subject",
+            "value": "{{ $json['subject'] }}"
+          },
+          {
+            "name": "body",
+            "value": "{{ $json['body'] }}"
+          },
+          {
+            "name": "from",
+            "value": "{{ $json['from'] }}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "error-1",
+      "type": "n8n-nodes-base.error",
+      "name": "Error Handling",
+      "position": [
+        100,
+        190
+      ],
+      "parameters": {
+        "configured": true
+      }
+    }
+  ],
+  "connections": {
+    "imap-1": {
+      "main": [
+        [
+          {
+            "node": "set-1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ],
+      "error": [
+        [
+          {
+            "node": "error-1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

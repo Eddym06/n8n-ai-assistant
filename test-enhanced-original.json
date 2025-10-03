@@ -1,0 +1,146 @@
+{
+  "meta": {
+    "instanceId": "test-enhanced"
+  },
+  "nodes": {
+    "webhook": {
+      "id": "webhook",
+      "name": "Webhook Trigger",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        100,
+        100
+      ],
+      "parameters": {
+        "path": "test-webhook"
+      }
+    },
+    "if_check_payment": {
+      "id": "if_check_payment",
+      "name": "Check Payment Method",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        300,
+        100
+      ],
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "leftValue": "{{ $json.payment_method }}",
+              "operation": "equal",
+              "rightValue": "credit_card"
+            }
+          ]
+        }
+      }
+    },
+    "process_credit": {
+      "id": "process_credit",
+      "name": "Process Credit Card",
+      "type": "n8n-nodes-base.http-request",
+      "typeVersion": 4,
+      "position": [
+        500,
+        50
+      ],
+      "parameters": {
+        "url": "https://payment-api.com/credit"
+      }
+    },
+    "process_other": {
+      "id": "process_other",
+      "name": "Process Other Payment",
+      "type": "n8n-nodes-base.http-request",
+      "typeVersion": 4,
+      "position": [
+        500,
+        150
+      ],
+      "parameters": {
+        "url": "https://payment-api.com/other"
+      }
+    },
+    "merge_payments": {
+      "id": "merge_payments",
+      "name": "Merge Payment Results",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        700,
+        100
+      ],
+      "parameters": {
+        "mode": "mergeByIndex"
+      }
+    },
+    "orphan_node": {
+      "id": "orphan_node",
+      "name": "Orphaned Node",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        400,
+        300
+      ],
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "status",
+              "value": "orphaned"
+            }
+          ]
+        }
+      }
+    },
+    "another_orphan": {
+      "id": "another_orphan",
+      "name": "Another Orphan",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        600,
+        300
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      }
+    },
+    "final_output": {
+      "id": "final_output",
+      "name": "Final Output",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3,
+      "position": [
+        900,
+        100
+      ],
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "final",
+              "value": "complete"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "connections": {
+    "webhook": {
+      "main": [
+        [
+          {
+            "node": "if_check_payment",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

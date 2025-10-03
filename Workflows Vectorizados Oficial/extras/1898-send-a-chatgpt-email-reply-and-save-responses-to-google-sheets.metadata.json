@@ -1,0 +1,1174 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "1898-Send-A-Chatgpt-Email-Reply-And-Save-Responses-To-Google-Sheets",
+    "file_name": "1898-send-a-chatgpt-email-reply-and-save-responses-to-google-sheets.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\extras\\1898-send-a-chatgpt-email-reply-and-save-responses-to-google-sheets.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "92c50667bf07"
+  },
+  "structure": {
+    "total_nodes": 49,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.openAi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.crypto",
+      "n8n-nodes-base.html",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.gmailTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.openAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.crypto",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.html",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 9
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "On email received",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          -2460,
+          2680
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Generate reply",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          -480,
+          2260
+        ]
+      },
+      {
+        "name": "Only continue for specific emails",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1360,
+          2460
+        ]
+      },
+      {
+        "name": "Configure",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1940,
+          2800
+        ]
+      },
+      {
+        "name": "Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2060,
+          2480
+        ]
+      },
+      {
+        "name": "Send reply to recipient",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          360,
+          1860
+        ]
+      },
+      {
+        "name": "Generate UUID",
+        "type": "n8n-nodes-base.crypto",
+        "position": [
+          -1140,
+          2360
+        ]
+      },
+      {
+        "name": "Thanks for your response!",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          -1140,
+          2980
+        ]
+      },
+      {
+        "name": "Extract message content (advanced)",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -920,
+          2360
+        ]
+      },
+      {
+        "name": "If spreadsheet doesn't exist",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1420,
+          2500
+        ]
+      },
+      {
+        "name": "Successfully created or updated row",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1660,
+          2640
+        ]
+      },
+      {
+        "name": "Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          980,
+          2140
+        ]
+      },
+      {
+        "name": "Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1220,
+          2680
+        ]
+      },
+      {
+        "name": "Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          400,
+          2140
+        ]
+      },
+      {
+        "name": "Create spreadsheet",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1020,
+          2260
+        ]
+      },
+      {
+        "name": "Store spreadsheet ID",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1220,
+          2260
+        ]
+      },
+      {
+        "name": "Paste data",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1620,
+          2260
+        ]
+      },
+      {
+        "name": "If no sheet IDs",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          800,
+          2380
+        ]
+      },
+      {
+        "name": "Create or update rows",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1220,
+          2500
+        ]
+      },
+      {
+        "name": "Get data from `Format data`",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1020,
+          2500
+        ]
+      },
+      {
+        "name": "Get data from `Format data` node",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1420,
+          2260
+        ]
+      },
+      {
+        "name": "Format data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -40,
+          2380
+        ]
+      },
+      {
+        "name": "Send email reply",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -40,
+          1860
+        ]
+      },
+      {
+        "name": "On feedback given",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -2460,
+          2940
+        ]
+      },
+      {
+        "name": "Send feedback for fine-tuned data",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          -100,
+          2980
+        ]
+      },
+      {
+        "name": "Show HTML page",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          -920,
+          2980
+        ]
+      },
+      {
+        "name": "Get sheet IDs #1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          480,
+          2200
+        ]
+      },
+      {
+        "name": "Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -480,
+          2780
+        ]
+      },
+      {
+        "name": "If no spreadsheet in configuration #2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -700,
+          2980
+        ]
+      },
+      {
+        "name": "Store specific sheet IDs #2",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -400,
+          3180
+        ]
+      },
+      {
+        "name": "Get sheet IDs #2",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -400,
+          2840
+        ]
+      },
+      {
+        "name": "If no spreadsheet in configuration #1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          180,
+          2380
+        ]
+      },
+      {
+        "name": "Store specific sheet IDs #1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          480,
+          2540
+        ]
+      },
+      {
+        "name": "Email template",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          160,
+          1860
+        ]
+      },
+      {
+        "name": "Record feedback",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1360,
+          2980
+        ]
+      },
+      {
+        "name": "Fallback route",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1360,
+          3280
+        ]
+      },
+      {
+        "name": "Identify trigger #2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -2240,
+          2940
+        ]
+      },
+      {
+        "name": "Identify trigger #1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -2240,
+          2680
+        ]
+      },
+      {
+        "name": "Do not send unfinished email reply",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -40,
+          2060
+        ]
+      },
+      {
+        "name": "If reply is complete",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -260,
+          1960
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -100,
+          2020
+        ]
+      },
+      {
+        "name": "Do not send email to this recipient",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1140,
+          2560
+        ]
+      },
+      {
+        "name": "Send reply to database",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -260,
+          2380
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3060,
+          2520
+        ]
+      },
+      {
+        "name": "Determine which trigger ran",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -1660,
+          2800
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1420,
+          3240
+        ]
+      },
+      {
+        "name": "Is text within token limit?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -700,
+          2360
+        ]
+      },
+      {
+        "name": "Do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -480,
+          2460
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -540,
+          2420
+        ]
+      }
+    ],
+    "connections_count": 32,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 48
+    }
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "email automation",
+    "use_cases": [],
+    "complexity_score": 1255,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "note1",
+      "fallback route",
+      "on email received",
+      "only continue for specific emails",
+      "store specific sheet ids #2",
+      "get data from `format data`",
+      "format data",
+      "get sheet ids #2",
+      "email template",
+      "store spreadsheet id",
+      "gmailTrigger",
+      "generate uuid",
+      "thanks for your response!",
+      "switch",
+      "if spreadsheet doesn't exist",
+      "create or update rows",
+      "if no spreadsheet in configuration #2",
+      "on feedback given",
+      "send reply to database",
+      "successfully created or updated row",
+      "sticky note3",
+      "stickyNote",
+      "generate reply",
+      "respondToWebhook",
+      "note2",
+      "do nothing",
+      "webhook",
+      "note3",
+      "productivity",
+      "openAi",
+      "html",
+      "extract message content (advanced)",
+      "store specific sheet ids #1",
+      "get sheet ids #1",
+      "sticky note2",
+      "email automation",
+      "note5",
+      "code",
+      "crypto",
+      "is text within token limit?",
+      "identify trigger #2",
+      "set",
+      "send reply to recipient",
+      "send feedback for fine-tuned data",
+      "identify trigger #1",
+      "note",
+      "determine which trigger ran",
+      "paste data",
+      "get data from `format data` node",
+      "sticky note",
+      "if no spreadsheet in configuration #1",
+      "googleSheets",
+      "gmail",
+      "send email reply",
+      "if reply is complete",
+      "record feedback",
+      "do not send email to this recipient",
+      "complex",
+      "if no sheet ids",
+      "create spreadsheet",
+      "show html page",
+      "noOp",
+      "sticky note1",
+      "configure",
+      "do not send unfinished email reply"
+    ],
+    "description": "Este workflow diseñado para email automation con 49 nodos activado por On email received que ejecuta: Generate reply, Only continue for specific emails, Configure en la categoría de productivity.",
+    "semantic_content": "Nodos: Generate reply (openAi), On email received (gmailTrigger), Only continue for specific emails (if), Configure (set), Note5 (stickyNote), Send reply to recipient (gmail), Generate UUID (crypto), Thanks for your response! (html), Extract message content (advanced) (code), If spreadsheet doesn't exist (if), Successfully created or updated row (noOp), Note1 (stickyNote), Note2 (stickyNote), Note3 (stickyNote), Create spreadsheet (googleSheets), Store spreadsheet ID (code), Paste data (googleSheets), If no sheet IDs (if), Create or update rows (googleSheets), Get data from `Format data` (code), Get data from `Format data` node (code), Format data (set), Send email reply (noOp), On feedback given (webhook), Send feedback for fine-tuned data (googleSheets), Show HTML page (respondToWebhook), Get sheet IDs #1 (code), Note (stickyNote), If no spreadsheet in configuration #2 (if), Store specific sheet IDs #2 (code), Get sheet IDs #2 (code), If no spreadsheet in configuration #1 (if), Store specific sheet IDs #1 (code), Email template (html), Record feedback (noOp), Fallback route (noOp), Identify trigger #2 (set), Identify trigger #1 (set), Do not send unfinished email reply (noOp), If reply is complete (if), Sticky Note (stickyNote), Do not send email to this recipient (noOp), Send reply to database (noOp), Sticky Note1 (stickyNote), Determine which trigger ran (switch), Sticky Note2 (stickyNote), Is text within token limit? (if), Do nothing (noOp), Sticky Note3 (stickyNote). Propósito: email automation. Categoría: productivity. Disparadores: On email received",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "On email received",
+      "n8n-nodes-base.gmailTrigger",
+      "Only continue for specific emails",
+      "n8n-nodes-base.set",
+      "Generate reply",
+      "n8n-nodes-base.openAi",
+      "n8n-nodes-base.if",
+      "Configure"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.respondtowebhook",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.openai",
+      "n8n-nodes-base.gmailtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.html",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.crypto",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "google",
+      "responses",
+      "and",
+      "1898",
+      "1898-send-a-chatgpt-email-reply-and-save-responses-to-google-sheets",
+      "email",
+      "chatgpt",
+      "sheets",
+      "save",
+      "reply",
+      "send"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "productivity",
+      "email automation"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.gmailTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 78.08764940239044,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.36752988047809
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:28.922674"
+  },
+  "semantic_vector": [
+    -0.050067223608493805,
+    -0.05734056606888771,
+    -0.0042082928121089935,
+    -0.05219094827771187,
+    0.033539220690727234,
+    -0.043876949697732925,
+    -0.029503386467695236,
+    -0.022715821862220764,
+    -0.05758997052907944,
+    0.017531946301460266,
+    -0.015854282304644585,
+    -0.049123357981443405,
+    0.016532395035028458,
+    -0.04969494044780731,
+    -0.038468923419713974,
+    0.05779609829187393,
+    0.026700446382164955,
+    -0.01574360579252243,
+    -0.015445154160261154,
+    0.01381700299680233,
+    0.051278285682201385,
+    -0.03955589234828949,
+    0.055967483669519424,
+    -0.04501144960522652,
+    0.04593401402235031,
+    -0.04928210750222206,
+    -0.05140772834420204,
+    0.051312752068042755,
+    -0.014546054415404797,
+    0.054559532552957535,
+    0.044669535011053085,
+    -0.0019792807288467884,
+    0.055439140647649765,
+    -0.057581979781389236,
+    0.05691332370042801,
+    0.0022655671928077936,
+    -0.05732317268848419,
+    -0.056830912828445435,
+    -0.007257300894707441,
+    -0.05695164203643799,
+    0.047013059258461,
+    0.04462015628814697,
+    0.017257357016205788,
+    0.05658900737762451,
+    0.05779607966542244,
+    0.056391939520835876,
+    0.039402395486831665,
+    -0.01862259954214096,
+    -0.04006296396255493,
+    -0.018387766554951668,
+    -0.052270784974098206,
+    0.042407549917697906,
+    -0.05761124566197395,
+    -0.052858076989650726,
+    -0.04561305791139603,
+    0.04596302658319473,
+    0.02219512313604355,
+    -0.04803338274359703,
+    0.035345423966646194,
+    0.01817166619002819,
+    0.04353686422109604,
+    0.05205611512064934,
+    -0.055933430790901184,
+    0.044283390045166016,
+    -0.04305688291788101,
+    0.03148737549781799,
+    0.05206397920846939,
+    -0.003831265727058053,
+    0.04523846507072449,
+    -0.05020176246762276,
+    -0.03439054265618324,
+    -0.014719507656991482,
+    0.030859896913170815,
+    0.05759871378540993,
+    -0.051484402269124985,
+    -0.014850854873657227,
+    0.05747489631175995,
+    -0.05364084616303444,
+    -0.02768127992749214,
+    0.02001665160059929,
+    0.04164087027311325,
+    -0.02792692743241787,
+    0.005707762204110622,
+    -0.03663404658436775,
+    0.04131125658750534,
+    0.049705736339092255,
+    -0.04856790229678154,
+    -0.032859403640031815,
+    -0.00448926817625761,
+    0.03171262517571449,
+    -0.03383348882198334,
+    0.026546478271484375,
+    -0.04318656399846077,
+    0.029078993946313858,
+    0.05053863674402237,
+    -0.00028812349773943424,
+    0.05630079284310341,
+    -0.0474645234644413,
+    -0.05765575170516968,
+    -0.057793937623500824,
+    0.05735611915588379,
+    -0.017046157270669937,
+    0.029982032254338264,
+    0.026953060179948807,
+    0.05438058823347092,
+    -0.03840392455458641,
+    0.05770132318139076,
+    0.05442295968532562,
+    -0.006887785624712706,
+    -0.05766233056783676,
+    -0.022395674139261246,
+    -0.05387306585907936,
+    0.017035724595189095,
+    0.04955529049038887,
+    -0.018840795382857323,
+    -0.011322825215756893,
+    -0.05727527663111687,
+    0.03136729449033737,
+    0.0558309480547905,
+    0.027585385367274284,
+    -0.0548589788377285,
+    0.046853143721818924,
+    -0.03794998303055763,
+    0.043148256838321686,
+    0.05747110769152641,
+    -8.574388630222529e-05,
+    -0.02213357947766781,
+    0.05449289456009865,
+    0.05396677553653717,
+    -0.042824529111385345,
+    -0.033158574253320694,
+    0.05436474084854126,
+    0.04039819538593292,
+    0.05566239729523659,
+    0.04464566335082054,
+    -0.048527106642723083,
+    -0.05624875798821449,
+    -0.01557979080826044,
+    -0.021817397326231003,
+    -0.05719562992453575,
+    0.028080180287361145,
+    0.05779609829187393,
+    -0.04125339537858963,
+    0.0022940963972359896,
+    0.049565985798835754,
+    -0.05779527872800827,
+    0.01368741225451231,
+    -0.012941277585923672,
+    0.05520715191960335,
+    0.04475955292582512,
+    -0.04396241158246994,
+    -0.04721369966864586,
+    0.05763496086001396,
+    -0.04079899564385414,
+    0.015317671932280064,
+    0.057351093739271164,
+    -0.015287368558347225,
+    -0.05041442811489105,
+    -0.02969386614859104,
+    0.013221625238656998,
+    -0.05772211775183678,
+    -0.05555514991283417,
+    -0.04469713941216469,
+    0.026873085647821426,
+    0.018894890323281288,
+    -0.05344545468688011,
+    -0.05738256871700287,
+    -0.05753166601061821,
+    -0.054261140525341034,
+    0.019527599215507507,
+    -0.010571913793683052,
+    -0.05731197074055672,
+    -0.037477847188711166,
+    -0.05141504853963852,
+    -0.05662074312567711,
+    0.05199365317821503,
+    0.04892120882868767,
+    -0.03964170813560486,
+    0.051873840391635895,
+    -0.05549494922161102,
+    -0.040316805243492126,
+    -0.016431914642453194,
+    -0.05750526860356331,
+    -0.028198475018143654,
+    0.053803905844688416,
+    0.056409068405628204,
+    -0.05757565796375275,
+    0.057779427617788315,
+    -0.014757468365132809,
+    0.057650234550237656,
+    0.0567312017083168,
+    0.05750240385532379,
+    0.05423574894666672,
+    -0.05739514157176018,
+    -0.057766079902648926,
+    -0.05148489028215408,
+    0.05653327330946922,
+    0.05779609829187393,
+    0.04728031903505325,
+    0.009314698167145252,
+    0.02439943514764309,
+    0.05651549994945526,
+    -0.055880557745695114,
+    0.05683687701821327,
+    0.05689254775643349,
+    0.03237084671854973,
+    -0.05471276864409447,
+    -0.047174058854579926,
+    -0.05778232961893082,
+    0.046693235635757446,
+    0.057334206998348236,
+    0.05718543380498886,
+    0.05719143524765968,
+    0.056775081902742386,
+    -0.05776695907115936,
+    -0.05774994567036629,
+    0.05387198179960251,
+    0.05665592476725578,
+    -0.006181788630783558,
+    0.018521025776863098,
+    -0.04900098219513893,
+    0.051017675548791885,
+    -0.0476713702082634,
+    -0.0130468113347888,
+    0.010384189896285534,
+    -0.055079419165849686,
+    -0.05118274316191673,
+    -0.003725461196154356,
+    -0.04113700985908508,
+    -0.05776327848434448,
+    0.025007981806993484,
+    -0.05747997388243675,
+    0.054961878806352615,
+    -0.05779603123664856,
+    0.026516135782003403,
+    -0.0034916368313133717,
+    0.05779607966542244,
+    0.05775725096464157,
+    -0.052500780671834946,
+    -0.05720364674925804,
+    0.054512664675712585,
+    0.056903865188360214,
+    0.027662498876452446,
+    0.008603563532233238,
+    0.05679100751876831,
+    0.05762872099876404,
+    0.0005500090192072093,
+    -0.05591197684407234,
+    0.052628688514232635,
+    0.05778981372714043,
+    -0.05770963057875633,
+    0.05194593220949173,
+    0.02651067264378071,
+    0.035800591111183167,
+    0.03609953820705414,
+    -0.0577952079474926,
+    -0.008115267381072044,
+    0.05779609829187393,
+    -0.05474229156970978,
+    0.03886295482516289,
+    0.02771451324224472,
+    0.051262326538562775,
+    -0.04976841062307358,
+    -0.02945728600025177,
+    -0.04795417934656143,
+    0.055871766060590744,
+    0.047871705144643784,
+    0.044601112604141235,
+    -0.05663895234465599,
+    0.048675235360860825,
+    -0.05594047158956528,
+    0.04822168126702309,
+    -0.049446795135736465,
+    -0.002484682248905301,
+    0.0464043915271759,
+    -0.009306254796683788,
+    -0.053808972239494324,
+    0.056515421718358994,
+    0.05779607966542244,
+    -0.04540878161787987,
+    -0.04638715833425522,
+    0.03324025496840477,
+    0.03092101402580738,
+    0.05339009314775467,
+    -0.04647085443139076,
+    -0.057556405663490295,
+    0.049652863293886185,
+    0.05759154632687569,
+    -0.05514445900917053,
+    0.057424891740083694,
+    0.04250870272517204,
+    0.027593836188316345,
+    0.057777512818574905,
+    0.04547096788883209,
+    0.04797779396176338,
+    -0.05758892372250557,
+    0.0565798357129097,
+    -0.057603344321250916,
+    -0.04333999380469322,
+    0.015166169963777065,
+    -0.049631744623184204,
+    0.019523510709404945,
+    0.03803268447518349,
+    -0.04448577016592026,
+    0.05702286958694458,
+    -0.0354851670563221,
+    0.024925878271460533,
+    0.03272314369678497,
+    0.052295707166194916,
+    0.010299613699316978,
+    0.009468586184084415,
+    -0.018620220944285393,
+    0.023485569283366203,
+    -0.03407585993409157,
+    0.04019058868288994,
+    -0.05778076872229576,
+    0.057186394929885864,
+    -0.01604139804840088,
+    0.041303787380456924,
+    -0.056586526334285736,
+    0.03592140972614288,
+    -0.05143646523356438,
+    0.047676537185907364,
+    0.011541835963726044,
+    0.05759816616773605,
+    0.05246446281671524,
+    0.05740081146359444,
+    0.0548931248486042,
+    -0.02367660589516163,
+    -0.05391431227326393,
+    -0.00466765183955431,
+    -0.03977075219154358,
+    -0.0017066834261640906,
+    0.05777160823345184,
+    0.05221162363886833,
+    0.04437796398997307,
+    0.05777593329548836,
+    0.057795438915491104,
+    0.05762157216668129,
+    -0.011770806275308132,
+    -0.04921005293726921,
+    -0.05633191391825676,
+    -0.00048470209003426135,
+    0.017273081466555595,
+    -0.05779609829187393,
+    0.026520954445004463,
+    -0.009658422321081161,
+    0.007632737513631582,
+    -0.053349703550338745,
+    -0.021409975364804268,
+    0.04883725196123123,
+    0.02053028903901577,
+    -0.05727472901344299,
+    0.051433973014354706,
+    0.011879095807671547,
+    -0.05747869983315468,
+    -0.057796020060777664,
+    0.033260513097047806,
+    0.03668772429227829,
+    0.04630817100405693,
+    0.050055019557476044,
+    -0.05264941230416298,
+    -0.05779604986310005,
+    0.05707024410367012,
+    -0.055814146995544434,
+    -0.002227852586656809,
+    0.0033572898246347904,
+    -0.002804554533213377,
+    0.057682327926158905,
+    0.004715594928711653,
+    0.011535164900124073,
+    0.027477025985717773,
+    -0.057070426642894745,
+    0.05325565114617348,
+    0.042896173894405365,
+    0.04220735281705856,
+    -0.04689110815525055,
+    -0.05581604689359665,
+    0.056358058005571365,
+    -0.05594819039106369,
+    -0.04777811840176582,
+    0.057033076882362366,
+    -0.05438673496246338,
+    0.053950462490320206,
+    0.04254100099205971,
+    -0.03192487359046936,
+    0.0564732551574707,
+    0.04370807856321335,
+    -0.038365643471479416,
+    -0.05668551102280617,
+    -0.05470459163188934,
+    0.03146897628903389,
+    0.052535947412252426,
+    0.057778093963861465,
+    -0.05771484971046448,
+    0.04630030691623688,
+    -0.03143169730901718,
+    0.011239583604037762,
+    -0.052437324076890945,
+    0.03935535252094269,
+    0.0505841001868248,
+    -0.004117952194064856,
+    -0.05756593123078346,
+    0.05213407054543495,
+    -0.0474066436290741,
+    -0.04378631338477135,
+    -0.05776848644018173,
+    -0.04306618869304657,
+    0.0561741404235363,
+    0.016331002116203308,
+    -0.03715389221906662,
+    0.02532988041639328,
+    -0.004332445096224546,
+    -0.01124115101993084,
+    -0.04614045098423958,
+    0.028809934854507446,
+    0.03901239484548569,
+    -0.048057422041893005,
+    0.046826038509607315,
+    0.01134833786636591,
+    -0.02881290204823017,
+    0.05219823867082596,
+    -0.04469546675682068,
+    0.05465344339609146,
+    -0.0018306353595107794,
+    0.04742862656712532,
+    -0.05608021095395088,
+    0.057791922241449356,
+    0.0016293888911604881,
+    0.015815693885087967,
+    -0.024776911363005638,
+    -0.028758607804775238,
+    -0.023981956765055656,
+    -0.0015836842358112335,
+    -0.05700566619634628,
+    -0.03378986939787865,
+    -0.0573761984705925,
+    -0.05778660997748375,
+    -0.05401497334241867,
+    -0.02617943286895752,
+    -0.016625022515654564,
+    -0.05270573869347572,
+    0.002016946440562606,
+    0.04696039855480194,
+    -0.04658215120434761,
+    -0.05778520926833153,
+    -0.05245155468583107,
+    0.024081913754343987,
+    -0.031107686460018158,
+    -0.030565591529011726,
+    -0.04395487904548645,
+    0.03964278846979141,
+    0.057795990258455276,
+    0.057667091488838196,
+    -0.027002627030014992,
+    -0.05779547989368439,
+    -0.05545537546277046,
+    0.05772317200899124,
+    -0.05189045891165733,
+    -0.040965478867292404,
+    0.0016963817179203033,
+    0.04552708566188812,
+    -0.03338418900966644,
+    0.05694737285375595,
+    -0.05553530529141426,
+    -0.0394880436360836,
+    0.057263750582933426,
+    -0.03439517691731453,
+    -0.044820282608270645,
+    0.057795941829681396,
+    0.04420509189367294,
+    -0.052728939801454544,
+    -0.008298465982079506,
+    0.033719126135110855,
+    -0.02938992530107498,
+    -0.021122802048921585,
+    -0.010663839057087898,
+    0.050434477627277374,
+    -0.04324253275990486,
+    -0.04996729642152786,
+    0.026800241321325302,
+    -0.02966504916548729,
+    -0.032135553658008575,
+    -0.05758589506149292,
+    -0.03213697299361229,
+    -0.009120198898017406,
+    0.042505063116550446,
+    -0.04981239140033722,
+    -0.05135583505034447,
+    0.057425327599048615,
+    -0.046678103506565094,
+    0.014526238664984703,
+    0.007339539937674999,
+    0.04489295184612274,
+    -0.055936578661203384,
+    0.05564887449145317,
+    -0.03840314596891403,
+    0.057373519986867905,
+    -0.035532157868146896,
+    0.009827529080212116,
+    0.03098580241203308,
+    -0.0028478996828198433,
+    0.020927371457219124,
+    -0.05779606103897095,
+    -0.025266563519835472,
+    -0.04974963515996933,
+    -0.053306274116039276,
+    -0.04387478157877922,
+    0.04524306207895279,
+    0.05775460973381996,
+    -0.05325234681367874,
+    -0.05424684286117554
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs email automation; When working with: On email received; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for email automation in productivity context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "extras",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\extras"
+  }
+}

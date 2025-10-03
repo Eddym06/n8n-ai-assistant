@@ -1,0 +1,1232 @@
+{
+  "workflow_info": {
+    "id": "kjyWJWfDlyXkKL3m",
+    "name": "✨🔪 Advanced AI Powered Document Parsing & Text Extraction with Llama Parse",
+    "display_name": "✨🔪 Advanced AI Powered Document Parsing & Text Extraction with Llama Parse",
+    "file_name": "1904_Telegram_Limit_Process_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram\\1904_Telegram_Limit_Process_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true,
+    "fingerprint": "637ddf206c0e"
+  },
+  "structure": {
+    "total_nodes": 54,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmailTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.limit",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.telegram",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 18
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Gmail Trigger",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          -2360,
+          -1260
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -2320,
+          80
+        ]
+      },
+      {
+        "name": "Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          -2040,
+          -1260
+        ]
+      },
+      {
+        "name": "Limit",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          -1840,
+          -1260
+        ]
+      },
+      {
+        "name": "Get Message",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          -1640,
+          -1260
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -920,
+          -1500
+        ]
+      },
+      {
+        "name": "Parse Document with LlamaParse",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -800,
+          -1360
+        ]
+      },
+      {
+        "name": "Summarize Email",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -820,
+          -680
+        ]
+      },
+      {
+        "name": "gpt-4o-mini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -720,
+          -540
+        ]
+      },
+      {
+        "name": "Save LlamaParse ID and Summary to Google Sheets",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          -140,
+          -1020
+        ]
+      },
+      {
+        "name": "Save Document to Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          -820,
+          -1020
+        ]
+      },
+      {
+        "name": "Extract Invoice Details as JSON",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -1180,
+          500
+        ]
+      },
+      {
+        "name": "gpt-4o-mini1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -1600,
+          240
+        ]
+      },
+      {
+        "name": "gpt-4o-mini2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -1080,
+          640
+        ]
+      },
+      {
+        "name": "Update Google Sheet by LlamaParse ID",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          -540,
+          600
+        ]
+      },
+      {
+        "name": "Invoice Details",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -780,
+          400
+        ]
+      },
+      {
+        "name": "Prepare Message",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -540,
+          400
+        ]
+      },
+      {
+        "name": "Send Invoice Details as Telegram Message",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          -340,
+          400
+        ]
+      },
+      {
+        "name": "gpt-4o-mini3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -1080,
+          60
+        ]
+      },
+      {
+        "name": "Send Error Message 2",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          -780,
+          600
+        ]
+      },
+      {
+        "name": "Send Error Message 1",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          -780,
+          60
+        ]
+      },
+      {
+        "name": "Send Document Summary as Telegram Message",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          -540,
+          -200
+        ]
+      },
+      {
+        "name": "Summarize Document",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -1180,
+          -80
+        ]
+      },
+      {
+        "name": "Classify Parsed Document",
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "position": [
+          -1680,
+          80
+        ]
+      },
+      {
+        "name": "Get Parsed Markdown",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1980,
+          80
+        ]
+      },
+      {
+        "name": "Prepare Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -640,
+          -1020
+        ]
+      },
+      {
+        "name": "HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -2040,
+          -860
+        ]
+      },
+      {
+        "name": "Is there an Email Attachement",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1420,
+          -1260
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -1840,
+          -860
+        ]
+      },
+      {
+        "name": "Edit Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1620,
+          -860
+        ]
+      },
+      {
+        "name": "Merge Email Processing",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          -380,
+          -1020
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          -1120,
+          -1020
+        ]
+      },
+      {
+        "name": "If Supported File Extensions",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1420,
+          -860
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1120,
+          -1260
+        ]
+      },
+      {
+        "name": "No Operation, do nothing1",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -1120,
+          -780
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2140,
+          -980
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2140,
+          -1420
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -920,
+          -1120
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -920,
+          -780
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -220,
+          -1120
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -3060,
+          -1540
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2440,
+          -1340
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2480,
+          -1540
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1280,
+          280
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1220,
+          360
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1280,
+          -280
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1220,
+          -200
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1760,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2060,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2440,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2480,
+          -320
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1760,
+          420
+        ]
+      },
+      {
+        "name": "Save Summarized Document to Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          -540,
+          0
+        ]
+      },
+      {
+        "name": "Save Parsed Document to Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          -1600,
+          560
+        ]
+      }
+    ],
+    "connections_count": 27,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 53
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "email automation",
+    "use_cases": [],
+    "complexity_score": 1300,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "googleDrive",
+      "gpt-4o-mini3",
+      "no operation, do nothing1",
+      "summarize document",
+      "sticky note12",
+      "sticky note5",
+      "send document summary as telegram message",
+      "edit fields",
+      "sticky note16",
+      "prepare message",
+      "sticky note7",
+      "gmailTrigger",
+      "sticky note11",
+      "get parsed markdown",
+      "sticky note3",
+      "get message",
+      "stickyNote",
+      "is there an email attachement",
+      "gpt-4o-mini2",
+      "ai-ml",
+      "save document to google drive",
+      "webhook",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "invoice details",
+      "update google sheet by llamaparse id",
+      "send error message 2",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "sticky note10",
+      "@n8n/n8n nodes langchain.textClassifier",
+      "parse document with llamaparse",
+      "httpRequest",
+      "aggregate",
+      "extract invoice details as json",
+      "sticky note2",
+      "send invoice details as telegram message",
+      "email automation",
+      "sticky note15",
+      "sticky note9",
+      "sticky note17",
+      "http request",
+      "sticky note4",
+      "set",
+      "gmail trigger",
+      "sticky note13",
+      "save parsed document to google drive",
+      "limit",
+      "merge",
+      "merge email processing",
+      "save summarized document to google drive",
+      "if supported file extensions",
+      "sticky note",
+      "summarize email",
+      "send error message 1",
+      "googleSheets",
+      "no operation, do nothing",
+      "gmail",
+      "gpt-4o-mini1",
+      "telegram",
+      "sticky note8",
+      "complex",
+      "save llamaparse id and summary to google sheets",
+      "sticky note14",
+      "noOp",
+      "classify parsed document",
+      "sticky note1",
+      "prepare data",
+      "gpt-4o-mini"
+    ],
+    "description": "'✨🔪 Advanced AI Powered Document Parsing & Text Extraction with Llama Parse' es un workflow diseñado para email automation con 54 nodos activado por Gmail Trigger que ejecuta: Webhook, Gmail, Limit en la categoría de ai-ml.",
+    "semantic_content": "Workflow: ✨🔪 Advanced AI Powered Document Parsing & Text Extraction with Llama Parse. Nodos: Webhook (webhook), Gmail (gmail), Gmail Trigger (gmailTrigger), Limit (limit), Get Message (gmail), Sticky Note (stickyNote), Parse Document with LlamaParse (httpRequest), Summarize Email (@n8n/n8n-nodes-langchain.chainLlm), gpt-4o-mini (@n8n/n8n-nodes-langchain.lmChatOpenAi), Save LlamaParse ID and Summary to Google Sheets (googleSheets), Save Document to Google Drive (googleDrive), Extract Invoice Details as JSON (@n8n/n8n-nodes-langchain.chainLlm), gpt-4o-mini1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), gpt-4o-mini2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Update Google Sheet by LlamaParse ID (googleSheets), Invoice Details (set), Prepare Message (set), Send Invoice Details as Telegram Message (telegram), gpt-4o-mini3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Send Error Message 2 (telegram), Send Error Message 1 (telegram), Send Document Summary as Telegram Message (telegram), Summarize Document (@n8n/n8n-nodes-langchain.chainLlm), Classify Parsed Document (@n8n/n8n-nodes-langchain.textClassifier), Get Parsed Markdown (set), Prepare Data (set), HTTP Request (httpRequest), Is there an Email Attachement (if), Aggregate (aggregate), Edit Fields (set), Merge Email Processing (merge), Merge (merge), If Supported File Extensions (if), No Operation, do nothing (noOp), No Operation, do nothing1 (noOp), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note9 (stickyNote), Sticky Note8 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), Sticky Note12 (stickyNote), Sticky Note13 (stickyNote), Sticky Note14 (stickyNote), Sticky Note15 (stickyNote), Sticky Note16 (stickyNote), Sticky Note17 (stickyNote), Save Summarized Document to Google Drive (googleDrive), Save Parsed Document to Google Drive (googleDrive). Propósito: email automation. Categoría: ai-ml. Disparadores: Gmail Trigger",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Gmail",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.gmailTrigger",
+      "Gmail Trigger",
+      "n8n-nodes-base.limit",
+      "Webhook",
+      "Limit",
+      "n8n-nodes-base.webhook"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.webhook",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.gmailtrigger",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.textclassifier",
+      "n8n-nodes-base.aggregate"
+    ],
+    "search_terms": [
+      "webhook",
+      "telegram",
+      "limit",
+      "1904",
+      "process",
+      "1904_telegram_limit_process_webhook"
+    ],
+    "alternative_names": [
+      "✨🔪 Advanced AI Powered Document Parsing & Text Extraction with Llama Parse"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "email automation"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.gmailTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 83.07692307692308,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 86.61538461538461
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:21.014949"
+  },
+  "semantic_vector": [
+    -0.053563132882118225,
+    -0.053271714597940445,
+    0.050412487238645554,
+    -0.05269462242722511,
+    -0.004978640470653772,
+    -0.05110552906990051,
+    0.020848002284765244,
+    -0.040570564568042755,
+    -0.042824696749448776,
+    0.05331640690565109,
+    -0.051613856106996536,
+    -0.05064641311764717,
+    -0.04681675136089325,
+    -0.05212930217385292,
+    -0.04930192977190018,
+    0.05390040576457977,
+    0.05196746811270714,
+    -0.02702905610203743,
+    -0.04876294732093811,
+    -0.01983405277132988,
+    -0.033491671085357666,
+    -0.0312817245721817,
+    0.05297405645251274,
+    -0.05132356658577919,
+    0.040425870567560196,
+    -0.03351627290248871,
+    -0.05252792313694954,
+    0.04820501431822777,
+    -0.03962920233607292,
+    0.053685277700424194,
+    0.03259992226958275,
+    -0.041425444185733795,
+    0.0031826572958379984,
+    -0.05305522680282593,
+    0.05277850851416588,
+    -0.019362272694706917,
+    -0.0394756905734539,
+    0.03691335767507553,
+    -0.03844080865383148,
+    -0.05358363687992096,
+    0.0335734486579895,
+    0.04068063944578171,
+    -0.029764190316200256,
+    0.05033024027943611,
+    0.05390026047825813,
+    0.05066601186990738,
+    0.03127530962228775,
+    0.015146587044000626,
+    -0.04631384089589119,
+    -0.05172083154320717,
+    -0.053868599236011505,
+    0.04376184567809105,
+    -0.0538790300488472,
+    -0.051509369164705276,
+    -0.053199972957372665,
+    -0.03338156268000603,
+    0.053296685218811035,
+    -0.03733336180448532,
+    0.022329440340399742,
+    0.04650123417377472,
+    -0.020060420036315918,
+    0.0013821537140756845,
+    -0.00884951651096344,
+    0.05386555567383766,
+    0.053340062499046326,
+    -0.00030997212161310017,
+    0.05356210842728615,
+    -0.039678290486335754,
+    0.05346790701150894,
+    -0.03139862045645714,
+    -0.053833089768886566,
+    0.005372438579797745,
+    -0.024203643202781677,
+    0.033747702836990356,
+    -0.039181776344776154,
+    0.04873643442988396,
+    0.05362417548894882,
+    -0.05358871817588806,
+    0.044506728649139404,
+    0.05157008022069931,
+    0.05309058353304863,
+    -0.03732309490442276,
+    0.0324949249625206,
+    -0.05324682220816612,
+    0.015709074214100838,
+    0.04907294362783432,
+    -0.004763401113450527,
+    -0.04695826768875122,
+    -0.03263081982731819,
+    0.02791510708630085,
+    -0.045652084052562714,
+    0.019451461732387543,
+    0.0529274120926857,
+    0.03738434240221977,
+    0.053766585886478424,
+    0.05387674272060394,
+    0.02377994731068611,
+    -0.029288088902831078,
+    -0.053681615740060806,
+    -0.053898897022008896,
+    0.05134681612253189,
+    -0.0471155121922493,
+    -0.04886193573474884,
+    0.045054059475660324,
+    0.04918116703629494,
+    -0.029702894389629364,
+    0.053899671882390976,
+    0.04898582026362419,
+    0.04504585638642311,
+    -0.053761597722768784,
+    -0.05356764420866966,
+    -0.052685271948575974,
+    -0.03321162611246109,
+    -0.013350912369787693,
+    -0.001778561738319695,
+    0.036140549927949905,
+    -0.05353879928588867,
+    -0.03301902115345001,
+    0.04331999272108078,
+    -0.04470443353056908,
+    -0.052888356149196625,
+    -0.005530565045773983,
+    -0.03278869390487671,
+    0.049192577600479126,
+    0.0536874420940876,
+    0.04260168597102165,
+    0.030491869896650314,
+    0.04851682111620903,
+    0.05075923725962639,
+    -0.03824003040790558,
+    -0.03626792132854462,
+    0.04439759999513626,
+    0.05195039510726929,
+    0.002918702783063054,
+    0.02886669524013996,
+    -0.04991563782095909,
+    0.029742350801825523,
+    0.052714575082063675,
+    -0.03411593288183212,
+    -0.05372421443462372,
+    -0.03596653416752815,
+    0.05390040576457977,
+    -0.022589650005102158,
+    0.05203033611178398,
+    0.03598102554678917,
+    -0.05386997014284134,
+    0.053781669586896896,
+    -0.04842128977179527,
+    0.008585149422287941,
+    0.04521752893924713,
+    -0.05343008413910866,
+    -0.05312415957450867,
+    0.0534668043255806,
+    0.012334405444562435,
+    0.05198221653699875,
+    0.053694091737270355,
+    -0.04142570123076439,
+    -0.05350932478904724,
+    -0.03210543096065521,
+    -0.04415495693683624,
+    -0.05370459333062172,
+    -0.053726926445961,
+    -0.042505741119384766,
+    0.0007474704761989415,
+    -0.021125204861164093,
+    -0.0417102575302124,
+    -0.05388153716921806,
+    -0.021341588348150253,
+    -0.05307447165250778,
+    0.040858522057533264,
+    0.04388359934091568,
+    -0.04540194571018219,
+    -0.053325116634368896,
+    0.04137437790632248,
+    -0.053301483392715454,
+    0.05322852358222008,
+    0.048463743180036545,
+    -0.050772830843925476,
+    -0.03174344822764397,
+    -0.05176718905568123,
+    -0.05378628894686699,
+    -0.006830194033682346,
+    -0.05389673262834549,
+    0.018463650718331337,
+    0.05350212752819061,
+    0.05287764593958855,
+    -0.053900282829999924,
+    0.05258569493889809,
+    -0.042467761784791946,
+    0.0281277596950531,
+    -0.01676446758210659,
+    0.050291504710912704,
+    0.00693028699606657,
+    -0.05380813404917717,
+    -0.053899284452199936,
+    -0.053750135004520416,
+    0.04846576228737831,
+    0.05390040576457977,
+    0.04733802005648613,
+    0.04044194892048836,
+    -0.05068861320614815,
+    0.05350474640727043,
+    0.03085711970925331,
+    -0.02302505075931549,
+    0.012661612592637539,
+    -0.03726070746779442,
+    0.04508228600025177,
+    0.01261274516582489,
+    -0.053884610533714294,
+    -0.05310329422354698,
+    0.04486757516860962,
+    0.04575009644031525,
+    0.051409732550382614,
+    0.05034836009144783,
+    -0.05390029400587082,
+    -0.05294514447450638,
+    0.008134818635880947,
+    0.05033314973115921,
+    0.003207632340490818,
+    0.044827625155448914,
+    -0.017791740596294403,
+    0.0341358557343483,
+    0.03807400166988373,
+    0.051980938762426376,
+    -0.03713642805814743,
+    -0.05332094058394432,
+    -0.053658898919820786,
+    -0.05358954146504402,
+    -0.04372330382466316,
+    -0.053896356374025345,
+    -0.032009534537792206,
+    -0.04027089849114418,
+    -0.04880804568529129,
+    -0.053900204598903656,
+    -0.011298884637653828,
+    0.0519995391368866,
+    0.05390012264251709,
+    0.053894832730293274,
+    -0.05337165668606758,
+    0.007500490639358759,
+    -0.04714570194482803,
+    0.05388553440570831,
+    -0.05153307318687439,
+    0.04650013521313667,
+    -0.006147266365587711,
+    0.053846828639507294,
+    0.04998333007097244,
+    -0.0007290971698239446,
+    0.040938302874565125,
+    0.05390016362071037,
+    -0.053846701979637146,
+    0.05267389118671417,
+    -0.04991000145673752,
+    0.01018793135881424,
+    0.04437568038702011,
+    -0.05389915779232979,
+    0.02786123938858509,
+    0.05390040576457977,
+    -0.04948556423187256,
+    0.015240387059748173,
+    0.03156650811433792,
+    0.05247356370091438,
+    -0.050478436052799225,
+    0.052723027765750885,
+    -0.030907515436410904,
+    0.05299726501107216,
+    0.05197334289550781,
+    0.04056817293167114,
+    -0.053899601101875305,
+    0.05380755290389061,
+    -0.05380967631936073,
+    0.027133077383041382,
+    -0.052755750715732574,
+    0.04946524277329445,
+    0.053899649530649185,
+    -0.029211226850748062,
+    -0.05344881862401962,
+    0.053806062787771225,
+    0.053900096565485,
+    -0.04925026372075081,
+    -0.02777235209941864,
+    -0.03508744388818741,
+    0.052797261625528336,
+    0.04368925467133522,
+    -0.05127817764878273,
+    -0.05168240889906883,
+    0.02104002796113491,
+    0.053820446133613586,
+    -0.04966236278414726,
+    0.053789667785167694,
+    -0.052743226289749146,
+    -0.021291198208928108,
+    0.05389947444200516,
+    -0.05289856344461441,
+    0.03417452424764633,
+    -0.05389009788632393,
+    0.04092773422598839,
+    -0.0437464565038681,
+    -0.018086271360516548,
+    0.05342068895697594,
+    -0.0494227297604084,
+    0.024544473737478256,
+    0.05028405785560608,
+    -0.05026281252503395,
+    0.05294208228588104,
+    -0.014162766747176647,
+    0.05058077722787857,
+    -0.030782151967287064,
+    0.028085608035326004,
+    0.04318518936634064,
+    0.049224138259887695,
+    0.036652255803346634,
+    0.04672818258404732,
+    0.04214344546198845,
+    0.052940841764211655,
+    -0.05389786884188652,
+    0.0246437881141901,
+    -0.05065124109387398,
+    -0.051652561873197556,
+    -0.039666831493377686,
+    0.05018645152449608,
+    -0.05358829349279404,
+    0.05336381122469902,
+    -0.04987900331616402,
+    0.049189306795597076,
+    0.04123717546463013,
+    0.05365883186459541,
+    -0.012366874143481255,
+    0.0442437045276165,
+    -0.05288710817694664,
+    0.038966335356235504,
+    -0.0476718544960022,
+    0.03353118896484375,
+    0.05387415364384651,
+    -0.012907578609883785,
+    0.044950466603040695,
+    0.05389399453997612,
+    0.05383870378136635,
+    0.031228870153427124,
+    0.004056814592331648,
+    0.04927460849285126,
+    -0.05358017608523369,
+    -0.011174401268362999,
+    -0.0479368157684803,
+    -0.05390040576457977,
+    -0.027703674510121346,
+    -0.02109275572001934,
+    0.001673870487138629,
+    -0.029647845774888992,
+    0.01323090959340334,
+    0.05373122915625572,
+    0.05047091469168663,
+    -0.053339965641498566,
+    0.05209307745099068,
+    0.05076024308800697,
+    -0.052974000573158264,
+    -0.05390032008290291,
+    0.042319100350141525,
+    -0.05096643418073654,
+    0.0506838820874691,
+    0.05286450311541557,
+    -0.05312883481383324,
+    -0.05389929562807083,
+    0.0422515943646431,
+    -0.05253975838422775,
+    0.050347551703453064,
+    -0.016382979229092598,
+    -0.05283905193209648,
+    0.02435196377336979,
+    0.032563548535108566,
+    -0.021469784900546074,
+    -0.025734076276421547,
+    -0.050527624785900116,
+    0.05387368053197861,
+    0.05376870185136795,
+    0.041054029017686844,
+    0.010330972261726856,
+    -0.05382310971617699,
+    0.05028972774744034,
+    0.002817569300532341,
+    -0.05342084541916847,
+    0.04402846097946167,
+    -0.05265410616993904,
+    -0.002380264224484563,
+    0.0011209697695448995,
+    -0.05326974391937256,
+    0.025880012661218643,
+    0.04340018332004547,
+    -0.01652803085744381,
+    -0.05389094352722168,
+    -0.039034631103277206,
+    -0.05327866971492767,
+    0.05389458313584328,
+    0.05389760807156563,
+    -0.05091852694749832,
+    0.052618734538555145,
+    0.017625540494918823,
+    0.05345727503299713,
+    0.002123211743310094,
+    0.008075273595750332,
+    0.0514027439057827,
+    0.052414119243621826,
+    -0.053889840841293335,
+    0.0523349791765213,
+    -0.04654606431722641,
+    -0.041930995881557465,
+    -0.05389397218823433,
+    -0.04344559460878372,
+    0.05330491065979004,
+    0.051738787442445755,
+    0.0327875018119812,
+    0.05382978916168213,
+    0.03893864154815674,
+    0.014034898020327091,
+    0.041489750146865845,
+    -0.04040108993649483,
+    0.053537268191576004,
+    -0.05286034569144249,
+    -0.019356537610292435,
+    -0.005207225680351257,
+    -0.053799666464328766,
+    -0.051114361733198166,
+    -0.053639352321624756,
+    0.04549957811832428,
+    -0.013572593219578266,
+    0.05292043462395668,
+    -0.0525931790471077,
+    0.053778305649757385,
+    -0.05098431929945946,
+    0.04805026575922966,
+    -0.040087755769491196,
+    0.02265862561762333,
+    0.005603837314993143,
+    0.027120467275381088,
+    -0.05361999571323395,
+    -0.053771305829286575,
+    -0.04832726716995239,
+    -0.05389425903558731,
+    -0.053881723433732986,
+    -0.03399850055575371,
+    -0.007115860003978014,
+    -0.053326744586229324,
+    -0.04258013516664505,
+    -0.0503041110932827,
+    0.007012915797531605,
+    -0.053789157420396805,
+    -0.048105183988809586,
+    0.04701000452041626,
+    -0.053559560328722,
+    -0.03350958228111267,
+    -0.04909008368849754,
+    0.04684222862124443,
+    0.05389409139752388,
+    0.0528189018368721,
+    0.045136913657188416,
+    -0.05389833822846413,
+    -0.039314575493335724,
+    0.0538562647998333,
+    0.0505543127655983,
+    -0.05218103900551796,
+    0.03161344677209854,
+    0.053807333111763,
+    0.05311970412731171,
+    0.053096234798431396,
+    -0.03981471061706543,
+    -0.052467599511146545,
+    0.052900273352861404,
+    -0.03710067644715309,
+    -0.05351654440164566,
+    0.05390038341283798,
+    -0.03018966317176819,
+    -0.05198206380009651,
+    0.0011678894516080618,
+    -0.01895790919661522,
+    -0.043753527104854584,
+    -0.006881448905915022,
+    0.05381712317466736,
+    0.0534229576587677,
+    -0.01712675206363201,
+    -0.051295120269060135,
+    -0.05305048078298569,
+    0.053616903722286224,
+    0.02013431489467621,
+    -0.05381735414266586,
+    0.04226909205317497,
+    -0.04860857501626015,
+    -0.013950737193226814,
+    0.02852909453213215,
+    -0.04948330298066139,
+    -0.004396647214889526,
+    -0.04755803942680359,
+    0.04993963614106178,
+    -0.04885055124759674,
+    0.016071651130914688,
+    -0.05292242765426636,
+    0.053752172738313675,
+    0.041118767112493515,
+    0.05342123657464981,
+    -0.0538453608751297,
+    0.04580764099955559,
+    0.04415002837777138,
+    -0.04646420478820801,
+    0.053577445447444916,
+    -0.05389917641878128,
+    0.01003328338265419,
+    0.020386455580592155,
+    -0.053879935294389725,
+    -0.04559000954031944,
+    0.009278032928705215,
+    0.053900111466646194,
+    -0.0535556823015213,
+    -0.05337516963481903
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs email automation; When working with: Gmail Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for email automation in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Telegram",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram"
+  }
+}

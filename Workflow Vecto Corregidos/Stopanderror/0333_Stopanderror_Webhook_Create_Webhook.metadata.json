@@ -1,0 +1,998 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Stopanderror Webhook Create Webhook",
+    "file_name": "0333_Stopanderror_Webhook_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror\\0333_Stopanderror_Webhook_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "f0089f877459"
+  },
+  "structure": {
+    "total_nodes": 32,
+    "node_types": [
+      "n8n-nodes-base.nextCloud",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.stopAndError"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.nextCloud",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 9
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stopAndError",
+        "count": 2
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking \"Execute Workflow\"",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -1300,
+          360
+        ]
+      },
+      {
+        "name": "Execute Workflow Trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -1320,
+          1440
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Whether type is file",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          940,
+          780
+        ]
+      },
+      {
+        "name": "Set new path for subfolder",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1240,
+          900
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          540,
+          474.3406813627256
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2440,
+          478.85370741482984
+        ]
+      },
+      {
+        "name": "Set new path for file",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2900,
+          860
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3180,
+          480
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3920,
+          480
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -380,
+          480
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1340,
+          60
+        ]
+      },
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -1320,
+          880
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1340,
+          580
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1340,
+          1140
+        ]
+      },
+      {
+        "name": "Set folder-paths for from and to",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -280,
+          880
+        ]
+      },
+      {
+        "name": "Create to folder if necessary",
+        "type": "n8n-nodes-base.nextCloud",
+        "position": [
+          -40,
+          880
+        ]
+      },
+      {
+        "name": "Get all folders/files in from-folder",
+        "type": "n8n-nodes-base.nextCloud",
+        "position": [
+          240,
+          880
+        ]
+      },
+      {
+        "name": "Loop over files and folders",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          660,
+          880
+        ]
+      },
+      {
+        "name": "Consolidate all files and folders found",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2000,
+          760
+        ]
+      },
+      {
+        "name": "Create subfolder in to-folder",
+        "type": "n8n-nodes-base.nextCloud",
+        "position": [
+          1440,
+          900
+        ]
+      },
+      {
+        "name": "Get all folders/files in found subfolder",
+        "type": "n8n-nodes-base.nextCloud",
+        "position": [
+          1680,
+          900
+        ]
+      },
+      {
+        "name": "Whether there is are more files or subfolders found",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2200,
+          880
+        ]
+      },
+      {
+        "name": "Consolidate all found files",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2580,
+          860
+        ]
+      },
+      {
+        "name": "Loop Over all files",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          3300,
+          860
+        ]
+      },
+      {
+        "name": "Move file to destination",
+        "type": "n8n-nodes-base.nextCloud",
+        "position": [
+          3660,
+          940
+        ]
+      },
+      {
+        "name": "Delete from-folder",
+        "type": "n8n-nodes-base.nextCloud",
+        "position": [
+          4200,
+          840
+        ]
+      },
+      {
+        "name": "Set paths",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -780,
+          360
+        ]
+      },
+      {
+        "name": "Whether the request is valid",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1100,
+          880
+        ]
+      },
+      {
+        "name": "Stop and Error: request not valid",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          -760,
+          920
+        ]
+      },
+      {
+        "name": "Whether the request is valid1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -1120,
+          1440
+        ]
+      },
+      {
+        "name": "Stop and Error: request not valid1",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          -760,
+          1480
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2440,
+          60
+        ]
+      }
+    ],
+    "connections_count": 20,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 30
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 700,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "sticky note5",
+      "whether the request is valid",
+      "sticky note7",
+      "integration",
+      "sticky note3",
+      "stickyNote",
+      "whether the request is valid1",
+      "webhook",
+      "sticky note6",
+      "get all folders/files in from-folder",
+      "whether there is are more files or subfolders found",
+      "set folder-paths for from and to",
+      "delete from-folder",
+      "webhook integration",
+      "set paths",
+      "stopAndError",
+      "loop over all files",
+      "execute workflow trigger",
+      "code",
+      "splitInBatches",
+      "set new path for file",
+      "consolidate all files and folders found",
+      "sticky note4",
+      "set",
+      "whether type is file",
+      "when clicking \"execute workflow\"",
+      "nextCloud",
+      "stop and error: request not valid1",
+      "loop over files and folders",
+      "sticky note",
+      "set new path for subfolder",
+      "move file to destination",
+      "sticky note8",
+      "create subfolder in to-folder",
+      "complex",
+      "create to folder if necessary",
+      "manualTrigger",
+      "get all folders/files in found subfolder",
+      "noOp",
+      "sticky note2",
+      "sticky note1",
+      "consolidate all found files",
+      "stop and error: request not valid",
+      "executeWorkflowTrigger"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 32 nodos con 2 disparadores que ejecuta: Whether type is file, Set new path for subfolder, Sticky Note en la categoría de integration.",
+    "semantic_content": "Nodos: When clicking \"Execute Workflow\" (manualTrigger), Whether type is file (if), Set new path for subfolder (set), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Set new path for file (code), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Webhook (webhook), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Execute Workflow Trigger (executeWorkflowTrigger), Set folder-paths for from and to (set), Create to folder if necessary (nextCloud), Get all folders/files in from-folder (nextCloud), Loop over files and folders (splitInBatches), Consolidate all files and folders found (noOp), Create subfolder in to-folder (nextCloud), Get all folders/files in found subfolder (nextCloud), Whether there is are more files or subfolders found (if), Consolidate all found files (code), Loop Over all files (splitInBatches), Move file to destination (nextCloud), Delete from-folder (nextCloud), Set paths (set), Whether the request is valid (if), Stop and Error: request not valid (stopAndError), Whether the request is valid1 (if), Stop and Error: request not valid1 (stopAndError), Sticky Note8 (stickyNote). Propósito: webhook integration. Categoría: integration. Disparadores: When clicking \"Execute Workflow\", Execute Workflow Trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Whether type is file",
+      "Execute Workflow Trigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.set",
+      "When clicking \"Execute Workflow\"",
+      "n8n-nodes-base.if",
+      "Set new path for subfolder",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.stopanderror",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.nextcloud",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "create",
+      "webhook",
+      "stopanderror",
+      "0333",
+      "0333_stopanderror_webhook_create_webhook"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": true,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": false,
+    "workflow_type": "api_integration",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 91.42857142857143,
+    "best_practices_score": 100.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 87.03571428571429
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:19.833543"
+  },
+  "semantic_vector": [
+    0.00919248815625906,
+    0.008797279559075832,
+    0.060266271233558655,
+    -0.050832636654376984,
+    0.006081849802285433,
+    -0.04002346098423004,
+    0.01845385879278183,
+    -0.02950468100607395,
+    -0.06172189861536026,
+    0.05904765799641609,
+    0.005099577363580465,
+    -0.03293216973543167,
+    -0.028778012841939926,
+    0.04750358313322067,
+    -0.053598012775182724,
+    0.06274447590112686,
+    -0.05996258184313774,
+    0.039901141077280045,
+    -0.0588342510163784,
+    0.03751619905233383,
+    0.028456492349505424,
+    0.011659045703709126,
+    0.06243770569562912,
+    0.03086581826210022,
+    -0.04318012669682503,
+    0.05588845908641815,
+    -0.058497749269008636,
+    0.03948685899376869,
+    -0.060359954833984375,
+    0.001379768829792738,
+    -0.04809374734759331,
+    -0.05046049505472183,
+    0.04249608889222145,
+    -0.003959482070058584,
+    -0.02172909304499626,
+    0.01052626222372055,
+    0.018304763361811638,
+    0.007104457821696997,
+    0.03496389836072922,
+    0.03162344917654991,
+    0.03810383379459381,
+    0.055660180747509,
+    0.027660910040140152,
+    -0.010361790657043457,
+    0.06274441629648209,
+    0.060186151415109634,
+    -0.005439263768494129,
+    0.05347482115030289,
+    -0.017701974138617516,
+    -0.014468671754002571,
+    -0.059262875467538834,
+    0.002703778212890029,
+    -0.029724793508648872,
+    -0.024217627942562103,
+    -0.05446354299783707,
+    -0.060306333005428314,
+    -0.02443060465157032,
+    0.001162911532446742,
+    0.04881987348198891,
+    0.012948828749358654,
+    0.02680671401321888,
+    -0.02970249392092228,
+    -0.04918574169278145,
+    0.025440242141485214,
+    0.027190301567316055,
+    0.015757685527205467,
+    0.048173245042562485,
+    0.031483739614486694,
+    0.05935222655534744,
+    -0.03880243003368378,
+    -0.06269735097885132,
+    -0.05535316839814186,
+    -0.04592275992035866,
+    0.032039303332567215,
+    -0.05908763036131859,
+    -0.047891441732645035,
+    0.05980481207370758,
+    -0.05462215840816498,
+    -0.05813225731253624,
+    0.04591427370905876,
+    0.02388632483780384,
+    -0.056887656450271606,
+    -0.012443721294403076,
+    -0.030529260635375977,
+    0.05226551368832588,
+    0.013981640338897705,
+    0.015286129899322987,
+    -0.051292382180690765,
+    0.061475969851017,
+    0.050080351531505585,
+    0.012396625243127346,
+    0.024661855772137642,
+    -0.06082405894994736,
+    -0.05130453035235405,
+    0.031196003779768944,
+    -0.04338410124182701,
+    0.028676478192210197,
+    -0.011982076801359653,
+    -0.05987872555851936,
+    -0.06262095272541046,
+    0.05341106280684471,
+    -0.018447181209921837,
+    0.05574667453765869,
+    0.052053533494472504,
+    0.025585701689124107,
+    0.025765512138605118,
+    0.056909553706645966,
+    0.028770260512828827,
+    0.005063096527010202,
+    -0.0555933378636837,
+    0.02248932048678398,
+    -0.01722610555589199,
+    -0.0104488180950284,
+    0.05104740336537361,
+    0.02146179787814617,
+    -0.007390923332422972,
+    -0.061890020966529846,
+    -0.021059313789010048,
+    0.025033239275217056,
+    0.06090512499213219,
+    -0.06274344027042389,
+    -0.05622069910168648,
+    -0.0016895062290132046,
+    0.04477963596582413,
+    0.061808183789253235,
+    -0.008656913414597511,
+    0.024954451248049736,
+    -0.02704671584069729,
+    0.001252967631444335,
+    -0.06198766455054283,
+    -0.059671781957149506,
+    0.0396430641412735,
+    0.059151772409677505,
+    -0.05437828600406647,
+    0.007872047834098339,
+    -0.04805314540863037,
+    -0.061606649309396744,
+    0.0326424166560173,
+    -0.057448264211416245,
+    -0.026135660707950592,
+    0.05461538955569267,
+    0.06274398416280746,
+    -0.032884471118450165,
+    -0.0005365412216633558,
+    -0.05308770388364792,
+    -0.06271445751190186,
+    0.03129354119300842,
+    0.04071527346968651,
+    0.060217246413230896,
+    0.011876195669174194,
+    -0.060610927641391754,
+    -0.03995285928249359,
+    0.06269517540931702,
+    -0.01688488759100437,
+    0.06163115054368973,
+    0.0603184700012207,
+    -0.0541640967130661,
+    -0.04344284534454346,
+    0.038148775696754456,
+    0.05802396684885025,
+    -0.06168348714709282,
+    0.022988302633166313,
+    0.040319424122571945,
+    0.025621322914958,
+    0.0008927495800890028,
+    0.012962966226041317,
+    -0.050017647445201874,
+    -0.026125658303499222,
+    -0.04422353580594063,
+    -0.04312073066830635,
+    -0.04503917694091797,
+    -0.05726629123091698,
+    0.03263304755091667,
+    0.0022537331096827984,
+    -0.06188006326556206,
+    0.06059045344591141,
+    0.016554703935980797,
+    -0.05284367501735687,
+    -0.031786877661943436,
+    -0.04944837465882301,
+    0.018935726955533028,
+    0.007086204830557108,
+    -0.06027549132704735,
+    0.05216032639145851,
+    0.013239618390798569,
+    -0.004437874536961317,
+    -0.06274427473545074,
+    0.06220541149377823,
+    0.053966034203767776,
+    0.05851362645626068,
+    -0.05627626180648804,
+    0.03878599405288696,
+    -0.0014237230643630028,
+    -0.06050688773393631,
+    -0.03885906562209129,
+    -0.050034839659929276,
+    0.017677899450063705,
+    0.06274447590112686,
+    0.039546482264995575,
+    0.042774949222803116,
+    0.03705643489956856,
+    0.036736778914928436,
+    0.060336679220199585,
+    0.05971542000770569,
+    0.046957943588495255,
+    -0.018158838152885437,
+    -0.01806003227829933,
+    0.039332445710897446,
+    -0.06260727345943451,
+    0.003410806879401207,
+    0.04542301222681999,
+    0.05222597345709801,
+    0.05630502849817276,
+    0.06048883870244026,
+    -0.06257535517215729,
+    0.021807584911584854,
+    0.02354416996240616,
+    0.004288780502974987,
+    0.04769127070903778,
+    0.05085296928882599,
+    -0.06124889478087425,
+    0.06010393053293228,
+    0.04114026576280594,
+    -0.003068381454795599,
+    0.017061853781342506,
+    -0.05963783711194992,
+    -0.026079222559928894,
+    -0.029662368819117546,
+    -0.06078694015741348,
+    -0.05796182155609131,
+    -0.003912836778908968,
+    -0.06101822480559349,
+    0.06094213202595711,
+    -0.06274443864822388,
+    -0.03777126595377922,
+    0.05009086802601814,
+    0.06274233758449554,
+    0.061948128044605255,
+    -0.05580536276102066,
+    -0.06224445998668671,
+    -0.027560768648982048,
+    0.0525144562125206,
+    -0.03750424087047577,
+    0.024295981973409653,
+    -0.0384274385869503,
+    0.05516136810183525,
+    0.00294670881703496,
+    -0.012172000482678413,
+    0.007024817634373903,
+    0.06072428077459335,
+    -0.06273994594812393,
+    0.01059307623654604,
+    -0.04882822185754776,
+    -0.03012261725962162,
+    0.03628618270158768,
+    -0.06093710660934448,
+    0.046199239790439606,
+    0.06274441629648209,
+    0.06070289760828018,
+    0.05788866803050041,
+    0.06271416693925858,
+    0.03583747521042824,
+    -0.0008025157731026411,
+    -0.0560552179813385,
+    0.04498474672436714,
+    -0.05503172427415848,
+    -0.058749690651893616,
+    -0.00894725602120161,
+    -0.035400886088609695,
+    0.05739695206284523,
+    -0.04678070545196533,
+    0.02683369815349579,
+    -0.05801207199692726,
+    0.05387382581830025,
+    0.030540037900209427,
+    0.013497508130967617,
+    -0.05089086294174194,
+    0.05588306486606598,
+    0.0627443715929985,
+    0.04843248799443245,
+    0.008126389235258102,
+    0.056765325367450714,
+    0.03640899062156677,
+    0.03145845979452133,
+    -0.018751025199890137,
+    -0.06228957697749138,
+    0.039364974945783615,
+    0.02408762462437153,
+    0.006991095840930939,
+    0.056681759655475616,
+    -0.0589124895632267,
+    0.05280359834432602,
+    0.062108114361763,
+    -0.029408810660243034,
+    0.05857306718826294,
+    -0.06272062659263611,
+    0.06261492520570755,
+    -0.062287166714668274,
+    -0.01328965649008751,
+    0.030174965038895607,
+    -0.016317078843712807,
+    0.03807104751467705,
+    0.05500249192118645,
+    0.04635721817612648,
+    0.030772823840379715,
+    0.0626666247844696,
+    0.061404213309288025,
+    -0.014767289161682129,
+    0.027795270085334778,
+    -0.03874409571290016,
+    -0.057678963989019394,
+    0.04808977246284485,
+    0.026023147627711296,
+    -0.03585989028215408,
+    0.05094575136899948,
+    -0.05871061608195305,
+    0.058159034699201584,
+    0.047787465155124664,
+    0.058847781270742416,
+    -0.04626311734318733,
+    -0.034943968057632446,
+    -0.05712103471159935,
+    0.010365382768213749,
+    0.027548523619771004,
+    0.03941038250923157,
+    -0.03559578210115433,
+    0.037577368319034576,
+    -0.05344226211309433,
+    0.06197311356663704,
+    -0.03778060898184776,
+    -0.008899964392185211,
+    -0.052450478076934814,
+    -0.041382674127817154,
+    0.06247200816869736,
+    0.0006457803538069129,
+    0.0068225618451833725,
+    0.035349369049072266,
+    0.03224169462919235,
+    0.0538923405110836,
+    -0.04359310120344162,
+    -0.031003648415207863,
+    -0.027909697964787483,
+    -0.04140328988432884,
+    -0.0380687452852726,
+    -0.06274442374706268,
+    0.019947972148656845,
+    -0.053717318922281265,
+    -0.0118956184014678,
+    0.01886746659874916,
+    0.002932653296738863,
+    0.026628416031599045,
+    0.003001144854351878,
+    0.012537826783955097,
+    0.05708105489611626,
+    0.05400021746754646,
+    -0.05884828045964241,
+    -0.06274238973855972,
+    0.030140345916152,
+    0.05371323600411415,
+    0.04012535512447357,
+    0.044724706560373306,
+    -0.04768127575516701,
+    -0.0627443864941597,
+    0.06258375942707062,
+    0.04843446984887123,
+    0.056770481169223785,
+    0.05717981234192848,
+    -0.059394050389528275,
+    0.06272871792316437,
+    -0.06003827974200249,
+    -0.03627284988760948,
+    -0.05274408310651779,
+    -0.05539871007204056,
+    0.04540395364165306,
+    -0.011002457700669765,
+    0.04805809259414673,
+    -0.05220300331711769,
+    -0.04923086613416672,
+    -0.019739704206585884,
+    0.029131928458809853,
+    0.06247397139668465,
+    0.02923659421503544,
+    0.05817289277911186,
+    -0.05941775441169739,
+    -0.014575772918760777,
+    0.003542659804224968,
+    0.05710836872458458,
+    -0.029170379042625427,
+    -0.045178916305303574,
+    -0.060076456516981125,
+    -0.025370843708515167,
+    -0.0604749470949173,
+    0.04996500164270401,
+    0.05747825279831886,
+    0.034713584929704666,
+    0.01951845921576023,
+    0.055136438459157944,
+    -0.025631645694375038,
+    -0.0013753533130511642,
+    0.057894375175237656,
+    0.04450909048318863,
+    0.045461416244506836,
+    -0.06012628227472305,
+    0.034415148198604584,
+    0.006154926493763924,
+    0.012386259622871876,
+    -0.06127883493900299,
+    0.049899641424417496,
+    0.05918169394135475,
+    0.04094814881682396,
+    -0.043060094118118286,
+    0.027977246791124344,
+    -0.03371831402182579,
+    -0.061835236847400665,
+    0.06273818016052246,
+    0.0049822679720819,
+    -0.024458494037389755,
+    -0.011824158020317554,
+    0.02492024004459381,
+    0.01691468618810177,
+    -0.008254285901784897,
+    -0.035407643765211105,
+    -0.05178624391555786,
+    0.0430239662528038,
+    0.02033792808651924,
+    -0.03232468664646149,
+    -0.062316201627254486,
+    0.06244745850563049,
+    0.04754221439361572,
+    0.03516775369644165,
+    -0.06160968169569969,
+    -0.006481731776148081,
+    -0.03458794206380844,
+    0.05852333456277847,
+    -0.05346793681383133,
+    -0.03630583733320236,
+    -0.05685321241617203,
+    -0.059507325291633606,
+    -0.05816718563437462,
+    0.02754690684378147,
+    -0.03572139889001846,
+    0.04349856823682785,
+    0.05290374904870987,
+    0.02107871323823929,
+    -0.02266024611890316,
+    -0.04090861603617668,
+    -0.042295973747968674,
+    0.007405550219118595,
+    0.03921230882406235,
+    -0.028268292546272278,
+    0.048447608947753906,
+    0.054074592888355255,
+    0.06272917240858078,
+    0.04206312075257301,
+    0.04428919032216072,
+    -0.06268502026796341,
+    -0.055266689509153366,
+    0.06259498745203018,
+    -0.03772595524787903,
+    -0.0007716144318692386,
+    -0.02920239046216011,
+    -0.0343710258603096,
+    0.04803513363003731,
+    0.060221441090106964,
+    -0.049743007868528366,
+    -0.0242613572627306,
+    0.06193877384066582,
+    0.05570157617330551,
+    -0.05281665548682213,
+    0.05092731490731239,
+    0.061853937804698944,
+    0.022771324962377548,
+    -0.04317707568407059,
+    0.05494048073887825,
+    -0.03919770568609238,
+    -0.028972739353775978,
+    0.06000116094946861,
+    0.05105791240930557,
+    -0.024138765409588814,
+    -0.05989814177155495,
+    -0.026313791051506996,
+    0.040760040283203125,
+    -0.036869242787361145,
+    -0.05290760099887848,
+    -0.0281051117926836,
+    -0.017128728330135345,
+    0.010979602113366127,
+    -0.0003155744052492082,
+    0.012422971427440643,
+    0.061082884669303894,
+    -0.017268633469939232,
+    0.05583112686872482,
+    -0.029166031628847122,
+    0.0578429140150547,
+    -0.04410417750477791,
+    0.06071818619966507,
+    0.04820747673511505,
+    0.05141907557845116,
+    -0.006594469770789146,
+    -0.04182517156004906,
+    0.02049948461353779,
+    -0.010938433930277824,
+    0.062337324023246765,
+    -0.0627436414361,
+    0.004797924309968948,
+    -0.037356898188591,
+    -0.06274445354938507,
+    0.044707994908094406,
+    -0.01226872019469738,
+    0.06274187564849854,
+    -0.01623443514108658,
+    -0.058853499591350555
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking \"Execute Workflow\", Execute Workflow Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Stopanderror",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror"
+  }
+}

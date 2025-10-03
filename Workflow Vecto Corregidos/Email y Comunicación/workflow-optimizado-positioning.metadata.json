@@ -1,0 +1,1245 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Workflow-Optimizado-Positioning",
+    "file_name": "workflow-optimizado-positioning.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Email y Comunicación\\workflow-optimizado-positioning.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "a7cf11b8af92"
+  },
+  "structure": {
+    "total_nodes": 52,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.stripe",
+      "n8n-nodes-base.mongoDb",
+      "n8n-nodes-base.discord",
+      "n8n-nodes-base.twilio",
+      "n8n-nodes-base.loopOverItems",
+      "n8n-nodes-base.googleCalendar",
+      "n8n-nodes-base.whatsappBusiness",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.function",
+      "n8n-nodes-base.cron",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.notion",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.stripeTrigger",
+      "n8n-nodes-base.openAi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.airtable"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stripe",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.mongoDb",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.discord",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.twilio",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.loopOverItems",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleCalendar",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.whatsappBusiness",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.function",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.cron",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.notion",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stripeTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.openAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.airtable",
+        "count": 3
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Stripe Trigger: Pagos Completados (Directo)",
+        "type": "n8n-nodes-base.stripeTrigger",
+        "position": [
+          100,
+          100
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Webhook de Pedidos (Shopify/WooCommerce)",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          100,
+          -260
+        ]
+      },
+      {
+        "name": "Normalizar Datos Pedido",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          450,
+          -260
+        ]
+      },
+      {
+        "name": "Validar Datos Pedido",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          800,
+          -170
+        ]
+      },
+      {
+        "name": "Datos Pedido Válidos?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1150,
+          -170
+        ]
+      },
+      {
+        "name": "Gmail: Solicitar Corrección Datos",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1500,
+          -170
+        ]
+      },
+      {
+        "name": "Slack: Alerta Datos Inválidos",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1850,
+          190
+        ]
+      },
+      {
+        "name": "MongoDB: Log Datos Inválidos",
+        "type": "n8n-nodes-base.mongoDb",
+        "position": [
+          2200,
+          190
+        ]
+      },
+      {
+        "name": "Cliente VIP?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1500,
+          -350
+        ]
+      },
+      {
+        "name": "Set: Proceso VIP",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1850,
+          10
+        ]
+      },
+      {
+        "name": "Airtable: Verificar Inventario",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          2200,
+          10
+        ]
+      },
+      {
+        "name": "Inventario Suficiente?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2550,
+          10
+        ]
+      },
+      {
+        "name": "Slack: Alerta Inventario Bajo",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          2900,
+          100
+        ]
+      },
+      {
+        "name": "Discord: Notificar Proveedores",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          3250,
+          190
+        ]
+      },
+      {
+        "name": "Gmail: Notificar Cliente Inventario",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          3600,
+          190
+        ]
+      },
+      {
+        "name": "MongoDB: Log Inventario Insuficiente",
+        "type": "n8n-nodes-base.mongoDb",
+        "position": [
+          3950,
+          280
+        ]
+      },
+      {
+        "name": "Function: Calcular Totales (Impuestos, Envío, Descuentos)",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          2900,
+          -80
+        ]
+      },
+      {
+        "name": "Stripe: Verificar Pago",
+        "type": "n8n-nodes-base.stripe",
+        "position": [
+          3250,
+          10
+        ]
+      },
+      {
+        "name": "Pago Aprobado?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3600,
+          10
+        ]
+      },
+      {
+        "name": "Gmail: Notificar Pago Fallido",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          3950,
+          100
+        ]
+      },
+      {
+        "name": "Slack: Alerta Pago Fallido",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          4300,
+          190
+        ]
+      },
+      {
+        "name": "MongoDB: Log Pago Fallido",
+        "type": "n8n-nodes-base.mongoDb",
+        "position": [
+          4650,
+          190
+        ]
+      },
+      {
+        "name": "Google Sheets: Registrar Pedido",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          3950,
+          -80
+        ]
+      },
+      {
+        "name": "Airtable: Actualizar Inventario",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          4300,
+          10
+        ]
+      },
+      {
+        "name": "Google Calendar: Agendar Entrega",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          4650,
+          10
+        ]
+      },
+      {
+        "name": "Gmail: Confirmación Cliente",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          5000,
+          100
+        ]
+      },
+      {
+        "name": "WhatsApp Business: Mensaje Cliente",
+        "type": "n8n-nodes-base.whatsappBusiness",
+        "position": [
+          5350,
+          100
+        ]
+      },
+      {
+        "name": "Slack: Notificación Equipo",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          5700,
+          100
+        ]
+      },
+      {
+        "name": "Notion: Actualizar Dashboard",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          6050,
+          100
+        ]
+      },
+      {
+        "name": "HTTP Request: Detección Fraude",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          6400,
+          100
+        ]
+      },
+      {
+        "name": "Fraude Detectado?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          6750,
+          100
+        ]
+      },
+      {
+        "name": "Slack: Alerta Fraude",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          7100,
+          100
+        ]
+      },
+      {
+        "name": "MongoDB: Log Pedido Procesado",
+        "type": "n8n-nodes-base.mongoDb",
+        "position": [
+          7450,
+          100
+        ]
+      },
+      {
+        "name": "Cron: Verificación Inventario Programada",
+        "type": "n8n-nodes-base.cron",
+        "position": [
+          100,
+          -80
+        ]
+      },
+      {
+        "name": "Airtable: Obtener Inventario Completo",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          450,
+          -80
+        ]
+      },
+      {
+        "name": "Function: Identificar Productos Bajos",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          800,
+          10
+        ]
+      },
+      {
+        "name": "Loop Over Items: Procesar Productos Bajos",
+        "type": "n8n-nodes-base.loopOverItems",
+        "position": [
+          1150,
+          10
+        ]
+      },
+      {
+        "name": "Discord: Alerta Inventario Bajo Discord",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          1500,
+          10
+        ]
+      },
+      {
+        "name": "Slack: Notificar Proveedor Slack",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1500,
+          190
+        ]
+      },
+      {
+        "name": "MongoDB: Log Pago Stripe Directo",
+        "type": "n8n-nodes-base.mongoDb",
+        "position": [
+          450,
+          100
+        ]
+      },
+      {
+        "name": "Webhook: Reviews Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          100,
+          280
+        ]
+      },
+      {
+        "name": "OpenAI: Analizar Sentimiento",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          450,
+          280
+        ]
+      },
+      {
+        "name": "Notion: Registrar Sentimiento",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          800,
+          190
+        ]
+      },
+      {
+        "name": "If: Review Negativa?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1150,
+          190
+        ]
+      },
+      {
+        "name": "Slack: Alerta Review Negativa",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1500,
+          370
+        ]
+      },
+      {
+        "name": "Cron: Reporte Diario y Backup",
+        "type": "n8n-nodes-base.cron",
+        "position": [
+          100,
+          460
+        ]
+      },
+      {
+        "name": "Google Sheets: Obtener Datos Reporte",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          450,
+          460
+        ]
+      },
+      {
+        "name": "Function: Generar Resumen Reporte",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          800,
+          370
+        ]
+      },
+      {
+        "name": "Gmail: Enviar Reporte Diario",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1150,
+          370
+        ]
+      },
+      {
+        "name": "Google Drive: Backup Logs",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1500,
+          550
+        ]
+      },
+      {
+        "name": "HTTP Request: DataDog Alerta Error",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2550,
+          190
+        ]
+      },
+      {
+        "name": "Twilio: SMS Alerta Crítica",
+        "type": "n8n-nodes-base.twilio",
+        "position": [
+          2900,
+          280
+        ]
+      }
+    ],
+    "connections_count": 46,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 51
+    }
+  },
+  "semantic_info": {
+    "category": "communication",
+    "purpose": "e-commerce automation",
+    "use_cases": [
+      "Team communication"
+    ],
+    "complexity_score": 1510,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "gmail: solicitar corrección datos",
+      "slack: alerta inventario bajo",
+      "discord: notificar proveedores",
+      "mongodb: log inventario insuficiente",
+      "http request: detección fraude",
+      "googleDrive",
+      "set: proceso vip",
+      "gmail: notificar pago fallido",
+      "notion: actualizar dashboard",
+      "mongodb: log pedido procesado",
+      "gmail: notificar cliente inventario",
+      "stripeTrigger",
+      "airtable: actualizar inventario",
+      "slack: alerta datos inválidos",
+      "whatsapp business: mensaje cliente",
+      "stripe: verificar pago",
+      "if: review negativa?",
+      "inventario suficiente?",
+      "loopOverItems",
+      "airtable: obtener inventario completo",
+      "communication",
+      "discord: alerta inventario bajo discord",
+      "whatsappBusiness",
+      "twilio: sms alerta crítica",
+      "fraude detectado?",
+      "function",
+      "notion: registrar sentimiento",
+      "webhook",
+      "gmail: confirmación cliente",
+      "validar datos pedido",
+      "google calendar: agendar entrega",
+      "http request: datadog alerta error",
+      "notion",
+      "slack: alerta pago fallido",
+      "function: calcular totales (impuestos, envío, descuentos)",
+      "function: identificar productos bajos",
+      "slack",
+      "openAi",
+      "discord",
+      "twilio",
+      "httpRequest",
+      "cliente vip?",
+      "slack: notificar proveedor slack",
+      "loop over items: procesar productos bajos",
+      "cron",
+      "set",
+      "webhook de pedidos (shopify/woocommerce)",
+      "cron: verificación inventario programada",
+      "googleCalendar",
+      "mongoDb",
+      "stripe",
+      "cron: reporte diario y backup",
+      "gmail: enviar reporte diario",
+      "slack: alerta fraude",
+      "mongodb: log datos inválidos",
+      "mongodb: log pago stripe directo",
+      "airtable: verificar inventario",
+      "slack: alerta review negativa",
+      "function: generar resumen reporte",
+      "google sheets: registrar pedido",
+      "webhook: reviews webhook",
+      "normalizar datos pedido",
+      "googleSheets",
+      "gmail",
+      "complex",
+      "google sheets: obtener datos reporte",
+      "slack: notificación equipo",
+      "stripe trigger: pagos completados (directo)",
+      "google drive: backup logs",
+      "openai: analizar sentimiento",
+      "mongodb: log pago fallido",
+      "pago aprobado?",
+      "e-commerce automation",
+      "airtable",
+      "datos pedido válidos?"
+    ],
+    "description": "Este workflow diseñado para e-commerce automation con 52 nodos activado por Stripe Trigger: Pagos Completados (Directo) que ejecuta: Webhook de Pedidos (Shopify/WooCommerce), Normalizar Datos Pedido, Validar Datos Pedido en la categoría de communication.",
+    "semantic_content": "Nodos: Webhook de Pedidos (Shopify/WooCommerce) (webhook), Normalizar Datos Pedido (set), Validar Datos Pedido (function), Datos Pedido Válidos? (if), Gmail: Solicitar Corrección Datos (gmail), Slack: Alerta Datos Inválidos (slack), MongoDB: Log Datos Inválidos (mongoDb), Cliente VIP? (if), Set: Proceso VIP (set), Airtable: Verificar Inventario (airtable), Inventario Suficiente? (if), Slack: Alerta Inventario Bajo (slack), Discord: Notificar Proveedores (discord), Gmail: Notificar Cliente Inventario (gmail), MongoDB: Log Inventario Insuficiente (mongoDb), Function: Calcular Totales (Impuestos, Envío, Descuentos) (function), Stripe: Verificar Pago (stripe), Pago Aprobado? (if), Gmail: Notificar Pago Fallido (gmail), Slack: Alerta Pago Fallido (slack), MongoDB: Log Pago Fallido (mongoDb), Google Sheets: Registrar Pedido (googleSheets), Airtable: Actualizar Inventario (airtable), Google Calendar: Agendar Entrega (googleCalendar), Gmail: Confirmación Cliente (gmail), WhatsApp Business: Mensaje Cliente (whatsappBusiness), Slack: Notificación Equipo (slack), Notion: Actualizar Dashboard (notion), HTTP Request: Detección Fraude (httpRequest), Fraude Detectado? (if), Slack: Alerta Fraude (slack), MongoDB: Log Pedido Procesado (mongoDb), Cron: Verificación Inventario Programada (cron), Airtable: Obtener Inventario Completo (airtable), Function: Identificar Productos Bajos (function), Loop Over Items: Procesar Productos Bajos (loopOverItems), Discord: Alerta Inventario Bajo Discord (discord), Slack: Notificar Proveedor Slack (slack), Stripe Trigger: Pagos Completados (Directo) (stripeTrigger), MongoDB: Log Pago Stripe Directo (mongoDb), Webhook: Reviews Webhook (webhook), OpenAI: Analizar Sentimiento (openAi), Notion: Registrar Sentimiento (notion), If: Review Negativa? (if), Slack: Alerta Review Negativa (slack), Cron: Reporte Diario y Backup (cron), Google Sheets: Obtener Datos Reporte (googleSheets), Function: Generar Resumen Reporte (function), Gmail: Enviar Reporte Diario (gmail), Google Drive: Backup Logs (googleDrive), HTTP Request: DataDog Alerta Error (httpRequest), Twilio: SMS Alerta Crítica (twilio). Propósito: e-commerce automation. Categoría: communication. Disparadores: Stripe Trigger: Pagos Completados (Directo)",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Normalizar Datos Pedido",
+      "n8n-nodes-base.stripeTrigger",
+      "n8n-nodes-base.set",
+      "Validar Datos Pedido",
+      "n8n-nodes-base.function",
+      "Stripe Trigger: Pagos Completados (Directo)",
+      "Webhook de Pedidos (Shopify/WooCommerce)",
+      "n8n-nodes-base.webhook"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.stripe",
+      "n8n-nodes-base.twilio",
+      "n8n-nodes-base.discord",
+      "n8n-nodes-base.loopoveritems",
+      "n8n-nodes-base.stripetrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.function",
+      "n8n-nodes-base.cron",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.googlecalendar",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.notion",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.mongodb",
+      "n8n-nodes-base.openai",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.whatsappbusiness",
+      "n8n-nodes-base.airtable"
+    ],
+    "search_terms": [
+      "workflow-optimizado-positioning",
+      "positioning",
+      "workflow",
+      "optimizado"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "e-commerce automation",
+      "communication"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.stripeTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 68.87417218543047,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 77.5248344370861
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.251599"
+  },
+  "semantic_vector": [
+    -0.050982896238565445,
+    -0.0467475950717926,
+    0.007445538882166147,
+    -0.04392234981060028,
+    -0.0012644968228414655,
+    -0.05098756402730942,
+    0.03734741359949112,
+    0.003138653002679348,
+    -0.04989679157733917,
+    0.02389182709157467,
+    -0.04698322340846062,
+    -0.05101535841822624,
+    0.04365042224526405,
+    0.012254890985786915,
+    -0.03514572232961655,
+    0.051027894020080566,
+    0.05085500329732895,
+    0.049583692103624344,
+    -0.010585002601146698,
+    0.048426561057567596,
+    0.049978338181972504,
+    -0.05069370195269585,
+    -0.01006047148257494,
+    0.031037285923957825,
+    -0.007664400152862072,
+    -0.05081581696867943,
+    -0.04983768239617348,
+    0.040123533457517624,
+    -0.05102038010954857,
+    0.05093524977564812,
+    0.050933219492435455,
+    -0.05087873339653015,
+    -0.05100686475634575,
+    0.045763321220874786,
+    0.05051983892917633,
+    -0.051016926765441895,
+    -0.050890084356069565,
+    0.03270088508725166,
+    0.047829046845436096,
+    -0.0509185865521431,
+    0.04734328016638756,
+    0.05047135800123215,
+    -0.05003885179758072,
+    0.050952013581991196,
+    0.051027894020080566,
+    0.032357554882764816,
+    -0.05025724321603775,
+    0.05011974647641182,
+    0.050828900188207626,
+    -0.050686486065387726,
+    0.03263392671942711,
+    -0.0026513731572777033,
+    -0.050994496792554855,
+    -0.050508324056863785,
+    -0.05102765932679176,
+    -0.010106094181537628,
+    0.047893572598695755,
+    0.049695540219545364,
+    -0.050129737704992294,
+    -0.007298232521861792,
+    -0.04862581565976143,
+    -0.050938449800014496,
+    0.04640660807490349,
+    0.051021263003349304,
+    0.02291717752814293,
+    -0.00488200644031167,
+    0.050964146852493286,
+    -0.04962495341897011,
+    0.049246568232774734,
+    -0.0509227029979229,
+    -0.051027894020080566,
+    0.00723645742982626,
+    -0.04484517127275467,
+    0.050069697201251984,
+    0.050934385508298874,
+    -0.0311516635119915,
+    0.04692036285996437,
+    -0.05098157003521919,
+    0.04920973256230354,
+    0.00950623769313097,
+    0.050390493124723434,
+    -0.014144391752779484,
+    -0.04604246839880943,
+    -0.050591856241226196,
+    0.04839612543582916,
+    -0.038878075778484344,
+    0.005374432075768709,
+    -0.05102573335170746,
+    0.04917442053556442,
+    0.05090634152293205,
+    0.035952527076005936,
+    -0.03822070360183716,
+    0.051026374101638794,
+    0.050859350711107254,
+    0.05075386166572571,
+    0.04834969714283943,
+    0.047451362013816833,
+    0.051027096807956696,
+    -0.05102785304188728,
+    -0.051027894020080566,
+    0.05099441111087799,
+    -0.004925585817545652,
+    -0.050782546401023865,
+    0.04638877883553505,
+    0.050589557737112045,
+    -0.03740958869457245,
+    0.051027894020080566,
+    0.046897776424884796,
+    -0.03365742042660713,
+    -0.051024287939071655,
+    -0.04067014530301094,
+    -0.05101294815540314,
+    -0.050997573882341385,
+    -0.050786908715963364,
+    -0.050528496503829956,
+    0.02316100150346756,
+    -0.05067885294556618,
+    0.04664667323231697,
+    0.0473712682723999,
+    0.002075385767966509,
+    0.02185817062854767,
+    0.04257047921419144,
+    0.03376748412847519,
+    0.042524684220552444,
+    0.05088464543223381,
+    -0.011476811021566391,
+    -0.05055350065231323,
+    0.050229866057634354,
+    0.05100999027490616,
+    -0.04817086085677147,
+    -0.015251527540385723,
+    0.04560765251517296,
+    0.050931416451931,
+    0.020807182416319847,
+    0.050402749329805374,
+    -0.017226921394467354,
+    0.05101986974477768,
+    0.04645340144634247,
+    -0.009123985655605793,
+    -0.051027894020080566,
+    0.014607170596718788,
+    0.051027849316596985,
+    0.04997749254107475,
+    0.03486672043800354,
+    0.044723834842443466,
+    -0.051027894020080566,
+    0.038686223328113556,
+    -0.0461026132106781,
+    -0.05063512921333313,
+    0.051023393869400024,
+    -0.05080354958772659,
+    -0.05089953914284706,
+    0.05088172107934952,
+    0.05094205588102341,
+    -0.050385892391204834,
+    0.05102097615599632,
+    -0.04690726101398468,
+    -0.051027894020080566,
+    -0.050870124250650406,
+    0.05088995769619942,
+    -0.050994642078876495,
+    -0.05101928114891052,
+    0.05030868574976921,
+    0.04680408909916878,
+    0.05031036213040352,
+    -0.051003776490688324,
+    -0.05093587189912796,
+    -0.04435647279024124,
+    -0.05052884295582771,
+    0.05078241601586342,
+    0.002052463823929429,
+    -0.05101807788014412,
+    0.01475521270185709,
+    0.0215699914842844,
+    -0.05071055144071579,
+    -0.04714389145374298,
+    0.031056951731443405,
+    -0.04732343554496765,
+    0.033653661608695984,
+    -0.048813872039318085,
+    -0.047366634011268616,
+    -0.039675015956163406,
+    -0.0510278157889843,
+    -0.05102621018886566,
+    0.05091630294919014,
+    0.051020264625549316,
+    -0.05102691054344177,
+    0.04622771218419075,
+    -0.020539311692118645,
+    0.0022264414001256227,
+    0.04829711094498634,
+    0.05098190903663635,
+    -0.05084320902824402,
+    -0.05102771893143654,
+    -0.05084224417805672,
+    -0.051027700304985046,
+    0.017290670424699783,
+    0.051027894020080566,
+    0.050337959080934525,
+    0.04718531295657158,
+    0.04847779497504234,
+    -0.046750396490097046,
+    -0.051027894020080566,
+    0.02490689791738987,
+    -0.004978017881512642,
+    -0.034189917147159576,
+    -0.0405472107231617,
+    0.05020574480295181,
+    -0.05102787911891937,
+    -0.05102035775780678,
+    0.0507979616522789,
+    0.05021796002984047,
+    0.04283595830202103,
+    -0.05054977163672447,
+    -0.05102785676717758,
+    -0.010602487251162529,
+    0.04572693631052971,
+    0.022195979952812195,
+    -0.03606428951025009,
+    -0.04388916492462158,
+    0.05101152881979942,
+    -0.04984826222062111,
+    0.04496720805764198,
+    -0.03224213421344757,
+    -0.05102595314383507,
+    -0.04917195439338684,
+    -0.05102019011974335,
+    -0.05101901292800903,
+    -0.025624623522162437,
+    -0.02637586183845997,
+    0.04848356544971466,
+    -0.031153421849012375,
+    0.05023285001516342,
+    -0.051027894020080566,
+    -0.048426538705825806,
+    -0.0025044737849384546,
+    0.051027894020080566,
+    0.05102641507983208,
+    0.04056538641452789,
+    -0.034067302942276,
+    0.050015900284051895,
+    0.050458792597055435,
+    -0.0320865772664547,
+    -0.039264217019081116,
+    0.05003798007965088,
+    0.050020188093185425,
+    0.04880473017692566,
+    0.04986109212040901,
+    -0.024372609332203865,
+    0.051027894020080566,
+    -0.05102785304188728,
+    -0.04067818075418472,
+    -0.05031425505876541,
+    0.031232576817274094,
+    0.008641199208796024,
+    -0.051027894020080566,
+    -0.04850675165653229,
+    0.051027894020080566,
+    0.023954980075359344,
+    0.02808498963713646,
+    0.050909675657749176,
+    0.047901250422000885,
+    -0.011219047009944916,
+    0.05102768540382385,
+    -0.050166916102170944,
+    0.04860974848270416,
+    0.051008712500333786,
+    0.044220782816410065,
+    -0.05101173371076584,
+    0.0510169118642807,
+    -0.05090932920575142,
+    0.04997999593615532,
+    -0.050130266696214676,
+    0.04638024419546127,
+    0.04471238702535629,
+    -0.04317030310630798,
+    -0.045125093311071396,
+    0.051023758947849274,
+    0.051027894020080566,
+    0.01675049215555191,
+    -0.050345320254564285,
+    0.04308672249317169,
+    0.048521146178245544,
+    -0.016633307561278343,
+    0.04771919921040535,
+    -0.051025498658418655,
+    0.0505007728934288,
+    0.05094584822654724,
+    -0.05099593475461006,
+    0.051027894020080566,
+    -0.03153699263930321,
+    -0.026203623041510582,
+    0.051027894020080566,
+    -0.04595382139086723,
+    -0.0492728091776371,
+    -0.051027704030275345,
+    0.03172053024172783,
+    0.013361450284719467,
+    -0.040227677673101425,
+    0.050845131278038025,
+    0.026057755574584007,
+    -0.020028844475746155,
+    0.04591069370508194,
+    -0.05081919953227043,
+    0.05088919401168823,
+    -0.048240404576063156,
+    0.050608206540346146,
+    0.04796547070145607,
+    0.04914828762412071,
+    0.05064897984266281,
+    -0.029773637652397156,
+    0.04688103497028351,
+    -0.04840464144945145,
+    -0.004700326826423407,
+    0.04297974705696106,
+    -0.05102362856268883,
+    0.0015176864108070731,
+    -0.05100181698799133,
+    -0.05097626894712448,
+    0.04719023406505585,
+    0.0510275773704052,
+    0.05023883283138275,
+    0.051027536392211914,
+    0.022262321785092354,
+    0.05100442096590996,
+    0.03888219967484474,
+    0.0450642965734005,
+    0.05098140984773636,
+    -0.050639793276786804,
+    0.03763817623257637,
+    -0.05055719241499901,
+    -0.04372561350464821,
+    0.0503232441842556,
+    0.051023826003074646,
+    0.043784093111753464,
+    -0.03524425998330116,
+    0.049759041517972946,
+    0.051027294248342514,
+    -0.03975210338830948,
+    0.039030179381370544,
+    -0.04219495505094528,
+    -0.05101672559976578,
+    0.012682145461440086,
+    -0.05094679817557335,
+    -0.051027894020080566,
+    0.050881996750831604,
+    -0.042532630264759064,
+    0.04812776669859886,
+    0.04990776255726814,
+    -0.04760478809475899,
+    0.013809061609208584,
+    0.025434765964746475,
+    0.050495367497205734,
+    0.006326126400381327,
+    0.01574263721704483,
+    -0.05102783814072609,
+    -0.051027894020080566,
+    0.04955044761300087,
+    -0.025516696274280548,
+    0.05102783814072609,
+    0.05085310339927673,
+    -0.05095268413424492,
+    -0.051027894020080566,
+    0.049720555543899536,
+    -0.051027894020080566,
+    -0.04226398095488548,
+    -0.03748380392789841,
+    0.0046179648488759995,
+    0.016973154619336128,
+    0.051003675907850266,
+    -0.009623178280889988,
+    0.049365971237421036,
+    -0.04982582852244377,
+    0.05102783814072609,
+    0.04999922960996628,
+    0.04479885473847389,
+    -0.0015518023865297437,
+    -0.03796684369444847,
+    0.045186255127191544,
+    0.035469841212034225,
+    0.050984468311071396,
+    -0.04965800791978836,
+    -0.014660162851214409,
+    0.05100487545132637,
+    -0.038760725408792496,
+    -0.04610537737607956,
+    0.05097325146198273,
+    -0.04907966032624245,
+    0.03633783385157585,
+    -0.051027894020080566,
+    0.007455276325345039,
+    -0.04028772935271263,
+    0.051027894020080566,
+    0.05102751404047012,
+    -0.05028543621301651,
+    0.05100400745868683,
+    -0.01982003264129162,
+    -0.03279627114534378,
+    0.011479619890451431,
+    0.050521623343229294,
+    -0.04474138095974922,
+    -0.046897370368242264,
+    -0.05073446035385132,
+    -0.05075798183679581,
+    -0.04977840557694435,
+    -0.050050050020217896,
+    -0.051027894020080566,
+    0.03073771670460701,
+    0.04451065883040428,
+    0.0211015697568655,
+    0.011405427940189838,
+    0.05097229778766632,
+    -0.05101390928030014,
+    -0.042188610881567,
+    -0.05100768804550171,
+    -0.05038735270500183,
+    0.050460394471883774,
+    -0.050852321088314056,
+    -0.018138721585273743,
+    -0.05102347955107689,
+    -0.026629164814949036,
+    0.03273533284664154,
+    0.03409146890044212,
+    -0.04599359259009361,
+    -0.0200856514275074,
+    0.051027894020080566,
+    -0.023823315277695656,
+    0.05102672427892685,
+    -0.050969310104846954,
+    0.04322615638375282,
+    0.04917651787400246,
+    -0.04094918444752693,
+    0.05055752396583557,
+    -0.007972006686031818,
+    -0.05060509964823723,
+    -0.05092032253742218,
+    -0.05101229250431061,
+    -0.051026783883571625,
+    -0.0503915399312973,
+    -0.05099423602223396,
+    -0.042398709803819656,
+    0.006762630306184292,
+    -0.0468691922724247,
+    0.05095544084906578,
+    0.050905607640743256,
+    -0.051027894020080566,
+    -0.0155991455540061,
+    -0.01477847434580326,
+    -0.04960107058286667,
+    -0.05099259316921234,
+    0.0017481656977906823,
+    -0.050318870693445206,
+    0.051027894020080566,
+    0.05099933594465256,
+    0.05089298635721207,
+    -0.051027894020080566,
+    -0.0505918450653553,
+    0.051027894020080566,
+    0.007004751358181238,
+    -0.04992416873574257,
+    0.04950917512178421,
+    0.050483476370573044,
+    0.004089997615665197,
+    0.05099378526210785,
+    0.026197703555226326,
+    -0.045627232640981674,
+    -0.05101070925593376,
+    0.041129060089588165,
+    -0.013600005768239498,
+    0.051027894020080566,
+    -0.02384561114013195,
+    -0.051018375903367996,
+    0.03442753478884697,
+    0.05071773752570152,
+    -0.05004601925611496,
+    0.05102722346782684,
+    -0.034122172743082047,
+    0.051003776490688324,
+    -0.03046012483537197,
+    0.051027812063694,
+    -0.050881557166576385,
+    0.050875768065452576,
+    0.0335380993783474,
+    -0.05094349756836891,
+    0.050674423575401306,
+    -0.04814453795552254,
+    -0.04736600071191788,
+    0.05102318152785301,
+    -0.050972145050764084,
+    0.04815168306231499,
+    -0.051023490726947784,
+    0.044462233781814575,
+    -0.049590665847063065,
+    0.050822578370571136,
+    -0.04817759990692139,
+    0.05102071166038513,
+    0.03131809085607529,
+    0.047378674149513245,
+    -0.05102776363492012,
+    0.05102395638823509,
+    0.039299678057432175,
+    -0.033884063363075256,
+    0.04801922291517258,
+    -0.051027894020080566,
+    0.03931080922484398,
+    0.050842832773923874,
+    0.05100175365805626,
+    0.030127473175525665,
+    0.016815267503261566,
+    0.05102788284420967,
+    -0.050969939678907394,
+    -0.049179378896951675
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs e-commerce automation; When working with: Stripe Trigger: Pagos Completados (Directo); Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for e-commerce automation in communication context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Email y Comunicación",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Email y Comunicación"
+  }
+}

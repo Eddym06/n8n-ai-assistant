@@ -1,0 +1,370 @@
+{
+  "workflow": {
+    "name": "Workflow Inteligente - 25/9/2025",
+    "active": false,
+    "nodes": [
+      {
+        "id": "intelligent-l20yea257",
+        "name": "Webhook de Entrada Inteligente",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          729.3241721254205,
+          540.4325177519877
+        ],
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "webhook-data",
+          "responseMode": "lastNode",
+          "options": {
+            "noResponseBody": false,
+            "rawBody": false,
+            "allowedOrigins": "*"
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-l3wicm5ve",
+        "name": "Validate Order - Datos",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          529.447521496397,
+          411.99008964534937
+        ],
+        "parameters": {
+          "conditions": [
+            {
+              "value1": "={{$json.data}}",
+              "operator": "isNotEmpty",
+              "value2": ""
+            }
+          ],
+          "options": {}
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-cdwbg3p3g",
+        "name": "Check Inventory - Datos",
+        "type": "n8n-nodes-base.postgres",
+        "position": [
+          294.8665512065803,
+          666.9465727176064
+        ],
+        "parameters": {
+          "options": {
+            "queryBatching": true,
+            "batchSize": 100
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "postgres": {
+            "id": "pg-creds",
+            "name": "PostgreSQL DB"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-72gg58blq",
+        "name": "Process Payment - Datos",
+        "type": "n8n-nodes-base.stripe",
+        "position": [
+          484.7129556309964,
+          629.691767882446
+        ],
+        "parameters": {},
+        "typeVersion": 1,
+        "credentials": {
+          "stripeApi": {
+            "id": "stripe-creds",
+            "name": "Stripe API"
+          }
+        },
+        "onError": "continueRegularOutput",
+        "alwaysOutputData": true,
+        "retryOnFail": true,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "continueOnFail": false
+      },
+      {
+        "id": "intelligent-hwmw9gflt",
+        "name": "Generate Invoice - Datos",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          340.41746323221975,
+          311.8519125079506
+        ],
+        "parameters": {
+          "functionCode": "// Transformar datos para integración\nconst data = items[0].json;\n\n// Mapear campos a formato estándar\nconst transformed = {\n    id: data.id || data._id || data.identifier,\n    name: data.name || data.fullName || data.displayName,\n    email: data.email || data.emailAddress,\n    phone: data.phone || data.phoneNumber || data.mobile,\n    address: {\n        street: data.street || data.address1,\n        city: data.city,\n        country: data.country || 'ES',\n        zipCode: data.zipCode || data.postalCode\n    },\n    metadata: {\n        source: data.source || 'n8n-workflow',\n        processedAt: new Date().toISOString(),\n        originalData: data\n    }\n};\n\nreturn [{\n    json: transformed\n}];"
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-fhunis3e9",
+        "name": "Send Confirmation - Datos",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          812.214836376698,
+          408.9629450938257
+        ],
+        "parameters": {
+          "fromEmail": "noreply@company.com",
+          "toEmail": "={{$json.email}}",
+          "subject": "Notificación de {{$workflow.name}}",
+          "message": "Su solicitud ha sido procesada exitosamente por nuestro sistema.",
+          "options": {
+            "allowUnauthorizedCerts": false,
+            "appendAttribution": false
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "smtp": {
+            "id": "email-creds",
+            "name": "SMTP Server"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-hnyeq79n1",
+        "name": "Update Inventory - Datos",
+        "type": "n8n-nodes-base.postgres",
+        "position": [
+          169.99749075066734,
+          646.1880572926691
+        ],
+        "parameters": {
+          "options": {
+            "queryBatching": true,
+            "batchSize": 100
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "postgres": {
+            "id": "pg-creds",
+            "name": "PostgreSQL DB"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-g9veanl00",
+        "name": "Notify Fulfillment - Datos",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          133.62603800336768,
+          429.0116994904483
+        ],
+        "parameters": {
+          "channel": "#general",
+          "text": "📢 Notificación: {{$json.message || \"Evento procesado correctamente\"}}",
+          "username": "n8n-bot",
+          "options": {}
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "slackApi": {
+            "id": "slack-creds",
+            "name": "Slack API"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-bxd16av63",
+        "name": "Manejador Inteligente de Errores",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          158.27215091993364,
+          305.9634019273451
+        ],
+        "parameters": {
+          "functionCode": "// Transformar datos para integración\nconst data = items[0].json;\n\n// Mapear campos a formato estándar\nconst transformed = {\n    id: data.id || data._id || data.identifier,\n    name: data.name || data.fullName || data.displayName,\n    email: data.email || data.emailAddress,\n    phone: data.phone || data.phoneNumber || data.mobile,\n    address: {\n        street: data.street || data.address1,\n        city: data.city,\n        country: data.country || 'ES',\n        zipCode: data.zipCode || data.postalCode\n    },\n    metadata: {\n        source: data.source || 'n8n-workflow',\n        processedAt: new Date().toISOString(),\n        originalData: data\n    }\n};\n\nreturn [{\n    json: transformed\n}];"
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      }
+    ],
+    "connections": {
+      "Validate Order - Datos": {
+        "main": [
+          [
+            {
+              "node": "Check Inventory - Datos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Check Inventory - Datos": {
+        "main": [
+          [
+            {
+              "node": "Process Payment - Datos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Process Payment - Datos": {
+        "main": [
+          [
+            {
+              "node": "Generate Invoice - Datos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Generate Invoice - Datos": {
+        "main": [
+          [
+            {
+              "node": "Send Confirmation - Datos",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "Notify Fulfillment - Datos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Send Confirmation - Datos": {
+        "main": [
+          [
+            {
+              "node": "Update Inventory - Datos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Update Inventory - Datos": {
+        "main": [
+          [
+            {
+              "node": "Notify Fulfillment - Datos",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Notify Fulfillment - Datos": {
+        "main": [
+          [
+            {
+              "node": "Manejador Inteligente de Errores",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2025-09-26T01:58:27.496Z",
+    "updatedAt": "2025-09-26T01:58:27.496Z",
+    "settings": {
+      "executionOrder": "v1",
+      "saveManualExecutions": true,
+      "callerPolicy": "workflowsFromSameOwner",
+      "errorWorkflow": "",
+      "timezone": "Europe/Madrid"
+    },
+    "staticData": {},
+    "tags": [
+      "intelligent-agent",
+      "ai-generated",
+      "professional"
+    ],
+    "triggerCount": 0,
+    "versionId": "2.0.0",
+    "meta": {
+      "generatedBy": "intelligent-workflow-agent-v1.0",
+      "generatedAt": "2025-09-26T01:58:27.496Z",
+      "analysis": {
+        "domains": [
+          "data"
+        ],
+        "complexity": "SIMPLE",
+        "intents": [
+          "data-capture"
+        ],
+        "confidence": 0.4
+      },
+      "metrics": {
+        "nodeCount": 9,
+        "connectionCount": 7,
+        "estimatedExecutionTime": "6.66 segundos (estimación inteligente)",
+        "confidenceScore": 1
+      }
+    }
+  },
+  "metadata": {
+    "prompt": "ETL completo con extracción, transformación y carga a base de datos",
+    "method": "intelligent-agent",
+    "duration": 2,
+    "generatedAt": "2025-09-26T01:58:27.502Z",
+    "nodeCount": 9,
+    "connectionCount": 7
+  }
+}

@@ -1,0 +1,1697 @@
+{
+  "workflow_info": {
+    "id": "0KZs18Ti2KXKoLIr",
+    "name": "✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition",
+    "display_name": "✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition",
+    "file_name": "workflow-26-automated-social-media-content-publishing-factory-system-prompt-composition.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Redes Sociales\\workflow-26-automated-social-media-content-publishing-factory-system-prompt-composition.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "eed58b78cefe"
+  },
+  "structure": {
+    "total_nodes": 100,
+    "node_types": [
+      "n8n-nodes-base.linkedIn",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.telegram",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.facebookGraphApi",
+      "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "n8n-nodes-base.googleDocs",
+      "n8n-nodes-base.twitter",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.linkedIn",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.telegram",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 12
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.facebookGraphApi",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.googleDocs",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.twitter",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 43
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When chat message received",
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "position": [
+          -520,
+          -2080
+        ]
+      },
+      {
+        "name": "When Executed by Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -700,
+          -560
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sticky Note20",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -600,
+          -1720
+        ]
+      },
+      {
+        "name": "Sticky Note21",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -600,
+          -1460
+        ]
+      },
+      {
+        "name": "Sticky Note22",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -620,
+          -2160
+        ]
+      },
+      {
+        "name": "Sticky Note32",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1980,
+          -2000
+        ]
+      },
+      {
+        "name": "Sticky Note33",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -300,
+          -1640
+        ]
+      },
+      {
+        "name": "X-Twiter",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          -220,
+          -1540
+        ]
+      },
+      {
+        "name": "Sticky Note34",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          -1640
+        ]
+      },
+      {
+        "name": "Instagram",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          40,
+          -1540
+        ]
+      },
+      {
+        "name": "Window Buffer Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          -520,
+          -1360
+        ]
+      },
+      {
+        "name": "Sticky Note35",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          220,
+          -1640
+        ]
+      },
+      {
+        "name": "Sticky Note36",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          480,
+          -1640
+        ]
+      },
+      {
+        "name": "Facebook",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          300,
+          -1540
+        ]
+      },
+      {
+        "name": "LinkedIn",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          560,
+          -1540
+        ]
+      },
+      {
+        "name": "Sticky Note37",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -40,
+          -1380
+        ]
+      },
+      {
+        "name": "Sticky Note38",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          220,
+          -1380
+        ]
+      },
+      {
+        "name": "Short",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          40,
+          -1280
+        ]
+      },
+      {
+        "name": "YouTube Short",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          300,
+          -1280
+        ]
+      },
+      {
+        "name": "Sticky Note18",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -340,
+          -1720
+        ]
+      },
+      {
+        "name": "Sticky Note25",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -500,
+          -940
+        ]
+      },
+      {
+        "name": "pollinations.ai1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1440,
+          -560
+        ]
+      },
+      {
+        "name": "Sticky Note26",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1340,
+          -720
+        ]
+      },
+      {
+        "name": "Save Image to imgbb.com",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1760,
+          -680
+        ]
+      },
+      {
+        "name": "Sticky Note41",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1980,
+          -2280
+        ]
+      },
+      {
+        "name": "Sticky Note42",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1240,
+          -1760
+        ]
+      },
+      {
+        "name": "Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          2640,
+          -780
+        ]
+      },
+      {
+        "name": "Social Media Schema",
+        "type": "n8n-nodes-base.googleDocs",
+        "position": [
+          -320,
+          -700
+        ]
+      },
+      {
+        "name": "Social Media System Prompt",
+        "type": "n8n-nodes-base.googleDocs",
+        "position": [
+          -320,
+          -420
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          -840
+        ]
+      },
+      {
+        "name": "gpt-40-mini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2320,
+          -600
+        ]
+      },
+      {
+        "name": "Instagram Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2440,
+          -1940
+        ]
+      },
+      {
+        "name": "X Post",
+        "type": "n8n-nodes-base.twitter",
+        "position": [
+          2640,
+          -2180
+        ]
+      },
+      {
+        "name": "Instragram Post",
+        "type": "n8n-nodes-base.facebookGraphApi",
+        "position": [
+          2640,
+          -2000
+        ]
+      },
+      {
+        "name": "Facebook Post",
+        "type": "n8n-nodes-base.facebookGraphApi",
+        "position": [
+          2640,
+          -1820
+        ]
+      },
+      {
+        "name": "LinkedIn Post",
+        "type": "n8n-nodes-base.linkedIn",
+        "position": [
+          2640,
+          -1640
+        ]
+      },
+      {
+        "name": "Gmail User for Approval",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1380,
+          -1600
+        ]
+      },
+      {
+        "name": "Get Social Post Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1640,
+          -1340
+        ]
+      },
+      {
+        "name": "gpt-40-mini1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          860,
+          -1420
+        ]
+      },
+      {
+        "name": "gpt-4o-mini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          780,
+          -360
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1840,
+          -1220
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1060,
+          -1220
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -400,
+          -480
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -400,
+          -760
+        ]
+      },
+      {
+        "name": "Schema",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -60,
+          -700
+        ]
+      },
+      {
+        "name": "System Prompt",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -60,
+          -420
+        ]
+      },
+      {
+        "name": "Parse Schema",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          -700
+        ]
+      },
+      {
+        "name": "Parse System Prompt",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          140,
+          -420
+        ]
+      },
+      {
+        "name": "Compose Prompt & Schema",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          520,
+          -560
+        ]
+      },
+      {
+        "name": "Social Media Content Creator",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          800,
+          -560
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1880,
+          -1400
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2380,
+          -2280
+        ]
+      },
+      {
+        "name": "Merge Prompts and Schema",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          340,
+          -560
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          720,
+          -680
+        ]
+      },
+      {
+        "name": "Social Content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1180,
+          -560
+        ]
+      },
+      {
+        "name": "Save Image to Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1760,
+          -480
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1980,
+          -560
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2200,
+          -880
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2120,
+          -420
+        ]
+      },
+      {
+        "name": "Save Social Post to Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          2560,
+          -340
+        ]
+      },
+      {
+        "name": "Google Drive Image Meta",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2200,
+          -340
+        ]
+      },
+      {
+        "name": "Social Post JSON",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2380,
+          -340
+        ]
+      },
+      {
+        "name": "Respond with Google Drive Id",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2740,
+          -340
+        ]
+      },
+      {
+        "name": "Telegram Success Message (Optional)",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          1760,
+          -880
+        ]
+      },
+      {
+        "name": "Telegram Error Message (Optional)",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          1760,
+          -300
+        ]
+      },
+      {
+        "name": "Social Media Publishing Router",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          2080,
+          -1900
+        ]
+      },
+      {
+        "name": "Prepare Email Contents",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          880,
+          -1600
+        ]
+      },
+      {
+        "name": "Is Approved?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1380,
+          -1340
+        ]
+      },
+      {
+        "name": "File Id",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1200,
+          -2080
+        ]
+      },
+      {
+        "name": "Get Social Post from Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1380,
+          -2080
+        ]
+      },
+      {
+        "name": "Extract as JSON",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          1560,
+          -2080
+        ]
+      },
+      {
+        "name": "Merge Image and Post Contents",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1820,
+          -1840
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2540,
+          -1460
+        ]
+      },
+      {
+        "name": "Implement Threads Here",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2640,
+          -1420
+        ]
+      },
+      {
+        "name": "Implement YouTube Shorts Here",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2640,
+          -1260
+        ]
+      },
+      {
+        "name": "X Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2840,
+          -2180
+        ]
+      },
+      {
+        "name": "Instagram Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2840,
+          -2000
+        ]
+      },
+      {
+        "name": "Facebook Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2840,
+          -1820
+        ]
+      },
+      {
+        "name": "LinkedIn Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2840,
+          -1640
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1060,
+          -1300
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1840,
+          -1300
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -120,
+          -2200
+        ]
+      },
+      {
+        "name": "🤖Social Media Router Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          60,
+          -2080
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          800,
+          -1720
+        ]
+      },
+      {
+        "name": "SerpAPI",
+        "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+        "position": [
+          980,
+          -360
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -500,
+          -120
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          260
+        ]
+      },
+      {
+        "name": "Sticky Note19",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          720,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note23",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1160,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note24",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1520,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note27",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1840,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note28",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2120,
+          -40
+        ]
+      },
+      {
+        "name": "Sticky Note29",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2120,
+          260
+        ]
+      },
+      {
+        "name": "Sticky Note30",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          260,
+          -40
+        ]
+      },
+      {
+        "name": "Prepare Social Media Email Contents",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2300,
+          -780
+        ]
+      },
+      {
+        "name": "Sticky Note43",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -760,
+          -340
+        ]
+      },
+      {
+        "name": "Sticky Note44",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1340,
+          -360
+        ]
+      },
+      {
+        "name": "Sticky Note45",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          720,
+          -840
+        ]
+      },
+      {
+        "name": "gpt-4o",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -520,
+          -1620
+        ]
+      }
+    ],
+    "connections_count": 48,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 98
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "social media management",
+    "use_cases": [],
+    "complexity_score": 2250,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "social media management",
+      "googleDrive",
+      "social content",
+      "file id",
+      "linkedin",
+      "telegram success message (optional)",
+      "sticky note7",
+      "parse system prompt",
+      "sticky note42",
+      "stickyNote",
+      "social media publishing router",
+      "@n8n/n8n nodes langchain.toolWorkflow",
+      "gmail user for approval",
+      "httpRequest",
+      "merge image and post contents",
+      "implement youtube shorts here",
+      "twitter",
+      "merge",
+      "youtube short",
+      "gmail",
+      "telegram",
+      "social media system prompt",
+      "get social post image",
+      "x post",
+      "facebookGraphApi",
+      "sticky note30",
+      "executeWorkflowTrigger",
+      "when executed by another workflow",
+      "sticky note37",
+      "compose prompt & schema",
+      "facebook",
+      "instagram image",
+      "sticky note29",
+      "respond with google drive id",
+      "sticky note33",
+      "x-twiter",
+      "sticky note35",
+      "parse schema",
+      "extractFromFile",
+      "facebook post",
+      "save social post to google drive",
+      "sticky note28",
+      "extract as json",
+      "x response",
+      "implement threads here",
+      "@n8n/n8n nodes langchain.agent",
+      "get social post from google drive",
+      "sticky note14",
+      "linkedin response",
+      "sticky note5",
+      "google drive image meta",
+      "sticky note18",
+      "sticky note27",
+      "sticky note26",
+      "linkedin post",
+      "sticky note23",
+      "social media schema",
+      "sticky note12",
+      "sticky note38",
+      "short",
+      "serpapi",
+      "gpt-4o",
+      "switch",
+      "when chat message received",
+      "sticky note3",
+      "ai-ml",
+      "🤖social media router agent",
+      "sticky note43",
+      "prepare social media email contents",
+      "social media content creator",
+      "code",
+      "sticky note15",
+      "sticky note9",
+      "sticky note17",
+      "sticky note4",
+      "set",
+      "window buffer memory",
+      "sticky note32",
+      "sticky note13",
+      "sticky note21",
+      "sticky note24",
+      "instagram response",
+      "instragram post",
+      "sticky note34",
+      "sticky note",
+      "social post json",
+      "save image to imgbb.com",
+      "complex",
+      "sticky note20",
+      "sticky note2",
+      "sticky note22",
+      "sticky note1",
+      "gpt-4o-mini",
+      "@n8n/n8n nodes langchain.chatTrigger",
+      "sticky note45",
+      "merge prompts and schema",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "gpt-40-mini1",
+      "sticky note41",
+      "sticky note16",
+      "sticky note11",
+      "system prompt",
+      "sticky note44",
+      "telegram error message (optional)",
+      "gpt-40-mini",
+      "facebook response",
+      "sticky note6",
+      "prepare email contents",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "googleDocs",
+      "sticky note10",
+      "sticky note25",
+      "sticky note36",
+      "pollinations.ai1",
+      "linkedIn",
+      "instagram",
+      "sticky note19",
+      "is approved?",
+      "schema",
+      "sticky note8",
+      "save image to google drive",
+      "noOp",
+      "@n8n/n8n nodes langchain.toolSerpApi"
+    ],
+    "description": "'✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition' es un workflow diseñado para social media management con 100 nodos con 2 disparadores que ejecuta: Sticky Note20, Sticky Note21, Sticky Note22 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: ✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition. Nodos: When chat message received (@n8n/n8n-nodes-langchain.chatTrigger), Sticky Note20 (stickyNote), Sticky Note21 (stickyNote), Sticky Note22 (stickyNote), Sticky Note32 (stickyNote), Sticky Note33 (stickyNote), X-Twiter (@n8n/n8n-nodes-langchain.toolWorkflow), Sticky Note34 (stickyNote), Instagram (@n8n/n8n-nodes-langchain.toolWorkflow), Window Buffer Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), When Executed by Another Workflow (executeWorkflowTrigger), Sticky Note35 (stickyNote), Sticky Note36 (stickyNote), Facebook (@n8n/n8n-nodes-langchain.toolWorkflow), LinkedIn (@n8n/n8n-nodes-langchain.toolWorkflow), Sticky Note37 (stickyNote), Sticky Note38 (stickyNote), Short (@n8n/n8n-nodes-langchain.toolWorkflow), YouTube Short (@n8n/n8n-nodes-langchain.toolWorkflow), Sticky Note18 (stickyNote), Sticky Note25 (stickyNote), pollinations.ai1 (httpRequest), Sticky Note26 (stickyNote), Save Image to imgbb.com (httpRequest), Sticky Note41 (stickyNote), Sticky Note42 (stickyNote), Gmail (gmail), Social Media Schema (googleDocs), Social Media System Prompt (googleDocs), Sticky Note (stickyNote), gpt-40-mini (@n8n/n8n-nodes-langchain.lmChatOpenAi), Instagram Image (httpRequest), X Post (twitter), Instragram Post (facebookGraphApi), Facebook Post (facebookGraphApi), LinkedIn Post (linkedIn), Gmail User for Approval (gmail), Get Social Post Image (httpRequest), gpt-40-mini1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), gpt-4o-mini (@n8n/n8n-nodes-langchain.lmChatOpenAi), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Schema (set), System Prompt (set), Parse Schema (code), Parse System Prompt (code), Compose Prompt & Schema (set), Social Media Content Creator (@n8n/n8n-nodes-langchain.agent), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Merge Prompts and Schema (merge), Sticky Note7 (stickyNote), Social Content (set), Save Image to Google Drive (googleDrive), Merge (merge), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Save Social Post to Google Drive (googleDrive), Google Drive Image Meta (set), Social Post JSON (set), Respond with Google Drive Id (set), Telegram Success Message (Optional) (telegram), Telegram Error Message (Optional) (telegram), Social Media Publishing Router (switch), Prepare Email Contents (@n8n/n8n-nodes-langchain.agent), Is Approved? (if), File Id (set), Get Social Post from Google Drive (googleDrive), Extract as JSON (extractFromFile), Merge Image and Post Contents (merge), Sticky Note10 (stickyNote), Implement Threads Here (noOp), Implement YouTube Shorts Here (noOp), X Response (set), Instagram Response (set), Facebook Response (set), LinkedIn Response (set), Sticky Note11 (stickyNote), Sticky Note12 (stickyNote), Sticky Note13 (stickyNote), 🤖Social Media Router Agent (@n8n/n8n-nodes-langchain.agent), Sticky Note14 (stickyNote), SerpAPI (@n8n/n8n-nodes-langchain.toolSerpApi), Sticky Note15 (stickyNote), Sticky Note16 (stickyNote), Sticky Note17 (stickyNote), Sticky Note19 (stickyNote), Sticky Note23 (stickyNote), Sticky Note24 (stickyNote), Sticky Note27 (stickyNote), Sticky Note28 (stickyNote), Sticky Note29 (stickyNote), Sticky Note30 (stickyNote), Prepare Social Media Email Contents (@n8n/n8n-nodes-langchain.agent), Sticky Note43 (stickyNote), Sticky Note44 (stickyNote), Sticky Note45 (stickyNote), gpt-4o (@n8n/n8n-nodes-langchain.lmChatOpenAi). Propósito: social media management. Categoría: ai-ml. Disparadores: When chat message received, When Executed by Another Workflow",
+    "business_context": "Email Marketing, Social Media"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Sticky Note20",
+      "When Executed by Another Workflow",
+      "When chat message received",
+      "Sticky Note22",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "Sticky Note21"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chattrigger",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "@n8n/n8n-nodes-langchain.toolserpapi",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.toolworkflow",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.linkedin",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.twitter",
+      "n8n-nodes-base.extractfromfile",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.facebookgraphapi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.googledocs"
+    ],
+    "search_terms": [
+      "workflow-26-automated-social-media-content-publishing-factory-system-prompt-composition",
+      "automated",
+      "publishing",
+      "composition",
+      "factory",
+      "social",
+      "system",
+      "prompt",
+      "workflow",
+      "media",
+      "content"
+    ],
+    "alternative_names": [
+      "✨🩷Automated Social Media Content Publishing Factory + System Prompt Composition"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "social media management"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 88.88888888888889,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 87.77777777777777
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 0.9999999403953552,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.731253"
+  },
+  "semantic_vector": [
+    -0.04767642170190811,
+    0.03496928513050079,
+    0.04941434785723686,
+    -0.05115308240056038,
+    0.04057508707046509,
+    -0.03478033468127251,
+    0.05125197768211365,
+    -0.04478375241160393,
+    -0.051228415220975876,
+    0.05130624398589134,
+    -0.05109838396310806,
+    0.04897558316588402,
+    -0.029203644022345543,
+    -0.051313430070877075,
+    -0.051217202097177505,
+    0.05131888389587402,
+    0.051217418164014816,
+    0.03295234218239784,
+    -0.02887294441461563,
+    0.03654829412698746,
+    0.038817886263132095,
+    0.03553200513124466,
+    0.051094673573970795,
+    -0.05063975229859352,
+    0.04462353512644768,
+    0.05125610530376434,
+    -0.05131402239203453,
+    0.031843382865190506,
+    -0.036033593118190765,
+    0.048159029334783554,
+    0.05079564079642296,
+    0.007327963598072529,
+    0.0423889122903347,
+    -0.019076095893979073,
+    0.05086427927017212,
+    -0.04917677119374275,
+    0.018635278567671776,
+    0.049801550805568695,
+    -0.046939555555582047,
+    -0.05006086826324463,
+    -0.010656818747520447,
+    0.048459216952323914,
+    -0.003895367728546262,
+    -0.029695115983486176,
+    0.05131884664297104,
+    0.049484532326459885,
+    0.05095177888870239,
+    0.04660281166434288,
+    -0.051268070936203,
+    -0.05053365230560303,
+    -0.04972250014543533,
+    -0.046526893973350525,
+    -0.05131888389587402,
+    -0.05128367617726326,
+    -0.05131882429122925,
+    -0.05121251568198204,
+    0.05108470469713211,
+    -0.04694994166493416,
+    -0.026536347344517708,
+    0.040554992854595184,
+    0.0070691355504095554,
+    -0.008573587983846664,
+    -0.040972091257572174,
+    0.051286228001117706,
+    0.02819422073662281,
+    -0.0032060635276138783,
+    0.051010746508836746,
+    0.018917512148618698,
+    0.051314227283000946,
+    0.00947871059179306,
+    -0.05131888389587402,
+    0.0024193900171667337,
+    -0.04929066821932793,
+    0.01240160409361124,
+    -0.03877386823296547,
+    0.02718592993915081,
+    0.02277488261461258,
+    -0.05120188742876053,
+    0.03874056786298752,
+    0.04655461385846138,
+    0.05060494691133499,
+    0.04797544702887535,
+    0.017299922183156013,
+    -0.05130558833479881,
+    0.04032004624605179,
+    0.04653000459074974,
+    0.05096863582730293,
+    -0.049181029200553894,
+    0.0206794124096632,
+    -0.04976333677768707,
+    -0.04995773360133171,
+    -0.010809328407049179,
+    0.05072155222296715,
+    -0.03054577112197876,
+    0.050145916640758514,
+    0.05114263668656349,
+    -0.02546454593539238,
+    0.05048011988401413,
+    -0.05130573734641075,
+    -0.05131888389587402,
+    -0.029349790886044502,
+    -0.050885945558547974,
+    -0.04804304614663124,
+    0.047044914215803146,
+    0.051313549280166626,
+    0.05082826688885689,
+    0.05131888389587402,
+    0.025947576388716698,
+    0.0453307144343853,
+    -0.05131888389587402,
+    -0.04570171236991882,
+    -0.05057026445865631,
+    -0.023570016026496887,
+    -0.03332017734646797,
+    0.01881612464785576,
+    0.04872703179717064,
+    -0.0496768094599247,
+    -0.046200819313526154,
+    0.05072609707713127,
+    0.02737734280526638,
+    0.04633515328168869,
+    0.04869429022073746,
+    0.043627407401800156,
+    0.05122325196862221,
+    0.0513172522187233,
+    -0.0073787374421954155,
+    -0.039380162954330444,
+    -0.05131690949201584,
+    0.038500044494867325,
+    -0.05129372701048851,
+    -0.024356303736567497,
+    0.02562836930155754,
+    0.051239851862192154,
+    0.04854895547032356,
+    0.02843417413532734,
+    0.024890528991818428,
+    0.04867897555232048,
+    0.05130574107170105,
+    -0.04948882386088371,
+    -0.051281072199344635,
+    -0.04991982504725456,
+    0.05131888389587402,
+    0.01464725099503994,
+    -0.04856177419424057,
+    -0.04324571043252945,
+    -0.05131768062710762,
+    0.05131786689162254,
+    -0.024671131744980812,
+    0.05031456798315048,
+    0.05072208121418953,
+    -0.051154036074876785,
+    -0.05131577327847481,
+    0.029165223240852356,
+    0.03904475271701813,
+    0.05131363496184349,
+    0.05131622031331062,
+    -0.03540444001555443,
+    -0.05130121111869812,
+    -0.04821031913161278,
+    -0.051216669380664825,
+    -0.05131872370839119,
+    -0.05123883858323097,
+    0.033238109201192856,
+    -0.04509960860013962,
+    0.047997888177633286,
+    -0.03752534091472626,
+    -0.0513155460357666,
+    -0.04154600203037262,
+    -0.05131051316857338,
+    -0.03497633337974548,
+    0.051311880350112915,
+    -0.04880661517381668,
+    0.0029436172917485237,
+    0.04630141332745552,
+    -0.051308415830135345,
+    0.051311980932950974,
+    -0.022326059639453888,
+    -0.0413333997130394,
+    0.04499382898211479,
+    -0.04426373913884163,
+    -0.05108668655157089,
+    0.05018645524978638,
+    -0.0513187050819397,
+    -0.017564157024025917,
+    0.05129238963127136,
+    0.0477835051715374,
+    -0.051318760961294174,
+    0.05130184441804886,
+    0.04840536788105965,
+    0.02163398638367653,
+    -0.05129916965961456,
+    0.05092470720410347,
+    -0.04948616772890091,
+    -0.05131793022155762,
+    -0.051318805664777756,
+    -0.051318682730197906,
+    0.020628711208701134,
+    0.05131888389587402,
+    0.028553713113069534,
+    -0.03964383527636528,
+    0.04964146763086319,
+    0.05116449296474457,
+    -0.005288437474519014,
+    0.029757075011730194,
+    0.002323706401512027,
+    -0.017213929444551468,
+    0.04245305806398392,
+    0.03521730378270149,
+    -0.05128910765051842,
+    -0.051239531487226486,
+    0.04311972111463547,
+    0.022861149162054062,
+    0.05106169357895851,
+    -0.02045227214694023,
+    -0.051318857818841934,
+    -0.04494265839457512,
+    -0.013342314399778843,
+    0.04889458045363426,
+    -0.024799473583698273,
+    0.04631424695253372,
+    -0.00956538412719965,
+    0.05043875798583031,
+    0.051314350217580795,
+    0.021687524393200874,
+    -0.050563614815473557,
+    -0.05130765959620476,
+    -0.05123022198677063,
+    -0.050900790840387344,
+    -0.049793094396591187,
+    -0.05130987614393234,
+    -0.029639000073075294,
+    -0.03722946718335152,
+    -0.03834640607237816,
+    -0.051318831741809845,
+    -0.04881465435028076,
+    0.046412453055381775,
+    0.05131872370839119,
+    0.05131647735834122,
+    -0.051276057958602905,
+    0.04720747843384743,
+    -0.02105884812772274,
+    0.051313549280166626,
+    -0.024558091536164284,
+    0.043084900826215744,
+    0.047303177416324615,
+    0.051238153129816055,
+    0.051106005907058716,
+    -0.00942169688642025,
+    0.047194790095090866,
+    0.05131816118955612,
+    -0.05131888389587402,
+    0.0484342984855175,
+    -0.05131853371858597,
+    0.0407535620033741,
+    0.05089377984404564,
+    -0.05129671096801758,
+    0.030470428988337517,
+    0.05131888389587402,
+    -0.05114597827196121,
+    -0.004688322078436613,
+    -0.050503503531217575,
+    0.04423925280570984,
+    -0.04451453685760498,
+    0.05126211419701576,
+    -0.050805892795324326,
+    -0.003018132410943508,
+    -0.03602173551917076,
+    0.04882416874170303,
+    -0.05131848156452179,
+    0.05125289782881737,
+    -0.05131317675113678,
+    0.050696488469839096,
+    -0.05129798501729965,
+    -0.012723674066364765,
+    0.0513172410428524,
+    -0.040557943284511566,
+    -0.05055893212556839,
+    0.043788790702819824,
+    0.05131888389587402,
+    0.04417789727449417,
+    -0.005944397766143084,
+    -0.041990719735622406,
+    0.05131882429122925,
+    -0.04366099089384079,
+    -0.0472499281167984,
+    -0.05113622173666954,
+    -0.04592905566096306,
+    0.05116208270192146,
+    -0.051204025745391846,
+    0.05131807178258896,
+    -0.05114412307739258,
+    0.047581396996974945,
+    0.05131888389587402,
+    -0.04962349310517311,
+    0.02177339978516102,
+    -0.04583726450800896,
+    0.051127538084983826,
+    0.04241592437028885,
+    0.031354524195194244,
+    0.05121589079499245,
+    -0.00974963791668415,
+    -0.020854320377111435,
+    0.047112103551626205,
+    -0.051287196576595306,
+    0.051234159618616104,
+    -0.049661070108413696,
+    0.05103457719087601,
+    0.04978474602103233,
+    -0.037214312702417374,
+    0.040974829345941544,
+    0.050813108682632446,
+    0.05123351514339447,
+    0.0401233434677124,
+    0.0499078705906868,
+    0.04550701379776001,
+    -0.050281815230846405,
+    0.044436015188694,
+    -0.05026865005493164,
+    -0.03407613933086395,
+    0.03432580456137657,
+    0.050885625183582306,
+    -0.05122949182987213,
+    0.05128588154911995,
+    -0.005370026454329491,
+    -0.0044797686859965324,
+    0.03927270695567131,
+    0.0480232872068882,
+    -0.03486422449350357,
+    0.0511653758585453,
+    -0.04893945902585983,
+    0.04552952200174332,
+    -0.051124729216098785,
+    -0.0017850699368864298,
+    0.05131845921278,
+    0.028868578374385834,
+    -0.0485803447663784,
+    0.05131850019097328,
+    0.03792670741677284,
+    0.049304187297821045,
+    -0.050773121416568756,
+    0.05072854086756706,
+    -0.04783163219690323,
+    0.017617259174585342,
+    -0.05096590146422386,
+    -0.05131871625781059,
+    -0.045841630548238754,
+    -0.04946513473987579,
+    -0.051112644374370575,
+    -0.03948325291275978,
+    -0.03572944179177284,
+    0.05120383948087692,
+    0.042280882596969604,
+    -0.051269903779029846,
+    0.04199202358722687,
+    0.05128839239478111,
+    -0.050924282521009445,
+    -0.05131888389587402,
+    0.05129827558994293,
+    -0.05100705474615097,
+    0.05116061493754387,
+    0.05036092922091484,
+    -0.05124492570757866,
+    -0.05131809040904045,
+    0.04781901091337204,
+    -0.051318805664777756,
+    0.05129024758934975,
+    0.036890868097543716,
+    -0.05131036043167114,
+    -0.022643914446234703,
+    -0.044453803449869156,
+    -0.009528817608952522,
+    -0.044356029480695724,
+    -0.051293354481458664,
+    0.05131886154413223,
+    0.0512765571475029,
+    0.05119249224662781,
+    -0.04319213703274727,
+    -0.051025863736867905,
+    0.05097291246056557,
+    0.05116192623972893,
+    0.034318964928388596,
+    0.050387829542160034,
+    -0.015719367191195488,
+    0.04888317734003067,
+    0.04580087214708328,
+    -0.05110204964876175,
+    0.04992222040891647,
+    0.05090014263987541,
+    0.026592079550027847,
+    -0.05131734162569046,
+    0.030098669230937958,
+    -0.051306530833244324,
+    0.05131888389587402,
+    0.05118710920214653,
+    -0.04504931718111038,
+    0.04626293480396271,
+    -0.037085819989442825,
+    0.05131787806749344,
+    0.02845044434070587,
+    0.015167901292443275,
+    0.04065236821770668,
+    0.05131879448890686,
+    -0.05126054212450981,
+    0.0508638359606266,
+    -0.03505018353462219,
+    -0.02844923548400402,
+    -0.051318686455488205,
+    0.037682101130485535,
+    0.05080389603972435,
+    0.009572092443704605,
+    0.04298405349254608,
+    0.05129264295101166,
+    0.04168113321065903,
+    -0.002316386206075549,
+    -0.022858116775751114,
+    -0.04607585445046425,
+    0.03307374566793442,
+    -0.05131565406918526,
+    0.01930895633995533,
+    0.0411805622279644,
+    -0.05130855366587639,
+    -0.0105092478916049,
+    -0.05131080001592636,
+    -0.009096626192331314,
+    -0.023397604003548622,
+    0.05130723863840103,
+    -0.05124767869710922,
+    0.04651502147316933,
+    -0.05038357153534889,
+    0.051015228033065796,
+    -0.04528675228357315,
+    -0.02509249746799469,
+    -0.04405219107866287,
+    0.03473037853837013,
+    -0.051034651696681976,
+    -0.05117232725024223,
+    -0.050646599382162094,
+    -0.05131828784942627,
+    -0.05131839960813522,
+    0.05117137357592583,
+    0.04449895769357681,
+    -0.02127225510776043,
+    -0.0469043143093586,
+    -0.03882043808698654,
+    0.04252735525369644,
+    -0.05129564180970192,
+    -0.051229722797870636,
+    0.04166491702198982,
+    -0.05076996237039566,
+    -0.051295604556798935,
+    -0.04731379449367523,
+    -0.04522665962576866,
+    0.051315661519765854,
+    0.04670662432909012,
+    0.020302744582295418,
+    -0.05131888389587402,
+    0.004702929873019457,
+    0.05131877213716507,
+    0.049367208033800125,
+    -0.05125194042921066,
+    -0.026685282588005066,
+    0.05130888149142265,
+    0.050993070006370544,
+    0.03290973976254463,
+    0.04834624379873276,
+    -0.04464738443493843,
+    0.0512983538210392,
+    -0.04098793864250183,
+    -0.05127638205885887,
+    0.05131888389587402,
+    0.0008947986061684787,
+    -0.04749142751097679,
+    -0.03896922245621681,
+    -0.03363799676299095,
+    -0.05130278691649437,
+    -0.05115813389420509,
+    0.05131879076361656,
+    0.050406184047460556,
+    0.04731570556759834,
+    -0.050352565944194794,
+    -0.051044125109910965,
+    0.051302969455718994,
+    0.02922808565199375,
+    -0.05131757631897926,
+    0.040544573217630386,
+    -0.005867141764611006,
+    0.003977532964199781,
+    0.04998264089226723,
+    -0.034948136657476425,
+    0.031105566769838333,
+    -0.051294948905706406,
+    0.050122182816267014,
+    -0.03551311418414116,
+    0.03581788390874863,
+    -0.05115346610546112,
+    0.051318805664777756,
+    0.05121750012040138,
+    0.051046185195446014,
+    -0.05131184309720993,
+    0.051066599786281586,
+    0.0488675981760025,
+    0.04288354516029358,
+    0.05131135508418083,
+    -0.05131888389587402,
+    -0.024914471432566643,
+    0.0480152852833271,
+    -0.04422975331544876,
+    -0.0505957305431366,
+    -0.04735242947936058,
+    0.051318857818841934,
+    -0.05101851001381874,
+    -0.05005992203950882
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs social media management; When working with: When chat message received, When Executed by Another Workflow; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for social media management in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Redes Sociales",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Redes Sociales"
+  }
+}

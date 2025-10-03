@@ -1,0 +1,1003 @@
+{
+  "workflow_info": {
+    "id": "2DzQ1FH11S3Gp6wn",
+    "name": "YogiAI",
+    "display_name": "YogiAI",
+    "file_name": "0740_Splitout_Code_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\0740_Splitout_Code_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "a104c0eb9b61"
+  },
+  "structure": {
+    "total_nodes": 31,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.scheduleTrigger",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.googleSheetsTool",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.googleSheetsTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 6
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Trigger 2130 YogaPosesToday",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -200,
+          -20
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Azure OpenAI Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "position": [
+          1040,
+          0
+        ]
+      },
+      {
+        "name": "YogaLog",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2240,
+          -100
+        ]
+      },
+      {
+        "name": "Azure OpenAI Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "position": [
+          2360,
+          120
+        ]
+      },
+      {
+        "name": "Auto-fixing Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          2520,
+          80
+        ]
+      },
+      {
+        "name": "Azure OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "position": [
+          2540,
+          120
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          2640,
+          220
+        ]
+      },
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2400,
+          -60
+        ]
+      },
+      {
+        "name": "PosesDatabase1",
+        "type": "n8n-nodes-base.googleSheetsTool",
+        "position": [
+          2480,
+          220
+        ]
+      },
+      {
+        "name": "YogaLog2",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2980,
+          20
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2740,
+          -120
+        ]
+      },
+      {
+        "name": "Azure OpenAI Chat Model5",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "position": [
+          1340,
+          180
+        ]
+      },
+      {
+        "name": "Get PoseName",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          40,
+          -20
+        ]
+      },
+      {
+        "name": "WritePosesToday",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1120,
+          -160
+        ]
+      },
+      {
+        "name": "RewritePosesToday",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1180,
+          60
+        ]
+      },
+      {
+        "name": "Azure OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "position": [
+          480,
+          100
+        ]
+      },
+      {
+        "name": "WriteJSONflex",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          580,
+          -80
+        ]
+      },
+      {
+        "name": "Structured Output Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          780,
+          220
+        ]
+      },
+      {
+        "name": "Auto-fixing Output Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          680,
+          80
+        ]
+      },
+      {
+        "name": "Azure OpenAI Chat Model6",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "position": [
+          640,
+          200
+        ]
+      },
+      {
+        "name": "Azure OpenAI Chat Model4",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi",
+        "position": [
+          1780,
+          200
+        ]
+      },
+      {
+        "name": "Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          240,
+          -20
+        ]
+      },
+      {
+        "name": "Line Push with Flex Bubble",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1980,
+          -80
+        ]
+      },
+      {
+        "name": "CombineAll",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1640,
+          -100
+        ]
+      },
+      {
+        "name": "Fix JSON",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1720,
+          120
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -300,
+          -380
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          0,
+          -320
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          440,
+          -320
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1000,
+          -320
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1600,
+          -320
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2200,
+          -320
+        ]
+      }
+    ],
+    "connections_count": 25,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 30
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "Scheduled automation"
+    ],
+    "complexity_score": 1100,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "azure openai chat model1",
+      "azure openai chat model5",
+      "line push with flex bubble",
+      "sticky note5",
+      "posesdatabase1",
+      "structured output parser1",
+      "yogalog2",
+      "sticky note3",
+      "structured output parser",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "@n8n/n8n nodes langchain.lmChatAzureOpenAi",
+      "@n8n/n8n nodes langchain.outputParserAutofixing",
+      "stickyNote",
+      "rewriteposestoday",
+      "googleSheetsTool",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "azure openai chat model2",
+      "scheduleTrigger",
+      "auto-fixing output parser1",
+      "webhook integration",
+      "httpRequest",
+      "fix json",
+      "azure openai chat model",
+      "code",
+      "trigger 2130 yogaposestoday",
+      "sticky note4",
+      "set",
+      "azure openai chat model3",
+      "writejsonflex",
+      "yogalog",
+      "split out",
+      "get posename",
+      "azure openai chat model6",
+      "ai agent",
+      "azure openai chat model4",
+      "sticky note",
+      "auto-fixing output parser",
+      "@n8n/n8n nodes langchain.agent",
+      "combineall",
+      "googleSheets",
+      "writeposestoday",
+      "complex",
+      "sticky note1",
+      "sticky note2",
+      "splitOut"
+    ],
+    "description": "'YogiAI' es un workflow diseñado para webhook integration con 31 nodos activado por Trigger 2130 YogaPosesToday que ejecuta: Azure OpenAI Chat Model2, YogaLog, Azure OpenAI Chat Model3 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: YogiAI. Nodos: Azure OpenAI Chat Model2 (@n8n/n8n-nodes-langchain.lmChatAzureOpenAi), YogaLog (googleSheets), Azure OpenAI Chat Model3 (@n8n/n8n-nodes-langchain.lmChatAzureOpenAi), Auto-fixing Output Parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), Azure OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatAzureOpenAi), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), AI Agent (@n8n/n8n-nodes-langchain.agent), PosesDatabase1 (googleSheetsTool), YogaLog2 (googleSheets), Split Out (splitOut), Trigger 2130 YogaPosesToday (scheduleTrigger), Azure OpenAI Chat Model5 (@n8n/n8n-nodes-langchain.lmChatAzureOpenAi), Get PoseName (googleSheets), WritePosesToday (@n8n/n8n-nodes-langchain.chainLlm), RewritePosesToday (@n8n/n8n-nodes-langchain.chainLlm), Azure OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatAzureOpenAi), WriteJSONflex (@n8n/n8n-nodes-langchain.chainLlm), Structured Output Parser1 (@n8n/n8n-nodes-langchain.outputParserStructured), Auto-fixing Output Parser1 (@n8n/n8n-nodes-langchain.outputParserAutofixing), Azure OpenAI Chat Model6 (@n8n/n8n-nodes-langchain.lmChatAzureOpenAi), Azure OpenAI Chat Model4 (@n8n/n8n-nodes-langchain.lmChatAzureOpenAi), Code (code), Line Push with Flex Bubble (httpRequest), CombineAll (set), Fix JSON (@n8n/n8n-nodes-langchain.chainLlm), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Trigger 2130 YogaPosesToday",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Azure OpenAI Chat Model2",
+      "n8n-nodes-base.googleSheets",
+      "Trigger 2130 YogaPosesToday",
+      "YogaLog",
+      "n8n-nodes-base.scheduleTrigger",
+      "Azure OpenAI Chat Model3",
+      "@n8n/n8n-nodes-langchain.lmChatAzureOpenAi"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.httprequest",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.outputparserautofixing",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.googlesheetstool",
+      "@n8n/n8n-nodes-langchain.lmchatazureopenai",
+      "n8n-nodes-base.googlesheets",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "code",
+      "webhook",
+      "0740_splitout_code_automation_webhook",
+      "0740",
+      "automation",
+      "splitout"
+    ],
+    "alternative_names": [
+      "YogiAI"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 56.36363636363636,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 81.27272727272728
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:17.622109"
+  },
+  "semantic_vector": [
+    -0.05715526267886162,
+    -0.054541803896427155,
+    0.0034870507661253214,
+    -0.028681769967079163,
+    -0.05666733905673027,
+    -0.05094240605831146,
+    -0.05570273473858833,
+    -0.036585211753845215,
+    -0.039766281843185425,
+    0.0580424964427948,
+    0.03679514676332474,
+    -0.010825498960912228,
+    0.010771906934678555,
+    -0.027093153446912766,
+    -0.046136513352394104,
+    0.059730514883995056,
+    0.059246573597192764,
+    0.03390971198678017,
+    0.010061727836728096,
+    0.02061324566602707,
+    0.04578360915184021,
+    0.019230151548981667,
+    -0.021503427997231483,
+    -0.029411867260932922,
+    0.027890777215361595,
+    0.015743212774395943,
+    -0.055344417691230774,
+    0.03823387250304222,
+    -0.05246666818857193,
+    0.03535086661577225,
+    0.04481556639075279,
+    -0.027748702093958855,
+    -0.048018038272857666,
+    0.04502337798476219,
+    0.055547624826431274,
+    0.029360203072428703,
+    0.057151250541210175,
+    0.0455431304872036,
+    -0.007357562426477671,
+    -0.057053934782743454,
+    0.008318671025335789,
+    0.050522614270448685,
+    -0.0587896853685379,
+    0.052305541932582855,
+    0.05972086638212204,
+    0.05609407275915146,
+    0.030528848990797997,
+    0.05259019508957863,
+    0.007933847606182098,
+    0.056587811559438705,
+    -0.0518748015165329,
+    -0.05571109801530838,
+    -0.059721123427152634,
+    -0.05617338791489601,
+    -0.04780396819114685,
+    -0.058904729783535004,
+    0.054195329546928406,
+    0.0571083202958107,
+    -0.023317841812968254,
+    0.03085639327764511,
+    -0.043915487825870514,
+    -0.018950501456856728,
+    0.021566519513726234,
+    0.059575095772743225,
+    0.02904593013226986,
+    -0.05595443770289421,
+    0.050131846219301224,
+    0.012546067126095295,
+    0.04205918684601784,
+    -0.026900000870227814,
+    -0.05972269922494888,
+    0.03609559312462807,
+    0.013167761266231537,
+    0.05848690867424011,
+    0.03940270468592644,
+    0.040538325905799866,
+    0.05638693645596504,
+    -0.05153638496994972,
+    0.026947850361466408,
+    -0.019606105983257294,
+    -0.02610696107149124,
+    0.04817621782422066,
+    -0.0026090063620358706,
+    -0.056202977895736694,
+    0.040475405752658844,
+    -0.020450063049793243,
+    0.03360320255160332,
+    -0.04621078819036484,
+    0.03900212049484253,
+    -0.00507010193541646,
+    -0.04872237890958786,
+    0.05183546990156174,
+    0.0569470152258873,
+    0.01882603019475937,
+    0.018405022099614143,
+    0.027889518067240715,
+    0.045060496777296066,
+    0.05665794387459755,
+    -0.05913430452346802,
+    -0.058808717876672745,
+    0.059627071022987366,
+    0.0029862853698432446,
+    -0.05168420821428299,
+    0.01297198235988617,
+    -0.053861118853092194,
+    0.05967045947909355,
+    0.05972221866250038,
+    0.00020296982256695628,
+    0.0405094213783741,
+    -0.05955282226204872,
+    -0.05816053971648216,
+    -0.05838724598288536,
+    -0.03748525306582451,
+    -0.057353463023900986,
+    0.051998451352119446,
+    -0.04178021475672722,
+    0.011278647929430008,
+    -0.047170329838991165,
+    -0.029372135177254677,
+    0.04816765338182449,
+    -0.011408901773393154,
+    0.04879168048501015,
+    0.021881666034460068,
+    -0.04047312214970589,
+    0.04410092905163765,
+    0.01815803349018097,
+    -0.006372629199177027,
+    -0.021819187328219414,
+    0.05605896934866905,
+    0.05747484788298607,
+    0.02687758579850197,
+    -0.05231285095214844,
+    0.05694200098514557,
+    -0.05373349413275719,
+    -0.009810661897063255,
+    -0.05570000037550926,
+    0.02399611845612526,
+    -0.05657654255628586,
+    -0.0395997054874897,
+    -0.05971158668398857,
+    -0.04520050436258316,
+    0.05972936749458313,
+    -0.04596969857811928,
+    0.024793220683932304,
+    -0.008632426150143147,
+    -0.059727344661951065,
+    0.05453641712665558,
+    -0.04477853327989578,
+    0.017462221905589104,
+    0.015405617654323578,
+    -0.016489936038851738,
+    -0.05819637328386307,
+    0.044306084513664246,
+    0.021951403468847275,
+    0.05426928400993347,
+    0.05956048518419266,
+    -0.05231470987200737,
+    -0.05843299999833107,
+    -0.039607007056474686,
+    -0.04048566892743111,
+    -0.047833848744630814,
+    -0.04840117320418358,
+    0.04537532478570938,
+    -0.017198169603943825,
+    -0.030743548646569252,
+    -0.059653107076883316,
+    -0.030406050384044647,
+    0.0026083595585078,
+    -0.037588752806186676,
+    0.049270547926425934,
+    0.05730399489402771,
+    -0.006077538710087538,
+    -0.05871543660759926,
+    0.006326946429908276,
+    -0.013408521190285683,
+    -0.026765810325741768,
+    0.0448022335767746,
+    -0.05960477516055107,
+    0.005322365090250969,
+    -0.033002227544784546,
+    -0.055847179144620895,
+    0.01867544837296009,
+    -0.05824296921491623,
+    -0.04351511597633362,
+    0.059438906610012054,
+    0.05676142871379852,
+    -0.05930411070585251,
+    0.04822883382439613,
+    0.03371012210845947,
+    0.010818415321409702,
+    0.006467123981565237,
+    -0.05176636204123497,
+    -0.00740098999813199,
+    -0.057434506714344025,
+    -0.038484882563352585,
+    -0.05927138403058052,
+    -0.0066382186487317085,
+    0.059730514883995056,
+    0.05813638120889664,
+    0.0043068272061645985,
+    0.0588923916220665,
+    0.05632752925157547,
+    -0.009035333059728146,
+    0.057321082800626755,
+    -0.03630755841732025,
+    -0.032864414155483246,
+    0.044374313205480576,
+    0.05436455458402634,
+    -0.05836077779531479,
+    -0.017085665836930275,
+    0.05249470844864845,
+    0.05814160779118538,
+    0.01576041243970394,
+    0.0005869702436029911,
+    -0.05973026528954506,
+    -0.058565881103277206,
+    0.016678618267178535,
+    0.05290408432483673,
+    -0.01630137301981449,
+    0.015753600746393204,
+    -0.0226940605789423,
+    0.05201782286167145,
+    -0.007626884616911411,
+    0.014461297541856766,
+    -0.05349283292889595,
+    -0.056710030883550644,
+    -0.01605670340359211,
+    -0.05958464369177818,
+    -0.028106072917580605,
+    -0.05620637536048889,
+    -0.05571454390883446,
+    -0.05932697653770447,
+    -0.05366574227809906,
+    -0.05971183627843857,
+    0.006642926950007677,
+    0.059455741196870804,
+    0.05847034603357315,
+    0.056252289563417435,
+    -0.056630946695804596,
+    0.04444829374551773,
+    -0.03132488951086998,
+    0.05971303954720497,
+    -0.009639117866754532,
+    0.0590902678668499,
+    -0.003711313009262085,
+    0.04262343794107437,
+    0.05312323942780495,
+    -0.05615505203604698,
+    0.011517462320625782,
+    0.05783096328377724,
+    -0.05965384468436241,
+    -0.00171147589571774,
+    0.04914332181215286,
+    -0.04290683567523956,
+    0.05462932586669922,
+    -0.0256302822381258,
+    0.05308283120393753,
+    0.05973045527935028,
+    -0.04735599458217621,
+    0.054446134716272354,
+    -0.03315693885087967,
+    0.028601404279470444,
+    0.00390971265733242,
+    0.059683043509721756,
+    0.03175202012062073,
+    -0.055974725633859634,
+    0.057403985410928726,
+    0.040039632469415665,
+    -0.05859849974513054,
+    0.04570843279361725,
+    -0.05376597121357918,
+    0.053415447473526,
+    -0.05449036508798599,
+    0.039689742028713226,
+    0.04735109955072403,
+    -0.05001591518521309,
+    -0.059344373643398285,
+    0.004483252763748169,
+    0.05970674380660057,
+    -0.036657385528087616,
+    -0.053237225860357285,
+    0.04558892175555229,
+    0.05886903777718544,
+    0.023930629715323448,
+    -0.010718767531216145,
+    -0.044888708740472794,
+    0.014297674410045147,
+    0.059560876339673996,
+    -0.05046854913234711,
+    0.0597299300134182,
+    -0.0012703301617875695,
+    -0.02327881008386612,
+    0.05972646549344063,
+    -0.05113454908132553,
+    0.006668998394161463,
+    -0.05443475767970085,
+    -0.052321791648864746,
+    0.058050189167261124,
+    -0.004576940555125475,
+    -0.029522215947508812,
+    0.04144673049449921,
+    0.05561698600649834,
+    0.04304125905036926,
+    0.05762901157140732,
+    0.01353707630187273,
+    0.04495026543736458,
+    0.027838651090860367,
+    0.04800327494740486,
+    0.049468424171209335,
+    -0.05913544073700905,
+    0.047906339168548584,
+    0.05296078324317932,
+    -0.033444587141275406,
+    -0.05126163363456726,
+    0.03947361931204796,
+    -0.041413333266973495,
+    0.05771058797836304,
+    -0.02831081673502922,
+    -0.053752265870571136,
+    -0.0069039445370435715,
+    0.005750192329287529,
+    -0.04672659933567047,
+    0.05965368077158928,
+    -0.010820385999977589,
+    0.05434789881110191,
+    -0.049464572221040726,
+    0.024985821917653084,
+    -0.04091464355587959,
+    0.026218069717288017,
+    -0.0573115237057209,
+    0.036592915654182434,
+    -0.040425363928079605,
+    -0.04143235832452774,
+    0.059426531195640564,
+    0.006284791976213455,
+    0.015205047093331814,
+    0.05369142070412636,
+    0.05935521796345711,
+    -0.05714452639222145,
+    -0.011466226540505886,
+    -0.028890535235404968,
+    -0.0585995614528656,
+    0.05298453941941261,
+    -0.05168434605002403,
+    -0.059730470180511475,
+    -0.0537017323076725,
+    -0.05243605375289917,
+    -0.025311961770057678,
+    -0.040676042437553406,
+    0.020449277013540268,
+    0.05369625985622406,
+    0.05753058195114136,
+    0.0021465655881911516,
+    0.03833429515361786,
+    0.04925181716680527,
+    -0.008700678125023842,
+    -0.05972663685679436,
+    -0.010617577470839024,
+    -0.05328171327710152,
+    0.05411767587065697,
+    0.03948337584733963,
+    0.00028126544202677906,
+    -0.05970647558569908,
+    0.05324926972389221,
+    -0.0550500713288784,
+    0.05923210456967354,
+    0.05071531608700752,
+    -0.0517430305480957,
+    0.00837742630392313,
+    0.05014123022556305,
+    0.047433290630578995,
+    -0.058787763118743896,
+    -0.05870585888624191,
+    0.028412815183401108,
+    0.053912729024887085,
+    0.057882942259311676,
+    -0.019168555736541748,
+    -0.05961248651146889,
+    0.026873618364334106,
+    0.039954815059900284,
+    -0.03877647593617439,
+    0.011577801778912544,
+    0.025699621066451073,
+    -0.05335770547389984,
+    0.025218145921826363,
+    -0.05935151129961014,
+    0.05942260101437569,
+    -0.03810820356011391,
+    -0.00913186650723219,
+    0.05046848952770233,
+    0.03862451761960983,
+    -0.03856166452169418,
+    0.059708643704652786,
+    -0.010368294082581997,
+    0.03134657070040703,
+    0.058764178305864334,
+    0.0464620366692543,
+    -0.010094575583934784,
+    0.022532278671860695,
+    0.05262213200330734,
+    0.055838167667388916,
+    0.033143363893032074,
+    -0.02376670576632023,
+    0.040616609156131744,
+    -0.0358533039689064,
+    0.05699208378791809,
+    -0.059706225991249084,
+    -0.03527919575572014,
+    0.05860060080885887,
+    0.03567243739962578,
+    -0.02836383879184723,
+    0.00423530675470829,
+    0.05215552821755409,
+    0.02059624157845974,
+    -0.04577500745654106,
+    0.0328093096613884,
+    -0.012061418034136295,
+    -0.043954093009233475,
+    -0.04945659637451172,
+    0.03944678604602814,
+    -0.044647421687841415,
+    -0.05017874762415886,
+    -0.05851428210735321,
+    0.039238762110471725,
+    0.0012915919069200754,
+    0.018630733713507652,
+    -0.059699833393096924,
+    -0.0503079816699028,
+    0.054456181824207306,
+    0.03400655835866928,
+    -0.05960269272327423,
+    -0.035073284059762955,
+    -0.046517908573150635,
+    0.019505515694618225,
+    -0.057851679623126984,
+    0.04292936995625496,
+    -0.02139737270772457,
+    -0.05371999368071556,
+    -0.02966196835041046,
+    0.05895344167947769,
+    -0.03062319941818714,
+    -0.0501340888440609,
+    -0.03102346695959568,
+    -0.05948635935783386,
+    0.04662550240755081,
+    -0.05955236032605171,
+    -0.05910394713282585,
+    -0.026556888595223427,
+    -0.04733381047844887,
+    -0.05972770228981972,
+    0.04589703679084778,
+    -0.011609269306063652,
+    0.059729766100645065,
+    0.05897872895002365,
+    0.031304530799388885,
+    -0.05969879776239395,
+    0.040441520512104034,
+    0.05968055501580238,
+    0.05362212657928467,
+    -0.05852234363555908,
+    0.03258602321147919,
+    -0.0437011644244194,
+    0.05861739441752434,
+    0.04693973436951637,
+    0.052935078740119934,
+    -0.05022932589054108,
+    -0.015525986440479755,
+    0.05282225087285042,
+    -0.046746596693992615,
+    0.03156283125281334,
+    -0.03653169050812721,
+    -0.0176463071256876,
+    0.047555893659591675,
+    -0.011079730466008186,
+    -0.04380672425031662,
+    -0.007078166119754314,
+    -0.028595486655831337,
+    0.05825488641858101,
+    -0.026304161176085472,
+    0.020366258919239044,
+    -0.058853525668382645,
+    0.0562230609357357,
+    0.000386135681765154,
+    -0.05277777090668678,
+    -0.02180195413529873,
+    0.05968892201781273,
+    0.011292744427919388,
+    -0.03915928304195404,
+    -0.04481127858161926,
+    0.02793744206428528,
+    0.042501650750637054,
+    -0.041214775294065475,
+    -0.05908176675438881,
+    0.002767687663435936,
+    -0.0416492223739624,
+    0.05936407297849655,
+    -0.04203925281763077,
+    0.057994335889816284,
+    -0.05492595210671425,
+    0.04332239553332329,
+    0.05887949839234352,
+    -0.05896471440792084,
+    0.044946879148483276,
+    -0.05953310430049896,
+    -0.027637451887130737,
+    0.012482360936701298,
+    0.042279236018657684,
+    -0.043788958340883255,
+    -0.05649193003773689,
+    0.059730395674705505,
+    0.04072069749236107,
+    -0.032634057104587555
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Trigger 2130 YogaPosesToday; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

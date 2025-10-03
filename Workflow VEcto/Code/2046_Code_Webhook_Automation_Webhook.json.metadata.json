@@ -1,0 +1,1166 @@
+{
+  "workflow_info": {
+    "id": "VY4TXYGmqth57Een",
+    "name": "Docsify example",
+    "file_name": "2046_Code_Webhook_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code\\2046_Code_Webhook_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true
+  },
+  "structure": {
+    "total_nodes": 60,
+    "node_types": [
+      "n8n-nodes-base.convertToFile",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.readWriteFile",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.executeCommand",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.n8n",
+      "n8n-nodes-base.sort",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.html",
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.extractFromFile",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.outputParserStructured"
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "CONFIG",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          660,
+          60
+        ]
+      },
+      {
+        "name": "Convert to File",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          4020,
+          1600
+        ]
+      },
+      {
+        "name": "HasFile?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2400,
+          880
+        ]
+      },
+      {
+        "name": "Extract from File",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2660,
+          860
+        ]
+      },
+      {
+        "name": "Main Page",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          4660,
+          -100
+        ]
+      },
+      {
+        "name": "Instance overview",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          4660,
+          160
+        ]
+      },
+      {
+        "name": "Sort-workflows",
+        "type": "n8n-nodes-base.sort",
+        "position": [
+          2080,
+          160
+        ]
+      },
+      {
+        "name": "doc action",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1740,
+          1080
+        ]
+      },
+      {
+        "name": "Empty Set",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2000,
+          960
+        ]
+      },
+      {
+        "name": "Load Doc File",
+        "type": "n8n-nodes-base.readWriteFile",
+        "position": [
+          1900,
+          860
+        ]
+      },
+      {
+        "name": "Respond with markdown",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          4920,
+          1040
+        ]
+      },
+      {
+        "name": "Respond with HTML",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          4920,
+          860
+        ]
+      },
+      {
+        "name": "Save New Doc File",
+        "type": "n8n-nodes-base.readWriteFile",
+        "position": [
+          4180,
+          1600
+        ]
+      },
+      {
+        "name": "Blank Doc File",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4000,
+          1080
+        ]
+      },
+      {
+        "name": "Fetch Single Workflow1",
+        "type": "n8n-nodes-base.n8n",
+        "position": [
+          2820,
+          1200
+        ]
+      },
+      {
+        "name": "Fill Workflow Table",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2280,
+          160
+        ]
+      },
+      {
+        "name": "Basic LLM Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          3480,
+          1200
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3480,
+          1360
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          3820,
+          1360
+        ]
+      },
+      {
+        "name": "Auto-fixing Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          3580,
+          1360
+        ]
+      },
+      {
+        "name": "Respond with main page HTML",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          4920,
+          -100
+        ]
+      },
+      {
+        "name": "Workflow Tags",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          4660,
+          500
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1740,
+          1880
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          3140,
+          1100
+        ]
+      },
+      {
+        "name": "Fallback file name",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          4660,
+          1900
+        ]
+      },
+      {
+        "name": "mkdir",
+        "type": "n8n-nodes-base.executeCommand",
+        "position": [
+          2100,
+          1060
+        ]
+      },
+      {
+        "name": "Merge1",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2240,
+          880
+        ]
+      },
+      {
+        "name": "Edit Page",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          4660,
+          860
+        ]
+      },
+      {
+        "name": "Workflow md content",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          4660,
+          1040
+        ]
+      },
+      {
+        "name": "Is Action Edit?1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3300,
+          1100
+        ]
+      },
+      {
+        "name": "Is Action Edit?2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          4180,
+          880
+        ]
+      },
+      {
+        "name": "Generate Mermaid Chart",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3000,
+          1260
+        ]
+      },
+      {
+        "name": "Merge2",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          3840,
+          1140
+        ]
+      },
+      {
+        "name": "Generated Doc",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4000,
+          1240
+        ]
+      },
+      {
+        "name": "Passthrough",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2100,
+          1240
+        ]
+      },
+      {
+        "name": "Merge3",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          3140,
+          880
+        ]
+      },
+      {
+        "name": "Merge4",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          960,
+          -100
+        ]
+      },
+      {
+        "name": "Merge5",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          960,
+          240
+        ]
+      },
+      {
+        "name": "Edit Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2100,
+          1600
+        ]
+      },
+      {
+        "name": "Is Action Save?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          4540,
+          1600
+        ]
+      },
+      {
+        "name": "Merge6",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          4360,
+          1700
+        ]
+      },
+      {
+        "name": "Respond OK on Save",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          4920,
+          1580
+        ]
+      },
+      {
+        "name": "single workflow",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          240,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          140,
+          -242.54375384615383
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -77.62340912473337,
+          108.96056004923076
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          460,
+          -240.54580345183416
+        ]
+      },
+      {
+        "name": "file types",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1180,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4620,
+          -245.7696645512633
+        ]
+      },
+      {
+        "name": "Get All Workflows",
+        "type": "n8n-nodes-base.n8n",
+        "position": [
+          1880,
+          160
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1780,
+          20.913927466176517
+        ]
+      },
+      {
+        "name": "md files",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1440,
+          180
+        ]
+      },
+      {
+        "name": "Get Workflow tags",
+        "type": "n8n-nodes-base.n8n",
+        "position": [
+          1880,
+          500
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1780,
+          360
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1700,
+          1780
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1020,
+          729
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4460,
+          751
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4000,
+          1501
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1887,
+          758
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2786.9421822644376,
+          1023
+        ]
+      },
+      {
+        "name": "docsify",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          240,
+          -100
+        ]
+      }
+    ],
+    "connections_count": 44
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "ai and machine learning",
+    "complexity_score": 1545,
+    "quality_score": 0.5,
+    "keywords": [
+      "save new doc file",
+      "docsify",
+      "no operation, do nothing",
+      "sticky note5",
+      "webhook",
+      "generated doc",
+      "file types",
+      "merge2",
+      "single workflow",
+      "config",
+      "generate mermaid chart",
+      "convertToFile",
+      "merge1",
+      "sticky note8",
+      "merge6",
+      "empty set",
+      "executeCommand",
+      "fill workflow table",
+      "merge3",
+      "sticky note9",
+      "sticky note10",
+      "n8n",
+      "mkdir",
+      "passthrough",
+      "sticky note2",
+      "sort",
+      "html",
+      "blank doc file",
+      "is action edit?2",
+      "merge4",
+      "stickyNote",
+      "md files",
+      "code",
+      "convert to file",
+      "workflow tags",
+      "edit page",
+      "sticky note1",
+      "doc action",
+      "openai chat model",
+      "auto-fixing output parser",
+      "merge5",
+      "structured output parser",
+      "sticky note6",
+      "workflow md content",
+      "integration",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "get all workflows",
+      "sticky note7",
+      "fetch single workflow1",
+      "respond ok on save",
+      "respondToWebhook",
+      "fallback file name",
+      "extract from file",
+      "is action save?",
+      "hasfile?",
+      "respond with main page html",
+      "instance overview",
+      "sticky note4",
+      "sticky note11",
+      "get workflow tags",
+      "@n8n/n8n nodes langchain.outputParserAutofixing",
+      "edit fields",
+      "is action edit?1",
+      "main page",
+      "extractFromFile",
+      "respond with html",
+      "noOp",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "sort-workflows",
+      "sticky note3",
+      "merge",
+      "load doc file",
+      "readWriteFile",
+      "set",
+      "ai and machine learning",
+      "switch",
+      "respond with markdown",
+      "sticky note",
+      "complex",
+      "basic llm chain"
+    ],
+    "description": "'Docsify example' es un workflow diseñado para ai and machine learning con 60 nodos que ejecuta: CONFIG, Convert to File, HasFile? en la categoría de integration.",
+    "semantic_content": "Workflow: Docsify example. Nodos: CONFIG (set), Convert to File (convertToFile), HasFile? (if), Extract from File (extractFromFile), Main Page (html), Instance overview (html), Sort-workflows (sort), doc action (switch), Empty Set (set), Load Doc File (readWriteFile), Respond with markdown (respondToWebhook), Respond with HTML (respondToWebhook), Save New Doc File (readWriteFile), Blank Doc File (set), Fetch Single Workflow1 (n8n), Fill Workflow Table (set), Basic LLM Chain (@n8n/n8n-nodes-langchain.chainLlm), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Auto-fixing Output Parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), Respond with main page HTML (respondToWebhook), Workflow Tags (html), No Operation, do nothing (noOp), Merge (merge), Fallback file name (html), mkdir (executeCommand), Merge1 (merge), Edit Page (html), Workflow md content (html), Is Action Edit?1 (if), Is Action Edit?2 (if), Generate Mermaid Chart (code), Merge2 (merge), Generated Doc (set), Passthrough (noOp), Merge3 (merge), Merge4 (merge), Merge5 (merge), Edit Fields (set), Is Action Save? (if), Merge6 (merge), Respond OK on Save (respondToWebhook), single workflow (webhook), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), file types (switch), Sticky Note3 (stickyNote), Get All Workflows (n8n), Sticky Note4 (stickyNote), md files (switch), Get Workflow tags (n8n), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), docsify (webhook). Propósito: ai and machine learning. Categoría: integration"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": false,
+    "has_conditional_logic": true,
+    "has_error_handling": false
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:37.567193"
+  },
+  "semantic_vector": [
+    -0.05297870561480522,
+    -0.05544835329055786,
+    0.03704758360981941,
+    -0.04161638393998146,
+    -0.041241198778152466,
+    -0.05506455525755882,
+    0.03583294525742531,
+    -0.012016627937555313,
+    -0.05135481804609299,
+    0.055350691080093384,
+    -0.0156851913779974,
+    -0.050918690860271454,
+    0.02574959211051464,
+    -0.03062305599451065,
+    -0.051123593002557755,
+    0.05549691617488861,
+    -0.007817796431481838,
+    -0.05438399314880371,
+    -0.05511952564120293,
+    0.030572829768061638,
+    0.030870473012328148,
+    0.0038551022298634052,
+    0.05305919796228409,
+    0.04179881513118744,
+    -0.05150299146771431,
+    -0.037884242832660675,
+    -0.05188319832086563,
+    0.05528327450156212,
+    -0.053185418248176575,
+    0.0074745784513652325,
+    0.03794382885098457,
+    0.023683184757828712,
+    0.0554933100938797,
+    -0.04968443885445595,
+    0.01572195626795292,
+    0.04343773052096367,
+    0.03030959889292717,
+    -0.0013374650152400136,
+    -0.04359525442123413,
+    -0.052004069089889526,
+    -0.038931794464588165,
+    0.02960999310016632,
+    -0.024296071380376816,
+    0.05344804748892784,
+    0.05549691617488861,
+    0.051864854991436005,
+    -0.01312747597694397,
+    -0.04070543497800827,
+    -0.05538463965058327,
+    -0.04699971154332161,
+    -0.024603933095932007,
+    -0.032569777220487595,
+    -0.055485472083091736,
+    -0.0525907427072525,
+    -0.02270563878118992,
+    -0.055489324033260345,
+    0.05507165938615799,
+    -0.05426635965704918,
+    0.048679884523153305,
+    0.05413496494293213,
+    0.020045338198542595,
+    -0.049870848655700684,
+    -0.031274307519197464,
+    0.055361922830343246,
+    0.037698376923799515,
+    0.015781816095113754,
+    0.055427487939596176,
+    -0.043170176446437836,
+    0.052624937146902084,
+    -0.047606177628040314,
+    -0.05548299476504326,
+    -0.013527886010706425,
+    0.015307825058698654,
+    0.047146979719400406,
+    -0.053026266396045685,
+    -0.0480753630399704,
+    0.05467366799712181,
+    -0.052919790148735046,
+    0.028156686574220657,
+    0.01919526420533657,
+    0.04258149489760399,
+    -0.038753535598516464,
+    -0.02954726666212082,
+    -0.054488494992256165,
+    -0.026594767346978188,
+    0.016709573566913605,
+    0.04222462326288223,
+    -0.05423063784837723,
+    0.042085275053977966,
+    0.0340254046022892,
+    -0.041914891451597214,
+    0.047822389751672745,
+    0.04305342584848404,
+    -0.04887861758470535,
+    0.05068187043070793,
+    -0.033766139298677444,
+    -0.05171464383602142,
+    0.040206730365753174,
+    -0.04377908632159233,
+    -0.05549689382314682,
+    0.048801686614751816,
+    -0.022668302059173584,
+    0.028245151042938232,
+    -0.004359187558293343,
+    0.05537113547325134,
+    0.054547492414712906,
+    0.05548252910375595,
+    0.05049557983875275,
+    0.003603812074288726,
+    -0.05443501099944115,
+    -0.05442361533641815,
+    -0.054086457937955856,
+    -0.020353011786937714,
+    0.04697772487998009,
+    0.05414377897977829,
+    0.028049563989043236,
+    -0.05142233520746231,
+    -0.05126187950372696,
+    0.05196063593029976,
+    0.04877517744898796,
+    -0.05530998110771179,
+    0.008897058665752411,
+    0.014232328161597252,
+    0.05376804992556572,
+    0.05525919422507286,
+    0.049939438700675964,
+    -0.053178220987319946,
+    0.05086740478873253,
+    0.053243279457092285,
+    -0.029858723282814026,
+    -0.05515550822019577,
+    0.03793109953403473,
+    0.05317337438464165,
+    0.04617418721318245,
+    0.054901737719774246,
+    -0.02658921666443348,
+    -0.042322494089603424,
+    0.018560070544481277,
+    -0.048084504902362823,
+    -0.05221881717443466,
+    -0.04361464083194733,
+    0.05549688637256622,
+    -0.04758550226688385,
+    0.03632470220327377,
+    -0.05319074168801308,
+    -0.055496882647275925,
+    0.048097580671310425,
+    -0.012275795452296734,
+    0.05543195456266403,
+    -0.018350252881646156,
+    -0.05057192221283913,
+    -0.05389672517776489,
+    0.0544692799448967,
+    -0.01408084575086832,
+    0.05251554399728775,
+    0.05548073351383209,
+    -0.020615557208657265,
+    -0.05545547604560852,
+    0.050808701664209366,
+    -0.05099581182003021,
+    -0.05549114942550659,
+    -0.05348828062415123,
+    0.030116502195596695,
+    0.05520256981253624,
+    0.008070781826972961,
+    0.01742342673242092,
+    -0.05507116764783859,
+    0.042877230793237686,
+    0.023715896531939507,
+    -0.02653169445693493,
+    0.0418805368244648,
+    -0.04322459176182747,
+    -0.045299261808395386,
+    0.052947480231523514,
+    -0.0484483577311039,
+    0.051057323813438416,
+    -0.009153364226222038,
+    -0.04721549525856972,
+    -0.048968471586704254,
+    -0.03620908409357071,
+    0.042627088725566864,
+    -0.004606460686773062,
+    -0.054967109113931656,
+    0.05517471954226494,
+    0.054836828261613846,
+    0.01360587403178215,
+    -0.05549485981464386,
+    0.05540446937084198,
+    8.462527330266312e-05,
+    0.05304627865552902,
+    -0.030754394829273224,
+    0.02791680209338665,
+    -0.008944022469222546,
+    -0.05434324964880943,
+    -0.05540459230542183,
+    -0.05506021901965141,
+    0.05297022685408592,
+    0.05549691617488861,
+    0.04713234305381775,
+    0.00583586236461997,
+    0.05352354794740677,
+    0.05521288141608238,
+    -0.05542018637061119,
+    0.04539506509900093,
+    0.051755014806985855,
+    -0.019520346075296402,
+    -0.033320698887109756,
+    0.013357169926166534,
+    -0.055496808141469955,
+    -0.0390893816947937,
+    0.05271751061081886,
+    0.05158387869596481,
+    0.04272189363837242,
+    0.010269572958350182,
+    -0.055495817214250565,
+    -0.04652159661054611,
+    0.05400163680315018,
+    0.0504179410636425,
+    0.04463644325733185,
+    0.04913676902651787,
+    -0.0027676329482346773,
+    0.05390835180878639,
+    -0.01581026241183281,
+    0.028770780190825462,
+    -0.05151708051562309,
+    -0.05548693612217903,
+    -0.05533841624855995,
+    -0.05440272390842438,
+    -0.05547788366675377,
+    -0.05532938241958618,
+    -0.02762126922607422,
+    -0.05413565784692764,
+    -0.046503759920597076,
+    -0.05549691617488861,
+    -0.04230058565735817,
+    0.055404528975486755,
+    0.05549689754843712,
+    0.05530466139316559,
+    -0.05448930710554123,
+    0.024023808538913727,
+    -0.009767014533281326,
+    0.034368742257356644,
+    -0.05539931729435921,
+    0.04005510360002518,
+    -0.0010520226787775755,
+    0.053126975893974304,
+    0.04454656317830086,
+    0.0475597158074379,
+    0.046346474438905716,
+    0.055496696382761,
+    -0.05549492686986923,
+    0.03440578281879425,
+    0.024695435538887978,
+    -0.0527108833193779,
+    0.03903508558869362,
+    -0.05546427145600319,
+    -0.031941480934619904,
+    0.05549691617488861,
+    0.026539284735918045,
+    0.05510260909795761,
+    0.05475367233157158,
+    -0.006089978851377964,
+    0.03097495436668396,
+    0.007812727242708206,
+    0.04808971658349037,
+    0.054241061210632324,
+    0.03127811849117279,
+    -0.03810996189713478,
+    -0.055084604769945145,
+    0.052711956202983856,
+    -0.05501736328005791,
+    0.0037560954224318266,
+    -0.018974822014570236,
+    0.051861148327589035,
+    0.05548813194036484,
+    -0.016935469582676888,
+    -0.05494557321071625,
+    -0.013390523381531239,
+    0.05549691617488861,
+    0.021020671352744102,
+    0.04408822953701019,
+    0.05197247490286827,
+    0.054268598556518555,
+    -0.014649606309831142,
+    -0.04529436305165291,
+    -0.05537335202097893,
+    -0.028574857860803604,
+    0.054731130599975586,
+    0.03160203993320465,
+    0.055495042353868484,
+    -0.03681166470050812,
+    0.038413044065237045,
+    0.05549623444676399,
+    -0.05150449648499489,
+    0.05487243831157684,
+    -0.05547915771603584,
+    0.03992610424757004,
+    -0.05542338639497757,
+    -0.019350802525877953,
+    0.0479784794151783,
+    -0.051787689328193665,
+    -0.029183926060795784,
+    0.053038500249385834,
+    -0.04077990725636482,
+    0.054611753672361374,
+    0.05488407984375954,
+    0.048058804124593735,
+    -0.051605965942144394,
+    -0.04118708521127701,
+    0.03392959386110306,
+    0.04078442603349686,
+    0.011896721087396145,
+    0.042289432138204575,
+    -0.04566465690732002,
+    0.05242614820599556,
+    -0.05159461498260498,
+    0.05259856581687927,
+    0.04198087006807327,
+    -0.023898689076304436,
+    0.034112218767404556,
+    0.051129814237356186,
+    -0.054813653230667114,
+    0.048430196940898895,
+    -0.009312683716416359,
+    0.051152732223272324,
+    0.0067050280049443245,
+    0.05467715114355087,
+    -0.017377646639943123,
+    0.053665872663259506,
+    0.008963041007518768,
+    0.05051460117101669,
+    -0.03655102103948593,
+    -0.04316764324903488,
+    0.055496372282505035,
+    -0.04591812938451767,
+    0.04645184800028801,
+    0.053971029818058014,
+    -0.03548165783286095,
+    0.055478960275650024,
+    -0.032445766031742096,
+    -0.0015489892102777958,
+    -0.05348338559269905,
+    -0.050857823342084885,
+    -0.044560324400663376,
+    -0.05549691617488861,
+    0.013819022104144096,
+    -0.053750015795230865,
+    -0.04533017799258232,
+    -0.024450931698083878,
+    0.04247967526316643,
+    0.046960603445768356,
+    0.04612177237868309,
+    0.047880131751298904,
+    0.006489545572549105,
+    0.04911831393837929,
+    -0.054451003670692444,
+    -0.05549691617488861,
+    0.0036470526829361916,
+    -0.03003052994608879,
+    0.05419762805104256,
+    0.05163358896970749,
+    -0.04693292826414108,
+    -0.055496904999017715,
+    0.055447906255722046,
+    -0.053760088980197906,
+    0.05548281595110893,
+    0.050537511706352234,
+    -0.0554589182138443,
+    0.05337456613779068,
+    -0.053783390671014786,
+    0.005804953631013632,
+    0.004656883422285318,
+    0.007709229364991188,
+    0.04508168250322342,
+    0.04666756093502045,
+    0.03646119683980942,
+    -0.020269915461540222,
+    -0.05112786218523979,
+    0.04188167676329613,
+    -0.05405789613723755,
+    -0.04310236871242523,
+    0.05533391237258911,
+    0.04953847825527191,
+    -0.02513832598924637,
+    0.045061130076646805,
+    -0.01537606492638588,
+    0.05430072546005249,
+    0.0352959930896759,
+    -0.026867715641856194,
+    -0.05498421937227249,
+    -0.01187913678586483,
+    -0.05454814434051514,
+    0.05549667775630951,
+    0.04581243544816971,
+    -0.055007487535476685,
+    0.055413007736206055,
+    0.013371724635362625,
+    0.022668298333883286,
+    0.052861955016851425,
+    0.05430765077471733,
+    0.05500442534685135,
+    0.05148809030652046,
+    -0.054611142724752426,
+    0.05418248474597931,
+    0.0443212166428566,
+    -0.01566433347761631,
+    -0.055491477251052856,
+    0.049622438848018646,
+    0.05488453805446625,
+    -0.019721761345863342,
+    -0.03458316996693611,
+    0.05236610397696495,
+    -0.04311437904834747,
+    -0.035821136087179184,
+    0.05543604865670204,
+    0.049140699207782745,
+    -0.028564566746354103,
+    -0.03757784515619278,
+    -0.0515531487762928,
+    0.04881719499826431,
+    -0.04818050563335419,
+    -0.0058051045052707195,
+    -0.05545887351036072,
+    0.05281944200396538,
+    -0.028604181483387947,
+    0.05166974663734436,
+    -0.055462222546339035,
+    0.05520673468708992,
+    -0.042548421770334244,
+    0.05436205118894577,
+    -0.04839632660150528,
+    0.0016128488350659609,
+    -0.03965234011411667,
+    0.046999309211969376,
+    -0.05546724051237106,
+    -0.048505596816539764,
+    -0.05535222962498665,
+    -0.055496785789728165,
+    -0.05545657128095627,
+    -0.032399147748947144,
+    0.03210459277033806,
+    -0.054477203637361526,
+    -0.03809415549039841,
+    -0.013114141300320625,
+    0.002282368950545788,
+    -0.04753787815570831,
+    -0.05420757830142975,
+    -0.05422201007604599,
+    -0.051799483597278595,
+    -0.011102101765573025,
+    -0.0174940824508667,
+    0.012263065204024315,
+    0.055496860295534134,
+    0.054873693734407425,
+    0.05304154008626938,
+    -0.05549684166908264,
+    -0.00953796785324812,
+    0.05549262836575508,
+    0.051740724593400955,
+    -0.053404394537210464,
+    0.04496811702847481,
+    0.04209559038281441,
+    0.055455222725868225,
+    0.055271465331315994,
+    -0.02041768655180931,
+    0.002709264401346445,
+    0.05504538118839264,
+    -0.02533714473247528,
+    -0.052316922694444656,
+    0.043485160917043686,
+    0.014812330715358257,
+    -0.03421240299940109,
+    -0.019684594124555588,
+    0.023456092923879623,
+    -0.054749295115470886,
+    -0.023093746975064278,
+    0.008568386547267437,
+    0.052462052553892136,
+    -0.013279932551085949,
+    -0.055477745831012726,
+    -0.05367257818579674,
+    0.05532088875770569,
+    0.04828210547566414,
+    -0.05466992035508156,
+    0.01219089049845934,
+    0.055205125361680984,
+    0.004733231384307146,
+    -0.028327882289886475,
+    -0.020215123891830444,
+    0.017629671841859818,
+    -0.02403165213763714,
+    0.04144781827926636,
+    -0.0349666029214859,
+    0.055227648466825485,
+    -0.053587786853313446,
+    0.05518709868192673,
+    0.054305028170347214,
+    0.05380740389227867,
+    -0.05537926405668259,
+    -0.045877501368522644,
+    0.028328001499176025,
+    0.004327962640672922,
+    0.05322040617465973,
+    -0.05549690127372742,
+    0.04681099206209183,
+    -0.04231907054781914,
+    -0.05549601465463638,
+    -0.031981099396944046,
+    -0.041805364191532135,
+    0.05549685284495354,
+    -0.014159644022583961,
+    -0.026700342074036598
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "uses:sort",
+    "uses:readWriteFile",
+    "uses:set",
+    "uses:noOp",
+    "complexity:high",
+    "uses:convertToFile",
+    "uses:extractFromFile",
+    "uses:if",
+    "uses:switch",
+    "uses:@n8n/n8n-nodes-langchain.chainLlm",
+    "category:integration",
+    "uses:webhook",
+    "uses:n8n",
+    "uses:@n8n/n8n-nodes-langchain.outputParserStructured",
+    "uses:code",
+    "uses:@n8n/n8n-nodes-langchain.lmChatOpenAi",
+    "purpose:ai-and-machine-learning",
+    "uses:merge",
+    "uses:html",
+    "uses:@n8n/n8n-nodes-langchain.outputParserAutofixing",
+    "uses:executeCommand",
+    "uses:respondToWebhook"
+  ],
+  "category_info": {
+    "category_name": "Code",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code"
+  }
+}

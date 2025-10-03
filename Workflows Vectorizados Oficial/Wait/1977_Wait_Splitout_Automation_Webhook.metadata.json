@@ -1,0 +1,1288 @@
+{
+  "workflow_info": {
+    "id": "sB6dC0GZ7zZHuMGF",
+    "name": "Test Webhooks in n8n Without Changing WEBHOOK_URL (PostBin & BambooHR Example)",
+    "display_name": "Test Webhooks in n8n Without Changing WEBHOOK_URL (PostBin & BambooHR Example)",
+    "file_name": "1977_Wait_Splitout_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait\\1977_Wait_Splitout_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "6a17ba725a71"
+  },
+  "structure": {
+    "total_nodes": 58,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.renameKeys",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.debugHelper",
+      "n8n-nodes-base.postBin",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.manualTrigger",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.bambooHr",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.renameKeys",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.debugHelper",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.postBin",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.bambooHr",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 24
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          440,
+          1220
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          600,
+          980
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1620,
+          1620
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          800,
+          1140
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1680,
+          1240
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1840,
+          1180
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1400,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          600,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          580,
+          140
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1420,
+          600
+        ]
+      },
+      {
+        "name": "Create Bin",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          660,
+          420
+        ]
+      },
+      {
+        "name": "GET Bin",
+        "type": "n8n-nodes-base.postBin",
+        "position": [
+          860,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          620,
+          600
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          840,
+          600
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          580,
+          740
+        ]
+      },
+      {
+        "name": "Format url for webhook",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1060,
+          420
+        ]
+      },
+      {
+        "name": "GET most recent request",
+        "type": "n8n-nodes-base.postBin",
+        "position": [
+          1500,
+          420
+        ]
+      },
+      {
+        "name": "MOCK request",
+        "type": "n8n-nodes-base.postBin",
+        "position": [
+          1260,
+          580
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          580,
+          900
+        ]
+      },
+      {
+        "name": "Create Bin1",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          860,
+          1220
+        ]
+      },
+      {
+        "name": "GET Bin1",
+        "type": "n8n-nodes-base.postBin",
+        "position": [
+          1060,
+          1220
+        ]
+      },
+      {
+        "name": "Format url for webhook1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1260,
+          1220
+        ]
+      },
+      {
+        "name": "SET BambooHR subdomain",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          660,
+          1480
+        ]
+      },
+      {
+        "name": "Split out fields",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1060,
+          1480
+        ]
+      },
+      {
+        "name": "Combine fields to monitor",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1460,
+          1480
+        ]
+      },
+      {
+        "name": "Format payload for BambooHR webhook",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1900,
+          1240
+        ]
+      },
+      {
+        "name": "Create webhook in BambooHR",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2100,
+          1240
+        ]
+      },
+      {
+        "name": "Create dummy data for employees",
+        "type": "n8n-nodes-base.debugHelper",
+        "position": [
+          2380,
+          1240
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          800,
+          1407.2486467347771
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2320,
+          1180
+        ]
+      },
+      {
+        "name": "Keep only new employee fields",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1260,
+          1480
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          820,
+          1653.074026323302
+        ]
+      },
+      {
+        "name": "GET all possible fields to monitor in BambooHR",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          860,
+          1480
+        ]
+      },
+      {
+        "name": "Register and test webhook",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1260,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1228.9696450873366,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2940,
+          1040
+        ]
+      },
+      {
+        "name": "Check BambooHR for calls to webhook",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3040,
+          1140
+        ]
+      },
+      {
+        "name": "Create employee records with dummy data",
+        "type": "n8n-nodes-base.bambooHr",
+        "position": [
+          2580,
+          1240
+        ]
+      },
+      {
+        "name": "Split out employees",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          3300,
+          1340
+        ]
+      },
+      {
+        "name": "Format displayName",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3500,
+          1340
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          4100,
+          1480
+        ]
+      },
+      {
+        "name": "Auto-fixing Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          4200,
+          1480
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          4200,
+          1640
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          4420,
+          1640
+        ]
+      },
+      {
+        "name": "Basic LLM Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          4100,
+          1340
+        ]
+      },
+      {
+        "name": "Combine employees into list",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          3700,
+          1340
+        ]
+      },
+      {
+        "name": "Pluralize key",
+        "type": "n8n-nodes-base.renameKeys",
+        "position": [
+          3900,
+          1340
+        ]
+      },
+      {
+        "name": "Welcome employees on Slack",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          4480,
+          1340
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3260,
+          1240
+        ]
+      },
+      {
+        "name": "Sticky Note18",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4340,
+          920
+        ]
+      },
+      {
+        "name": "DELETE BambooHR webhook",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4460,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note20",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1840,
+          1440
+        ]
+      },
+      {
+        "name": "Sticky Note21",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2940,
+          1557.4137607776859
+        ]
+      },
+      {
+        "name": "GET most recent request1",
+        "type": "n8n-nodes-base.postBin",
+        "position": [
+          3040,
+          1340
+        ]
+      },
+      {
+        "name": "Wait 60 + 1 seconds for webhook to fire",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          2780,
+          1240
+        ]
+      },
+      {
+        "name": "Sticky Note19",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note22",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note23",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3280,
+          1517.2043765224669
+        ]
+      }
+    ],
+    "connections_count": 29,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 57
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "Team communication",
+      "On-demand execution"
+    ],
+    "complexity_score": 1330,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "register and test webhook",
+      "sticky note7",
+      "openai chat model1",
+      "stickyNote",
+      "mock request",
+      "httpRequest",
+      "merge",
+      "combine fields to monitor",
+      "postBin",
+      "combine employees into list",
+      "get all possible fields to monitor in bamboohr",
+      "structured output parser",
+      "@n8n/n8n nodes langchain.outputParserAutofixing",
+      "delete bamboohr webhook",
+      "set bamboohr subdomain",
+      "slack",
+      "format payload for bamboohr webhook",
+      "wait 60 + 1 seconds for webhook to fire",
+      "aggregate",
+      "openai chat model",
+      "format url for webhook1",
+      "create employee records with dummy data",
+      "sticky note14",
+      "format url for webhook",
+      "debugHelper",
+      "check bamboohr for calls to webhook",
+      "sticky note5",
+      "sticky note18",
+      "get bin",
+      "welcome employees on slack",
+      "sticky note23",
+      "bambooHr",
+      "sticky note12",
+      "split out fields",
+      "sticky note3",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "get most recent request",
+      "split out employees",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "sticky note15",
+      "sticky note9",
+      "sticky note17",
+      "sticky note4",
+      "set",
+      "sticky note13",
+      "get most recent request1",
+      "sticky note21",
+      "get bin1",
+      "wait",
+      "sticky note",
+      "complex",
+      "renameKeys",
+      "manualTrigger",
+      "sticky note1",
+      "sticky note2",
+      "sticky note20",
+      "sticky note22",
+      "splitOut",
+      "basic llm chain",
+      "create webhook in bamboohr",
+      "sticky note16",
+      "sticky note11",
+      "create dummy data for employees",
+      "sticky note6",
+      "create bin",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "sticky note10",
+      "webhook integration",
+      "keep only new employee fields",
+      "pluralize key",
+      "create bin1",
+      "sticky note19",
+      "auto-fixing output parser",
+      "sticky note8",
+      "filter",
+      "format displayname",
+      "noOp",
+      "when clicking ‘test workflow’"
+    ],
+    "description": "'Test Webhooks in n8n Without Changing WEBHOOK_URL (PostBin & BambooHR Example)' es un workflow diseñado para webhook integration con 58 nodos activado por When clicking ‘Test workflow’ que ejecuta: Sticky Note, Sticky Note1, Sticky Note2 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Test Webhooks in n8n Without Changing WEBHOOK_URL (PostBin & BambooHR Example). Nodos: When clicking ‘Test workflow’ (manualTrigger), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Merge (merge), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note10 (stickyNote), Create Bin (httpRequest), GET Bin (postBin), Sticky Note11 (stickyNote), Sticky Note12 (stickyNote), Sticky Note7 (stickyNote), Format url for webhook (set), GET most recent request (postBin), MOCK request (postBin), Sticky Note9 (stickyNote), Create Bin1 (httpRequest), GET Bin1 (postBin), Format url for webhook1 (set), SET BambooHR subdomain (set), Split out fields (splitOut), Combine fields to monitor (aggregate), Format payload for BambooHR webhook (set), Create webhook in BambooHR (httpRequest), Create dummy data for employees (debugHelper), Sticky Note13 (stickyNote), Sticky Note14 (stickyNote), Keep only new employee fields (filter), Sticky Note15 (stickyNote), GET all possible fields to monitor in BambooHR (httpRequest), Register and test webhook (noOp), Sticky Note8 (stickyNote), Sticky Note16 (stickyNote), Check BambooHR for calls to webhook (httpRequest), Create employee records with dummy data (bambooHr), Split out employees (splitOut), Format displayName (set), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Auto-fixing Output Parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Basic LLM Chain (@n8n/n8n-nodes-langchain.chainLlm), Combine employees into list (aggregate), Pluralize key (renameKeys), Welcome employees on Slack (slack), Sticky Note17 (stickyNote), Sticky Note18 (stickyNote), DELETE BambooHR webhook (httpRequest), Sticky Note20 (stickyNote), Sticky Note21 (stickyNote), GET most recent request1 (postBin), Wait 60 + 1 seconds for webhook to fire (wait), Sticky Note19 (stickyNote), Sticky Note22 (stickyNote), Sticky Note23 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: When clicking ‘Test workflow’",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "n8n-nodes-base.manualTrigger",
+      "Sticky Note1",
+      "Sticky Note2",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.manualtrigger",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.postbin",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.debughelper",
+      "n8n-nodes-base.renamekeys",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.bamboohr",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.outputparserautofixing"
+    ],
+    "search_terms": [
+      "1977_wait_splitout_automation_webhook",
+      "webhook",
+      "automation",
+      "splitout",
+      "wait",
+      "1977"
+    ],
+    "alternative_names": [
+      "Test Webhooks in n8n Without Changing WEBHOOK_URL (PostBin & BambooHR Example)"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 87.21804511278195,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 87.44360902255639
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:22.474641"
+  },
+  "semantic_vector": [
+    -0.055872682482004166,
+    -0.05074091628193855,
+    0.042800888419151306,
+    -0.05218224599957466,
+    -0.039833102375268936,
+    -0.052028439939022064,
+    0.054813724011182785,
+    -0.04995482414960861,
+    -0.05514034628868103,
+    0.05567757040262222,
+    -0.051795750856399536,
+    -0.031106313690543175,
+    -0.03757857531309128,
+    -0.046169646084308624,
+    -0.053929444402456284,
+    0.056027013808488846,
+    0.05476623401045799,
+    -0.025691883638501167,
+    -0.05109899118542671,
+    -0.006099153310060501,
+    -0.052424777299165726,
+    0.02401144802570343,
+    -0.05409261956810951,
+    -0.028566550463438034,
+    -0.03732718527317047,
+    -0.03891711309552193,
+    -0.05601833388209343,
+    0.055721648037433624,
+    -0.038347601890563965,
+    0.03632913902401924,
+    0.029216991737484932,
+    -0.05531153082847595,
+    -0.001257310388609767,
+    0.04757484793663025,
+    0.04298882931470871,
+    0.05118132010102272,
+    0.003082261886447668,
+    0.0537203848361969,
+    -0.047021012753248215,
+    -0.037847526371479034,
+    -0.05489109084010124,
+    0.04425211250782013,
+    -0.01579846255481243,
+    0.025922201573848724,
+    0.056026726961135864,
+    0.05533626303076744,
+    0.04117650166153908,
+    -0.023692656308412552,
+    -0.0551985502243042,
+    -0.04599139839410782,
+    -0.055139873176813126,
+    0.00756871560588479,
+    -0.05600791797041893,
+    -0.044240400195121765,
+    -0.04804064705967903,
+    -0.05595381185412407,
+    0.052786584943532944,
+    -0.03664087504148483,
+    0.0388483889400959,
+    0.05138278752565384,
+    0.04834741726517677,
+    -0.04215066507458687,
+    -0.016909034922719002,
+    0.05399741604924202,
+    0.03578565642237663,
+    -0.008154992014169693,
+    0.055968448519706726,
+    -0.007241088431328535,
+    0.055753443390131,
+    -0.037693656980991364,
+    -0.05602074787020683,
+    -0.03904358670115471,
+    -0.0032187369652092457,
+    0.05477088317275047,
+    -0.04103446379303932,
+    -0.05471052601933479,
+    0.05355633422732353,
+    -0.0551186129450798,
+    -0.00045227474765852094,
+    0.04636837914586067,
+    0.05506623908877373,
+    0.031754039227962494,
+    0.002821405651047826,
+    -0.053369589149951935,
+    0.0381423681974411,
+    0.05071070417761803,
+    0.0327824167907238,
+    -0.05016113072633743,
+    0.048995692282915115,
+    -0.02137124538421631,
+    -0.03171215206384659,
+    0.030336448922753334,
+    0.05431663990020752,
+    -0.05377744883298874,
+    0.054643698036670685,
+    0.03638162836432457,
+    -0.03479023650288582,
+    0.04858900606632233,
+    -0.05574576184153557,
+    -0.056025996804237366,
+    -0.009709636680781841,
+    -0.0533171184360981,
+    -0.015768377110362053,
+    0.002070997143164277,
+    0.0498691163957119,
+    0.05252451077103615,
+    0.056013382971286774,
+    0.05209425091743469,
+    -0.022225115448236465,
+    -0.05586254596710205,
+    -0.049294110387563705,
+    -0.055049534887075424,
+    -0.02237023413181305,
+    0.0035365461371839046,
+    0.05164047330617905,
+    -0.0315999835729599,
+    -0.05548746511340141,
+    -0.04642497003078461,
+    0.04679401218891144,
+    0.05506976693868637,
+    -0.009203135967254639,
+    0.044551245868206024,
+    0.028120623901486397,
+    -0.03096536174416542,
+    0.05548384413123131,
+    0.04746876284480095,
+    0.008166220970451832,
+    0.0319216325879097,
+    0.04209423065185547,
+    -0.04785527288913727,
+    -0.01732301339507103,
+    0.04856496676802635,
+    0.054878950119018555,
+    -0.05556182190775871,
+    0.05171743407845497,
+    -0.01954561471939087,
+    0.009279906749725342,
+    -0.024167900905013084,
+    -0.05397650599479675,
+    -0.056023333221673965,
+    -0.04593269154429436,
+    0.056027013808488846,
+    -0.03623565286397934,
+    0.037791673094034195,
+    -0.054574061185121536,
+    -0.05602654814720154,
+    0.055651552975177765,
+    -0.033767614513635635,
+    0.05543515458703041,
+    0.002353805350139737,
+    -0.023479439318180084,
+    -0.0556953027844429,
+    -0.004746614955365658,
+    -0.003251835238188505,
+    0.05580657720565796,
+    0.05599820613861084,
+    -0.018288996070623398,
+    -0.05520688369870186,
+    -0.02365492284297943,
+    -0.05592963472008705,
+    -0.05600271746516228,
+    -0.0532727912068367,
+    0.04438532143831253,
+    0.050404567271471024,
+    -0.010081136599183083,
+    -0.04751695692539215,
+    -0.049297161400318146,
+    0.0531904399394989,
+    -0.05410715937614441,
+    0.016874991357326508,
+    0.05600360408425331,
+    -0.030393587425351143,
+    -0.006822935771197081,
+    0.05270328372716904,
+    -0.056007325649261475,
+    0.05549469590187073,
+    -0.01810477301478386,
+    -0.051769886165857315,
+    0.03778452426195145,
+    -0.02151564322412014,
+    -0.05359945818781853,
+    0.05066521465778351,
+    -0.05583776906132698,
+    0.054507482796907425,
+    0.05592821538448334,
+    0.047196753323078156,
+    -0.0559939481317997,
+    0.05583244934678078,
+    -0.022320296615362167,
+    0.03594439476728439,
+    0.014355056919157505,
+    0.029469896107912064,
+    -0.034387748688459396,
+    -0.055935341864824295,
+    -0.05592155084013939,
+    -0.055980972945690155,
+    0.04467540606856346,
+    0.056027013808488846,
+    -0.0035367771051824093,
+    -0.026109859347343445,
+    0.054429683834314346,
+    0.05136276036500931,
+    0.052452221512794495,
+    0.04301193356513977,
+    0.0019073575967922807,
+    -0.05501452460885048,
+    0.024536257609725,
+    0.05202842131257057,
+    -0.05600746348500252,
+    -0.052512750029563904,
+    0.031096739694476128,
+    0.05417370796203613,
+    0.04895762354135513,
+    -0.0008082670974545181,
+    -0.056026890873909,
+    -0.05598682910203934,
+    -0.033210404217243195,
+    0.04449470713734627,
+    0.047401223331689835,
+    0.03825903683900833,
+    -0.04280092194676399,
+    0.05563673377037048,
+    0.050987061113119125,
+    -0.04719455912709236,
+    -0.01183435507118702,
+    -0.0557936429977417,
+    -0.036783140152692795,
+    -0.05415855348110199,
+    -0.050166286528110504,
+    -0.05601607635617256,
+    0.004672846756875515,
+    -0.05334828048944473,
+    -0.0480048768222332,
+    -0.05602693930268288,
+    0.03146398812532425,
+    0.0508408322930336,
+    0.0560234859585762,
+    0.05602668970823288,
+    -0.053714320063591,
+    0.01889943517744541,
+    0.0013366698985919356,
+    0.03107788786292076,
+    -0.039065171033144,
+    0.054659388959407806,
+    -0.014625530689954758,
+    0.05565338209271431,
+    0.055641718208789825,
+    -0.021945597603917122,
+    0.05234479531645775,
+    0.05602036789059639,
+    -0.054599739611148834,
+    0.028909282758831978,
+    0.023654641583561897,
+    0.03790976107120514,
+    0.051595043390989304,
+    -0.05264553055167198,
+    0.009296612814068794,
+    0.056027013808488846,
+    -0.0453859306871891,
+    0.0404798649251461,
+    0.028463613241910934,
+    0.04856937378644943,
+    -0.000966282153967768,
+    0.04673163220286369,
+    0.045276183634996414,
+    0.019810054451227188,
+    -0.039066895842552185,
+    0.013567935675382614,
+    -0.055924199521541595,
+    0.054100897163152695,
+    -0.055682092905044556,
+    0.04945008084177971,
+    -0.055969879031181335,
+    0.05429532378911972,
+    0.05590691417455673,
+    0.006424951367080212,
+    -0.05492345988750458,
+    0.015559318475425243,
+    0.05602506920695305,
+    0.024079391732811928,
+    -0.006917233113199472,
+    0.03875770792365074,
+    0.0490829236805439,
+    0.0487845204770565,
+    0.03178614377975464,
+    -0.055276304483413696,
+    -0.0338982492685318,
+    0.055983927100896835,
+    -0.04826778173446655,
+    0.05598161369562149,
+    -0.04262195900082588,
+    0.02003495953977108,
+    0.05598534271121025,
+    -0.0444100983440876,
+    0.04718697816133499,
+    -0.04174329712986946,
+    0.015005034394562244,
+    -0.05092752352356911,
+    -0.02451854944229126,
+    0.04097983241081238,
+    0.021778536960482597,
+    0.020720934495329857,
+    0.0516800582408905,
+    -0.025187470018863678,
+    -0.009887848980724812,
+    0.030738607048988342,
+    0.05235215276479721,
+    0.01021443773061037,
+    0.04309304803609848,
+    -0.051594894379377365,
+    0.04711633920669556,
+    -0.009091821499168873,
+    0.04788977652788162,
+    -0.013109738007187843,
+    0.05103127285838127,
+    -0.05486682057380676,
+    0.0509878471493721,
+    -0.03361191973090172,
+    0.03154383599758148,
+    0.015285707078874111,
+    -0.02832620218396187,
+    -0.048976246267557144,
+    0.05076410993933678,
+    -0.044908296316862106,
+    0.04573483020067215,
+    -0.05312681943178177,
+    0.049956709146499634,
+    0.016081947833299637,
+    0.03083714470267296,
+    -0.05134453624486923,
+    -0.024704985320568085,
+    -0.05433862656354904,
+    -0.010371511802077293,
+    0.05599720776081085,
+    -0.038798727095127106,
+    0.04949550703167915,
+    0.05546339973807335,
+    -0.04751347005367279,
+    0.052577998489141464,
+    0.02010054513812065,
+    0.02897505648434162,
+    -0.05533304437994957,
+    -0.038262054324150085,
+    -0.05378931015729904,
+    -0.056027013808488846,
+    -0.04504934698343277,
+    -0.037006910890340805,
+    -0.03073895536363125,
+    -0.054176170378923416,
+    -0.0259116068482399,
+    0.05248761177062988,
+    -0.02676490508019924,
+    0.051544345915317535,
+    -0.0021946451161056757,
+    0.026436137035489082,
+    -0.05598250776529312,
+    -0.05602698028087616,
+    0.044917743653059006,
+    -0.023930856958031654,
+    0.054617833346128464,
+    0.04359989985823631,
+    -0.05593676492571831,
+    -0.056026581674814224,
+    0.052895527333021164,
+    -0.051988642662763596,
+    0.055761370807886124,
+    0.0509326234459877,
+    -0.055488064885139465,
+    0.05526381731033325,
+    0.010451657697558403,
+    0.02246757782995701,
+    -0.050337012857198715,
+    0.003568768734112382,
+    0.007690583821386099,
+    0.05078936368227005,
+    0.036021437495946884,
+    -0.05558697506785393,
+    -0.05582811310887337,
+    -0.040937017649412155,
+    -0.007878275588154793,
+    0.04680977761745453,
+    0.055241603404283524,
+    -0.03905688226222992,
+    -0.04835589602589607,
+    0.04453669860959053,
+    -0.05508553236722946,
+    0.05484974384307861,
+    0.039056845009326935,
+    0.04929255694150925,
+    -0.04895729199051857,
+    -0.038978129625320435,
+    -0.055661704391241074,
+    0.05593243986368179,
+    0.05328032001852989,
+    -0.054742224514484406,
+    0.047639090567827225,
+    -0.011056721210479736,
+    -0.00768386572599411,
+    0.04968326538801193,
+    0.030518800020217896,
+    0.05484282597899437,
+    0.055627696216106415,
+    -0.05597064271569252,
+    0.055999357253313065,
+    -0.017939168959856033,
+    -0.004843899980187416,
+    -0.05601278319954872,
+    0.05524301528930664,
+    0.05356011912226677,
+    -0.019178003072738647,
+    0.03361092135310173,
+    0.049584273248910904,
+    -0.02941359579563141,
+    0.0020241134334355593,
+    -0.0032299032900482416,
+    0.0032316341530531645,
+    -9.339487587567419e-05,
+    -0.05488920211791992,
+    -0.04812175780534744,
+    0.04422086477279663,
+    -0.055315155535936356,
+    -0.0549207478761673,
+    -0.05595633387565613,
+    0.046883270144462585,
+    -0.018952829763293266,
+    0.014182785525918007,
+    -0.05594874173402786,
+    0.05352584272623062,
+    0.04095873609185219,
+    -0.015145703218877316,
+    -0.037997324019670486,
+    -0.0011811157455667853,
+    -0.03796378895640373,
+    0.05594678968191147,
+    -0.05598221346735954,
+    -0.046275071799755096,
+    -0.042544376105070114,
+    -0.05569098889827728,
+    -0.05597614124417305,
+    0.04932549223303795,
+    0.031221572309732437,
+    -0.055318139493465424,
+    -0.030706023797392845,
+    -0.05280544236302376,
+    -0.012693624012172222,
+    -0.05537641420960426,
+    -0.0546405203640461,
+    0.011541023850440979,
+    0.03753694146871567,
+    -0.050218015909194946,
+    0.048628851771354675,
+    0.04534199833869934,
+    0.056026577949523926,
+    0.025733936578035355,
+    -0.0038402797654271126,
+    -0.056026969105005264,
+    0.0360594168305397,
+    0.05602356418967247,
+    0.04662741720676422,
+    -0.055818479508161545,
+    0.018623149022459984,
+    0.03604558855295181,
+    0.05449295416474342,
+    0.05592670291662216,
+    0.023329509422183037,
+    -0.051005661487579346,
+    0.050918251276016235,
+    0.02829737216234207,
+    -0.05012916401028633,
+    0.055710017681121826,
+    0.052280209958553314,
+    -0.050201475620269775,
+    0.010201473720371723,
+    -0.05123148858547211,
+    -0.053844060748815536,
+    -0.041249070316553116,
+    0.055172450840473175,
+    0.0444745272397995,
+    -0.013489962555468082,
+    -0.053824201226234436,
+    -0.04751681163907051,
+    0.05517756938934326,
+    0.04797293245792389,
+    -0.053480833768844604,
+    0.033989693969488144,
+    0.055704884231090546,
+    0.020399687811732292,
+    -0.02794942632317543,
+    -0.00040915797580964863,
+    0.028767051175236702,
+    0.01843482442200184,
+    0.055215101689100266,
+    -0.05297499895095825,
+    0.034508269280195236,
+    -0.05578342452645302,
+    0.056023791432380676,
+    0.05454185977578163,
+    0.05443522334098816,
+    -0.055630747228860855,
+    0.03835863247513771,
+    0.05281859636306763,
+    -0.05093494430184364,
+    0.054495763033628464,
+    -0.056027013808488846,
+    0.053235337138175964,
+    -0.01847383752465248,
+    0.028489751741290092,
+    -0.04749671369791031,
+    -0.054248761385679245,
+    0.05602622032165527,
+    -0.0550524964928627,
+    -0.04897274821996689
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking ‘Test workflow’; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Wait",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait"
+  }
+}

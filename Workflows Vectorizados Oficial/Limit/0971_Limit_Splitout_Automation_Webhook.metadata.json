@@ -1,0 +1,1439 @@
+{
+  "workflow_info": {
+    "id": "4Tq5HZBdETVe7jEb",
+    "name": "⚡AI-Powered YouTube Playlist & Video Summarization and Analysis v2",
+    "display_name": "⚡AI-Powered YouTube Playlist & Video Summarization and Analysis v2",
+    "file_name": "0971_Limit_Splitout_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Limit\\0971_Limit_Splitout_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true,
+    "fingerprint": "265be30c16f9"
+  },
+  "structure": {
+    "total_nodes": 72,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.splitOut",
+      "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "n8n-nodes-base.redis",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-youtube-transcription-dmr.youtubeTranscripter",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "count": 4
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 4
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.redis",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.summarize",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.limit",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 6
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 4
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-youtube-transcription-dmr.youtubeTranscripter",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 12
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Chat",
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "position": [
+          -2780,
+          -460
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Google Gemini Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          -440,
+          -40
+        ]
+      },
+      {
+        "name": "Handle Queries",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -160,
+          -280
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1380,
+          -200
+        ]
+      },
+      {
+        "name": "Summarize & Analyze Transcript",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          660,
+          540
+        ]
+      },
+      {
+        "name": "Concatenate",
+        "type": "n8n-nodes-base.summarize",
+        "position": [
+          1700,
+          -200
+        ]
+      },
+      {
+        "name": "Split Out1",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          660,
+          40
+        ]
+      },
+      {
+        "name": "Limit",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          860,
+          40
+        ]
+      },
+      {
+        "name": "Qdrant Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          1680,
+          480
+        ]
+      },
+      {
+        "name": "Recursive Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          1800,
+          860
+        ]
+      },
+      {
+        "name": "Embeddings Google Gemini",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "position": [
+          1660,
+          700
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          640,
+          740
+        ]
+      },
+      {
+        "name": "Embeddings Google Gemini1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "position": [
+          -120,
+          320
+        ]
+      },
+      {
+        "name": "Video Titles",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1160,
+          40
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1700,
+          20
+        ]
+      },
+      {
+        "name": "Edit Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          980,
+          540
+        ]
+      },
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2720,
+          480
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model4",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          2520,
+          720
+        ]
+      },
+      {
+        "name": "Delete Collection",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1340,
+          480
+        ]
+      },
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          1820,
+          700
+        ]
+      },
+      {
+        "name": "Chat Buffer Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          -260,
+          -40
+        ]
+      },
+      {
+        "name": "Full Summary",
+        "type": "n8n-nodes-base.summarize",
+        "position": [
+          2520,
+          480
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -560,
+          -400
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          560,
+          -400
+        ]
+      },
+      {
+        "name": "Chat Buffer Memory1",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          2700,
+          720
+        ]
+      },
+      {
+        "name": "YouTube Transcript",
+        "type": "n8n-nodes-youtube-transcription-dmr.youtubeTranscripter",
+        "position": [
+          1160,
+          -200
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          560,
+          340
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1240,
+          340
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2260,
+          340
+        ]
+      },
+      {
+        "name": "Message Intent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -2260,
+          -460
+        ]
+      },
+      {
+        "name": "Structured Output Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          -2020,
+          -220
+        ]
+      },
+      {
+        "name": "Update Context Intent",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -1160,
+          -640
+        ]
+      },
+      {
+        "name": "Get Previous Context Intent",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -2440,
+          -460
+        ]
+      },
+      {
+        "name": "Route Message Intent",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          -1700,
+          -460
+        ]
+      },
+      {
+        "name": "Process Status",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -1340,
+          -640
+        ]
+      },
+      {
+        "name": "Simple Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          -2180,
+          -220
+        ]
+      },
+      {
+        "name": "Simple Memory3",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          1040,
+          -1180
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2540,
+          -620
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model6",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          -2340,
+          -220
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1420,
+          -1020
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          800,
+          -1480
+        ]
+      },
+      {
+        "name": "Numb of Videos",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          900,
+          -1380
+        ]
+      },
+      {
+        "name": "Default Intent",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -1920,
+          -460
+        ]
+      },
+      {
+        "name": "Playlist Limit",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          160,
+          -860
+        ]
+      },
+      {
+        "name": "Playlist or Video",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          160,
+          -640
+        ]
+      },
+      {
+        "name": "Get Fields for Summary",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2340,
+          480
+        ]
+      },
+      {
+        "name": "Update Context Process Done1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          2040,
+          480
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model8",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          880,
+          -1180
+        ]
+      },
+      {
+        "name": "Playlist HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          660,
+          -200
+        ]
+      },
+      {
+        "name": "YouTube Transcript1",
+        "type": "n8n-nodes-youtube-transcription-dmr.youtubeTranscripter",
+        "position": [
+          1200,
+          -860
+        ]
+      },
+      {
+        "name": "Video HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          900,
+          -860
+        ]
+      },
+      {
+        "name": "Get Title and Desc",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1200,
+          -640
+        ]
+      },
+      {
+        "name": "Split Out2",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1440,
+          -860
+        ]
+      },
+      {
+        "name": "Concatenate1",
+        "type": "n8n-nodes-base.summarize",
+        "position": [
+          1660,
+          -860
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          800,
+          -1000
+        ]
+      },
+      {
+        "name": "Get Videos",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1520,
+          480
+        ]
+      },
+      {
+        "name": "Get Playlist Videos Data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          860,
+          -200
+        ]
+      },
+      {
+        "name": "Embeddings Google Gemini2",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "position": [
+          2640,
+          1060
+        ]
+      },
+      {
+        "name": "Qdrant Vector Store3",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          -100,
+          160
+        ]
+      },
+      {
+        "name": "Answer questions with a vector store",
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "position": [
+          180,
+          -40
+        ]
+      },
+      {
+        "name": "Qdrant Vector Store4",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          2700,
+          900
+        ]
+      },
+      {
+        "name": "Answer questions with a vector store1",
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "position": [
+          2860,
+          700
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          3000,
+          900
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          220,
+          160
+        ]
+      },
+      {
+        "name": "Qdrant Vector Store2",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          -820,
+          -880
+        ]
+      },
+      {
+        "name": "Embeddings Google Gemini4",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "position": [
+          -840,
+          -640
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -260,
+          -880
+        ]
+      },
+      {
+        "name": "Count Content",
+        "type": "n8n-nodes-base.summarize",
+        "position": [
+          -460,
+          -880
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          20,
+          -1020
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -920,
+          -1020
+        ]
+      },
+      {
+        "name": "Update Context Intent1",
+        "type": "n8n-nodes-base.redis",
+        "position": [
+          -460,
+          -640
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2540,
+          20
+        ]
+      }
+    ],
+    "connections_count": 58,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 71
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 2350,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "video http request",
+      "qdrant vector store2",
+      "recursive character text splitter",
+      "sticky note7",
+      "get videos",
+      "@n8n/n8n nodes langchain.embeddingsGoogleGemini",
+      "stickyNote",
+      "split out1",
+      "default data loader",
+      "httpRequest",
+      "google gemini chat model2",
+      "playlist limit",
+      "@n8n/n8n nodes langchain.vectorStoreQdrant",
+      "split out",
+      "merge",
+      "get previous context intent",
+      "embeddings google gemini1",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "chat buffer memory",
+      "message intent",
+      "qdrant vector store",
+      "concatenate1",
+      "playlist or video",
+      "chat buffer memory1",
+      "answer questions with a vector store",
+      "embeddings google gemini",
+      "summarize & analyze transcript",
+      "concatenate",
+      "google gemini chat model4",
+      "answer questions with a vector store1",
+      "youtube transcript",
+      "update context intent",
+      "google gemini chat model3",
+      "get title and desc",
+      "full summary",
+      "@n8n/n8n nodes langchain.agent",
+      "default intent",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "sticky note5",
+      "update context process done1",
+      "youtube transcript1",
+      "summarize",
+      "sticky note12",
+      "edit fields",
+      "structured output parser1",
+      "numb of videos",
+      "switch",
+      "n8n nodes youtube transcription dmr.youtubeTranscripter",
+      "sticky note3",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "get playlist videos data",
+      "google gemini chat model8",
+      "qdrant vector store4",
+      "google gemini chat model6",
+      "embeddings google gemini4",
+      "code",
+      "redis",
+      "google gemini chat model1",
+      "sticky note9",
+      "sticky note4",
+      "set",
+      "update context intent1",
+      "limit",
+      "delete collection",
+      "ai agent",
+      "chat",
+      "get fields for summary",
+      "sticky note",
+      "complex",
+      "sticky note1",
+      "sticky note2",
+      "splitOut",
+      "video titles",
+      "@n8n/n8n nodes langchain.chatTrigger",
+      "handle queries",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "split out2",
+      "simple memory",
+      "google gemini chat model",
+      "simple memory3",
+      "sticky note6",
+      "process status",
+      "sticky note10",
+      "@n8n/n8n nodes langchain.toolVectorStore",
+      "webhook integration",
+      "route message intent",
+      "playlist http request",
+      "embeddings google gemini2",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "sticky note8",
+      "count content",
+      "qdrant vector store3"
+    ],
+    "description": "'⚡AI-Powered YouTube Playlist & Video Summarization and Analysis v2' es un workflow diseñado para webhook integration con 72 nodos activado por Chat que ejecuta: Google Gemini Chat Model1, Handle Queries, Split Out en la categoría de ai-ml.",
+    "semantic_content": "Workflow: ⚡AI-Powered YouTube Playlist & Video Summarization and Analysis v2. Nodos: Google Gemini Chat Model1 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Handle Queries (@n8n/n8n-nodes-langchain.agent), Split Out (splitOut), Summarize & Analyze Transcript (@n8n/n8n-nodes-langchain.chainLlm), Concatenate (summarize), Split Out1 (splitOut), Limit (limit), Qdrant Vector Store (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Recursive Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), Embeddings Google Gemini (@n8n/n8n-nodes-langchain.embeddingsGoogleGemini), Google Gemini Chat Model2 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Embeddings Google Gemini1 (@n8n/n8n-nodes-langchain.embeddingsGoogleGemini), Chat (@n8n/n8n-nodes-langchain.chatTrigger), Video Titles (splitOut), Merge (merge), Edit Fields (set), AI Agent (@n8n/n8n-nodes-langchain.agent), Google Gemini Chat Model4 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Delete Collection (httpRequest), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Chat Buffer Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), Full Summary (summarize), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Chat Buffer Memory1 (@n8n/n8n-nodes-langchain.memoryBufferWindow), YouTube Transcript (n8n-nodes-youtube-transcription-dmr.youtubeTranscripter), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Message Intent (@n8n/n8n-nodes-langchain.agent), Structured Output Parser1 (@n8n/n8n-nodes-langchain.outputParserStructured), Update Context Intent (redis), Get Previous Context Intent (redis), Route Message Intent (switch), Process Status (code), Simple Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), Simple Memory3 (@n8n/n8n-nodes-langchain.memoryBufferWindow), Sticky Note7 (stickyNote), Google Gemini Chat Model6 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Sticky Note9 (stickyNote), Sticky Note10 (stickyNote), Numb of Videos (@n8n/n8n-nodes-langchain.agent), Default Intent (code), Playlist Limit (if), Playlist or Video (switch), Get Fields for Summary (code), Update Context Process Done1 (redis), Google Gemini Chat Model8 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Playlist HTTP Request (httpRequest), YouTube Transcript1 (n8n-nodes-youtube-transcription-dmr.youtubeTranscripter), Video HTTP Request (httpRequest), Get Title and Desc (code), Split Out2 (splitOut), Concatenate1 (summarize), Sticky Note12 (stickyNote), Get Videos (code), Get Playlist Videos Data (code), Embeddings Google Gemini2 (@n8n/n8n-nodes-langchain.embeddingsGoogleGemini), Qdrant Vector Store3 (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Answer questions with a vector store (@n8n/n8n-nodes-langchain.toolVectorStore), Qdrant Vector Store4 (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Answer questions with a vector store1 (@n8n/n8n-nodes-langchain.toolVectorStore), Google Gemini Chat Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Google Gemini Chat Model3 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Qdrant Vector Store2 (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Embeddings Google Gemini4 (@n8n/n8n-nodes-langchain.embeddingsGoogleGemini), If (if), Count Content (summarize), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Update Context Intent1 (redis), Sticky Note8 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Chat",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Handle Queries",
+      "n8n-nodes-base.splitOut",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "Chat",
+      "@n8n/n8n-nodes-langchain.agent",
+      "Google Gemini Chat Model1",
+      "Split Out"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "@n8n/n8n-nodes-langchain.chattrigger",
+      "@n8n/n8n-nodes-langchain.toolvectorstore",
+      "@n8n/n8n-nodes-langchain.embeddingsgooglegemini",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.redis",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.code",
+      "n8n-nodes-youtube-transcription-dmr.youtubetranscripter",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.vectorstoreqdrant",
+      "@n8n/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.if"
+    ],
+    "search_terms": [
+      "0971",
+      "webhook",
+      "0971_limit_splitout_automation_webhook",
+      "automation",
+      "limit",
+      "splitout"
+    ],
+    "alternative_names": [
+      "⚡AI-Powered YouTube Playlist & Video Summarization and Analysis v2"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "@n8n/n8n-nodes-langchain.chatTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 61.27659574468085,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 82.25531914893617
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 0.9999999403953552,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:11.397214"
+  },
+  "semantic_vector": [
+    -0.0517987497150898,
+    -0.04892368242144585,
+    0.05135268718004227,
+    -0.04026924818754196,
+    -0.013806838542222977,
+    -0.05339546129107475,
+    -0.006717183627188206,
+    0.017434176057577133,
+    -0.05338561162352562,
+    0.053293801844120026,
+    -0.036441706120967865,
+    -0.05168548971414566,
+    -0.03525755926966667,
+    -0.05340391770005226,
+    -0.049201250076293945,
+    0.05341147631406784,
+    0.05264728143811226,
+    -0.01171059999614954,
+    -0.04946857690811157,
+    0.04193640500307083,
+    0.011531423777341843,
+    0.0008755120798014104,
+    -0.00922276172786951,
+    -0.053100887686014175,
+    -0.05319618806242943,
+    0.020071564242243767,
+    -0.02789817377924919,
+    0.048843368887901306,
+    -0.05080790817737579,
+    0.04184644669294357,
+    0.05322512984275818,
+    0.0020318699534982443,
+    -0.044620729982852936,
+    0.013753537088632584,
+    0.04880195111036301,
+    -0.04335933178663254,
+    0.05000446364283562,
+    0.03135429695248604,
+    -0.053049806505441666,
+    -0.05290236324071884,
+    -0.01976984366774559,
+    0.05278868228197098,
+    -0.049942802637815475,
+    0.05087647587060928,
+    0.05341140553355217,
+    -0.03978986665606499,
+    -0.024732764810323715,
+    0.016723359003663063,
+    -0.05300131067633629,
+    -0.05329667404294014,
+    -0.03373119980096817,
+    -0.014815009199082851,
+    -0.05341147631406784,
+    -0.053377944976091385,
+    -0.05067915841937065,
+    -0.04705052822828293,
+    0.053386140614748,
+    0.0031421699095517397,
+    0.012559863738715649,
+    0.04205375537276268,
+    0.04839722812175751,
+    -0.05319545418024063,
+    0.024215301498770714,
+    0.05309338495135307,
+    0.018458394333720207,
+    -0.013752119615674019,
+    0.05300615727901459,
+    -0.04352574795484543,
+    0.021833602339029312,
+    0.008407029323279858,
+    -0.053236085921525955,
+    -0.013650738634169102,
+    -0.050689540803432465,
+    0.05332515388727188,
+    -0.0012926463969051838,
+    -0.006271202117204666,
+    0.053342416882514954,
+    0.013051657006144524,
+    0.04811626672744751,
+    -0.02053801156580448,
+    0.05334523692727089,
+    -0.03015570528805256,
+    0.007209113799035549,
+    -0.05194372311234474,
+    -0.023634333163499832,
+    0.04227660968899727,
+    0.022857245057821274,
+    -0.052558861672878265,
+    -0.05059640109539032,
+    -0.0531269907951355,
+    -0.04984205216169357,
+    -0.05063721537590027,
+    0.053327638655900955,
+    -0.03907579928636551,
+    0.04464385285973549,
+    0.0007561942911706865,
+    -0.039701931178569794,
+    0.05285554379224777,
+    -0.05340125039219856,
+    -0.05340871959924698,
+    -0.0019469419494271278,
+    -0.05274636670947075,
+    -0.053182490170001984,
+    0.025760183110833168,
+    0.04748445004224777,
+    0.05340804532170296,
+    0.053406715393066406,
+    0.052664127200841904,
+    0.008123712614178658,
+    -0.05340912193059921,
+    -0.04106108844280243,
+    -0.053402867168188095,
+    0.030375514179468155,
+    -0.0518229641020298,
+    0.029914403334259987,
+    0.04630158469080925,
+    -0.048178307712078094,
+    -0.05336214601993561,
+    0.04454236105084419,
+    0.03461208567023277,
+    0.04094244912266731,
+    0.05329972505569458,
+    0.045004621148109436,
+    0.026249835267663002,
+    0.05338459461927414,
+    0.024906566366553307,
+    -0.05266314744949341,
+    -0.04734458401799202,
+    0.05228704959154129,
+    -0.04695446789264679,
+    -0.04383623227477074,
+    -0.0326230451464653,
+    0.052947621792554855,
+    -0.04630200192332268,
+    -0.04132244363427162,
+    -0.05097546800971031,
+    0.035099733620882034,
+    0.04615596681833267,
+    -0.05201820656657219,
+    -0.0534079410135746,
+    -0.012793063186109066,
+    0.05341147631406784,
+    0.053014375269412994,
+    -0.0533858947455883,
+    -0.048892077058553696,
+    -0.053410567343235016,
+    0.04471545293927193,
+    0.003175010671839118,
+    0.05233531817793846,
+    0.01367856003344059,
+    -0.05224640667438507,
+    -0.05333760008215904,
+    0.0521419532597065,
+    0.01817922666668892,
+    0.053405750542879105,
+    0.05340835452079773,
+    -0.01647820882499218,
+    -0.0534062497317791,
+    0.03759164735674858,
+    -0.030364200472831726,
+    -0.05340758338570595,
+    -0.053391680121421814,
+    0.05267916992306709,
+    0.04296400025486946,
+    0.005828610621392727,
+    -0.053382713347673416,
+    -0.05329475179314613,
+    0.027823783457279205,
+    -0.05341142416000366,
+    0.010796883143484592,
+    0.053315985947847366,
+    0.003462915075942874,
+    -0.03565113991498947,
+    0.012890473939478397,
+    -0.05339687317609787,
+    0.044539205729961395,
+    0.04805350676178932,
+    0.050666484981775284,
+    0.0510798841714859,
+    -0.05160120874643326,
+    -0.04201670363545418,
+    -0.022417740896344185,
+    -0.053398825228214264,
+    0.044160325080156326,
+    0.05339762941002846,
+    0.046613920480012894,
+    -0.053396016359329224,
+    0.0517360083758831,
+    0.04859031364321709,
+    -0.014870213344693184,
+    0.028549592941999435,
+    0.047085583209991455,
+    -0.052102189511060715,
+    -0.05331779643893242,
+    -0.05287019908428192,
+    -0.05339968577027321,
+    0.024811936542391777,
+    0.05341147631406784,
+    0.049570437520742416,
+    0.006997439544647932,
+    0.053370971232652664,
+    0.05239617079496384,
+    -0.053220391273498535,
+    0.05127536505460739,
+    0.018536487594246864,
+    -0.04599711298942566,
+    0.05098644644021988,
+    0.04341404139995575,
+    -0.05341072008013725,
+    -0.04281500726938248,
+    0.03731176257133484,
+    0.05325078219175339,
+    0.03767802193760872,
+    0.053365301340818405,
+    -0.05341115593910217,
+    -0.05340001359581947,
+    -0.03533019870519638,
+    0.05014871433377266,
+    0.05282898247241974,
+    -0.022165903821587563,
+    0.024651866406202316,
+    0.04077412560582161,
+    0.018120987340807915,
+    0.04769451171159744,
+    -0.051235053688287735,
+    -0.05339615046977997,
+    -0.05279989168047905,
+    -0.052321117371320724,
+    -0.05333876609802246,
+    -0.053381260484457016,
+    0.017475083470344543,
+    -0.02248075045645237,
+    -0.05204908549785614,
+    -0.053411200642585754,
+    0.007791077718138695,
+    0.05329437181353569,
+    0.05341140180826187,
+    0.053408604115247726,
+    -0.0528002604842186,
+    0.048333797603845596,
+    -0.03054479882121086,
+    0.05337081849575043,
+    -0.011230101808905602,
+    0.050157081335783005,
+    0.031134363263845444,
+    0.05318914353847504,
+    0.05100838094949722,
+    0.030066825449466705,
+    0.053019385784864426,
+    0.05340677499771118,
+    -0.05340619385242462,
+    0.02341851219534874,
+    -0.053299013525247574,
+    -0.015956733375787735,
+    0.03825138509273529,
+    -0.05339957773685455,
+    0.045722875744104385,
+    0.05341147631406784,
+    -0.042049653828144073,
+    0.037000976502895355,
+    0.04808586835861206,
+    0.05329878255724907,
+    0.040467262268066406,
+    0.05336647480726242,
+    -0.038315966725349426,
+    0.0459989570081234,
+    0.04175688698887825,
+    -0.03398073837161064,
+    -0.05311887711286545,
+    0.04567714408040047,
+    -0.05335765331983566,
+    0.05040585622191429,
+    0.02154560387134552,
+    0.05103721097111702,
+    0.05338330194354057,
+    0.03592665493488312,
+    -0.05329342931509018,
+    0.034751590341329575,
+    0.05341143161058426,
+    -0.00847925990819931,
+    -0.03590155392885208,
+    -0.022898990660905838,
+    0.053145457059144974,
+    0.051037002354860306,
+    0.019185446202754974,
+    -0.05329587310552597,
+    0.05248456448316574,
+    0.05278206616640091,
+    -0.05175893008708954,
+    0.05311565846204758,
+    -0.04726267606019974,
+    -0.02156699262559414,
+    0.05341051518917084,
+    -0.05308212339878082,
+    0.04209638014435768,
+    -0.05262510105967522,
+    -0.0507303811609745,
+    -0.025090109556913376,
+    0.05271102488040924,
+    -0.0052675893530249596,
+    -0.017671339213848114,
+    -0.01962125673890114,
+    0.05209944769740105,
+    -0.014501933008432388,
+    -0.04670596122741699,
+    0.04755958542227745,
+    0.05220272019505501,
+    0.051421355456113815,
+    0.05173146724700928,
+    -0.05029291287064552,
+    0.044962212443351746,
+    0.03973903879523277,
+    -0.025881212204694748,
+    -0.047829777002334595,
+    0.02524768002331257,
+    -0.026148417964577675,
+    -0.04983938857913017,
+    -0.04815351590514183,
+    -0.004581911023706198,
+    0.04730325937271118,
+    0.02725253626704216,
+    -0.05340949818491936,
+    0.05339287966489792,
+    -0.04960555210709572,
+    0.03459842875599861,
+    0.039232704788446426,
+    0.05312151089310646,
+    -0.050639472901821136,
+    -0.024160640314221382,
+    -0.02157457545399666,
+    -0.033396389335393906,
+    -0.022653132677078247,
+    0.04357064142823219,
+    0.0534011572599411,
+    -0.04479881376028061,
+    0.024727197363972664,
+    0.05239682272076607,
+    0.05259275808930397,
+    0.027672408148646355,
+    -0.01431623101234436,
+    0.04325862601399422,
+    -0.052110787481069565,
+    -0.016710346564650536,
+    -0.04354749619960785,
+    -0.05341147631406784,
+    -0.04958496242761612,
+    0.01636982336640358,
+    -0.00010911996650975198,
+    -0.052694063633680344,
+    -0.03956126049160957,
+    0.052638184279203415,
+    -0.008122633211314678,
+    -0.03234783187508583,
+    0.05178193002939224,
+    0.05288425087928772,
+    0.05222189798951149,
+    -0.05341147631406784,
+    0.05202174559235573,
+    0.014791695401072502,
+    0.053357336670160294,
+    0.05285846069455147,
+    -0.05327920243144035,
+    -0.05340974032878876,
+    0.053157988935709,
+    -0.051092296838760376,
+    0.052126139402389526,
+    0.05331793427467346,
+    -0.05311880260705948,
+    -0.020699767395853996,
+    -0.0057106646709144115,
+    0.04780617728829384,
+    -0.052339714020490646,
+    -0.045482341200113297,
+    0.05176447331905365,
+    0.04942602664232254,
+    0.050402965396642685,
+    -0.051444921642541885,
+    -0.05339881032705307,
+    0.013662204146385193,
+    -0.01737908273935318,
+    0.006287612020969391,
+    0.02236761525273323,
+    0.05064883828163147,
+    0.048311807215213776,
+    0.01734003610908985,
+    -0.053297463804483414,
+    0.05332358926534653,
+    0.03878531605005264,
+    -0.03341184929013252,
+    -0.05338108912110329,
+    0.019953908398747444,
+    -0.05294003710150719,
+    0.05339778587222099,
+    0.052139900624752045,
+    -0.05320412665605545,
+    0.04517366737127304,
+    -0.04890485852956772,
+    0.04930928722023964,
+    0.05310043320059776,
+    -0.012445220723748207,
+    0.02084951661527157,
+    0.04680190607905388,
+    0.01712787337601185,
+    0.053039297461509705,
+    0.04919049143791199,
+    -0.0416213758289814,
+    -0.05340828001499176,
+    0.05283403769135475,
+    0.05185575783252716,
+    0.05117783322930336,
+    0.032202426344156265,
+    0.04004104807972908,
+    0.048680804669857025,
+    0.02368924394249916,
+    -0.04818660020828247,
+    -0.041447024792432785,
+    0.052890196442604065,
+    -0.05341043695807457,
+    -0.05334591865539551,
+    0.041101694107055664,
+    -0.04793894663453102,
+    0.04196716472506523,
+    -0.05341147631406784,
+    0.0532693937420845,
+    -0.051960114389657974,
+    0.05283636599779129,
+    -0.05340162292122841,
+    0.05329062044620514,
+    -0.053327836096286774,
+    0.00013451837003231049,
+    -0.03603588417172432,
+    -0.0339738167822361,
+    0.012959971092641354,
+    0.051501087844371796,
+    -0.05266653373837471,
+    -0.05140578746795654,
+    -0.05191534757614136,
+    -0.053406886756420135,
+    -0.05339741334319115,
+    0.04458067566156387,
+    0.015072797425091267,
+    -0.030973559245467186,
+    -0.018303390592336655,
+    0.014650529250502586,
+    0.05336635187268257,
+    -0.053409408777952194,
+    -0.05315503105521202,
+    -0.042571768164634705,
+    -0.05304616689682007,
+    -0.05340083688497543,
+    0.05291266366839409,
+    -0.038499969989061356,
+    0.05341145023703575,
+    0.02505403943359852,
+    0.026860354468226433,
+    -0.05341147631406784,
+    0.0491664744913578,
+    0.05341144651174545,
+    -0.02852041833102703,
+    -0.052993420511484146,
+    0.028317376971244812,
+    0.05319099873304367,
+    0.05318506807088852,
+    0.05333757773041725,
+    0.04659561812877655,
+    -0.05197983607649803,
+    0.052660126239061356,
+    0.01656048558652401,
+    -0.05274025350809097,
+    0.0534055195748806,
+    0.05112243443727493,
+    -0.05340082570910454,
+    0.05339977890253067,
+    0.02523059956729412,
+    -0.041661493480205536,
+    0.0028879849705845118,
+    0.0530441515147686,
+    0.044434040784835815,
+    0.03638089448213577,
+    -0.05262388288974762,
+    -0.05229111388325691,
+    0.05296402424573898,
+    -0.049658119678497314,
+    -0.053374387323856354,
+    0.05282418057322502,
+    0.05335789546370506,
+    -0.043006327003240585,
+    -0.02829534001648426,
+    0.03431887924671173,
+    -0.013335248455405235,
+    -0.04996659606695175,
+    0.04464526101946831,
+    -0.033381517976522446,
+    0.05262649059295654,
+    -0.052770230919122696,
+    0.05339675396680832,
+    0.05051771178841591,
+    0.05218011885881424,
+    -0.053293339908123016,
+    0.05294594541192055,
+    0.05314040184020996,
+    -0.049554191529750824,
+    0.05332520976662636,
+    -0.05341147631406784,
+    -0.04864780977368355,
+    0.044733475893735886,
+    -0.000746675708796829,
+    -0.04324336349964142,
+    -0.03807297348976135,
+    0.05341147631406784,
+    -0.029322613030672073,
+    -0.033670030534267426
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Chat; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Limit",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Limit"
+  }
+}

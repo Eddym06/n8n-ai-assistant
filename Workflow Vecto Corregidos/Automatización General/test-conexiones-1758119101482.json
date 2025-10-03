@@ -1,0 +1,78 @@
+{
+  "nodes": [
+    {
+      "id": "trigger-1",
+      "name": "Start Workflow",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        10
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "start"
+      }
+    },
+    {
+      "id": "process-2",
+      "name": "Process Step 2",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        800,
+        10
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "step2",
+            "value": "{{ $json }}"
+          }
+        ]
+      }
+    },
+    {
+      "id": "process-3",
+      "name": "Process Step 3",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        1150,
+        10
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "step3",
+            "value": "{{ $json }}"
+          }
+        ]
+      }
+    }
+  ],
+  "connections": {
+    "trigger-1": {
+      "main": [
+        [
+          {
+            "node": "process-2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "process-2": {
+      "main": [
+        [
+          {
+            "node": "process-3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

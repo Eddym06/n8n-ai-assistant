@@ -1,0 +1,1497 @@
+{
+  "workflow_info": {
+    "id": "pVcvUOoBnXkXQmdO",
+    "name": "AI News Data Ingestion",
+    "display_name": "AI News Data Ingestion",
+    "file_name": "ai_news_data_ingestion.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Investigación y Análisis\\ai_news_data_ingestion.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "ee06b4ebb00e"
+  },
+  "structure": {
+    "total_nodes": 80,
+    "node_types": [
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.scheduleTrigger",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.s3",
+      "n8n-nodes-base.reddit",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 11
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 13
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 11
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 11
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.s3",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.reddit",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "the_neuron_trigger",
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "position": [
+          -1080,
+          1920
+        ]
+      },
+      {
+        "name": "futurepedia_trigger",
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "position": [
+          -1080,
+          2140
+        ]
+      },
+      {
+        "name": "superhuman_trigger",
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "position": [
+          -1080,
+          2360
+        ]
+      },
+      {
+        "name": "the_rundown_ai_trigger",
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "position": [
+          -1080,
+          1700
+        ]
+      },
+      {
+        "name": "taaft_trigger",
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "position": [
+          -1080,
+          2580
+        ]
+      },
+      {
+        "name": "bens_bites_trigger",
+        "type": "n8n-nodes-base.rssFeedReadTrigger",
+        "position": [
+          -1080,
+          1480
+        ]
+      },
+      {
+        "name": "google_news_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          1260
+        ]
+      },
+      {
+        "name": "hacker_news_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          1020
+        ]
+      },
+      {
+        "name": "reddit_artificial_inteligence_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          780
+        ]
+      },
+      {
+        "name": "reddit_open_ai_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          520
+        ]
+      },
+      {
+        "name": "reddit_artificial_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          260
+        ]
+      },
+      {
+        "name": "blog_meta_ai_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          20
+        ]
+      },
+      {
+        "name": "blog_cloudflare_ai_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          -220
+        ]
+      },
+      {
+        "name": "blog_anthropic_ai_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          -440
+        ]
+      },
+      {
+        "name": "blog_google_ai_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          -660
+        ]
+      },
+      {
+        "name": "blog_open_ai_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          -880
+        ]
+      },
+      {
+        "name": "blog_nvidia_ai_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          -1100
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "scrape_url",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1800,
+          520
+        ]
+      },
+      {
+        "name": "evaluate_content",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2320,
+          520
+        ]
+      },
+      {
+        "name": "normalize_neuron",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          40,
+          1920
+        ]
+      },
+      {
+        "name": "normalize_futurepedia",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          40,
+          2140
+        ]
+      },
+      {
+        "name": "normalize_superhuman",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          40,
+          2360
+        ]
+      },
+      {
+        "name": "normalize_the_rundown_ai",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          40,
+          1700
+        ]
+      },
+      {
+        "name": "normalize_taaft",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          40,
+          2580
+        ]
+      },
+      {
+        "name": "normalize_bens_bites",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          40,
+          1480
+        ]
+      },
+      {
+        "name": "upload_temp_markdown",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          3560,
+          360
+        ]
+      },
+      {
+        "name": "copy_markdown",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3780,
+          360
+        ]
+      },
+      {
+        "name": "upload_temp_html",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          3560,
+          680
+        ]
+      },
+      {
+        "name": "copy_html",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3780,
+          680
+        ]
+      },
+      {
+        "name": "delete_temp_html",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          4000,
+          680
+        ]
+      },
+      {
+        "name": "delete_temp_markdown",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          4000,
+          360
+        ]
+      },
+      {
+        "name": "fetch_google_news_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          1260
+        ]
+      },
+      {
+        "name": "normalize_google_news_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          1260
+        ]
+      },
+      {
+        "name": "get_identity",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          620,
+          520
+        ]
+      },
+      {
+        "name": "search_existing_resource",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          960,
+          520
+        ]
+      },
+      {
+        "name": "skip_existing_resources",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1260,
+          520
+        ]
+      },
+      {
+        "name": "fetch_hacker_news_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          1020
+        ]
+      },
+      {
+        "name": "split_google_news_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          1260
+        ]
+      },
+      {
+        "name": "split_hacker_news_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          1020
+        ]
+      },
+      {
+        "name": "ensure_revelant",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          2800,
+          520
+        ]
+      },
+      {
+        "name": "is_revelant_content_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          2480,
+          900
+        ]
+      },
+      {
+        "name": "normalize_hacker_news_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          1020
+        ]
+      },
+      {
+        "name": "try_extract_external_sources",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          3100,
+          520
+        ]
+      },
+      {
+        "name": "o3-mini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2720,
+          900
+        ]
+      },
+      {
+        "name": "fetch_reddit_artificial_inteligence_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          780
+        ]
+      },
+      {
+        "name": "split_reddit_artificial_inteligence_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          780
+        ]
+      },
+      {
+        "name": "get_reddit_artificial_inteligence_items",
+        "type": "n8n-nodes-base.reddit",
+        "position": [
+          -420,
+          780
+        ]
+      },
+      {
+        "name": "filter_reddit_artificial_inteligence_items",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -200,
+          780
+        ]
+      },
+      {
+        "name": "filter_scrape_errors",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          2080,
+          520
+        ]
+      },
+      {
+        "name": "normalize_reddit_artificial_inteligence_items",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          780
+        ]
+      },
+      {
+        "name": "fetch_reddit_open_ai_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          520
+        ]
+      },
+      {
+        "name": "split_reddit_open_ai_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          520
+        ]
+      },
+      {
+        "name": "get_reddit_open_ai_items",
+        "type": "n8n-nodes-base.reddit",
+        "position": [
+          -420,
+          520
+        ]
+      },
+      {
+        "name": "filter_reddit_open_ai_items",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -200,
+          520
+        ]
+      },
+      {
+        "name": "normalize_reddit_open_ai_items",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          520
+        ]
+      },
+      {
+        "name": "fetch_reddit_artificial_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          260
+        ]
+      },
+      {
+        "name": "split_reddit_artificial_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          260
+        ]
+      },
+      {
+        "name": "get_reddit_artificial_items",
+        "type": "n8n-nodes-base.reddit",
+        "position": [
+          -420,
+          260
+        ]
+      },
+      {
+        "name": "filter_reddit_artificial_items",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -200,
+          260
+        ]
+      },
+      {
+        "name": "normalize_reddit_artificial_items",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          260
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1140,
+          -1200
+        ]
+      },
+      {
+        "name": "fetch_blog_meta_ai_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          20
+        ]
+      },
+      {
+        "name": "split_blog_meta_ai_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          20
+        ]
+      },
+      {
+        "name": "normalize_blog_meta_ai_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          20
+        ]
+      },
+      {
+        "name": "split_blog_cloudflare_ai_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          -220
+        ]
+      },
+      {
+        "name": "normalize_blog_cloudflare_ai_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          -220
+        ]
+      },
+      {
+        "name": "fetch_blog_cloudflare_ai_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          -220
+        ]
+      },
+      {
+        "name": "fetch_blog_anthropic_ai_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          -440
+        ]
+      },
+      {
+        "name": "split_blog_anthropic_ai_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          -440
+        ]
+      },
+      {
+        "name": "normalize_blog_anthropic_ai_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          -440
+        ]
+      },
+      {
+        "name": "fetch_blog_google_ai_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          -660
+        ]
+      },
+      {
+        "name": "split_blog_google_ai_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          -660
+        ]
+      },
+      {
+        "name": "normalize_blog_google_ai_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          -660
+        ]
+      },
+      {
+        "name": "fetch_blog_open_ai_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          -880
+        ]
+      },
+      {
+        "name": "normalize_blog_open_ai_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          -880
+        ]
+      },
+      {
+        "name": "split_blog_open_ai_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          -880
+        ]
+      },
+      {
+        "name": "fetch_blog_nvidia_ai_feed",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -860,
+          -1100
+        ]
+      },
+      {
+        "name": "split_blog_nvidia_ai_items",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -640,
+          -1100
+        ]
+      },
+      {
+        "name": "normalize_blog_nvidia_ai_articles",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          40,
+          -1100
+        ]
+      },
+      {
+        "name": "delay",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1540,
+          520
+        ]
+      }
+    ],
+    "connections_count": 77,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 17,
+      "action_count": 63
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "Scheduled automation"
+    ],
+    "complexity_score": 2490,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "fetch_blog_cloudflare_ai_feed",
+      "futurepedia_trigger",
+      "executeWorkflow",
+      "hacker_news_trigger",
+      "evaluate_content",
+      "fetch_blog_meta_ai_feed",
+      "normalize_neuron",
+      "google_news_trigger",
+      "stickyNote",
+      "ensure_revelant",
+      "filter_reddit_artificial_items",
+      "reddit_open_ai_trigger",
+      "blog_cloudflare_ai_trigger",
+      "split_blog_anthropic_ai_items",
+      "reddit",
+      "split_blog_google_ai_items",
+      "split_blog_nvidia_ai_items",
+      "httpRequest",
+      "normalize_superhuman",
+      "normalize_blog_cloudflare_ai_articles",
+      "o3-mini",
+      "normalize_reddit_artificial_inteligence_items",
+      "get_reddit_artificial_inteligence_items",
+      "copy_html",
+      "split_reddit_open_ai_items",
+      "fetch_reddit_artificial_feed",
+      "scrape_url",
+      "taaft_trigger",
+      "get_reddit_open_ai_items",
+      "split_blog_meta_ai_items",
+      "copy_markdown",
+      "the_rundown_ai_trigger",
+      "fetch_hacker_news_feed",
+      "bens_bites_trigger",
+      "split_hacker_news_items",
+      "delete_temp_html",
+      "reddit_artificial_inteligence_trigger",
+      "blog_meta_ai_trigger",
+      "normalize_reddit_open_ai_items",
+      "fetch_blog_google_ai_feed",
+      "normalize_blog_google_ai_articles",
+      "fetch_blog_anthropic_ai_feed",
+      "normalize_google_news_articles",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "search_existing_resource",
+      "get_identity",
+      "normalize_blog_nvidia_ai_articles",
+      "integration",
+      "normalize_the_rundown_ai",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "superhuman_trigger",
+      "fetch_blog_nvidia_ai_feed",
+      "delay",
+      "reddit_artificial_trigger",
+      "fetch_google_news_feed",
+      "code",
+      "blog_anthropic_ai_trigger",
+      "the_neuron_trigger",
+      "set",
+      "wait",
+      "blog_google_ai_trigger",
+      "normalize_blog_anthropic_ai_articles",
+      "complex",
+      "sticky note1",
+      "upload_temp_html",
+      "splitOut",
+      "split_reddit_artificial_inteligence_items",
+      "filter_scrape_errors",
+      "split_reddit_artificial_items",
+      "skip_existing_resources",
+      "normalize_futurepedia",
+      "blog_open_ai_trigger",
+      "normalize_reddit_artificial_items",
+      "fetch_blog_open_ai_feed",
+      "fetch_reddit_artificial_inteligence_feed",
+      "is_revelant_content_parser",
+      "scheduleTrigger",
+      "normalize_blog_meta_ai_articles",
+      "fetch_reddit_open_ai_feed",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "normalize_hacker_news_articles",
+      "filter_reddit_artificial_inteligence_items",
+      "get_reddit_artificial_items",
+      "rssFeedReadTrigger",
+      "normalize_bens_bites",
+      "webhook integration",
+      "normalize_taaft",
+      "blog_nvidia_ai_trigger",
+      "upload_temp_markdown",
+      "split_blog_open_ai_items",
+      "delete_temp_markdown",
+      "filter",
+      "split_google_news_items",
+      "try_extract_external_sources",
+      "split_blog_cloudflare_ai_items",
+      "normalize_blog_open_ai_articles",
+      "filter_reddit_open_ai_items"
+    ],
+    "description": "'AI News Data Ingestion' es un workflow diseñado para webhook integration con 80 nodos con 17 disparadores que ejecuta: scrape_url, evaluate_content, normalize_neuron en la categoría de integration.",
+    "semantic_content": "Workflow: AI News Data Ingestion. Nodos: the_neuron_trigger (rssFeedReadTrigger), futurepedia_trigger (rssFeedReadTrigger), superhuman_trigger (rssFeedReadTrigger), scrape_url (executeWorkflow), evaluate_content (@n8n/n8n-nodes-langchain.chainLlm), normalize_neuron (set), normalize_futurepedia (set), normalize_superhuman (set), the_rundown_ai_trigger (rssFeedReadTrigger), normalize_the_rundown_ai (set), taaft_trigger (rssFeedReadTrigger), normalize_taaft (set), bens_bites_trigger (rssFeedReadTrigger), normalize_bens_bites (set), upload_temp_markdown (s3), copy_markdown (httpRequest), upload_temp_html (s3), copy_html (httpRequest), delete_temp_html (s3), delete_temp_markdown (s3), google_news_trigger (scheduleTrigger), fetch_google_news_feed (httpRequest), normalize_google_news_articles (code), get_identity (set), search_existing_resource (s3), skip_existing_resources (filter), hacker_news_trigger (scheduleTrigger), fetch_hacker_news_feed (httpRequest), split_google_news_items (splitOut), split_hacker_news_items (splitOut), ensure_revelant (filter), is_revelant_content_parser (@n8n/n8n-nodes-langchain.outputParserStructured), normalize_hacker_news_articles (code), try_extract_external_sources (@n8n/n8n-nodes-langchain.informationExtractor), o3-mini (@n8n/n8n-nodes-langchain.lmChatOpenAi), fetch_reddit_artificial_inteligence_feed (httpRequest), split_reddit_artificial_inteligence_items (splitOut), get_reddit_artificial_inteligence_items (reddit), filter_reddit_artificial_inteligence_items (filter), filter_scrape_errors (filter), normalize_reddit_artificial_inteligence_items (code), reddit_artificial_inteligence_trigger (scheduleTrigger), reddit_open_ai_trigger (scheduleTrigger), fetch_reddit_open_ai_feed (httpRequest), split_reddit_open_ai_items (splitOut), get_reddit_open_ai_items (reddit), filter_reddit_open_ai_items (filter), normalize_reddit_open_ai_items (code), reddit_artificial_trigger (scheduleTrigger), fetch_reddit_artificial_feed (httpRequest), split_reddit_artificial_items (splitOut), get_reddit_artificial_items (reddit), filter_reddit_artificial_items (filter), normalize_reddit_artificial_items (code), Sticky Note1 (stickyNote), blog_meta_ai_trigger (scheduleTrigger), fetch_blog_meta_ai_feed (httpRequest), split_blog_meta_ai_items (splitOut), normalize_blog_meta_ai_articles (code), blog_cloudflare_ai_trigger (scheduleTrigger), split_blog_cloudflare_ai_items (splitOut), normalize_blog_cloudflare_ai_articles (code), blog_anthropic_ai_trigger (scheduleTrigger), fetch_blog_cloudflare_ai_feed (httpRequest), fetch_blog_anthropic_ai_feed (httpRequest), split_blog_anthropic_ai_items (splitOut), normalize_blog_anthropic_ai_articles (code), blog_google_ai_trigger (scheduleTrigger), fetch_blog_google_ai_feed (httpRequest), split_blog_google_ai_items (splitOut), normalize_blog_google_ai_articles (code), blog_open_ai_trigger (scheduleTrigger), fetch_blog_open_ai_feed (httpRequest), normalize_blog_open_ai_articles (code), split_blog_open_ai_items (splitOut), blog_nvidia_ai_trigger (scheduleTrigger), fetch_blog_nvidia_ai_feed (httpRequest), split_blog_nvidia_ai_items (splitOut), normalize_blog_nvidia_ai_articles (code), delay (wait). Propósito: webhook integration. Categoría: integration. Disparadores: the_neuron_trigger, futurepedia_trigger, superhuman_trigger, the_rundown_ai_trigger, taaft_trigger, bens_bites_trigger, google_news_trigger, hacker_news_trigger, reddit_artificial_inteligence_trigger, reddit_open_ai_trigger, reddit_artificial_trigger, blog_meta_ai_trigger, blog_cloudflare_ai_trigger, blog_anthropic_ai_trigger, blog_google_ai_trigger, blog_open_ai_trigger, blog_nvidia_ai_trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "futurepedia_trigger",
+      "hacker_news_trigger",
+      "the_rundown_ai_trigger",
+      "evaluate_content",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "bens_bites_trigger",
+      "google_news_trigger",
+      "blog_open_ai_trigger",
+      "normalize_neuron",
+      "reddit_open_ai_trigger",
+      "superhuman_trigger",
+      "blog_cloudflare_ai_trigger",
+      "n8n-nodes-base.set",
+      "reddit_artificial_trigger",
+      "reddit_artificial_inteligence_trigger",
+      "blog_nvidia_ai_trigger",
+      "blog_anthropic_ai_trigger",
+      "blog_meta_ai_trigger",
+      "the_neuron_trigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.executeWorkflow",
+      "blog_google_ai_trigger",
+      "scrape_url",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "taaft_trigger"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.rssfeedreadtrigger",
+      "n8n-nodes-base.httprequest",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.s3",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "n8n-nodes-base.reddit",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "data",
+      "ai_news_data_ingestion",
+      "ingestion",
+      "news"
+    ],
+    "alternative_names": [
+      "AI News Data Ingestion"
+    ],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.rssFeedReadTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 64.2570281124498,
+    "best_practices_score": 50.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 77.85140562248996
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.437870"
+  },
+  "semantic_vector": [
+    -0.05058908462524414,
+    -0.05494984611868858,
+    -0.0007357102585956454,
+    0.0028527225367724895,
+    -0.017520174384117126,
+    0.019075077027082443,
+    0.003773306030780077,
+    -0.03316643461585045,
+    -0.061579059809446335,
+    0.04937777295708656,
+    -0.0027722083032131195,
+    -0.008093326352536678,
+    0.02517121657729149,
+    0.05114363506436348,
+    0.05988830700516701,
+    0.06159021332859993,
+    0.0428449809551239,
+    -0.010649635456502438,
+    -0.004116446245461702,
+    -0.04044719040393829,
+    -0.021816620603203773,
+    0.04556145891547203,
+    0.02562793530523777,
+    -0.025293678045272827,
+    0.0582021027803421,
+    -0.051973938941955566,
+    0.04699275642633438,
+    0.039862606674432755,
+    -0.026292795315384865,
+    0.009588622488081455,
+    0.05236561968922615,
+    0.05233066529035568,
+    -0.061560314148664474,
+    0.05236826464533806,
+    0.06116989254951477,
+    -0.0046974066644907,
+    0.015686577185988426,
+    0.03399680182337761,
+    -0.0036025752779096365,
+    -0.04451173543930054,
+    0.04520970210433006,
+    0.0472075417637825,
+    0.048167891800403595,
+    0.05655110254883766,
+    0.06158966198563576,
+    0.004362015053629875,
+    0.01971673034131527,
+    0.04672232270240784,
+    0.026368938386440277,
+    0.002803462790325284,
+    0.022512046620249748,
+    -0.03714281693100929,
+    -0.061589520424604416,
+    -0.06050705909729004,
+    -0.05979805439710617,
+    0.03532644733786583,
+    0.060427408665418625,
+    0.029955431818962097,
+    0.004460293333977461,
+    -0.0046508121304214,
+    0.05783044174313545,
+    0.047118715941905975,
+    -0.019417395815253258,
+    0.06146863475441933,
+    -0.005737731233239174,
+    -0.04809104651212692,
+    0.0480293370783329,
+    -0.036131441593170166,
+    0.046956587582826614,
+    -0.04120909422636032,
+    -0.06143920123577118,
+    0.0421343632042408,
+    0.055676378309726715,
+    0.05809527263045311,
+    -0.040502455085515976,
+    0.05445651710033417,
+    0.04698067158460617,
+    -0.0582897886633873,
+    0.002011056523770094,
+    0.008889480493962765,
+    0.059266138821840286,
+    0.04463804140686989,
+    0.05309568718075752,
+    -0.05109287053346634,
+    0.06151994317770004,
+    0.036878038197755814,
+    0.016851648688316345,
+    0.0018848103936761618,
+    -0.02170024998486042,
+    0.007251055911183357,
+    -0.061096008867025375,
+    0.052076615393161774,
+    0.050004683434963226,
+    0.008946025744080544,
+    0.03815808892250061,
+    -0.056940704584121704,
+    0.05697561427950859,
+    0.05718138813972473,
+    -0.0614030621945858,
+    -0.06156812980771065,
+    0.056022923439741135,
+    -0.04620709642767906,
+    -0.04052087292075157,
+    -0.023010607808828354,
+    0.059823743999004364,
+    -0.04731744900345802,
+    0.06159015744924545,
+    -0.007134131155908108,
+    0.03585922345519066,
+    -0.061573855578899384,
+    -0.052785828709602356,
+    -0.049870312213897705,
+    0.04201037809252739,
+    -0.0020759152248501778,
+    0.025104288011789322,
+    -0.02687946893274784,
+    -0.01508614607155323,
+    -0.00010080236097564921,
+    0.029362913221120834,
+    0.06090660020709038,
+    0.03999286890029907,
+    0.06090097874403,
+    0.057627689093351364,
+    0.022080810740590096,
+    0.06008971482515335,
+    0.05674448981881142,
+    0.05769922211766243,
+    0.008139248937368393,
+    0.040707677602767944,
+    -0.03140107914805412,
+    0.04963808134198189,
+    -0.018035681918263435,
+    0.06015085056424141,
+    -0.04576900228857994,
+    0.04822536185383797,
+    -0.05196508392691612,
+    -0.0104655297473073,
+    0.003161368425935507,
+    -0.05585860833525658,
+    -0.061464566737413406,
+    -0.0513286218047142,
+    0.06159021332859993,
+    0.02694733813405037,
+    0.05065348744392395,
+    -0.05433102324604988,
+    -0.06159021332859993,
+    0.059058014303445816,
+    -0.04405634477734566,
+    -0.013142438605427742,
+    0.050859637558460236,
+    -0.02231731452047825,
+    -0.053626153618097305,
+    0.05064617842435837,
+    -0.061274707317352295,
+    0.05004357919096947,
+    0.06136271730065346,
+    -0.026915887370705605,
+    -0.05639064684510231,
+    0.04872201383113861,
+    0.039921145886182785,
+    -0.032292746007442474,
+    -0.059758465737104416,
+    0.03998306393623352,
+    0.026510292664170265,
+    -0.012816254049539566,
+    -0.013134662993252277,
+    -0.059483230113983154,
+    0.032291896641254425,
+    -0.05212925374507904,
+    0.037929385900497437,
+    -0.03524339571595192,
+    0.04523363336920738,
+    -0.05369260162115097,
+    -0.009223494678735733,
+    0.05924805998802185,
+    0.01811027340590954,
+    0.03336840495467186,
+    0.012390755116939545,
+    0.05665484070777893,
+    -0.03507449850440025,
+    -0.044653672724962234,
+    -0.042733900249004364,
+    -0.040734075009822845,
+    0.014940591529011726,
+    0.06086140125989914,
+    -0.0399300642311573,
+    -0.05569245293736458,
+    0.06153429299592972,
+    0.004311820026487112,
+    0.040666237473487854,
+    0.06040443480014801,
+    -0.029418395832180977,
+    -0.011254832148551941,
+    -0.0612364336848259,
+    0.04496476426720619,
+    -0.05819530785083771,
+    -0.034517478197813034,
+    0.06159021332859993,
+    0.02236204221844673,
+    -0.04748093709349632,
+    -0.015086193569004536,
+    0.054289110004901886,
+    -0.06019526720046997,
+    0.06070617213845253,
+    0.032125312834978104,
+    0.028624966740608215,
+    0.005118112545460463,
+    0.03919791802763939,
+    -0.06154126301407814,
+    0.047549765557050705,
+    0.05834702029824257,
+    0.047249529510736465,
+    0.05906425788998604,
+    0.016755932942032814,
+    -0.06158992648124695,
+    -0.04120820388197899,
+    0.05331581458449364,
+    0.03851299732923508,
+    0.059600211679935455,
+    -0.002436669310554862,
+    0.03552259877324104,
+    0.009618912823498249,
+    -0.03361699357628822,
+    0.03529009968042374,
+    -0.05887681990861893,
+    -0.06150296330451965,
+    -0.042781878262758255,
+    0.027231547981500626,
+    -0.05062104016542435,
+    -0.057220663875341415,
+    -0.012695989571511745,
+    -0.03049607016146183,
+    0.05771411210298538,
+    -0.06134343892335892,
+    0.029762431979179382,
+    0.01781969517469406,
+    0.06132484972476959,
+    0.038923583924770355,
+    -0.060149941593408585,
+    0.026391424238681793,
+    0.0017525620060041547,
+    0.06146860867738724,
+    0.03522280976176262,
+    -0.01920444332063198,
+    0.04859255626797676,
+    0.05987001210451126,
+    0.05747545138001442,
+    0.029705995693802834,
+    0.05134835094213486,
+    0.061268601566553116,
+    -0.06142452731728554,
+    -0.007890592329204082,
+    0.05456174537539482,
+    -0.05196046456694603,
+    0.04520023614168167,
+    -0.05627211555838585,
+    0.04949082434177399,
+    0.0615897960960865,
+    0.024257542565464973,
+    -0.026359055191278458,
+    0.03306000307202339,
+    -0.04413895308971405,
+    -0.002736524445936084,
+    0.0615738108754158,
+    0.00016364091425202787,
+    -0.04740066081285477,
+    0.03746039792895317,
+    0.04793386161327362,
+    -0.052237045019865036,
+    0.013465611264109612,
+    -0.050995148718357086,
+    0.06119843199849129,
+    -0.05511645972728729,
+    0.05136292800307274,
+    -0.02437140978872776,
+    -0.019753137603402138,
+    -0.04497658461332321,
+    -0.006803080439567566,
+    0.061588481068611145,
+    0.016890916973352432,
+    -0.04389486834406853,
+    0.06065147742629051,
+    0.061323173344135284,
+    -0.055555377155542374,
+    0.060833778232336044,
+    -0.05362474545836449,
+    0.033322665840387344,
+    0.061404433101415634,
+    -0.05693131685256958,
+    0.061589017510414124,
+    0.0067400699481368065,
+    -0.02669973485171795,
+    0.06144702062010765,
+    0.03226430341601372,
+    0.020373690873384476,
+    -0.055637624114751816,
+    -0.050493139773607254,
+    0.04600254446268082,
+    0.04308071732521057,
+    0.03921205550432205,
+    0.007606141734868288,
+    0.016543835401535034,
+    0.05387703701853752,
+    0.003591235727071762,
+    -0.013344504870474339,
+    0.05986001715064049,
+    -0.03774663433432579,
+    -0.05437196418642998,
+    0.06011921912431717,
+    -0.014183650724589825,
+    0.06054294854402542,
+    0.05242781713604927,
+    -0.005853043403476477,
+    0.02373570203781128,
+    -0.051034219563007355,
+    -0.05082179978489876,
+    0.05331091955304146,
+    -0.05203049257397652,
+    -0.049511417746543884,
+    -0.04073696583509445,
+    0.061032380908727646,
+    -0.022982729598879814,
+    0.0594361387193203,
+    -0.06139201298356056,
+    0.05611290782690048,
+    -0.05970045179128647,
+    -0.05627119168639183,
+    -0.023885149508714676,
+    0.042206041514873505,
+    0.04939926043152809,
+    -0.05800827592611313,
+    -0.056040987372398376,
+    -0.02857987955212593,
+    0.05788270756602287,
+    0.04674812778830528,
+    0.006091204937547445,
+    0.0217470433562994,
+    0.03992033377289772,
+    0.05642712488770485,
+    -0.040948063135147095,
+    -0.03596285358071327,
+    -0.058373238891363144,
+    0.06140103191137314,
+    -0.05195813626050949,
+    -0.06159017235040665,
+    -0.02876189909875393,
+    -0.009135499596595764,
+    -0.04591567441821098,
+    -0.014480119571089745,
+    0.05522160604596138,
+    -0.00987248308956623,
+    0.0469667948782444,
+    -0.030827276408672333,
+    0.024159299209713936,
+    0.048384785652160645,
+    0.006852817256003618,
+    -0.06159006431698799,
+    -0.04915863275527954,
+    0.007255482021719217,
+    0.05902930721640587,
+    0.05556584894657135,
+    -0.057406481355428696,
+    -0.06158938258886337,
+    0.05974564328789711,
+    -0.06151122972369194,
+    0.018628839403390884,
+    0.05050612613558769,
+    -0.05614512413740158,
+    0.0514221228659153,
+    -0.032960712909698486,
+    -0.05117448791861534,
+    -0.058612044900655746,
+    -0.059361279010772705,
+    0.03901081532239914,
+    0.03411131352186203,
+    0.05967047065496445,
+    -0.05317088961601257,
+    -0.055082056671381,
+    -0.027317184954881668,
+    -0.02227010764181614,
+    -0.022686921060085297,
+    -0.057513702660799026,
+    -0.045584481209516525,
+    -0.060364529490470886,
+    -0.025379003956913948,
+    0.008298550732433796,
+    0.060127612203359604,
+    -0.02668740227818489,
+    -0.06092435121536255,
+    -0.013243177905678749,
+    0.05025902017951012,
+    -0.014192094095051289,
+    0.061425819993019104,
+    0.039547767490148544,
+    0.015470530837774277,
+    0.05683816969394684,
+    -0.059225961565971375,
+    -0.04511557146906853,
+    -0.007876521907746792,
+    -0.023067748174071312,
+    -0.014841870404779911,
+    -0.06089359149336815,
+    0.05085067078471184,
+    0.05120908468961716,
+    -0.021039964631199837,
+    -0.020119953900575638,
+    -0.06155192479491234,
+    0.016826191917061806,
+    0.053189899772405624,
+    0.06020365655422211,
+    -0.0599641278386116,
+    0.003313350025564432,
+    -0.02532806061208248,
+    0.05896056815981865,
+    -0.0032508959993720055,
+    -0.05985515937209129,
+    0.01911853440105915,
+    -0.05347209796309471,
+    0.021295562386512756,
+    -0.01634509302675724,
+    0.006022126413881779,
+    -0.016252294182777405,
+    -0.045572031289339066,
+    0.04524347931146622,
+    -0.05562959983944893,
+    -0.013445700518786907,
+    -0.06156123802065849,
+    -0.061240311712026596,
+    -0.04569578170776367,
+    -0.01678309217095375,
+    -0.055885639041662216,
+    -0.021176181733608246,
+    0.046865783631801605,
+    -0.03279758617281914,
+    -0.05933084711432457,
+    -0.007845873013138771,
+    -0.017693249508738518,
+    -0.06074593588709831,
+    -0.02767081744968891,
+    0.05460517853498459,
+    -0.0022089967969805002,
+    -0.04621895030140877,
+    -0.05741770565509796,
+    -0.0611693300306797,
+    -0.04516438767313957,
+    -0.06158050522208214,
+    0.0556790828704834,
+    0.05255978927016258,
+    -0.06113460659980774,
+    -0.05627021566033363,
+    -0.010311279445886612,
+    0.0029892893508076668,
+    0.06159021332859993,
+    0.010394957847893238,
+    -0.003149435855448246,
+    -0.06151002645492554,
+    -0.03518664091825485,
+    0.06149890646338463,
+    -0.028855089098215103,
+    -0.054186154156923294,
+    0.0035128500312566757,
+    0.00833171233534813,
+    -0.02140575461089611,
+    0.060008060187101364,
+    0.03864993900060654,
+    -0.05877768248319626,
+    -0.028199942782521248,
+    0.018975963816046715,
+    -0.043896205723285675,
+    0.05351381003856659,
+    0.00804359931498766,
+    -0.028002779930830002,
+    -0.031069757416844368,
+    0.013354470022022724,
+    -0.05391240864992142,
+    -0.007436809130012989,
+    0.023054925724864006,
+    -0.04472437500953674,
+    -0.05122565105557442,
+    0.03787096217274666,
+    -0.059474553912878036,
+    -0.010956798680126667,
+    0.0023764607030898333,
+    -0.043852392584085464,
+    -0.011965148150920868,
+    0.061336468905210495,
+    0.019839303568005562,
+    -0.017355242744088173,
+    -0.013066666200757027,
+    0.04342026263475418,
+    -0.04963194578886032,
+    0.0520048625767231,
+    -0.032867155969142914,
+    -0.005202149506658316,
+    -0.04272516816854477,
+    0.06133798509836197,
+    -0.013412658125162125,
+    -0.03836529701948166,
+    -0.003174434183165431,
+    0.06022513285279274,
+    -0.04278923198580742,
+    -0.06078599765896797,
+    0.039193686097860336,
+    -0.061493851244449615,
+    -0.04173574969172478,
+    -0.0591813288629055,
+    0.06144978478550911,
+    -0.018493879586458206,
+    0.0009570267866365612,
+    0.06155983358621597,
+    0.0478447824716568,
+    -0.06156786158680916
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: the_neuron_trigger, futurepedia_trigger, superhuman_trigger, the_rundown_ai_trigger, taaft_trigger, bens_bites_trigger, google_news_trigger, hacker_news_trigger, reddit_artificial_inteligence_trigger, reddit_open_ai_trigger, reddit_artificial_trigger, blog_meta_ai_trigger, blog_cloudflare_ai_trigger, blog_anthropic_ai_trigger, blog_google_ai_trigger, blog_open_ai_trigger, blog_nvidia_ai_trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Investigación y Análisis",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Investigación y Análisis"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "nodes": [
+    {
+      "id": "webhook-0",
+      "name": "Test Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [100, 100],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "/test"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "set-1", 
+      "name": "Test Set",
+      "type": "n8n-nodes-base.set",
+      "position": [300, 100],
+      "parameters": {
+        "keepOnlySet": false,
+        "values": [
+          {
+            "name": "testField",
+            "value": "test value"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "if-2",
+      "name": "Test IF",
+      "type": "n8n-nodes-base.if", 
+      "position": [500, 100],
+      "parameters": {
+        "conditions": [
+          {
+            "leftValue": "={{$json.testField}}",
+            "rightValue": "test value",
+            "operation": "equal"
+          }
+        ]
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Test Webhook": {
+      "main": [
+        [
+          {
+            "node": "Test Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Test Set": {
+      "main": [
+        [
+          {
+            "node": "Test IF", 
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}

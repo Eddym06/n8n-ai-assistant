@@ -1,0 +1,655 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "path": "/lead-capture",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "name": "Lead Form Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        100,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": [
+          {
+            "name": "clean_email",
+            "value": "={{$json.email.toLowerCase().trim()}}"
+          },
+          {
+            "name": "budget_number",
+            "value": "={{parseInt($json.budget) || 0}}"
+          },
+          {
+            "name": "is_valid",
+            "value": "={{$json.name && $json.email && $json.company}}"
+          }
+        ],
+        "options": {}
+      },
+      "name": "Validate Lead Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        300,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.is_valid}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "Is Valid Lead?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        500,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "YOUR_DATABASE_API_ENDPOINT/leads/{{$json.clean_email}}",
+        "options": {
+          "returnFullResponse": false
+        },
+        "method": "GET"
+      },
+      "name": "Check Existing Lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        700,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{$node[\"Check Existing Lead\"].json.status}}",
+              "value2": 200,
+              "operation": "=="
+            }
+          ]
+        }
+      },
+      "name": "Lead Exists?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        900,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "listId": "YOUR_MAILCHIMP_LIST_ID",
+        "emailAddress": "={{$json.clean_email}}",
+        "status": "subscribed",
+        "mergeFieldsUi": {
+          "mergeFieldsValues": [
+            {
+              "name": "FNAME",
+              "value": "={{$json.name}}"
+            },
+            {
+              "name": "COMPANY",
+              "value": "={{$json.company}}"
+            }
+          ]
+        },
+        "options": {
+          "doubleOptin": false,
+          "updateExisting": false
+        }
+      },
+      "name": "Add to MailChimp",
+      "type": "n8n-nodes-base.mailchimp",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        150
+      ]
+    },
+    {
+      "parameters": {
+        "subject": "Welcome to our Company!",
+        "recipients": {
+          "to": [
+            {
+              "email": "={{$json.clean_email}}",
+              "name": "={{$json.name}}"
+            }
+          ]
+        },
+        "content": "<h1>Welcome!</h1><p>Thank you for your interest.</p>",
+        "options": {}
+      },
+      "name": "Send Welcome Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "channel": "YOUR_SLACK_CHANNEL_ID",
+        "text": "New Lead: {{$json.name}} - {{$json.clean_email}} - {{$json.company}} - Budget: {{$json.budget}}",
+        "options": {}
+      },
+      "name": "Slack Notification",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "databaseId": "YOUR_NOTION_DATABASE_ID",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "propertyId": "title",
+              "name": "Name",
+              "value": "={{$json.name}}"
+            },
+            {
+              "propertyId": "email",
+              "name": "Email",
+              "value": "={{$json.clean_email}}"
+            },
+            {
+              "propertyId": "company",
+              "name": "Company",
+              "value": "={{$json.company}}"
+            },
+            {
+              "propertyId": "budget",
+              "name": "Budget",
+              "value": "={{$json.budget}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "name": "Create Notion Task",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{$json.budget_number}}",
+              "value2": 5000,
+              "operation": ">"
+            }
+          ]
+        }
+      },
+      "name": "High Value Lead?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        150
+      ]
+    },
+    {
+      "parameters": {
+        "chatId": "YOUR_TELEGRAM_CHAT_ID",
+        "text": "VIP Lead Alert: {{$json.name}} - {{$json.clean_email}} - Budget: {{$json.budget}}",
+        "options": {}
+      },
+      "name": "Telegram Notification",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        150
+      ]
+    },
+    {
+      "parameters": {
+        "spreadsheetId": "YOUR_GOOGLE_SHEET_ID",
+        "range": "Sheet1!A1",
+        "valueInputOption": "USER_ENTERED",
+        "includeValuesInResponse": false,
+        "values": "=[[$json.name, $json.clean_email, $json.company, $json.budget, $json.source, $json.timestamp]]",
+        "options": {}
+      },
+      "name": "Log to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        750
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "every",
+        "value": 3,
+        "unit": "days",
+        "timeZone": "UTC",
+        "startAt": "={{new Date(Date.now() + (3 * 24 * 60 * 60 * 1000)).toISOString()}}"
+      },
+      "name": "Schedule Follow-up",
+      "type": "n8n-nodes-base.schedule",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "subject": "Follow-up Email",
+        "recipients": {
+          "to": [
+            {
+              "email": "={{$json.clean_email}}",
+              "name": "={{$json.name}}"
+            }
+          ]
+        },
+        "content": "<h1>Following Up</h1><p>Just checking in!</p>",
+        "options": {}
+      },
+      "name": "Send Follow-up Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "url": "YOUR_DATABASE_API_ENDPOINT/leads/{{$json.clean_email}}",
+        "options": {
+          "returnFullResponse": false
+        },
+        "method": "PUT",
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "is_recurring",
+              "value": true
+            }
+          ]
+        }
+      },
+      "name": "Update Lead",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "continueOnFail": true
+      },
+      "name": "Error Trigger",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        300,
+        450
+      ]
+    },
+    {
+      "parameters": {
+        "channel": "YOUR_SLACK_CHANNEL_ID",
+        "text": "Error processing lead: {{$json.email}} - {{$json.message}}",
+        "options": {}
+      },
+      "name": "Slack Error Notification",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [
+        500,
+        450
+      ]
+    }
+  ],
+  "connections": {
+    "Lead Form Webhook": {
+      "main": [
+        [
+          {
+            "node": "Validate Lead Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validate Lead Data": {
+      "main": [
+        [
+          {
+            "node": "Is Valid Lead?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Is Valid Lead?": {
+      "main": [
+        [
+          {
+            "node": "Check Existing Lead",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Error Trigger",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Existing Lead": {
+      "main": [
+        [
+          {
+            "node": "Lead Exists?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lead Exists?": {
+      "main": [
+        [
+          {
+            "node": "Update Lead",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Add to MailChimp",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Welcome Email",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack Notification",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Create Notion Task",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Log to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "High Value Lead?": {
+      "main": [
+        [
+          {
+            "node": "Telegram Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Add to MailChimp": {
+      "main": [
+        [
+          {
+            "node": "High Value Lead?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Welcome Email": {
+      "main": [
+        [
+          {
+            "node": "High Value Lead?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack Notification": {
+      "main": [
+        [
+          {
+            "node": "High Value Lead?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Notion Task": {
+      "main": [
+        [
+          {
+            "node": "High Value Lead?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log to Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Schedule Follow-up",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "High Value Lead?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Follow-up": {
+      "main": [
+        [
+          {
+            "node": "Send Follow-up Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Error Trigger": {
+      "main": [
+        [
+          {
+            "node": "Slack Error Notification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "_analysis": {
+    "deepAnalysis": {
+      "structure": {
+        "totalNodes": 17,
+        "totalConnections": 13,
+        "hasValidStructure": true,
+        "averageConnectionsPerNode": 0.7647058823529411
+      },
+      "complexity": {
+        "level": "complex",
+        "hasBranching": true,
+        "hasLoops": false,
+        "maxDepth": 10
+      },
+      "coverage": {
+        "total": 9,
+        "covered": 6,
+        "percentage": 66.66666666666666,
+        "missing": [
+          "validation",
+          "database_check",
+          "email_scheduling"
+        ]
+      },
+      "score": 76.66666666666666
+    },
+    "logicValidation": {
+      "hasEntry": true,
+      "hasProcessing": true,
+      "hasOutput": true,
+      "hasErrorHandling": true,
+      "hasDataValidation": true,
+      "logicalFlow": true,
+      "issues": [],
+      "score": 100
+    },
+    "configAnalysis": {
+      "webhookConfig": {
+        "isConfigured": true,
+        "hasPath": true,
+        "hasMethod": false
+      },
+      "integrationConfigs": {
+        "totalCount": 5,
+        "configuredCount": 5,
+        "percentage": 100
+      },
+      "conditionalLogic": {
+        "count": 3,
+        "hasComplexLogic": false
+      },
+      "dataTransformation": {
+        "count": 1,
+        "hasTransformation": true
+      },
+      "completeness": 85,
+      "score": 85
+    },
+    "viabilityAssessment": {
+      "executability": {
+        "score": 85,
+        "hasAllRequiredFields": true
+      },
+      "dependencies": {
+        "issues": [],
+        "externalServices": 3
+      },
+      "performance": {
+        "level": "complex",
+        "estimatedExecutionTime": "34s"
+      },
+      "maintenance": {
+        "score": 75,
+        "complexity": "moderate"
+      },
+      "production_ready": true,
+      "recommendations": [],
+      "score": 80
+    },
+    "nodeTypeAnalysis": {
+      "distribution": {
+        "n8n-nodes-base.webhook": 1,
+        "n8n-nodes-base.set": 1,
+        "n8n-nodes-base.if": 3,
+        "n8n-nodes-base.httpRequest": 2,
+        "n8n-nodes-base.mailchimp": 1,
+        "n8n-nodes-base.emailSend": 2,
+        "n8n-nodes-base.slack": 2,
+        "n8n-nodes-base.notion": 1,
+        "n8n-nodes-base.telegram": 1,
+        "n8n-nodes-base.googleSheets": 1,
+        "n8n-nodes-base.schedule": 1,
+        "n8n-nodes-base.noOp": 1
+      },
+      "specificity": {
+        "total": 17,
+        "specific": 16,
+        "percentage": 94.11764705882352
+      },
+      "enterprise_grade": {
+        "score": 125,
+        "count": 5
+      },
+      "missing_types": [],
+      "score": 109.55882352941177
+    },
+    "architectureEvaluation": {
+      "modularity": {
+        "score": 70
+      },
+      "scalability": {
+        "level": "moderate"
+      },
+      "patterns": {
+        "identified": [
+          "pipeline",
+          "branching"
+        ]
+      },
+      "best_practices": {
+        "followed": 3,
+        "total": 5
+      },
+      "technical_debt": {
+        "level": "low"
+      },
+      "score": 65
+    },
+    "timestamp": "2025-09-15T23:50:15.539Z"
+  }
+}

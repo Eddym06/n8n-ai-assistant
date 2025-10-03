@@ -1,0 +1,1167 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Breakdown Documents Into Study Notes Using Templating Mistralai And Qdrant",
+    "file_name": "Breakdown_Documents_into_Study_Notes_using_Templating_MistralAI_and_Qdrant.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\Breakdown_Documents_into_Study_Notes_using_Templating_MistralAI_and_Qdrant.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "d3420aa9a327"
+  },
+  "structure": {
+    "total_nodes": 42,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.convertToFile",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.splitOut",
+      "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "@n8n/n8n-nodes-langchain.chainSummarization",
+      "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "n8n-nodes-base.localFileTrigger",
+      "@n8n/n8n-nodes-langchain.outputParserItemList",
+      "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.readWriteFile",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.convertToFile",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainSummarization",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.localFileTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserItemList",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.readWriteFile",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 7
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Local File Trigger",
+        "type": "n8n-nodes-base.localFileTrigger",
+        "position": [
+          140,
+          260
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          1300,
+          720
+        ]
+      },
+      {
+        "name": "Recursive Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          1300,
+          860
+        ]
+      },
+      {
+        "name": "Embeddings Mistral Cloud",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+        "position": [
+          1180,
+          720
+        ]
+      },
+      {
+        "name": "Mistral Cloud Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+        "position": [
+          2660,
+          840
+        ]
+      },
+      {
+        "name": "Mistral Cloud Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+        "position": [
+          1200,
+          400
+        ]
+      },
+      {
+        "name": "Prep Incoming Doc",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          900,
+          420
+        ]
+      },
+      {
+        "name": "Settings",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          320,
+          260
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1600,
+          420
+        ]
+      },
+      {
+        "name": "Get Doc Types",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2000,
+          420
+        ]
+      },
+      {
+        "name": "Split Out Doc Types",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2160,
+          420
+        ]
+      },
+      {
+        "name": "For Each Doc Type...",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          2340,
+          420
+        ]
+      },
+      {
+        "name": "Item List Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserItemList",
+        "position": [
+          2840,
+          840
+        ]
+      },
+      {
+        "name": "Vector Store Retriever",
+        "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+        "position": [
+          3200,
+          840
+        ]
+      },
+      {
+        "name": "Embeddings Mistral Cloud1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+        "position": [
+          3200,
+          1060
+        ]
+      },
+      {
+        "name": "Qdrant Vector Store1",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          3200,
+          940
+        ]
+      },
+      {
+        "name": "Mistral Cloud Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+        "position": [
+          3100,
+          840
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2960,
+          680
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          3400,
+          680
+        ]
+      },
+      {
+        "name": "Mistral Cloud Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+        "position": [
+          3540,
+          840
+        ]
+      },
+      {
+        "name": "Discover",
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "position": [
+          3100,
+          680
+        ]
+      },
+      {
+        "name": "2secs",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3880,
+          1060
+        ]
+      },
+      {
+        "name": "Get Generated Documents",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2680,
+          240
+        ]
+      },
+      {
+        "name": "Generate",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          3540,
+          680
+        ]
+      },
+      {
+        "name": "Prep For AI",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1760,
+          420
+        ]
+      },
+      {
+        "name": "To Binary",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          2860,
+          240
+        ]
+      },
+      {
+        "name": "Export to Folder",
+        "type": "n8n-nodes-base.readWriteFile",
+        "position": [
+          3020,
+          240
+        ]
+      },
+      {
+        "name": "Get FileType",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          480,
+          420
+        ]
+      },
+      {
+        "name": "Import File",
+        "type": "n8n-nodes-base.readWriteFile",
+        "position": [
+          320,
+          420
+        ]
+      },
+      {
+        "name": "Extract from PDF",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          680,
+          260
+        ]
+      },
+      {
+        "name": "Extract from DOCX",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          680,
+          420
+        ]
+      },
+      {
+        "name": "Extract from TEXT",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          680,
+          580
+        ]
+      },
+      {
+        "name": "Summarization Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainSummarization",
+        "position": [
+          1200,
+          260
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          85.80882007954312
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1080,
+          82.96464765818223
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1940,
+          156.7963650826494
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2560,
+          480
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2560,
+          67.64523011966037
+        ]
+      },
+      {
+        "name": "Qdrant Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          1200,
+          560
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -360,
+          80
+        ]
+      },
+      {
+        "name": "Interview",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2660,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1960,
+          380
+        ]
+      }
+    ],
+    "connections_count": 34,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 41
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "use_cases": [],
+    "complexity_score": 1365,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "@n8n/n8n nodes langchain.embeddingsMistralCloud",
+      "item list output parser",
+      "to binary",
+      "extract from pdf",
+      "discover",
+      "sticky note5",
+      "@n8n/n8n nodes langchain.outputParserItemList",
+      "mistral cloud chat model3",
+      "summarization chain",
+      "for each doc type...",
+      "recursive character text splitter",
+      "generate",
+      "file processing",
+      "switch",
+      "sticky note3",
+      "local file trigger",
+      "ai-ml",
+      "stickyNote",
+      "import file",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "convertToFile",
+      "extractFromFile",
+      "get filetype",
+      "export to folder",
+      "embeddings mistral cloud1",
+      "get doc types",
+      "default data loader",
+      "aggregate",
+      "sticky note2",
+      "mistral cloud chat model2",
+      "settings",
+      "interview",
+      "splitInBatches",
+      "vector store retriever",
+      "@n8n/n8n nodes langchain.vectorStoreQdrant",
+      "prep for ai",
+      "@n8n/n8n nodes langchain.chainSummarization",
+      "set",
+      "extract from docx",
+      "sticky note4",
+      "mistral cloud chat model",
+      "split out doc types",
+      "merge",
+      "readWriteFile",
+      "split out",
+      "wait",
+      "@n8n/n8n nodes langchain.lmChatMistralCloud",
+      "@n8n/n8n nodes langchain.chainRetrievalQa",
+      "embeddings mistral cloud",
+      "mistral cloud chat model1",
+      "2secs",
+      "get generated documents",
+      "sticky note",
+      "@n8n/n8n nodes langchain.retrieverVectorStore",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "complex",
+      "prep incoming doc",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "qdrant vector store1",
+      "localFileTrigger",
+      "extract from text",
+      "sticky note1",
+      "qdrant vector store",
+      "splitOut"
+    ],
+    "description": "Este workflow diseñado para file processing con 42 nodos activado por Local File Trigger que ejecuta: Default Data Loader, Recursive Character Text Splitter, Embeddings Mistral Cloud en la categoría de ai-ml.",
+    "semantic_content": "Nodos: Local File Trigger (localFileTrigger), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Recursive Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), Embeddings Mistral Cloud (@n8n/n8n-nodes-langchain.embeddingsMistralCloud), Mistral Cloud Chat Model (@n8n/n8n-nodes-langchain.lmChatMistralCloud), Mistral Cloud Chat Model1 (@n8n/n8n-nodes-langchain.lmChatMistralCloud), Prep Incoming Doc (set), Settings (set), Merge (merge), Get Doc Types (set), Split Out Doc Types (splitOut), For Each Doc Type... (splitInBatches), Item List Output Parser (@n8n/n8n-nodes-langchain.outputParserItemList), Vector Store Retriever (@n8n/n8n-nodes-langchain.retrieverVectorStore), Embeddings Mistral Cloud1 (@n8n/n8n-nodes-langchain.embeddingsMistralCloud), Qdrant Vector Store1 (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Mistral Cloud Chat Model2 (@n8n/n8n-nodes-langchain.lmChatMistralCloud), Split Out (splitOut), Aggregate (aggregate), Mistral Cloud Chat Model3 (@n8n/n8n-nodes-langchain.lmChatMistralCloud), Discover (@n8n/n8n-nodes-langchain.chainRetrievalQa), 2secs (wait), Get Generated Documents (set), Generate (@n8n/n8n-nodes-langchain.chainLlm), Prep For AI (set), To Binary (convertToFile), Export to Folder (readWriteFile), Get FileType (switch), Import File (readWriteFile), Extract from PDF (extractFromFile), Extract from DOCX (extractFromFile), Extract from TEXT (extractFromFile), Summarization Chain (@n8n/n8n-nodes-langchain.chainSummarization), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Qdrant Vector Store (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Sticky Note5 (stickyNote), Interview (@n8n/n8n-nodes-langchain.chainLlm), Sticky Note6 (stickyNote). Propósito: file processing. Categoría: ai-ml. Disparadores: Local File Trigger",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Local File Trigger",
+      "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+      "n8n-nodes-base.localFileTrigger",
+      "Recursive Character Text Splitter",
+      "Embeddings Mistral Cloud",
+      "Default Data Loader",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "@n8n/n8n-nodes-langchain.embeddingsmistralcloud",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "n8n-nodes-base.localfiletrigger",
+      "@n8n/n8n-nodes-langchain.retrievervectorstore",
+      "@n8n/n8n-nodes-langchain.chainsummarization",
+      "@n8n/n8n-nodes-langchain.outputparseritemlist",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "@n8n/n8n-nodes-langchain.chainretrievalqa",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.readwritefile",
+      "@n8n/n8n-nodes-langchain.lmchatmistralcloud",
+      "@n8n/n8n-nodes-langchain.vectorstoreqdrant",
+      "@n8n/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.extractfromfile",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.converttofile",
+      "n8n-nodes-base.splitinbatches"
+    ],
+    "search_terms": [
+      "into",
+      "templating",
+      "and",
+      "using",
+      "mistralai",
+      "documents",
+      "breakdown",
+      "notes",
+      "breakdown_documents_into_study_notes_using_templating_mistralai_and_qdrant",
+      "study",
+      "qdrant"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai-ml",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": false,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.localFileTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 61.53846153846154,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 76.0576923076923
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:25.506078"
+  },
+  "semantic_vector": [
+    -0.052706971764564514,
+    -0.05844324827194214,
+    -0.03665934130549431,
+    0.03983199968934059,
+    0.010312014259397984,
+    -0.033607885241508484,
+    0.05581079423427582,
+    -0.04610468074679375,
+    -0.05860337242484093,
+    0.05382227152585983,
+    0.017168361693620682,
+    -0.03639248013496399,
+    -0.04723815619945526,
+    -0.049557462334632874,
+    -0.05618643760681152,
+    0.05916305258870125,
+    0.0014896242646500468,
+    -0.057009726762771606,
+    -0.05285476893186569,
+    -0.027619069442152977,
+    -0.013394933193922043,
+    0.013670659624040127,
+    0.029705094173550606,
+    0.0006494208937510848,
+    -0.013615693897008896,
+    -0.037004828453063965,
+    0.0007720986031927168,
+    0.05777541920542717,
+    -0.03258151188492775,
+    0.03515462577342987,
+    0.05832883343100548,
+    0.02629864774644375,
+    -0.045459944754838943,
+    0.00017107027815654874,
+    0.04439786821603775,
+    -0.039010509848594666,
+    0.04616958275437355,
+    0.04438222199678421,
+    -0.05399109423160553,
+    -0.05246935784816742,
+    0.006239887326955795,
+    0.05298186466097832,
+    0.016029389575123787,
+    0.03431841358542442,
+    0.05872564762830734,
+    0.018695732578635216,
+    0.03473177179694176,
+    -0.014201558195054531,
+    -0.05022367462515831,
+    -0.05461520329117775,
+    -0.04623138904571533,
+    -0.018788065761327744,
+    -0.059162791818380356,
+    -0.05812215059995651,
+    -0.056106746196746826,
+    -0.04855652153491974,
+    0.05865946039557457,
+    -0.01640000194311142,
+    0.016319533810019493,
+    0.05203863978385925,
+    0.011615433730185032,
+    -0.05744533613324165,
+    -0.031028175726532936,
+    0.05902421846985817,
+    0.02602086029946804,
+    -0.01522368099540472,
+    0.05732947587966919,
+    -0.052632998675107956,
+    -0.012700079008936882,
+    0.01833435706794262,
+    -0.04476132243871689,
+    0.05809760466217995,
+    0.004027664195746183,
+    0.05813279747962952,
+    -0.03770717233419418,
+    -0.022071097046136856,
+    0.05014801397919655,
+    -0.057860761880874634,
+    0.0007690305938012898,
+    -0.05407935380935669,
+    0.05824568495154381,
+    0.01761285960674286,
+    0.031731441617012024,
+    -0.05641796439886093,
+    -0.052784379571676254,
+    -0.0024526244960725307,
+    0.013372903689742088,
+    -0.0265946164727211,
+    0.025241773575544357,
+    0.034942783415317535,
+    0.03879772499203682,
+    0.05263460427522659,
+    0.049705181270837784,
+    0.019641611725091934,
+    0.020113753154873848,
+    0.04897221550345421,
+    -0.05457475408911705,
+    0.05882449448108673,
+    -0.03565404564142227,
+    -0.058372966945171356,
+    0.05221725255250931,
+    -0.01042251568287611,
+    -0.023563459515571594,
+    0.03156804293394089,
+    -0.04606703668832779,
+    0.055927425622940063,
+    0.05702398344874382,
+    0.036281101405620575,
+    0.052378084510564804,
+    -0.05281064659357071,
+    -0.047384459525346756,
+    -0.05511251464486122,
+    0.018811531364917755,
+    -0.05092688649892807,
+    0.05550950765609741,
+    0.028058022260665894,
+    -0.05495818704366684,
+    -0.05852874368429184,
+    0.03936884552240372,
+    0.008590782061219215,
+    -0.05621972307562828,
+    -0.011718733236193657,
+    0.039221521466970444,
+    -0.0011465352727100253,
+    0.05515040457248688,
+    0.035591114312410355,
+    -0.0089414082467556,
+    -0.012500950135290623,
+    0.050770942121744156,
+    0.024639945477247238,
+    -0.046678703278303146,
+    0.014913703314960003,
+    0.0571599043905735,
+    -0.0375368595123291,
+    -0.0048560285940766335,
+    -0.014277688227593899,
+    -0.01516219973564148,
+    -0.03978139907121658,
+    -0.04115048050880432,
+    -0.05838223546743393,
+    -0.036023564636707306,
+    0.05916299298405647,
+    -0.04605346918106079,
+    -0.04639164358377457,
+    0.023461852222681046,
+    -0.05901341512799263,
+    0.04765213280916214,
+    -0.012021689675748348,
+    0.058837953954935074,
+    -0.041133563965559006,
+    -0.057175736874341965,
+    -0.057574011385440826,
+    0.050523534417152405,
+    0.048531170934438705,
+    0.05794372037053108,
+    0.05865175649523735,
+    -0.056949272751808167,
+    -0.05779587849974632,
+    -0.03345464542508125,
+    -0.021587274968624115,
+    -0.059063736349344254,
+    -0.05579150840640068,
+    0.01736089400947094,
+    0.05437838286161423,
+    0.026977909728884697,
+    -0.010092290118336678,
+    -0.05132044851779938,
+    0.05215885862708092,
+    -0.054847221821546555,
+    -0.009962757118046284,
+    0.05905767157673836,
+    0.039504434913396835,
+    -0.05107226222753525,
+    -0.023586193099617958,
+    0.05563540756702423,
+    0.0007553740288130939,
+    0.04921029880642891,
+    0.044382743537425995,
+    -0.030550293624401093,
+    -0.03578571602702141,
+    -0.0357363298535347,
+    -0.047047004103660583,
+    -0.051034457981586456,
+    0.014116905629634857,
+    0.0572827123105526,
+    0.011051347479224205,
+    -0.05815611779689789,
+    0.0572100467979908,
+    -0.04241365194320679,
+    0.008612045086920261,
+    -0.01835300214588642,
+    -0.04819042235612869,
+    -0.023966923356056213,
+    -0.03787101060152054,
+    -0.051980942487716675,
+    -0.058740537613630295,
+    0.05429451912641525,
+    0.05916305258870125,
+    0.057964857667684555,
+    -0.02445622719824314,
+    0.026758668944239616,
+    0.05816420167684555,
+    -0.026351796463131905,
+    0.03222587704658508,
+    0.0345756970345974,
+    0.04078185558319092,
+    0.03622724488377571,
+    -0.02447315864264965,
+    -0.054451096802949905,
+    -0.057579588145017624,
+    -0.016010504215955734,
+    0.029425369575619698,
+    0.056709662079811096,
+    0.05758718028664589,
+    -0.05916241556406021,
+    -0.05117907375097275,
+    0.04351191967725754,
+    0.05596150457859039,
+    0.020609118044376373,
+    -0.027090389281511307,
+    0.01118550356477499,
+    0.04311612248420715,
+    -0.021237563341856003,
+    0.05551740154623985,
+    -0.039010148495435715,
+    -0.05912339314818382,
+    0.03521544486284256,
+    -0.05636942759156227,
+    -0.058125510811805725,
+    -0.05915255472064018,
+    -0.05722838267683983,
+    -0.057093698531389236,
+    -0.03418068587779999,
+    -0.05916215851902962,
+    -0.010557013563811779,
+    0.05565039813518524,
+    0.0590372197329998,
+    0.0588952973484993,
+    -0.05879894644021988,
+    0.050034359097480774,
+    0.03466835618019104,
+    0.04848907142877579,
+    -0.020059509202837944,
+    -0.029355740174651146,
+    -0.03742994740605354,
+    0.05843537673354149,
+    0.04956495389342308,
+    0.0356663353741169,
+    0.05355316773056984,
+    0.05912915617227554,
+    -0.05905861407518387,
+    0.054652485996484756,
+    -0.009804507717490196,
+    0.0004392817209009081,
+    0.02084703929722309,
+    -0.058544378727674484,
+    0.057333048433065414,
+    0.05916305258870125,
+    0.04306931421160698,
+    0.05792209506034851,
+    0.05189656466245651,
+    0.05029904097318649,
+    0.02098686806857586,
+    0.05863004922866821,
+    0.05058734118938446,
+    0.0321381539106369,
+    0.0499124601483345,
+    -0.028006555512547493,
+    -0.058379463851451874,
+    0.05259690433740616,
+    -0.05785612389445305,
+    0.0465056486427784,
+    0.041036736220121384,
+    0.05403391644358635,
+    0.05906090885400772,
+    -0.04937053099274635,
+    -0.055344656109809875,
+    0.022115355357527733,
+    0.05906008556485176,
+    0.03154801204800606,
+    -0.020803947001695633,
+    0.04501243680715561,
+    0.044581301510334015,
+    -0.02542378194630146,
+    -0.019111620262265205,
+    -0.05209582298994064,
+    -0.002001546323299408,
+    0.058676376938819885,
+    -0.05215992406010628,
+    0.05754648894071579,
+    -0.03974778205156326,
+    0.01710018701851368,
+    0.05910802260041237,
+    -0.05557579919695854,
+    0.03286469355225563,
+    -0.05904005840420723,
+    -0.009181815199553967,
+    0.04710889235138893,
+    -0.03914234787225723,
+    0.024649236351251602,
+    -0.05541328340768814,
+    0.04748927056789398,
+    0.0516744889318943,
+    -0.05229189619421959,
+    -0.04523700848221779,
+    0.05896955728530884,
+    0.04856405779719353,
+    -0.020504342392086983,
+    -0.02711908146739006,
+    0.033345770090818405,
+    -0.02399635687470436,
+    0.031415216624736786,
+    -0.025543389841914177,
+    -0.05820624902844429,
+    0.0339273102581501,
+    -0.05890411138534546,
+    0.009270759299397469,
+    0.03247775509953499,
+    0.029088502749800682,
+    0.011489964090287685,
+    -0.03972960263490677,
+    -0.05826704576611519,
+    0.05656092241406441,
+    -0.01843683421611786,
+    0.0511934831738472,
+    0.03129708021879196,
+    0.056860193610191345,
+    -0.049573756754398346,
+    0.02853235974907875,
+    -0.00842665508389473,
+    0.042761992663145065,
+    0.054666899144649506,
+    0.03204687312245369,
+    0.0589786097407341,
+    -0.003698222804814577,
+    0.057788021862506866,
+    0.03423286974430084,
+    0.05784525349736214,
+    0.058375727385282516,
+    -0.04767483100295067,
+    -0.009720124304294586,
+    -0.05471944063901901,
+    -0.05600103735923767,
+    -0.05754352733492851,
+    -0.0591459646821022,
+    -0.011961712501943111,
+    -0.03694254904985428,
+    0.05171891674399376,
+    -0.024174140766263008,
+    0.051149848848581314,
+    0.03754376992583275,
+    0.021355872973799706,
+    -0.04191461205482483,
+    0.008019191212952137,
+    0.016675729304552078,
+    0.05017990991473198,
+    -0.05916106328368187,
+    0.011523121036589146,
+    -0.05536891892552376,
+    0.056617073714733124,
+    0.05735328048467636,
+    -0.041523873805999756,
+    -0.05902630090713501,
+    0.059046246111392975,
+    0.04225452244281769,
+    0.05856718495488167,
+    0.05800340324640274,
+    -0.022763388231396675,
+    0.033192433416843414,
+    0.017742425203323364,
+    -0.014339802786707878,
+    -0.026982905343174934,
+    0.02064037136733532,
+    0.017670078203082085,
+    0.05800831690430641,
+    0.0571717768907547,
+    -0.010680735111236572,
+    -0.05899382382631302,
+    -0.03182383254170418,
+    -0.04508209973573685,
+    -0.04416966438293457,
+    0.041012123227119446,
+    0.05264165624976158,
+    -0.05062384530901909,
+    -0.03013666905462742,
+    -0.0576804056763649,
+    0.05777112394571304,
+    0.0016560883959755301,
+    -0.042244140058755875,
+    -0.05770688131451607,
+    0.048932794481515884,
+    -0.04558214172720909,
+    0.055807437747716904,
+    0.020872632041573524,
+    -0.05270686745643616,
+    0.05873753875494003,
+    0.004755015950649977,
+    0.03567154332995415,
+    0.0372285433113575,
+    0.03212948888540268,
+    0.054756149649620056,
+    0.058534134179353714,
+    -0.056009285151958466,
+    0.03346670791506767,
+    -0.058777231723070145,
+    -0.05425716191530228,
+    -0.05889895558357239,
+    -0.027293020859360695,
+    0.05907197296619415,
+    0.04989247769117355,
+    -0.033802133053541183,
+    0.009701254777610302,
+    0.006735307164490223,
+    -0.055863313376903534,
+    0.059152502566576004,
+    -0.011240757070481777,
+    -0.013305643573403358,
+    -0.049473538994789124,
+    -0.05890318751335144,
+    0.05468883365392685,
+    -0.04550129175186157,
+    -0.05204964056611061,
+    -0.05713037773966789,
+    0.05751114338636398,
+    0.0023649067152291536,
+    -0.016914743930101395,
+    -0.05877775326371193,
+    0.015565271489322186,
+    -0.05317064747214317,
+    0.052789416164159775,
+    -0.05842157453298569,
+    -0.021475186571478844,
+    -0.038582947105169296,
+    0.01210190448909998,
+    -0.058599457144737244,
+    0.026584602892398834,
+    -0.053119957447052,
+    -0.05740483105182648,
+    -0.05828963592648506,
+    0.052209027111530304,
+    -0.05333024263381958,
+    -0.05009322240948677,
+    -0.05594519153237343,
+    -0.05851702392101288,
+    -0.030485831201076508,
+    -0.05080004036426544,
+    -0.05411142110824585,
+    -0.03929104283452034,
+    -0.0585821308195591,
+    -0.054752614349126816,
+    0.04290720447897911,
+    -0.032493118196725845,
+    0.0591299869120121,
+    0.03568284213542938,
+    0.036592934280633926,
+    -0.05913446098566055,
+    0.04998413100838661,
+    0.05915458872914314,
+    0.04192172735929489,
+    -0.04958396404981613,
+    0.006249225698411465,
+    0.0498114749789238,
+    0.05423741415143013,
+    0.016192302107810974,
+    -0.03554116189479828,
+    -0.0300569050014019,
+    0.04432617127895355,
+    -0.04979879781603813,
+    -0.03877067193388939,
+    -0.0014359189663082361,
+    0.01029705535620451,
+    -0.046426817774772644,
+    0.040425337851047516,
+    0.053555238991975784,
+    -0.055667150765657425,
+    0.0521862618625164,
+    -0.002418676856905222,
+    0.055952101945877075,
+    0.014361705631017685,
+    -0.058968666940927505,
+    -0.05883321538567543,
+    0.05875873938202858,
+    0.03868194296956062,
+    -0.05573494732379913,
+    0.028436429798603058,
+    0.059026941657066345,
+    0.02859407849609852,
+    0.030119875445961952,
+    0.038314901292324066,
+    -0.040455639362335205,
+    -0.05503678321838379,
+    0.034822747111320496,
+    -0.056726738810539246,
+    0.044496577233076096,
+    -0.05030050501227379,
+    0.05908525362610817,
+    -0.0019085106905549765,
+    0.03952318802475929,
+    -0.05838562548160553,
+    -0.032919030636548996,
+    0.048837631940841675,
+    -0.04939055070281029,
+    0.05048081651329994,
+    -0.05916299298405647,
+    -0.024718526750802994,
+    -0.02234560251235962,
+    -0.059158287942409515,
+    -0.03183872997760773,
+    0.010447287932038307,
+    0.05915914475917816,
+    0.03439943492412567,
+    -0.056060194969177246
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: Local File Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for file processing in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

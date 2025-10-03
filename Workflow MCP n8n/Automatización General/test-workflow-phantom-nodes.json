@@ -1,0 +1,52 @@
+{
+  "nodes": [
+    {
+      "id": "test1",
+      "name": "Real Node 1",
+      "type": "n8n-nodes-base.webhook",
+      "position": [100, 100]
+    },
+    {
+      "id": "test2", 
+      "name": "Real Node 2",
+      "type": "n8n-nodes-base.set",
+      "position": [300, 100]
+    }
+  ],
+  "connections": {
+    "Real Node 1": {
+      "main": [
+        [
+          {
+            "node": "Real Node 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Any_Previous_Node": {
+      "main": [
+        [
+          {
+            "node": "Real Node 2",
+            "type": "main", 
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ANY_PREVIOUS_NODE": {
+      "main": [
+        [
+          {
+            "node": "Real Node 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

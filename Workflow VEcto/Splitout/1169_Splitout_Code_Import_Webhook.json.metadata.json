@@ -1,0 +1,1144 @@
+{
+  "workflow_info": {
+    "id": "87FUCRVFV07sNlbM",
+    "name": "Workflow Importer",
+    "file_name": "1169_Splitout_Code_Import_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout\\1169_Splitout_Code_Import_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false
+  },
+  "structure": {
+    "total_nodes": 58,
+    "node_types": [
+      "n8n-nodes-base.executeCommand",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.removeDuplicates",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.readWriteFile",
+      "n8n-nodes-base.n8n",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.form",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.renameKeys",
+      "n8n-nodes-base.sort"
+    ],
+    "triggers": [
+      {
+        "name": "On form submission",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          540,
+          500
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Extract from File",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2960,
+          440
+        ]
+      },
+      {
+        "name": "Export Credentials",
+        "type": "n8n-nodes-base.executeCommand",
+        "position": [
+          3180,
+          620
+        ]
+      },
+      {
+        "name": "Get Credentials Data",
+        "type": "n8n-nodes-base.readWriteFile",
+        "position": [
+          3400,
+          620
+        ]
+      },
+      {
+        "name": "Binary to JSON",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          3620,
+          620
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          4060,
+          500
+        ]
+      },
+      {
+        "name": "Collect Credentials to Replace",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          3040,
+          1120
+        ]
+      },
+      {
+        "name": "Settings",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          980,
+          620
+        ]
+      },
+      {
+        "name": "Prepare Request Data",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1640,
+          620
+        ]
+      },
+      {
+        "name": "Get Workflows",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1860,
+          620
+        ]
+      },
+      {
+        "name": "No Operation",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          3180,
+          440
+        ]
+      },
+      {
+        "name": "Determine Workflow Source",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          760,
+          500
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          920,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          380,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          480,
+          400
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          700,
+          400
+        ]
+      },
+      {
+        "name": "Error1",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          3700,
+          1220
+        ]
+      },
+      {
+        "name": "Error",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          2080,
+          700
+        ]
+      },
+      {
+        "name": "Split Out Workflows",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2080,
+          540
+        ]
+      },
+      {
+        "name": "Get Workflow Names",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2520,
+          540
+        ]
+      },
+      {
+        "name": "Sort by updatedAt DESC",
+        "type": "n8n-nodes-base.sort",
+        "position": [
+          2300,
+          540
+        ]
+      },
+      {
+        "name": "No Operation1",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          4280,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1500,
+          1240
+        ]
+      },
+      {
+        "name": "Rename Keys",
+        "type": "n8n-nodes-base.renameKeys",
+        "position": [
+          3840,
+          620
+        ]
+      },
+      {
+        "name": "Create Workflow",
+        "type": "n8n-nodes-base.n8n",
+        "position": [
+          3480,
+          1120
+        ]
+      },
+      {
+        "name": "Upload File",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          1420,
+          440
+        ]
+      },
+      {
+        "name": "Choose Workflow",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          2740,
+          540
+        ]
+      },
+      {
+        "name": "Success",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          3700,
+          1020
+        ]
+      },
+      {
+        "name": "Choose Instance",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          1420,
+          620
+        ]
+      },
+      {
+        "name": "Generate Instance Options",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1200,
+          620
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1140,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1360,
+          360
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1580,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2020,
+          440
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2680,
+          440
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3120,
+          560
+        ]
+      },
+      {
+        "name": "Get Selected Workflow",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2960,
+          620
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2900,
+          360
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4000,
+          420
+        ]
+      },
+      {
+        "name": "Split Out Nodes",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1060,
+          1020
+        ]
+      },
+      {
+        "name": "Filter Out Nodes Having Credentials",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1280,
+          1020
+        ]
+      },
+      {
+        "name": "Extract Credentials",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1500,
+          1020
+        ]
+      },
+      {
+        "name": "Remove Duplicate Credentials by Name",
+        "type": "n8n-nodes-base.removeDuplicates",
+        "position": [
+          1720,
+          1020
+        ]
+      },
+      {
+        "name": "Map Credentials",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          2160,
+          1020
+        ]
+      },
+      {
+        "name": "Get Selected Credentials",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2380,
+          1220
+        ]
+      },
+      {
+        "name": "Add Old Names",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2820,
+          1020
+        ]
+      },
+      {
+        "name": "Replace Credentials in Workflow",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3260,
+          1120
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1000,
+          920
+        ]
+      },
+      {
+        "name": "Sticky Note18",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2100,
+          920
+        ]
+      },
+      {
+        "name": "Generate Credential Options",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1940,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note19",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1880,
+          920
+        ]
+      },
+      {
+        "name": "Sticky Note20",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2320,
+          920
+        ]
+      },
+      {
+        "name": "Sticky Note21",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2540,
+          919.7999999999997
+        ]
+      },
+      {
+        "name": "Create Empty Credentials",
+        "type": "n8n-nodes-base.n8n",
+        "position": [
+          2600,
+          1020
+        ]
+      },
+      {
+        "name": "Get Missing Credentials",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          2380,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note22",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2980,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note23",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3420,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note24",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3640,
+          920
+        ]
+      }
+    ],
+    "connections_count": 34
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "complexity_score": 1265,
+    "quality_score": 0.75,
+    "keywords": [
+      "sticky note20",
+      "get workflow names",
+      "sticky note15",
+      "httpRequest",
+      "sticky note17",
+      "sticky note18",
+      "sort by updatedat desc",
+      "remove duplicate credentials by name",
+      "sticky note21",
+      "binary to json",
+      "sticky note8",
+      "splitOut",
+      "webhook integration",
+      "get selected credentials",
+      "on form submission",
+      "rename keys",
+      "get missing credentials",
+      "executeCommand",
+      "upload file",
+      "replace credentials in workflow",
+      "sticky note19",
+      "sticky note9",
+      "sticky note10",
+      "formTrigger",
+      "n8n",
+      "get credentials data",
+      "sticky note2",
+      "sticky note12",
+      "sort",
+      "stickyNote",
+      "sticky note14",
+      "extract credentials",
+      "code",
+      "map credentials",
+      "success",
+      "form",
+      "settings",
+      "sticky note6",
+      "generate instance options",
+      "no operation",
+      "integration",
+      "sticky note13",
+      "get workflows",
+      "sticky note16",
+      "split out nodes",
+      "error1",
+      "filter out nodes having credentials",
+      "generate credential options",
+      "sticky note22",
+      "sticky note7",
+      "get selected workflow",
+      "renameKeys",
+      "extract from file",
+      "sticky note24",
+      "create workflow",
+      "add old names",
+      "export credentials",
+      "choose instance",
+      "split out workflows",
+      "filter",
+      "create empty credentials",
+      "sticky note11",
+      "collect credentials to replace",
+      "prepare request data",
+      "sticky note23",
+      "extractFromFile",
+      "noOp",
+      "merge",
+      "readWriteFile",
+      "error",
+      "set",
+      "removeDuplicates",
+      "choose workflow",
+      "determine workflow source",
+      "sticky note",
+      "complex",
+      "no operation1"
+    ],
+    "description": "'Workflow Importer' es un workflow diseñado para webhook integration con 58 nodos activado por On form submission que ejecuta: Extract from File, Export Credentials, Get Credentials Data en la categoría de integration.",
+    "semantic_content": "Workflow: Workflow Importer. Nodos: Extract from File (extractFromFile), Export Credentials (executeCommand), Get Credentials Data (readWriteFile), Binary to JSON (extractFromFile), Merge (merge), Collect Credentials to Replace (merge), Settings (set), Prepare Request Data (code), Get Workflows (httpRequest), No Operation (noOp), Determine Workflow Source (if), Sticky Note6 (stickyNote), Sticky Note2 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Error1 (form), Error (form), Split Out Workflows (splitOut), Get Workflow Names (code), Sort by updatedAt DESC (sort), No Operation1 (noOp), Sticky Note9 (stickyNote), Rename Keys (renameKeys), Create Workflow (n8n), Upload File (form), Choose Workflow (form), Success (form), Choose Instance (form), On form submission (formTrigger), Generate Instance Options (code), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), Sticky Note (stickyNote), Sticky Note12 (stickyNote), Sticky Note13 (stickyNote), Sticky Note14 (stickyNote), Get Selected Workflow (code), Sticky Note15 (stickyNote), Sticky Note16 (stickyNote), Split Out Nodes (splitOut), Filter Out Nodes Having Credentials (filter), Extract Credentials (set), Remove Duplicate Credentials by Name (removeDuplicates), Map Credentials (form), Get Selected Credentials (code), Add Old Names (set), Replace Credentials in Workflow (code), Sticky Note17 (stickyNote), Sticky Note18 (stickyNote), Generate Credential Options (code), Sticky Note19 (stickyNote), Sticky Note20 (stickyNote), Sticky Note21 (stickyNote), Create Empty Credentials (n8n), Get Missing Credentials (code), Sticky Note22 (stickyNote), Sticky Note23 (stickyNote), Sticky Note24 (stickyNote). Propósito: webhook integration. Categoría: integration. Disparadores: On form submission"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": false,
+    "has_conditional_logic": true,
+    "has_error_handling": true
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:43.720052"
+  },
+  "semantic_vector": [
+    -0.053535591810941696,
+    -0.053157988935709,
+    0.051997337490320206,
+    -0.010986455716192722,
+    -0.032809387892484665,
+    -0.04534429684281349,
+    0.04941872879862785,
+    -0.0021287051495164633,
+    -0.05309339240193367,
+    0.052928898483514786,
+    -0.0536404624581337,
+    0.03183676674962044,
+    -0.053747713565826416,
+    -0.050033021718263626,
+    -0.04821154847741127,
+    0.05497509241104126,
+    0.04832098260521889,
+    0.013471615500748158,
+    -0.029279837384819984,
+    -0.02842741832137108,
+    -0.02759508043527603,
+    0.022022821009159088,
+    -0.051329851150512695,
+    0.01079396903514862,
+    -0.045239560306072235,
+    -0.04675702005624771,
+    -0.054969921708106995,
+    0.05378832668066025,
+    -0.053383719176054,
+    0.0018822209676727653,
+    -0.03609265387058258,
+    -0.02262338437139988,
+    -0.009916945360600948,
+    -0.01353423111140728,
+    0.049120914191007614,
+    -0.049366727471351624,
+    -0.05344349890947342,
+    0.03185974806547165,
+    -0.04267093911767006,
+    -0.013344315811991692,
+    -0.037175968289375305,
+    0.03283507004380226,
+    0.0059712836518883705,
+    0.013720639981329441,
+    0.05497509241104126,
+    -0.011495331302285194,
+    0.05165676027536392,
+    0.049823250621557236,
+    -0.04967653751373291,
+    0.01642417348921299,
+    -0.05496589094400406,
+    -0.02232026681303978,
+    -0.05474573001265526,
+    -0.02950945682823658,
+    -0.04973508417606354,
+    -0.054970476776361465,
+    0.030897589400410652,
+    0.047795455902814865,
+    0.03678188845515251,
+    0.04922904446721077,
+    0.029104068875312805,
+    -0.044484175741672516,
+    0.009345343336462975,
+    0.05444632098078728,
+    -0.02097691036760807,
+    -0.024113662540912628,
+    0.054579321295022964,
+    0.03397054597735405,
+    0.05461282655596733,
+    -0.04777954891324043,
+    -0.05497486889362335,
+    -0.01129497867077589,
+    -0.054600827395915985,
+    0.04555094987154007,
+    -0.05020090565085411,
+    -0.05351923778653145,
+    0.052388932555913925,
+    -0.047546401619911194,
+    -0.03025510348379612,
+    -0.005715697538107634,
+    0.05277770385146141,
+    -0.04936797544360161,
+    -0.04737800359725952,
+    -0.05429590120911598,
+    -0.01833762414753437,
+    0.052845779806375504,
+    0.040764931589365005,
+    -0.05306735634803772,
+    0.050300147384405136,
+    0.051745813339948654,
+    0.012707561254501343,
+    -0.003393956460058689,
+    0.024836009368300438,
+    -0.046102408319711685,
+    0.05381970480084419,
+    0.021087488159537315,
+    -0.05388521030545235,
+    0.043731920421123505,
+    -0.05456636846065521,
+    -0.054974958300590515,
+    0.05464133620262146,
+    -0.053903963416814804,
+    -0.046282924711704254,
+    0.0505993478000164,
+    -0.005804727785289288,
+    0.0400339774787426,
+    0.05372580513358116,
+    0.04088843613862991,
+    0.0359177440404892,
+    -0.05033714696764946,
+    -0.046148598194122314,
+    -0.013811718672513962,
+    -0.04737510904669762,
+    0.04443897679448128,
+    0.04362967610359192,
+    0.051517315208911896,
+    -0.05411510542035103,
+    -0.011602538637816906,
+    0.05378653481602669,
+    0.053804486989974976,
+    -0.054381728172302246,
+    0.04847971349954605,
+    0.010091212578117847,
+    0.049446411430835724,
+    0.053757112473249435,
+    -0.019100574776530266,
+    0.04111550375819206,
+    0.054831612855196,
+    0.05253760889172554,
+    -0.029136227443814278,
+    -0.05065053328871727,
+    0.031021375209093094,
+    0.015629049390554428,
+    -0.0536399781703949,
+    0.05373379588127136,
+    0.012981717474758625,
+    -0.048852868378162384,
+    0.050207752734422684,
+    -0.03615624085068703,
+    -0.05497255176305771,
+    -0.007281546015292406,
+    0.05497503653168678,
+    -0.052683986723423004,
+    0.05462723597884178,
+    -0.05275001376867294,
+    -0.05497440695762634,
+    0.05262983962893486,
+    0.03579277917742729,
+    0.034920524805784225,
+    0.022761590778827667,
+    -0.05155237764120102,
+    -0.052620161324739456,
+    0.05438642576336861,
+    -0.03319106623530388,
+    0.05486980825662613,
+    0.05493282154202461,
+    0.04165017977356911,
+    -0.05368220806121826,
+    0.024905554950237274,
+    -0.053688786923885345,
+    -0.05496740713715553,
+    -0.05468498542904854,
+    0.03728235512971878,
+    0.020698970183730125,
+    0.03124965913593769,
+    -0.025355590507388115,
+    -0.05475665628910065,
+    0.03140490502119064,
+    -0.025194380432367325,
+    -0.009487698785960674,
+    0.04909694194793701,
+    -0.05425901710987091,
+    0.05487377569079399,
+    0.05275282263755798,
+    -0.054967403411865234,
+    0.054261088371276855,
+    -0.04149780794978142,
+    -0.05480406805872917,
+    0.0006049592047929764,
+    -0.0428500697016716,
+    0.047223854809999466,
+    0.04793284460902214,
+    -0.05497393012046814,
+    0.05130990594625473,
+    0.05483035370707512,
+    -0.03547881171107292,
+    -0.05495880916714668,
+    0.05493772774934769,
+    0.017742551863193512,
+    0.05396266281604767,
+    -0.05319194495677948,
+    0.051763296127319336,
+    -0.015057774260640144,
+    -0.05475405603647232,
+    -0.054968055337667465,
+    -0.05492549389600754,
+    0.05219639837741852,
+    0.05497509241104126,
+    -0.01746545173227787,
+    0.0123574985191226,
+    0.05449792742729187,
+    0.054741792380809784,
+    0.05377897620201111,
+    0.026225322857499123,
+    0.021909989416599274,
+    -0.028371572494506836,
+    -0.04669804498553276,
+    0.022929221391677856,
+    -0.05497509241104126,
+    -0.0547550693154335,
+    -0.007951736450195312,
+    0.053116295486688614,
+    0.044468093663454056,
+    -0.02172604203224182,
+    -0.05497318506240845,
+    -0.05418629199266434,
+    0.04122794792056084,
+    -0.026755796745419502,
+    -0.021033860743045807,
+    0.04533937945961952,
+    -0.05376734212040901,
+    0.054883550852537155,
+    -0.05307372659444809,
+    0.0004908894770778716,
+    -0.05133970081806183,
+    -0.05480713024735451,
+    -0.04593051224946976,
+    -0.05406466871500015,
+    -0.050851453095674515,
+    -0.054969076067209244,
+    -0.03208049386739731,
+    -0.05423981696367264,
+    0.028007036074995995,
+    -0.05497494339942932,
+    -0.05066657438874245,
+    0.05271817371249199,
+    0.054975029081106186,
+    0.05497456341981888,
+    -0.05405157431960106,
+    -0.0054803285747766495,
+    0.04168044030666351,
+    0.04739705100655556,
+    0.0165852103382349,
+    0.053030844777822495,
+    0.042491089552640915,
+    0.05349200218915939,
+    0.054439712315797806,
+    -0.028882037848234177,
+    0.054729294031858444,
+    0.05496085435152054,
+    -0.054627034813165665,
+    0.05185924097895622,
+    0.04662074148654938,
+    -0.028725912794470787,
+    0.042089253664016724,
+    -0.05496819317340851,
+    0.03748033195734024,
+    0.05497509241104126,
+    -0.05269623547792435,
+    0.030243637040257454,
+    0.05372506007552147,
+    0.028057603165507317,
+    0.03589854761958122,
+    -0.04203403368592262,
+    -0.04658060520887375,
+    0.021205680444836617,
+    0.023048823699355125,
+    0.010317430831491947,
+    -0.054969705641269684,
+    0.04941215366125107,
+    -0.05379720777273178,
+    0.023366734385490417,
+    -0.05493202805519104,
+    0.046677812933921814,
+    0.05479583516716957,
+    -0.028985394164919853,
+    -0.02926744893193245,
+    0.05410734936594963,
+    0.05497493967413902,
+    -0.033483922481536865,
+    0.02969593182206154,
+    0.01410849392414093,
+    0.05260387435555458,
+    0.052327509969472885,
+    0.04807933419942856,
+    -0.053911205381155014,
+    -0.024443481117486954,
+    0.05493830144405365,
+    -0.03327260538935661,
+    0.05408165603876114,
+    -0.04758806899189949,
+    0.05287198722362518,
+    0.0548006035387516,
+    -0.0373198427259922,
+    0.05192562937736511,
+    -0.05357653275132179,
+    0.0528460331261158,
+    -0.023442460224032402,
+    -0.037457358092069626,
+    0.049543414264917374,
+    -0.00271269166842103,
+    0.0163361094892025,
+    -0.007959307171404362,
+    0.03238605707883835,
+    0.05199922248721123,
+    0.03008854202926159,
+    0.0362827442586422,
+    0.0034683840349316597,
+    -0.05110441520810127,
+    0.050158385187387466,
+    -0.0011507844319567084,
+    0.02945905365049839,
+    0.040636319667100906,
+    -0.00689029973000288,
+    0.053375791758298874,
+    -0.054926611483097076,
+    0.05432116240262985,
+    -0.03951696678996086,
+    0.029621634632349014,
+    0.012184624560177326,
+    0.021999076008796692,
+    -0.05409670248627663,
+    0.05302364006638527,
+    -0.04569700360298157,
+    0.040878672152757645,
+    -0.04205862805247307,
+    0.04084143042564392,
+    0.02502240426838398,
+    0.05473467335104942,
+    -0.031911127269268036,
+    -0.05175438150763512,
+    -0.030753791332244873,
+    0.0001850090775405988,
+    0.05495868995785713,
+    -0.001815018360503018,
+    0.04727247357368469,
+    0.053909458220005035,
+    0.03714115917682648,
+    0.05427809804677963,
+    -0.028456343337893486,
+    -0.046470530331134796,
+    -0.05478625372052193,
+    -0.05458914116024971,
+    -0.05365708842873573,
+    -0.05497509241104126,
+    -0.04731879383325577,
+    -0.04973514750599861,
+    -0.026232291013002396,
+    -0.05158812180161476,
+    0.028346547856926918,
+    0.048636674880981445,
+    0.05031117424368858,
+    0.05380236729979515,
+    0.050985511392354965,
+    0.04645678773522377,
+    -0.054964330047369,
+    -0.05497503653168678,
+    0.05485856905579567,
+    -0.04113052040338516,
+    0.051157329231500626,
+    0.04510015994310379,
+    -0.05446886271238327,
+    -0.054974962025880814,
+    0.054921794682741165,
+    0.05210745334625244,
+    0.05492261052131653,
+    0.037072453647851944,
+    -0.053609225898981094,
+    0.05493953824043274,
+    -0.03965775668621063,
+    -0.013875260017812252,
+    -0.04899689182639122,
+    -0.05260239914059639,
+    0.019926799461245537,
+    -0.004832856357097626,
+    0.04831564426422119,
+    -0.04984553903341293,
+    -0.05100460350513458,
+    0.021490955725312233,
+    -0.05460558086633682,
+    0.021580347791314125,
+    0.05287102982401848,
+    -0.004882999695837498,
+    -0.05460594967007637,
+    0.05341951176524162,
+    0.03438716009259224,
+    0.05480097979307175,
+    0.05446839705109596,
+    -0.02929621934890747,
+    -0.05354838818311691,
+    0.01099865697324276,
+    -0.05479804426431656,
+    0.05309146270155907,
+    0.053380902856588364,
+    -0.05241845175623894,
+    0.05309547483921051,
+    -0.041105717420578,
+    0.05411895364522934,
+    0.04695182666182518,
+    0.050914738327264786,
+    0.054711852222681046,
+    0.04693492501974106,
+    -0.05496443808078766,
+    0.054970186203718185,
+    -0.011020547710359097,
+    -0.029115747660398483,
+    -0.05480030179023743,
+    0.0500757209956646,
+    0.05461226776242256,
+    -0.05462715029716492,
+    -0.010211336426436901,
+    0.05039389058947563,
+    -0.04714559018611908,
+    -0.023074813187122345,
+    0.054502904415130615,
+    -0.023706207051873207,
+    0.003046719590201974,
+    -0.051093634217977524,
+    -0.028272125869989395,
+    0.01774822548031807,
+    -0.03424900770187378,
+    -0.04796559736132622,
+    -0.05431853234767914,
+    0.054132990539073944,
+    -0.014818672090768814,
+    -0.013824748806655407,
+    -0.05463370680809021,
+    0.054965291172266006,
+    0.033671651035547256,
+    0.02418217435479164,
+    -0.05469096451997757,
+    0.054455988109111786,
+    -0.00687960721552372,
+    0.04712507873773575,
+    -0.054949648678302765,
+    -0.050922852009534836,
+    -0.05242924392223358,
+    -0.054912734776735306,
+    -0.05483653023838997,
+    0.010201757773756981,
+    -0.03440926969051361,
+    -0.05406026914715767,
+    -0.04610320180654526,
+    -0.005794229451566935,
+    0.01986313983798027,
+    -0.05448741838335991,
+    -0.054496075958013535,
+    -0.043288454413414,
+    0.032740216702222824,
+    -0.054399434477090836,
+    -0.0047647468745708466,
+    0.05414239689707756,
+    0.054974861443042755,
+    0.05315560847520828,
+    -0.01851898431777954,
+    -0.054973114281892776,
+    -0.045580264180898666,
+    0.054954588413238525,
+    0.05368471518158913,
+    -0.041735514998435974,
+    0.003725761780515313,
+    0.05334486812353134,
+    0.05484455078840256,
+    0.05467881262302399,
+    -0.03427324444055557,
+    -0.0441991426050663,
+    0.05478072911500931,
+    -0.00939159095287323,
+    -0.04910624772310257,
+    0.05495629832148552,
+    0.05010809749364853,
+    0.002268922980874777,
+    -0.03257075697183609,
+    -0.030320413410663605,
+    -0.05476929619908333,
+    0.00792443472892046,
+    0.05363819748163223,
+    0.050715550780296326,
+    -0.012890729121863842,
+    -0.03784412518143654,
+    -0.04871407896280289,
+    0.053730107843875885,
+    -0.022151397541165352,
+    -0.05457326024770737,
+    0.042555276304483414,
+    0.05391030013561249,
+    0.03619706258177757,
+    -0.050110917538404465,
+    -0.004462195094674826,
+    0.053689707070589066,
+    -0.044202063232660294,
+    0.0544152706861496,
+    -0.046728428453207016,
+    0.053325898945331573,
+    -0.02010786160826683,
+    0.054497621953487396,
+    0.03240198642015457,
+    0.054903969168663025,
+    -0.053761549293994904,
+    -0.04048657789826393,
+    -0.039692223072052,
+    -0.04528604447841644,
+    0.02480560727417469,
+    -0.054975055158138275,
+    0.014571367762982845,
+    -0.04878632351756096,
+    -0.05358952656388283,
+    0.02002571150660515,
+    -0.05211053416132927,
+    0.05497502163052559,
+    -0.04870397225022316,
+    -0.046940483152866364
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "uses:sort",
+    "uses:readWriteFile",
+    "uses:removeDuplicates",
+    "uses:renameKeys",
+    "trigger:formTrigger",
+    "purpose:webhook-integration",
+    "uses:set",
+    "uses:noOp",
+    "complexity:high",
+    "uses:formTrigger",
+    "uses:splitOut",
+    "uses:httpRequest",
+    "uses:extractFromFile",
+    "uses:filter",
+    "uses:if",
+    "category:integration",
+    "uses:n8n",
+    "uses:code",
+    "uses:form",
+    "uses:merge",
+    "uses:executeCommand"
+  ],
+  "category_info": {
+    "category_name": "Splitout",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Splitout"
+  }
+}

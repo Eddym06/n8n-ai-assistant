@@ -1,0 +1,1097 @@
+{
+  "workflow_info": {
+    "id": "cGNK44mkCzIh4113",
+    "name": "My workflow 3",
+    "display_name": "My workflow 3",
+    "file_name": "1818_Code_Converttofile_Automate_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code\\1818_Code_Converttofile_Automate_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "8246ac9daa26"
+  },
+  "structure": {
+    "total_nodes": 36,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.convertToFile",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "n8n-nodes-base.markdown",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "n8n-nodes-base.formTrigger",
+      "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.aggregate",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.convertToFile",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.markdown",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 3
+      }
+    ],
+    "triggers": [
+      {
+        "name": "On form submission4",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          -1720,
+          20
+        ]
+      },
+      {
+        "name": "When chat message received",
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "position": [
+          -1820,
+          660
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Loop Over Items1",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -380,
+          20
+        ]
+      },
+      {
+        "name": "If2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          700,
+          100
+        ]
+      },
+      {
+        "name": "Aggregate1",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model5",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          1060,
+          180
+        ]
+      },
+      {
+        "name": "split the binary item",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          -1000,
+          20
+        ]
+      },
+      {
+        "name": "Parsing the document",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          260,
+          100
+        ]
+      },
+      {
+        "name": "Check the parsing status",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          480,
+          100
+        ]
+      },
+      {
+        "name": "Provide the markdown",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1180,
+          400
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model6",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          1600,
+          300
+        ]
+      },
+      {
+        "name": "Markdown",
+        "type": "n8n-nodes-base.markdown",
+        "position": [
+          2140,
+          0
+        ]
+      },
+      {
+        "name": "Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          4540,
+          0
+        ]
+      },
+      {
+        "name": "Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3200,
+          0
+        ]
+      },
+      {
+        "name": "Convert to File",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          3840,
+          0
+        ]
+      },
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          2600,
+          460
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          2780,
+          740
+        ]
+      },
+      {
+        "name": "Information Extractor",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          2820,
+          880
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          3140,
+          1100
+        ]
+      },
+      {
+        "name": "Convert to File4",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          1840,
+          740
+        ]
+      },
+      {
+        "name": "Pinecone Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "position": [
+          2080,
+          980
+        ]
+      },
+      {
+        "name": "Embeddings Mistral Cloud",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+        "position": [
+          2140,
+          1200
+        ]
+      },
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          2240,
+          1280
+        ]
+      },
+      {
+        "name": "Recursive Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          2320,
+          1460
+        ]
+      },
+      {
+        "name": "Question and Answer Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "position": [
+          -1400,
+          680
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          -1380,
+          1020
+        ]
+      },
+      {
+        "name": "Vector Store Retriever",
+        "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+        "position": [
+          -1220,
+          900
+        ]
+      },
+      {
+        "name": "Pinecone Vector Store1",
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "position": [
+          -900,
+          1060
+        ]
+      },
+      {
+        "name": "Embeddings Mistral Cloud1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+        "position": [
+          -780,
+          1460
+        ]
+      },
+      {
+        "name": "AI Agent1",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -460,
+          680
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          -400,
+          980
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1900,
+          440
+        ]
+      },
+      {
+        "name": "Translator Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1060,
+          0
+        ]
+      },
+      {
+        "name": "Analyzer Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1420,
+          0
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2880,
+          640
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1420,
+          700
+        ]
+      }
+    ],
+    "connections_count": 29,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 34
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "use_cases": [],
+    "complexity_score": 1495,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "@n8n/n8n nodes langchain.embeddingsMistralCloud",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "check the parsing status",
+      "file processing",
+      "recursive character text splitter",
+      "google gemini chat model",
+      "formTrigger",
+      "when chat message received",
+      "aggregate1",
+      "ai-ml",
+      "stickyNote",
+      "convertToFile",
+      "analyzer agent",
+      "ai agent1",
+      "embeddings mistral cloud1",
+      "if2",
+      "pinecone vector store",
+      "on form submission4",
+      "default data loader",
+      "google gemini chat model3",
+      "@n8n/n8n nodes langchain.vectorStorePinecone",
+      "httpRequest",
+      "aggregate",
+      "google gemini chat model2",
+      "sticky note2",
+      "google gemini chat model6",
+      "splitInBatches",
+      "code",
+      "provide the markdown",
+      "vector store retriever",
+      "google gemini chat model1",
+      "translator agent",
+      "convert to file4",
+      "google gemini chat model5",
+      "convert to file",
+      "split the binary item",
+      "@n8n/n8n nodes langchain.chainRetrievalQa",
+      "markdown",
+      "ai agent",
+      "embeddings mistral cloud",
+      "sticky note",
+      "@n8n/n8n nodes langchain.agent",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "@n8n/n8n nodes langchain.retrieverVectorStore",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "gmail",
+      "parsing the document",
+      "information extractor",
+      "question and answer chain",
+      "complex",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "sticky note1",
+      "loop over items1",
+      "pinecone vector store1",
+      "@n8n/n8n nodes langchain.chatTrigger"
+    ],
+    "description": "'My workflow 3' es un workflow diseñado para file processing con 36 nodos con 2 disparadores que ejecuta: Loop Over Items1, If2, Aggregate1 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: My workflow 3. Nodos: On form submission4 (formTrigger), Loop Over Items1 (splitInBatches), If2 (if), Aggregate1 (aggregate), Google Gemini Chat Model5 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), split the binary item (code), Parsing the document (httpRequest), Check the parsing status (httpRequest), Provide the markdown (httpRequest), Google Gemini Chat Model6 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Markdown (markdown), Gmail (gmail), Code (code), Convert to File (convertToFile), AI Agent (@n8n/n8n-nodes-langchain.agent), Google Gemini Chat Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Information Extractor (@n8n/n8n-nodes-langchain.informationExtractor), Google Gemini Chat Model1 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Convert to File4 (convertToFile), Pinecone Vector Store (@n8n/n8n-nodes-langchain.vectorStorePinecone), Embeddings Mistral Cloud (@n8n/n8n-nodes-langchain.embeddingsMistralCloud), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Recursive Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), When chat message received (@n8n/n8n-nodes-langchain.chatTrigger), Question and Answer Chain (@n8n/n8n-nodes-langchain.chainRetrievalQa), Google Gemini Chat Model2 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Vector Store Retriever (@n8n/n8n-nodes-langchain.retrieverVectorStore), Pinecone Vector Store1 (@n8n/n8n-nodes-langchain.vectorStorePinecone), Embeddings Mistral Cloud1 (@n8n/n8n-nodes-langchain.embeddingsMistralCloud), AI Agent1 (@n8n/n8n-nodes-langchain.agent), Google Gemini Chat Model3 (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Sticky Note (stickyNote), Translator Agent (@n8n/n8n-nodes-langchain.agent), Analyzer Agent (@n8n/n8n-nodes-langchain.agent), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote). Propósito: file processing. Categoría: ai-ml. Disparadores: On form submission4, When chat message received",
+    "business_context": "Email Marketing, Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.formTrigger",
+      "Aggregate1",
+      "When chat message received",
+      "Loop Over Items1",
+      "On form submission4",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "If2",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.aggregate"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.embeddingsmistralcloud",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "@n8n/n8n-nodes-langchain.chattrigger",
+      "@n8n/n8n-nodes-langchain.retrievervectorstore",
+      "n8n-nodes-base.markdown",
+      "n8n-nodes-base.formtrigger",
+      "@n8n/n8n-nodes-langchain.chainretrievalqa",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "@n8n/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter",
+      "n8n-nodes-base.aggregate",
+      "@n8n/n8n-nodes-langchain.vectorstorepinecone",
+      "n8n-nodes-base.converttofile",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitinbatches"
+    ],
+    "search_terms": [
+      "converttofile",
+      "code",
+      "webhook",
+      "1818_code_converttofile_automate_webhook",
+      "automate",
+      "1818"
+    ],
+    "alternative_names": [
+      "My workflow 3"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.formTrigger",
+      "@n8n/n8n-nodes-langchain.chatTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 48.16053511705686,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.63210702341138
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:05.904471"
+  },
+  "semantic_vector": [
+    -0.04178391024470329,
+    -0.05800166726112366,
+    -0.013085907325148582,
+    0.013884657993912697,
+    0.03076750598847866,
+    -0.05805187672376633,
+    -0.05546560138463974,
+    -0.03630313649773598,
+    -0.05236262455582619,
+    0.017121464014053345,
+    0.028826219961047173,
+    -0.05847654864192009,
+    0.03651319071650505,
+    -0.05214058980345726,
+    -0.034260038286447525,
+    0.05858837813138962,
+    0.04753582924604416,
+    -0.050570566207170486,
+    0.019078144803643227,
+    0.04215358942747116,
+    -0.011508085764944553,
+    -0.024510102346539497,
+    0.007723183371126652,
+    -0.0530179888010025,
+    -0.030963651835918427,
+    -0.001898092101328075,
+    0.012627264484763145,
+    0.050818413496017456,
+    -0.050901126116514206,
+    0.05807795003056526,
+    0.05758996680378914,
+    0.045070573687553406,
+    -0.046139832586050034,
+    -0.0516219362616539,
+    0.02774830162525177,
+    -0.016201019287109375,
+    -0.014622675254940987,
+    -0.013307839632034302,
+    -0.052445389330387115,
+    -0.058119893074035645,
+    0.03351026773452759,
+    0.047623880207538605,
+    -0.03908718377351761,
+    0.0514104887843132,
+    0.058362431824207306,
+    -0.021072430536150932,
+    0.013105383142828941,
+    0.017228739336133003,
+    0.0036923696752637625,
+    -0.05452805384993553,
+    -0.043286122381687164,
+    -0.01804819330573082,
+    -0.058587465435266495,
+    -0.05824795365333557,
+    -0.05442618206143379,
+    -0.053808193653821945,
+    0.05840539187192917,
+    -0.01317582093179226,
+    -0.0024565677158534527,
+    0.032377518713474274,
+    0.05147857218980789,
+    -0.05740845203399658,
+    -0.024997880682349205,
+    0.058459892868995667,
+    0.029206525534391403,
+    -0.020675068721175194,
+    0.02355067990720272,
+    -0.007220918778330088,
+    -0.05841848999261856,
+    -0.037839632481336594,
+    -0.05702051520347595,
+    0.05136401206254959,
+    0.018427260220050812,
+    0.05498650670051575,
+    -0.03431623429059982,
+    -0.05748002976179123,
+    0.0524212121963501,
+    -0.05485834926366806,
+    0.0538056343793869,
+    0.015815511345863342,
+    0.05327793210744858,
+    0.05390523374080658,
+    0.0450921431183815,
+    -0.046732816845178604,
+    -0.032095856964588165,
+    0.04025811702013016,
+    -0.0030967763159424067,
+    -0.045034971088171005,
+    -0.051260806620121,
+    -0.051948919892311096,
+    -0.04640927538275719,
+    -0.023877939209342003,
+    0.05552484840154648,
+    0.002153550274670124,
+    0.054175443947315216,
+    0.01099493820220232,
+    -0.034376323223114014,
+    0.04661596566438675,
+    -0.052731674164533615,
+    -0.05854872241616249,
+    0.03203727677464485,
+    -0.042454980313777924,
+    -0.051925189793109894,
+    0.028925905004143715,
+    0.00997849553823471,
+    0.05780082568526268,
+    0.0576959103345871,
+    0.05628061667084694,
+    0.056865669786930084,
+    -0.05846511200070381,
+    -0.05250365287065506,
+    -0.05842107534408569,
+    0.02957475744187832,
+    -0.058031026273965836,
+    -0.009339611046016216,
+    0.02276529371738434,
+    -0.05533987283706665,
+    -0.03499075025320053,
+    0.05471033602952957,
+    0.05743224918842316,
+    0.014142449013888836,
+    0.04685313627123833,
+    0.0444282665848732,
+    0.030497277155518532,
+    0.057480957359075546,
+    0.05431292951107025,
+    -0.01676522195339203,
+    0.01724480651319027,
+    0.015989698469638824,
+    0.030231209471821785,
+    0.006048058625310659,
+    -0.05002787336707115,
+    0.056627415120601654,
+    0.020713062956929207,
+    -0.004683948587626219,
+    -0.049404069781303406,
+    0.019987791776657104,
+    0.023359674960374832,
+    -0.03471338003873825,
+    -0.058506302535533905,
+    0.005462273024022579,
+    0.05858831852674484,
+    0.03193708136677742,
+    -0.047218408435583115,
+    0.053645938634872437,
+    -0.05847976356744766,
+    0.04819256812334061,
+    -0.04154300317168236,
+    0.051734600216150284,
+    -0.013522973284125328,
+    -0.008013437502086163,
+    -0.05112169310450554,
+    0.042153485119342804,
+    -0.04040449112653732,
+    0.0561889111995697,
+    0.05787293612957001,
+    0.029516499489545822,
+    -0.046585503965616226,
+    -0.04976477101445198,
+    -0.053752314299345016,
+    -0.05850599333643913,
+    -0.022089418023824692,
+    0.0027945786714553833,
+    0.045888785272836685,
+    -0.0502779521048069,
+    -0.020499417558312416,
+    -0.052971288561820984,
+    0.042097024619579315,
+    -0.058471113443374634,
+    0.04780513420701027,
+    0.053212013095617294,
+    0.025122469291090965,
+    -0.0571577250957489,
+    0.011634044349193573,
+    -0.004741825629025698,
+    0.03320516645908356,
+    0.05785951018333435,
+    0.04677313566207886,
+    0.05146414041519165,
+    -0.05152370408177376,
+    -0.05692189559340477,
+    -0.05279497057199478,
+    -0.058017753064632416,
+    -0.04784603416919708,
+    0.05728140473365784,
+    0.01470655482262373,
+    -0.05835799127817154,
+    0.05543360114097595,
+    -0.04052571579813957,
+    0.016353517770767212,
+    0.05572999641299248,
+    -0.01030016876757145,
+    -0.019418541342020035,
+    -0.04879111424088478,
+    -0.04765116423368454,
+    -0.05449816584587097,
+    0.012815877795219421,
+    0.05858837813138962,
+    0.04892384633421898,
+    0.015983909368515015,
+    -0.008758610114455223,
+    0.05055103451013565,
+    -0.048134975135326385,
+    0.05266286060214043,
+    0.024243569001555443,
+    0.015337977558374405,
+    0.053300756961107254,
+    0.04567496478557587,
+    -0.058159057050943375,
+    -0.0414985790848732,
+    0.0007979674846865237,
+    0.05847533419728279,
+    0.05734585225582123,
+    0.053494419902563095,
+    -0.05858473479747772,
+    -0.05795420706272125,
+    -0.01700373739004135,
+    0.05545782670378685,
+    0.05584750697016716,
+    0.027011411264538765,
+    0.05446741357445717,
+    -0.002640168648213148,
+    -0.036368776112794876,
+    0.05823437124490738,
+    -0.052718255668878555,
+    -0.05812397599220276,
+    -0.03299626335501671,
+    -0.03843517601490021,
+    -0.05841313675045967,
+    -0.058210089802742004,
+    -0.023854181170463562,
+    -0.057316914200782776,
+    -0.03983541950583458,
+    -0.05857343226671219,
+    0.014049346558749676,
+    0.056978560984134674,
+    0.05852004513144493,
+    0.05798095837235451,
+    -0.05724846199154854,
+    -0.003758679609745741,
+    -0.04561970382928848,
+    0.05857376381754875,
+    -0.03912574052810669,
+    0.037458386272192,
+    -0.051681678742170334,
+    0.05631943792104721,
+    0.05034102499485016,
+    -0.00797637552022934,
+    -0.017340002581477165,
+    0.05794399976730347,
+    -0.05841006711125374,
+    0.019677236676216125,
+    -0.05437757074832916,
+    0.05222690477967262,
+    0.0066583831794559956,
+    -0.05844767019152641,
+    0.02529698610305786,
+    0.05858837813138962,
+    -0.0541996993124485,
+    -0.04562715068459511,
+    0.0060250828973948956,
+    0.0546935573220253,
+    -0.01376974955201149,
+    0.057855553925037384,
+    0.0005412172758951783,
+    0.05546814575791359,
+    0.057934075593948364,
+    0.018163470551371574,
+    -0.05714991316199303,
+    0.0575127936899662,
+    -0.057554636150598526,
+    0.055302415043115616,
+    0.02440831996500492,
+    -0.0153672369197011,
+    0.05839946120977402,
+    -0.020128175616264343,
+    -0.05772507190704346,
+    -0.038479410111904144,
+    0.05852793902158737,
+    -0.036817990243434906,
+    -0.05809776484966278,
+    0.012461080215871334,
+    0.05743003264069557,
+    0.052843399345874786,
+    0.05487523600459099,
+    -0.006550212856382132,
+    0.05631256476044655,
+    0.05852504447102547,
+    -0.01693338342010975,
+    0.05711173638701439,
+    -0.028604859486222267,
+    0.002400353318080306,
+    0.05856907367706299,
+    -0.05777878686785698,
+    0.008016571402549744,
+    -0.05829436331987381,
+    -0.019498351961374283,
+    -0.04421616718173027,
+    0.029837803915143013,
+    0.03868984058499336,
+    -0.027801189571619034,
+    -0.004618262406438589,
+    0.03911038488149643,
+    0.04693695157766342,
+    -0.024298138916492462,
+    0.04835110902786255,
+    0.054788798093795776,
+    -0.04257163032889366,
+    0.04564760625362396,
+    -0.02316759154200554,
+    0.035791609436273575,
+    -0.029148122295737267,
+    0.03066173568367958,
+    -0.05789443477988243,
+    0.0526299849152565,
+    -0.05843693017959595,
+    -0.037691712379455566,
+    -0.022024791687726974,
+    -0.0336342416703701,
+    0.045125752687454224,
+    -0.04739728942513466,
+    -0.0582566075026989,
+    0.05761509761214256,
+    -0.052643999457359314,
+    0.052891578525304794,
+    0.006146864499896765,
+    0.01817925088107586,
+    -0.011615760624408722,
+    0.04622785747051239,
+    -0.05587711185216904,
+    0.05131576582789421,
+    -0.05200210586190224,
+    0.05255924165248871,
+    0.05787526071071625,
+    -0.033334534615278244,
+    0.025833258405327797,
+    0.04854318127036095,
+    0.058584798127412796,
+    0.05629150569438934,
+    0.03194113448262215,
+    -0.044308554381132126,
+    -0.055472232401371,
+    -0.055868227034807205,
+    0.016576142981648445,
+    -0.058582715690135956,
+    0.01287793181836605,
+    0.04433973878622055,
+    0.05699462816119194,
+    0.010163703933358192,
+    0.03678399696946144,
+    0.001959386048838496,
+    -0.03569754213094711,
+    -0.05850264057517052,
+    0.05286251753568649,
+    0.033618442714214325,
+    0.05792952701449394,
+    -0.05858747661113739,
+    0.010723798535764217,
+    -0.0576607920229435,
+    0.056174349039793015,
+    0.05516086891293526,
+    -0.05343066155910492,
+    -0.04832909256219864,
+    0.058050185441970825,
+    -0.05450911447405815,
+    0.04658692702651024,
+    0.057441841810941696,
+    -0.025530746206641197,
+    0.019788363948464394,
+    -0.010770903900265694,
+    0.05740676447749138,
+    -0.05483580753207207,
+    -0.046524930745363235,
+    0.042367301881313324,
+    0.05701326206326485,
+    0.05819971114397049,
+    0.00671112397685647,
+    -0.05844804272055626,
+    0.012578431516885757,
+    -0.048383742570877075,
+    -0.05340893566608429,
+    0.03240181878209114,
+    0.014310731552541256,
+    -0.044932153075933456,
+    -0.03398977592587471,
+    -0.05831089988350868,
+    0.05512583255767822,
+    -0.011969001963734627,
+    -0.01543998159468174,
+    -0.05820546671748161,
+    0.050316497683525085,
+    -0.0585804246366024,
+    0.058344822376966476,
+    0.058401357382535934,
+    -0.05837993696331978,
+    0.05845388025045395,
+    -0.039622507989406586,
+    -0.02598152682185173,
+    0.05156107246875763,
+    0.01768007129430771,
+    0.006463106255978346,
+    -0.0047457474283874035,
+    -0.05116143822669983,
+    0.05325618013739586,
+    -0.04342752322554588,
+    -0.042596910148859024,
+    -0.05850027874112129,
+    -0.035966113209724426,
+    0.05660726875066757,
+    0.05417444556951523,
+    0.02855893224477768,
+    -0.020947331562638283,
+    -0.02521703578531742,
+    0.015932921320199966,
+    -0.024883348494768143,
+    -0.004028694238513708,
+    0.0485544353723526,
+    -0.0575944259762764,
+    -0.057035285979509354,
+    -0.0046863011084496975,
+    -0.03948508948087692,
+    -0.018226036801934242,
+    -0.05799565091729164,
+    0.05827337130904198,
+    0.005393994972109795,
+    0.04442424699664116,
+    -0.0583670400083065,
+    0.015163715928792953,
+    -0.05850033834576607,
+    0.054954662919044495,
+    -0.05809292942285538,
+    0.052510544657707214,
+    -0.04285486042499542,
+    -0.0032345461659133434,
+    -0.05464063957333565,
+    -0.04795374721288681,
+    -0.0499517098069191,
+    -0.0581449531018734,
+    -0.058140311390161514,
+    0.026412678882479668,
+    -0.04654339328408241,
+    -0.04878741130232811,
+    -0.04952312633395195,
+    -0.05657577887177467,
+    0.05261341482400894,
+    -0.05836064741015434,
+    -0.05754499509930611,
+    -0.024310706183314323,
+    -0.058110110461711884,
+    -0.058438584208488464,
+    0.055626679211854935,
+    -0.02302074246108532,
+    0.058582231402397156,
+    0.054049789905548096,
+    0.006449317559599876,
+    -0.058566898107528687,
+    -0.03053426928818226,
+    0.05834956094622612,
+    -0.03714362159371376,
+    -0.057744115591049194,
+    0.05560923367738724,
+    -0.010088836774230003,
+    0.055420879274606705,
+    0.00823040772229433,
+    0.01559747476130724,
+    -0.008806458674371243,
+    0.044558748602867126,
+    0.03672536835074425,
+    0.0028178715147078037,
+    0.05852014571428299,
+    0.0290495865046978,
+    -0.03209105506539345,
+    0.058165594935417175,
+    0.04081793874502182,
+    -0.05556490272283554,
+    0.054812610149383545,
+    -0.026868246495723724,
+    0.050445426255464554,
+    0.03741954639554024,
+    -0.05583864450454712,
+    -0.05800611898303032,
+    0.055125366896390915,
+    -0.020168818533420563,
+    -0.05789780244231224,
+    0.05465877801179886,
+    0.05520157516002655,
+    0.026218168437480927,
+    0.011351597495377064,
+    -0.006133459974080324,
+    -0.02391957677900791,
+    -0.045326344668865204,
+    -0.03390907496213913,
+    -0.015282901003956795,
+    0.04929955676198006,
+    0.002228330820798874,
+    0.05638610199093819,
+    -0.04681277275085449,
+    0.046388279646635056,
+    -0.05774965137243271,
+    0.036950062960386276,
+    0.047428689897060394,
+    -0.002439102390781045,
+    0.04772035405039787,
+    -0.05858258157968521,
+    -0.04397584870457649,
+    0.03927038609981537,
+    0.019284384325146675,
+    -0.006395581178367138,
+    -0.0545828640460968,
+    0.058550793677568436,
+    0.011709735728800297,
+    -0.0380154550075531
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: On form submission4, When chat message received; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for file processing in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Code",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code"
+  }
+}

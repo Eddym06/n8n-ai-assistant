@@ -1,0 +1,68 @@
+{
+  "name": "Workflow Inteligente - 25/9/2025",
+  "active": false,
+  "nodes": [
+    {
+      "id": "intelligent-412gnyk2y",
+      "name": "Analytics Inteligente",
+      "type": "n8n-nodes-base.googleAnalytics",
+      "position": [
+        894.6611555389713,
+        556.0794682588329
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {
+        "googleAnalytics": {
+          "id": "ga-creds",
+          "name": "Google Analytics"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    }
+  ],
+  "connections": {},
+  "createdAt": "2025-09-26T01:54:05.614Z",
+  "updatedAt": "2025-09-26T01:54:05.614Z",
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "",
+    "timezone": "Europe/Madrid"
+  },
+  "staticData": {},
+  "tags": [
+    "intelligent-agent",
+    "ai-generated",
+    "professional"
+  ],
+  "triggerCount": 0,
+  "versionId": "2.0.0",
+  "meta": {
+    "generatedBy": "intelligent-workflow-agent-v1.0",
+    "generatedAt": "2025-09-26T01:54:05.590Z",
+    "analysis": {
+      "domains": [
+        "crm",
+        "ecommerce",
+        "communication",
+        "data"
+      ],
+      "complexity": "SIMPLE",
+      "intents": [],
+      "confidence": 0.4
+    },
+    "metrics": {
+      "nodeCount": 1,
+      "connectionCount": 0,
+      "estimatedExecutionTime": "1.20 segundos (estimación inteligente)",
+      "confidenceScore": 0.62
+    }
+  }
+}

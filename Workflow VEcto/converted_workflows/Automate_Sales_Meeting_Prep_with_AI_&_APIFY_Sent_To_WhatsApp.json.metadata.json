@@ -1,0 +1,1190 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "file_name": "Automate_Sales_Meeting_Prep_with_AI_&_APIFY_Sent_To_WhatsApp.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\Automate_Sales_Meeting_Prep_with_AI_&_APIFY_Sent_To_WhatsApp.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "569490fbd148"
+  },
+  "structure": {
+    "total_nodes": 61,
+    "node_types": [
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.gmail",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.html",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.whatsApp",
+      "n8n-nodes-base.googleCalendar"
+    ],
+    "triggers": [
+      {
+        "name": "Execute Workflow Trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          920,
+          580
+        ]
+      },
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          326,
+          -180
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Get Message Contents",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          2080,
+          500
+        ]
+      },
+      {
+        "name": "Simplify Emails",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2240,
+          500
+        ]
+      },
+      {
+        "name": "Check For Upcoming Meetings",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          526,
+          -180
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          920,
+          -20
+        ]
+      },
+      {
+        "name": "Extract Attendee Information",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          920,
+          -180
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2460,
+          640
+        ]
+      },
+      {
+        "name": "Get Last Correspondence",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1740,
+          500
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          4020,
+          1320
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2720,
+          -20
+        ]
+      },
+      {
+        "name": "WhatsApp Business Cloud",
+        "type": "n8n-nodes-base.whatsApp",
+        "position": [
+          3360,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          180,
+          -400
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          820,
+          -520
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1500,
+          -520
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2547.540603371386,
+          -440
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3180,
+          -360
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          260
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          860
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          920,
+          310
+        ]
+      },
+      {
+        "name": "Return LinkedIn Success",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4360,
+          1180
+        ]
+      },
+      {
+        "name": "Return LinkedIn Error",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2380,
+          1320
+        ]
+      },
+      {
+        "name": "Return Email Error",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2080,
+          680
+        ]
+      },
+      {
+        "name": "Return Email Success",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2800,
+          500
+        ]
+      },
+      {
+        "name": "Set Route Email",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1600,
+          -260
+        ]
+      },
+      {
+        "name": "Set Route Linkedin",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1600,
+          -100
+        ]
+      },
+      {
+        "name": "Router",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1100,
+          580
+        ]
+      },
+      {
+        "name": "Return LinkedIn Error1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1440,
+          870
+        ]
+      },
+      {
+        "name": "Has Emails?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1900,
+          500
+        ]
+      },
+      {
+        "name": "Return Email Error1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1440,
+          700
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2560,
+          920
+        ]
+      },
+      {
+        "name": "Sections To List",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2720,
+          1180
+        ]
+      },
+      {
+        "name": "Set LinkedIn Cookie",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1800,
+          1180
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1400,
+          1240
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          1152
+        ]
+      },
+      {
+        "name": "Attendees to List",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1260,
+          -180
+        ]
+      },
+      {
+        "name": "Merge Attendee with Summaries",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2160,
+          -180
+        ]
+      },
+      {
+        "name": "Has Email Address?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1280,
+          580
+        ]
+      },
+      {
+        "name": "Has LinkedIn URL?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1280,
+          750
+        ]
+      },
+      {
+        "name": "Get Correspondance",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1780,
+          -260
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2000,
+          -180
+        ]
+      },
+      {
+        "name": "Aggregate Attendees",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2340,
+          -180
+        ]
+      },
+      {
+        "name": "Activities To Array",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          3680,
+          1360
+        ]
+      },
+      {
+        "name": "Extract Profile Metadata",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          2560,
+          1180
+        ]
+      },
+      {
+        "name": "Activities To List",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          3360,
+          1360
+        ]
+      },
+      {
+        "name": "APIFY Web Scraper",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2000,
+          1180
+        ]
+      },
+      {
+        "name": "Get Activity Details",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          3520,
+          1360
+        ]
+      },
+      {
+        "name": "Get Sections",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          2880,
+          1180
+        ]
+      },
+      {
+        "name": "Get About Section",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3040,
+          1180
+        ]
+      },
+      {
+        "name": "Get Activity Section",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3040,
+          1360
+        ]
+      },
+      {
+        "name": "Extract Activities",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          3200,
+          1360
+        ]
+      },
+      {
+        "name": "Merge1",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          3860,
+          1180
+        ]
+      },
+      {
+        "name": "Is Scrape Successful?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2180,
+          1180
+        ]
+      },
+      {
+        "name": "Extract About",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          3200,
+          1180
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3860,
+          940
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2460,
+          270
+        ]
+      },
+      {
+        "name": "Get LinkedIn Profile & Activity",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1780,
+          -100
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -320,
+          -660
+        ]
+      },
+      {
+        "name": "Correspondance Recap Agent",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2460,
+          500
+        ]
+      },
+      {
+        "name": "Attendee Research Agent",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2720,
+          -180
+        ]
+      },
+      {
+        "name": "LinkedIn Summarizer Agent",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          4020,
+          1180
+        ]
+      }
+    ],
+    "connections_count": 40
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "complexity_score": 1520,
+    "keywords": [
+      "activities to list",
+      "sticky note13",
+      "sticky note7",
+      "linkedin summarizer agent",
+      "return linkedin success",
+      "return linkedin error",
+      "scheduleTrigger",
+      "splitOut",
+      "return email success",
+      "complex",
+      "has email address?",
+      "sticky note6",
+      "whatsApp",
+      "sticky note10",
+      "sticky note3",
+      "set",
+      "apify web scraper",
+      "set route linkedin",
+      "get activity details",
+      "webhook integration",
+      "openai chat model1",
+      "sections to list",
+      "sticky note8",
+      "get message contents",
+      "correspondance recap agent",
+      "sticky note9",
+      "has linkedin url?",
+      "get correspondance",
+      "return linkedin error1",
+      "set linkedin cookie",
+      "whatsapp business cloud",
+      "html",
+      "schedule trigger",
+      "gmail",
+      "executeWorkflow",
+      "aggregate",
+      "get sections",
+      "is scrape successful?",
+      "get last correspondence",
+      "extract attendee information",
+      "merge attendee with summaries",
+      "return email error",
+      "sticky note11",
+      "switch",
+      "openai chat model2",
+      "activities to array",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "extract activities",
+      "extract profile metadata",
+      "executeWorkflowTrigger",
+      "get linkedin profile & activity",
+      "merge1",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "openai chat model3",
+      "return email error1",
+      "check for upcoming meetings",
+      "sticky note4",
+      "has emails?",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "attendee research agent",
+      "aggregate attendees",
+      "httpRequest",
+      "execute workflow trigger",
+      "openai chat model",
+      "sticky note",
+      "ai-ml",
+      "sticky note1",
+      "sticky note12",
+      "get about section",
+      "simplify emails",
+      "sticky note5",
+      "set route email",
+      "router",
+      "stickyNote",
+      "get activity section",
+      "sticky note2",
+      "merge",
+      "googleCalendar",
+      "attendees to list",
+      "extract about"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 61 nodos con 2 disparadores que ejecuta: Get Message Contents, Simplify Emails, Check For Upcoming Meetings en la categoría de ai-ml.",
+    "semantic_content": "Nodos: Get Message Contents (gmail), Simplify Emails (set), Check For Upcoming Meetings (googleCalendar), OpenAI Chat Model2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Extract Attendee Information (@n8n/n8n-nodes-langchain.informationExtractor), Execute Workflow Trigger (executeWorkflowTrigger), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Get Last Correspondence (gmail), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), OpenAI Chat Model3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), WhatsApp Business Cloud (whatsApp), Sticky Note (stickyNote), Schedule Trigger (scheduleTrigger), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Return LinkedIn Success (set), Return LinkedIn Error (set), Return Email Error (set), Return Email Success (set), Set Route Email (set), Set Route Linkedin (set), Router (switch), Return LinkedIn Error1 (set), Has Emails? (if), Return Email Error1 (set), Sticky Note9 (stickyNote), Sections To List (splitOut), Set LinkedIn Cookie (set), Sticky Note8 (stickyNote), Sticky Note10 (stickyNote), Attendees to List (splitOut), Merge Attendee with Summaries (set), Has Email Address? (if), Has LinkedIn URL? (if), Get Correspondance (executeWorkflow), Merge (merge), Aggregate Attendees (aggregate), Activities To Array (aggregate), Extract Profile Metadata (html), Activities To List (splitOut), APIFY Web Scraper (httpRequest), Get Activity Details (html), Get Sections (html), Get About Section (set), Get Activity Section (set), Extract Activities (html), Merge1 (merge), Is Scrape Successful? (if), Extract About (html), Sticky Note11 (stickyNote), Sticky Note12 (stickyNote), Get LinkedIn Profile & Activity (executeWorkflow), Sticky Note13 (stickyNote), Correspondance Recap Agent (@n8n/n8n-nodes-langchain.chainLlm), Attendee Research Agent (@n8n/n8n-nodes-langchain.chainLlm), LinkedIn Summarizer Agent (@n8n/n8n-nodes-langchain.chainLlm). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Execute Workflow Trigger, Schedule Trigger"
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.scheduleTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 80.26315789473685,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 79.80263157894737
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T03:59:03.111493"
+  },
+  "semantic_vector": [
+    -0.012498204596340656,
+    -0.05330341309309006,
+    -0.037491440773010254,
+    -0.051967594772577286,
+    -0.03583194315433502,
+    -0.04831712692975998,
+    -0.015835169702768326,
+    -0.054515380412340164,
+    -0.054560720920562744,
+    0.05430704355239868,
+    -0.04288793355226517,
+    -0.04321584105491638,
+    -0.052063096314668655,
+    -0.05433955788612366,
+    -0.029209936037659645,
+    0.05457083880901337,
+    0.04841930419206619,
+    0.018762199208140373,
+    -0.021126143634319305,
+    0.03536859527230263,
+    -0.0016315694665536284,
+    0.04804535582661629,
+    0.05416334792971611,
+    -0.04623425006866455,
+    0.03695794939994812,
+    0.03138666972517967,
+    -0.05360161140561104,
+    0.05336162447929382,
+    -0.043075788766145706,
+    0.05241012945771217,
+    0.045379992574453354,
+    -0.04315706342458725,
+    -0.051813993602991104,
+    -0.05114041641354561,
+    0.05391048267483711,
+    0.02338317781686783,
+    -0.03761977702379227,
+    -0.021083621308207512,
+    -0.04708288237452507,
+    -0.049582839012145996,
+    -0.02878504805266857,
+    0.04949520155787468,
+    -0.01754339598119259,
+    0.048704322427511215,
+    0.05457071214914322,
+    0.054486922919750214,
+    0.0394737683236599,
+    -0.04846254736185074,
+    -0.04189226031303406,
+    -0.051910579204559326,
+    -0.03476950526237488,
+    -0.04835933446884155,
+    -0.054569847881793976,
+    -0.051004402339458466,
+    -0.05349026620388031,
+    -0.0519363172352314,
+    0.05275081470608711,
+    -0.051701027899980545,
+    0.021828044205904007,
+    0.04197385907173157,
+    -0.019122442230582237,
+    -0.038211315870285034,
+    -0.04520653188228607,
+    0.05452260747551918,
+    -0.005457715597003698,
+    -0.007883983664214611,
+    0.05341232195496559,
+    -0.024303311482071877,
+    0.05454951897263527,
+    -0.010324337519705296,
+    -0.054319679737091064,
+    -0.031007612124085426,
+    -0.05184141546487808,
+    0.05347300320863724,
+    -0.0075317006558179855,
+    -0.052786462008953094,
+    0.05439148098230362,
+    -0.050844281911849976,
+    -0.05034473538398743,
+    0.03569117188453674,
+    0.050813477486371994,
+    0.05216774716973305,
+    0.051165804266929626,
+    -0.05441860854625702,
+    0.04418488219380379,
+    0.003147304989397526,
+    -0.022864174097776413,
+    -0.04938582330942154,
+    -0.035731445997953415,
+    0.00698457658290863,
+    0.010435217060148716,
+    0.03468874469399452,
+    0.05356493592262268,
+    -0.024040471762418747,
+    0.020384181290864944,
+    0.02954484149813652,
+    0.044468559324741364,
+    0.03593377396464348,
+    -0.05449299514293671,
+    -0.05456451699137688,
+    0.05398738011717796,
+    -0.0278520118445158,
+    -0.0474131815135479,
+    0.030084265395998955,
+    0.04656124860048294,
+    0.05388236045837402,
+    0.05457039922475815,
+    0.04175584763288498,
+    0.05446905270218849,
+    -0.054567452520132065,
+    -0.028909113258123398,
+    -0.05280344933271408,
+    -0.042709093540906906,
+    0.0402047373354435,
+    0.04775254800915718,
+    0.05024227499961853,
+    -0.03691164031624794,
+    -0.025432163849473,
+    0.054373763501644135,
+    -0.05288165435194969,
+    0.012044080533087254,
+    0.04958535358309746,
+    -0.031803153455257416,
+    0.043345484882593155,
+    0.054402559995651245,
+    -0.0427965484559536,
+    0.00928482599556446,
+    -0.009362787008285522,
+    0.052838198840618134,
+    -0.04796227812767029,
+    -0.05227593332529068,
+    0.005557934753596783,
+    0.052711281925439835,
+    0.0042914533987641335,
+    0.052549462765455246,
+    -0.040140315890312195,
+    0.009366222657263279,
+    0.03835565224289894,
+    -0.0487072691321373,
+    -0.05455551669001579,
+    -0.039435066282749176,
+    0.0545707568526268,
+    -0.04228660836815834,
+    0.03829406201839447,
+    0.013143043965101242,
+    -0.05455038696527481,
+    0.05456652492284775,
+    0.00695082126185298,
+    0.006410992704331875,
+    0.025840163230895996,
+    -0.053889062255620956,
+    -0.027380941435694695,
+    0.043705303221940994,
+    -0.026706762611865997,
+    0.05431240424513817,
+    0.05449473857879639,
+    -0.016492320224642754,
+    -0.054387591779232025,
+    0.026758946478366852,
+    -0.050228551030159,
+    -0.0527457594871521,
+    -0.054534804075956345,
+    -0.045255981385707855,
+    0.046558935195207596,
+    0.045186132192611694,
+    -0.015260336920619011,
+    -0.04980766028165817,
+    -0.051708534359931946,
+    -0.05441773310303688,
+    -0.04696959629654884,
+    0.03729698061943054,
+    -0.02681279182434082,
+    0.01900709606707096,
+    0.052588462829589844,
+    -0.053672611713409424,
+    0.028050927445292473,
+    0.02973203919827938,
+    -0.05261428654193878,
+    0.05286191403865814,
+    -0.05388317257165909,
+    -0.03747512027621269,
+    0.054077405482530594,
+    -0.05439062789082527,
+    0.011402030475437641,
+    0.052866917103528976,
+    0.03923526778817177,
+    -0.053931016474962234,
+    0.050447408109903336,
+    0.05339256301522255,
+    0.048982713371515274,
+    -0.05091705545783043,
+    0.04531330242753029,
+    -0.012633366510272026,
+    -0.05456967279314995,
+    -0.054569412022829056,
+    -0.05456029251217842,
+    -0.013767529278993607,
+    0.05457083880901337,
+    -0.04482915997505188,
+    -0.03850403055548668,
+    -0.008280954323709011,
+    0.05366181954741478,
+    0.007785630878061056,
+    0.04831786826252937,
+    0.021181920543313026,
+    -0.05291666463017464,
+    -0.03348803520202637,
+    -0.020892633125185966,
+    -0.05456409603357315,
+    -0.0508456714451313,
+    0.039974961429834366,
+    0.0030349320732057095,
+    0.05335729196667671,
+    0.03237626329064369,
+    -0.054570186883211136,
+    -0.049413226544857025,
+    0.04215723276138306,
+    0.054095055907964706,
+    0.05395112186670303,
+    0.03002985380589962,
+    -0.026596631854772568,
+    0.03980503976345062,
+    0.04865561053156853,
+    0.0016877463785931468,
+    -0.052041392773389816,
+    -0.05446488782763481,
+    -0.053078748285770416,
+    -0.054553281515836716,
+    -0.05194989591836929,
+    -0.054480865597724915,
+    0.03669726103544235,
+    -0.05224691703915596,
+    0.024397902190685272,
+    -0.05457082390785217,
+    0.04649290069937706,
+    0.05342013016343117,
+    0.05457058176398277,
+    0.05438599735498428,
+    -0.05442964285612106,
+    -0.004600608721375465,
+    -0.046413250267505646,
+    0.053962450474500656,
+    -0.02169785648584366,
+    0.04738239943981171,
+    0.054014913737773895,
+    0.054007042199373245,
+    0.03216521069407463,
+    -0.0387948639690876,
+    0.05400509759783745,
+    0.05455572530627251,
+    -0.05354826897382736,
+    -0.0017909578746184707,
+    -0.05342160165309906,
+    0.007990311831235886,
+    0.050365597009658813,
+    -0.05173492804169655,
+    -0.053280629217624664,
+    0.05457083880901337,
+    -0.051216449588537216,
+    0.03979618474841118,
+    -0.04896467924118042,
+    -0.03207613527774811,
+    -0.05253222957253456,
+    0.053973276168107986,
+    -0.02881930023431778,
+    -0.027639729902148247,
+    -0.02745930664241314,
+    -0.03344361111521721,
+    -0.054253991693258286,
+    0.05310644209384918,
+    -0.0542924664914608,
+    -0.0036486834287643433,
+    -0.05443308874964714,
+    -0.02883251942694187,
+    0.05449488013982773,
+    -0.02671029046177864,
+    -0.05150945857167244,
+    0.048976797610521317,
+    0.0545707605779171,
+    0.02668818086385727,
+    -0.05268165469169617,
+    0.016662679612636566,
+    0.04409424960613251,
+    -0.02481742389500141,
+    -0.04221159592270851,
+    -0.05403308942914009,
+    -0.043724581599235535,
+    0.054241642355918884,
+    -0.04467206820845604,
+    0.05428026244044304,
+    -0.04764889180660248,
+    0.049731168895959854,
+    0.05457064509391785,
+    -0.04959193617105484,
+    0.0537751242518425,
+    -0.046623218804597855,
+    -0.004934987518936396,
+    -0.05356958881020546,
+    -0.02571345865726471,
+    0.03512430936098099,
+    -0.000499990361277014,
+    -0.03600313141942024,
+    0.05082034692168236,
+    -0.048719312995672226,
+    0.054114460945129395,
+    -0.042513974010944366,
+    0.052869439125061035,
+    -0.003906466998159885,
+    0.04763231799006462,
+    0.02429458312690258,
+    0.05396481603384018,
+    -0.006992814596742392,
+    -0.004051921423524618,
+    -0.012407309375703335,
+    0.054413385689258575,
+    -0.0545685738325119,
+    0.05354473367333412,
+    -0.04943692311644554,
+    0.043017592281103134,
+    0.04188363626599312,
+    0.05441313236951828,
+    -0.0513915978372097,
+    0.03897736221551895,
+    -0.015720803290605545,
+    0.05087924003601074,
+    0.053392745554447174,
+    0.020048877224326134,
+    -0.025804603472352028,
+    0.05332924798130989,
+    0.008782224729657173,
+    0.04874558746814728,
+    -0.05391673743724823,
+    -0.004197100177407265,
+    0.05454537272453308,
+    0.024539828300476074,
+    0.05342801287770271,
+    0.05452723056077957,
+    0.05453511327505112,
+    0.01993616670370102,
+    0.036205798387527466,
+    0.038617655634880066,
+    -0.04655573144555092,
+    -0.037987884134054184,
+    -0.007071480620652437,
+    -0.054570797830820084,
+    -0.04320475459098816,
+    -0.021685069426894188,
+    0.028485314920544624,
+    0.018612129613757133,
+    0.0425214022397995,
+    0.041818879544734955,
+    0.05389159172773361,
+    -0.05431715026497841,
+    0.05423852428793907,
+    0.05076206475496292,
+    -0.05454067885875702,
+    -0.05457080155611038,
+    0.05057308450341225,
+    0.021143203601241112,
+    0.054339949041604996,
+    0.05195414647459984,
+    -0.05334131419658661,
+    -0.05457083880901337,
+    0.0543532557785511,
+    -0.05456516891717911,
+    0.054186154156923294,
+    0.04281614348292351,
+    -0.05443667620420456,
+    -0.00511238444596529,
+    -0.048655327409505844,
+    -0.04904342442750931,
+    0.004460284020751715,
+    -0.05413246154785156,
+    0.054569605737924576,
+    0.05364386364817619,
+    0.03862500190734863,
+    -0.05374686047434807,
+    -0.05296355113387108,
+    0.04909784719347954,
+    -0.050609949976205826,
+    0.00710121588781476,
+    0.03883368894457817,
+    -0.048070136457681656,
+    0.044094014912843704,
+    0.05043303593993187,
+    -0.052735671401023865,
+    0.054338742047548294,
+    -0.052597399801015854,
+    0.01898476667702198,
+    -0.05355449020862579,
+    0.022541983053088188,
+    -0.05456461012363434,
+    0.05456719174981117,
+    0.05456681549549103,
+    -0.01954520493745804,
+    0.04973234236240387,
+    -0.03920064494013786,
+    0.015894798561930656,
+    0.028384322300553322,
+    0.004412927199155092,
+    0.052938323467969894,
+    0.053902994841337204,
+    -0.05247000604867935,
+    0.05040229111909866,
+    0.03134693577885628,
+    -0.04977673292160034,
+    -0.05455924943089485,
+    -0.00987685564905405,
+    0.0544549897313118,
+    -0.028473734855651855,
+    0.05214357748627663,
+    0.051906682550907135,
+    0.032547954469919205,
+    -0.0016194282798096538,
+    -0.054267801344394684,
+    0.022865932434797287,
+    0.054443858563899994,
+    -0.03623955696821213,
+    0.03387131914496422,
+    -0.05269864946603775,
+    -0.05364637449383736,
+    -0.005832064896821976,
+    -0.05422920361161232,
+    0.024029862135648727,
+    -0.04055036976933479,
+    0.05008681118488312,
+    -0.054510463029146194,
+    0.054556697607040405,
+    -0.04889075458049774,
+    0.048876646906137466,
+    -0.02737317606806755,
+    -0.04990628734230995,
+    -0.03039027750492096,
+    0.05016452074050903,
+    -0.05404062941670418,
+    -0.05433851107954979,
+    -0.04985297471284866,
+    -0.054569825530052185,
+    -0.053994327783584595,
+    -0.022609228268265724,
+    0.0012370975455269217,
+    -0.05065647512674332,
+    -0.03587746620178223,
+    -0.05073697865009308,
+    0.051590967923402786,
+    -0.05454826354980469,
+    -0.04919389635324478,
+    0.03923608362674713,
+    -0.03277582675218582,
+    -0.05422225967049599,
+    0.05172144994139671,
+    -0.0033583324402570724,
+    0.0545695498585701,
+    0.0545654334127903,
+    0.05376383289694786,
+    -0.05457083880901337,
+    0.02946600876748562,
+    0.05456874892115593,
+    0.026947904378175735,
+    -0.05130498856306076,
+    0.03627298027276993,
+    0.05424661934375763,
+    0.04373346269130707,
+    0.053962189704179764,
+    -0.010323310270905495,
+    -0.0532500259578228,
+    0.04941701889038086,
+    0.02550750970840454,
+    -0.0522034615278244,
+    0.05457083880901337,
+    0.041451968252658844,
+    -0.05451700836420059,
+    -0.028983676806092262,
+    -0.0419488288462162,
+    -0.0431397408246994,
+    -0.05337873101234436,
+    0.054396193474531174,
+    0.05315398424863815,
+    0.0006937777507118881,
+    0.03327485918998718,
+    -0.05453646555542946,
+    0.05073181539773941,
+    -0.0481615848839283,
+    -0.054554134607315063,
+    -0.03875439614057541,
+    -0.04509907215833664,
+    -0.034586675465106964,
+    -0.026644838973879814,
+    -0.051570527255535126,
+    0.05107793211936951,
+    -0.05321098119020462,
+    0.04653087630867958,
+    -0.02840721420943737,
+    0.05335591733455658,
+    -0.05305503308773041,
+    0.05361970141530037,
+    0.00875226128846407,
+    0.05281061679124832,
+    -0.049968864768743515,
+    0.0535704605281353,
+    -0.035534895956516266,
+    -0.04837778955698013,
+    0.05365237966179848,
+    -0.05457083880901337,
+    0.015324258245527744,
+    0.01571802981197834,
+    0.048289187252521515,
+    -0.015695123001933098,
+    0.04322236403822899,
+    0.05457083880901337,
+    -0.053852155804634094,
+    -0.04391544312238693
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "uses:switch",
+    "uses:executeWorkflow",
+    "uses:whatsApp",
+    "uses:gmail",
+    "uses:@n8n/n8n-nodes-langchain.informationExtractor",
+    "uses:aggregate",
+    "trigger:executeWorkflowTrigger",
+    "uses:html",
+    "uses:executeWorkflowTrigger",
+    "uses:googleCalendar",
+    "uses:scheduleTrigger",
+    "uses:@n8n/n8n-nodes-langchain.lmChatOpenAi",
+    "trigger:scheduleTrigger",
+    "uses:splitOut",
+    "uses:httpRequest",
+    "complexity:high",
+    "purpose:webhook-integration",
+    "uses:set",
+    "uses:merge",
+    "category:ai-ml",
+    "uses:if",
+    "uses:@n8n/n8n-nodes-langchain.chainLlm"
+  ],
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

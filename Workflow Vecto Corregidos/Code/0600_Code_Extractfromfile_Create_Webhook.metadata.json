@@ -1,0 +1,1302 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Code Extractfromfile Create Webhook",
+    "file_name": "0600_Code_Extractfromfile_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code\\0600_Code_Extractfromfile_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "85270594b8fa"
+  },
+  "structure": {
+    "total_nodes": 50,
+    "node_types": [
+      "n8n-nodes-base.sort",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.airtableTool",
+      "n8n-nodes-base.convertToFile",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "n8n-nodes-base.airtableTrigger",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.compression",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.executeWorkflow",
+      "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "n8n-nodes-base.editImage",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.airtable"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.sort",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.airtableTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.convertToFile",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.airtableTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.compression",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.editImage",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 11
+      },
+      {
+        "type": "n8n-nodes-base.airtable",
+        "count": 2
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -1076,
+          594
+        ]
+      },
+      {
+        "name": "Execute Workflow Trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          20,
+          780
+        ]
+      },
+      {
+        "name": "Airtable Trigger For Pending Rows",
+        "type": "n8n-nodes-base.airtableTrigger",
+        "position": [
+          -1076,
+          774
+        ]
+      },
+      {
+        "name": "When chat message received",
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "position": [
+          3560,
+          1257
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sort Pages",
+        "type": "n8n-nodes-base.sort",
+        "position": [
+          1440,
+          777
+        ]
+      },
+      {
+        "name": "Split PDF into Images",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          900,
+          777
+        ]
+      },
+      {
+        "name": "Extract Zip File",
+        "type": "n8n-nodes-base.compression",
+        "position": [
+          1080,
+          777
+        ]
+      },
+      {
+        "name": "Images To List",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1260,
+          777
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          800,
+          460
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          850,
+          737
+        ]
+      },
+      {
+        "name": "Resize Images For AI",
+        "type": "n8n-nodes-base.editImage",
+        "position": [
+          1840,
+          820
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1680,
+          500
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2500,
+          475.5341395348837
+        ]
+      },
+      {
+        "name": "Combine All Pages",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2580,
+          680
+        ]
+      },
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          3100,
+          1500
+        ]
+      },
+      {
+        "name": "Recursive Character Text Splitter",
+        "type": "@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter",
+        "position": [
+          3100,
+          1640
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          4040,
+          1457
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2760,
+          840
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          2980,
+          1500
+        ]
+      },
+      {
+        "name": "Delete Existing Vectors",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2620,
+          1340
+        ]
+      },
+      {
+        "name": "Continue With Pages Only",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2800,
+          1340
+        ]
+      },
+      {
+        "name": "Update Pitchdecks Table",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          3100,
+          680
+        ]
+      },
+      {
+        "name": "Search Pending Rows",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          -876,
+          594
+        ]
+      },
+      {
+        "name": "Get Row",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -696,
+          774
+        ]
+      },
+      {
+        "name": "Prequisites Met",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          -536,
+          774
+        ]
+      },
+      {
+        "name": "Execute Workflow",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          -336,
+          594
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          -336,
+          774
+        ]
+      },
+      {
+        "name": "Extract from File",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          380,
+          780
+        ]
+      },
+      {
+        "name": "Convert to File",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          560,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2500,
+          1040
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3740,
+          1457
+        ]
+      },
+      {
+        "name": "Vector Store Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "position": [
+          4280,
+          1457
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          4420,
+          1597
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI1",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          4160,
+          1717
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model4",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2020,
+          980
+        ]
+      },
+      {
+        "name": "Generate Report",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          2760,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3440,
+          1040
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -60,
+          564.0002976744187
+        ]
+      },
+      {
+        "name": "Download Deck From Airtable",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          200,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1180,
+          380
+        ]
+      },
+      {
+        "name": "Transcribe to Markdown",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2020,
+          820
+        ]
+      },
+      {
+        "name": "Identify Companies In Question",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          3740,
+          1257
+        ]
+      },
+      {
+        "name": "Qdrant Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          4160,
+          1597
+        ]
+      },
+      {
+        "name": "Ask Questions About Pitchdecks",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          4060,
+          1257
+        ]
+      },
+      {
+        "name": "Window Buffer Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          4160,
+          1457
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1880,
+          280
+        ]
+      },
+      {
+        "name": "Check Pitch Deck Exists",
+        "type": "n8n-nodes-base.airtableTool",
+        "position": [
+          4560,
+          1457
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -720,
+          600
+        ]
+      },
+      {
+        "name": "Pitchdecks Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+        "position": [
+          3000,
+          1340
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2300,
+          1340
+        ]
+      }
+    ],
+    "connections_count": 34,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 4,
+      "action_count": 46
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1850,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "executeWorkflow",
+      "recursive character text splitter",
+      "sticky note7",
+      "openai chat model1",
+      "stickyNote",
+      "@n8n/n8n nodes langchain.embeddingsOpenAi",
+      "extract from file",
+      "default data loader",
+      "vector store tool",
+      "httpRequest",
+      "openai chat model3",
+      "@n8n/n8n nodes langchain.vectorStoreQdrant",
+      "convert to file",
+      "pitchdecks vector store",
+      "merge",
+      "resize images for ai",
+      "execute workflow",
+      "@n8n/n8n nodes langchain.textSplitterRecursiveCharacterTextSplitter",
+      "compression",
+      "airtableTool",
+      "qdrant vector store",
+      "airtable",
+      "executeWorkflowTrigger",
+      "openai chat model4",
+      "extractFromFile",
+      "check pitch deck exists",
+      "search pending rows",
+      "aggregate",
+      "execute workflow trigger",
+      "ask questions about pitchdecks",
+      "openai chat model",
+      "openai chat model2",
+      "editImage",
+      "sort",
+      "@n8n/n8n nodes langchain.agent",
+      "no operation, do nothing",
+      "embeddings openai1",
+      "generate report",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "prequisites met",
+      "sticky note5",
+      "airtableTrigger",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "when chat message received",
+      "sticky note3",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "delete existing vectors",
+      "code",
+      "sticky note9",
+      "sticky note4",
+      "set",
+      "window buffer memory",
+      "embeddings openai",
+      "sticky note",
+      "complex",
+      "manualTrigger",
+      "sticky note1",
+      "sticky note2",
+      "images to list",
+      "split pdf into images",
+      "@n8n/n8n nodes langchain.chatTrigger",
+      "update pitchdecks table",
+      "combine all pages",
+      "identify companies in question",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "file processing",
+      "continue with pages only",
+      "sticky note6",
+      "convertToFile",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "sticky note10",
+      "@n8n/n8n nodes langchain.toolVectorStore",
+      "airtable trigger for pending rows",
+      "extract zip file",
+      "transcribe to markdown",
+      "download deck from airtable",
+      "sort pages",
+      "get row",
+      "sticky note8",
+      "noOp",
+      "when clicking ‘test workflow’"
+    ],
+    "description": "Este workflow diseñado para file processing con 50 nodos con 4 disparadores que ejecuta: Sort Pages, Split PDF into Images, Extract Zip File en la categoría de ai-ml.",
+    "semantic_content": "Nodos: When clicking ‘Test workflow’ (manualTrigger), Sort Pages (sort), Split PDF into Images (httpRequest), Extract Zip File (compression), Images To List (code), Sticky Note2 (stickyNote), Sticky Note5 (stickyNote), Resize Images For AI (editImage), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Combine All Pages (aggregate), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Recursive Character Text Splitter (@n8n/n8n-nodes-langchain.textSplitterRecursiveCharacterTextSplitter), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), OpenAI Chat Model2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Embeddings OpenAI (@n8n/n8n-nodes-langchain.embeddingsOpenAi), Delete Existing Vectors (httpRequest), Continue With Pages Only (merge), Update Pitchdecks Table (airtable), Search Pending Rows (airtable), Get Row (set), Prequisites Met (if), Execute Workflow (executeWorkflow), No Operation, do nothing (noOp), Execute Workflow Trigger (executeWorkflowTrigger), Extract from File (extractFromFile), Convert to File (convertToFile), Sticky Note (stickyNote), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Vector Store Tool (@n8n/n8n-nodes-langchain.toolVectorStore), OpenAI Chat Model3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Embeddings OpenAI1 (@n8n/n8n-nodes-langchain.embeddingsOpenAi), OpenAI Chat Model4 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Generate Report (@n8n/n8n-nodes-langchain.informationExtractor), Sticky Note1 (stickyNote), Sticky Note6 (stickyNote), Download Deck From Airtable (httpRequest), Sticky Note7 (stickyNote), Airtable Trigger For Pending Rows (airtableTrigger), Transcribe to Markdown (@n8n/n8n-nodes-langchain.chainLlm), Identify Companies In Question (@n8n/n8n-nodes-langchain.informationExtractor), Qdrant Vector Store (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Ask Questions About Pitchdecks (@n8n/n8n-nodes-langchain.agent), Window Buffer Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), Sticky Note8 (stickyNote), Check Pitch Deck Exists (airtableTool), When chat message received (@n8n/n8n-nodes-langchain.chatTrigger), Sticky Note9 (stickyNote), Pitchdecks Vector Store (@n8n/n8n-nodes-langchain.vectorStoreQdrant), Sticky Note10 (stickyNote). Propósito: file processing. Categoría: ai-ml. Disparadores: When clicking ‘Test workflow’, Execute Workflow Trigger, Airtable Trigger For Pending Rows, When chat message received",
+    "business_context": "Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "Sort Pages",
+      "When chat message received",
+      "Airtable Trigger For Pending Rows",
+      "Execute Workflow Trigger",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.sort",
+      "n8n-nodes-base.manualTrigger",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "Extract Zip File",
+      "n8n-nodes-base.airtableTrigger",
+      "n8n-nodes-base.compression",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "Split PDF into Images"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "n8n-nodes-base.sort",
+      "n8n-nodes-base.manualtrigger",
+      "@n8n/n8n-nodes-langchain.chattrigger",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.airtabletool",
+      "@n8n/n8n-nodes-langchain.toolvectorstore",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.airtabletrigger",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.vectorstoreqdrant",
+      "n8n-nodes-base.compression",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "n8n-nodes-base.editimage",
+      "@n8n/n8n-nodes-langchain.textsplitterrecursivecharactertextsplitter",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.extractfromfile",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.converttofile",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.executeworkflow",
+      "@n8n/n8n-nodes-langchain.embeddingsopenai",
+      "n8n-nodes-base.airtable"
+    ],
+    "search_terms": [
+      "0600",
+      "create",
+      "0600_code_extractfromfile_create_webhook",
+      "code",
+      "webhook",
+      "extractfromfile"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai-ml",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.airtableTrigger",
+      "@n8n/n8n-nodes-langchain.chatTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 54.054054054054056,
+    "best_practices_score": 50.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 69.5608108108108
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:05.056822"
+  },
+  "semantic_vector": [
+    -0.05455966666340828,
+    -0.05200386792421341,
+    0.05504694953560829,
+    -0.05158388242125511,
+    -0.0201631560921669,
+    -0.0544731467962265,
+    0.04734483361244202,
+    -0.014287414029240608,
+    -0.05568283051252365,
+    0.0560898520052433,
+    -0.03906286135315895,
+    -0.028728943318128586,
+    -0.0024025251623243093,
+    -0.05160701647400856,
+    -0.047138508409261703,
+    0.0565151609480381,
+    0.04452897235751152,
+    -0.05087653174996376,
+    -0.0563681535422802,
+    0.04702989012002945,
+    -0.0211446862667799,
+    0.02960827387869358,
+    0.03971027955412865,
+    -0.04209810867905617,
+    0.04939309135079384,
+    0.011980579234659672,
+    -0.033974017947912216,
+    0.055121202021837234,
+    -0.05215989798307419,
+    0.0350639782845974,
+    0.05527643486857414,
+    -0.04478629305958748,
+    0.0562160350382328,
+    0.010132497176527977,
+    0.05375177413225174,
+    0.02649759128689766,
+    -0.011968190781772137,
+    0.006408901885151863,
+    -0.04979049041867256,
+    -0.05431312322616577,
+    -0.04291538894176483,
+    0.05178134888410568,
+    -0.039480313658714294,
+    0.04464288055896759,
+    0.05651480704545975,
+    0.05577845871448517,
+    0.0124152647331357,
+    0.04523694887757301,
+    -0.052965197712183,
+    -0.05522969365119934,
+    -0.05549027398228645,
+    -0.010677707381546497,
+    -0.05651412159204483,
+    -0.05551384761929512,
+    -0.05372646078467369,
+    -0.05287908762693405,
+    0.05612378567457199,
+    -0.01207635086029768,
+    0.025235826149582863,
+    0.050105348229408264,
+    0.045215457677841187,
+    -0.04701366275548935,
+    -0.04163157939910889,
+    0.05627911910414696,
+    0.053066182881593704,
+    0.009462575428187847,
+    0.056085482239723206,
+    -0.03060060739517212,
+    -0.016546376049518585,
+    -0.035433582961559296,
+    -0.05358201265335083,
+    0.011821524240076542,
+    0.015283189713954926,
+    0.05431952327489853,
+    -0.05280647426843643,
+    -0.05590266361832619,
+    0.05595831573009491,
+    -0.05457458645105362,
+    0.029040778055787086,
+    0.007600050885230303,
+    -0.0014451059978455305,
+    -0.05047645792365074,
+    0.013630633242428303,
+    -0.05363858491182327,
+    -0.042438164353370667,
+    0.045820556581020355,
+    0.0010315121617168188,
+    -0.05127938091754913,
+    -0.009990264661610126,
+    0.03841562941670418,
+    -0.04405933618545532,
+    0.0036482620052993298,
+    0.037516266107559204,
+    0.0008595799445174634,
+    0.03781142085790634,
+    -0.029457924887537956,
+    -0.004379651974886656,
+    0.05133775621652603,
+    -0.052398502826690674,
+    -0.05651339143514633,
+    0.03578399121761322,
+    -0.048985760658979416,
+    0.0007527087000198662,
+    0.015041454695165157,
+    0.022584708407521248,
+    0.056300126016139984,
+    0.05282317101955414,
+    0.05216902866959572,
+    -0.02705523371696472,
+    -0.056207239627838135,
+    -0.03791063278913498,
+    -0.05621902644634247,
+    -0.03434019908308983,
+    -0.014628253877162933,
+    0.05291084200143814,
+    0.04235699400305748,
+    -0.056091293692588806,
+    -0.055043816566467285,
+    0.04262731596827507,
+    0.05239354819059372,
+    -0.05569741502404213,
+    0.048943791538476944,
+    0.01153341494500637,
+    0.04472680389881134,
+    0.056287676095962524,
+    0.04717031866312027,
+    -0.02708412893116474,
+    0.03649264574050903,
+    0.050703052431344986,
+    0.006246284581720829,
+    -0.05225301533937454,
+    -0.0268014594912529,
+    0.05437474697828293,
+    -0.04095382243394852,
+    -0.014722875319421291,
+    -0.05452290549874306,
+    -0.02665710635483265,
+    -0.05341418832540512,
+    -0.036090973764657974,
+    -0.05619761347770691,
+    0.005767686292529106,
+    0.0565151609480381,
+    -0.015504992567002773,
+    -0.026710018515586853,
+    -0.05127185210585594,
+    -0.05650072544813156,
+    0.04865293949842453,
+    -0.0035651447251439095,
+    0.05648290365934372,
+    0.027645744383335114,
+    -0.036310914903879166,
+    -0.0563434436917305,
+    0.05539123713970184,
+    0.024236762896180153,
+    0.05633416771888733,
+    0.0564979650080204,
+    0.00025759247364476323,
+    -0.05606800317764282,
+    -0.051711246371269226,
+    -0.0003771836927626282,
+    -0.056391388177871704,
+    -0.056183695793151855,
+    0.048632293939590454,
+    0.047479305416345596,
+    0.04768090695142746,
+    -0.05412179231643677,
+    -0.055932268500328064,
+    -0.02706589736044407,
+    -0.05556489899754524,
+    -0.03943813219666481,
+    0.05578606575727463,
+    -0.045545872300863266,
+    -0.054469674825668335,
+    0.032793059945106506,
+    -0.05273599922657013,
+    0.043679263442754745,
+    0.04312557727098465,
+    0.03104202076792717,
+    0.03945047780871391,
+    -0.028264135122299194,
+    -0.050230007618665695,
+    -0.0491885282099247,
+    -0.056376535445451736,
+    0.001107656629756093,
+    0.055538110435009,
+    0.04668288305401802,
+    -0.05650550499558449,
+    0.05531596764922142,
+    -0.03983902558684349,
+    0.025134345516562462,
+    0.008698895573616028,
+    0.04318881407380104,
+    -0.037829674780368805,
+    -0.048072461038827896,
+    -0.05200204253196716,
+    -0.05637837573885918,
+    0.01960853859782219,
+    0.0565151609480381,
+    0.046260155737400055,
+    0.03351515159010887,
+    0.05475263297557831,
+    0.0535920113325119,
+    0.030698291957378387,
+    0.04461921006441116,
+    0.05272018536925316,
+    -0.02432515099644661,
+    0.0030084962490946054,
+    -0.01199239119887352,
+    -0.056422580033540726,
+    -0.04735778272151947,
+    0.030773404985666275,
+    0.05603250861167908,
+    0.05118414759635925,
+    0.05458667874336243,
+    -0.056514840573072433,
+    -0.05594923347234726,
+    0.0026056307833641768,
+    0.0545797124505043,
+    0.009889112785458565,
+    0.03538227453827858,
+    -0.0518091544508934,
+    0.05383196473121643,
+    -0.01156649924814701,
+    0.02732992358505726,
+    0.02869785577058792,
+    -0.05642082914710045,
+    -0.04965319484472275,
+    -0.05355651676654816,
+    -0.05593838915228844,
+    -0.05650022253394127,
+    -0.015615721233189106,
+    -0.04884570837020874,
+    -0.04736315831542015,
+    -0.05651474744081497,
+    -0.052022699266672134,
+    0.05488087609410286,
+    0.0565139502286911,
+    0.05638518184423447,
+    -0.05600045993924141,
+    -0.0007001172634772956,
+    -0.04613005369901657,
+    0.03649234026670456,
+    -0.039511971175670624,
+    0.04577642306685448,
+    -0.0015335648786276579,
+    0.056286487728357315,
+    0.04517749324440956,
+    -0.005081461276859045,
+    0.05418131873011589,
+    0.05651039257645607,
+    -0.05649988725781441,
+    0.05409330129623413,
+    0.026241136714816093,
+    -0.0502060167491436,
+    0.029980510473251343,
+    -0.0554644912481308,
+    0.031465284526348114,
+    0.0565151609480381,
+    -0.015077929012477398,
+    0.05435052886605263,
+    0.055920034646987915,
+    0.04735644534230232,
+    -0.0005725457449443638,
+    0.05372358486056328,
+    -0.003742167493328452,
+    0.026219569146633148,
+    -0.03042525239288807,
+    -0.004192777909338474,
+    -0.02714759111404419,
+    0.05559545010328293,
+    -0.05574048310518265,
+    0.042470790445804596,
+    0.03635753318667412,
+    0.04862714558839798,
+    0.05649392679333687,
+    -0.02672862820327282,
+    -0.056363675743341446,
+    -0.05573106184601784,
+    0.05651332437992096,
+    0.017549699172377586,
+    -0.05438876524567604,
+    0.00021644277148880064,
+    0.05618102476000786,
+    0.03600899502635002,
+    -0.0433531254529953,
+    -0.04188094288110733,
+    0.04280226677656174,
+    0.05635416880249977,
+    -0.02064155973494053,
+    0.05175434798002243,
+    -0.0021685876417905092,
+    0.029866447672247887,
+    0.05650990083813667,
+    -0.0554535873234272,
+    0.04913618788123131,
+    -0.0554075762629509,
+    0.04941483214497566,
+    -0.018840597942471504,
+    -0.0075707631185650826,
+    0.025207804515957832,
+    -0.048117831349372864,
+    0.03591718152165413,
+    0.05389510095119476,
+    0.00852030050009489,
+    -0.03769437596201897,
+    0.05490197241306305,
+    0.056056246161460876,
+    0.011234750039875507,
+    -0.015046265907585621,
+    -0.0039939917623996735,
+    -0.015091118402779102,
+    -0.001461072824895382,
+    0.011435911990702152,
+    -0.053841352462768555,
+    0.02349085733294487,
+    -0.05600946024060249,
+    0.044282492250204086,
+    0.0013192646438255906,
+    -0.0040580350905656815,
+    0.046633537858724594,
+    -0.04300765320658684,
+    -0.05551161617040634,
+    0.053122203797101974,
+    0.007635949179530144,
+    0.054156310856342316,
+    0.03234334662556648,
+    0.056271858513355255,
+    -0.05031169205904007,
+    0.029092229902744293,
+    -0.04795365780591965,
+    0.005909486673772335,
+    -0.04171508550643921,
+    0.013706139288842678,
+    0.056510575115680695,
+    0.005598253570497036,
+    0.05496970936655998,
+    0.05619453266263008,
+    0.044588424265384674,
+    0.05601799488067627,
+    -0.04041615128517151,
+    -0.010476211085915565,
+    -0.05633975937962532,
+    -0.04879075288772583,
+    -0.04093173146247864,
+    -0.0565151609480381,
+    -0.0475444421172142,
+    -0.025538688525557518,
+    -0.022994568571448326,
+    -0.04130635783076286,
+    0.04614148288965225,
+    0.05128178000450134,
+    0.007465401664376259,
+    -0.043327540159225464,
+    -0.032564789056777954,
+    0.04218347743153572,
+    0.004106084816157818,
+    -0.056515105068683624,
+    -0.013483827002346516,
+    -0.027259573340415955,
+    0.0551859550178051,
+    0.05246005579829216,
+    -0.05544113740324974,
+    -0.05651340261101723,
+    0.056231677532196045,
+    0.03818565979599953,
+    0.05512430891394615,
+    0.05360310152173042,
+    -0.05553733929991722,
+    0.054246511310338974,
+    -0.015685709193348885,
+    0.05463283509016037,
+    -0.0432707779109478,
+    -0.04089635610580444,
+    0.04295291751623154,
+    0.045528821647167206,
+    0.03911537304520607,
+    -0.006760052405297756,
+    -0.056456804275512695,
+    0.0030655628070235252,
+    -0.050632040947675705,
+    0.006889537908136845,
+    0.05441133305430412,
+    0.04549754038453102,
+    -0.03187597915530205,
+    -0.0037331250496208668,
+    -0.056347738951444626,
+    0.055017318576574326,
+    0.04016106203198433,
+    -0.05183159187436104,
+    -0.05615412816405296,
+    0.03090813010931015,
+    -0.055257126688957214,
+    0.05359497293829918,
+    0.052673764526844025,
+    -0.04277317598462105,
+    0.05368191376328468,
+    0.034540098160505295,
+    0.03160705417394638,
+    0.039052389562129974,
+    0.03515683114528656,
+    0.05542779341340065,
+    0.05135591700673103,
+    -0.05304209887981415,
+    0.05111970007419586,
+    -0.009952548891305923,
+    -0.04916319623589516,
+    -0.05643355846405029,
+    0.02167317643761635,
+    0.05618606135249138,
+    0.040877919644117355,
+    0.04298974946141243,
+    0.05035850405693054,
+    0.02635323442518711,
+    -0.04748589172959328,
+    0.04521377012133598,
+    0.05051058903336525,
+    0.04938510060310364,
+    -0.05632879585027695,
+    -0.053669340908527374,
+    -0.05227365717291832,
+    -0.05321403592824936,
+    -0.02307235263288021,
+    -0.05641966685652733,
+    0.056128501892089844,
+    -0.011456108652055264,
+    0.006949236150830984,
+    -0.05650632455945015,
+    0.054015494883060455,
+    0.00924917496740818,
+    0.029133262112736702,
+    -0.05625191330909729,
+    -0.04721776023507118,
+    -0.04737316444516182,
+    0.04984205588698387,
+    -0.056260574609041214,
+    -0.012185581959784031,
+    -0.05299771949648857,
+    -0.05645045265555382,
+    -0.05646491050720215,
+    0.05194824934005737,
+    -0.03147908300161362,
+    -0.05487809330224991,
+    -0.018069829791784286,
+    -0.046564098447561264,
+    -0.04452541843056679,
+    -0.052079204469919205,
+    -0.05645185336470604,
+    0.04020188748836517,
+    -0.04880215972661972,
+    -0.05283302813768387,
+    0.05571046471595764,
+    0.03153860196471214,
+    0.05651453509926796,
+    0.054289910942316055,
+    -0.02683117799460888,
+    -0.0565149262547493,
+    0.021028393879532814,
+    0.0565134733915329,
+    -0.045195017009973526,
+    -0.049784693866968155,
+    0.04695262759923935,
+    0.05444038659334183,
+    0.05594395846128464,
+    0.054938945919275284,
+    0.0017058895900845528,
+    -0.02679418958723545,
+    0.056428615003824234,
+    -0.04924371466040611,
+    -0.05487459897994995,
+    0.05620788782835007,
+    0.023667924106121063,
+    -0.05623919889330864,
+    0.05628073215484619,
+    0.020106621086597443,
+    -0.049162451177835464,
+    -0.0457741804420948,
+    0.055101193487644196,
+    0.05016783997416496,
+    0.01171807385981083,
+    -0.056508999317884445,
+    -0.05526335909962654,
+    0.055635422468185425,
+    0.037121087312698364,
+    -0.055785056203603745,
+    0.02655605599284172,
+    0.056333184242248535,
+    -0.0351078137755394,
+    -0.018546108156442642,
+    0.04723064601421356,
+    0.01146257296204567,
+    0.021423272788524628,
+    0.05162002891302109,
+    -0.05030428245663643,
+    0.05525900050997734,
+    -0.055925268679857254,
+    0.056501325219869614,
+    0.049012813717126846,
+    0.05446279048919678,
+    -0.05630841851234436,
+    0.04011322185397148,
+    0.056070804595947266,
+    0.051561031490564346,
+    0.044712673872709274,
+    -0.05651510879397392,
+    -0.03315528854727745,
+    -0.0226322952657938,
+    -0.05650223419070244,
+    -0.011175154708325863,
+    -0.033293962478637695,
+    0.05651507526636124,
+    -0.05067320540547371,
+    -0.05511333793401718
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: When clicking ‘Test workflow’, Execute Workflow Trigger, Airtable Trigger For Pending Rows, When chat message received; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows",
+      "Data processing workflows"
+    ],
+    "best_for": [
+      "Best for file processing in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Code",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code"
+  }
+}

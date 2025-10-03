@@ -1,0 +1,1129 @@
+{
+  "workflow_info": {
+    "id": "cQAILffOajE9n2cf",
+    "name": "Generate Leads with Google Maps - AlexK1919",
+    "display_name": "Generate Leads with Google Maps - AlexK1919",
+    "file_name": "1823_Stopanderror_Wait_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror\\1823_Stopanderror_Wait_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "e1d421db397f"
+  },
+  "structure": {
+    "total_nodes": 42,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.removeDuplicates",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.stopAndError"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.removeDuplicates",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.limit",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.stopAndError",
+        "count": 3
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking \"Execute Workflow\"",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -1080,
+          540
+        ]
+      },
+      {
+        "name": "Run workflow every hours",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          360
+        ]
+      },
+      {
+        "name": "Execute Workflow Trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -1080,
+          200
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Check Max Retries1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1680,
+          740
+        ]
+      },
+      {
+        "name": "Stop and Error1",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          1880,
+          740
+        ]
+      },
+      {
+        "name": "GMaps API",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          80,
+          680
+        ]
+      },
+      {
+        "name": "Update Status to Success",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1520,
+          1160
+        ]
+      },
+      {
+        "name": "Add rows in Google Sheets",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1080,
+          740
+        ]
+      },
+      {
+        "name": "Set Row Number",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          80,
+          80
+        ]
+      },
+      {
+        "name": "Set Zip",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -120,
+          680
+        ]
+      },
+      {
+        "name": "Set Place ID",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          680,
+          740
+        ]
+      },
+      {
+        "name": "Exponential Backoff",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1280,
+          740
+        ]
+      },
+      {
+        "name": "Remove Duplicates",
+        "type": "n8n-nodes-base.removeDuplicates",
+        "position": [
+          880,
+          740
+        ]
+      },
+      {
+        "name": "Wait",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1480,
+          740
+        ]
+      },
+      {
+        "name": "Check Max Retries",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2120,
+          1160
+        ]
+      },
+      {
+        "name": "Stop and Error",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          2320,
+          1160
+        ]
+      },
+      {
+        "name": "Exponential Backoff1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1720,
+          1160
+        ]
+      },
+      {
+        "name": "Wait1",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1920,
+          1160
+        ]
+      },
+      {
+        "name": "Settings",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -800,
+          360
+        ]
+      },
+      {
+        "name": "GS - Get Subcategory",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          -220,
+          340
+        ]
+      },
+      {
+        "name": "Subcategory",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          180,
+          340
+        ]
+      },
+      {
+        "name": "GS - Get Zip Codes",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          -520,
+          80
+        ]
+      },
+      {
+        "name": "Place Array",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          480,
+          740
+        ]
+      },
+      {
+        "name": "Loop Zips",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -420,
+          280
+        ]
+      },
+      {
+        "name": "Loop Subcats",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -320,
+          620
+        ]
+      },
+      {
+        "name": "GS - Get Status",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1280,
+          960
+        ]
+      },
+      {
+        "name": "Check Max Retries2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1880,
+          960
+        ]
+      },
+      {
+        "name": "Stop and Error2",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          2080,
+          960
+        ]
+      },
+      {
+        "name": "Exponential Backoff2",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1480,
+          960
+        ]
+      },
+      {
+        "name": "Wait2",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1680,
+          960
+        ]
+      },
+      {
+        "name": "Limit",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          500,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note20",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1420,
+          0
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -860,
+          0
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -860,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1140,
+          0
+        ]
+      },
+      {
+        "name": "Zips",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -320,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -580,
+          520
+        ]
+      },
+      {
+        "name": "Filter Zips",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -120,
+          80
+        ]
+      },
+      {
+        "name": "Filter Subcategories",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          -20,
+          340
+        ]
+      },
+      {
+        "name": "If Empty",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          280,
+          680
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          300,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -580,
+          0
+        ]
+      }
+    ],
+    "connections_count": 33,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 3,
+      "action_count": 39
+    }
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution",
+      "Scheduled automation"
+    ],
+    "complexity_score": 1085,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "zips",
+      "remove duplicates",
+      "stop and error1",
+      "loop zips",
+      "stickyNote",
+      "gs - get subcategory",
+      "subcategory",
+      "set row number",
+      "exponential backoff1",
+      "scheduleTrigger",
+      "gmaps api",
+      "productivity",
+      "filter subcategories",
+      "check max retries",
+      "webhook integration",
+      "httpRequest",
+      "stop and error2",
+      "stopAndError",
+      "exponential backoff2",
+      "sticky note2",
+      "settings",
+      "execute workflow trigger",
+      "removeDuplicates",
+      "code",
+      "splitInBatches",
+      "update status to success",
+      "exponential backoff",
+      "wait1",
+      "place array",
+      "gs - get status",
+      "sticky note15",
+      "set",
+      "when clicking \"execute workflow\"",
+      "limit",
+      "split out",
+      "check max retries1",
+      "check max retries2",
+      "wait",
+      "loop subcats",
+      "set place id",
+      "gs - get zip codes",
+      "wait2",
+      "add rows in google sheets",
+      "sticky note",
+      "filter zips",
+      "googleSheets",
+      "sticky note8",
+      "set zip",
+      "complex",
+      "filter",
+      "manualTrigger",
+      "sticky note20",
+      "run workflow every hours",
+      "sticky note1",
+      "stop and error",
+      "splitOut",
+      "executeWorkflowTrigger",
+      "if empty"
+    ],
+    "description": "'Generate Leads with Google Maps - AlexK1919' es un workflow diseñado para webhook integration con 42 nodos con 3 disparadores que ejecuta: Check Max Retries1, Stop and Error1, GMaps API en la categoría de productivity.",
+    "semantic_content": "Workflow: Generate Leads with Google Maps - AlexK1919. Nodos: When clicking \"Execute Workflow\" (manualTrigger), Run workflow every hours (scheduleTrigger), Execute Workflow Trigger (executeWorkflowTrigger), Check Max Retries1 (if), Stop and Error1 (stopAndError), GMaps API (httpRequest), Update Status to Success (googleSheets), Add rows in Google Sheets (googleSheets), Set Row Number (set), Set Zip (set), Set Place ID (set), Exponential Backoff (code), Remove Duplicates (removeDuplicates), Wait (wait), Check Max Retries (if), Stop and Error (stopAndError), Exponential Backoff1 (code), Wait1 (wait), Settings (set), GS - Get Subcategory (googleSheets), Subcategory (set), GS - Get Zip Codes (googleSheets), Place Array (code), Loop Zips (splitInBatches), Loop Subcats (splitInBatches), GS - Get Status (googleSheets), Check Max Retries2 (if), Stop and Error2 (stopAndError), Exponential Backoff2 (code), Wait2 (wait), Limit (limit), Sticky Note20 (stickyNote), Sticky Note8 (stickyNote), Sticky Note15 (stickyNote), Sticky Note (stickyNote), Zips (set), Sticky Note1 (stickyNote), Filter Zips (filter), Filter Subcategories (filter), If Empty (if), Split Out (splitOut), Sticky Note2 (stickyNote). Propósito: webhook integration. Categoría: productivity. Disparadores: When clicking \"Execute Workflow\", Run workflow every hours, Execute Workflow Trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "Stop and Error1",
+      "Execute Workflow Trigger",
+      "n8n-nodes-base.httpRequest",
+      "Check Max Retries1",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "When clicking \"Execute Workflow\"",
+      "n8n-nodes-base.if",
+      "GMaps API",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.stopAndError",
+      "Run workflow every hours"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.stopanderror",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.scheduletrigger",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.removeduplicates",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.splitinbatches",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "1823_stopanderror_wait_create_webhook",
+      "create",
+      "webhook",
+      "stopanderror",
+      "1823",
+      "wait"
+    ],
+    "alternative_names": [
+      "Generate Leads with Google Maps - AlexK1919"
+    ],
+    "related_concepts": [
+      "productivity",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": true,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 77.41935483870968,
+    "best_practices_score": 100.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 90.48387096774194
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:19.968134"
+  },
+  "semantic_vector": [
+    -0.03286324441432953,
+    -0.057099826633930206,
+    0.04652181267738342,
+    -0.049586523324251175,
+    -0.05020059272646904,
+    -0.05358612909913063,
+    0.026612482964992523,
+    -0.05044132098555565,
+    -0.056562088429927826,
+    0.05675775185227394,
+    0.025529753416776657,
+    0.04669381305575371,
+    -0.020664583891630173,
+    0.011234680190682411,
+    0.04099432751536369,
+    0.05713410675525665,
+    0.053143225610256195,
+    0.04049751162528992,
+    -0.03001456707715988,
+    0.0398574024438858,
+    -0.0484079085290432,
+    0.04774295538663864,
+    0.03660871088504791,
+    -0.026742804795503616,
+    -0.014234182424843311,
+    -0.04332790896296501,
+    -0.05677218362689018,
+    0.054964158684015274,
+    -0.057128895074129105,
+    0.02929913066327572,
+    0.0569540336728096,
+    -0.03990669921040535,
+    0.05605935677886009,
+    -0.051352910697460175,
+    0.04767456650733948,
+    -0.008916840888559818,
+    -0.007522357162088156,
+    0.018677791580557823,
+    0.020489413291215897,
+    0.028866583481431007,
+    0.0351862795650959,
+    0.051343079656362534,
+    0.014477699063718319,
+    0.01107295323163271,
+    0.05713136866688728,
+    0.054523635655641556,
+    0.0316016860306263,
+    0.04896087944507599,
+    0.03946558013558388,
+    0.03408530727028847,
+    -0.048067983239889145,
+    -0.03943927586078644,
+    -0.05657158046960831,
+    0.013990533538162708,
+    -0.053409673273563385,
+    -0.03651281073689461,
+    0.0466439351439476,
+    -0.012336645275354385,
+    -0.05317845568060875,
+    0.00622174609452486,
+    0.05331232026219368,
+    0.05520706623792648,
+    0.02418295480310917,
+    0.056811749935150146,
+    -0.01286325789988041,
+    0.04479001834988594,
+    0.054341137409210205,
+    0.04293433949351311,
+    0.04995819181203842,
+    -0.05074001103639603,
+    -0.05699678510427475,
+    -0.05659414827823639,
+    -0.038709674030542374,
+    0.05689225718379021,
+    0.00037267355946823955,
+    -0.05666370689868927,
+    0.05688856914639473,
+    -0.05697454884648323,
+    -0.056209444999694824,
+    0.0032256573904305696,
+    0.053829554468393326,
+    -0.052320696413517,
+    0.011861846782267094,
+    -0.04723944514989853,
+    0.033054858446121216,
+    -0.010215294547379017,
+    -0.007604385260492563,
+    -0.055335789918899536,
+    -0.00847675558179617,
+    0.05607648566365242,
+    0.016043996438384056,
+    0.054181527346372604,
+    0.027297308668494225,
+    0.024244079366326332,
+    0.05168984457850456,
+    -0.053380876779556274,
+    0.0061118160374462605,
+    0.05545515939593315,
+    -0.05584380775690079,
+    -0.05713279917836189,
+    0.052091993391513824,
+    0.010445448569953442,
+    0.0487900972366333,
+    0.05301041528582573,
+    0.055116020143032074,
+    0.023157723248004913,
+    0.05294147506356239,
+    0.027040725573897362,
+    0.046459559351205826,
+    -0.043617524206638336,
+    -0.04867902398109436,
+    -0.048145364969968796,
+    -0.04251831769943237,
+    0.05570278316736221,
+    0.0391041561961174,
+    0.030545290559530258,
+    -0.05140015482902527,
+    -0.052298374474048615,
+    0.04966467246413231,
+    0.05269348993897438,
+    -0.050998296588659286,
+    0.04385232552886009,
+    -0.018722258508205414,
+    0.04810352995991707,
+    0.056880854070186615,
+    0.01458597369492054,
+    0.01783706061542034,
+    0.048602145165205,
+    0.05312167853116989,
+    -0.055470410734415054,
+    -0.015341708436608315,
+    -0.02768215350806713,
+    0.02706519141793251,
+    -0.05063746124505997,
+    0.05384024977684021,
+    -0.05550803244113922,
+    -0.05285707116127014,
+    0.005584169644862413,
+    -0.049408551305532455,
+    -0.055806636810302734,
+    0.0382525697350502,
+    0.05713404715061188,
+    0.03622882068157196,
+    0.04914844036102295,
+    -0.053791407495737076,
+    -0.05713372677564621,
+    0.05559426173567772,
+    0.036848172545433044,
+    0.05062994733452797,
+    0.051544565707445145,
+    -0.05696843937039375,
+    -0.026859287172555923,
+    0.055116333067417145,
+    -0.05673088878393173,
+    0.05646348372101784,
+    0.05712808668613434,
+    -0.049108874052762985,
+    -0.057115405797958374,
+    0.03305881470441818,
+    0.03876601532101631,
+    -0.053195059299468994,
+    -0.055633794516325,
+    0.05283017456531525,
+    0.05271857976913452,
+    0.02255791425704956,
+    -0.03690436854958534,
+    -0.04035460203886032,
+    0.025126641616225243,
+    -0.04942823946475983,
+    -0.05280261114239693,
+    0.03263150528073311,
+    -0.04863876849412918,
+    0.048535775393247604,
+    0.05581231042742729,
+    -0.045585405081510544,
+    0.054266948252916336,
+    -0.00036024500150233507,
+    -0.05172654986381531,
+    0.03181954845786095,
+    -0.05558466538786888,
+    0.053490739315748215,
+    -0.038303691893815994,
+    -0.01444859430193901,
+    -0.04119044914841652,
+    0.054869432002305984,
+    0.0513366162776947,
+    -0.054718416184186935,
+    0.05710568279027939,
+    -0.016261477023363113,
+    0.04771672189235687,
+    -0.031315360218286514,
+    0.054962217807769775,
+    -0.0242916326969862,
+    -0.05185199901461601,
+    -0.05686487257480621,
+    -0.05705712363123894,
+    0.054857250303030014,
+    0.05713410675525665,
+    0.020703349262475967,
+    0.04750311002135277,
+    0.055007703602313995,
+    0.05621122568845749,
+    6.688317080261186e-05,
+    0.055090416222810745,
+    0.031921159476041794,
+    -0.03636619448661804,
+    -0.0432351678609848,
+    -0.041539233177900314,
+    -0.0570550337433815,
+    0.051791269332170486,
+    0.04545249044895172,
+    0.05564041808247566,
+    0.037079744040966034,
+    0.027801671996712685,
+    -0.057133499532938004,
+    -0.029173534363508224,
+    0.0459413006901741,
+    0.022859632968902588,
+    0.01831751875579357,
+    -0.02019411511719227,
+    -0.04064624756574631,
+    0.0414394848048687,
+    0.036337535828351974,
+    0.01371226366609335,
+    -0.010995435528457165,
+    -0.05612560734152794,
+    -0.046977072954177856,
+    -0.05677226185798645,
+    -0.0535951629281044,
+    -0.056044600903987885,
+    0.04142811521887779,
+    -0.057031434029340744,
+    0.05671633407473564,
+    -0.057132523506879807,
+    0.0556374117732048,
+    0.04984787106513977,
+    0.057133983820676804,
+    0.057061802595853806,
+    -0.05539502203464508,
+    -0.03836856409907341,
+    0.01914004422724247,
+    0.05166115239262581,
+    0.049609214067459106,
+    0.048622746020555496,
+    0.055187027901411057,
+    0.05385367572307587,
+    0.04866775497794151,
+    -0.01823725365102291,
+    0.04860794171690941,
+    0.05709276348352432,
+    -0.05315826088190079,
+    0.0068352906964719296,
+    0.04134736582636833,
+    -0.0404486283659935,
+    0.05646798387169838,
+    -0.04299495369195938,
+    0.049317728728055954,
+    0.05713410675525665,
+    0.021668680012226105,
+    -0.005430107936263084,
+    0.026718592271208763,
+    -0.026295293122529984,
+    -0.05368270352482796,
+    -0.023852234706282616,
+    -0.014972166158258915,
+    -0.015869997441768646,
+    -0.006544140633195639,
+    0.04864605888724327,
+    -0.044532082974910736,
+    0.053312405943870544,
+    -0.048435620963573456,
+    0.0346483513712883,
+    -0.05669156089425087,
+    0.051403339952230453,
+    0.05469942092895508,
+    -0.016495684161782265,
+    -0.04325202479958534,
+    0.030849630013108253,
+    0.05713387206196785,
+    0.05661170184612274,
+    0.023752059787511826,
+    0.05017596483230591,
+    0.0518181174993515,
+    -0.04186156392097473,
+    0.04630120098590851,
+    -0.055406857281923294,
+    0.04129569232463837,
+    0.055322445929050446,
+    -0.011209264397621155,
+    0.04140249267220497,
+    -0.05468994006514549,
+    0.03106038086116314,
+    0.05667053908109665,
+    -0.04051169008016586,
+    0.054136380553245544,
+    -0.008941148407757282,
+    0.05285892263054848,
+    -0.007547388318926096,
+    -0.04555610567331314,
+    0.047887396067380905,
+    -0.043226458132267,
+    0.053222592920064926,
+    0.04958505928516388,
+    -0.054701052606105804,
+    0.04849165305495262,
+    0.05508049577474594,
+    0.05417819321155548,
+    -0.02573494240641594,
+    0.03860916569828987,
+    0.02257448621094227,
+    -0.0534462109208107,
+    0.021327218040823936,
+    0.02659093216061592,
+    0.00489953625947237,
+    0.008098099380731583,
+    -0.057115256786346436,
+    0.05705660954117775,
+    -0.03679564967751503,
+    -0.00692491652444005,
+    -0.023410702124238014,
+    0.05024901032447815,
+    -0.047989893704652786,
+    -0.02185533195734024,
+    0.017450759187340736,
+    0.046777769923210144,
+    -0.042972564697265625,
+    0.052708689123392105,
+    -0.01638394221663475,
+    -0.048215702176094055,
+    0.047706808894872665,
+    -0.0556783527135849,
+    -0.04074549674987793,
+    -0.0017646797932684422,
+    0.057113166898489,
+    0.03697722777724266,
+    0.056185074150562286,
+    0.0424642376601696,
+    0.02329261600971222,
+    0.056876040995121,
+    -0.03297650068998337,
+    -0.0518818274140358,
+    -0.056854087859392166,
+    -0.02521333657205105,
+    -0.0009887050837278366,
+    -0.05713410675525665,
+    0.008151878602802753,
+    -0.031325772404670715,
+    -0.05123881623148918,
+    -0.03362734243273735,
+    0.05247415974736214,
+    -0.0029594094958156347,
+    0.05435658246278763,
+    0.04796261340379715,
+    0.04179922491312027,
+    0.030909892171621323,
+    -0.05419298633933067,
+    -0.057133931666612625,
+    -0.009068233892321587,
+    0.05460219830274582,
+    0.0568266324698925,
+    0.040278077125549316,
+    -0.05600019916892052,
+    -0.05713410675525665,
+    0.05622432008385658,
+    0.038759421557188034,
+    0.05695657804608345,
+    0.03851819783449173,
+    -0.053438566625118256,
+    0.05688519775867462,
+    -0.05286962911486626,
+    -0.04670729488134384,
+    -0.05597388744354248,
+    -0.048155300319194794,
+    0.03256433457136154,
+    0.011881689541041851,
+    0.054353129118680954,
+    -0.04729500040411949,
+    -0.05674519017338753,
+    -0.01523563638329506,
+    -0.0539836548268795,
+    0.0197793897241354,
+    0.003967741969972849,
+    -0.00794508121907711,
+    -0.055657994002103806,
+    0.008245552890002728,
+    0.03148137405514717,
+    0.056811507791280746,
+    -0.048994023352861404,
+    -0.053382858633995056,
+    -0.057119257748126984,
+    0.03823690861463547,
+    -0.03515290468931198,
+    0.05436447262763977,
+    0.05489972606301308,
+    -0.0036391590256243944,
+    0.056539617478847504,
+    0.0319703184068203,
+    -0.04247742146253586,
+    -0.015984265133738518,
+    0.05568890646100044,
+    0.025134624913334846,
+    0.054665111005306244,
+    -0.040432158857584,
+    0.05602823570370674,
+    -0.03664134442806244,
+    -0.01308130007237196,
+    -0.0566415898501873,
+    0.03410172462463379,
+    0.055970560759305954,
+    0.043362174183130264,
+    -0.04347414895892143,
+    0.05416572093963623,
+    -0.048118576407432556,
+    0.043451063334941864,
+    -0.046720054000616074,
+    -0.027552083134651184,
+    -0.0028895039577037096,
+    -0.05055870860815048,
+    0.0034840398002415895,
+    -0.00990895926952362,
+    0.04812496900558472,
+    0.02651311084628105,
+    -0.03263417258858681,
+    0.05161772295832634,
+    -0.04471330717206001,
+    -0.021034546196460724,
+    -0.0571286641061306,
+    0.054459430277347565,
+    0.0299972090870142,
+    -0.0330372229218483,
+    -0.05546899139881134,
+    -0.05471419543027878,
+    -0.04468736797571182,
+    0.056755829602479935,
+    -0.054106712341308594,
+    -0.05359511077404022,
+    -0.054631493985652924,
+    -0.05693299323320389,
+    -0.056629445403814316,
+    0.001735997968353331,
+    -0.04813019558787346,
+    -0.05552620813250542,
+    0.009349851869046688,
+    -0.007528212852776051,
+    -0.04805048927664757,
+    -0.02894997037947178,
+    -0.03978729248046875,
+    0.005413402803242207,
+    -0.052600886672735214,
+    -0.022760678082704544,
+    -0.05000406503677368,
+    0.056802548468112946,
+    0.0571335069835186,
+    0.05634418874979019,
+    0.011073981411755085,
+    -0.057110972702503204,
+    -0.0529891736805439,
+    0.05605222284793854,
+    -0.00460981298238039,
+    -0.008651082403957844,
+    0.043331488966941833,
+    0.03582185134291649,
+    0.05449259653687477,
+    0.05692201852798462,
+    -0.03523541986942291,
+    -0.051031168550252914,
+    0.057067837566137314,
+    0.016347922384738922,
+    -0.05601007491350174,
+    0.04832327365875244,
+    0.04568794369697571,
+    0.03754299506545067,
+    -0.02366158738732338,
+    0.02870246209204197,
+    -0.03329045698046684,
+    0.048434581607580185,
+    0.05162936821579933,
+    0.021389037370681763,
+    -0.008330391719937325,
+    -0.056915901601314545,
+    -0.039002228528261185,
+    0.05587964877486229,
+    -0.04809153079986572,
+    -0.04551749676465988,
+    -0.035238441079854965,
+    0.05663061514496803,
+    -0.038737501949071884,
+    -0.05051189288496971,
+    -0.05013728141784668,
+    0.056830473244190216,
+    0.007420019246637821,
+    0.05668004974722862,
+    -0.012980511412024498,
+    0.05253114923834801,
+    -0.053776681423187256,
+    0.057074982672929764,
+    0.019897019490599632,
+    0.05594715476036072,
+    -0.02429136447608471,
+    0.018384406343102455,
+    0.0017649766523391008,
+    -0.049241531640291214,
+    0.0547088198363781,
+    -0.05713394284248352,
+    -0.02008596807718277,
+    -0.05538465082645416,
+    0.015803899616003036,
+    0.03992576524615288,
+    -0.052370231598615646,
+    0.05713408812880516,
+    -0.022609354928135872,
+    -0.055343832820653915
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking \"Execute Workflow\", Run workflow every hours, Execute Workflow Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in productivity context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Stopanderror",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror"
+  }
+}

@@ -1,0 +1,2343 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Bitly Datetime Update Webhook",
+    "file_name": "0910_Bitly_Datetime_Update_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Bitly\\0910_Bitly_Datetime_Update_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "f040b72efd17"
+  },
+  "structure": {
+    "total_nodes": 113,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+      "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+      "@n8n/n8n-nodes-langchain.memoryManager",
+      "n8n-nodes-base.markdown",
+      "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+      "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.aiTransform",
+      "n8n-nodes-base.localFileTrigger",
+      "@n8n/n8n-nodes-langchain.outputParserItemList",
+      "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "@muench-dev/n8n-nodes-bluesky.bluesky",
+      "n8n-nodes-base.executeWorkflow",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.emailSendTool",
+      "n8n-nodes-base.googleDocs",
+      "n8n-nodes-base.twitter",
+      "@watzon/n8n-nodes-perplexity.perplexity",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.dateTime",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.postgresTool",
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.sort",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.convertToFile",
+      "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "n8n-nodes-base.removeDuplicates",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.executeCommand",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.googleCalendarTool",
+      "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "n8n-nodes-base.gmailTool",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.googleSheetsTool",
+      "n8n-nodes-base.calendlyTrigger",
+      "n8n-nodes-base.youTube",
+      "@n8n/n8n-nodes-langchain.toolCode",
+      "n8n-nodes-base.bitly",
+      "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "n8n-nodes-base.pushbullet",
+      "n8n-nodes-base.reddit",
+      "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "n8n-nodes-base.ftp",
+      "n8n-nodes-base.googleCalendar",
+      "n8n-nodes-elevenlabs.elevenLabs",
+      "n8n-nodes-base.gumroadTrigger",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.emailReadImap",
+      "n8n-nodes-base.limit",
+      "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.executionData",
+      "n8n-nodes-base.rssFeedRead",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.toolSerpApi",
+      "@n8n/n8n-nodes-langchain.toolWolframAlpha",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.renameKeys",
+      "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "n8n-nodes-base.html",
+      "n8n-nodes-base.googleDriveTrigger",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.splitOut",
+      "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "@n8n/n8n-nodes-langchain.chainSummarization",
+      "@n8n/n8n-nodes-langchain.textClassifier",
+      "n8n-nodes-base.googleDocsTool",
+      "n8n-nodes-base.noOp",
+      "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "n8n-nodes-base.redisTool",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.dropbox",
+      "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "@n8n/n8n-nodes-langchain.mcpClientTool",
+      "@n8n/n8n-nodes-langchain.toolCalculator",
+      "@n8n/n8n-nodes-langchain.openAi"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryManager",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.markdown",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aiTransform",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.localFileTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserItemList",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "count": 1
+      },
+      {
+        "type": "@muench-dev/n8n-nodes-bluesky.bluesky",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.emailSendTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDocs",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.twitter",
+        "count": 1
+      },
+      {
+        "type": "@watzon/n8n-nodes-perplexity.perplexity",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.dateTime",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.postgresTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.gmailTrigger",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.sort",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.convertToFile",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.removeDuplicates",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeCommand",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.gmailTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleSheetsTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.calendlyTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.youTube",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolCode",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.bitly",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.pushbullet",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.reddit",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.ftp",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleCalendar",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-elevenlabs.elevenLabs",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.gumroadTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.summarize",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.emailReadImap",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.limit",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executionData",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.rssFeedRead",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolWolframAlpha",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 16
+      },
+      {
+        "type": "n8n-nodes-base.renameKeys",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.html",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainSummarization",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDocsTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.redisTool",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.dropbox",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Gmail Trigger App",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          4057,
+          -980
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger App",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          4057,
+          -760
+        ]
+      },
+      {
+        "name": "Calendly Trigger",
+        "type": "n8n-nodes-base.calendlyTrigger",
+        "position": [
+          -1080,
+          -1200
+        ]
+      },
+      {
+        "name": "Google Drive Trigger",
+        "type": "n8n-nodes-base.googleDriveTrigger",
+        "position": [
+          -420,
+          -1200
+        ]
+      },
+      {
+        "name": "Gumroad Trigger",
+        "type": "n8n-nodes-base.gumroadTrigger",
+        "position": [
+          -860,
+          -980
+        ]
+      },
+      {
+        "name": "Local File Trigger",
+        "type": "n8n-nodes-base.localFileTrigger",
+        "position": [
+          -640,
+          -980
+        ]
+      },
+      {
+        "name": "On form submission",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          -420,
+          -980
+        ]
+      },
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -1080,
+          -760
+        ]
+      },
+      {
+        "name": "When chat message received",
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "position": [
+          -640,
+          -760
+        ]
+      },
+      {
+        "name": "When clicking 'Test workflow'",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          -420,
+          -760
+        ]
+      },
+      {
+        "name": "Workflow Input Trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -1080,
+          -540
+        ]
+      },
+      {
+        "name": "Gmail Trigger",
+        "type": "n8n-nodes-base.gmailTrigger",
+        "position": [
+          -640,
+          -1200
+        ]
+      },
+      {
+        "name": "Google Sheets Trigger",
+        "type": "n8n-nodes-base.googleSheetsTrigger",
+        "position": [
+          -1080,
+          -980
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -1180,
+          340
+        ]
+      },
+      {
+        "name": "OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          -780,
+          580
+        ]
+      },
+      {
+        "name": "Basic LLM Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -780,
+          340
+        ]
+      },
+      {
+        "name": "Information Extractor",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          -1180,
+          580
+        ]
+      },
+      {
+        "name": "Question and Answer Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+        "position": [
+          -380,
+          580
+        ]
+      },
+      {
+        "name": "Sentiment Analysis",
+        "type": "@n8n/n8n-nodes-langchain.sentimentAnalysis",
+        "position": [
+          -1180,
+          800
+        ]
+      },
+      {
+        "name": "Summarization Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainSummarization",
+        "position": [
+          -780,
+          800
+        ]
+      },
+      {
+        "name": "Text Classifier",
+        "type": "@n8n/n8n-nodes-langchain.textClassifier",
+        "position": [
+          -380,
+          800
+        ]
+      },
+      {
+        "name": "Chat Memory Manager",
+        "type": "@n8n/n8n-nodes-langchain.memoryManager",
+        "position": [
+          -380,
+          340
+        ]
+      },
+      {
+        "name": "Bitly App",
+        "type": "n8n-nodes-base.bitly",
+        "position": [
+          3837,
+          -1200
+        ]
+      },
+      {
+        "name": "Dropbox App",
+        "type": "n8n-nodes-base.dropbox",
+        "position": [
+          4277,
+          -1200
+        ]
+      },
+      {
+        "name": "Gmail App",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          3837,
+          -980
+        ]
+      },
+      {
+        "name": "Google Calendar App",
+        "type": "n8n-nodes-base.googleCalendar",
+        "position": [
+          4277,
+          -980
+        ]
+      },
+      {
+        "name": "Google Docs App",
+        "type": "n8n-nodes-base.googleDocs",
+        "position": [
+          4497,
+          -980
+        ]
+      },
+      {
+        "name": "Google Sheets App",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          3837,
+          -760
+        ]
+      },
+      {
+        "name": "Pushbullet App",
+        "type": "n8n-nodes-base.pushbullet",
+        "position": [
+          4497,
+          -760
+        ]
+      },
+      {
+        "name": "YouTube App",
+        "type": "n8n-nodes-base.youTube",
+        "position": [
+          4500,
+          -540
+        ]
+      },
+      {
+        "name": "Bluesky App",
+        "type": "@muench-dev/n8n-nodes-bluesky.bluesky",
+        "position": [
+          4057,
+          -1200
+        ]
+      },
+      {
+        "name": "Perplexity App",
+        "type": "@watzon/n8n-nodes-perplexity.perplexity",
+        "position": [
+          4277,
+          -760
+        ]
+      },
+      {
+        "name": "ElevenLabs App",
+        "type": "n8n-nodes-elevenlabs.elevenLabs",
+        "position": [
+          4497,
+          -1200
+        ]
+      },
+      {
+        "name": "Reddit App",
+        "type": "n8n-nodes-base.reddit",
+        "position": [
+          3837,
+          -540
+        ]
+      },
+      {
+        "name": "# Green",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3620,
+          -1380
+        ]
+      },
+      {
+        "name": "# Gray",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          380,
+          80
+        ]
+      },
+      {
+        "name": "Call n8n Workflow Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          800,
+          340
+        ]
+      },
+      {
+        "name": "Code Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolCode",
+        "position": [
+          1020,
+          340
+        ]
+      },
+      {
+        "name": "HTTP Request1",
+        "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+        "position": [
+          1240,
+          540
+        ]
+      },
+      {
+        "name": "Calculator",
+        "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+        "position": [
+          600,
+          340
+        ]
+      },
+      {
+        "name": "Postgres",
+        "type": "n8n-nodes-base.postgresTool",
+        "position": [
+          800,
+          740
+        ]
+      },
+      {
+        "name": "Redis",
+        "type": "n8n-nodes-base.redisTool",
+        "position": [
+          1020,
+          740
+        ]
+      },
+      {
+        "name": "Send Email",
+        "type": "n8n-nodes-base.emailSendTool",
+        "position": [
+          1240,
+          740
+        ]
+      },
+      {
+        "name": "SerpAPI",
+        "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+        "position": [
+          600,
+          940
+        ]
+      },
+      {
+        "name": "Wikipedia",
+        "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+        "position": [
+          800,
+          940
+        ]
+      },
+      {
+        "name": "Wolfram Alpha",
+        "type": "@n8n/n8n-nodes-langchain.toolWolframAlpha",
+        "position": [
+          1020,
+          940
+        ]
+      },
+      {
+        "name": "gmailTool App",
+        "type": "n8n-nodes-base.gmailTool",
+        "position": [
+          1240,
+          340
+        ]
+      },
+      {
+        "name": "googleCalendarTool App",
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "position": [
+          600,
+          540
+        ]
+      },
+      {
+        "name": "googleDocsTool App",
+        "type": "n8n-nodes-base.googleDocsTool",
+        "position": [
+          800,
+          540
+        ]
+      },
+      {
+        "name": "googleSheetsTool App",
+        "type": "n8n-nodes-base.googleSheetsTool",
+        "position": [
+          1020,
+          540
+        ]
+      },
+      {
+        "name": "# Purple",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2020,
+          80
+        ]
+      },
+      {
+        "name": "Default Data Loader",
+        "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+        "position": [
+          2840,
+          780
+        ]
+      },
+      {
+        "name": "Auto-fixing Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          2500,
+          780
+        ]
+      },
+      {
+        "name": "Answer questions with a vector store",
+        "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+        "position": [
+          2160,
+          780
+        ]
+      },
+      {
+        "name": "In-Memory Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreInMemory",
+        "position": [
+          2300,
+          360
+        ]
+      },
+      {
+        "name": "Pinecone Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+        "position": [
+          2680,
+          360
+        ]
+      },
+      {
+        "name": "Postgres PGVector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStorePGVector",
+        "position": [
+          2300,
+          560
+        ]
+      },
+      {
+        "name": "Supabase Vector Store",
+        "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+        "position": [
+          2680,
+          560
+        ]
+      },
+      {
+        "name": "Anthropic Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "position": [
+          3880,
+          340
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          4140,
+          340
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          4420,
+          340
+        ]
+      },
+      {
+        "name": "Window Buffer Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [
+          4420,
+          700
+        ]
+      },
+      {
+        "name": "Postgres Chat Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+        "position": [
+          3880,
+          700
+        ]
+      },
+      {
+        "name": "Redis Chat Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+        "position": [
+          4140,
+          700
+        ]
+      },
+      {
+        "name": "Item List Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserItemList",
+        "position": [
+          4000,
+          880
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          4300,
+          880
+        ]
+      },
+      {
+        "name": "Embeddings Google Gemini",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsGoogleGemini",
+        "position": [
+          4000,
+          520
+        ]
+      },
+      {
+        "name": "Embeddings OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+        "position": [
+          4300,
+          520
+        ]
+      },
+      {
+        "name": "# Blue",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3620,
+          80
+        ]
+      },
+      {
+        "name": "Sticky Note Red",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2040,
+          1440
+        ]
+      },
+      {
+        "name": "Sticky Note Green",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1300,
+          1720
+        ]
+      },
+      {
+        "name": "Sticky Note Blue",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1660,
+          1720
+        ]
+      },
+      {
+        "name": "Sticky Note Purple",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2040,
+          1720
+        ]
+      },
+      {
+        "name": "Sticky Note Gray",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1660,
+          1980
+        ]
+      },
+      {
+        "name": "Sticky Note Brown",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1660,
+          1440
+        ]
+      },
+      {
+        "name": "Sticky Note Yellow",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1300,
+          1440
+        ]
+      },
+      {
+        "name": "X",
+        "type": "n8n-nodes-base.twitter",
+        "position": [
+          4280,
+          -540
+        ]
+      },
+      {
+        "name": "Email Trigger (IMAP)",
+        "type": "n8n-nodes-base.emailReadImap",
+        "position": [
+          -860,
+          -1200
+        ]
+      },
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -860,
+          -760
+        ]
+      },
+      {
+        "name": "# Purple1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1300,
+          -1380
+        ]
+      },
+      {
+        "name": "Code",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          780,
+          -1200
+        ]
+      },
+      {
+        "name": "Date & Time",
+        "type": "n8n-nodes-base.dateTime",
+        "position": [
+          1220,
+          -1200
+        ]
+      },
+      {
+        "name": "Edit Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          560,
+          -980
+        ]
+      },
+      {
+        "name": "Filter",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1000,
+          -980
+        ]
+      },
+      {
+        "name": "Limit",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          560,
+          -760
+        ]
+      },
+      {
+        "name": "Remove Duplicates",
+        "type": "n8n-nodes-base.removeDuplicates",
+        "position": [
+          1220,
+          -760
+        ]
+      },
+      {
+        "name": "Split Out",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1000,
+          -540
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          560,
+          -1200
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1000,
+          -760
+        ]
+      },
+      {
+        "name": "Summarize",
+        "type": "n8n-nodes-base.summarize",
+        "position": [
+          1220,
+          -540
+        ]
+      },
+      {
+        "name": "Convert to File",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          1000,
+          -1200
+        ]
+      },
+      {
+        "name": "Extract from File",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          780,
+          -980
+        ]
+      },
+      {
+        "name": "HTML",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          1220,
+          -980
+        ]
+      },
+      {
+        "name": "Markdown",
+        "type": "n8n-nodes-base.markdown",
+        "position": [
+          780,
+          -760
+        ]
+      },
+      {
+        "name": "Rename Keys",
+        "type": "n8n-nodes-base.renameKeys",
+        "position": [
+          560,
+          -540
+        ]
+      },
+      {
+        "name": "Sort",
+        "type": "n8n-nodes-base.sort",
+        "position": [
+          780,
+          -540
+        ]
+      },
+      {
+        "name": "# Blue1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          380,
+          -1380
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2440,
+          -980
+        ]
+      },
+      {
+        "name": "Loop Over Items",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          2660,
+          -980
+        ]
+      },
+      {
+        "name": "Replace Me",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2880,
+          -980
+        ]
+      },
+      {
+        "name": "Execute Workflow",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          2440,
+          -1200
+        ]
+      },
+      {
+        "name": "Wait",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          2440,
+          -760
+        ]
+      },
+      {
+        "name": "Execute Command",
+        "type": "n8n-nodes-base.executeCommand",
+        "position": [
+          2220,
+          -1200
+        ]
+      },
+      {
+        "name": "HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2220,
+          -980
+        ]
+      },
+      {
+        "name": "Execution Data",
+        "type": "n8n-nodes-base.executionData",
+        "position": [
+          2660,
+          -1200
+        ]
+      },
+      {
+        "name": "FTP",
+        "type": "n8n-nodes-base.ftp",
+        "position": [
+          2880,
+          -1200
+        ]
+      },
+      {
+        "name": "Respond to Webhook",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          2220,
+          -760
+        ]
+      },
+      {
+        "name": "# Red",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2020,
+          -1380
+        ]
+      },
+      {
+        "name": "RSS Read",
+        "type": "n8n-nodes-base.rssFeedRead",
+        "position": [
+          4060,
+          -540
+        ]
+      },
+      {
+        "name": "# Red1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1280,
+          80
+        ]
+      },
+      {
+        "name": "AI Transform",
+        "type": "n8n-nodes-base.aiTransform",
+        "position": [
+          -700,
+          980
+        ]
+      },
+      {
+        "name": "MCP Client",
+        "type": "@n8n/n8n-nodes-langchain.mcpClientTool",
+        "position": [
+          600,
+          740
+        ]
+      },
+      {
+        "name": "Sticky Note Purple1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2720,
+          -1380
+        ]
+      }
+    ],
+    "connections_count": 10,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 13,
+      "action_count": 100
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution",
+      "Email automation",
+      "Scheduled automation"
+    ],
+    "complexity_score": 4080,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "remove duplicates",
+      "dropbox",
+      "executeWorkflow",
+      "calendly trigger",
+      "gmail trigger app",
+      "gmailTool",
+      "# green",
+      "gmailTrigger",
+      "googledocstool app",
+      "@n8n/n8n nodes langchain.embeddingsGoogleGemini",
+      "workflow input trigger",
+      "stickyNote",
+      "@n8n/n8n nodes langchain.embeddingsOpenAi",
+      "extract from file",
+      "webhook",
+      "google sheets trigger app",
+      "email trigger (imap)",
+      "@n8n/n8n nodes langchain.toolWorkflow",
+      "pinecone vector store",
+      "reddit",
+      "anthropic chat model",
+      "sticky note red",
+      "default data loader",
+      "httpRequest",
+      "chat memory manager",
+      "redis chat memory",
+      "pushbullet",
+      "googlecalendartool app",
+      "googleCalendarTool",
+      "http request",
+      "wolfram alpha",
+      "twitter",
+      "sticky note green",
+      "convert to file",
+      "@n8n/n8n nodes langchain.vectorStoreSupabase",
+      "googleCalendar",
+      "merge",
+      "split out",
+      "reddit app",
+      "call n8n workflow tool",
+      "@n8n/n8n nodes langchain.toolCalculator",
+      "googlesheetstool app",
+      "execute workflow",
+      "respond to webhook",
+      "gmail",
+      "information extractor",
+      "google docs app",
+      "# purple1",
+      "dateTime",
+      "question and answer chain",
+      "# red",
+      "execution data",
+      "executeWorkflowTrigger",
+      "perplexity app",
+      "rssFeedRead",
+      "googleDriveTrigger",
+      "sticky note purple1",
+      "answer questions with a vector store",
+      "@n8n/n8n nodes langchain.outputParserItemList",
+      "bitly app",
+      "bluesky app",
+      "embeddings google gemini",
+      "when clicking 'test workflow'",
+      "summarization chain",
+      "@n8n/n8n nodes langchain.vectorStorePGVector",
+      "postgres",
+      "structured output parser",
+      "@n8n/n8n nodes langchain.outputParserAutofixing",
+      "date & time",
+      "# gray",
+      "postgres pgvector store",
+      "googleSheetsTool",
+      "extractFromFile",
+      "redisTool",
+      "@muench dev/n8n nodes bluesky.bluesky",
+      "sentiment analysis",
+      "sticky note blue",
+      "aggregate",
+      "mcp client",
+      "openai chat model",
+      "sticky note yellow",
+      "@n8n/n8n nodes langchain.memoryManager",
+      "rss read",
+      "emailSendTool",
+      "google drive trigger",
+      "@n8n/n8n nodes langchain.chainRetrievalQa",
+      "markdown",
+      "gmailtool app",
+      "sort",
+      "send email",
+      "@n8n/n8n nodes langchain.agent",
+      "sticky note purple",
+      "googleSheets",
+      "calendlyTrigger",
+      "@n8n/n8n nodes langchain.documentDefaultDataLoader",
+      "googleDocsTool",
+      "elevenlabs app",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "# blue1",
+      "summarize",
+      "edit fields",
+      "serpapi",
+      "sticky note gray",
+      "gumroadTrigger",
+      "sticky note brown",
+      "googleSheetsTrigger",
+      "google sheets app",
+      "formTrigger",
+      "when chat message received",
+      "local file trigger",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "youTube",
+      "postgresTool",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "openai",
+      "ftp",
+      "code tool",
+      "dropbox app",
+      "schedule trigger",
+      "@n8n/n8n nodes langchain.textClassifier",
+      "http request1",
+      "html",
+      "n8n nodes elevenlabs.elevenLabs",
+      "@n8n/n8n nodes langchain.toolWikipedia",
+      "code",
+      "splitInBatches",
+      "redis",
+      "execute command",
+      "@n8n/n8n nodes langchain.chainSummarization",
+      "set",
+      "# purple",
+      "window buffer memory",
+      "@n8n/n8n nodes langchain.sentimentAnalysis",
+      "limit",
+      "wait",
+      "ai agent",
+      "embeddings openai",
+      "@n8n/n8n nodes langchain.openAi",
+      "complex",
+      "renameKeys",
+      "gmail app",
+      "manualTrigger",
+      "localFileTrigger",
+      "supabase vector store",
+      "@n8n/n8n nodes langchain.toolHttpRequest",
+      "ai transform",
+      "splitOut",
+      "@n8n/n8n nodes langchain.chatTrigger",
+      "item list output parser",
+      "replace me",
+      "basic llm chain",
+      "google calendar app",
+      "@n8n/n8n nodes langchain.memoryPostgresChat",
+      "@n8n/n8n nodes langchain.memoryBufferWindow",
+      "aiTransform",
+      "executeCommand",
+      "postgres chat memory",
+      "pushbullet app",
+      "google gemini chat model",
+      "on form submission",
+      "respondToWebhook",
+      "@n8n/n8n nodes langchain.toolCode",
+      "convertToFile",
+      "scheduleTrigger",
+      "@n8n/n8n nodes langchain.toolWolframAlpha",
+      "@n8n/n8n nodes langchain.mcpClientTool",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "googleDocs",
+      "youtube app",
+      "@n8n/n8n nodes langchain.vectorStorePinecone",
+      "@n8n/n8n nodes langchain.toolVectorStore",
+      "webhook integration",
+      "executionData",
+      "removeDuplicates",
+      "gumroad trigger",
+      "in-memory vector store",
+      "gmail trigger",
+      "text classifier",
+      "@n8n/n8n nodes langchain.vectorStoreInMemory",
+      "@watzon/n8n nodes perplexity.perplexity",
+      "bitly",
+      "auto-fixing output parser",
+      "emailReadImap",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "# blue",
+      "@n8n/n8n nodes langchain.memoryRedisChat",
+      "wikipedia",
+      "google sheets trigger",
+      "# red1",
+      "@n8n/n8n nodes langchain.lmChatAnthropic",
+      "filter",
+      "noOp",
+      "calculator",
+      "rename keys",
+      "@n8n/n8n nodes langchain.toolSerpApi",
+      "loop over items"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 113 nodos con 13 disparadores que ejecuta: AI Agent, OpenAI, Basic LLM Chain en la categoría de ai-ml.",
+    "semantic_content": "Nodos: AI Agent (@n8n/n8n-nodes-langchain.agent), OpenAI (@n8n/n8n-nodes-langchain.openAi), Basic LLM Chain (@n8n/n8n-nodes-langchain.chainLlm), Information Extractor (@n8n/n8n-nodes-langchain.informationExtractor), Question and Answer Chain (@n8n/n8n-nodes-langchain.chainRetrievalQa), Sentiment Analysis (@n8n/n8n-nodes-langchain.sentimentAnalysis), Summarization Chain (@n8n/n8n-nodes-langchain.chainSummarization), Text Classifier (@n8n/n8n-nodes-langchain.textClassifier), Chat Memory Manager (@n8n/n8n-nodes-langchain.memoryManager), Bitly App (bitly), Dropbox App (dropbox), Gmail App (gmail), Google Calendar App (googleCalendar), Google Docs App (googleDocs), Google Sheets App (googleSheets), Pushbullet App (pushbullet), YouTube App (youTube), Bluesky App (@muench-dev/n8n-nodes-bluesky.bluesky), Perplexity App (@watzon/n8n-nodes-perplexity.perplexity), ElevenLabs App (n8n-nodes-elevenlabs.elevenLabs), Reddit App (reddit), Gmail Trigger App (gmailTrigger), Google Sheets Trigger App (googleSheetsTrigger), # Green (stickyNote), # Gray (stickyNote), Call n8n Workflow Tool (@n8n/n8n-nodes-langchain.toolWorkflow), Code Tool (@n8n/n8n-nodes-langchain.toolCode), HTTP Request1 (@n8n/n8n-nodes-langchain.toolHttpRequest), Calculator (@n8n/n8n-nodes-langchain.toolCalculator), Postgres (postgresTool), Redis (redisTool), Send Email (emailSendTool), SerpAPI (@n8n/n8n-nodes-langchain.toolSerpApi), Wikipedia (@n8n/n8n-nodes-langchain.toolWikipedia), Wolfram Alpha (@n8n/n8n-nodes-langchain.toolWolframAlpha), gmailTool App (gmailTool), googleCalendarTool App (googleCalendarTool), googleDocsTool App (googleDocsTool), googleSheetsTool App (googleSheetsTool), # Purple (stickyNote), Default Data Loader (@n8n/n8n-nodes-langchain.documentDefaultDataLoader), Auto-fixing Output Parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), Answer questions with a vector store (@n8n/n8n-nodes-langchain.toolVectorStore), In-Memory Vector Store (@n8n/n8n-nodes-langchain.vectorStoreInMemory), Pinecone Vector Store (@n8n/n8n-nodes-langchain.vectorStorePinecone), Postgres PGVector Store (@n8n/n8n-nodes-langchain.vectorStorePGVector), Supabase Vector Store (@n8n/n8n-nodes-langchain.vectorStoreSupabase), Anthropic Chat Model (@n8n/n8n-nodes-langchain.lmChatAnthropic), Google Gemini Chat Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Window Buffer Memory (@n8n/n8n-nodes-langchain.memoryBufferWindow), Postgres Chat Memory (@n8n/n8n-nodes-langchain.memoryPostgresChat), Redis Chat Memory (@n8n/n8n-nodes-langchain.memoryRedisChat), Item List Output Parser (@n8n/n8n-nodes-langchain.outputParserItemList), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Embeddings Google Gemini (@n8n/n8n-nodes-langchain.embeddingsGoogleGemini), Embeddings OpenAI (@n8n/n8n-nodes-langchain.embeddingsOpenAi), # Blue (stickyNote), Sticky Note Red (stickyNote), Sticky Note Green (stickyNote), Sticky Note Blue (stickyNote), Sticky Note Purple (stickyNote), Sticky Note Gray (stickyNote), Sticky Note Brown (stickyNote), Sticky Note Yellow (stickyNote), X (twitter), Calendly Trigger (calendlyTrigger), Email Trigger (IMAP) (emailReadImap), Google Drive Trigger (googleDriveTrigger), Gumroad Trigger (gumroadTrigger), Local File Trigger (localFileTrigger), On form submission (formTrigger), Schedule Trigger (scheduleTrigger), Webhook (webhook), When chat message received (@n8n/n8n-nodes-langchain.chatTrigger), When clicking 'Test workflow' (manualTrigger), Workflow Input Trigger (executeWorkflowTrigger), Gmail Trigger (gmailTrigger), Google Sheets Trigger (googleSheetsTrigger), # Purple1 (stickyNote), Code (code), Date & Time (dateTime), Edit Fields (set), Filter (filter), Limit (limit), Remove Duplicates (removeDuplicates), Split Out (splitOut), Aggregate (aggregate), Merge (merge), Summarize (summarize), Convert to File (convertToFile), Extract from File (extractFromFile), HTML (html), Markdown (markdown), Rename Keys (renameKeys), Sort (sort), # Blue1 (stickyNote), If (if), Loop Over Items (splitInBatches), Replace Me (noOp), Execute Workflow (executeWorkflow), Wait (wait), Execute Command (executeCommand), HTTP Request (httpRequest), Execution Data (executionData), FTP (ftp), Respond to Webhook (respondToWebhook), # Red (stickyNote), RSS Read (rssFeedRead), # Red1 (stickyNote), AI Transform (aiTransform), MCP Client (@n8n/n8n-nodes-langchain.mcpClientTool), Sticky Note Purple1 (stickyNote). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Gmail Trigger App, Google Sheets Trigger App, Calendly Trigger, Google Drive Trigger, Gumroad Trigger, Local File Trigger, On form submission, Schedule Trigger, When chat message received, When clicking 'Test workflow', Workflow Input Trigger, Gmail Trigger, Google Sheets Trigger",
+    "business_context": "Email Marketing, Social Media, Data Management"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.gmailTrigger",
+      "Schedule Trigger",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "On form submission",
+      "n8n-nodes-base.googleDriveTrigger",
+      "Gmail Trigger App",
+      "AI Agent",
+      "Local File Trigger",
+      "Gmail Trigger",
+      "Gumroad Trigger",
+      "Basic LLM Chain",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.gumroadTrigger",
+      "Calendly Trigger",
+      "n8n-nodes-base.formTrigger",
+      "When chat message received",
+      "n8n-nodes-base.localFileTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "@n8n/n8n-nodes-langchain.agent",
+      "Google Drive Trigger",
+      "OpenAI",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "Google Sheets Trigger",
+      "When clicking 'Test workflow'",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "Google Sheets Trigger App",
+      "Workflow Input Trigger",
+      "n8n-nodes-base.calendlyTrigger"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.respondtowebhook",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.markdown",
+      "n8n-nodes-base.gmailtool",
+      "n8n-nodes-base.googlecalendartool",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatanthropic",
+      "n8n-nodes-base.googlecalendar",
+      "n8n-nodes-base.scheduletrigger",
+      "@n8n/n8n-nodes-langchain.toolwikipedia",
+      "n8n-nodes-base.renamekeys",
+      "@muench-dev/n8n-nodes-bluesky.bluesky",
+      "n8n-nodes-base.twitter",
+      "@n8n/n8n-nodes-langchain.vectorstorepinecone",
+      "@watzon/n8n-nodes-perplexity.perplexity",
+      "n8n-nodes-base.converttofile",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.googledocs",
+      "n8n-nodes-base.splitinbatches",
+      "@n8n/n8n-nodes-langchain.memorypostgreschat",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.sort",
+      "@n8n/n8n-nodes-langchain.chattrigger",
+      "n8n-nodes-base.gmailtrigger",
+      "@n8n/n8n-nodes-langchain.sentimentanalysis",
+      "@n8n/n8n-nodes-langchain.embeddingsgooglegemini",
+      "@n8n/n8n-nodes-langchain.vectorstoreinmemory",
+      "@n8n/n8n-nodes-langchain.memorybufferwindow",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.formtrigger",
+      "@n8n/n8n-nodes-langchain.chainretrievalqa",
+      "@n8n/n8n-nodes-langchain.openai",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "@n8n/n8n-nodes-langchain.textclassifier",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.rssfeedread",
+      "@n8n/n8n-nodes-langchain.toolcode",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.youtube",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "@n8n/n8n-nodes-langchain.memorymanager",
+      "@n8n/n8n-nodes-langchain.memoryredischat",
+      "n8n-nodes-base.gumroadtrigger",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.embeddingsopenai",
+      "n8n-nodes-base.redistool",
+      "@n8n/n8n-nodes-langchain.vectorstoresupabase",
+      "n8n-nodes-base.executecommand",
+      "@n8n/n8n-nodes-langchain.documentdefaultdataloader",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.bitly",
+      "n8n-nodes-base.localfiletrigger",
+      "n8n-nodes-base.pushbullet",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.googlesheetstool",
+      "n8n-nodes-base.reddit",
+      "n8n-nodes-base.googledocstool",
+      "n8n-nodes-base.ftp",
+      "n8n-nodes-base.postgrestool",
+      "n8n-nodes-base.googledrivetrigger",
+      "n8n-nodes-base.removeduplicates",
+      "@n8n/n8n-nodes-langchain.toolserpapi",
+      "n8n-nodes-base.calendlytrigger",
+      "n8n-nodes-base.datetime",
+      "n8n-nodes-base.summarize",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.aggregate",
+      "@n8n/n8n-nodes-langchain.toolcalculator",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.vectorstorepgvector",
+      "n8n-nodes-base.emailsendtool",
+      "n8n-nodes-base.googlesheetstrigger",
+      "@n8n/n8n-nodes-langchain.toolhttprequest",
+      "n8n-nodes-base.executiondata",
+      "n8n-nodes-base.html",
+      "@n8n/n8n-nodes-langchain.chainsummarization",
+      "@n8n/n8n-nodes-langchain.outputparseritemlist",
+      "@n8n/n8n-nodes-langchain.toolwolframalpha",
+      "@n8n/n8n-nodes-langchain.toolvectorstore",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-elevenlabs.elevenlabs",
+      "n8n-nodes-base.aitransform",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.httprequest",
+      "@n8n/n8n-nodes-langchain.mcpclienttool",
+      "@n8n/n8n-nodes-langchain.toolworkflow",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.emailreadimap",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.dropbox",
+      "n8n-nodes-base.extractfromfile",
+      "@n8n/n8n-nodes-langchain.outputparserautofixing",
+      "n8n-nodes-base.googlesheets"
+    ],
+    "search_terms": [
+      "bitly",
+      "webhook",
+      "0910_bitly_datetime_update_webhook",
+      "datetime",
+      "0910",
+      "update"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": true,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.googleSheetsTrigger",
+      "n8n-nodes-base.calendlyTrigger",
+      "n8n-nodes-base.googleDriveTrigger",
+      "n8n-nodes-base.gumroadTrigger",
+      "n8n-nodes-base.localFileTrigger",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.scheduleTrigger",
+      "@n8n/n8n-nodes-langchain.chatTrigger",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.gmailTrigger",
+      "n8n-nodes-base.googleSheetsTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 55.392156862745104,
+    "best_practices_score": 50.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 69.82843137254902
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:04.632914"
+  },
+  "semantic_vector": [
+    0.025175081565976143,
+    -0.038928382098674774,
+    -0.047268472611904144,
+    0.03740042448043823,
+    -0.04636140167713165,
+    -0.04854116588830948,
+    -0.0474219024181366,
+    -0.046651441603899,
+    -0.04850637912750244,
+    0.04854033142328262,
+    -0.04796570539474487,
+    -0.046656377613544464,
+    -0.047826312482357025,
+    -0.04854169860482216,
+    -0.04852623492479324,
+    0.04854169860482216,
+    0.04803888499736786,
+    0.04796866327524185,
+    -0.03359212726354599,
+    0.047741685062646866,
+    0.04613182321190834,
+    -0.010640975087881088,
+    0.04854082316160202,
+    -0.02334076724946499,
+    0.04854121059179306,
+    0.04854169860482216,
+    0.020753314718604088,
+    -0.04327987879514694,
+    -0.04852620139718056,
+    0.048537477850914,
+    0.04841037839651108,
+    -0.010989471338689327,
+    0.048541635274887085,
+    -0.04815531522035599,
+    0.003500040853396058,
+    -0.048539917916059494,
+    -0.04799355939030647,
+    -0.044041212648153305,
+    -0.028526784852147102,
+    -0.04853970929980278,
+    0.04846516624093056,
+    0.04854162037372589,
+    -0.04853340983390808,
+    0.04854169860482216,
+    0.04854169860482216,
+    -0.005902433767914772,
+    -0.04822220280766487,
+    0.04854120314121246,
+    -0.048514578491449356,
+    -0.03804190084338188,
+    0.030326586216688156,
+    -0.04645678773522377,
+    -0.04854169860482216,
+    -0.04815230891108513,
+    -0.04854165390133858,
+    0.048536282032728195,
+    0.04849175363779068,
+    -0.004855544771999121,
+    -0.04853808134794235,
+    0.04781987890601158,
+    -0.0485042966902256,
+    -0.04831812530755997,
+    0.04713338613510132,
+    0.04854169860482216,
+    -0.014059890061616898,
+    -0.047069001942873,
+    0.04854169860482216,
+    -0.04725738242268562,
+    -0.004157924093306065,
+    0.04712196812033653,
+    -0.04854169860482216,
+    -0.01716350018978119,
+    -0.04824037849903107,
+    0.048533517867326736,
+    0.02550153248012066,
+    0.04773199185729027,
+    0.04854169860482216,
+    -0.04492076858878136,
+    -0.04075459763407707,
+    0.004004432819783688,
+    0.045697517693042755,
+    -0.04638488590717316,
+    -0.04112672060728073,
+    -0.04853792116045952,
+    -0.04834198206663132,
+    0.04472276568412781,
+    -0.04853294789791107,
+    -0.048515692353248596,
+    0.020791994407773018,
+    -0.04852859675884247,
+    -0.04850473254919052,
+    0.04849434271454811,
+    0.048471126705408096,
+    -0.02420911006629467,
+    0.03867936134338379,
+    0.04832332953810692,
+    -0.04848217964172363,
+    0.04854169860482216,
+    -0.04852624610066414,
+    -0.04854169860482216,
+    0.04854169860482216,
+    0.02902633510529995,
+    -0.04851844906806946,
+    -0.039320915937423706,
+    0.04854096844792366,
+    0.03108314611017704,
+    0.04854169860482216,
+    0.030563995242118835,
+    -0.005305856931954622,
+    -0.04854169860482216,
+    -0.02377999946475029,
+    -0.04854152351617813,
+    -0.048362404108047485,
+    0.03856638818979263,
+    0.04833894595503807,
+    0.04713551327586174,
+    -0.0483633354306221,
+    -0.04753030464053154,
+    0.04854165017604828,
+    -0.047276079654693604,
+    0.04628904163837433,
+    0.04828076437115669,
+    0.006045108195394278,
+    0.04837161675095558,
+    0.04854169860482216,
+    -0.04850126430392265,
+    -0.048533305525779724,
+    0.03467879071831703,
+    0.048541393131017685,
+    -0.021647170186042786,
+    -0.04853712022304535,
+    0.04285250976681709,
+    0.04853372648358345,
+    0.048541679978370667,
+    0.04835616052150726,
+    -0.01808038540184498,
+    0.04628477245569229,
+    0.04754040390253067,
+    -0.045875295996665955,
+    -0.04847517982125282,
+    -0.028123680502176285,
+    0.04854169860482216,
+    0.02874988503754139,
+    -0.031159712001681328,
+    0.04853865131735802,
+    -0.04854169860482216,
+    -0.029207004234194756,
+    0.04648943990468979,
+    0.04854169860482216,
+    0.048541679978370667,
+    -0.04854148253798485,
+    -0.04853231459856033,
+    0.0485406294465065,
+    -0.042483821511268616,
+    0.018669499084353447,
+    0.04854169860482216,
+    0.04804801195859909,
+    -0.04854169860482216,
+    -0.048341378569602966,
+    0.045770492404699326,
+    -0.04854127764701843,
+    -0.048541679978370667,
+    0.04854077100753784,
+    0.04560941085219383,
+    0.04304490610957146,
+    -0.026731083169579506,
+    -0.04854169860482216,
+    -0.04854140803217888,
+    -0.04854169860482216,
+    0.04064654931426048,
+    0.04764148220419884,
+    -0.04853905364871025,
+    -0.048023223876953125,
+    0.025779828429222107,
+    -0.047253936529159546,
+    0.04842172935605049,
+    -0.020142920315265656,
+    0.033991120755672455,
+    0.048409927636384964,
+    -0.04852794110774994,
+    0.047953877598047256,
+    -0.019537778571248055,
+    -0.04854169860482216,
+    -0.04854169860482216,
+    0.04783032462000847,
+    -0.0077692498452961445,
+    -0.0485389344394207,
+    0.04709829390048981,
+    0.04512675479054451,
+    -0.04399446025490761,
+    0.01154733169823885,
+    0.04840851202607155,
+    -0.04853931814432144,
+    -0.048268403857946396,
+    -0.04844628646969795,
+    -0.0485416017472744,
+    0.04531531408429146,
+    0.04854169860482216,
+    0.04854154586791992,
+    0.04854166507720947,
+    0.046194158494472504,
+    0.04853259399533272,
+    -0.04853997379541397,
+    0.04554252699017525,
+    -0.04829087480902672,
+    -0.008391973562538624,
+    0.04849943146109581,
+    0.04745136573910713,
+    -0.04854169860482216,
+    -0.043860241770744324,
+    -0.04750237241387367,
+    0.048541098833084106,
+    -0.03168054670095444,
+    0.04854168742895126,
+    -0.04854169860482216,
+    -0.036534830927848816,
+    0.047832656651735306,
+    0.04854132980108261,
+    -0.04357137531042099,
+    0.001400222536176443,
+    -0.005529751535505056,
+    0.048020023852586746,
+    0.04850335419178009,
+    -0.029520930722355843,
+    -0.04854165390133858,
+    -0.04854169860482216,
+    -0.048540811985731125,
+    -0.04854167252779007,
+    -0.04431402310729027,
+    -0.0451279878616333,
+    0.042588308453559875,
+    -0.005514264106750488,
+    0.0485161691904068,
+    -0.04854169860482216,
+    -0.04853278398513794,
+    0.04070429876446724,
+    0.04854169860482216,
+    0.04854091629385948,
+    -0.048474833369255066,
+    0.048496048897504807,
+    0.04842763394117355,
+    0.04854169860482216,
+    -0.02360451966524124,
+    0.038286227732896805,
+    0.04846034571528435,
+    0.0301074031740427,
+    -0.04822379723191261,
+    -0.04854131117463112,
+    -0.02685241401195526,
+    0.048541683703660965,
+    -0.04854169860482216,
+    0.03583363816142082,
+    -0.048541583120822906,
+    -0.048541270196437836,
+    -0.04151270538568497,
+    -0.04854169860482216,
+    0.04494157060980797,
+    0.04854169860482216,
+    0.0449424684047699,
+    0.04854169860482216,
+    0.048508260399103165,
+    0.048376861959695816,
+    -0.04775088280439377,
+    0.04854169860482216,
+    0.04812616482377052,
+    0.04848349839448929,
+    0.044443465769290924,
+    -0.04794342443346977,
+    0.047278184443712234,
+    0.048317696899175644,
+    -0.04850705713033676,
+    0.04854099079966545,
+    -0.034823205322027206,
+    -0.005016564857214689,
+    0.0485415980219841,
+    -0.04661378264427185,
+    -0.04848989099264145,
+    -0.027593934908509254,
+    0.04854169860482216,
+    -0.04775819182395935,
+    -0.03418910503387451,
+    -0.0485011525452137,
+    0.04853961244225502,
+    0.04849746823310852,
+    0.04793641343712807,
+    -0.048539821058511734,
+    0.04828396067023277,
+    0.04854152351617813,
+    -0.0485362634062767,
+    0.04854169115424156,
+    0.027091892436146736,
+    0.04682760313153267,
+    0.04854169860482216,
+    -0.048535119742155075,
+    -0.048121627420186996,
+    -0.04854169860482216,
+    0.048534151166677475,
+    0.011403735727071762,
+    -0.048386603593826294,
+    0.0483158603310585,
+    0.04707534611225128,
+    0.04673880711197853,
+    0.048541389405727386,
+    0.04853382706642151,
+    0.04399057850241661,
+    -0.03826047480106354,
+    0.00893176719546318,
+    0.04287636652588844,
+    -0.04853903502225876,
+    0.04848887398838997,
+    0.04853883385658264,
+    0.04845075681805611,
+    0.048539742827415466,
+    -0.04823298752307892,
+    0.0484941303730011,
+    -0.04853827878832817,
+    0.04854152351617813,
+    -0.047375936061143875,
+    0.0021519812289625406,
+    0.04263600707054138,
+    -0.041684698313474655,
+    -0.04854169860482216,
+    0.04854167252779007,
+    0.048527102917432785,
+    0.04854090139269829,
+    0.03665478527545929,
+    0.047716837376356125,
+    0.04850597679615021,
+    -0.029232922941446304,
+    -0.04709433391690254,
+    -0.04677758738398552,
+    -0.03822922334074974,
+    0.047618743032217026,
+    0.04854169860482216,
+    0.040012918412685394,
+    0.005780142266303301,
+    0.04854138568043709,
+    0.04854164272546768,
+    0.048539385199546814,
+    -0.0023801608476787806,
+    -0.048541195690631866,
+    -0.048541635274887085,
+    0.041247352957725525,
+    -0.04830733314156532,
+    -0.04854169860482216,
+    -0.04852265119552612,
+    -0.04643665626645088,
+    -0.04835914447903633,
+    -0.046683505177497864,
+    0.014199226163327694,
+    0.04841037467122078,
+    0.04852218180894852,
+    -0.046393830329179764,
+    0.04533526673913002,
+    0.0485403947532177,
+    -0.007962704636156559,
+    -0.04854169860482216,
+    0.018518488854169846,
+    -0.037473540753126144,
+    0.04854169860482216,
+    0.04735061526298523,
+    0.0407877080142498,
+    -0.04854169860482216,
+    0.048531509935855865,
+    -0.048540715128183365,
+    -0.048401277512311935,
+    0.04853718355298042,
+    -0.0485415905714035,
+    0.04850201681256294,
+    0.04851928725838661,
+    -0.048540644347667694,
+    -0.03446754813194275,
+    -0.04854067787528038,
+    0.04853501915931702,
+    -0.028590694069862366,
+    0.045701880007982254,
+    -0.04830890893936157,
+    -0.04854164645075798,
+    0.04854169860482216,
+    0.040854036808013916,
+    0.04852830991148949,
+    -0.048422425985336304,
+    0.048443153500556946,
+    -0.032434843480587006,
+    -0.0476665273308754,
+    -0.04853743687272072,
+    0.048405785113573074,
+    0.047825537621974945,
+    -2.5461133645876544e-07,
+    -0.048536308109760284,
+    0.048541612923145294,
+    -0.048526350408792496,
+    0.04854169860482216,
+    0.048541679978370667,
+    -0.047626059502363205,
+    0.048539694398641586,
+    0.04692045971751213,
+    -0.04347679764032364,
+    -0.04071474075317383,
+    0.04761580377817154,
+    0.0404508151113987,
+    0.04851766675710678,
+    0.008302432484924793,
+    0.04717174917459488,
+    -0.04643582925200462,
+    0.047757890075445175,
+    -0.04854169860482216,
+    -0.047406770288944244,
+    0.048540133982896805,
+    0.04842619597911835,
+    0.04836924746632576,
+    0.048539113253355026,
+    -0.03828318417072296,
+    -0.04580094292759895,
+    -0.04854169860482216,
+    -0.04854169860482216,
+    0.04854077100753784,
+    -0.04854024201631546,
+    -0.048473458737134933,
+    -0.023463353514671326,
+    0.04752446711063385,
+    0.03301095962524414,
+    -0.02385031059384346,
+    0.048259392380714417,
+    -0.04853884130716324,
+    0.04854169860482216,
+    -0.048166096210479736,
+    0.04854169860482216,
+    -0.04854169860482216,
+    0.04710877686738968,
+    -0.04854103922843933,
+    -0.04854169860482216,
+    -0.03083748370409012,
+    -0.03688636049628258,
+    -0.048533640801906586,
+    -0.0485319122672081,
+    -0.048541489988565445,
+    -0.04854169860482216,
+    -0.0485403835773468,
+    -0.008527450263500214,
+    0.04597921296954155,
+    0.04810120537877083,
+    -0.04849153012037277,
+    0.048442158848047256,
+    0.0483524315059185,
+    -0.04834113270044327,
+    -0.04852600395679474,
+    -0.0483877919614315,
+    -0.024857407435774803,
+    -0.0483144111931324,
+    0.04508241266012192,
+    0.0432719849050045,
+    0.04854169860482216,
+    0.04854169860482216,
+    0.04826024919748306,
+    -0.04854169860482216,
+    -0.048171766102313995,
+    0.04854169860482216,
+    0.043741513043642044,
+    -0.048525191843509674,
+    0.04832318425178528,
+    0.04854169860482216,
+    0.04846314340829849,
+    0.046285480260849,
+    0.044855982065200806,
+    0.043124325573444366,
+    0.048535220324993134,
+    0.048497650772333145,
+    -0.011370073072612286,
+    0.04854169860482216,
+    0.03497665375471115,
+    -0.04854169860482216,
+    0.048540711402893066,
+    0.04854154959321022,
+    -0.022175854071974754,
+    -0.02534124068915844,
+    -0.04623115435242653,
+    0.04854166880249977,
+    0.04086993634700775,
+    0.04285633936524391,
+    -0.04854085296392441,
+    0.04854169860482216,
+    -0.04492362588644028,
+    -0.04854167625308037,
+    -0.04847926273941994,
+    0.0018747656140476465,
+    0.04819587618112564,
+    0.04769128933548927,
+    -0.04818791151046753,
+    0.04821067675948143,
+    -0.04811057820916176,
+    -0.015793727710843086,
+    -0.0481492280960083,
+    0.04712149128317833,
+    -0.030294962227344513,
+    0.04852721095085144,
+    0.033171579241752625,
+    0.042263228446245193,
+    -0.04854169860482216,
+    0.048541679978370667,
+    0.04700951278209686,
+    -0.030482621863484383,
+    -0.04394099488854408,
+    -0.04854169860482216,
+    0.019344469532370567,
+    -0.04674915596842766,
+    0.013958876021206379,
+    -0.048420604318380356,
+    0.02032364532351494,
+    0.04854169860482216,
+    -0.04852372407913208,
+    0.04814140871167183
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Gmail Trigger App, Google Sheets Trigger App, Calendly Trigger, Google Drive Trigger, Gumroad Trigger, Local File Trigger, On form submission, Schedule Trigger, When chat message received, When clicking 'Test workflow', Workflow Input Trigger, Gmail Trigger, Google Sheets Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Bitly",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Bitly"
+  }
+}

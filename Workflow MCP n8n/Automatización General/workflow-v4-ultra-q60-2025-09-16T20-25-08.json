@@ -1,0 +1,451 @@
+{
+  "nodes": [
+    {
+      "id": "a1b2c3d4-e5f6-4789-8123-567890abcdef",
+      "name": "WebhookTrigger",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        100,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b2c3d4e5-f6a7-4890-9234-67890abcdef0",
+      "name": "SetInitialData",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        100,
+        500
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "c3d4e5f6-a7b8-4901-a345-7890abcdef01",
+      "name": "HttpRequestExternalAPI",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        100,
+        500
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "80b1c4fe-7314-43cc-a417-be64bd25a9c4",
+      "name": "ConditionalCheckAPIResponse",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        100,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "2d830c53-3fc8-4f9c-a416-32fe7b0c3fd6",
+      "name": "GoogleSheetsAddRow",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        280,
+        500
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "77234cad-63eb-48e2-b041-bf2a85ae165b",
+      "name": "EmailSendAPIError",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        100,
+        840
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "224bc2e7-4926-473a-b806-bd88bdcb2d58",
+      "name": "MergeAPIResults",
+      "type": "n8n-nodes-base.merge",
+      "position": [
+        100,
+        640
+      ],
+      "parameters": {
+        "mode": "append"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "4fc103b5-19b7-4d08-b879-e7b488eabf9f",
+      "name": "SlackNotification",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        100,
+        840
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "5105451e-df42-4032-b6c1-c11dbab98003",
+      "name": "CronScheduler",
+      "type": "n8n-nodes-base.cron",
+      "position": [
+        140,
+        100
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    },
+    {
+      "id": "b7991106-31d7-4f76-a122-70c57cf67080",
+      "name": "HttpRequestReportData",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        100,
+        640
+      ],
+      "parameters": {
+        "method": "GET",
+        "url": "https://api.example.com",
+        "requestMethod": "GET"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "bc623e57-a5eb-4890-a7af-fa6eb72b3688",
+      "name": "FunctionProcessReport",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        280,
+        640
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "fade54e7-4504-44f3-85dc-d32f67233d38",
+      "name": "TelegramSendReport",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        140,
+        840
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Mensaje procesado correctamente"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "00c844be-582d-40fe-9f87-1808420b42fc",
+      "name": "TelegramMessageTrigger",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        100,
+        780
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "fd2152e4-0c48-44e7-9645-635918c24f59",
+      "name": "SetTelegramCommand",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        100,
+        780
+      ],
+      "parameters": {
+        "values": [
+          {
+            "name": "data",
+            "value": "={{ $json }}"
+          }
+        ]
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "d548a23b-1a79-42fd-bdc1-44899acbc961",
+      "name": "ConditionalCheckCommand",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        140,
+        300
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{$json[\"field\"]}}",
+              "operation": "equal",
+              "value2": "value"
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "b623e293-4cc4-4257-80e8-e4978d3efaa7",
+      "name": "GoogleCalendarCreateEvent",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        280,
+        780
+      ],
+      "parameters": {
+        "functionCode": "return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "e0ff53dc-a76b-4a93-ae06-0d81351dcd5e",
+      "name": "EmailSendUnknownCommand",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        420,
+        840
+      ],
+      "parameters": {},
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "WebhookTrigger": {
+      "main": [
+        [
+          {
+            "node": "SetInitialData",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SetInitialData": {
+      "main": [
+        [
+          {
+            "node": "HttpRequestExternalAPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HttpRequestExternalAPI": {
+      "main": [
+        [
+          {
+            "node": "ConditionalCheckAPIResponse",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "GoogleSheetsAddRow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GoogleSheetsAddRow": {
+      "main": [
+        [
+          {
+            "node": "MergeAPIResults",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "EmailSendAPIError": {
+      "main": [
+        [
+          {
+            "node": "MergeAPIResults",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MergeAPIResults": {
+      "main": [
+        [
+          {
+            "node": "SlackNotification",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CronScheduler": {
+      "main": [
+        [
+          {
+            "node": "HttpRequestReportData",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HttpRequestReportData": {
+      "main": [
+        [
+          {
+            "node": "FunctionProcessReport",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FunctionProcessReport": {
+      "main": [
+        [
+          {
+            "node": "TelegramSendReport",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TelegramMessageTrigger": {
+      "main": [
+        [
+          {
+            "node": "SetTelegramCommand",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SetTelegramCommand": {
+      "main": [
+        [
+          {
+            "node": "ConditionalCheckCommand",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "GoogleCalendarCreateEvent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GoogleCalendarCreateEvent": {
+      "main": [
+        [
+          {
+            "node": "EmailSendAPIError",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "EmailSendUnknownCommand",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConditionalCheckAPIResponse": {
+      "main": [
+        [
+          {
+            "node": "SetInitialData",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HttpRequestExternalAPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ConditionalCheckCommand": {
+      "main": [
+        [
+          {
+            "node": "SetInitialData",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HttpRequestExternalAPI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {},
+  "metadata": {
+    "v4Enhancement": true,
+    "generationMethod": "v4-context-enhanced",
+    "v4UltraProcessed": true,
+    "version": "4.0.0-ultra-integration",
+    "processingPhases": [
+      "context",
+      "enhancement",
+      "generation",
+      "correction",
+      "positioning"
+    ],
+    "qualityScore": 60,
+    "timestamp": "2025-09-16T20:25:08.373Z"
+  }
+}

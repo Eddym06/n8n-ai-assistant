@@ -1,0 +1,339 @@
+{
+  "name": "Workflow Generado por Fallback Mejorado",
+  "active": false,
+  "nodes": [
+    {
+      "id": "node-hkqr9bze1",
+      "name": "Webhook de Leads",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        316.46331918806715,
+        249.96316607926104
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook-data",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-bnvndph75",
+      "name": "Validar Datos",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        137.29156512604277,
+        356.08881982887993
+      ],
+      "parameters": {
+        "conditions": [
+          {
+            "value1": "={{$json.email}}",
+            "operator": "isNotEmpty",
+            "value2": ""
+          },
+          {
+            "value1": "={{$json.email}}",
+            "operator": "contains",
+            "value2": "@",
+            "type": "and"
+          }
+        ],
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-3ozeolpro",
+      "name": "Actualizar Salesforce",
+      "type": "n8n-nodes-base.hubspot",
+      "position": [
+        831.4348805813447,
+        261.4050892890988
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {
+        "hubspot": {
+          "id": "hubspot-credentials",
+          "name": "HubSpot API"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-swlykelyo",
+      "name": "Enviar Email",
+      "type": "n8n-nodes-base.emailSend",
+      "position": [
+        317.66088491754465,
+        409.5104013044843
+      ],
+      "parameters": {
+        "fromEmail": "noreply@company.com",
+        "toEmail": "={{$json.email}}",
+        "subject": "Notificación importante",
+        "message": "Su solicitud ha sido procesada exitosamente.",
+        "options": {}
+      },
+      "typeVersion": 1,
+      "credentials": {
+        "smtp": {
+          "id": "smtp-credentials",
+          "name": "SMTP Email"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-qx6gkqspc",
+      "name": "Notificar Slack",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        672.2650097224368,
+        569.0487445252436
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credentials",
+          "name": "Slack API"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-a7qeyxkgr",
+      "name": "Registrar Métricas",
+      "type": "n8n-nodes-base.googleAnalytics",
+      "position": [
+        241.84090416090882,
+        155.8218797855171
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {
+        "googleAnalytics": {
+          "id": "ga-credentials",
+          "name": "Google Analytics"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-0bbs01u6e",
+      "name": "Generar PDF",
+      "type": "n8n-nodes-base.function",
+      "position": [
+        294.56626612101326,
+        314.7509149841974
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-nm8rz6d6z",
+      "name": "Programar Seguimiento",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [
+        111.52868266744171,
+        482.46212212995505
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-tonpdmsc6",
+      "name": "Sincronizar ERP",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        607.7291318241997,
+        482.0243711313955
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {},
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    },
+    {
+      "id": "node-9fld1nr4u",
+      "name": "Consultar PostgreSQL",
+      "type": "n8n-nodes-base.postgres",
+      "position": [
+        518.2437316475389,
+        248.94878677366265
+      ],
+      "parameters": {},
+      "typeVersion": 1,
+      "credentials": {
+        "postgres": {
+          "id": "postgres-credentials",
+          "name": "PostgreSQL Database"
+        }
+      },
+      "continueOnFail": false,
+      "onError": "stopWorkflow",
+      "retryOnFail": false,
+      "maxTries": 3,
+      "waitBetweenTries": 1000,
+      "alwaysOutputData": false
+    }
+  ],
+  "connections": {
+    "Webhook de Leads": {
+      "main": [
+        [
+          {
+            "node": "Validar Datos",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Consultar PostgreSQL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Validar Datos": {
+      "main": [
+        [
+          {
+            "node": "Actualizar Salesforce",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Actualizar Salesforce": {
+      "main": [
+        [
+          {
+            "node": "Enviar Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar Email": {
+      "main": [
+        [
+          {
+            "node": "Notificar Slack",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Registrar Métricas",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Generar PDF",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Programar Seguimiento",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generar PDF": {
+      "main": [
+        [
+          {
+            "node": "Sincronizar ERP",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-09-26T01:42:03.321Z",
+  "updatedAt": "2025-09-26T01:42:03.322Z",
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": false,
+    "callerPolicy": "workflowsFromSameOwner",
+    "errorWorkflow": "",
+    "timezone": "America/New_York"
+  },
+  "staticData": {},
+  "tags": [
+    "fallback-generado",
+    "ai-assistant",
+    "test-complejo"
+  ],
+  "triggerCount": 0,
+  "versionId": "1.0.0",
+  "meta": {
+    "generatedBy": "n8n-ai-assistant-fallback-mejorado",
+    "generatedAt": "2025-09-26T01:42:03.322Z",
+    "totalNodes": 10,
+    "totalConnections": 5,
+    "complexity": "COMPLEX",
+    "estimatedExecutionTime": "6.65 segundos (estimado)"
+  }
+}

@@ -1,0 +1,121 @@
+{
+  "merge_info": {
+    "merged_at": "2025-09-25T04:03:22.659118",
+    "source_database": "woka",
+    "target_database": "Workflow Vecto",
+    "merge_version": "1.0"
+  },
+  "woka_data": {
+    "vectorization_info": {
+      "version": "3.0.0",
+      "generated_at": "2025-09-25T03:59:07.870597",
+      "processing_time_seconds": 5.758689,
+      "embedding_model": "universal-sentence-encoder-v4"
+    },
+    "statistics": {
+      "workflows_processed": 745,
+      "workflows_filtered_out": 0,
+      "categories_found": 4,
+      "total_nodes_analyzed": 9968,
+      "vectorization_time": 0,
+      "start_time": "2025-09-25T03:59:02.111911"
+    },
+    "categories": [
+      {
+        "name": "Agente de Licitaciones",
+        "total_workflows": 1,
+        "valid_workflows": 1,
+        "filtered_workflows": 0,
+        "keywords_count": 47
+      },
+      {
+        "name": "consulta-cnpj",
+        "total_workflows": 1,
+        "valid_workflows": 1,
+        "filtered_workflows": 0,
+        "keywords_count": 21
+      },
+      {
+        "name": "converted_workflows",
+        "total_workflows": 295,
+        "valid_workflows": 295,
+        "filtered_workflows": 0,
+        "keywords_count": 3061
+      },
+      {
+        "name": "extras",
+        "total_workflows": 448,
+        "valid_workflows": 448,
+        "filtered_workflows": 0,
+        "keywords_count": 2158
+      }
+    ],
+    "totals": {
+      "categories_processed": 4,
+      "total_workflows_found": 745,
+      "total_valid_workflows": 745,
+      "total_filtered_workflows": 0
+    }
+  },
+  "existing_data": {
+    "vectorization_info": {
+      "version": "2.0.0 - Combined Database",
+      "combined_at": "2025-09-25T02:31:00.000000",
+      "description": "Base de datos vectorizada combinada: workflows masivos + colección curada MCP n8n",
+      "embedding_model": "universal-sentence-encoder-v4",
+      "total_databases_merged": 2
+    },
+    "combined_statistics": {
+      "total_workflows_vectorized": 1969,
+      "total_categories": 164,
+      "original_massive_db": {
+        "workflows_processed": 2056,
+        "workflows_valid": 1870,
+        "categories": 152,
+        "processing_time_seconds": 11.7,
+        "source_folder": "workflows"
+      },
+      "curated_mcp_db": {
+        "workflows_processed": 103,
+        "workflows_valid": 99,
+        "categories": 12,
+        "processing_time_seconds": 0.91,
+        "source_folder": "Workflow MCP n8n"
+      }
+    },
+    "integration_details": {
+      "merge_method": "robocopy /E /XO",
+      "merge_status": "successful",
+      "conflicts_resolved": 0,
+      "new_categories_added": 12,
+      "existing_categories_preserved": 152,
+      "total_metadata_files": 1969
+    },
+    "database_capabilities": {
+      "semantic_search": true,
+      "intelligent_categorization": true,
+      "metadata_enrichment": true,
+      "vector_embeddings": "512-dimensional",
+      "search_optimization": "Universal Sentence Encoder v4"
+    },
+    "usage_notes": {
+      "primary_use": "Búsqueda semántica de workflows n8n masivos y curados",
+      "categories_highlight": [
+        "Automatización General (23 workflows curados + masivos)",
+        "Chatbots y Mensajería (21 workflows curados + masivos)",
+        "Email y Comunicación (12 workflows curados + masivos)",
+        "Investigación y Análisis (20 workflows curados + masivos)",
+        "Redes Sociales (10 workflows curados + masivos)",
+        "Y 159+ categorías adicionales de la base masiva"
+      ],
+      "search_ready": true,
+      "integration_status": "complete"
+    }
+  },
+  "merge_stats": {
+    "folders_copied": 4,
+    "files_copied": 749,
+    "duplicates_skipped": 0,
+    "errors": 0
+  }
+}

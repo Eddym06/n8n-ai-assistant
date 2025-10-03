@@ -1,0 +1,1061 @@
+{
+  "workflow_info": {
+    "id": "eMxH0GjgfWEvBDic",
+    "name": "HR Job Posting and Evaluation with AI",
+    "display_name": "HR Job Posting and Evaluation with AI",
+    "file_name": "1847_Extractfromfile_Form_Automation_Triggered.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Extractfromfile\\1847_Extractfromfile_Form_Automation_Triggered.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "ec32517ac288"
+  },
+  "structure": {
+    "total_nodes": 36,
+    "node_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.googleCalendarTool",
+      "n8n-nodes-base.googleDrive",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.emailSend",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.airtableTool",
+      "n8n-nodes-base.form",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.airtable"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.emailSend",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.airtableTool",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.form",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 6
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.airtable",
+        "count": 6
+      }
+    ],
+    "triggers": [
+      {
+        "name": "On form submission",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          -700,
+          -80
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Airtable",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          -60,
+          -80
+        ]
+      },
+      {
+        "name": "Upload CV to google drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          -480,
+          -80
+        ]
+      },
+      {
+        "name": "applicant details",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -260,
+          -80
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -720,
+          -160
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          120,
+          -180
+        ]
+      },
+      {
+        "name": "download CV",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          140,
+          -80
+        ]
+      },
+      {
+        "name": "Extract from File",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          360,
+          -80
+        ]
+      },
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          580,
+          -80
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          500,
+          120
+        ]
+      },
+      {
+        "name": "Airtable1",
+        "type": "n8n-nodes-base.airtableTool",
+        "position": [
+          700,
+          120
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          820,
+          120
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          960,
+          -340
+        ]
+      },
+      {
+        "name": "shortlisted?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          960,
+          -80
+        ]
+      },
+      {
+        "name": "Rejected",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          1240,
+          60
+        ]
+      },
+      {
+        "name": "Potential Hire",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          1240,
+          -140
+        ]
+      },
+      {
+        "name": "Airtable2",
+        "type": "n8n-nodes-base.airtableTool",
+        "position": [
+          1560,
+          100
+        ]
+      },
+      {
+        "name": "generate questionnaires",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          1460,
+          -140
+        ]
+      },
+      {
+        "name": "questionnaires",
+        "type": "n8n-nodes-base.form",
+        "position": [
+          1820,
+          -140
+        ]
+      },
+      {
+        "name": "update questionnaires",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          2040,
+          -140
+        ]
+      },
+      {
+        "name": "job_posting",
+        "type": "n8n-nodes-base.airtableTool",
+        "position": [
+          2300,
+          100
+        ]
+      },
+      {
+        "name": "candidate_insights",
+        "type": "n8n-nodes-base.airtableTool",
+        "position": [
+          2420,
+          100
+        ]
+      },
+      {
+        "name": "Personalize email",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          2260,
+          -140
+        ]
+      },
+      {
+        "name": "Edit Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2620,
+          -140
+        ]
+      },
+      {
+        "name": "Send Email",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          2840,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2220,
+          -280
+        ]
+      },
+      {
+        "name": "Book Meeting",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          3060,
+          -140
+        ]
+      },
+      {
+        "name": "Google Calendar",
+        "type": "n8n-nodes-base.googleCalendarTool",
+        "position": [
+          3160,
+          80
+        ]
+      },
+      {
+        "name": "update phone meeting time",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          3440,
+          -140
+        ]
+      },
+      {
+        "name": "Screening Questions",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          3660,
+          -140
+        ]
+      },
+      {
+        "name": "job_posting1",
+        "type": "n8n-nodes-base.airtableTool",
+        "position": [
+          3680,
+          80
+        ]
+      },
+      {
+        "name": "candidate_insights1",
+        "type": "n8n-nodes-base.airtableTool",
+        "position": [
+          3880,
+          80
+        ]
+      },
+      {
+        "name": "screening questions",
+        "type": "n8n-nodes-base.airtable",
+        "position": [
+          4240,
+          -140
+        ]
+      },
+      {
+        "name": "Edit Fields1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4020,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3640,
+          -200
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1300,
+          -300
+        ]
+      }
+    ],
+    "connections_count": 28,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 35
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "use_cases": [
+      "Email automation"
+    ],
+    "complexity_score": 1245,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "emailSend",
+      "googleDrive",
+      "screening questions",
+      "sticky note5",
+      "edit fields",
+      "file processing",
+      "update phone meeting time",
+      "rejected",
+      "formTrigger",
+      "generate questionnaires",
+      "on form submission",
+      "sticky note3",
+      "structured output parser",
+      "applicant details",
+      "stickyNote",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "edit fields1",
+      "extract from file",
+      "ai-ml",
+      "job_posting1",
+      "extractFromFile",
+      "airtable2",
+      "book meeting",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "job_posting",
+      "questionnaires",
+      "upload cv to google drive",
+      "form",
+      "airtable1",
+      "update questionnaires",
+      "googleCalendarTool",
+      "openai chat model",
+      "set",
+      "sticky note4",
+      "candidate_insights1",
+      "ai agent",
+      "shortlisted?",
+      "google calendar",
+      "send email",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "@n8n/n8n nodes langchain.agent",
+      "download cv",
+      "personalize email",
+      "complex",
+      "candidate_insights",
+      "potential hire",
+      "airtableTool",
+      "sticky note1",
+      "sticky note2",
+      "airtable"
+    ],
+    "description": "'HR Job Posting and Evaluation with AI' es un workflow diseñado para file processing con 36 nodos activado por On form submission que ejecuta: Airtable, Upload CV to google drive, applicant details en la categoría de ai-ml.",
+    "semantic_content": "Workflow: HR Job Posting and Evaluation with AI. Nodos: On form submission (formTrigger), Airtable (airtable), Upload CV to google drive (googleDrive), applicant details (set), Sticky Note (stickyNote), Sticky Note1 (stickyNote), download CV (googleDrive), Extract from File (extractFromFile), AI Agent (@n8n/n8n-nodes-langchain.agent), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), Airtable1 (airtableTool), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), Sticky Note2 (stickyNote), shortlisted? (if), Rejected (airtable), Potential Hire (airtable), Airtable2 (airtableTool), generate questionnaires (@n8n/n8n-nodes-langchain.openAi), questionnaires (form), update questionnaires (airtable), job_posting (airtableTool), candidate_insights (airtableTool), Personalize email (@n8n/n8n-nodes-langchain.openAi), Edit Fields (set), Send Email (emailSend), Sticky Note3 (stickyNote), Book Meeting (@n8n/n8n-nodes-langchain.openAi), Google Calendar (googleCalendarTool), update phone meeting time (airtable), Screening Questions (@n8n/n8n-nodes-langchain.openAi), job_posting1 (airtableTool), candidate_insights1 (airtableTool), screening questions (airtable), Edit Fields1 (set), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote). Propósito: file processing. Categoría: ai-ml. Disparadores: On form submission",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.formTrigger",
+      "Airtable",
+      "applicant details",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "On form submission",
+      "Upload CV to google drive",
+      "n8n-nodes-base.airtable"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.airtable",
+      "n8n-nodes-base.googledrive",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.googlecalendartool",
+      "n8n-nodes-base.emailsend",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.extractfromfile",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.form",
+      "n8n-nodes-base.formtrigger",
+      "n8n-nodes-base.airtabletool",
+      "@n8n/n8n-nodes-langchain.openai",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "1847_extractfromfile_form_automation_triggered",
+      "extractfromfile",
+      "triggered",
+      "automation",
+      "1847",
+      "form"
+    ],
+    "alternative_names": [
+      "HR Job Posting and Evaluation with AI"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": false,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.formTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 57.831325301204814,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 81.56626506024097
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:07.665899"
+  },
+  "semantic_vector": [
+    -0.06061597540974617,
+    -0.05988525599241257,
+    0.00972655974328518,
+    0.046449191868305206,
+    0.05098208412528038,
+    0.017258664593100548,
+    0.041351381689310074,
+    -0.006777492351830006,
+    -0.062166038900613785,
+    0.012719723396003246,
+    -0.06161245331168175,
+    -0.0028297954704612494,
+    -0.05338326841592789,
+    -0.0623541884124279,
+    -0.05252567678689957,
+    0.06304070353507996,
+    0.05182185769081116,
+    0.041150256991386414,
+    -0.05950642004609108,
+    -0.05179499834775925,
+    -0.051552727818489075,
+    -0.031438443809747696,
+    -0.0572613961994648,
+    -0.010772624053061008,
+    0.015677355229854584,
+    -0.04047331213951111,
+    -0.06404700130224228,
+    -0.03985650837421417,
+    -0.009492137469351292,
+    0.06167959049344063,
+    -0.05324495583772659,
+    0.053087975829839706,
+    0.021323518827557564,
+    -0.05747814103960991,
+    0.04560783505439758,
+    0.04153156280517578,
+    -0.06355908513069153,
+    -0.05000784620642662,
+    0.003559560514986515,
+    -0.0014916956424713135,
+    0.037084195762872696,
+    0.04673277959227562,
+    -0.042934220284223557,
+    0.0019663956481963396,
+    0.0529811754822731,
+    0.05570857599377632,
+    0.060838159173727036,
+    0.014837176539003849,
+    -0.030446134507656097,
+    -0.035819053649902344,
+    -0.059355728328228,
+    0.052034590393304825,
+    -0.06425147503614426,
+    -0.032448284327983856,
+    -0.06260351091623306,
+    -0.03909430280327797,
+    0.05256187543272972,
+    0.011715448461472988,
+    -0.012804552912712097,
+    -0.05289764702320099,
+    -0.056432683020830154,
+    0.03424549102783203,
+    -0.03667754679918289,
+    0.06092113256454468,
+    0.04521940276026726,
+    -0.0011667647631838918,
+    0.042749568819999695,
+    -0.06298812478780746,
+    0.029980681836605072,
+    -0.013747680000960827,
+    0.015681270509958267,
+    -0.025614341720938683,
+    0.021444709971547127,
+    0.03685776889324188,
+    -0.06393231451511383,
+    -0.05466520041227341,
+    0.05966847762465477,
+    -0.058714497834444046,
+    0.03377392143011093,
+    -0.04245968163013458,
+    -0.0408371239900589,
+    -0.002152182161808014,
+    0.06257589161396027,
+    -0.06256886571645737,
+    -0.004781597759574652,
+    0.0583740770816803,
+    -0.04060705751180649,
+    0.026793204247951508,
+    -0.0354173369705677,
+    -0.042097825556993484,
+    0.038798678666353226,
+    0.059219662100076675,
+    -0.0067304219119250774,
+    -0.013335633091628551,
+    0.05590711161494255,
+    0.06290833652019501,
+    0.00544421561062336,
+    -0.013117815367877483,
+    -0.061582304537296295,
+    -0.05907768756151199,
+    -0.03312176465988159,
+    -0.05322963371872902,
+    0.048833075910806656,
+    0.022399960085749626,
+    -0.008376823738217354,
+    -0.05096438527107239,
+    0.0593203566968441,
+    0.04885856434702873,
+    0.05737840756773949,
+    -0.06305500119924545,
+    -0.03686615824699402,
+    -0.04973459243774414,
+    0.04064501076936722,
+    -0.03631603717803955,
+    0.047909803688526154,
+    0.038439273834228516,
+    -0.06327958405017853,
+    -0.050795260816812515,
+    0.06352487951517105,
+    0.0631437823176384,
+    -0.04872279241681099,
+    0.010792018845677376,
+    0.005655354354530573,
+    0.0476931631565094,
+    0.06170496717095375,
+    0.03567768633365631,
+    0.006014438811689615,
+    0.005783218890428543,
+    0.029973002150654793,
+    -0.0162468571215868,
+    -0.041049811989068985,
+    0.002000748412683606,
+    0.0556294210255146,
+    0.022385381162166595,
+    0.0391390286386013,
+    -0.057374484837055206,
+    0.01845679245889187,
+    0.056293558329343796,
+    -0.026858827099204063,
+    -0.05546487867832184,
+    -0.001089234370738268,
+    0.06426061689853668,
+    -0.06399702280759811,
+    0.06126362457871437,
+    0.021895550191402435,
+    -0.027419498190283775,
+    0.0582800917327404,
+    -0.037428829818964005,
+    0.013584570027887821,
+    -0.025819353759288788,
+    0.015720171853899956,
+    -0.037162791937589645,
+    -0.04101976752281189,
+    -0.009987826459109783,
+    0.0548614077270031,
+    0.04731210321187973,
+    0.033840034157037735,
+    0.029927125200629234,
+    -0.06223924458026886,
+    -0.06258389353752136,
+    -0.02691028080880642,
+    -0.03815634921193123,
+    0.029535457491874695,
+    -0.02895493432879448,
+    0.04485011473298073,
+    0.03336363658308983,
+    -0.036926545202732086,
+    -0.05271325260400772,
+    -0.05751010403037071,
+    -0.061761919409036636,
+    0.01062491163611412,
+    -0.006533384323120117,
+    -0.04625729098916054,
+    0.037791162729263306,
+    -0.0382852703332901,
+    0.053318798542022705,
+    0.03629840537905693,
+    -0.062262941151857376,
+    0.03868294507265091,
+    0.004512715619057417,
+    -0.057482048869132996,
+    0.0571497417986393,
+    -0.060049429535865784,
+    0.03153208643198013,
+    0.0498490072786808,
+    0.051936808973550797,
+    -0.06153756007552147,
+    0.030329886823892593,
+    -0.01666148565709591,
+    0.02480131946504116,
+    0.022067053243517876,
+    0.026775378733873367,
+    0.054681096225976944,
+    -0.046791862696409225,
+    -0.06334934383630753,
+    -0.06380850821733475,
+    0.05394678935408592,
+    0.06423584371805191,
+    0.014211280271410942,
+    0.03783036395907402,
+    -0.008604185655713081,
+    0.059018224477767944,
+    0.058706823736429214,
+    0.04510561376810074,
+    0.04791250824928284,
+    -0.02127131260931492,
+    0.05085006728768349,
+    0.010181993246078491,
+    -0.037512246519327164,
+    -0.06296639144420624,
+    0.03916224464774132,
+    0.04662970453500748,
+    0.062133871018886566,
+    0.06303193420171738,
+    -0.06420682370662689,
+    -0.061516180634498596,
+    0.0542769692838192,
+    0.05345507711172104,
+    0.06006619706749916,
+    0.01891537941992283,
+    -0.010513626970350742,
+    0.059077151119709015,
+    -0.043523821979761124,
+    0.029744090512394905,
+    -0.04747489094734192,
+    -0.06316133588552475,
+    -0.041470423340797424,
+    -0.02091197483241558,
+    -0.043827854096889496,
+    -0.045550428330898285,
+    -0.053083859384059906,
+    -0.057858847081661224,
+    -0.04178469255566597,
+    -0.06080765277147293,
+    -0.055521994829177856,
+    0.030241522938013077,
+    0.05731762945652008,
+    0.06405671685934067,
+    -0.06382535398006439,
+    -0.05474470928311348,
+    -0.05994207039475441,
+    0.05139913782477379,
+    0.015377824194729328,
+    0.029489710927009583,
+    0.014114325866103172,
+    0.0637684017419815,
+    0.02794351987540722,
+    -0.05154670402407646,
+    0.03692346066236496,
+    0.018213199451565742,
+    -0.04049185663461685,
+    0.06396322697401047,
+    -0.010614197701215744,
+    0.059944380074739456,
+    0.05840037018060684,
+    -0.06045227870345116,
+    -0.040294937789440155,
+    0.06426336616277695,
+    -0.04296838119626045,
+    0.0340019054710865,
+    -0.002647852525115013,
+    0.021143019199371338,
+    -0.03982948511838913,
+    -0.030503494665026665,
+    0.03973853215575218,
+    0.044831544160842896,
+    -0.0097468551248312,
+    0.061712950468063354,
+    -0.06308073550462723,
+    0.06012766808271408,
+    -0.051718588918447495,
+    0.057081207633018494,
+    -0.04074215143918991,
+    -0.010481463745236397,
+    0.06139387562870979,
+    -0.0024286147672683,
+    -0.061817627400159836,
+    -0.021018777042627335,
+    0.0406954362988472,
+    -0.062172528356313705,
+    -0.05980495736002922,
+    0.05104891210794449,
+    0.05702934041619301,
+    0.052954331040382385,
+    -0.003457539016380906,
+    0.06273641437292099,
+    0.0235347431153059,
+    0.06380345672369003,
+    0.028807111084461212,
+    -0.03769713640213013,
+    -0.039579007774591446,
+    0.05323411151766777,
+    0.062479689717292786,
+    0.054608676582574844,
+    0.02394707128405571,
+    -0.05956750735640526,
+    -0.013945722952485085,
+    -0.013227100484073162,
+    -0.038175854831933975,
+    0.05586499720811844,
+    0.011658194474875927,
+    0.028459735214710236,
+    0.05835730955004692,
+    -0.05263591557741165,
+    -0.018484704196453094,
+    0.0543239489197731,
+    0.0050173308700323105,
+    -0.02743207849562168,
+    0.028379961848258972,
+    0.004846497438848019,
+    -0.054299354553222656,
+    0.02376307174563408,
+    0.026917433366179466,
+    0.0072342399507761,
+    0.05865335091948509,
+    -0.05577955022454262,
+    0.02159353531897068,
+    -0.03499632328748703,
+    -0.006759279873222113,
+    0.01139544416218996,
+    0.020182689651846886,
+    -0.06378635764122009,
+    0.04024730622768402,
+    -0.06370235979557037,
+    -0.02769812010228634,
+    -0.02772984839975834,
+    0.028019975870847702,
+    0.045700803399086,
+    0.02817419171333313,
+    -0.04972010478377342,
+    0.061993155628442764,
+    -0.06078270077705383,
+    0.030994240194559097,
+    0.05819885432720184,
+    0.049964964389801025,
+    -0.0018787425942718983,
+    0.06341397017240524,
+    0.013269350863993168,
+    0.04317159950733185,
+    -0.049884989857673645,
+    -0.048626821488142014,
+    -0.0570976659655571,
+    -0.0356864295899868,
+    -0.04741119593381882,
+    -0.06396941840648651,
+    0.02357581816613674,
+    0.038475003093481064,
+    0.031866591423749924,
+    -0.03816615417599678,
+    0.04243188351392746,
+    0.061963316053152084,
+    0.030496230348944664,
+    -0.04497776925563812,
+    0.05912080034613609,
+    0.06308639794588089,
+    -0.063924640417099,
+    -0.06376507878303528,
+    0.021340442821383476,
+    -0.034445587545633316,
+    0.005524338223040104,
+    0.0463925264775753,
+    -0.06339237093925476,
+    -0.050915393978357315,
+    0.053587790578603745,
+    -0.008419050835072994,
+    0.059673164039850235,
+    0.03192035108804703,
+    -0.02469092607498169,
+    0.014926518313586712,
+    0.03169520944356918,
+    -0.04109395295381546,
+    -0.04299956560134888,
+    -0.06332745403051376,
+    0.05818279832601547,
+    0.060245826840400696,
+    0.059052444994449615,
+    0.009673519060015678,
+    -0.0627162978053093,
+    0.04550321027636528,
+    -0.05435070022940636,
+    -0.04610801860690117,
+    0.04571687802672386,
+    -0.060901492834091187,
+    -0.05726025253534317,
+    -0.005557273048907518,
+    -0.06385219842195511,
+    0.039038922637701035,
+    0.02289053611457348,
+    -0.01296212337911129,
+    -0.058823663741350174,
+    0.00035340822068974376,
+    -0.019757162779569626,
+    0.060471609234809875,
+    0.04423408955335617,
+    -0.049038346856832504,
+    0.02943456545472145,
+    0.02141394093632698,
+    -0.0365784652531147,
+    -0.003548538312315941,
+    -0.039117228239774704,
+    0.039480600506067276,
+    0.015602334402501583,
+    -0.06334283202886581,
+    0.052725642919540405,
+    -0.04634595289826393,
+    0.02253185585141182,
+    -0.05940840393304825,
+    0.027797194197773933,
+    0.0638844445347786,
+    0.0530707873404026,
+    0.048840224742889404,
+    -0.0372074730694294,
+    0.03719738870859146,
+    0.01333011593669653,
+    0.06338831782341003,
+    -0.019393684342503548,
+    -0.000247082527494058,
+    -0.04371069371700287,
+    0.01769871823489666,
+    -0.041179172694683075,
+    -0.0006972623523324728,
+    -0.03257015720009804,
+    -0.03175622597336769,
+    0.03325200825929642,
+    -0.013027908280491829,
+    -0.04688463732600212,
+    -0.06305745244026184,
+    -0.02509904094040394,
+    -0.019990161061286926,
+    0.029232950881123543,
+    -0.05346275866031647,
+    0.03198898583650589,
+    -0.012825682759284973,
+    0.053883686661720276,
+    -0.05342297628521919,
+    -0.02187841385602951,
+    -0.04149102419614792,
+    -0.06390523165464401,
+    -0.05676235631108284,
+    0.05493989959359169,
+    0.016379930078983307,
+    0.0018584970384836197,
+    -0.00276723294518888,
+    -0.06112862750887871,
+    -0.032966215163469315,
+    0.014558356255292892,
+    -0.06271890550851822,
+    0.02358946204185486,
+    0.024515990167856216,
+    -0.021735211834311485,
+    -0.0011496306397020817,
+    -0.0034923378843814135,
+    0.057136744260787964,
+    0.03125863894820213,
+    0.010125613771378994,
+    -0.06264641880989075,
+    -0.02899773046374321,
+    0.05969114601612091,
+    0.019294390454888344,
+    -0.06185063347220421,
+    0.04500255361199379,
+    -0.010964898392558098,
+    0.03192459046840668,
+    -0.03179444000124931,
+    -0.05117707699537277,
+    -0.05804580822587013,
+    0.05876732990145683,
+    -0.05534235015511513,
+    -0.05370614677667618,
+    0.06359528750181198,
+    0.022274842485785484,
+    -0.0505119264125824,
+    0.03759187087416649,
+    0.04286075755953789,
+    -0.061312418431043625,
+    0.05577116087079048,
+    -0.04889611527323723,
+    -0.01386068481951952,
+    -0.04004919156432152,
+    -0.05463775247335434,
+    0.0062117506749928,
+    0.056622568517923355,
+    0.016488412395119667,
+    -0.06401538848876953,
+    0.05333202704787254,
+    0.02179626375436783,
+    -0.05691330134868622,
+    0.025971125811338425,
+    -0.005887002218514681,
+    0.05969040468335152,
+    -0.05234229937195778,
+    0.022703157737851143,
+    0.028075912967324257,
+    -0.018562370911240578,
+    -0.006758770905435085,
+    0.03146424517035484,
+    -0.05063416436314583,
+    0.063160739839077,
+    -0.040037766098976135,
+    0.00162916025146842,
+    -0.02340308576822281,
+    -0.06119704991579056,
+    0.05423406511545181,
+    -0.06416816264390945,
+    0.014596480876207352,
+    -0.044740017503499985,
+    -0.04810873791575432,
+    -0.00430046021938324,
+    -0.0005338911432772875,
+    0.038545574992895126,
+    -0.043719153851270676,
+    -0.06296566873788834
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: On form submission; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for file processing in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Extractfromfile",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Extractfromfile"
+  }
+}

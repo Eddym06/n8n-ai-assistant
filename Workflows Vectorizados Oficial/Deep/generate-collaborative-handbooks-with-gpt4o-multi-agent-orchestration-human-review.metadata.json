@@ -1,0 +1,1040 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Pyragogy AI Village - Orchestrazione Master (Architettura Profonda V2)",
+    "display_name": "Pyragogy AI Village - Orchestrazione Master (Architettura Profonda V2)",
+    "file_name": "generate-collaborative-handbooks-with-gpt4o-multi-agent-orchestration-human-review.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Deep\\generate-collaborative-handbooks-with-gpt4o-multi-agent-orchestration-human-review.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "9282cdcdd6cd"
+  },
+  "structure": {
+    "total_nodes": 35,
+    "node_types": [
+      "n8n-nodes-base.postgres",
+      "n8n-nodes-base.github",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.emailSend",
+      "n8n-nodes-base.function",
+      "n8n-nodes-base.start",
+      "n8n-nodes-base.openAi",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.postgres",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.github",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.emailSend",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.function",
+        "count": 11
+      },
+      {
+        "type": "n8n-nodes-base.start",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.openAi",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "Start",
+        "type": "n8n-nodes-base.start",
+        "position": [
+          50,
+          300
+        ]
+      },
+      {
+        "name": "Webhook Trigger",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          250,
+          300
+        ]
+      },
+      {
+        "name": "Check DB Connection",
+        "type": "n8n-nodes-base.postgres",
+        "position": [
+          450,
+          300
+        ]
+      },
+      {
+        "name": "Meta-Orchestrator",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          650,
+          300
+        ]
+      },
+      {
+        "name": "Parse Orchestration Plan",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          850,
+          300
+        ]
+      },
+      {
+        "name": "More Agents to Run?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1050,
+          300
+        ]
+      },
+      {
+        "name": "Prepare Agent Input",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          1250,
+          200
+        ]
+      },
+      {
+        "name": "Route Agents with Switch",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1450,
+          200
+        ]
+      },
+      {
+        "name": "Summarizer Agent",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          1650,
+          0
+        ]
+      },
+      {
+        "name": "Synthesizer Agent",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          1650,
+          100
+        ]
+      },
+      {
+        "name": "Peer Reviewer Agent",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          1650,
+          200
+        ]
+      },
+      {
+        "name": "Sensemaking Agent",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          1650,
+          300
+        ]
+      },
+      {
+        "name": "Prompt Engineer Agent",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          1650,
+          400
+        ]
+      },
+      {
+        "name": "Onboarding/Explainer Agent",
+        "type": "n8n-nodes-base.openAi",
+        "position": [
+          1650,
+          500
+        ]
+      },
+      {
+        "name": "Add Handbook Metadata",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          1650,
+          600
+        ]
+      },
+      {
+        "name": "Generate Content for Review",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          1850,
+          600
+        ]
+      },
+      {
+        "name": "Generate Review ID",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          2050,
+          600
+        ]
+      },
+      {
+        "name": "Send Review Request Email",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          2250,
+          600
+        ]
+      },
+      {
+        "name": "Wait for Human Approval",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          2450,
+          600
+        ]
+      },
+      {
+        "name": "Human Decision Split",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2650,
+          600
+        ]
+      },
+      {
+        "name": "Save to handbook_entries",
+        "type": "n8n-nodes-base.postgres",
+        "position": [
+          2850,
+          500
+        ]
+      },
+      {
+        "name": "Prepare Approved Contribution Data",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          3050,
+          500
+        ]
+      },
+      {
+        "name": "Save Agent Contribution (Approved)",
+        "type": "n8n-nodes-base.postgres",
+        "position": [
+          3250,
+          500
+        ]
+      },
+      {
+        "name": "Generate GitHub File Path",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          3450,
+          500
+        ]
+      },
+      {
+        "name": "GitHub Enabled?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3650,
+          500
+        ]
+      },
+      {
+        "name": "Commit to GitHub (Approved)",
+        "type": "n8n-nodes-base.github",
+        "position": [
+          3850,
+          500
+        ]
+      },
+      {
+        "name": "Log Human Rejection",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          2850,
+          700
+        ]
+      },
+      {
+        "name": "Merge Archivist Paths",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          4050,
+          600
+        ]
+      },
+      {
+        "name": "Evaluate Board Consensus",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          1850,
+          300
+        ]
+      },
+      {
+        "name": "Check Redraft Needed",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2050,
+          300
+        ]
+      },
+      {
+        "name": "Handle Redraft",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          2250,
+          200
+        ]
+      },
+      {
+        "name": "Process Agent Output",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          2050,
+          200
+        ]
+      },
+      {
+        "name": "Slack Enabled?",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1250,
+          500
+        ]
+      },
+      {
+        "name": "Notify Slack",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1450,
+          500
+        ]
+      },
+      {
+        "name": "Final Response",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          1250,
+          400
+        ]
+      }
+    ],
+    "connections_count": 34,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 0,
+      "action_count": 35
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "email automation",
+    "use_cases": [
+      "Team communication",
+      "Email automation"
+    ],
+    "complexity_score": 1265,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "emailSend",
+      "generate github file path",
+      "handle redraft",
+      "generate review id",
+      "onboarding/explainer agent",
+      "generate content for review",
+      "parse orchestration plan",
+      "prepare agent input",
+      "save to handbook_entries",
+      "postgres",
+      "switch",
+      "commit to github (approved)",
+      "ai-ml",
+      "final response",
+      "prompt engineer agent",
+      "respondToWebhook",
+      "send review request email",
+      "function",
+      "webhook",
+      "check db connection",
+      "add handbook metadata",
+      "peer reviewer agent",
+      "synthesizer agent",
+      "prepare approved contribution data",
+      "slack",
+      "meta-orchestrator",
+      "openAi",
+      "check redraft needed",
+      "webhook trigger",
+      "github",
+      "start",
+      "summarizer agent",
+      "email automation",
+      "notify slack",
+      "human decision split",
+      "github enabled?",
+      "evaluate board consensus",
+      "merge",
+      "wait",
+      "log human rejection",
+      "save agent contribution (approved)",
+      "route agents with switch",
+      "more agents to run?",
+      "merge archivist paths",
+      "slack enabled?",
+      "complex",
+      "process agent output",
+      "sensemaking agent",
+      "wait for human approval"
+    ],
+    "description": "'Pyragogy AI Village - Orchestrazione Master (Architettura Profonda V2)' es un workflow diseñado para email automation con 35 nodos que ejecuta: Start, Webhook Trigger, Check DB Connection en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Pyragogy AI Village - Orchestrazione Master (Architettura Profonda V2). Nodos: Start (start), Webhook Trigger (webhook), Check DB Connection (postgres), Meta-Orchestrator (openAi), Parse Orchestration Plan (function), More Agents to Run? (if), Prepare Agent Input (function), Route Agents with Switch (switch), Summarizer Agent (openAi), Synthesizer Agent (openAi), Peer Reviewer Agent (openAi), Sensemaking Agent (openAi), Prompt Engineer Agent (openAi), Onboarding/Explainer Agent (openAi), Add Handbook Metadata (function), Generate Content for Review (function), Generate Review ID (function), Send Review Request Email (emailSend), Wait for Human Approval (wait), Human Decision Split (if), Save to handbook_entries (postgres), Prepare Approved Contribution Data (function), Save Agent Contribution (Approved) (postgres), Generate GitHub File Path (function), GitHub Enabled? (if), Commit to GitHub (Approved) (github), Log Human Rejection (function), Merge Archivist Paths (merge), Evaluate Board Consensus (function), Check Redraft Needed (if), Handle Redraft (function), Process Agent Output (function), Slack Enabled? (if), Notify Slack (slack), Final Response (respondToWebhook). Propósito: email automation. Categoría: ai-ml",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.postgres",
+      "Webhook Trigger",
+      "Start",
+      "n8n-nodes-base.start",
+      "n8n-nodes-base.webhook",
+      "Check DB Connection"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.postgres",
+      "n8n-nodes-base.respondtowebhook",
+      "n8n-nodes-base.openai",
+      "n8n-nodes-base.github",
+      "n8n-nodes-base.emailsend",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.function",
+      "n8n-nodes-base.start",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "generate-collaborative-handbooks-with-gpt4o-multi-agent-orchestration-human-review",
+      "multi",
+      "agent",
+      "with",
+      "orchestration",
+      "human",
+      "handbooks",
+      "generate",
+      "collaborative",
+      "gpt4o",
+      "review"
+    ],
+    "alternative_names": [
+      "Pyragogy AI Village - Orchestrazione Master (Architettura Profonda V2)"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "email automation"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": true,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 75.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 55.33596837944664,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 74.81719367588933
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:07.049193"
+  },
+  "semantic_vector": [
+    -0.04426255077123642,
+    -0.055007610470056534,
+    0.02515721507370472,
+    -0.05587546154856682,
+    0.014960067346692085,
+    -0.055722907185554504,
+    0.04141850024461746,
+    -0.011574643664062023,
+    -0.010052710771560669,
+    0.051420509815216064,
+    -0.010637160390615463,
+    -0.05543189123272896,
+    -0.00894990749657154,
+    -0.017348909750580788,
+    0.010552779771387577,
+    0.05601753666996956,
+    0.055850982666015625,
+    0.014257576316595078,
+    -0.013927072286605835,
+    -0.020632410421967506,
+    -0.007269198540598154,
+    0.054591044783592224,
+    -0.014990544877946377,
+    -0.050245702266693115,
+    0.04821424186229706,
+    -0.046130675822496414,
+    -0.04821052402257919,
+    0.04448186606168747,
+    -0.05580654740333557,
+    0.03608091548085213,
+    -0.01908135414123535,
+    -0.042921848595142365,
+    -0.05549626052379608,
+    -0.05414591357111931,
+    -0.04529111087322235,
+    -0.055387694388628006,
+    0.04953809827566147,
+    -0.03558836504817009,
+    0.042316194623708725,
+    -0.054196156561374664,
+    0.015709228813648224,
+    0.0402788445353508,
+    0.0526467002928257,
+    0.046183109283447266,
+    0.056007321923971176,
+    0.05489661917090416,
+    -0.05104919150471687,
+    0.03345908224582672,
+    -0.02863800898194313,
+    -0.03545340895652771,
+    -0.05281420797109604,
+    -0.038583945482969284,
+    -0.05533787980675697,
+    -0.05585542321205139,
+    -0.053800586611032486,
+    -0.05596821755170822,
+    0.0030692503787577152,
+    0.05293373018503189,
+    -0.012891913764178753,
+    0.044411323964595795,
+    0.049044135957956314,
+    0.003919386770576239,
+    -0.055286429822444916,
+    0.049867525696754456,
+    -0.042518969625234604,
+    -0.017054643481969833,
+    0.038831181824207306,
+    -0.05278915911912918,
+    -0.05466995760798454,
+    -0.0012229469139128923,
+    -0.05371604114770889,
+    0.020891515538096428,
+    -0.02015315741300583,
+    0.0467626117169857,
+    -0.02648545801639557,
+    -0.05600897595286369,
+    0.0340215303003788,
+    -0.026247484609484673,
+    -0.026376714929938316,
+    -0.026499943807721138,
+    0.03356582298874855,
+    -0.0485195592045784,
+    -0.04838154464960098,
+    -0.05576276034116745,
+    -0.022858088836073875,
+    0.048505205661058426,
+    -0.05212756618857384,
+    -0.05569694563746452,
+    0.03664650768041611,
+    0.05345773696899414,
+    -0.054297298192977905,
+    0.019462646916508675,
+    0.04744934290647507,
+    -0.020788753405213356,
+    0.0123220756649971,
+    -0.012924524024128914,
+    0.000469574355520308,
+    0.050218187272548676,
+    -0.05406760796904564,
+    -0.05601753666996956,
+    0.054340921342372894,
+    -0.03475203737616539,
+    0.0474274717271328,
+    0.05511082708835602,
+    -0.055389050394296646,
+    0.0465967133641243,
+    0.056014109402894974,
+    0.011478916741907597,
+    0.04476955905556679,
+    -0.055074241012334824,
+    0.0022018421441316605,
+    -0.04706422984600067,
+    -0.05075402557849884,
+    0.009375031106173992,
+    -0.04973549023270607,
+    0.04884953051805496,
+    -0.05312392860651016,
+    -0.018697993829846382,
+    0.016898786649107933,
+    0.012658615596592426,
+    -0.05591319501399994,
+    0.055017463862895966,
+    0.0558650977909565,
+    0.036933183670043945,
+    0.05601643770933151,
+    0.047922976315021515,
+    -0.043990809470415115,
+    0.05582595244050026,
+    0.05209502950310707,
+    0.012140202336013317,
+    -0.04335305467247963,
+    -0.04408147931098938,
+    0.005848333705216646,
+    -0.04854023829102516,
+    -0.013711207546293736,
+    -0.020562462508678436,
+    -0.05591616407036781,
+    0.046751271933317184,
+    -0.04421781003475189,
+    -0.055978357791900635,
+    0.006806702818721533,
+    0.05601750686764717,
+    -0.035889700055122375,
+    -0.05154755711555481,
+    0.05330951511859894,
+    -0.05600953847169876,
+    0.03255271539092064,
+    -0.022256718948483467,
+    0.03553920239210129,
+    0.055468857288360596,
+    0.02224654145538807,
+    -0.025144238024950027,
+    0.020326171070337296,
+    -0.03714314475655556,
+    0.054578352719545364,
+    0.05600908771157265,
+    0.028944389894604683,
+    -0.05586777254939079,
+    0.012876463122665882,
+    0.05110388249158859,
+    -0.03079497441649437,
+    -0.04823555797338486,
+    0.04607952758669853,
+    0.0417025126516819,
+    0.03479693830013275,
+    -0.038328852504491806,
+    -0.04664473980665207,
+    0.02832750976085663,
+    -0.05564296245574951,
+    0.03402790427207947,
+    0.04387074336409569,
+    -0.05351576581597328,
+    -0.0004308279894758016,
+    -0.04591904580593109,
+    0.047176141291856766,
+    0.017640698701143265,
+    0.003196743316948414,
+    0.029933065176010132,
+    0.03417336195707321,
+    -0.022980516776442528,
+    0.05256190523505211,
+    -0.05527542531490326,
+    -0.05482960492372513,
+    -0.018252898007631302,
+    0.05585449934005737,
+    0.0018079082947224379,
+    -0.04829559102654457,
+    0.05499860644340515,
+    -0.046849753707647324,
+    0.054989587515592575,
+    0.048712555319070816,
+    0.0398290753364563,
+    -0.03910626843571663,
+    -0.04539722576737404,
+    -0.05573388561606407,
+    -0.05601700767874718,
+    0.055378735065460205,
+    0.05601753666996956,
+    0.05568970739841461,
+    0.014429772272706032,
+    0.055300597101449966,
+    0.02418985404074192,
+    -0.05601565167307854,
+    0.05357043445110321,
+    0.0483897440135479,
+    -0.051508497446775436,
+    -0.05440706014633179,
+    -0.018107788637280464,
+    -0.05601748824119568,
+    0.018411874771118164,
+    0.0441608652472496,
+    0.0553903691470623,
+    0.05531058833003044,
+    -0.019078781828284264,
+    -0.05601052567362785,
+    -0.0558568611741066,
+    0.045439913868904114,
+    0.051746584475040436,
+    -0.041056469082832336,
+    -0.05540958046913147,
+    0.05116143450140953,
+    0.008223463781177998,
+    -0.055254604667425156,
+    0.05290360748767853,
+    -0.03455666825175285,
+    -0.05244927853345871,
+    -0.04581550136208534,
+    -0.04599064961075783,
+    -0.05601189658045769,
+    -0.02800544537603855,
+    0.010267688892781734,
+    -0.05578682944178581,
+    0.051131006330251694,
+    -0.05601697042584419,
+    -0.019685283303260803,
+    0.03837994858622551,
+    0.0560152605175972,
+    0.042150888592004776,
+    -0.053761109709739685,
+    -0.040474750101566315,
+    0.05119664594531059,
+    0.05601052567362785,
+    0.05274664983153343,
+    -0.029878415167331696,
+    0.04412407428026199,
+    0.05080198869109154,
+    0.05536225065588951,
+    0.04228173568844795,
+    0.05394696816802025,
+    0.05599549040198326,
+    -0.05598561838269234,
+    0.05285659059882164,
+    0.010049899108707905,
+    0.044802747666835785,
+    -0.03658945858478546,
+    -0.03391881659626961,
+    0.012681696563959122,
+    0.05601753666996956,
+    -0.05316495895385742,
+    0.05584986135363579,
+    0.055747345089912415,
+    -0.015395340509712696,
+    -0.05595652014017105,
+    0.051043570041656494,
+    -0.04439833015203476,
+    0.05573543906211853,
+    0.05003608390688896,
+    -0.05070292949676514,
+    0.037631500512361526,
+    0.02134549245238304,
+    -0.02342589944601059,
+    0.055116623640060425,
+    0.05574515461921692,
+    0.055946651846170425,
+    -0.005363867152482271,
+    -0.049226850271224976,
+    -0.029683034867048264,
+    -0.037602271884679794,
+    0.05601723492145538,
+    -0.05286956578493118,
+    -0.0558428093791008,
+    -0.0321127250790596,
+    0.014585076831281185,
+    0.03657170757651329,
+    0.05424897372722626,
+    -0.05536750331521034,
+    0.05258462578058243,
+    0.05566152185201645,
+    -0.041655782610177994,
+    0.05170855671167374,
+    0.05074256286025047,
+    0.055034175515174866,
+    0.05599891394376755,
+    0.02528555504977703,
+    0.05586843565106392,
+    -0.055253442376852036,
+    0.0243593268096447,
+    0.03878714516758919,
+    -0.0035430530551820993,
+    0.03786619380116463,
+    -0.0039013789501041174,
+    0.025945190340280533,
+    0.0485835038125515,
+    -0.05194508284330368,
+    -0.051248930394649506,
+    0.05318550392985344,
+    -0.03227422758936882,
+    -0.05260267108678818,
+    -0.03847670927643776,
+    0.04149555414915085,
+    0.053763628005981445,
+    -0.028772735968232155,
+    0.05270196124911308,
+    -0.05340375751256943,
+    0.05560358986258507,
+    -0.05548577755689621,
+    0.05113639310002327,
+    -0.04009855538606644,
+    -0.052986811846494675,
+    -0.006510125007480383,
+    0.030416853725910187,
+    -0.0500619076192379,
+    0.054628510028123856,
+    -0.05291992798447609,
+    0.049811214208602905,
+    0.0529121495783329,
+    0.05563953518867493,
+    0.039661895483732224,
+    -0.00968149770051241,
+    -0.05182872712612152,
+    -0.03694772720336914,
+    -0.05573198199272156,
+    0.05065404623746872,
+    0.056007325649261475,
+    0.05029008165001869,
+    0.024010013788938522,
+    0.054767705500125885,
+    0.05569732189178467,
+    0.05564085766673088,
+    0.01871919445693493,
+    0.006871837191283703,
+    -0.05307352542877197,
+    -0.006632327102124691,
+    -0.020235076546669006,
+    -0.05601753666996956,
+    0.055463239550590515,
+    -0.05360926687717438,
+    0.04648560285568237,
+    -0.04881524294614792,
+    0.05384596809744835,
+    0.05348087474703789,
+    0.05388057231903076,
+    -0.03370923921465874,
+    0.04971380531787872,
+    0.05480223149061203,
+    -0.05580256134271622,
+    -0.05601753666996956,
+    -0.040564361959695816,
+    0.041574470698833466,
+    0.0514361597597599,
+    -0.03446461632847786,
+    0.031777817755937576,
+    -0.056017521768808365,
+    0.05519060790538788,
+    0.018623609095811844,
+    0.04583150893449783,
+    0.02095671556890011,
+    -0.05086275562644005,
+    0.055431872606277466,
+    0.045810725539922714,
+    -0.03098200634121895,
+    -0.008971878327429295,
+    -0.05590970069169998,
+    0.027926836162805557,
+    0.03645602986216545,
+    0.05246219411492348,
+    -0.05585348606109619,
+    -0.046094074845314026,
+    0.04748115688562393,
+    -0.05572509765625,
+    -0.003355780616402626,
+    -0.05208706110715866,
+    -0.053004637360572815,
+    0.0014195421244949102,
+    -0.055324576795101166,
+    -0.05211728811264038,
+    0.05591614171862602,
+    -0.0278368778526783,
+    -0.04004618525505066,
+    -0.056008972227573395,
+    -0.017127636820077896,
+    -0.05032207444310188,
+    0.055918656289577484,
+    0.039089325815439224,
+    0.01223673950880766,
+    0.055924445390701294,
+    0.03410665690898895,
+    -0.023386405780911446,
+    0.047678153961896896,
+    0.03818413242697716,
+    0.049310103058815,
+    -0.047998957335948944,
+    -0.05189397186040878,
+    0.017838524654507637,
+    -0.022091912105679512,
+    -0.054058630019426346,
+    -0.05496394634246826,
+    0.014062072150409222,
+    0.055246490985155106,
+    -0.05507436767220497,
+    0.034337300807237625,
+    0.01231172401458025,
+    -0.05407467484474182,
+    -0.05536272004246712,
+    0.04626864939928055,
+    -0.0036012132186442614,
+    0.05180804431438446,
+    0.020412830635905266,
+    -0.039705462753772736,
+    0.012798209674656391,
+    0.05009128898382187,
+    0.04932566359639168,
+    -0.0486685149371624,
+    0.055634982883930206,
+    -0.04622385650873184,
+    -0.04696217179298401,
+    -0.05587579309940338,
+    0.05446523427963257,
+    -0.045036863535642624,
+    -0.05092631280422211,
+    -0.055669814348220825,
+    -0.036857038736343384,
+    -0.052015360444784164,
+    -0.034741323441267014,
+    -0.054803796112537384,
+    -0.007993333041667938,
+    -0.05199660360813141,
+    -0.04418293759226799,
+    -0.05587177351117134,
+    0.051377251744270325,
+    -0.04376498609781265,
+    -0.055936411023139954,
+    0.006074227392673492,
+    -0.048724204301834106,
+    0.05221456289291382,
+    -0.056016355752944946,
+    -0.04839301109313965,
+    -0.020610636100172997,
+    -0.02823396399617195,
+    -0.04098069295287132,
+    -0.018839353695511818,
+    0.022371135652065277,
+    0.05601299926638603,
+    0.02002202346920967,
+    -0.05118800699710846,
+    -0.05600518360733986,
+    -0.008082198910415173,
+    0.056010957807302475,
+    -0.007342211902141571,
+    0.03654516115784645,
+    0.055658817291259766,
+    0.05109984800219536,
+    0.05599801242351532,
+    0.05599825456738472,
+    -0.04849843308329582,
+    -0.015154551714658737,
+    0.003210180439054966,
+    -0.03299972414970398,
+    -0.05369288846850395,
+    0.032016076147556305,
+    0.0491088330745697,
+    -0.052619077265262604,
+    0.054935142397880554,
+    0.049277473241090775,
+    -0.05454535037279129,
+    0.051018327474594116,
+    -0.05079834908246994,
+    0.051288727670907974,
+    0.0062457178719341755,
+    0.055822357535362244,
+    0.012088518589735031,
+    0.011480485089123249,
+    -0.037772152572870255,
+    -0.055885083973407745,
+    0.055378563702106476,
+    0.05600066855549812,
+    -0.03756830841302872,
+    0.053978532552719116,
+    -0.03876231238245964,
+    0.051927972584962845,
+    -0.0480971597135067,
+    0.01758223958313465,
+    -0.054028093814849854,
+    0.05595465376973152,
+    0.004089579917490482,
+    0.05309334024786949,
+    -0.036470234394073486,
+    0.05435773357748985,
+    -0.054337020963430405,
+    -0.02027016505599022,
+    0.03420620784163475,
+    -0.05565355345606804,
+    -0.04435654729604721,
+    -0.05601750314235687,
+    -0.028451332822442055,
+    -0.05122730880975723,
+    -0.05485076457262039,
+    0.0014305065851658583,
+    -0.02716146968305111,
+    0.05601753666996956,
+    0.01747789978981018,
+    -0.007414683699607849
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs email automation; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for email automation in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Deep",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Deep"
+  }
+}

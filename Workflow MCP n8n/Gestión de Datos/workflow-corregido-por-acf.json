@@ -1,0 +1,404 @@
+{
+  "nodes": [
+    {
+      "id": "telegramWebhook",
+      "originalId": "telegramWebhook",
+      "name": "Webhook Telegram",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        -280,
+        100
+      ],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "webhook",
+        "responseMode": "onReceived"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "validateData",
+      "originalId": "validateData",
+      "name": "If - Validar Datos Cliente",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -420,
+        440
+      ],
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "{{ $json.text }}",
+              "operation": "isNotEmpty",
+              "value2": ""
+            }
+          ]
+        }
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "parseTelegramMessage",
+      "originalId": "parseTelegramMessage",
+      "name": "Code - Parsear Mensaje Telegram",
+      "type": "n8n-nodes-base.code",
+      "position": [
+        -140,
+        640
+      ],
+      "parameters": {
+        "mode": "runOnceForAllItems",
+        "jsCode": "for (const item of items) { item.json.chat_id = item.json.message.chat.id; item.json.text = item.json.message.text; } return items;"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "logInitialRequest",
+      "originalId": "logInitialRequest",
+      "name": "Google Sheets - Log Solicitud Inicial",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -420,
+        1040
+      ],
+      "parameters": {
+        "operation": "append",
+        "sheetId": "0",
+        "spreadsheetId": "YOUR_LOG_SHEET_ID",
+        "sheetName": "Solicitudes",
+        "data": "{{ JSON.stringify([{ 'Timestamp': new Date().toISOString(), 'Raw Data': JSON.stringify($json) }]) }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "logInvalidData",
+      "originalId": "logInvalidData",
+      "name": "Google Sheets - Log Error Validación",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        420,
+        440
+      ],
+      "parameters": {
+        "operation": "append",
+        "sheetId": "0",
+        "spreadsheetId": "YOUR_LOG_SHEET_ID",
+        "sheetName": "ErroresValidacion",
+        "data": "{{ JSON.stringify([{ 'Timestamp': new Date().toISOString(), 'Error': 'Datos de validación inválidos', 'Raw Data': JSON.stringify($json) }]) }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "persistClientData",
+      "originalId": "persistClientData",
+      "name": "Google Sheets - Guardar Datos Cliente",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        -140,
+        1040
+      ],
+      "parameters": {
+        "operation": "append",
+        "sheetId": "0",
+        "spreadsheetId": "YOUR_SPREADSHEET_ID",
+        "sheetName": "Clientes",
+        "data": "{{ JSON.stringify([{ 'Chat ID': $json.chat_id, 'Mensaje': $json.text }]) }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "logSuccess",
+      "originalId": "logSuccess",
+      "name": "Google Sheets - Log Éxito",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        140,
+        1040
+      ],
+      "parameters": {
+        "operation": "append",
+        "sheetId": "0",
+        "spreadsheetId": "YOUR_LOG_SHEET_ID",
+        "sheetName": "Exito",
+        "data": "{{ JSON.stringify([{ 'Timestamp': new Date().toISOString(), 'Mensaje': 'Cita agendada y cliente notificado', 'Chat ID': $json.chat_id }]) }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "catchBlockErrorLog",
+      "originalId": "catchBlockErrorLog",
+      "name": "Google Sheets - Log Error Interno",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [
+        420,
+        1040
+      ],
+      "parameters": {
+        "operation": "append",
+        "sheetId": "0",
+        "spreadsheetId": "YOUR_LOG_SHEET_ID",
+        "sheetName": "ErroresInternos",
+        "data": "{{ JSON.stringify([{ 'Timestamp': new Date().toISOString(), 'Error': 'Error interno en el flujo', 'Raw Data': JSON.stringify($json) }]) }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "scheduleGoogleCalendar",
+      "originalId": "scheduleGoogleCalendar",
+      "name": "Google Calendar - Agendar Cita",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        140,
+        640
+      ],
+      "parameters": {
+        "operation": "create",
+        "calendarId": "primary",
+        "title": "Cita con Cliente - {{ $json.text.substring(0, 30) }}",
+        "startDateTime": "{{ new Date(Date.now() + 3600000).toISOString() }}",
+        "endDateTime": "{{ new Date(Date.now() + 7200000).toISOString() }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "handleInvalidDataClient",
+      "originalId": "handleInvalidDataClient",
+      "name": "Telegram - Error Validación Cliente",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        -140,
+        440
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Lo sentimos, no pudimos procesar tu solicitud. Por favor, asegúrate de proporcionar todos los datos necesarios."
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "handleInvalidDataSlack",
+      "originalId": "handleInvalidDataSlack",
+      "name": "Slack - Alerta Error Validación",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        140,
+        440
+      ],
+      "parameters": {
+        "channel": "#alerts",
+        "text": "ALERTA: Datos de cliente inválidos recibidos. Chat ID: {{ $json.chat_id }}"
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "confirmClientTelegram",
+      "originalId": "confirmClientTelegram",
+      "name": "Telegram - Confirmar Cita Cliente",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        -280,
+        840
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "¡Tu cita ha sido agendada con éxito! Recibirás una confirmación en breve."
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "catchBlockErrorClient",
+      "originalId": "catchBlockErrorClient",
+      "name": "Telegram - Error Interno",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        0,
+        840
+      ],
+      "parameters": {
+        "chatId": "{{ $json.chat_id }}",
+        "text": "Lo sentimos, ha ocurrido un error interno. Nuestro equipo ha sido notificado."
+      },
+      "typeVersion": 1
+    },
+    {
+      "id": "catchBlockErrorSlack",
+      "originalId": "catchBlockErrorSlack",
+      "name": "Slack - Alerta Error Interno",
+      "type": "n8n-nodes-base.slack",
+      "position": [
+        280,
+        840
+      ],
+      "parameters": {
+        "channel": "#alerts",
+        "text": "ERROR: Ha ocurrido un error interno en el workflow de Telegram. Por favor revisar. Chat ID: {{ $json.chat_id }}"
+      },
+      "typeVersion": 1
+    }
+  ],
+  "connections": {
+    "Webhook Telegram": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log Solicitud Inicial",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - Log Error Interno": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Error Validación Cliente",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack - Alerta Error Validación",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram - Confirmar Cita Cliente",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram - Error Interno",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack - Alerta Error Interno",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - Log Solicitud Inicial": {
+      "main": [
+        [
+          {
+            "node": "Code - Parsear Mensaje Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code - Parsear Mensaje Telegram": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log Error Validación",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If - Validar Datos Cliente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - Log Error Validación": {
+      "main": [
+        []
+      ]
+    },
+    "Google Sheets - Guardar Datos Cliente": {
+      "main": [
+        [
+          {
+            "node": "Google Calendar - Agendar Cita",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Calendar - Agendar Cita": {
+      "main": [
+        [
+          {
+            "node": "Telegram - Confirmar Cita Cliente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets - Log Éxito": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log Error Interno",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If - Validar Datos Cliente": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Guardar Datos Cliente",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Telegram - Error Validación Cliente",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Slack - Alerta Error Validación",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram - Confirmar Cita Cliente": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log Éxito",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram - Error Validación Cliente": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log Error Validación",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Slack - Alerta Error Validación": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets - Log Error Validación",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {}
+}

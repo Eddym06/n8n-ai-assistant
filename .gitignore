@@ -1,0 +1,98 @@
+# Dependencias
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Archivos de construcción y distribución
+dist/
+build/
+coverage/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*.bak
+*.swp
+*.orig
+
+# Logs
+*.log
+logs/
+scraper_log.txt
+*.log.*
+
+# Archivos de entorno y configuración sensible
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# Archivos comprimidos
+*.zip
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# IDEs y editores
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+.vscode/settings.json
+.project
+.classpath
+
+# Archivos temporales de desarrollo
+*.local
+.cache/
+.tmp/
+temp/
+tmp/
+
+# Archivos de backups y duplicados
+backup_*/
+*backup*/
+*_backup*/
+targeted_backup_*/
+
+# Archivos de workflows generados dinámicamente
+workflow-*-TIMESTAMP*.json
+workflow-*-metadata*.json
+generated-workflows/
+output-workflows/
+
+# Archivos de scraping y automatización
+*scraper*.log
+*scraper*.txt
+auto-scraper-*.js
+n8n-workflow-scraper-*.js
+scraper-automatico-*.js
+
+# Archivos de testing masivo
+test-*.log
+testing-output/
+test-results/
+
+# Archivos grandes de datos
+*.json.bak
+large-datasets/
+vectorized-data/
+
+# Certificados y claves
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+
+# Archivos específicos del proyecto que no deben versionarse
+workflow_corrections_report.json
+workflow_verification_report.json
+*-SOLUCIONADO.md

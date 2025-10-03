@@ -1,0 +1,1151 @@
+{
+  "workflow_info": {
+    "id": "HnqGW0eq5asKfZxf",
+    "name": "🔍🛠️Perplexity Researcher to HTML Web Page",
+    "display_name": "🔍🛠️Perplexity Researcher to HTML Web Page",
+    "file_name": "Perplexity_Research_to_HTML_AI-Powered_Content_Creation.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\Perplexity_Research_to_HTML_AI-Powered_Content_Creation.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "b2dbb2e0e21d"
+  },
+  "structure": {
+    "total_nodes": 47,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 8
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.telegram",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 6
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 9
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 5
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Execute Workflow Trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          420,
+          2180
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          320,
+          1360
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1240,
+          1360
+        ]
+      },
+      {
+        "name": "gpt-4o-mini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1380,
+          1660
+        ]
+      },
+      {
+        "name": "gpt-4o-mini1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1560,
+          1040
+        ]
+      },
+      {
+        "name": "Structured Output Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          640,
+          1660
+        ]
+      },
+      {
+        "name": "gpt-4o-mini2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          420,
+          1660
+        ]
+      },
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          160,
+          860
+        ]
+      },
+      {
+        "name": "Respond to Webhook",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          2820,
+          1480
+        ]
+      },
+      {
+        "name": "Telegram",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          2320,
+          880
+        ]
+      },
+      {
+        "name": "gpt-4o-mini5",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2480,
+          1660
+        ]
+      },
+      {
+        "name": "Basic LLM Chain",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2340,
+          1480
+        ]
+      },
+      {
+        "name": "Do Nothing1",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          560,
+          1080
+        ]
+      },
+      {
+        "name": "gpt-4o-mini3",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1020,
+          1040
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2200,
+          1360
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          320,
+          760
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          820,
+          760
+        ]
+      },
+      {
+        "name": "If2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2120,
+          1140
+        ]
+      },
+      {
+        "name": "Prompts",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1300,
+          2080
+        ]
+      },
+      {
+        "name": "Telegram2",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          860,
+          2180
+        ]
+      },
+      {
+        "name": "If",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1080,
+          2180
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1300,
+          2300
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          320,
+          1940
+        ]
+      },
+      {
+        "name": "Perplexity Topic Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1580,
+          860
+        ]
+      },
+      {
+        "name": "Call Perplexity Researcher",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          1780,
+          1040
+        ]
+      },
+      {
+        "name": "Do Nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2320,
+          1140
+        ]
+      },
+      {
+        "name": "Do Nothing2",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1020,
+          1700
+        ]
+      },
+      {
+        "name": "Do Nothing3",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2000,
+          1700
+        ]
+      },
+      {
+        "name": "Do Nothing4",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1260,
+          1080
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1460,
+          760
+        ]
+      },
+      {
+        "name": "Get Topic",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          380,
+          860
+        ]
+      },
+      {
+        "name": "If Topic Exists",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          560,
+          860
+        ]
+      },
+      {
+        "name": "Improve Users Topic",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          880,
+          860
+        ]
+      },
+      {
+        "name": "If Topic",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1260,
+          860
+        ]
+      },
+      {
+        "name": "Chat Id",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2120,
+          880
+        ]
+      },
+      {
+        "name": "Article",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          780,
+          1480
+        ]
+      },
+      {
+        "name": "Extract JSON",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          440,
+          1480
+        ]
+      },
+      {
+        "name": "If Article",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1020,
+          1480
+        ]
+      },
+      {
+        "name": "Create HTML Article",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          1360,
+          1480
+        ]
+      },
+      {
+        "name": "If HTML",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1780,
+          1480
+        ]
+      },
+      {
+        "name": "Contents",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2000,
+          1480
+        ]
+      },
+      {
+        "name": "Chat Id1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          660,
+          2180
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          600,
+          2080
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2060,
+          760
+        ]
+      },
+      {
+        "name": "Success Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1700,
+          2080
+        ]
+      },
+      {
+        "name": "Error Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1700,
+          2300
+        ]
+      },
+      {
+        "name": "Perplexity",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1500,
+          2080
+        ]
+      }
+    ],
+    "connections_count": 29,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 46
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 1220,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "if html",
+      "gpt-4o-mini3",
+      "create html article",
+      "gpt-4o-mini5",
+      "basic llm chain",
+      "sticky note5",
+      "chat id1",
+      "sticky note7",
+      "telegram2",
+      "structured output parser1",
+      "success response",
+      "improve users topic",
+      "sticky note3",
+      "ai-ml",
+      "stickyNote",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "respondToWebhook",
+      "gpt-4o-mini2",
+      "call perplexity researcher",
+      "do nothing",
+      "webhook",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "do nothing3",
+      "do nothing4",
+      "if topic exists",
+      "article",
+      "@n8n/n8n nodes langchain.toolWorkflow",
+      "if2",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "perplexity topic agent",
+      "error response",
+      "if article",
+      "httpRequest",
+      "webhook integration",
+      "sticky note2",
+      "if topic",
+      "execute workflow trigger",
+      "sticky note4",
+      "set",
+      "get topic",
+      "extract json",
+      "prompts",
+      "do nothing1",
+      "sticky note",
+      "@n8n/n8n nodes langchain.agent",
+      "no operation, do nothing",
+      "do nothing2",
+      "respond to webhook",
+      "gpt-4o-mini1",
+      "sticky note8",
+      "telegram",
+      "perplexity",
+      "chat id",
+      "complex",
+      "contents",
+      "noOp",
+      "sticky note1",
+      "gpt-4o-mini",
+      "executeWorkflowTrigger"
+    ],
+    "description": "'🔍🛠️Perplexity Researcher to HTML Web Page' es un workflow diseñado para webhook integration con 47 nodos activado por Execute Workflow Trigger que ejecuta: Sticky Note, Sticky Note1, gpt-4o-mini en la categoría de ai-ml.",
+    "semantic_content": "Workflow: 🔍🛠️Perplexity Researcher to HTML Web Page. Nodos: Sticky Note (stickyNote), Sticky Note1 (stickyNote), gpt-4o-mini (@n8n/n8n-nodes-langchain.lmChatOpenAi), gpt-4o-mini1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Structured Output Parser1 (@n8n/n8n-nodes-langchain.outputParserStructured), gpt-4o-mini2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Webhook (webhook), Respond to Webhook (respondToWebhook), Telegram (telegram), gpt-4o-mini5 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Basic LLM Chain (@n8n/n8n-nodes-langchain.chainLlm), Do Nothing1 (noOp), gpt-4o-mini3 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Sticky Note4 (stickyNote), Sticky Note2 (stickyNote), Sticky Note5 (stickyNote), If2 (if), Prompts (set), Execute Workflow Trigger (executeWorkflowTrigger), Telegram2 (telegram), If (if), No Operation, do nothing (noOp), Sticky Note6 (stickyNote), Perplexity Topic Agent (@n8n/n8n-nodes-langchain.agent), Call Perplexity Researcher (@n8n/n8n-nodes-langchain.toolWorkflow), Do Nothing (noOp), Do Nothing2 (noOp), Do Nothing3 (noOp), Do Nothing4 (noOp), Sticky Note7 (stickyNote), Get Topic (set), If Topic Exists (if), Improve Users Topic (@n8n/n8n-nodes-langchain.chainLlm), If Topic (if), Chat Id (set), Article (set), Extract JSON (@n8n/n8n-nodes-langchain.agent), If Article (if), Create HTML Article (@n8n/n8n-nodes-langchain.agent), If HTML (if), Contents (set), Chat Id1 (set), Sticky Note3 (stickyNote), Sticky Note8 (stickyNote), Success Response (set), Error Response (set), Perplexity (httpRequest). Propósito: webhook integration. Categoría: ai-ml. Disparadores: Execute Workflow Trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "gpt-4o-mini",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "Execute Workflow Trigger",
+      "Sticky Note1",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.respondtowebhook",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.httprequest",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "@n8n/n8n-nodes-langchain.toolworkflow",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.if",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook"
+    ],
+    "search_terms": [
+      "html",
+      "perplexity",
+      "research",
+      "creation",
+      "powered_content_creation",
+      "ai-powered",
+      "perplexity_research_to_html_ai",
+      "content"
+    ],
+    "alternative_names": [
+      "🔍🛠️Perplexity Researcher to HTML Web Page"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 77.04918032786885,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 85.40983606557377
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:26.502418"
+  },
+  "semantic_vector": [
+    -0.023966917768120766,
+    -0.01526741310954094,
+    0.034001629799604416,
+    -0.059202536940574646,
+    0.014147698879241943,
+    -0.03818758949637413,
+    0.05619972199201584,
+    -0.010116457007825375,
+    -0.023360086604952812,
+    0.061038993299007416,
+    0.00927895586937666,
+    -0.046359822154045105,
+    0.011374548077583313,
+    -0.03735943138599396,
+    -0.0394129604101181,
+    0.06145166605710983,
+    0.05885925143957138,
+    0.04072127491235733,
+    -0.058813344687223434,
+    0.023062029853463173,
+    0.05226150155067444,
+    0.03335273638367653,
+    -0.0111452741548419,
+    -0.0033885682933032513,
+    -0.03335471823811531,
+    0.039031773805618286,
+    -0.05784148350358009,
+    0.04424550011754036,
+    -0.04298044368624687,
+    -0.0015764132840558887,
+    0.05616772174835205,
+    0.015682579949498177,
+    0.00698765367269516,
+    -0.04945993423461914,
+    0.032262466847896576,
+    0.01708066277205944,
+    0.05024031177163124,
+    -0.045763369649648666,
+    -0.021778451278805733,
+    -0.059558287262916565,
+    -0.01649504341185093,
+    0.03531314805150032,
+    0.043877288699150085,
+    0.02579256147146225,
+    0.061446186155080795,
+    0.05490722879767418,
+    0.03505712002515793,
+    0.008646149188280106,
+    -0.056353744119405746,
+    -0.045049142092466354,
+    -0.04677039757370949,
+    0.056173890829086304,
+    -0.06091197952628136,
+    -0.060861311852931976,
+    -0.05251419171690941,
+    -0.056245315819978714,
+    0.055815257132053375,
+    -0.029870204627513885,
+    -0.008779847994446754,
+    0.05115390568971634,
+    0.04711778834462166,
+    -0.015281951054930687,
+    -0.01168101467192173,
+    0.047065846621990204,
+    0.05322360247373581,
+    0.01780318096280098,
+    0.05941808596253395,
+    0.0013365705963224173,
+    0.060034167021512985,
+    -0.059462204575538635,
+    -0.06122474744915962,
+    -0.02225143276154995,
+    -0.031603388488292694,
+    -0.02066640742123127,
+    -0.05988754332065582,
+    -0.051003728061914444,
+    0.008191809989511967,
+    -0.05630720406770706,
+    0.027438560500741005,
+    0.0396755188703537,
+    -0.005819916725158691,
+    0.008912164717912674,
+    0.007166209165006876,
+    -0.058395206928253174,
+    0.04271311312913895,
+    0.03490244224667549,
+    0.012048919685184956,
+    -0.04570114612579346,
+    0.03719658777117729,
+    0.02319270744919777,
+    -0.031830303370952606,
+    0.022215696051716805,
+    -0.03630392625927925,
+    -0.04721551761031151,
+    0.04980695620179176,
+    0.03271845728158951,
+    0.043597880750894547,
+    0.03477564454078674,
+    -0.058911535888910294,
+    -0.06144674867391586,
+    0.046914998441934586,
+    -0.044718168675899506,
+    0.0512777715921402,
+    0.016438717022538185,
+    0.06022141873836517,
+    0.044887349009513855,
+    0.06125336512923241,
+    0.05940032750368118,
+    -0.02611682564020157,
+    -0.06109752133488655,
+    -0.048449669033288956,
+    -0.05811804160475731,
+    0.04019413888454437,
+    -0.0012620382476598024,
+    0.05723482742905617,
+    0.02223251201212406,
+    -0.05901504307985306,
+    -0.006314389407634735,
+    0.015739986672997475,
+    0.043771207332611084,
+    -0.02694639191031456,
+    0.05912642180919647,
+    0.009828011505305767,
+    -0.008480771444737911,
+    0.06118771433830261,
+    -0.016382165253162384,
+    -0.020609350875020027,
+    0.023911884054541588,
+    0.056906793266534805,
+    -0.012732632458209991,
+    -0.05448286607861519,
+    0.04643109813332558,
+    0.05849674716591835,
+    -0.04100511223077774,
+    0.045899152755737305,
+    -0.055800557136535645,
+    0.030734816566109657,
+    0.012638334184885025,
+    -0.05959249287843704,
+    -0.05997258424758911,
+    -0.020843997597694397,
+    0.061451513320207596,
+    0.01865730993449688,
+    0.0018839817494153976,
+    -0.002305537462234497,
+    -0.061448875814676285,
+    0.055503614246845245,
+    0.041420113295316696,
+    0.04997474327683449,
+    -0.012172486633062363,
+    0.006897210143506527,
+    -0.06057825684547424,
+    0.020755084231495857,
+    0.0404200479388237,
+    0.01634378172457218,
+    0.059223588556051254,
+    0.00813304167240858,
+    -0.05446977540850639,
+    0.006822072435170412,
+    -0.017670340836048126,
+    -0.03945770859718323,
+    -0.05707894265651703,
+    0.04643460735678673,
+    -0.037219468504190445,
+    0.05047263205051422,
+    0.03273892030119896,
+    -0.06059766933321953,
+    -0.03451428562402725,
+    -0.05742240697145462,
+    -0.010029767639935017,
+    0.05932137370109558,
+    -0.06011510640382767,
+    -0.05484680086374283,
+    0.03706873208284378,
+    -0.06061851605772972,
+    0.06106312945485115,
+    0.016988424584269524,
+    -0.0349038764834404,
+    0.004875473212450743,
+    -0.05565274506807327,
+    -0.05000338703393936,
+    -0.04600831866264343,
+    -0.06117579713463783,
+    0.0336262509226799,
+    0.059347737580537796,
+    0.053794678300619125,
+    -0.05891585350036621,
+    0.06120653450489044,
+    0.04277558624744415,
+    0.05689815804362297,
+    0.03530209884047508,
+    0.05215255171060562,
+    0.02034674771130085,
+    -0.061160773038864136,
+    -0.05895676463842392,
+    -0.059270936995744705,
+    0.04126838967204094,
+    0.061451684683561325,
+    0.02665291167795658,
+    -0.027976175770163536,
+    0.027317553758621216,
+    0.056133195757865906,
+    -0.05685427784919739,
+    0.05564599484205246,
+    0.010801914148032665,
+    -0.0012204237282276154,
+    -0.042287055402994156,
+    0.03763635456562042,
+    -0.06139712035655975,
+    -0.0035948704462498426,
+    0.04961041361093521,
+    0.05420747026801109,
+    0.05910445377230644,
+    -0.05111920088529587,
+    -0.06142313405871391,
+    -0.05404235050082207,
+    0.03095139004290104,
+    -0.005332812666893005,
+    0.02331819012761116,
+    -0.018839148804545403,
+    -0.01365790143609047,
+    0.06046418100595474,
+    0.025533515959978104,
+    -0.058352142572402954,
+    -0.04778633266687393,
+    -0.0571475476026535,
+    -0.05778948962688446,
+    -0.04025468975305557,
+    -0.056793212890625,
+    -0.06110053509473801,
+    0.039302267134189606,
+    -0.02607358619570732,
+    0.045764464884996414,
+    -0.061443496495485306,
+    0.012453431263566017,
+    0.05747781693935394,
+    0.061441726982593536,
+    0.053184568881988525,
+    -0.06003359705209732,
+    -0.03907221183180809,
+    0.03246428444981575,
+    0.055967267602682114,
+    -0.0008448223816230893,
+    0.058714985847473145,
+    0.04424280300736427,
+    0.06077183783054352,
+    0.04236144572496414,
+    0.024610303342342377,
+    -0.0316988080739975,
+    0.061417531222105026,
+    -0.06117439270019531,
+    0.004289256874471903,
+    -0.0458948090672493,
+    -0.018050020560622215,
+    0.05613304674625397,
+    -0.05918428674340248,
+    -0.030025538057088852,
+    0.061451684683561325,
+    -0.04289843142032623,
+    -0.01769172213971615,
+    0.019811952486634254,
+    -0.014864877797663212,
+    -0.039768751710653305,
+    0.03872854635119438,
+    0.0053739286959171295,
+    0.020599715411663055,
+    -0.030404141172766685,
+    0.04589783400297165,
+    -0.0562630370259285,
+    0.05939070135354996,
+    -0.06090397387742996,
+    0.04173613712191582,
+    -0.05202532932162285,
+    0.05388275906443596,
+    0.0613018162548542,
+    -0.04201006144285202,
+    -0.05939372256398201,
+    0.04680837690830231,
+    0.06138317659497261,
+    0.04193887859582901,
+    -0.03977076709270477,
+    0.017788996919989586,
+    0.06117786839604378,
+    0.018432894721627235,
+    -0.05366068705916405,
+    -0.06129536032676697,
+    0.03105110675096512,
+    0.057871609926223755,
+    -0.03271196037530899,
+    0.06125932186841965,
+    -0.03719346225261688,
+    0.05553361028432846,
+    0.06079039350152016,
+    -0.016997160390019417,
+    0.05085543915629387,
+    -0.0586736723780632,
+    0.0561654269695282,
+    -0.056673333048820496,
+    0.037156105041503906,
+    0.024738064035773277,
+    -0.02084670029580593,
+    -0.0007017708849161863,
+    0.05393325164914131,
+    -0.03384959697723389,
+    0.03622544929385185,
+    -0.04403063654899597,
+    0.05581042170524597,
+    0.01110927015542984,
+    -0.015606199391186237,
+    -0.029728896915912628,
+    0.06047502160072327,
+    0.04374175891280174,
+    0.051584526896476746,
+    -0.039144258946180344,
+    0.03583795577287674,
+    -0.05626152828335762,
+    0.06015009805560112,
+    -0.02133304439485073,
+    -0.02773287519812584,
+    0.03775924816727638,
+    0.014688861556351185,
+    -0.06042883172631264,
+    0.060224149376153946,
+    0.02888910286128521,
+    0.05706647410988808,
+    0.032386306673288345,
+    0.05896034091711044,
+    -0.010191887617111206,
+    0.058522507548332214,
+    -0.048766929656267166,
+    0.04912874847650528,
+    -0.05878273770213127,
+    -0.018763478845357895,
+    0.061431121081113815,
+    -0.015615376643836498,
+    0.004609257914125919,
+    0.06090928614139557,
+    0.06000608950853348,
+    0.054535865783691406,
+    -0.036180563271045685,
+    0.027057817205786705,
+    -0.05538754537701607,
+    -0.03668997436761856,
+    -0.02838183380663395,
+    -0.061451517045497894,
+    0.0005661784671247005,
+    -0.049843233078718185,
+    -0.03753707557916641,
+    -0.014044289477169514,
+    -0.0010540666989982128,
+    0.03832585737109184,
+    0.05447087064385414,
+    0.016350315883755684,
+    0.03741051256656647,
+    0.04369749873876572,
+    -0.05806218460202217,
+    -0.06144416704773903,
+    0.05100033059716225,
+    0.020383480936288834,
+    0.05440840870141983,
+    0.05291276425123215,
+    -0.05451358109712601,
+    -0.061443496495485306,
+    0.04953387752175331,
+    -0.0524907186627388,
+    0.05743037536740303,
+    -0.035754889249801636,
+    -0.05903998762369156,
+    0.05032718554139137,
+    -0.047931570559740067,
+    0.03909486159682274,
+    -0.043440673500299454,
+    -0.035813603550195694,
+    0.05210090056061745,
+    0.0558645986020565,
+    0.03005003184080124,
+    -0.026566412299871445,
+    -0.059803880751132965,
+    0.052212994545698166,
+    -0.021040305495262146,
+    -0.028649350628256798,
+    0.036847978830337524,
+    -0.0020625239703804255,
+    0.03910567983984947,
+    0.03747290000319481,
+    -0.0467194989323616,
+    0.05631067603826523,
+    0.015909191220998764,
+    -0.04988270252943039,
+    -0.06071603670716286,
+    -0.040854595601558685,
+    -0.05827706679701805,
+    0.06140366196632385,
+    0.05990220978856087,
+    -0.024075189605355263,
+    0.047995321452617645,
+    -0.01726730912923813,
+    0.04873475432395935,
+    0.027143223211169243,
+    0.0451890267431736,
+    0.022356178611516953,
+    0.05484902113676071,
+    -0.05753162503242493,
+    0.05091860517859459,
+    0.035049520432949066,
+    -0.0430183932185173,
+    -0.06097990646958351,
+    0.03955114632844925,
+    0.015322799794375896,
+    0.053489793092012405,
+    -0.05317895486950874,
+    0.060609862208366394,
+    -0.019212687388062477,
+    -0.03525259345769882,
+    -0.0399693101644516,
+    0.04457629844546318,
+    8.735792107472662e-06,
+    -0.031487345695495605,
+    0.002426439430564642,
+    -0.03779775649309158,
+    -0.05595425143837929,
+    -0.05331055074930191,
+    -0.061159808188676834,
+    0.0416165329515934,
+    0.037756673991680145,
+    0.04385494813323021,
+    -0.05934447795152664,
+    -0.008179615251719952,
+    0.036862652748823166,
+    0.03772521764039993,
+    -0.057846035808324814,
+    -0.01904117688536644,
+    -0.028323519974946976,
+    0.037940703332424164,
+    -0.05553312972187996,
+    -0.03351053595542908,
+    -0.05981658399105072,
+    -0.06135053560137749,
+    -0.059447258710861206,
+    0.04842180013656616,
+    -0.004048511385917664,
+    -0.054352257400751114,
+    0.051420994102954865,
+    0.044030528515577316,
+    -0.030794823542237282,
+    -0.05959419533610344,
+    -0.04389307275414467,
+    0.04814819246530533,
+    0.04141584411263466,
+    -0.05739385262131691,
+    -0.04476934298872948,
+    0.007618214003741741,
+    0.06138705834746361,
+    0.04673663154244423,
+    -0.018277600407600403,
+    -0.06142209470272064,
+    -0.006791075691580772,
+    0.06108803302049637,
+    -0.002069054637104273,
+    -0.04486646503210068,
+    0.002118122996762395,
+    0.05808628350496292,
+    0.03933214768767357,
+    0.056630153208971024,
+    -0.012142831459641457,
+    -0.05300091579556465,
+    0.05639741197228432,
+    -0.023238280788064003,
+    -0.05884575471282005,
+    0.06139836460351944,
+    0.0025861267931759357,
+    -0.03366965800523758,
+    0.03602467477321625,
+    0.008109038695693016,
+    -0.04439796879887581,
+    -0.04500790312886238,
+    0.05680455267429352,
+    0.04504457861185074,
+    -0.01268137339502573,
+    -0.004062130115926266,
+    -0.05403910577297211,
+    0.014037990011274815,
+    -0.025923484936356544,
+    -0.06122082844376564,
+    0.01621723547577858,
+    0.04630615934729576,
+    -0.046674758195877075,
+    -0.03827548399567604,
+    0.013902261853218079,
+    0.0507526695728302,
+    -0.04658224433660507,
+    0.05754867196083069,
+    -0.0289112851023674,
+    0.051637958735227585,
+    -0.05347873270511627,
+    0.06140913441777229,
+    0.04779810458421707,
+    0.05800086259841919,
+    -0.058756399899721146,
+    0.04756685718894005,
+    0.05612608790397644,
+    -0.05666520446538925,
+    0.04612750932574272,
+    -0.061444517225027084,
+    0.031034111976623535,
+    -0.013155900873243809,
+    -0.008349140174686909,
+    -0.043361615389585495,
+    -0.011927834711968899,
+    0.06142892315983772,
+    -0.05330521985888481,
+    -0.04593220725655556
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Execute Workflow Trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

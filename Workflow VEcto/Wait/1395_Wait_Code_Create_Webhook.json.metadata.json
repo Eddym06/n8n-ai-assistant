@@ -1,0 +1,1052 @@
+{
+  "workflow_info": {
+    "id": "MfKB97VVSuXMo3Fm",
+    "name": "Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API",
+    "file_name": "1395_Wait_Code_Create_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait\\1395_Wait_Code_Create_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false
+  },
+  "structure": {
+    "total_nodes": 51,
+    "node_types": [
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.switch"
+    ],
+    "triggers": [
+      {
+        "name": "When clicking Test workflow",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          20,
+          -80
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "output1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3980,
+          260
+        ]
+      },
+      {
+        "name": "output2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4680,
+          240
+        ]
+      },
+      {
+        "name": "Get Prompt",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          600,
+          -80
+        ]
+      },
+      {
+        "name": "Basic Params",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          220,
+          -80
+        ]
+      },
+      {
+        "name": "Get Task ID of the First Image",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          380,
+          140
+        ]
+      },
+      {
+        "name": "Midjourney Generator of the First Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          160,
+          140
+        ]
+      },
+      {
+        "name": "Wait for the First Image Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          220,
+          400
+        ]
+      },
+      {
+        "name": "Verify the first image generation status",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          600,
+          400
+        ]
+      },
+      {
+        "name": "Get the First Image URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1000,
+          200
+        ]
+      },
+      {
+        "name": "Midjourney Generator of the Second Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1220,
+          200
+        ]
+      },
+      {
+        "name": "Midjourney Generator of the Third Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1920,
+          220
+        ]
+      },
+      {
+        "name": "Get the First Image Generation Status",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          800,
+          200
+        ]
+      },
+      {
+        "name": "Get the Second Image Generation Status",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1480,
+          220
+        ]
+      },
+      {
+        "name": "Get the Third Image Generation Status",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          2380,
+          220
+        ]
+      },
+      {
+        "name": "Get the Second Image URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1720,
+          220
+        ]
+      },
+      {
+        "name": "Get the Third Image URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2560,
+          220
+        ]
+      },
+      {
+        "name": "Wait for the Second Image Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          900,
+          440
+        ]
+      },
+      {
+        "name": "Get Task of the First Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          400
+        ]
+      },
+      {
+        "name": "Get Task of the Second Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1100,
+          440
+        ]
+      },
+      {
+        "name": "Verify the second image generation status",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1300,
+          440
+        ]
+      },
+      {
+        "name": "Verify the third image generation status",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2100,
+          460
+        ]
+      },
+      {
+        "name": "Get Task of the Third Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1880,
+          460
+        ]
+      },
+      {
+        "name": "Wait for the Third Image Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1680,
+          460
+        ]
+      },
+      {
+        "name": "Get three Image URLs",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2740,
+          220
+        ]
+      },
+      {
+        "name": "Generate the First Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2960,
+          40
+        ]
+      },
+      {
+        "name": "Generate the Second Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3160,
+          40
+        ]
+      },
+      {
+        "name": "Generate the Third Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3360,
+          40
+        ]
+      },
+      {
+        "name": "Final Video Combination",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          5700,
+          220
+        ]
+      },
+      {
+        "name": "Get the Third Video URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5480,
+          220
+        ]
+      },
+      {
+        "name": "Get Video Task IDs",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3560,
+          40
+        ]
+      },
+      {
+        "name": "Get the First Video Task",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3380,
+          420
+        ]
+      },
+      {
+        "name": "Verify the First Video Generation",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3580,
+          420
+        ]
+      },
+      {
+        "name": "Verify the Second Video Generation",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          4320,
+          420
+        ]
+      },
+      {
+        "name": "Verify the Third Video Generation",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          5040,
+          420
+        ]
+      },
+      {
+        "name": "Wait for Video Generation for at Least 4 min",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3780,
+          40
+        ]
+      },
+      {
+        "name": "Wait for the First Video Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          3800,
+          440
+        ]
+      },
+      {
+        "name": "Wait for the Second Video Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          4480,
+          460
+        ]
+      },
+      {
+        "name": "Wait for the Third Video Generation",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          5260,
+          460
+        ]
+      },
+      {
+        "name": "Get the First Video Generation",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          3800,
+          260
+        ]
+      },
+      {
+        "name": "Get the Second Video Generation",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          4520,
+          240
+        ]
+      },
+      {
+        "name": "Get the Third Video Generation",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          5280,
+          220
+        ]
+      },
+      {
+        "name": "Get the Second Video Task",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4160,
+          420
+        ]
+      },
+      {
+        "name": "Get the Third Video Task",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4840,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          20,
+          -280
+        ]
+      },
+      {
+        "name": "GPT-4o-mini Generate Image Scenario Prompt",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          420,
+          -80
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          180,
+          660
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          880,
+          660
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1660,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2960,
+          -120
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          5640,
+          400
+        ]
+      }
+    ],
+    "connections_count": 44
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "ai and machine learning",
+    "complexity_score": 1420,
+    "quality_score": 0.5,
+    "keywords": [
+      "wait for the third video generation",
+      "output1",
+      "get the first image url",
+      "get task of the second image",
+      "sticky note5",
+      "integration",
+      "verify the third image generation status",
+      "get the first video generation",
+      "sticky note4",
+      "get three image urls",
+      "get the third video generation",
+      "wait for the second video generation",
+      "midjourney generator of the third image",
+      "generate the third video",
+      "wait for the second image generation",
+      "get task of the first image",
+      "wait for the first image generation",
+      "basic params",
+      "get the second video task",
+      "output2",
+      "get video task ids",
+      "sticky note2",
+      "when clicking test workflow",
+      "verify the third video generation",
+      "get prompt",
+      "httpRequest",
+      "get task of the third image",
+      "get the third video task",
+      "stickyNote",
+      "generate the first video",
+      "final video combination",
+      "wait",
+      "get the second image url",
+      "get the third image url",
+      "generate the second video",
+      "verify the second video generation",
+      "get task id of the first image",
+      "manualTrigger",
+      "code",
+      "midjourney generator of the second image",
+      "wait for the third image generation",
+      "get the first image generation status",
+      "verify the first video generation",
+      "verify the second image generation status",
+      "sticky note3",
+      "wait for video generation for at least 4 min",
+      "get the first video task",
+      "midjourney generator of the first image",
+      "sticky note1",
+      "get the second image generation status",
+      "set",
+      "ai and machine learning",
+      "wait for the first video generation",
+      "verify the first image generation status",
+      "get the second video generation",
+      "switch",
+      "sticky note",
+      "complex",
+      "get the third image generation status",
+      "get the third video url",
+      "gpt-4o-mini generate image scenario prompt"
+    ],
+    "description": "'Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API' es un workflow diseñado para ai and machine learning con 51 nodos activado por When clicking Test workflow que ejecuta: output1, output2, Get Prompt en la categoría de integration.",
+    "semantic_content": "Workflow: Create Animated Stories using GPT-4o-mini, Midjourney, Kling and Creatomate API. Nodos: output1 (set), output2 (set), Get Prompt (code), Basic Params (set), Get Task ID of the First Image (set), Midjourney Generator of the First Image (httpRequest), Wait for the First Image Generation (wait), Verify the first image generation status (if), Get the First Image URL (set), Midjourney Generator of the Second Image (httpRequest), Midjourney Generator of the Third Image (httpRequest), Get the First Image Generation Status (switch), Get the Second Image Generation Status (switch), Get the Third Image Generation Status (switch), Get the Second Image URL (set), Get the Third Image URL (set), Wait for the Second Image Generation (wait), Get Task of the First Image (httpRequest), Get Task of the Second Image (httpRequest), Verify the second image generation status (if), Verify the third image generation status (if), Get Task of the Third Image (httpRequest), Wait for the Third Image Generation (wait), Get three Image URLs (set), Generate the First Video (httpRequest), Generate the Second Video (httpRequest), Generate the Third Video (httpRequest), Final Video Combination (httpRequest), Get the Third Video URL (set), Get Video Task IDs (set), Get the First Video Task (httpRequest), Verify the First Video Generation (if), Verify the Second Video Generation (if), Verify the Third Video Generation (if), Wait for Video Generation for at Least 4 min (wait), Wait for the First Video Generation (wait), Wait for the Second Video Generation (wait), Wait for the Third Video Generation (wait), Get the First Video Generation (switch), Get the Second Video Generation (switch), Get the Third Video Generation (switch), Get the Second Video Task (httpRequest), Get the Third Video Task (httpRequest), Sticky Note (stickyNote), When clicking Test workflow (manualTrigger), GPT-4o-mini Generate Image Scenario Prompt (httpRequest), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote). Propósito: ai and machine learning. Categoría: integration. Disparadores: When clicking Test workflow"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": false,
+    "has_conditional_logic": true,
+    "has_error_handling": false
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:45.862361"
+  },
+  "semantic_vector": [
+    -0.014568375423550606,
+    -0.031251102685928345,
+    -0.022545982152223587,
+    -0.04145560786128044,
+    -0.05323648080229759,
+    0.05449413135647774,
+    0.02622404135763645,
+    0.05450320243835449,
+    -0.05442514270544052,
+    0.05433056131005287,
+    -0.04552103206515312,
+    0.04432021081447601,
+    0.04595566913485527,
+    -0.04846019297838211,
+    0.054294101893901825,
+    0.05450320243835449,
+    0.03807341307401657,
+    -0.05397672578692436,
+    -0.05410123988986015,
+    -0.05398358777165413,
+    -0.05406419560313225,
+    0.05307890102267265,
+    0.0543983057141304,
+    0.000830021221190691,
+    -0.05290919914841652,
+    0.053996216505765915,
+    -0.03263533487915993,
+    0.0543220080435276,
+    0.04226887598633766,
+    -0.05370360240340233,
+    0.053014714270830154,
+    -0.05445168912410736,
+    0.0541938878595829,
+    0.051930781453847885,
+    0.05450093746185303,
+    0.053812481462955475,
+    -0.03425249829888344,
+    -0.05317608639597893,
+    -0.04783637449145317,
+    0.007999507710337639,
+    0.05283438041806221,
+    0.023306237533688545,
+    -0.038133688271045685,
+    0.04781416803598404,
+    0.05450066924095154,
+    -0.04439214617013931,
+    0.02876177243888378,
+    0.05242712050676346,
+    -0.05219017714262009,
+    -0.05373063683509827,
+    -0.05431968346238136,
+    0.04511234164237976,
+    -0.05448804050683975,
+    -0.054200541228055954,
+    -0.05441662669181824,
+    -0.05449957773089409,
+    -0.050473250448703766,
+    -0.05053708702325821,
+    -0.049991752952337265,
+    0.05445641651749611,
+    -0.011054250411689281,
+    0.04714524745941162,
+    0.00211548013612628,
+    0.050508901476860046,
+    0.0019231002079322934,
+    0.008747760206460953,
+    0.05446755886077881,
+    0.03804829716682434,
+    0.0480734258890152,
+    0.054281216114759445,
+    -0.05450242757797241,
+    -0.054034531116485596,
+    -0.05407998710870743,
+    0.05426518991589546,
+    0.05113980174064636,
+    0.048158444464206696,
+    -0.0038134302012622356,
+    0.05377848073840141,
+    -0.052392784506082535,
+    -0.051830653101205826,
+    0.018420381471514702,
+    -0.022143037989735603,
+    -0.05372177064418793,
+    -0.010323970578610897,
+    0.05409760773181915,
+    -0.0012321567628532648,
+    -0.05444938689470291,
+    0.046454139053821564,
+    0.013131322339177132,
+    0.011101571843028069,
+    -0.05449424311518669,
+    -0.0452178455889225,
+    0.026212941855192184,
+    0.0534248948097229,
+    -0.025722136721014977,
+    -0.05320807546377182,
+    0.044815585017204285,
+    0.05336538329720497,
+    -0.05447458103299141,
+    -0.05445884168148041,
+    -0.0004220748960506171,
+    0.020837409421801567,
+    0.049416929483413696,
+    0.039092328399419785,
+    0.03842662647366524,
+    0.0496901199221611,
+    0.05445626750588417,
+    0.014251945540308952,
+    0.0336516797542572,
+    -0.054270945489406586,
+    -0.019246231764554977,
+    0.0481712631881237,
+    -0.03203234821557999,
+    0.05376744270324707,
+    0.03599339723587036,
+    0.04894542694091797,
+    0.05450105667114258,
+    -0.04832394793629646,
+    -0.04847698286175728,
+    0.05264629051089287,
+    0.05421155318617821,
+    0.05448223277926445,
+    0.053643401712179184,
+    0.05304901674389839,
+    -0.0034324871376156807,
+    0.04445194825530052,
+    0.022115344181656837,
+    -0.04458175227046013,
+    0.05429535359144211,
+    -0.04972841218113899,
+    -0.05411778762936592,
+    -0.054179154336452484,
+    0.013866014778614044,
+    -0.0016827206127345562,
+    0.043828900903463364,
+    -0.05053926259279251,
+    -0.05443253368139267,
+    0.0486421063542366,
+    -0.05449295789003372,
+    -0.05007800832390785,
+    -0.054391853511333466,
+    0.05450320243835449,
+    0.04257607087492943,
+    -0.014222866855561733,
+    0.020131085067987442,
+    -0.05450320243835449,
+    0.05218750610947609,
+    -0.0384133905172348,
+    0.054478101432323456,
+    0.008220918476581573,
+    -0.0375676192343235,
+    -0.04834190011024475,
+    0.03214937448501587,
+    -0.05391261726617813,
+    0.050010669976472855,
+    0.05450308695435524,
+    0.05378685146570206,
+    -0.05128229409456253,
+    0.034926533699035645,
+    -0.043143223971128464,
+    0.01234363205730915,
+    -0.0334012471139431,
+    0.04727266728878021,
+    0.05450223758816719,
+    0.05411655083298683,
+    0.04649321734905243,
+    -0.05390706658363342,
+    0.04905093461275101,
+    -0.05445581302046776,
+    -0.05423544719815254,
+    0.03841879591345787,
+    0.05431455746293068,
+    -0.0507119856774807,
+    -0.04490915685892105,
+    0.054052334278821945,
+    0.04854011908173561,
+    -0.051889725029468536,
+    0.0008330839918926358,
+    0.0503293052315712,
+    -0.038756974041461945,
+    -0.05296027660369873,
+    0.007208820898085833,
+    -0.02518758550286293,
+    -0.008106323890388012,
+    0.05399850383400917,
+    -0.03230588883161545,
+    -0.05450098216533661,
+    0.05435044318437576,
+    -0.03768196702003479,
+    0.05184328556060791,
+    -0.031141094863414764,
+    0.013682104647159576,
+    0.05125004053115845,
+    -0.05377618223428726,
+    -0.05163351446390152,
+    -0.05395648255944252,
+    -0.013564910739660263,
+    0.05450320243835449,
+    0.050311069935560226,
+    0.04982578009366989,
+    0.05314121022820473,
+    0.03815164044499397,
+    -0.05279746279120445,
+    -0.04504787176847458,
+    0.0541042760014534,
+    -0.05417683348059654,
+    -0.0025068975519388914,
+    -0.0377199724316597,
+    -0.05449455603957176,
+    0.054412614554166794,
+    -0.04256962612271309,
+    0.05439426004886627,
+    0.053709421306848526,
+    0.05365978553891182,
+    -0.05444956570863724,
+    -0.022599929943680763,
+    0.011779661290347576,
+    0.025691930204629898,
+    0.042146820574998856,
+    -0.019884178414940834,
+    -0.023537782952189445,
+    0.04212918132543564,
+    -0.004265353083610535,
+    0.050012968480587006,
+    -0.049107715487480164,
+    -0.05420171469449997,
+    -0.01360485702753067,
+    -0.02212599478662014,
+    -0.054207608103752136,
+    -0.053756073117256165,
+    0.0040834941901266575,
+    -0.054462820291519165,
+    -0.005776315461844206,
+    -0.05450320243835449,
+    -0.029805347323417664,
+    0.046901922672986984,
+    0.0545027069747448,
+    0.04590959846973419,
+    -0.02947304956614971,
+    -0.001610280480235815,
+    -0.05360277742147446,
+    0.05448679253458977,
+    -0.0063628386706113815,
+    0.00011591143993427977,
+    -0.05202648788690567,
+    0.05393330007791519,
+    0.05444730445742607,
+    0.027285991236567497,
+    0.03127574175596237,
+    0.05429477244615555,
+    -0.054307810962200165,
+    0.05048104003071785,
+    -0.049357689917087555,
+    -0.02658720500767231,
+    -0.029272058978676796,
+    0.050766993314027786,
+    0.02811063639819622,
+    0.05450320243835449,
+    -0.031433235853910446,
+    0.010983269661664963,
+    0.04252789169549942,
+    0.05359590798616409,
+    -0.028829824179410934,
+    0.05440298095345497,
+    -0.049214206635951996,
+    0.025507550686597824,
+    0.0021515467669814825,
+    -0.04246237128973007,
+    -0.044213179498910904,
+    0.05058165267109871,
+    0.004502639640122652,
+    0.00872004497796297,
+    0.004811354912817478,
+    0.05447201058268547,
+    -0.05123339593410492,
+    0.03651280701160431,
+    -0.03899445757269859,
+    -0.05435271933674812,
+    0.054503183811903,
+    -0.05444246158003807,
+    0.016693074256181717,
+    -0.01636108011007309,
+    0.04706594720482826,
+    -0.033136673271656036,
+    0.0531931072473526,
+    -0.05450320243835449,
+    -0.042758140712976456,
+    0.05449247360229492,
+    -0.05396817624568939,
+    0.05450156331062317,
+    0.04945826902985573,
+    -0.05356869101524353,
+    0.053967539221048355,
+    0.053929828107357025,
+    0.03291742876172066,
+    -0.05399351939558983,
+    -0.04412713274359703,
+    0.015637142583727837,
+    0.05269865691661835,
+    0.013643879443407059,
+    -0.053549330681562424,
+    0.015452745370566845,
+    0.05417253077030182,
+    0.003132000332698226,
+    0.05157073214650154,
+    0.05379720777273178,
+    -0.04666046425700188,
+    0.029581375420093536,
+    0.05428943783044815,
+    -0.05440300703048706,
+    0.04525578394532204,
+    0.006756679620593786,
+    0.05201641097664833,
+    -0.03063368983566761,
+    -0.012048850767314434,
+    0.03345157951116562,
+    0.05239017680287361,
+    0.05435451865196228,
+    0.052189700305461884,
+    0.025171495974063873,
+    0.01902073621749878,
+    0.043353766202926636,
+    0.046981941908597946,
+    -0.05411543324589729,
+    0.05439382418990135,
+    0.02047850377857685,
+    0.0542956218123436,
+    -0.007257624063640833,
+    0.04331401363015175,
+    0.04130960628390312,
+    -0.04397791251540184,
+    -0.02899297885596752,
+    0.010527022182941437,
+    0.05449977517127991,
+    0.05416122451424599,
+    -0.02783644199371338,
+    0.030989017337560654,
+    0.02856065146625042,
+    0.03065500408411026,
+    0.042228057980537415,
+    0.047925759106874466,
+    -0.05450034886598587,
+    -0.048874709755182266,
+    -0.002977638505399227,
+    -0.05450320243835449,
+    0.004775362554937601,
+    -0.04777592048048973,
+    -0.017373310402035713,
+    -0.05107792094349861,
+    0.05450320243835449,
+    0.05172904580831528,
+    0.021484415978193283,
+    0.03412086144089699,
+    0.04492064565420151,
+    0.05117791146039963,
+    0.0020867788698524237,
+    -0.05450320243835449,
+    -0.039135780185461044,
+    -0.01889229379594326,
+    0.015600968152284622,
+    0.051501259207725525,
+    -0.05191250145435333,
+    -0.05450320243835449,
+    0.05450274050235748,
+    -0.05322429910302162,
+    -0.04248065501451492,
+    0.05440134555101395,
+    -0.05401970073580742,
+    0.054471466690301895,
+    -0.04741515964269638,
+    0.00473795086145401,
+    -0.020457647740840912,
+    -0.05429323762655258,
+    -0.03859545662999153,
+    -0.05444489046931267,
+    0.052145324647426605,
+    -0.051687050610780716,
+    -0.04089220613241196,
+    0.0365508571267128,
+    0.052070166915655136,
+    0.05391456186771393,
+    -0.02716105990111828,
+    0.04183551296591759,
+    -0.045445192605257034,
+    -0.036630064249038696,
+    0.0006302933325059712,
+    0.032618340104818344,
+    0.025951681658625603,
+    -0.05061493068933487,
+    -0.05445008724927902,
+    -0.05414169654250145,
+    -0.03867925703525543,
+    0.054502036422491074,
+    0.042747851461172104,
+    0.048328135162591934,
+    0.030053218826651573,
+    -0.026543118059635162,
+    -0.051258329302072525,
+    0.052522167563438416,
+    0.053642638027668,
+    0.05329599231481552,
+    0.0022178066428750753,
+    0.04440882429480553,
+    0.053224630653858185,
+    0.05450320243835449,
+    -0.05028407648205757,
+    -0.05450287088751793,
+    -0.0057529425248503685,
+    0.05388258397579193,
+    0.040575798600912094,
+    -0.04755130410194397,
+    0.002197963884100318,
+    0.04930660501122475,
+    -0.04111254960298538,
+    0.052162058651447296,
+    -0.05449322611093521,
+    -0.022417671978473663,
+    -0.05449385941028595,
+    0.04089438542723656,
+    -0.017652666196227074,
+    -0.016547037288546562,
+    0.054026782512664795,
+    -0.05450131744146347,
+    0.05446694791316986,
+    -0.054477792233228683,
+    0.00619890633970499,
+    -0.052099838852882385,
+    0.05449817329645157,
+    -0.04249947890639305,
+    -0.01706760749220848,
+    -0.053834542632102966,
+    0.05443120747804642,
+    -0.0543811097741127,
+    0.0544755645096302,
+    -0.046448979526758194,
+    -0.048170410096645355,
+    -0.039208073168992996,
+    -0.054407235234975815,
+    -0.05449943244457245,
+    0.053844697773456573,
+    0.01393798366189003,
+    -0.04701313376426697,
+    0.03973941504955292,
+    -0.03072858601808548,
+    0.05090966820716858,
+    -0.05450320243835449,
+    -0.053184859454631805,
+    -0.02748596854507923,
+    -0.054383859038352966,
+    -0.038062963634729385,
+    -0.045469749718904495,
+    0.034458670765161514,
+    0.05450320243835449,
+    -0.030195973813533783,
+    -0.019919175654649734,
+    -0.05450180917978287,
+    -0.047100067138671875,
+    0.05444824695587158,
+    0.04200034588575363,
+    -0.04951690882444382,
+    -0.054474812000989914,
+    0.0485491119325161,
+    0.05376528576016426,
+    0.05450301617383957,
+    0.020944800227880478,
+    -0.05224130302667618,
+    0.05430186912417412,
+    -0.03702583536505699,
+    -0.04877856373786926,
+    -0.05398174002766609,
+    -0.030721517279744148,
+    -0.05384833365678787,
+    -0.0010585739510133862,
+    -0.05149802938103676,
+    -0.05438902974128723,
+    0.005193792749196291,
+    0.04050089046359062,
+    -0.005620514042675495,
+    -0.03835815563797951,
+    -0.05450001731514931,
+    0.01293755043298006,
+    0.0345793180167675,
+    -0.053403615951538086,
+    -0.052530042827129364,
+    -0.04365267604589462,
+    0.05449644476175308,
+    0.04915190115571022,
+    0.010705134831368923,
+    0.054330214858055115,
+    0.03712647408246994,
+    -0.029768163338303566,
+    -0.014301678165793419,
+    -0.02765314280986786,
+    0.02495613694190979,
+    -0.028682619333267212,
+    0.05085507407784462,
+    -0.04820617288351059,
+    0.017603857442736626,
+    -0.05218822509050369,
+    0.049214620143175125,
+    -0.03582986444234848,
+    0.04898729547858238,
+    -0.0015713428147137165,
+    -0.05450320243835449,
+    -0.041566792875528336,
+    -0.04543784633278847,
+    -0.04463448375463486,
+    -0.04030149057507515,
+    0.05332859233021736,
+    0.0545031763613224,
+    -0.05391998589038849,
+    -0.005012406036257744
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "uses:wait",
+    "uses:set",
+    "uses:code",
+    "uses:manualTrigger",
+    "purpose:ai-and-machine-learning",
+    "uses:if",
+    "uses:switch",
+    "category:integration",
+    "complexity:high",
+    "trigger:manualTrigger",
+    "uses:httpRequest"
+  ],
+  "category_info": {
+    "category_name": "Wait",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait"
+  }
+}

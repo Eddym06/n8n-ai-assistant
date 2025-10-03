@@ -1,0 +1,1059 @@
+{
+  "workflow_info": {
+    "id": "",
+    "name": "Sin nombre",
+    "display_name": "Venafi Cloud Slack Cert Bot",
+    "file_name": "Venafi_Cloud_Slack_Cert_Bot.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows\\Venafi_Cloud_Slack_Cert_Bot.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "112a98f448e2"
+  },
+  "structure": {
+    "total_nodes": 38,
+    "node_types": [
+      "n8n-nodes-base.executeWorkflow",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.venafiTlsProtectCloud",
+      "n8n-nodes-base.switch",
+      "@n8n/n8n-nodes-langchain.openAi",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.respondToWebhook",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.webhook"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.venafiTlsProtectCloud",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.respondToWebhook",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.noOp",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 12
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      }
+    ],
+    "triggers": [],
+    "actions": [
+      {
+        "name": "Venafi TLS Protect Cloud",
+        "type": "n8n-nodes-base.venafiTlsProtectCloud",
+        "position": [
+          2860,
+          1700
+        ]
+      },
+      {
+        "name": "Parse Webhook",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          440,
+          1100
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          108.34675483142371,
+          741.4892041682327
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          580,
+          420
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1153.6255461332685,
+          516.1718360212528
+        ]
+      },
+      {
+        "name": "Close Modal Popup",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          960,
+          1200
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -580,
+          740
+        ]
+      },
+      {
+        "name": "Respond to Slack Webhook - Vulnerability",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          960,
+          1000
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1160,
+          860
+        ]
+      },
+      {
+        "name": "Venafi Request Certificate",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1240,
+          1000
+        ]
+      },
+      {
+        "name": "Extract Fields",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1200,
+          1460
+        ]
+      },
+      {
+        "name": "Get Slack User ID",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1200,
+          2020
+        ]
+      },
+      {
+        "name": "Translate Slack User ID to Email",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1520,
+          2020
+        ]
+      },
+      {
+        "name": "VirusTotal HTTP Request",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1440,
+          1460
+        ]
+      },
+      {
+        "name": "Summarize output to save on tokens",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1760,
+          1460
+        ]
+      },
+      {
+        "name": "Auto Issue Certificate Based on 0 Malicious Reports",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2300,
+          1840
+        ]
+      },
+      {
+        "name": "Auto Issue Certificate",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2560,
+          1700
+        ]
+      },
+      {
+        "name": "Generate Report For Manual Approval",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2540,
+          2220
+        ]
+      },
+      {
+        "name": "Get Slack Team ID",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1220,
+          2220
+        ]
+      },
+      {
+        "name": "Execute Workflow",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          1520,
+          2220
+        ]
+      },
+      {
+        "name": "Merge User and Team Data",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1820,
+          2140
+        ]
+      },
+      {
+        "name": "OpenAI",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          2720,
+          2220
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1160,
+          1680
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1160,
+          1180
+        ]
+      },
+      {
+        "name": "Merge Requestor and VT Data",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2100,
+          1840
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2480,
+          1420
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3040,
+          1309.0359710471785
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2000,
+          1421.1618229241317
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2480,
+          1920
+        ]
+      },
+      {
+        "name": "Send Auto Generated Confirmation",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          3160,
+          1700
+        ]
+      },
+      {
+        "name": "Send Message Request for Manual Approval",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          3160,
+          1940
+        ]
+      },
+      {
+        "name": "Route Message",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          620,
+          1100
+        ]
+      },
+      {
+        "name": "Venafi TLS Protect Cloud1",
+        "type": "n8n-nodes-base.venafiTlsProtectCloud",
+        "position": [
+          1500,
+          2700
+        ]
+      },
+      {
+        "name": "Send Auto Generated Confirmation1",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1800,
+          2700
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1165.4582041476783,
+          2400
+        ]
+      },
+      {
+        "name": "Manual Issue Certificate",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1240,
+          2700
+        ]
+      },
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          200,
+          1100
+        ]
+      },
+      {
+        "name": "Respond to webhook success",
+        "type": "n8n-nodes-base.respondToWebhook",
+        "position": [
+          760,
+          1280
+        ]
+      }
+    ],
+    "connections_count": 22,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 0,
+      "action_count": 38
+    }
+  },
+  "semantic_info": {
+    "category": "integration",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "Team communication"
+    ],
+    "complexity_score": 860,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "respond to webhook success",
+      "auto issue certificate based on 0 malicious reports",
+      "executeWorkflow",
+      "venafi tls protect cloud",
+      "respond to slack webhook - vulnerability",
+      "send auto generated confirmation1",
+      "sticky note12",
+      "route message",
+      "get slack team id",
+      "auto issue certificate",
+      "sticky note16",
+      "sticky note11",
+      "switch",
+      "venafiTlsProtectCloud",
+      "integration",
+      "get slack user id",
+      "sticky note3",
+      "send message request for manual approval",
+      "stickyNote",
+      "translate slack user id to email",
+      "respondToWebhook",
+      "manual issue certificate",
+      "webhook",
+      "sticky note6",
+      "merge user and team data",
+      "openai",
+      "send auto generated confirmation",
+      "slack",
+      "webhook integration",
+      "httpRequest",
+      "virustotal http request",
+      "sticky note15",
+      "sticky note17",
+      "sticky note4",
+      "set",
+      "merge",
+      "close modal popup",
+      "extract fields",
+      "merge requestor and vt data",
+      "sticky note",
+      "@n8n/n8n nodes langchain.openAi",
+      "execute workflow",
+      "sticky note8",
+      "complex",
+      "summarize output to save on tokens",
+      "venafi tls protect cloud1",
+      "parse webhook",
+      "noOp",
+      "sticky note2",
+      "generate report for manual approval",
+      "sticky note1",
+      "venafi request certificate"
+    ],
+    "description": "Este workflow diseñado para webhook integration con 38 nodos que ejecuta: Venafi TLS Protect Cloud, Parse Webhook, Sticky Note en la categoría de integration.",
+    "semantic_content": "Nodos: Venafi TLS Protect Cloud (venafiTlsProtectCloud), Parse Webhook (set), Sticky Note (stickyNote), Sticky Note15 (stickyNote), Sticky Note11 (stickyNote), Close Modal Popup (respondToWebhook), Sticky Note8 (stickyNote), Respond to Slack Webhook - Vulnerability (respondToWebhook), Sticky Note2 (stickyNote), Venafi Request Certificate (httpRequest), Extract Fields (set), Get Slack User ID (set), Translate Slack User ID to Email (executeWorkflow), VirusTotal HTTP Request (httpRequest), Summarize output to save on tokens (set), Auto Issue Certificate Based on 0 Malicious Reports (if), Auto Issue Certificate (noOp), Generate Report For Manual Approval (noOp), Get Slack Team ID (set), Execute Workflow (executeWorkflow), Merge User and Team Data (merge), OpenAI (@n8n/n8n-nodes-langchain.openAi), Sticky Note16 (stickyNote), Sticky Note1 (stickyNote), Merge Requestor and VT Data (merge), Sticky Note3 (stickyNote), Sticky Note12 (stickyNote), Sticky Note17 (stickyNote), Sticky Note6 (stickyNote), Send Auto Generated Confirmation (slack), Send Message Request for Manual Approval (slack), Route Message (switch), Venafi TLS Protect Cloud1 (venafiTlsProtectCloud), Send Auto Generated Confirmation1 (slack), Sticky Note4 (stickyNote), Manual Issue Certificate (noOp), Webhook (webhook), Respond to webhook success (respondToWebhook). Propósito: webhook integration. Categoría: integration",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.venafiTlsProtectCloud",
+      "n8n-nodes-base.set",
+      "Parse Webhook",
+      "Venafi TLS Protect Cloud",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.respondtowebhook",
+      "n8n-nodes-base.noop",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.executeworkflow",
+      "@n8n/n8n-nodes-langchain.openai",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.venafitlsprotectcloud"
+    ],
+    "search_terms": [
+      "venafi",
+      "bot",
+      "slack",
+      "venafi_cloud_slack_cert_bot",
+      "cloud",
+      "cert"
+    ],
+    "alternative_names": [],
+    "related_concepts": [
+      "integration",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 50.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 88.37209302325581,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 75.17441860465117
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:27.153883"
+  },
+  "semantic_vector": [
+    -0.056382592767477036,
+    -0.05179772153496742,
+    -0.04395422711968422,
+    -0.04322225600481033,
+    -0.0032932101748883724,
+    -0.052249498665332794,
+    -0.031097613275051117,
+    -0.021223632618784904,
+    -0.04450041055679321,
+    0.05617538467049599,
+    -0.056942328810691833,
+    -0.05102558434009552,
+    -0.03390887752175331,
+    -0.039780452847480774,
+    -0.0554184764623642,
+    0.05800354480743408,
+    0.05745111033320427,
+    0.014473098330199718,
+    0.029004115611314774,
+    0.010195991955697536,
+    -0.05225623771548271,
+    0.014770431444048882,
+    -0.00014345611270982772,
+    -0.054897088557481766,
+    0.039985399693250656,
+    -0.04058663547039032,
+    -0.05730028823018074,
+    0.051881540566682816,
+    -0.051163580268621445,
+    0.0496525913476944,
+    0.046566180884838104,
+    -0.05136922001838684,
+    -0.05540874972939491,
+    -0.031148923560976982,
+    0.034875594079494476,
+    -0.030260076746344566,
+    0.04950843006372452,
+    0.018874365836381912,
+    0.0066596330143511295,
+    -0.05729668214917183,
+    -0.03600141406059265,
+    0.02243325114250183,
+    0.012460410594940186,
+    0.016205821186304092,
+    0.05800293758511543,
+    0.0029506394639611244,
+    0.03172670304775238,
+    -0.04483618587255478,
+    -0.05792047083377838,
+    -0.04979109391570091,
+    -0.05794721841812134,
+    -0.006995134521275759,
+    -0.05785834416747093,
+    -0.0572199746966362,
+    -0.054953865706920624,
+    -0.05115138366818428,
+    0.044006943702697754,
+    -0.03510874882340431,
+    -0.036504436284303665,
+    0.04931100457906723,
+    -0.019756993278861046,
+    -0.026711197569966316,
+    -0.04100390896201134,
+    0.0568767786026001,
+    -0.042445145547389984,
+    0.003398358356207609,
+    0.05746179074048996,
+    0.025236189365386963,
+    0.04475098103284836,
+    -0.009672743268311024,
+    -0.05788005515933037,
+    0.028078362345695496,
+    -0.05491260066628456,
+    0.009729708544909954,
+    -0.041702304035425186,
+    0.0023489876184612513,
+    0.04496615007519722,
+    -0.05597959831357002,
+    0.01930304616689682,
+    0.04810086637735367,
+    0.0474417544901371,
+    -0.014740741811692715,
+    0.01609843038022518,
+    -0.055814847350120544,
+    0.046861883252859116,
+    0.05456977337598801,
+    -0.051339395344257355,
+    -0.05024956539273262,
+    0.053291335701942444,
+    -0.027514634653925896,
+    -0.02262594737112522,
+    0.0219260323792696,
+    0.03941388055682182,
+    0.024934101849794388,
+    0.05643629655241966,
+    0.05289435014128685,
+    0.007352765649557114,
+    0.01090657152235508,
+    -0.057944875210523605,
+    -0.05799895524978638,
+    0.04841206222772598,
+    -0.028385179117321968,
+    -0.02554645575582981,
+    0.056202784180641174,
+    0.03960800543427467,
+    0.048219405114650726,
+    0.05799249932169914,
+    0.02436135895550251,
+    0.012050426565110683,
+    -0.057984139770269394,
+    -0.04126247763633728,
+    -0.05514597147703171,
+    -0.024983221665024757,
+    0.004441095516085625,
+    0.048654403537511826,
+    0.005754487589001656,
+    -0.05763781815767288,
+    0.035194262862205505,
+    0.043892018496990204,
+    0.03540206328034401,
+    -0.003307859878987074,
+    0.05004352331161499,
+    0.05110529065132141,
+    -0.022089147940278053,
+    0.05412893369793892,
+    0.05373925715684891,
+    0.00571563420817256,
+    0.051081519573926926,
+    0.04940614104270935,
+    0.01288197934627533,
+    -0.05658794194459915,
+    0.020522870123386383,
+    0.03753473609685898,
+    -0.050238605588674545,
+    -0.01921551674604416,
+    -0.05355439335107803,
+    0.020024187862873077,
+    0.0499543733894825,
+    -0.03739948198199272,
+    -0.057983316481113434,
+    0.04959189146757126,
+    0.05800338461995125,
+    -0.054444149136543274,
+    0.05251920968294144,
+    0.04257453233003616,
+    -0.05795302987098694,
+    -0.010126974433660507,
+    0.01213973481208086,
+    0.01006610319018364,
+    0.046783994883298874,
+    0.0289839506149292,
+    -0.05437106266617775,
+    0.049891337752342224,
+    0.030155660584568977,
+    0.005092137027531862,
+    0.05772354081273079,
+    0.021211709827184677,
+    -0.057474639266729355,
+    -0.04439553618431091,
+    0.004225608892738819,
+    -0.05308114364743233,
+    -0.05479197949171066,
+    0.029421959072351456,
+    -0.009619221091270447,
+    -0.005839506164193153,
+    0.042664047330617905,
+    -0.05763271078467369,
+    0.035451311618089676,
+    -0.04779541492462158,
+    0.053813543170690536,
+    0.05620172619819641,
+    -0.05787750706076622,
+    -0.013140413910150528,
+    0.03911905735731125,
+    -0.05597911402583122,
+    0.057863831520080566,
+    -0.026143664494156837,
+    -0.03637611120939255,
+    0.0519682914018631,
+    -0.044589053839445114,
+    -0.038363199681043625,
+    0.04629101604223251,
+    -0.05779822915792465,
+    0.04791979491710663,
+    0.056932587176561356,
+    0.024927914142608643,
+    -0.05764093995094299,
+    0.054136861115694046,
+    -0.035595621913671494,
+    0.038576386868953705,
+    -0.04097191244363785,
+    0.048412688076496124,
+    0.037430502474308014,
+    -0.05791305750608444,
+    -0.05774275213479996,
+    -0.0579821839928627,
+    0.027760259807109833,
+    0.05800354480743408,
+    0.019912511110305786,
+    0.025549421086907387,
+    0.05110333114862442,
+    0.05560982599854469,
+    0.020379362627863884,
+    0.051770541816949844,
+    -0.012767634354531765,
+    -0.003141154767945409,
+    0.01013251207768917,
+    0.0335894376039505,
+    -0.057982467114925385,
+    -0.03405576944351196,
+    0.021071290597319603,
+    0.035515498369932175,
+    0.021623224020004272,
+    -0.04299645498394966,
+    -0.058003101497888565,
+    -0.05786742642521858,
+    0.056510426104068756,
+    0.047171320766210556,
+    -0.03977070748806,
+    0.03353215754032135,
+    -0.03425372764468193,
+    0.01952914334833622,
+    0.026959609240293503,
+    -0.029452823102474213,
+    -0.0442526713013649,
+    -0.05114622786641121,
+    -0.053035885095596313,
+    -0.055747997015714645,
+    -0.05779741331934929,
+    -0.056526053696870804,
+    -0.03505614399909973,
+    -0.05154648423194885,
+    0.04609014466404915,
+    -0.0579959936439991,
+    -0.05561477690935135,
+    0.05036783590912819,
+    0.057975880801677704,
+    0.057221002876758575,
+    -0.05644258111715317,
+    -0.042564406991004944,
+    0.04432506114244461,
+    0.051069628447294235,
+    -0.03617590665817261,
+    0.05712905526161194,
+    0.03204018995165825,
+    0.05703207850456238,
+    0.054901108145713806,
+    -0.038005415350198746,
+    0.05354263633489609,
+    0.05798463150858879,
+    -0.05799180269241333,
+    0.05387231707572937,
+    -0.04551662504673004,
+    0.029103824868798256,
+    0.0428420826792717,
+    -0.05765107274055481,
+    0.03196489065885544,
+    0.05800354480743408,
+    -0.042698029428720474,
+    0.038151439279317856,
+    0.03582972288131714,
+    0.023749494925141335,
+    -0.030429774895310402,
+    0.036624763160943985,
+    -0.03112940676510334,
+    0.052167993038892746,
+    -0.03723643347620964,
+    0.04224739596247673,
+    -0.057907409965991974,
+    0.05287137255072594,
+    -0.057250674813985825,
+    0.045297592878341675,
+    -0.04726620391011238,
+    0.057262908667325974,
+    0.04495496675372124,
+    0.042549651116132736,
+    -0.0034233075566589832,
+    0.05572674423456192,
+    0.05800074711441994,
+    -0.024710187688469887,
+    -0.033620305359363556,
+    -0.03200405463576317,
+    0.04834433272480965,
+    0.050036054104566574,
+    0.0026510267052799463,
+    -0.05706579610705376,
+    -6.511785613838583e-05,
+    0.05723642557859421,
+    -0.056378502398729324,
+    0.057353582233190536,
+    -0.03151025250554085,
+    0.04189271479845047,
+    0.05716482177376747,
+    -0.007652581669390202,
+    0.037924960255622864,
+    -0.05782401189208031,
+    0.04724964499473572,
+    0.03493458405137062,
+    -0.013219336047768593,
+    0.04791771620512009,
+    -0.037237491458654404,
+    -0.006668608635663986,
+    0.04997643083333969,
+    -0.03516606613993645,
+    0.04189438000321388,
+    -0.05392816662788391,
+    0.04187368229031563,
+    0.05223298445343971,
+    0.03826836496591568,
+    0.03607042133808136,
+    0.057348065078258514,
+    0.015638276934623718,
+    0.053542185574769974,
+    0.03537731245160103,
+    0.05695385858416557,
+    -0.05476287007331848,
+    0.05356822535395622,
+    0.0017386156832799315,
+    -0.015578558668494225,
+    -0.015136895701289177,
+    -0.04098066687583923,
+    -0.056697119027376175,
+    0.05707012116909027,
+    -0.04596683010458946,
+    0.04162004590034485,
+    0.05766737088561058,
+    0.0569521002471447,
+    0.033670950680971146,
+    0.0329359695315361,
+    -0.05360850319266319,
+    -0.03467186167836189,
+    -0.05676134303212166,
+    0.041215259581804276,
+    0.05799514800310135,
+    0.01942112296819687,
+    -0.017563382163643837,
+    0.057814717292785645,
+    0.05526593700051308,
+    0.04550774022936821,
+    -0.0070799849927425385,
+    0.03928270936012268,
+    -0.057922329753637314,
+    -0.04243838042020798,
+    -0.055465009063482285,
+    -0.05800354480743408,
+    0.03411191329360008,
+    -0.054281845688819885,
+    -0.005484240595251322,
+    -0.05285140872001648,
+    -0.05118011683225632,
+    0.05791878700256348,
+    0.017163904383778572,
+    0.036317307502031326,
+    0.057706087827682495,
+    0.04551909118890762,
+    -0.042580585926771164,
+    -0.05800279974937439,
+    0.050452571362257004,
+    -0.004023379646241665,
+    0.05584716796875,
+    0.05199306085705757,
+    -0.036506641656160355,
+    -0.058003053069114685,
+    0.041406791657209396,
+    -0.0405423603951931,
+    0.05773147940635681,
+    0.03796545788645744,
+    -0.05759594962000847,
+    0.05766637250781059,
+    0.05740182101726532,
+    -0.030043156817555428,
+    -0.028380682691931725,
+    -0.04753774404525757,
+    0.045886628329753876,
+    0.057053737342357635,
+    0.05449516698718071,
+    -0.047199226915836334,
+    -0.055822085589170456,
+    0.0561242401599884,
+    0.00583306048065424,
+    0.05510168895125389,
+    0.012092982418835163,
+    -0.054936159402132034,
+    0.002359929261729121,
+    -0.04264163225889206,
+    -0.05624697357416153,
+    0.0570378452539444,
+    0.018686605617403984,
+    0.0513775572180748,
+    -0.05750088021159172,
+    -0.04612398147583008,
+    -0.053225211799144745,
+    0.057840652763843536,
+    0.05003659799695015,
+    -0.023790307343006134,
+    0.05105746537446976,
+    -0.04783322662115097,
+    0.056742265820503235,
+    0.05309377610683441,
+    0.018047062680125237,
+    0.0442068874835968,
+    0.03757508844137192,
+    -0.058000288903713226,
+    0.05713040381669998,
+    -0.05561549589037895,
+    -0.05349136143922806,
+    -0.05796367675065994,
+    0.05703224241733551,
+    0.054617252200841904,
+    -0.02879081480205059,
+    -0.030113765969872475,
+    0.05489698052406311,
+    -0.011957384645938873,
+    -0.03468731790781021,
+    -0.03008645959198475,
+    -0.012813137844204903,
+    0.04076286777853966,
+    -0.04409557208418846,
+    -0.019382571801543236,
+    -0.01092376559972763,
+    -0.0555247962474823,
+    0.0015540455933660269,
+    -0.047416072338819504,
+    0.04845805466175079,
+    0.03775956109166145,
+    0.0015422984724864364,
+    -0.057397887110710144,
+    0.04646646976470947,
+    0.027187082916498184,
+    -0.0037849172949790955,
+    -0.03960152342915535,
+    -0.017779318615794182,
+    -0.04570760205388069,
+    0.05389044061303139,
+    -0.057854972779750824,
+    -0.03573991358280182,
+    -0.05348971113562584,
+    -0.05799265578389168,
+    -0.05786914378404617,
+    0.05567776784300804,
+    0.03918049857020378,
+    -0.055389855057001114,
+    -0.03446509316563606,
+    -0.05681302025914192,
+    -0.028912903741002083,
+    -0.057989686727523804,
+    -0.05712065473198891,
+    0.027858423069119453,
+    0.04083830490708351,
+    -0.05288173630833626,
+    -0.049508847296237946,
+    0.056550655514001846,
+    0.05798817425966263,
+    0.014020055532455444,
+    -0.02795019932091236,
+    -0.05799314007163048,
+    -0.006745622958987951,
+    0.05791701748967171,
+    0.03835459426045418,
+    -0.0528847761452198,
+    -0.023181241005659103,
+    0.04744233936071396,
+    0.05158006399869919,
+    0.05769895389676094,
+    -0.01618741638958454,
+    -0.03571664169430733,
+    0.049426645040512085,
+    -0.02084978111088276,
+    -0.05369515344500542,
+    0.058002106845378876,
+    0.013992696069180965,
+    -0.05703623592853546,
+    -0.0012637194013223052,
+    -0.035158734768629074,
+    -0.047602035105228424,
+    0.015709150582551956,
+    0.05690518766641617,
+    0.04374334588646889,
+    -0.031942564994096756,
+    0.049668245017528534,
+    -0.04203542321920395,
+    0.05644799768924713,
+    0.02506132423877716,
+    -0.05780446529388428,
+    0.04854368045926094,
+    0.03089035302400589,
+    0.0023682371247559786,
+    0.039429496973752975,
+    -0.00533264921978116,
+    -0.005775902420282364,
+    -0.04350205883383751,
+    0.057457514107227325,
+    -0.05355215072631836,
+    0.03888305276632309,
+    -0.04953477904200554,
+    0.05761861428618431,
+    0.045562248677015305,
+    0.05698658153414726,
+    -0.051764361560344696,
+    0.031176239252090454,
+    0.0426507405936718,
+    -0.055176928639411926,
+    0.04938993975520134,
+    -0.058002080768346786,
+    0.04354672133922577,
+    -0.03593027591705322,
+    0.04424713924527168,
+    -0.056954510509967804,
+    -0.008584502153098583,
+    0.058003418147563934,
+    -0.05626699700951576,
+    -0.0541532076895237
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in integration context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "converted_workflows",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n Workflows\\converted_workflows"
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "workflow": {
+    "name": "Workflow Inteligente - 25/9/2025",
+    "active": false,
+    "nodes": [
+      {
+        "id": "intelligent-grg1a420h",
+        "name": "Webhook de Leads CRM",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          740.735382198869,
+          356.92371194592926
+        ],
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "new-lead",
+          "responseMode": "lastNode",
+          "options": {
+            "noResponseBody": false,
+            "rawBody": false,
+            "allowedOrigins": "*"
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-2se3hgwpo",
+        "name": "Validación Avanzada de Leads",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          883.7650792735694,
+          593.1780027591458
+        ],
+        "parameters": {
+          "conditions": [
+            {
+              "value1": "={{$json.email}}",
+              "operator": "isNotEmpty",
+              "value2": ""
+            },
+            {
+              "value1": "={{$json.email}}",
+              "operator": "contains",
+              "value2": "@",
+              "type": "and"
+            }
+          ],
+          "options": {}
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-sfp457tp3",
+        "name": "Enrich Lead Data - CRM",
+        "type": "n8n-nodes-base.function",
+        "position": [
+          605.5652356210364,
+          393.31422489957765
+        ],
+        "parameters": {
+          "functionCode": "// Procesamiento de datos básico\nconst processedItems = items.map(item => {\n    return {\n        json: {\n            ...item.json,\n            processed: true,\n            processedAt: new Date().toISOString(),\n            workflowId: '{{$workflow.id}}',\n            executionId: '{{$execution.id}}'\n        }\n    };\n});\n\nreturn processedItems;"
+        },
+        "typeVersion": 1,
+        "credentials": {},
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-bve88q7zx",
+        "name": "Update Salesforce - CRM",
+        "type": "n8n-nodes-base.salesforce",
+        "position": [
+          310.44477601309006,
+          478.9829525727489
+        ],
+        "parameters": {},
+        "typeVersion": 1,
+        "credentials": {
+          "salesforce": {
+            "id": "sf-creds",
+            "name": "Salesforce API"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-hqlrzmafi",
+        "name": "Sistema de Email Inteligente",
+        "type": "n8n-nodes-base.emailSend",
+        "position": [
+          826.4354913991491,
+          513.8662923404156
+        ],
+        "parameters": {
+          "fromEmail": "noreply@company.com",
+          "toEmail": "={{$json.email}}",
+          "subject": "Notificación de {{$workflow.name}}",
+          "message": "Su solicitud ha sido procesada exitosamente por nuestro sistema.",
+          "options": {
+            "allowUnauthorizedCerts": false,
+            "appendAttribution": false
+          }
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "smtp": {
+            "id": "email-creds",
+            "name": "SMTP Server"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-l1s4136wq",
+        "name": "Notify Sales Team - CRM",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          670.5943657745268,
+          426.8955223980598
+        ],
+        "parameters": {
+          "channel": "#general",
+          "text": "👤 Nuevo lead: {{$json.name}} ({{$json.email}}) - Fuente: {{$json.source}}",
+          "username": "n8n-bot",
+          "options": {}
+        },
+        "typeVersion": 1,
+        "credentials": {
+          "slackApi": {
+            "id": "slack-creds",
+            "name": "Slack API"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      },
+      {
+        "id": "intelligent-gy6r6ky2f",
+        "name": "Track Analytics - CRM",
+        "type": "n8n-nodes-base.googleAnalytics",
+        "position": [
+          251.7892611863756,
+          361.8813148683696
+        ],
+        "parameters": {},
+        "typeVersion": 1,
+        "credentials": {
+          "googleAnalytics": {
+            "id": "ga-creds",
+            "name": "Google Analytics"
+          }
+        },
+        "continueOnFail": false,
+        "onError": "stopWorkflow",
+        "retryOnFail": false,
+        "maxTries": 3,
+        "waitBetweenTries": 1000,
+        "alwaysOutputData": false
+      }
+    ],
+    "connections": {
+      "Enrich Lead Data - CRM": {
+        "main": [
+          [
+            {
+              "node": "Update Salesforce - CRM",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Notify Sales Team - CRM": {
+        "main": [
+          [
+            {
+              "node": "Track Analytics - CRM",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "createdAt": "2025-09-26T01:58:27.464Z",
+    "updatedAt": "2025-09-26T01:58:27.464Z",
+    "settings": {
+      "executionOrder": "v1",
+      "saveManualExecutions": true,
+      "callerPolicy": "workflowsFromSameOwner",
+      "errorWorkflow": "",
+      "timezone": "Europe/Madrid"
+    },
+    "staticData": {},
+    "tags": [
+      "intelligent-agent",
+      "ai-generated",
+      "professional"
+    ],
+    "triggerCount": 0,
+    "versionId": "2.0.0",
+    "meta": {
+      "generatedBy": "intelligent-workflow-agent-v1.0",
+      "generatedAt": "2025-09-26T01:58:27.445Z",
+      "analysis": {
+        "domains": [
+          "crm",
+          "communication",
+          "automation"
+        ],
+        "complexity": "SIMPLE",
+        "intents": [
+          "data-capture"
+        ],
+        "confidence": 0.4
+      },
+      "metrics": {
+        "nodeCount": 7,
+        "connectionCount": 2,
+        "estimatedExecutionTime": "6.39 segundos (estimación inteligente)",
+        "confidenceScore": 0.8200000000000001
+      }
+    }
+  },
+  "metadata": {
+    "prompt": "Crear sistema CRM básico con webhook de leads, validación y email",
+    "method": "intelligent-agent",
+    "duration": 27,
+    "generatedAt": "2025-09-26T01:58:27.469Z",
+    "nodeCount": 7,
+    "connectionCount": 2
+  }
+}

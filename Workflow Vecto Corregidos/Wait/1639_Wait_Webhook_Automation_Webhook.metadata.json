@@ -1,0 +1,1370 @@
+{
+  "workflow_info": {
+    "id": "EnfvHdczSXHN8vNv",
+    "name": "Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy",
+    "display_name": "Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy",
+    "file_name": "1639_Wait_Webhook_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait\\1639_Wait_Webhook_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "2fbf1fa25a9e"
+  },
+  "structure": {
+    "total_nodes": 67,
+    "node_types": [
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.notionTool",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "@n8n/n8n-nodes-langchain.chainSummarization",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.notion",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.webhook",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.notionTool",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainSummarization",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.wait",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.notion",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.webhook",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 34
+      }
+    ],
+    "triggers": [
+      {
+        "name": "Application Form 1 of 3",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          180,
+          520
+        ]
+      },
+      {
+        "name": "Application Form 2 of 3",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          180,
+          740
+        ]
+      },
+      {
+        "name": "Application form 3 of 3",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          180,
+          960
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1480,
+          700
+        ]
+      },
+      {
+        "name": "Structured Output Parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          3180,
+          880
+        ]
+      },
+      {
+        "name": "HR Expert",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          3000,
+          700
+        ]
+      },
+      {
+        "name": "Upload CV",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          660,
+          1120
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1060,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1620,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2940,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2040,
+          520
+        ]
+      },
+      {
+        "name": "Extract Resume",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          900,
+          700
+        ]
+      },
+      {
+        "name": "Applicant Summary",
+        "type": "@n8n/n8n-nodes-langchain.chainSummarization",
+        "position": [
+          1680,
+          700
+        ]
+      },
+      {
+        "name": "Job Description Summary",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2420,
+          700
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3720,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3380,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2380,
+          520
+        ]
+      },
+      {
+        "name": "Applicant Qualifications",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          1100,
+          840
+        ]
+      },
+      {
+        "name": "Applicant Personal Data",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          1100,
+          700
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          560,
+          520
+        ]
+      },
+      {
+        "name": "Application Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          680,
+          700
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          480
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4060,
+          640
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          40,
+          120
+        ]
+      },
+      {
+        "name": "ElevenLabs Web Hook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          140,
+          1880
+        ]
+      },
+      {
+        "name": "ai_convo_items",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          440,
+          1880
+        ]
+      },
+      {
+        "name": "Extract_Audio",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2120,
+          1880
+        ]
+      },
+      {
+        "name": "Filter_Notion_db",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1520,
+          1880
+        ]
+      },
+      {
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          740,
+          1880
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          360,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          660,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1140,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note18",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1440,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note19",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1740,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note20",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2040,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note21",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2900,
+          1820
+        ]
+      },
+      {
+        "name": "Sticky Note22",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          1340
+        ]
+      },
+      {
+        "name": "Sticky Note23",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -500,
+          320
+        ]
+      },
+      {
+        "name": "Sticky Note24",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -520,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          1160
+        ]
+      },
+      {
+        "name": "Link Audio in Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          2640,
+          1880
+        ]
+      },
+      {
+        "name": "Sticky Note25",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2520,
+          1700
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -500,
+          120
+        ]
+      },
+      {
+        "name": "Sticky Note26",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -520,
+          1360
+        ]
+      },
+      {
+        "name": "Resume URL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          880,
+          1120
+        ]
+      },
+      {
+        "name": "Get Applicant Record",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1280,
+          1120
+        ]
+      },
+      {
+        "name": "Embed Resume in Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1500,
+          1120
+        ]
+      },
+      {
+        "name": "Wait",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1080,
+          1120
+        ]
+      },
+      {
+        "name": "Get Job Description",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          2140,
+          700
+        ]
+      },
+      {
+        "name": "Job Description Mapping",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2800,
+          700
+        ]
+      },
+      {
+        "name": "Applicant Data Backup",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          3460,
+          700
+        ]
+      },
+      {
+        "name": "Create Applicant Record",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          3820,
+          700
+        ]
+      },
+      {
+        "name": "Upload Audio to Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          2360,
+          1880
+        ]
+      },
+      {
+        "name": "Google Gemini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          2340,
+          1000
+        ]
+      },
+      {
+        "name": "Evaluation Criteria",
+        "type": "n8n-nodes-base.notionTool",
+        "position": [
+          900,
+          2160
+        ]
+      },
+      {
+        "name": "Applicant Record",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1220,
+          1880
+        ]
+      },
+      {
+        "name": "Update_Applicant_Record",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1820,
+          1880
+        ]
+      },
+      {
+        "name": "Google Gemini Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          720,
+          2160
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1660,
+          760
+        ]
+      },
+      {
+        "name": "Sticky Note27",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note28",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1060,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note29",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2020,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note30",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2940,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note31",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          60,
+          1520
+        ]
+      },
+      {
+        "name": "Sticky Note32",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          660,
+          1520
+        ]
+      },
+      {
+        "name": "Sticky Note33",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1140,
+          1520
+        ]
+      }
+    ],
+    "connections_count": 31,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 3,
+      "action_count": 64
+    }
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "webhook integration",
+    "use_cases": [],
+    "complexity_score": 1470,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "googleDrive",
+      "sticky note7",
+      "applicant data backup",
+      "stickyNote",
+      "webhook",
+      "httpRequest",
+      "filter_notion_db",
+      "extract resume",
+      "application form 3 of 3",
+      "merge",
+      "extract_audio",
+      "sticky note30",
+      "hr expert",
+      "sticky note29",
+      "application form 2 of 3",
+      "sticky note33",
+      "structured output parser",
+      "job description mapping",
+      "extractFromFile",
+      "productivity",
+      "google gemini",
+      "sticky note28",
+      "create applicant record",
+      "applicant summary",
+      "get applicant record",
+      "google gemini model",
+      "@n8n/n8n nodes langchain.agent",
+      "googleSheets",
+      "applicant qualifications",
+      "sticky note14",
+      "sticky note5",
+      "upload cv",
+      "applicant personal data",
+      "sticky note18",
+      "sticky note27",
+      "sticky note26",
+      "sticky note23",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "sticky note12",
+      "formTrigger",
+      "sticky note3",
+      "sticky note31",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "sticky note15",
+      "sticky note9",
+      "sticky note17",
+      "@n8n/n8n nodes langchain.chainSummarization",
+      "set",
+      "sticky note4",
+      "sticky note13",
+      "sticky note32",
+      "sticky note21",
+      "sticky note24",
+      "wait",
+      "application data",
+      "ai agent",
+      "evaluation criteria",
+      "sticky note",
+      "job description summary",
+      "applicant record",
+      "complex",
+      "sticky note20",
+      "sticky note2",
+      "sticky note22",
+      "sticky note1",
+      "get job description",
+      "application form 1 of 3",
+      "sticky note16",
+      "update_applicant_record",
+      "sticky note11",
+      "link audio in notion",
+      "notionTool",
+      "sticky note6",
+      "notion",
+      "upload audio to drive",
+      "sticky note10",
+      "webhook integration",
+      "resume url",
+      "embed resume in notion",
+      "sticky note25",
+      "ai_convo_items",
+      "sticky note19",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "sticky note8",
+      "elevenlabs web hook",
+      "filter"
+    ],
+    "description": "'Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy' es un workflow diseñado para webhook integration con 67 nodos con 3 disparadores que ejecuta: Merge, Structured Output Parser, HR Expert en la categoría de productivity.",
+    "semantic_content": "Workflow: Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy. Nodos: Merge (merge), Structured Output Parser (@n8n/n8n-nodes-langchain.outputParserStructured), HR Expert (@n8n/n8n-nodes-langchain.chainLlm), Upload CV (googleDrive), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Extract Resume (extractFromFile), Applicant Summary (@n8n/n8n-nodes-langchain.chainSummarization), Job Description Summary (@n8n/n8n-nodes-langchain.chainLlm), Sticky Note (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Applicant Qualifications (@n8n/n8n-nodes-langchain.informationExtractor), Applicant Personal Data (@n8n/n8n-nodes-langchain.informationExtractor), Sticky Note9 (stickyNote), Application Data (set), Sticky Note4 (stickyNote), Sticky Note12 (stickyNote), Sticky Note13 (stickyNote), ElevenLabs Web Hook (webhook), ai_convo_items (set), Extract_Audio (httpRequest), Filter_Notion_db (filter), AI Agent (@n8n/n8n-nodes-langchain.agent), Sticky Note14 (stickyNote), Sticky Note15 (stickyNote), Sticky Note16 (stickyNote), Sticky Note17 (stickyNote), Sticky Note18 (stickyNote), Sticky Note19 (stickyNote), Sticky Note20 (stickyNote), Sticky Note21 (stickyNote), Sticky Note22 (stickyNote), Sticky Note23 (stickyNote), Sticky Note24 (stickyNote), Sticky Note10 (stickyNote), Link Audio in Notion (notion), Sticky Note25 (stickyNote), Sticky Note11 (stickyNote), Sticky Note26 (stickyNote), Resume URL (set), Get Applicant Record (notion), Embed Resume in Notion (notion), Wait (wait), Application Form 1 of 3 (formTrigger), Application Form 2 of 3 (formTrigger), Application form 3 of 3 (formTrigger), Get Job Description (notion), Job Description Mapping (set), Applicant Data Backup (googleSheets), Create Applicant Record (notion), Upload Audio to Drive (googleDrive), Google Gemini (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Evaluation Criteria (notionTool), Applicant Record (notion), Update_Applicant_Record (notion), Google Gemini Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Sticky Note1 (stickyNote), Sticky Note27 (stickyNote), Sticky Note28 (stickyNote), Sticky Note29 (stickyNote), Sticky Note30 (stickyNote), Sticky Note31 (stickyNote), Sticky Note32 (stickyNote), Sticky Note33 (stickyNote). Propósito: webhook integration. Categoría: productivity. Disparadores: Application Form 1 of 3, Application Form 2 of 3, Application form 3 of 3",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.formTrigger",
+      "Application form 3 of 3",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "Application Form 2 of 3",
+      "Application Form 1 of 3",
+      "HR Expert",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "Merge",
+      "Structured Output Parser"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "@n8n/n8n-nodes-langchain.chainsummarization",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.formtrigger",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.notion",
+      "@n8n/n8n-nodes-langchain.agent",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.notiontool",
+      "n8n-nodes-base.extractfromfile",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.googlesheets"
+    ],
+    "search_terms": [
+      "webhook",
+      "1639",
+      "automation",
+      "wait",
+      "1639_wait_webhook_automation_webhook"
+    ],
+    "alternative_names": [
+      "Resume Screening & Behavioral Interviews with Gemini, Elevenlabs, & Notion ATS copy"
+    ],
+    "related_concepts": [
+      "productivity",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.formTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 91.15646258503402,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 88.2312925170068
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:22.343084"
+  },
+  "semantic_vector": [
+    -0.05214926600456238,
+    -0.04725775122642517,
+    0.03940015286207199,
+    0.05259792506694794,
+    0.0383659228682518,
+    -0.03775624558329582,
+    0.05432061478495598,
+    -0.038144178688526154,
+    0.013590794056653976,
+    0.04074897617101669,
+    -0.054344382137060165,
+    0.01767250895500183,
+    -0.04517938941717148,
+    -0.05328395590186119,
+    -0.051938675343990326,
+    0.05385863780975342,
+    0.01982709765434265,
+    0.04962342232465744,
+    -0.05393927916884422,
+    -0.03874560445547104,
+    -0.0540548637509346,
+    0.03756900876760483,
+    -0.054332029074430466,
+    -0.012591333128511906,
+    -0.04907248914241791,
+    -0.05365927889943123,
+    -0.054454121738672256,
+    0.053842611610889435,
+    0.016242047771811485,
+    0.05369850620627403,
+    0.05011139437556267,
+    0.03461640700697899,
+    -0.02484016679227352,
+    -0.023483121767640114,
+    0.04433956369757652,
+    0.025725029408931732,
+    -0.04721476882696152,
+    0.05405513197183609,
+    -0.05332771688699722,
+    0.05379446968436241,
+    -0.05347936972975731,
+    0.041335221379995346,
+    -0.03943873941898346,
+    -0.023508118465542793,
+    0.054382286965847015,
+    0.01753389649093151,
+    0.040678199380636215,
+    -0.038797777146101,
+    -0.0544518306851387,
+    -0.04230121895670891,
+    -0.052785150706768036,
+    0.05040969327092171,
+    -0.05445258319377899,
+    -0.05437701940536499,
+    -0.05315479263663292,
+    -0.05440354719758034,
+    0.05344841629266739,
+    -0.04237845912575722,
+    0.010608463548123837,
+    -0.008827959187328815,
+    0.015730008482933044,
+    -0.053387198597192764,
+    -0.03243551403284073,
+    0.04540840908885002,
+    0.002247984753921628,
+    -0.04445391520857811,
+    0.05400943011045456,
+    -0.008609725162386894,
+    0.054097577929496765,
+    0.029521478340029716,
+    -0.04164045676589012,
+    0.036487799137830734,
+    -0.05266420170664787,
+    0.05433376133441925,
+    -0.052393838763237,
+    -0.04376910626888275,
+    0.039950739592313766,
+    -0.05411021411418915,
+    -0.03360791131854057,
+    -0.0044511049054563046,
+    0.05269129201769829,
+    0.007836757227778435,
+    0.05386957898736,
+    -0.01570812240242958,
+    -0.04107019677758217,
+    0.054252225905656815,
+    -0.004437942523509264,
+    0.03561064228415489,
+    0.014459202066063881,
+    -0.04661315307021141,
+    0.04682599753141403,
+    0.026825251057744026,
+    0.00860573723912239,
+    -0.049822475761175156,
+    0.05259500443935394,
+    0.05420782044529915,
+    -0.053982850164175034,
+    0.047192759811878204,
+    -0.04923905432224274,
+    -0.05288567394018173,
+    -0.012504820711910725,
+    -0.05429726094007492,
+    -0.023382440209388733,
+    -0.013225585222244263,
+    0.053985338658094406,
+    0.04538480192422867,
+    0.04575182497501373,
+    0.05434621870517731,
+    0.03503229469060898,
+    -0.052266329526901245,
+    0.021344119682908058,
+    -0.0028317037504166365,
+    0.0409051887691021,
+    -0.03498980775475502,
+    0.05424664542078972,
+    0.0526505708694458,
+    -0.05417866259813309,
+    -0.05072939768433571,
+    0.053971193730831146,
+    0.05419793352484703,
+    0.05298243463039398,
+    0.03753259778022766,
+    0.006790458224713802,
+    0.024202074855566025,
+    0.05438008904457092,
+    -0.03734925761818886,
+    -0.036214061081409454,
+    -0.02927808277308941,
+    0.033932216465473175,
+    -0.052096784114837646,
+    -0.054447777569293976,
+    0.02965547703206539,
+    0.05410510674118996,
+    -0.023983940482139587,
+    0.052385590970516205,
+    -0.006413279101252556,
+    0.035711564123630524,
+    0.054261721670627594,
+    -0.053635526448488235,
+    -0.05002550780773163,
+    -0.05100459232926369,
+    0.05445520952343941,
+    -0.03125293552875519,
+    0.04975821450352669,
+    -0.054261211305856705,
+    -0.05352620780467987,
+    0.012194331735372543,
+    -0.00745668588206172,
+    0.046521399170160294,
+    -0.003506530076265335,
+    -0.05320865660905838,
+    -0.054122328758239746,
+    -0.05090462043881416,
+    0.024965448305010796,
+    0.05442637577652931,
+    0.04987421631813049,
+    0.053964003920555115,
+    0.05052417516708374,
+    -0.05163964629173279,
+    -0.054437268525362015,
+    -0.054434340447187424,
+    -0.05043376609683037,
+    0.050616588443517685,
+    0.052540455013513565,
+    0.04128945618867874,
+    0.052546124905347824,
+    -0.05392428860068321,
+    0.052269987761974335,
+    -0.05426644906401634,
+    -0.05368468165397644,
+    0.054445840418338776,
+    0.00876594427973032,
+    0.0193020012229681,
+    0.04896692931652069,
+    -0.05444256216287613,
+    0.05430873483419418,
+    -0.011815463192760944,
+    -0.052410271018743515,
+    0.028921186923980713,
+    -0.041396696120500565,
+    -0.05402280390262604,
+    0.05233555659651756,
+    -0.05445503070950508,
+    0.017744233831763268,
+    0.05443591624498367,
+    0.01252959668636322,
+    -0.05437879636883736,
+    0.054138459265232086,
+    0.013657878153026104,
+    0.013073391281068325,
+    0.03512892872095108,
+    0.004484135657548904,
+    0.047923121601343155,
+    -0.05438994988799095,
+    -0.05445191264152527,
+    -0.054433196783065796,
+    0.04586578905582428,
+    0.05444641411304474,
+    0.04223620146512985,
+    -0.013206624425947666,
+    0.052268095314502716,
+    0.05331077426671982,
+    0.05434398725628853,
+    0.053304098546504974,
+    -0.01839277893304825,
+    -0.05105426162481308,
+    -0.05121016129851341,
+    0.05333685502409935,
+    -0.04199187457561493,
+    -0.05445217341184616,
+    0.0001798076118575409,
+    0.05400542914867401,
+    0.05353269726037979,
+    0.051030710339546204,
+    -0.05437598377466202,
+    -0.05443092808127403,
+    -0.010034549050033092,
+    -0.04796864837408066,
+    0.05197500064969063,
+    0.051980871707201004,
+    -0.052851539105176926,
+    0.054449472576379776,
+    -0.03917970880866051,
+    -0.05335775017738342,
+    -0.04612523317337036,
+    -0.05243263393640518,
+    -0.04926685616374016,
+    -0.04957803338766098,
+    0.043521326035261154,
+    -0.05442162603139877,
+    -0.002984917489811778,
+    0.02854819782078266,
+    0.03778807073831558,
+    -0.05444186553359032,
+    -0.05334391072392464,
+    0.054284777492284775,
+    0.05433175340294838,
+    0.05445520952343941,
+    -0.054033368825912476,
+    0.03915946185588837,
+    0.05257587879896164,
+    0.04602731764316559,
+    -0.0037914677523076534,
+    0.0433913879096508,
+    -0.042639605700969696,
+    0.054365627467632294,
+    0.0492236502468586,
+    -0.0530935674905777,
+    0.05276304483413696,
+    0.050838787108659744,
+    -0.052765823900699615,
+    0.05107320845127106,
+    -0.053382158279418945,
+    0.03428933396935463,
+    0.05371053144335747,
+    -0.05445263907313347,
+    0.03599453344941139,
+    0.05445520952343941,
+    -0.0385897271335125,
+    0.04251502454280853,
+    -0.05071035772562027,
+    0.05373154208064079,
+    -0.039854273200035095,
+    -0.02701241336762905,
+    0.0038418511394411325,
+    0.005283508915454149,
+    -0.05164635181427002,
+    -0.03492289036512375,
+    -0.054433368146419525,
+    0.05245555564761162,
+    -0.05339936912059784,
+    0.048246778547763824,
+    -0.05423911660909653,
+    -0.020340045914053917,
+    0.05443527176976204,
+    0.05387675017118454,
+    -0.0542847216129303,
+    0.050893042236566544,
+    0.006235032342374325,
+    -0.034723859280347824,
+    -0.03865138441324234,
+    0.04390712454915047,
+    0.05409638211131096,
+    0.05280328914523125,
+    0.03735626861453056,
+    0.040169525891542435,
+    -0.04958091676235199,
+    0.05444134399294853,
+    -0.052044715732336044,
+    -0.007018625270575285,
+    -0.05441882461309433,
+    0.05002917721867561,
+    0.053918540477752686,
+    -0.035534851253032684,
+    0.010078747756779194,
+    -0.05029187351465225,
+    -0.009509951807558537,
+    -0.027283156290650368,
+    0.031827643513679504,
+    0.04721686989068985,
+    -0.04793943092226982,
+    -0.014862333424389362,
+    0.04324272274971008,
+    -0.049144431948661804,
+    -0.04484757408499718,
+    -0.030675288289785385,
+    0.05100670084357262,
+    -0.0005777764599770308,
+    -0.021515047177672386,
+    -0.045855019241571426,
+    -0.01744096912443638,
+    0.007162042427808046,
+    0.046972062438726425,
+    0.053997159004211426,
+    0.05414832755923271,
+    -0.026795629411935806,
+    -0.026691369712352753,
+    -0.05384938791394234,
+    -0.05098273232579231,
+    0.054279983043670654,
+    0.0349532775580883,
+    -0.0544515885412693,
+    0.05029818415641785,
+    -0.05337503179907799,
+    0.018005600199103355,
+    -0.009840138256549835,
+    0.04866449907422066,
+    0.04690084606409073,
+    0.040215592831373215,
+    -0.04493395611643791,
+    0.052243925631046295,
+    -0.0502108596265316,
+    0.017875676974654198,
+    0.0544474758207798,
+    -0.00484807975590229,
+    -0.017727773636579514,
+    0.054351456463336945,
+    -0.047328028827905655,
+    0.053734250366687775,
+    -0.03047282062470913,
+    -0.030275437980890274,
+    -0.05403520166873932,
+    -0.05361353978514671,
+    -0.05358119681477547,
+    -0.05412517860531807,
+    -0.04701606184244156,
+    -0.032335203140974045,
+    -0.044023726135492325,
+    -0.05350241810083389,
+    -0.043984659016132355,
+    0.054174598306417465,
+    0.033259306102991104,
+    0.05385950952768326,
+    0.05429835990071297,
+    0.053950972855091095,
+    -0.05431409552693367,
+    -0.054445549845695496,
+    0.0542687252163887,
+    0.049990054219961166,
+    0.047886382788419724,
+    0.05252588167786598,
+    -0.05445050820708275,
+    -0.031010333448648453,
+    0.039052318781614304,
+    -0.023216968402266502,
+    0.05441628769040108,
+    -0.004984917584806681,
+    -0.05436863377690315,
+    0.018949532881379128,
+    0.03167092427611351,
+    0.027353651821613312,
+    -0.033156007528305054,
+    0.0040605259127914906,
+    -0.005707788281142712,
+    0.04879883676767349,
+    0.05017072707414627,
+    -0.05375760793685913,
+    -0.04908100888133049,
+    -0.02918880432844162,
+    -0.053711067885160446,
+    0.05212736874818802,
+    0.054415665566921234,
+    -0.04911714419722557,
+    -0.035806551575660706,
+    0.026258505880832672,
+    -0.05357680842280388,
+    0.014237497001886368,
+    0.0536516010761261,
+    0.03970460593700409,
+    -0.05430307239294052,
+    -0.0383039154112339,
+    -0.03995022550225258,
+    0.05392251908779144,
+    0.05408532917499542,
+    -0.006717253476381302,
+    -0.05109619349241257,
+    -0.047146596014499664,
+    0.05335157364606857,
+    0.05144242197275162,
+    -0.008256974630057812,
+    -0.0005432320176623762,
+    0.020731506869196892,
+    -0.05444338172674179,
+    0.05440392717719078,
+    -0.05350258946418762,
+    -0.013773930259048939,
+    -0.05282898619771004,
+    0.053700726479291916,
+    0.052917394787073135,
+    -0.018495453521609306,
+    -0.0027309420984238386,
+    0.05400289222598076,
+    0.0283383596688509,
+    -0.05108596757054329,
+    0.05437498167157173,
+    -0.013185571879148483,
+    0.03399395942687988,
+    -0.053851183503866196,
+    -0.053589366376399994,
+    -0.03033488057553768,
+    -0.05431104078888893,
+    -0.04960395023226738,
+    -0.05438573658466339,
+    0.04942327365279198,
+    0.012317822314798832,
+    -0.019819485023617744,
+    -0.052132219076156616,
+    -0.027003804221749306,
+    0.042630575597286224,
+    -0.02290968969464302,
+    -0.028286613523960114,
+    -0.022970614954829216,
+    -0.05334802716970444,
+    0.04690319299697876,
+    -0.05397539958357811,
+    -0.05351260304450989,
+    -0.04217033088207245,
+    -0.05439094081521034,
+    -0.054446134716272354,
+    0.05388833209872246,
+    -0.04288944974541664,
+    -0.05423618480563164,
+    -0.02340080961585045,
+    0.0153646944090724,
+    -0.01867612451314926,
+    0.05105505883693695,
+    -0.054428115487098694,
+    -0.013840739615261555,
+    0.053287018090486526,
+    -0.03429843485355377,
+    -0.024302318692207336,
+    0.050479598343372345,
+    0.043201688677072525,
+    -0.015677480027079582,
+    0.011330950073897839,
+    -0.05445166677236557,
+    0.029382703825831413,
+    0.05444001406431198,
+    0.053361136466264725,
+    -0.05185914412140846,
+    -0.034535519778728485,
+    0.04219517111778259,
+    0.050890158861875534,
+    -0.028451018035411835,
+    0.0192349124699831,
+    -0.05121798813343048,
+    0.05400732904672623,
+    -0.036280158907175064,
+    -0.051566947251558304,
+    0.05442458391189575,
+    0.05357024446129799,
+    -0.05433867126703262,
+    0.01633843220770359,
+    0.00620139017701149,
+    -0.053534138947725296,
+    0.046210549771785736,
+    0.05442642420530319,
+    0.033172208815813065,
+    0.051853422075510025,
+    -0.05415710061788559,
+    -0.047654613852500916,
+    0.04893965646624565,
+    -0.05359259247779846,
+    -0.054420873522758484,
+    0.053761038929224014,
+    -0.0005773139419034123,
+    -0.02375522069633007,
+    -0.026711195707321167,
+    0.0361289381980896,
+    -0.05092108994722366,
+    -0.05200553312897682,
+    0.05354338884353638,
+    -0.023025183007121086,
+    -0.02646622620522976,
+    -0.03681556135416031,
+    0.05441499873995781,
+    -0.05020194500684738,
+    0.054440297186374664,
+    -0.0538007989525795,
+    0.04328077286481857,
+    -0.049972597509622574,
+    -0.05320386961102486,
+    0.053852446377277374,
+    -0.054455097764730453,
+    -0.0133400559425354,
+    -0.012089846655726433,
+    -0.04294607415795326,
+    -0.04601169377565384,
+    -0.03339506313204765,
+    0.02874082140624523,
+    -0.05427725613117218,
+    -0.030923759564757347
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: Application Form 1 of 3, Application Form 2 of 3, Application form 3 of 3; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in productivity context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Wait",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait"
+  }
+}

@@ -1,0 +1,31 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "origin"]
+	url = git@github-secondary:Eddym06/n8n-ai-assistant.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+	vscode-merge-base = origin/main
+[branch "main-fixed"]
+	vscode-merge-base = origin/main
+[branch "main-fixed-clean"]
+	vscode-merge-base = origin/main
+[branch "main-fixed-recovered"]
+	vscode-merge-base = origin/main
+[branch "main-final-clean"]
+	vscode-merge-base = origin/main
+[branch "main-ultra-clean"]
+	vscode-merge-base = origin/main
+[branch "main-clean-no-history"]
+	vscode-merge-base = origin/main
+[user]
+	name = José Carlos Martínez Rollins
+	email = josecarlosmartinezrollin@gmail.com
+[branch "feature/complete-system-integration"]
+	vscode-merge-base = origin/main
+	remote = origin
+	merge = refs/heads/feature/complete-system-integration

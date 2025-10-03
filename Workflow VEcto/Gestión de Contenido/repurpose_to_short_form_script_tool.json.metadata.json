@@ -1,0 +1,1023 @@
+{
+  "workflow_info": {
+    "id": "eFvYD9tEIRChYa1j",
+    "name": "Content - Short Form News Script Generator",
+    "file_name": "repurpose_to_short_form_script_tool.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Gestión de Contenido\\repurpose_to_short_form_script_tool.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true
+  },
+  "structure": {
+    "total_nodes": 45,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.filter",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.executeWorkflow",
+      "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.s3",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.extractFromFile",
+      "n8n-nodes-base.httpRequest"
+    ],
+    "triggers": [
+      {
+        "name": "schedule_trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -544,
+          0
+        ]
+      },
+      {
+        "name": "workflow_trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -544,
+          -176
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "filter_only_markdown",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          240,
+          0
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -48,
+          -80
+        ]
+      },
+      {
+        "name": "exclude_newsletters",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          768,
+          0
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -48,
+          224
+        ]
+      },
+      {
+        "name": "combine_markdown_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2160,
+          32
+        ]
+      },
+      {
+        "name": "aggregate_markdown_content",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1888,
+          0
+        ]
+      },
+      {
+        "name": "prepare_markdown_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1600,
+          0
+        ]
+      },
+      {
+        "name": "get_markdown_file_content",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          1328,
+          0
+        ]
+      },
+      {
+        "name": "get_markdown_object_info",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          512,
+          0
+        ]
+      },
+      {
+        "name": "search_markdown_objects",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          -16,
+          0
+        ]
+      },
+      {
+        "name": "extract_tweets",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          512,
+          304
+        ]
+      },
+      {
+        "name": "search_tweets",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          -16,
+          304
+        ]
+      },
+      {
+        "name": "download_tweet_objects",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          240,
+          304
+        ]
+      },
+      {
+        "name": "prepare_tweet_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1040,
+          304
+        ]
+      },
+      {
+        "name": "get_tweet_object_info",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          768,
+          304
+        ]
+      },
+      {
+        "name": "aggregate_tweet_content",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1328,
+          304
+        ]
+      },
+      {
+        "name": "combine_tweet_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2160,
+          320
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -48,
+          528
+        ]
+      },
+      {
+        "name": "pick_stories",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          240,
+          752
+        ]
+      },
+      {
+        "name": "build_prompt",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -16,
+          752
+        ]
+      },
+      {
+        "name": "set_stories",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1664,
+          752
+        ]
+      },
+      {
+        "name": "split_stories",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          2160,
+          752
+        ]
+      },
+      {
+        "name": "share_story",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          368,
+          1152
+        ]
+      },
+      {
+        "name": "iterate_stories",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          -16,
+          1072
+        ]
+      },
+      {
+        "name": "set_current_story",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          192,
+          1152
+        ]
+      },
+      {
+        "name": "share_initial_msg",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1168,
+          752
+        ]
+      },
+      {
+        "name": "download_markdown_objects",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          1040,
+          0
+        ]
+      },
+      {
+        "name": "scrape_url",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          912,
+          1152
+        ]
+      },
+      {
+        "name": "set_source_urls",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          544,
+          1152
+        ]
+      },
+      {
+        "name": "split_urls",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          720,
+          1152
+        ]
+      },
+      {
+        "name": "filter_errors",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1088,
+          1152
+        ]
+      },
+      {
+        "name": "share_scripts",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1872,
+          1152
+        ]
+      },
+      {
+        "name": "claude-4-sonnet",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "position": [
+          1472,
+          1632
+        ]
+      },
+      {
+        "name": "write_scripts",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1424,
+          1152
+        ]
+      },
+      {
+        "name": "script_output_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          1520,
+          1392
+        ]
+      },
+      {
+        "name": "story_output_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          352,
+          960
+        ]
+      },
+      {
+        "name": "split_scripts",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1728,
+          1152
+        ]
+      },
+      {
+        "name": "set_slack_channel_id",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          720,
+          752
+        ]
+      },
+      {
+        "name": "share_context",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          2160,
+          1152
+        ]
+      },
+      {
+        "name": "aggregate_msgs",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2016,
+          1152
+        ]
+      },
+      {
+        "name": "aggregate_scrape_results",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          1264,
+          1152
+        ]
+      },
+      {
+        "name": "set_date",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -272,
+          0
+        ]
+      },
+      {
+        "name": "set_top_story_script",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2160,
+          992
+        ]
+      }
+    ],
+    "connections_count": 41
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "complexity_score": 1110,
+    "quality_score": 0.75,
+    "keywords": [
+      "sticky note6",
+      "filter_errors",
+      "split_scripts",
+      "download_tweet_objects",
+      "complex",
+      "share_initial_msg",
+      "slack",
+      "aggregate_markdown_content",
+      "ai-ml",
+      "executeWorkflowTrigger",
+      "set_current_story",
+      "iterate_stories",
+      "story_output_parser",
+      "download_markdown_objects",
+      "scheduleTrigger",
+      "extractFromFile",
+      "share_context",
+      "pick_stories",
+      "set",
+      "write_scripts",
+      "webhook integration",
+      "set_slack_channel_id",
+      "claude-4-sonnet",
+      "scrape_url",
+      "get_markdown_object_info",
+      "search_tweets",
+      "share_story",
+      "share_scripts",
+      "set_top_story_script",
+      "filter",
+      "exclude_newsletters",
+      "aggregate_scrape_results",
+      "workflow_trigger",
+      "httpRequest",
+      "splitOut",
+      "split_urls",
+      "stickyNote",
+      "get_tweet_object_info",
+      "sticky note",
+      "extract_tweets",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "filter_only_markdown",
+      "splitInBatches",
+      "set_source_urls",
+      "aggregate",
+      "@n8n/n8n nodes langchain.lmChatAnthropic",
+      "prepare_markdown_content",
+      "build_prompt",
+      "prepare_tweet_content",
+      "split_stories",
+      "search_markdown_objects",
+      "script_output_parser",
+      "sticky note1",
+      "set_date",
+      "combine_tweet_content",
+      "get_markdown_file_content",
+      "set_stories",
+      "combine_markdown_content",
+      "aggregate_msgs",
+      "aggregate_tweet_content",
+      "schedule_trigger",
+      "executeWorkflow"
+    ],
+    "description": "'Content - Short Form News Script Generator' es un workflow diseñado para webhook integration con 45 nodos con 2 disparadores que ejecuta: filter_only_markdown, Sticky Note, exclude_newsletters en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Content - Short Form News Script Generator. Nodos: filter_only_markdown (filter), Sticky Note (stickyNote), exclude_newsletters (filter), Sticky Note6 (stickyNote), combine_markdown_content (set), aggregate_markdown_content (aggregate), prepare_markdown_content (set), get_markdown_file_content (extractFromFile), get_markdown_object_info (httpRequest), search_markdown_objects (s3), extract_tweets (extractFromFile), search_tweets (s3), download_tweet_objects (s3), prepare_tweet_content (set), get_tweet_object_info (httpRequest), aggregate_tweet_content (aggregate), combine_tweet_content (set), Sticky Note1 (stickyNote), pick_stories (@n8n/n8n-nodes-langchain.chainLlm), build_prompt (set), schedule_trigger (scheduleTrigger), set_stories (set), split_stories (splitOut), share_story (slack), iterate_stories (splitInBatches), set_current_story (set), share_initial_msg (slack), download_markdown_objects (s3), scrape_url (executeWorkflow), set_source_urls (set), split_urls (splitOut), filter_errors (filter), share_scripts (slack), claude-4-sonnet (@n8n/n8n-nodes-langchain.lmChatAnthropic), write_scripts (@n8n/n8n-nodes-langchain.chainLlm), script_output_parser (@n8n/n8n-nodes-langchain.outputParserStructured), story_output_parser (@n8n/n8n-nodes-langchain.outputParserStructured), split_scripts (splitOut), set_slack_channel_id (set), share_context (slack), aggregate_msgs (aggregate), aggregate_scrape_results (aggregate), workflow_trigger (executeWorkflowTrigger), set_date (set), set_top_story_script (set). Propósito: webhook integration. Categoría: ai-ml. Disparadores: schedule_trigger, workflow_trigger"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": true,
+    "has_conditional_logic": false,
+    "has_error_handling": true
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 0.9999999403953552,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:27:59.113551"
+  },
+  "semantic_vector": [
+    -0.060078468173742294,
+    -0.06646770983934402,
+    0.005727085284888744,
+    -0.03992922231554985,
+    -0.05154280737042427,
+    -0.053792014718055725,
+    0.05382998660206795,
+    0.003714105347171426,
+    -0.06227623671293259,
+    0.049204353243112564,
+    -0.04851774126291275,
+    0.010294844396412373,
+    -0.02513093501329422,
+    -0.030873876065015793,
+    0.017896289005875587,
+    0.0666007250547409,
+    0.012012929655611515,
+    -0.0164085254073143,
+    -0.030127331614494324,
+    -0.024767866358160973,
+    -0.031196225434541702,
+    0.030469713732600212,
+    -0.014689617790281773,
+    0.03978660702705383,
+    0.023970237001776695,
+    0.008178912103176117,
+    0.02301858179271221,
+    0.04284399375319481,
+    0.007969741709530354,
+    -0.0037001094315201044,
+    0.061345603317022324,
+    -0.04706829413771629,
+    -0.06361149251461029,
+    -0.031939707696437836,
+    0.053478214889764786,
+    0.024196024984121323,
+    0.0659501850605011,
+    -0.009382929652929306,
+    0.03229355067014694,
+    -0.05884943902492523,
+    -0.012713480740785599,
+    0.0554296039044857,
+    0.05438830703496933,
+    0.05329376459121704,
+    0.06546507775783539,
+    -0.017386464402079582,
+    0.061337050050497055,
+    0.046325020492076874,
+    -0.03059941716492176,
+    0.022025074809789658,
+    0.017222704365849495,
+    0.010152352973818779,
+    -0.06659375876188278,
+    -0.06363186240196228,
+    -0.04114226624369621,
+    -0.05764510855078697,
+    0.06551187485456467,
+    0.020705047994852066,
+    -0.04586753994226456,
+    -0.007618647534400225,
+    0.021252324804663658,
+    -0.00783969834446907,
+    0.04706963896751404,
+    0.0660088062286377,
+    0.0585162416100502,
+    -0.0072395214810967445,
+    0.05931173637509346,
+    -0.024474037811160088,
+    0.0656711682677269,
+    -0.06251785904169083,
+    -0.05109928920865059,
+    0.04064510390162468,
+    0.05060233920812607,
+    0.03945603594183922,
+    0.014172089286148548,
+    0.02703283540904522,
+    0.04799789562821388,
+    -0.06541875749826431,
+    -0.025943947955965996,
+    -0.033748455345630646,
+    0.06367214024066925,
+    0.013243850320577621,
+    0.03376855328679085,
+    -0.06134708225727081,
+    0.026769153773784637,
+    0.04537609964609146,
+    0.022151390090584755,
+    -0.013359264470636845,
+    0.0072968690656125546,
+    0.06363935768604279,
+    -0.03381950780749321,
+    -0.010983149521052837,
+    0.018761329352855682,
+    0.011386998929083347,
+    0.06141294166445732,
+    -0.0525636151432991,
+    0.007779934909194708,
+    0.06575103104114532,
+    -0.06595846265554428,
+    -0.06548499315977097,
+    -0.013491969555616379,
+    0.021782157942652702,
+    0.057016193866729736,
+    0.012133614160120487,
+    0.017518170177936554,
+    0.014166930690407753,
+    0.06629683077335358,
+    0.03582945838570595,
+    0.024263935163617134,
+    -0.06577638536691666,
+    -0.028987310826778412,
+    -0.039634402841329575,
+    0.06231813505291939,
+    0.02043931558728218,
+    0.034411974251270294,
+    0.0026332249399274588,
+    -0.06400472670793533,
+    -0.023695992305874825,
+    0.03747660294175148,
+    0.05617788806557655,
+    -0.03159105032682419,
+    0.06282082945108414,
+    0.04620416462421417,
+    0.04186831787228584,
+    0.056946903467178345,
+    0.04960227012634277,
+    -0.04064919427037239,
+    -0.005467046983540058,
+    0.020178422331809998,
+    -0.02948922850191593,
+    -0.01918051391839981,
+    -0.045003172010183334,
+    0.06510874629020691,
+    -0.06282726675271988,
+    0.033369846642017365,
+    -0.05789104104042053,
+    0.04168039932847023,
+    -0.04886937513947487,
+    -0.06314835697412491,
+    -0.06446211040019989,
+    -0.03376312926411629,
+    0.06660005450248718,
+    -0.0386829599738121,
+    0.007575759664177895,
+    -0.05302813649177551,
+    -0.06648290157318115,
+    0.061299342662096024,
+    0.05205361172556877,
+    0.051613472402095795,
+    0.010786620900034904,
+    -0.01625881902873516,
+    0.005818731151521206,
+    -0.014233548194169998,
+    -0.056109797209501266,
+    0.0563214011490345,
+    0.06328755617141724,
+    -0.05617295950651169,
+    -0.05740766599774361,
+    -0.02437766268849373,
+    0.03616389259696007,
+    -0.010560248978435993,
+    -0.03382032737135887,
+    0.04688560217618942,
+    0.04949550703167915,
+    0.003715327475219965,
+    0.010632921010255814,
+    -0.0652557760477066,
+    0.03660043701529503,
+    0.00217915209941566,
+    -0.02098812907934189,
+    0.04285113513469696,
+    0.046773288398981094,
+    -0.02356639876961708,
+    0.04767946898937225,
+    0.05789991095662117,
+    0.06069302186369896,
+    0.03032120130956173,
+    -0.022968966513872147,
+    0.061397306621074677,
+    -0.05889351665973663,
+    -0.01284442562609911,
+    0.02933144010603428,
+    -0.04746401309967041,
+    -0.009638835676014423,
+    0.06090451776981354,
+    0.037200797349214554,
+    -0.015855802223086357,
+    0.053255703300237656,
+    -0.002129920059815049,
+    -0.0005651224055327475,
+    0.00742750708013773,
+    0.025025490671396255,
+    0.007758104708045721,
+    -0.06352906674146652,
+    -0.05379662290215492,
+    -0.05866901949048042,
+    0.013556327670812607,
+    0.06658996641635895,
+    0.019342530518770218,
+    -0.02436933107674122,
+    0.0364147424697876,
+    0.03676572069525719,
+    -0.01625560224056244,
+    0.06527125835418701,
+    0.027058375999331474,
+    0.018481222912669182,
+    -0.02629498392343521,
+    0.0297200009226799,
+    -0.06517062336206436,
+    -0.020474748685956,
+    0.05696237459778786,
+    0.05478416755795479,
+    0.05044734850525856,
+    -0.0009592800051905215,
+    -0.06659863889217377,
+    -0.004465185105800629,
+    -0.0029250190127640963,
+    0.011266998946666718,
+    0.03719913586974144,
+    -0.0453263483941555,
+    0.027820192277431488,
+    0.06028786674141884,
+    -0.009125057607889175,
+    -0.05271612107753754,
+    -0.04812021180987358,
+    -0.0661267414689064,
+    -0.028729697689414024,
+    0.045248374342918396,
+    -0.06488629430532455,
+    -0.05898849666118622,
+    0.017553122714161873,
+    -0.05655701085925102,
+    0.05835189297795296,
+    -0.06506560742855072,
+    0.05348198488354683,
+    0.05617254227399826,
+    0.06510728597640991,
+    0.04982970282435417,
+    -0.06530999392271042,
+    0.02854653261601925,
+    0.002557385480031371,
+    0.05507946014404297,
+    -0.0007228562026284635,
+    0.04278113320469856,
+    -0.02313118800520897,
+    0.0652201771736145,
+    0.04841858521103859,
+    0.05944790318608284,
+    -0.024331923574209213,
+    0.052241772413253784,
+    -0.060588400810956955,
+    0.0565851666033268,
+    0.051625125110149384,
+    -0.0036726691760122776,
+    0.06368530541658401,
+    -0.05793974921107292,
+    0.032956041395664215,
+    0.06660208851099014,
+    0.00683716731145978,
+    0.02261236310005188,
+    0.057453371584415436,
+    -0.011444157920777798,
+    0.014266817830502987,
+    0.0663285180926323,
+    0.011376602575182915,
+    -0.02983109839260578,
+    -0.0157315656542778,
+    0.057301200926303864,
+    -0.06365624070167542,
+    0.05205332860350609,
+    -0.05810171365737915,
+    0.06321797519922256,
+    0.012815328314900398,
+    0.06591134518384933,
+    0.018512291833758354,
+    -0.05763443559408188,
+    -0.011620922945439816,
+    0.029716551303863525,
+    0.05637727677822113,
+    0.0641065239906311,
+    -0.004328901879489422,
+    0.06579350680112839,
+    0.06107014790177345,
+    -0.037349600344896317,
+    0.053227219730615616,
+    -0.04666083678603172,
+    0.039670828729867935,
+    0.0658339187502861,
+    -0.04036093130707741,
+    0.06395906209945679,
+    -0.05702294781804085,
+    0.05053374916315079,
+    0.06208661198616028,
+    -0.04058755934238434,
+    0.01000277791172266,
+    -0.03689410164952278,
+    -0.05887794494628906,
+    0.06052340939640999,
+    0.04775690659880638,
+    0.04508034139871597,
+    0.005193691700696945,
+    0.013597785495221615,
+    0.05756235495209694,
+    -0.04090893268585205,
+    -0.027138400822877884,
+    0.053358592092990875,
+    -0.008087814785540104,
+    -0.05909585952758789,
+    0.06563716381788254,
+    -0.03905819356441498,
+    0.022136323153972626,
+    -0.013721679337322712,
+    0.006892481353133917,
+    -0.0366249606013298,
+    -0.04507508873939514,
+    -0.06496743112802505,
+    0.051989711821079254,
+    -0.04659796133637428,
+    -0.05989016965031624,
+    -0.02183576487004757,
+    0.059494927525520325,
+    -0.01475368719547987,
+    0.04195611923933029,
+    -0.05890485271811485,
+    0.03718952462077141,
+    -0.054745860397815704,
+    -0.031688109040260315,
+    -0.03233414888381958,
+    -0.03460308164358139,
+    -0.023357762023806572,
+    -0.0366571843624115,
+    -0.06169937551021576,
+    0.02866848185658455,
+    0.06509199738502502,
+    0.03689824417233467,
+    0.06017526611685753,
+    0.060038529336452484,
+    0.03949959948658943,
+    -0.007927305996418,
+    -0.05701639875769615,
+    -0.0386979766190052,
+    -0.0006706981803290546,
+    0.0563151054084301,
+    -0.06042023003101349,
+    -0.06653094291687012,
+    0.04337235540151596,
+    -0.0037003892939537764,
+    0.014180057682096958,
+    0.056312963366508484,
+    0.044048063457012177,
+    0.051792290061712265,
+    0.05643821507692337,
+    -0.017784729599952698,
+    0.032647933810949326,
+    0.01736152358353138,
+    0.013625000603497028,
+    -0.06652243435382843,
+    -0.046322621405124664,
+    0.014733749441802502,
+    0.041680533438920975,
+    0.061108190566301346,
+    -0.03496520221233368,
+    -0.06656136363744736,
+    0.06560955941677094,
+    0.03353685885667801,
+    0.0645328238606453,
+    0.03439844027161598,
+    -0.05106598138809204,
+    0.0121577437967062,
+    -0.008804160170257092,
+    -0.045333001762628555,
+    -0.06314270943403244,
+    0.006975447293370962,
+    0.010530488565564156,
+    0.05986850708723068,
+    0.05823749303817749,
+    -0.0082333292812109,
+    -0.06349323689937592,
+    -0.047062937170267105,
+    -0.06155167520046234,
+    -0.004930801223963499,
+    -0.03707216680049896,
+    -0.018397942185401917,
+    -0.05259537696838379,
+    -0.014379916712641716,
+    0.026445183902978897,
+    0.06467727571725845,
+    -0.036112211644649506,
+    -0.043447840958833694,
+    -0.054331399500370026,
+    0.05409577116370201,
+    -0.05982319638133049,
+    0.0605289451777935,
+    0.05220338702201843,
+    -0.037183113396167755,
+    0.05913250148296356,
+    0.031117577105760574,
+    -0.055612750351428986,
+    0.025392508134245872,
+    -0.049187351018190384,
+    0.026138119399547577,
+    -0.02220996469259262,
+    -0.049336694180965424,
+    0.05689655616879463,
+    -0.03700938820838928,
+    -0.06477668881416321,
+    -0.063994862139225,
+    -0.0020539744291454554,
+    0.06425046920776367,
+    0.06592249125242233,
+    -0.05804203450679779,
+    0.04123509302735329,
+    -0.0368785634636879,
+    0.012468560598790646,
+    0.023709123954176903,
+    -0.04334975406527519,
+    -0.015684790909290314,
+    -0.0206491407006979,
+    0.05130011960864067,
+    0.003927409648895264,
+    0.05316164717078209,
+    0.037231795489788055,
+    -0.008377421647310257,
+    0.034762583673000336,
+    -0.03009176254272461,
+    -0.054301220923662186,
+    -0.06624609977006912,
+    -0.06545840948820114,
+    -0.01137557253241539,
+    0.01961183361709118,
+    -0.040108583867549896,
+    0.041515957564115524,
+    -0.044034309685230255,
+    0.03873613104224205,
+    -0.06052966043353081,
+    -0.004930291790515184,
+    -0.03862767294049263,
+    -0.06186840683221817,
+    -0.06430387496948242,
+    0.018704470247030258,
+    -0.03778284788131714,
+    -0.05969450622797012,
+    -0.04465042054653168,
+    -0.059206120669841766,
+    -0.0205045398324728,
+    -0.06436196714639664,
+    -0.02124517410993576,
+    0.045786064118146896,
+    -0.05836993828415871,
+    -0.0037038337904959917,
+    -0.03872085362672806,
+    0.01213743444532156,
+    0.0622156597673893,
+    -0.014364962466061115,
+    -0.01887214370071888,
+    -0.06339402496814728,
+    -0.06484247744083405,
+    0.06295321881771088,
+    0.05925814434885979,
+    -0.03001142479479313,
+    -0.034712329506874084,
+    -0.014381886459887028,
+    0.060765914618968964,
+    0.045689165592193604,
+    0.003918128088116646,
+    -0.0648503452539444,
+    0.003172348253428936,
+    0.043301042169332504,
+    -0.05708245187997818,
+    0.023653529584407806,
+    0.05441154167056084,
+    0.020075194537639618,
+    -0.012213697656989098,
+    0.03607791289687157,
+    -0.001999074826017022,
+    0.02076343446969986,
+    0.03624685853719711,
+    -0.031449489295482635,
+    -0.04586509242653847,
+    0.00894332118332386,
+    -0.06166263669729233,
+    0.02630840800702572,
+    0.0021665929816663265,
+    -0.05653480440378189,
+    -0.029926583170890808,
+    0.061834197491407394,
+    -0.02192631922662258,
+    -0.05589260533452034,
+    0.038023293018341064,
+    0.04695884883403778,
+    -0.04469306021928787,
+    0.06470906734466553,
+    0.0010502699296921492,
+    -0.006032486911863089,
+    -0.03870243951678276,
+    0.06557630002498627,
+    -0.024784056469798088,
+    0.019781548529863358,
+    -0.0378267839550972,
+    0.05118362233042717,
+    -0.04708488658070564,
+    -0.0616372711956501,
+    0.06484702974557877,
+    -0.06627766788005829,
+    -0.027179906144738197,
+    -0.017974313348531723,
+    0.061219554394483566,
+    0.006986158899962902,
+    -0.003206481458619237,
+    0.0662417858839035,
+    0.028881089761853218,
+    -0.061304930597543716
+  ],
+  "search_tags": [
+    "uses:splitInBatches",
+    "purpose:webhook-integration",
+    "uses:httpRequest",
+    "uses:@n8n/n8n-nodes-langchain.lmChatAnthropic",
+    "uses:filter",
+    "uses:executeWorkflow",
+    "uses:splitOut",
+    "uses:aggregate",
+    "uses:s3",
+    "uses:scheduleTrigger",
+    "complexity:high",
+    "uses:slack",
+    "uses:extractFromFile",
+    "trigger:scheduleTrigger",
+    "trigger:executeWorkflowTrigger",
+    "uses:@n8n/n8n-nodes-langchain.outputParserStructured",
+    "uses:@n8n/n8n-nodes-langchain.chainLlm",
+    "category:ai-ml",
+    "uses:executeWorkflowTrigger",
+    "uses:stickyNote",
+    "uses:set"
+  ],
+  "category_info": {
+    "category_name": "Gestión de Contenido",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Gestión de Contenido"
+  }
+}

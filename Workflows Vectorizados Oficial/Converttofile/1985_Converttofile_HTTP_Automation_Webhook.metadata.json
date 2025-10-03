@@ -1,0 +1,1061 @@
+{
+  "workflow_info": {
+    "id": "tnRYt0kDGMO9BBFd",
+    "name": "n8n Graphic Design Team",
+    "display_name": "n8n Graphic Design Team",
+    "file_name": "1985_Converttofile_HTTP_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Converttofile\\1985_Converttofile_HTTP_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "290f2bbca7c8"
+  },
+  "structure": {
+    "total_nodes": 37,
+    "node_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.convertToFile",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.googleSheets",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.gmail",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.googleDrive",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.convertToFile",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.switch",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 7
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 1
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          60,
+          -380
+        ]
+      },
+      {
+        "name": "On form submission",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          60,
+          -60
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Google Sheets",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1900,
+          -60
+        ]
+      },
+      {
+        "name": "SetImageData",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1020,
+          -60
+        ]
+      },
+      {
+        "name": "Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1600,
+          -60
+        ]
+      },
+      {
+        "name": "Download Image3",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          500,
+          180
+        ]
+      },
+      {
+        "name": "ideogram Remix",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          740,
+          180
+        ]
+      },
+      {
+        "name": "Set Upload Fields1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1020,
+          180
+        ]
+      },
+      {
+        "name": "Structured Output Parser1",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          1320,
+          640
+        ]
+      },
+      {
+        "name": "Switch1",
+        "type": "n8n-nodes-base.switch",
+        "position": [
+          1600,
+          640
+        ]
+      },
+      {
+        "name": "Image Reviewer",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          1080,
+          420
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          1020,
+          640
+        ]
+      },
+      {
+        "name": "Google Drive Remix Image",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1600,
+          180
+        ]
+      },
+      {
+        "name": "Google Sheets - Add Remix",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          1900,
+          180
+        ]
+      },
+      {
+        "name": "genImageURL1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2240,
+          -60
+        ]
+      },
+      {
+        "name": "genImageURL2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2240,
+          180
+        ]
+      },
+      {
+        "name": "Download Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          740,
+          420
+        ]
+      },
+      {
+        "name": "TheImageURL",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          500,
+          420
+        ]
+      },
+      {
+        "name": "Gmail",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1900,
+          800
+        ]
+      },
+      {
+        "name": "creative brief",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          280,
+          -60
+        ]
+      },
+      {
+        "name": "Ideogram Image generator",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          740,
+          -60
+        ]
+      },
+      {
+        "name": "GET image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1320,
+          -60
+        ]
+      },
+      {
+        "name": "RE creative brief",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          280,
+          180
+        ]
+      },
+      {
+        "name": "Get Remixed Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1320,
+          180
+        ]
+      },
+      {
+        "name": "Convert to File",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          1320,
+          -380
+        ]
+      },
+      {
+        "name": "Spreadsheet",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1020,
+          -380
+        ]
+      },
+      {
+        "name": "Google Drive - Create Folder",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          480,
+          -380
+        ]
+      },
+      {
+        "name": "Google Drive - Create Generations Folder",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          740,
+          -380
+        ]
+      },
+      {
+        "name": "Google Drive - Upload Spreadsheet",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1600,
+          -380
+        ]
+      },
+      {
+        "name": "Gmail - Send Setup Details",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          1900,
+          -380
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -20,
+          -460
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -500,
+          -60
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1820,
+          -140
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -500,
+          -460
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1820,
+          680
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1820,
+          -500
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          480,
+          900
+        ]
+      }
+    ],
+    "connections_count": 28,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": false,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 35
+    }
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "file processing",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1020,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "googleDrive",
+      "creative brief",
+      "sticky note5",
+      "ideogram remix",
+      "setimagedata",
+      "google drive",
+      "download image3",
+      "file processing",
+      "structured output parser1",
+      "switch",
+      "formTrigger",
+      "get image",
+      "on form submission",
+      "sticky note3",
+      "openai chat model1",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "stickyNote",
+      "set upload fields1",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "convertToFile",
+      "google sheets - add remix",
+      "productivity",
+      "switch1",
+      "re creative brief",
+      "spreadsheet",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "google drive remix image",
+      "httpRequest",
+      "download image",
+      "sticky note2",
+      "google drive - create generations folder",
+      "google sheets",
+      "theimageurl",
+      "sticky note4",
+      "set",
+      "convert to file",
+      "image reviewer",
+      "genimageurl1",
+      "genimageurl2",
+      "ideogram image generator",
+      "sticky note",
+      "googleSheets",
+      "gmail",
+      "complex",
+      "google drive - upload spreadsheet",
+      "manualTrigger",
+      "gmail - send setup details",
+      "sticky note1",
+      "when clicking ‘test workflow’",
+      "google drive - create folder",
+      "get remixed image"
+    ],
+    "description": "'n8n Graphic Design Team' es un workflow diseñado para file processing con 37 nodos con 2 disparadores que ejecuta: Google Sheets, SetImageData, Google Drive en la categoría de productivity.",
+    "semantic_content": "Workflow: n8n Graphic Design Team. Nodos: Google Sheets (googleSheets), SetImageData (set), Google Drive (googleDrive), Download Image3 (httpRequest), ideogram Remix (httpRequest), Set Upload Fields1 (set), Structured Output Parser1 (@n8n/n8n-nodes-langchain.outputParserStructured), Switch1 (switch), Image Reviewer (@n8n/n8n-nodes-langchain.chainLlm), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Google Drive Remix Image (googleDrive), Google Sheets - Add Remix (googleSheets), genImageURL1 (set), genImageURL2 (set), Download Image (httpRequest), TheImageURL (set), Gmail (gmail), creative brief (set), Ideogram Image generator (httpRequest), GET image (httpRequest), RE creative brief (set), Get Remixed Image (httpRequest), When clicking ‘Test workflow’ (manualTrigger), Convert to File (convertToFile), Spreadsheet (set), Google Drive - Create Folder (googleDrive), Google Drive - Create Generations Folder (googleDrive), Google Drive - Upload Spreadsheet (googleDrive), Gmail - Send Setup Details (gmail), Sticky Note (stickyNote), Sticky Note1 (stickyNote), On form submission (formTrigger), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote). Propósito: file processing. Categoría: productivity. Disparadores: When clicking ‘Test workflow’, On form submission",
+    "business_context": "Email Marketing"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.formTrigger",
+      "Google Sheets",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.set",
+      "On form submission",
+      "Google Drive",
+      "SetImageData"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.gmail",
+      "n8n-nodes-base.googledrive",
+      "n8n-nodes-base.httprequest",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.converttofile",
+      "n8n-nodes-base.googlesheets",
+      "n8n-nodes-base.formtrigger",
+      "n8n-nodes-base.switch",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "http",
+      "converttofile",
+      "1985_converttofile_http_automation_webhook",
+      "webhook",
+      "1985",
+      "automation"
+    ],
+    "alternative_names": [
+      "n8n Graphic Design Team"
+    ],
+    "related_concepts": [
+      "productivity",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.formTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 72.54901960784314,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 84.50980392156862
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:06.764234"
+  },
+  "semantic_vector": [
+    -0.05634597688913345,
+    -0.05609387904405594,
+    0.055857688188552856,
+    -0.04923061653971672,
+    0.008334278129041195,
+    0.04899892583489418,
+    0.0410555824637413,
+    0.056327469646930695,
+    -0.05396223068237305,
+    0.03227590397000313,
+    -0.05645669251680374,
+    0.028422148898243904,
+    -0.00532457884401083,
+    -0.05675305426120758,
+    -0.04705125093460083,
+    0.05683191493153572,
+    -0.04121411219239235,
+    -0.006922132335603237,
+    -0.05596872791647911,
+    -0.04880921170115471,
+    -0.02500995434820652,
+    -0.044929444789886475,
+    0.05530321225523949,
+    -0.0070252800360322,
+    -0.016298310831189156,
+    -0.010888681747019291,
+    -0.052226267755031586,
+    0.04867168888449669,
+    -0.046220794320106506,
+    -0.03753690421581268,
+    -0.014078170992434025,
+    0.026962142437696457,
+    0.042805254459381104,
+    -0.05674067884683609,
+    0.05568965524435043,
+    -0.04280954599380493,
+    -0.02359127625823021,
+    -0.051684360951185226,
+    0.02966148406267166,
+    -0.05539929121732712,
+    0.05235860496759415,
+    0.05606758967041969,
+    -0.0487980954349041,
+    -0.022449173033237457,
+    0.056827809661626816,
+    0.03937345743179321,
+    0.04809274151921272,
+    0.0560956634581089,
+    0.038095761090517044,
+    -0.04885760694742203,
+    -0.025389976799488068,
+    -0.04191233962774277,
+    -0.05682874098420143,
+    0.016347814351320267,
+    -0.05600547417998314,
+    -0.04242491349577904,
+    0.044915325939655304,
+    -0.01199627760797739,
+    0.016724705696105957,
+    0.0012764206621795893,
+    -0.021707741543650627,
+    0.03386521711945534,
+    -0.05441664159297943,
+    0.05668007954955101,
+    0.05555795878171921,
+    0.005119561683386564,
+    0.03419596701860428,
+    -0.04129251465201378,
+    0.056571003049612045,
+    -0.02427377738058567,
+    -0.056816551834344864,
+    -0.020758042111992836,
+    0.02483578585088253,
+    -0.04378647357225418,
+    0.010216924361884594,
+    -0.0439351424574852,
+    0.0517478808760643,
+    -0.05645930767059326,
+    -0.046194057911634445,
+    0.044325679540634155,
+    0.026202572509646416,
+    -0.037470899522304535,
+    0.02105523832142353,
+    -0.018625054508447647,
+    -0.02420535683631897,
+    0.03992141783237457,
+    -0.04600590094923973,
+    -0.03365232050418854,
+    0.034158799797296524,
+    0.031741730868816376,
+    -0.019261637702584267,
+    0.009920116513967514,
+    0.03534828871488571,
+    0.053444162011146545,
+    0.05652211233973503,
+    0.045661114156246185,
+    0.02544368989765644,
+    0.0012042471207678318,
+    -0.055155422538518906,
+    -0.05682983249425888,
+    -0.011524478904902935,
+    0.008304978720843792,
+    -0.022202065214514732,
+    0.047234006226062775,
+    0.04808208346366882,
+    -0.05230669304728508,
+    0.056805532425642014,
+    0.049104176461696625,
+    0.050774361938238144,
+    -0.05683077499270439,
+    -0.0005735463346354663,
+    -0.03284837305545807,
+    0.05328281223773956,
+    0.053180743008852005,
+    -0.039935529232025146,
+    0.026758946478366852,
+    -0.05436552315950394,
+    -0.030764378607273102,
+    0.056762147694826126,
+    0.03801178187131882,
+    -0.056830551475286484,
+    -0.030950745567679405,
+    0.004191411659121513,
+    0.052880335599184036,
+    0.05175407975912094,
+    0.04895367845892906,
+    -0.05564241483807564,
+    -0.05560239404439926,
+    0.016011927276849747,
+    -0.05095192790031433,
+    -0.05333323776721954,
+    0.033492401242256165,
+    0.05292060598731041,
+    0.021601548418402672,
+    -0.05621051415801048,
+    -0.0399690642952919,
+    0.034340981394052505,
+    0.05562268942594528,
+    -0.05206168442964554,
+    -0.03023400343954563,
+    0.007215932477265596,
+    0.05683179944753647,
+    -0.03377215936779976,
+    0.03629405051469803,
+    -0.04899078607559204,
+    -0.05648261681199074,
+    0.056786928325891495,
+    -0.054494328796863556,
+    0.04132556915283203,
+    0.05580829828977585,
+    -0.0527467280626297,
+    -0.04653939604759216,
+    0.04898738116025925,
+    -0.044604554772377014,
+    0.05261199548840523,
+    0.04734131693840027,
+    -0.04810786247253418,
+    -0.035090938210487366,
+    -0.05348113551735878,
+    -0.05001451075077057,
+    -0.054043516516685486,
+    -0.03353476524353027,
+    0.05101720988750458,
+    0.04980786517262459,
+    0.021659674122929573,
+    -0.011036396957933903,
+    -0.056771181523799896,
+    -0.03764554485678673,
+    -0.05639385059475899,
+    -0.02318812534213066,
+    0.0007365249912254512,
+    0.05100991204380989,
+    -0.05655614286661148,
+    -0.051349662244319916,
+    -0.006658670026808977,
+    0.05651954188942909,
+    0.05560556799173355,
+    -0.0567505918443203,
+    0.04925321415066719,
+    0.029368964955210686,
+    -0.04660424590110779,
+    -0.0012249614810571074,
+    -0.056402429938316345,
+    0.05079583823680878,
+    0.05192488431930542,
+    0.05315147712826729,
+    -0.05683188885450363,
+    0.03357231244444847,
+    0.04722157120704651,
+    0.045808952301740646,
+    -0.05605537071824074,
+    0.05615929514169693,
+    -0.02802516706287861,
+    -0.05521679297089577,
+    -0.056805338710546494,
+    -0.05675039440393448,
+    0.007177256513386965,
+    0.05683191493153572,
+    0.012597596272826195,
+    -0.015111440792679787,
+    0.02228781022131443,
+    0.05531793087720871,
+    0.0392780601978302,
+    0.0376545675098896,
+    0.03749719262123108,
+    -0.04105859249830246,
+    0.03807850182056427,
+    0.024824634194374084,
+    -0.05497122183442116,
+    -0.019371556118130684,
+    0.04244863986968994,
+    0.04911916330456734,
+    0.056395210325717926,
+    0.05620215833187103,
+    -0.05682416260242462,
+    -0.0553797148168087,
+    0.042436592280864716,
+    0.043214015662670135,
+    0.026836644858121872,
+    0.04447878897190094,
+    0.014081034809350967,
+    0.05488506332039833,
+    0.043144408613443375,
+    -0.00192003243137151,
+    -0.017825258895754814,
+    -0.056662317365407944,
+    -0.0033209568355232477,
+    -0.0022613212931901217,
+    -0.03805623576045036,
+    -0.052675798535346985,
+    -0.0508740209043026,
+    -0.05621948838233948,
+    0.05134277418255806,
+    -0.05682608112692833,
+    -0.05610443279147148,
+    0.05584007874131203,
+    0.0565837062895298,
+    0.056615035980939865,
+    -0.05640757456421852,
+    0.02973353862762451,
+    -0.05380246043205261,
+    0.05491916462779045,
+    -0.050056442618370056,
+    0.021344875916838646,
+    -0.0040030088275671005,
+    0.05657662823796272,
+    0.039974331855773926,
+    0.030104510486125946,
+    0.05306306481361389,
+    0.05386264622211456,
+    -0.05683186277747154,
+    0.05643932893872261,
+    -0.016432233154773712,
+    0.04944492131471634,
+    0.05571119859814644,
+    -0.05463753640651703,
+    -0.03579613193869591,
+    0.05683191493153572,
+    -0.05143459886312485,
+    0.026739250868558884,
+    0.038842737674713135,
+    0.0556512326002121,
+    -0.04421933367848396,
+    0.0041814870201051235,
+    -0.05442101135849953,
+    0.034164853394031525,
+    0.04780353978276253,
+    0.018840428441762924,
+    -0.05678746849298477,
+    0.055432677268981934,
+    -0.05486864596605301,
+    0.03379756957292557,
+    -0.05673125758767128,
+    0.055526770651340485,
+    0.03341033309698105,
+    0.023001329973340034,
+    -0.03604269400238991,
+    0.04230204597115517,
+    0.05681891366839409,
+    -0.052785664796829224,
+    0.04415206238627434,
+    -0.041277725249528885,
+    0.05641939118504524,
+    0.04669244959950447,
+    0.0505683533847332,
+    0.048580121248960495,
+    -0.030303455889225006,
+    0.05680416524410248,
+    -0.05209128186106682,
+    0.05669568106532097,
+    -0.049301404505968094,
+    0.03836978226900101,
+    0.056831423193216324,
+    -0.03193370997905731,
+    0.011524760164320469,
+    -0.05680156499147415,
+    0.05667819082736969,
+    0.02299223467707634,
+    0.0029421490617096424,
+    0.05617840960621834,
+    0.02119765616953373,
+    0.0560799278318882,
+    0.054203201085329056,
+    -0.05236450582742691,
+    0.025464409962296486,
+    0.056656789034605026,
+    0.051919687539339066,
+    -0.041823916137218475,
+    0.012603472918272018,
+    0.012192250229418278,
+    -0.03392334654927254,
+    0.0245635025203228,
+    0.05514756962656975,
+    0.008873085491359234,
+    0.029181022197008133,
+    -0.05673403665423393,
+    0.04192425310611725,
+    0.023094430565834045,
+    -0.03605381399393082,
+    -0.0519685260951519,
+    0.04907475411891937,
+    -0.04603955149650574,
+    0.03214138373732567,
+    -0.023253824561834335,
+    0.05165839195251465,
+    -0.032196056097745895,
+    0.05570336803793907,
+    0.04663776233792305,
+    0.05282584950327873,
+    0.022749735042452812,
+    0.0005527663161046803,
+    0.045510172843933105,
+    0.052183881402015686,
+    0.05678072199225426,
+    0.049423396587371826,
+    -0.002310690935701132,
+    0.05653296038508415,
+    0.05486033484339714,
+    0.0550694577395916,
+    0.013831079006195068,
+    0.041839051991701126,
+    -0.038636714220047,
+    0.050367508083581924,
+    -0.05479446426033974,
+    -0.05683030188083649,
+    0.038741257041692734,
+    0.015760580077767372,
+    0.02367475815117359,
+    0.0013530085561797023,
+    0.05653693154454231,
+    0.05642250180244446,
+    -0.04272965341806412,
+    -0.054947756230831146,
+    0.03728700056672096,
+    0.05639272928237915,
+    -0.055743489414453506,
+    -0.056828729808330536,
+    0.006118221208453178,
+    -0.0392160639166832,
+    0.03261548653244972,
+    0.05566634610295296,
+    -0.05542028322815895,
+    -0.0567820779979229,
+    0.0566929467022419,
+    -0.056693729013204575,
+    0.037526629865169525,
+    0.047450266778469086,
+    -0.05463102087378502,
+    0.03347008302807808,
+    -0.000817090563941747,
+    0.002770011080428958,
+    -0.05558406934142113,
+    -0.05627724528312683,
+    0.05597923696041107,
+    0.03408544138073921,
+    0.05427668243646622,
+    0.05033653602004051,
+    -0.056002307683229446,
+    -0.01562031451612711,
+    0.010597207583487034,
+    -0.03835700452327728,
+    -0.01866176910698414,
+    -0.04106825590133667,
+    -0.014371187426149845,
+    0.04093397036194801,
+    0.015289125964045525,
+    0.045157358050346375,
+    0.04458872228860855,
+    0.000714408524800092,
+    -0.056799232959747314,
+    0.02268400229513645,
+    -0.05257630720734596,
+    0.05683019757270813,
+    0.052947577089071274,
+    -0.05577012151479721,
+    0.019916990771889687,
+    0.04773418605327606,
+    0.033336084336042404,
+    -0.04003997892141342,
+    0.04966849088668823,
+    0.04990416020154953,
+    0.053976401686668396,
+    -0.056730035692453384,
+    0.05590192973613739,
+    -0.0457003191113472,
+    -0.019050834700465202,
+    -0.05680597946047783,
+    -0.032497234642505646,
+    0.056818682700395584,
+    0.04454118013381958,
+    0.024383896961808205,
+    0.04032190144062042,
+    -0.029489336535334587,
+    -0.02281101793050766,
+    0.05681502819061279,
+    -0.04920231178402901,
+    0.048507146537303925,
+    -0.05666850134730339,
+    0.05653377249836922,
+    0.01745161972939968,
+    0.008790132589638233,
+    -0.02574661560356617,
+    -0.03266414254903793,
+    -0.049229755997657776,
+    -0.054014790803194046,
+    0.0540839359164238,
+    -0.056659944355487823,
+    0.014157142490148544,
+    -0.04924098402261734,
+    0.05642486363649368,
+    -0.031751133501529694,
+    0.015773573890328407,
+    -0.055389709770679474,
+    0.04787930101156235,
+    -0.05552501976490021,
+    -0.054923951625823975,
+    -0.02128102071583271,
+    -0.05683036893606186,
+    -0.05662418156862259,
+    -0.008833318948745728,
+    -0.05103076249361038,
+    -0.0177982896566391,
+    -0.038730885833501816,
+    -0.04762318357825279,
+    0.051128897815942764,
+    -0.05645102635025978,
+    -0.0564233772456646,
+    -0.04084291681647301,
+    -0.05677497014403343,
+    0.04787829890847206,
+    -0.056147199124097824,
+    0.032811008393764496,
+    0.0549604594707489,
+    0.05648909509181976,
+    0.0436406135559082,
+    -0.05671536922454834,
+    -0.05680517107248306,
+    0.05442313104867935,
+    0.05492046847939491,
+    -0.035139329731464386,
+    0.019506467506289482,
+    0.041942693293094635,
+    0.05498554930090904,
+    0.026120522990822792,
+    -0.03902983292937279,
+    -0.038844477385282516,
+    0.05644998699426651,
+    0.051619984209537506,
+    -0.053027164191007614,
+    0.05660604313015938,
+    0.05544517561793327,
+    0.039559029042720795,
+    -0.024029113352298737,
+    0.0036181022878736258,
+    -0.05499924346804619,
+    0.019869305193424225,
+    0.03689207136631012,
+    0.0021538238506764174,
+    -0.044582806527614594,
+    -0.05679314211010933,
+    -0.05335355922579765,
+    0.05623256415128708,
+    -0.027315692976117134,
+    -0.05559549480676651,
+    0.01000762265175581,
+    -0.03921528905630112,
+    -0.01942644640803337,
+    0.03879556059837341,
+    -0.05369528755545616,
+    0.05358011648058891,
+    -0.010560037568211555,
+    0.05337729677557945,
+    0.030217422172427177,
+    -0.04618777334690094,
+    -0.01278366893529892,
+    0.053645938634872437,
+    2.4250723072327673e-05,
+    0.05072728544473648,
+    -0.053715985268354416,
+    0.054803766310214996,
+    0.04953501373529434,
+    0.034625519067049026,
+    0.04723462089896202,
+    -0.056813739240169525,
+    -0.01311816368252039,
+    -0.05550355836749077,
+    -0.056830983608961105,
+    -0.020928604528307915,
+    0.02008828893303871,
+    0.05419446900486946,
+    -0.0460609532892704,
+    -0.052976783365011215
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: When clicking ‘Test workflow’, On form submission; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for file processing in productivity context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Converttofile",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Converttofile"
+  }
+}

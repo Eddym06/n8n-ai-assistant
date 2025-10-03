@@ -1,0 +1,1074 @@
+{
+  "workflow_info": {
+    "id": "6zSE618gr9fDtAfF",
+    "name": "🤖🧑‍💻 AI Agent  for Top n8n Creators Leaderboard Reporting",
+    "file_name": "1113_Telegram_Splitout_Automation_Scheduled.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram\\1113_Telegram_Splitout_Automation_Scheduled.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": true
+  },
+  "structure": {
+    "total_nodes": 49,
+    "node_types": [
+      "n8n-nodes-base.convertToFile",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.readWriteFile",
+      "n8n-nodes-base.gmail",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "@n8n/n8n-nodes-langchain.agent",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.sort",
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.telegram",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.markdown",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "n8n-nodes-base.splitOut",
+      "@n8n/n8n-nodes-langchain.toolWorkflow"
+    ],
+    "triggers": [
+      {
+        "name": "When Executed by Another Workflow",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -1980,
+          1460
+        ]
+      },
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -2260,
+          380
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "stats_aggregate_creators",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -1240,
+          1300
+        ]
+      },
+      {
+        "name": "stats_aggregate_workflows",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          -1240,
+          1500
+        ]
+      },
+      {
+        "name": "Global Variables",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -1660,
+          1460
+        ]
+      },
+      {
+        "name": "Parse Workflow Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -880,
+          1540
+        ]
+      },
+      {
+        "name": "Parse Creators Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -880,
+          1200
+        ]
+      },
+      {
+        "name": "Aggregate",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          -680,
+          1820
+        ]
+      },
+      {
+        "name": "gpt-4o-mini",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          -1880,
+          780
+        ]
+      },
+      {
+        "name": "Workflow Tool",
+        "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+        "position": [
+          -1540,
+          780
+        ]
+      },
+      {
+        "name": "creator-summary",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          -1140,
+          60
+        ]
+      },
+      {
+        "name": "Workflow Response",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -480,
+          1820
+        ]
+      },
+      {
+        "name": "Save creator-summary.md",
+        "type": "n8n-nodes-base.readWriteFile",
+        "position": [
+          -940,
+          60
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2060,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1640,
+          620
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1980,
+          620
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1240,
+          -60
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1760,
+          1340
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1800,
+          1100
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -980,
+          1100
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -980,
+          1440
+        ]
+      },
+      {
+        "name": "Creators Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -60,
+          1200
+        ]
+      },
+      {
+        "name": "Workflows Data",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -60,
+          1540
+        ]
+      },
+      {
+        "name": "Merge Creators & Workflows",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          240,
+          1540
+        ]
+      },
+      {
+        "name": "Split Out Creators",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -680,
+          1200
+        ]
+      },
+      {
+        "name": "Split Out Workflows",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          -680,
+          1540
+        ]
+      },
+      {
+        "name": "Sort By Top Weekly Creator Inserts",
+        "type": "n8n-nodes-base.sort",
+        "position": [
+          -480,
+          1200
+        ]
+      },
+      {
+        "name": "Sort By Top Weekly Workflow Inserts",
+        "type": "n8n-nodes-base.sort",
+        "position": [
+          -480,
+          1540
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2060,
+          1020
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1340,
+          1140
+        ]
+      },
+      {
+        "name": "Take Top 10 Creators",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          -260,
+          1200
+        ]
+      },
+      {
+        "name": "Take Top 50 Workflows",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          -260,
+          1540
+        ]
+      },
+      {
+        "name": "Google Drive",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          -1040,
+          460
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -320,
+          1060
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1240,
+          300
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -1240,
+          680
+        ]
+      },
+      {
+        "name": "Convert Markdown to HTML",
+        "type": "n8n-nodes-base.markdown",
+        "position": [
+          -1140,
+          780
+        ]
+      },
+      {
+        "name": "n8n Creators Stats Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [
+          -1800,
+          380
+        ]
+      },
+      {
+        "name": "Sticky Note13",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -80,
+          280
+        ]
+      },
+      {
+        "name": "Google Gemini Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          -440,
+          720
+        ]
+      },
+      {
+        "name": "Create Top 10 Workflows List",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          -520,
+          380
+        ]
+      },
+      {
+        "name": "Sticky Note14",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -660,
+          280
+        ]
+      },
+      {
+        "name": "Sticky Note15",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -540,
+          600
+        ]
+      },
+      {
+        "name": "Sticky Note16",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -80,
+          680
+        ]
+      },
+      {
+        "name": "Convert Top 10 Markdown to HTML",
+        "type": "n8n-nodes-base.markdown",
+        "position": [
+          20,
+          780
+        ]
+      },
+      {
+        "name": "Gmail Creators & Workflows Report",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          -940,
+          780
+        ]
+      },
+      {
+        "name": "Telegram Top 10  Workflows List",
+        "type": "n8n-nodes-base.telegram",
+        "position": [
+          20,
+          420
+        ]
+      },
+      {
+        "name": "Gmail Top 10 Workflows List",
+        "type": "n8n-nodes-base.gmail",
+        "position": [
+          220,
+          780
+        ]
+      },
+      {
+        "name": "Sticky Note17",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -2640,
+          580
+        ]
+      }
+    ],
+    "connections_count": 25
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "ai and machine learning",
+    "complexity_score": 1195,
+    "quality_score": 0.5,
+    "keywords": [
+      "telegram",
+      "schedule trigger",
+      "aggregate",
+      "workflow tool",
+      "save creator-summary.md",
+      "googleDrive",
+      "split out workflows",
+      "split out creators",
+      "gmail top 10 workflows list",
+      "workflows data",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "sticky note5",
+      "stats_aggregate_creators",
+      "parse creators data",
+      "create top 10 workflows list",
+      "sticky note13",
+      "limit",
+      "sticky note11",
+      "sticky note4",
+      "executeWorkflowTrigger",
+      "telegram top 10  workflows list",
+      "sticky note9",
+      "sticky note10",
+      "sticky note16",
+      "@n8n/n8n nodes langchain.agent",
+      "parse workflow data",
+      "n8n creators stats agent",
+      "take top 10 creators",
+      "sticky note15",
+      "sticky note2",
+      "creators data",
+      "sticky note12",
+      "sort",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "httpRequest",
+      "stats_aggregate_workflows",
+      "convert markdown to html",
+      "when executed by another workflow",
+      "ai-ml",
+      "stickyNote",
+      "@n8n/n8n nodes langchain.toolWorkflow",
+      "sticky note7",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "sort by top weekly workflow inserts",
+      "sticky note14",
+      "sticky note17",
+      "gpt-4o-mini",
+      "sticky note3",
+      "merge",
+      "convert top 10 markdown to html",
+      "gmail",
+      "creator-summary",
+      "readWriteFile",
+      "take top 50 workflows",
+      "google drive",
+      "gmail creators & workflows report",
+      "convertToFile",
+      "google gemini chat model",
+      "sticky note1",
+      "sticky note8",
+      "splitOut",
+      "workflow response",
+      "merge creators & workflows",
+      "set",
+      "sort by top weekly creator inserts",
+      "ai and machine learning",
+      "markdown",
+      "sticky note",
+      "scheduleTrigger",
+      "complex",
+      "sticky note6",
+      "global variables"
+    ],
+    "description": "'🤖🧑‍💻 AI Agent  for Top n8n Creators Leaderboard Reporting' es un workflow diseñado para ai and machine learning con 49 nodos con 2 disparadores que ejecuta: stats_aggregate_creators, stats_aggregate_workflows, Global Variables en la categoría de ai-ml.",
+    "semantic_content": "Workflow: 🤖🧑‍💻 AI Agent  for Top n8n Creators Leaderboard Reporting. Nodos: stats_aggregate_creators (httpRequest), stats_aggregate_workflows (httpRequest), Global Variables (set), Parse Workflow Data (set), Parse Creators Data (set), Aggregate (aggregate), gpt-4o-mini (@n8n/n8n-nodes-langchain.lmChatOpenAi), When Executed by Another Workflow (executeWorkflowTrigger), Workflow Tool (@n8n/n8n-nodes-langchain.toolWorkflow), creator-summary (convertToFile), Workflow Response (set), Save creator-summary.md (readWriteFile), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Creators Data (set), Workflows Data (set), Merge Creators & Workflows (merge), Split Out Creators (splitOut), Split Out Workflows (splitOut), Sort By Top Weekly Creator Inserts (sort), Sort By Top Weekly Workflow Inserts (sort), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), Schedule Trigger (scheduleTrigger), Take Top 10 Creators (limit), Take Top 50 Workflows (limit), Google Drive (googleDrive), Sticky Note4 (stickyNote), Sticky Note9 (stickyNote), Sticky Note12 (stickyNote), Convert Markdown to HTML (markdown), n8n Creators Stats Agent (@n8n/n8n-nodes-langchain.agent), Sticky Note13 (stickyNote), Google Gemini Chat Model (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), Create Top 10 Workflows List (@n8n/n8n-nodes-langchain.chainLlm), Sticky Note14 (stickyNote), Sticky Note15 (stickyNote), Sticky Note16 (stickyNote), Convert Top 10 Markdown to HTML (markdown), Gmail Creators & Workflows Report (gmail), Telegram Top 10  Workflows List (telegram), Gmail Top 10 Workflows List (gmail), Sticky Note17 (stickyNote). Propósito: ai and machine learning. Categoría: ai-ml. Disparadores: When Executed by Another Workflow, Schedule Trigger"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": true,
+    "has_conditional_logic": false,
+    "has_error_handling": false
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:45.034499"
+  },
+  "semantic_vector": [
+    -0.053491849452257156,
+    -0.05394236743450165,
+    0.053827572613954544,
+    -0.05333603546023369,
+    -0.03936655446887016,
+    -0.053342197090387344,
+    0.03522665798664093,
+    -0.05178821086883545,
+    -0.05341314896941185,
+    0.05359557643532753,
+    -0.05048036947846413,
+    -0.02482895366847515,
+    0.00910080224275589,
+    -0.05390883609652519,
+    -0.053635504096746445,
+    0.053951945155858994,
+    0.053789038211107254,
+    -0.026088744401931763,
+    -0.0536155141890049,
+    0.05236068740487099,
+    -0.029152121394872665,
+    0.010842571035027504,
+    0.007836002856492996,
+    -0.004589338321238756,
+    0.014691862277686596,
+    -0.00839960016310215,
+    -0.05394833907485008,
+    0.052002906799316406,
+    -0.05395038425922394,
+    -0.00017899645899888128,
+    0.007688845973461866,
+    0.0066584930755198,
+    0.05152960121631622,
+    -0.05155351012945175,
+    0.05351562425494194,
+    -0.012204722501337528,
+    -0.05062626674771309,
+    0.022306913509964943,
+    0.0219466183334589,
+    -0.04898781701922417,
+    -0.025609400123357773,
+    0.053229860961437225,
+    -0.039072781801223755,
+    0.05037492886185646,
+    0.05395187437534332,
+    0.05323947221040726,
+    0.008135193027555943,
+    -0.04831625521183014,
+    -0.050717100501060486,
+    -0.025553841143846512,
+    -0.04791538789868355,
+    -0.04958997666835785,
+    -0.05395161733031273,
+    -0.03613487631082535,
+    -0.0530967116355896,
+    -0.05394962057471275,
+    0.05228925496339798,
+    -0.01422846969217062,
+    -0.01104438491165638,
+    0.052254874259233475,
+    0.052862316370010376,
+    -0.04583974555134773,
+    -0.04864618927240372,
+    0.053949374705553055,
+    0.03770216181874275,
+    0.05120979994535446,
+    0.053797315806150436,
+    0.008805620484054089,
+    0.05374911054968834,
+    -0.04768582060933113,
+    -0.053949907422065735,
+    -0.04647115245461464,
+    -0.03899441659450531,
+    0.053949031978845596,
+    0.017793716862797737,
+    -0.05182129517197609,
+    0.05393029749393463,
+    -0.053173571825027466,
+    -0.04748452082276344,
+    0.05026857182383537,
+    0.04784012213349342,
+    0.03681394085288048,
+    0.02140287309885025,
+    -0.05375725030899048,
+    -0.05058147758245468,
+    0.03841419890522957,
+    0.01622936502099037,
+    -0.05373133718967438,
+    -0.025318041443824768,
+    0.050851669162511826,
+    -0.0369601808488369,
+    -0.011354056186974049,
+    0.044558919966220856,
+    -0.049913227558135986,
+    0.05336768925189972,
+    0.015092713758349419,
+    -0.021378401666879654,
+    0.051942527294158936,
+    -0.03792606294155121,
+    -0.05395153537392616,
+    0.03245282545685768,
+    -0.04580864682793617,
+    -0.028984759002923965,
+    0.05164623260498047,
+    0.05263961851596832,
+    0.05054272711277008,
+    0.053924042731523514,
+    0.053076475858688354,
+    0.052482329308986664,
+    -0.053827013820409775,
+    -0.05369235575199127,
+    -0.053878385573625565,
+    0.01757962442934513,
+    0.052054014056921005,
+    0.05284915491938591,
+    0.03680812940001488,
+    -0.04869869723916054,
+    -0.05357597395777702,
+    0.05393306910991669,
+    0.05266083776950836,
+    -0.03441609814763069,
+    -0.017122549936175346,
+    -0.045476753264665604,
+    0.05375171825289726,
+    0.05324811115860939,
+    0.05277681723237038,
+    -0.05185460299253464,
+    0.0011581965954974294,
+    -0.002959003672003746,
+    -0.01594645343720913,
+    -0.05363950878381729,
+    -0.043144505470991135,
+    0.05353401601314545,
+    0.04381638020277023,
+    0.04958963021636009,
+    -0.0524730309844017,
+    0.03688153252005577,
+    0.016833165660500526,
+    0.01853504776954651,
+    -0.04917086288332939,
+    -0.04368105158209801,
+    0.053951945155858994,
+    -0.04727938398718834,
+    0.05217915400862694,
+    -0.03966788202524185,
+    -0.05394772067666054,
+    0.05386527627706528,
+    -0.024353517219424248,
+    0.0537700317800045,
+    0.018793854862451553,
+    -0.053895045071840286,
+    -0.05375727266073227,
+    -0.04550550878047943,
+    -0.048028647899627686,
+    0.053899236023426056,
+    0.05384904146194458,
+    -0.012204315513372421,
+    -0.05274132639169693,
+    0.027864506468176842,
+    -0.05321211367845535,
+    -0.05395115539431572,
+    -0.0539393350481987,
+    0.0538548082113266,
+    0.05389145761728287,
+    0.003765554167330265,
+    -0.049002330750226974,
+    -0.053624317049980164,
+    0.050711553543806076,
+    -0.050277840346097946,
+    -0.04819847643375397,
+    0.05377356708049774,
+    0.035562098026275635,
+    -0.026871370151638985,
+    0.05248621106147766,
+    -0.0531439371407032,
+    0.05389505624771118,
+    0.047727007418870926,
+    -0.05393795296549797,
+    0.03143317252397537,
+    -0.04825970530509949,
+    0.00016032216080930084,
+    -0.02431238256394863,
+    -0.053780995309352875,
+    0.027263496071100235,
+    0.05393034964799881,
+    0.0018128793453797698,
+    -0.053947243839502335,
+    0.038044821470975876,
+    -0.012537664733827114,
+    0.022277239710092545,
+    -0.05186682567000389,
+    0.05345337465405464,
+    -0.016805673018097878,
+    -0.04702671617269516,
+    -0.053950391709804535,
+    -0.053947288542985916,
+    0.03285842761397362,
+    0.053951945155858994,
+    0.012653131037950516,
+    -0.04617473855614662,
+    0.053784213960170746,
+    0.05365142971277237,
+    0.042147982865571976,
+    0.02148512564599514,
+    0.00016689235053490847,
+    1.3081819815852214e-05,
+    -0.024649959057569504,
+    0.047479670494794846,
+    -0.05392809584736824,
+    -0.05350413918495178,
+    0.02899140492081642,
+    0.053682878613471985,
+    0.05345825105905533,
+    0.05050648748874664,
+    -0.05395174399018288,
+    -0.053915735334157944,
+    -0.045383647084236145,
+    0.05359408259391785,
+    0.05331546440720558,
+    0.00048076987150125206,
+    -0.003084913594648242,
+    0.050856802612543106,
+    -0.0162493996322155,
+    0.05109987407922745,
+    -0.03250384330749512,
+    -0.0539388544857502,
+    -0.05254192277789116,
+    -0.053779538720846176,
+    -0.052108194679021835,
+    -0.05388215556740761,
+    0.022969763725996017,
+    -0.0536634661257267,
+    0.007247744593769312,
+    -0.05395157262682915,
+    -0.038153719156980515,
+    0.05381649732589722,
+    0.053946398198604584,
+    0.05394892767071724,
+    -0.053571637719869614,
+    -0.03171505406498909,
+    -0.05365757644176483,
+    0.053863536566495895,
+    -0.028034616261720657,
+    0.05385133996605873,
+    0.0042301020585000515,
+    0.05392767861485481,
+    0.010577011853456497,
+    0.04720187187194824,
+    0.05254834145307541,
+    0.053950101137161255,
+    -0.05395180732011795,
+    0.04345143586397171,
+    0.002498068381100893,
+    -0.05088966712355614,
+    0.05376311391592026,
+    -0.05244976282119751,
+    0.017196349799633026,
+    0.053951945155858994,
+    -0.05240980535745621,
+    0.0046067675575613976,
+    -0.051342591643333435,
+    0.041310667991638184,
+    0.0399516299366951,
+    0.03072594664990902,
+    0.029033297672867775,
+    0.04266873002052307,
+    -0.014093490317463875,
+    0.025598518550395966,
+    -0.053821031004190445,
+    0.05393359437584877,
+    -0.0538092777132988,
+    -0.03270180523395538,
+    -0.05337197333574295,
+    0.015190801583230495,
+    0.05395115911960602,
+    -0.011101894080638885,
+    -0.05310303345322609,
+    -0.022947410121560097,
+    0.05395173281431198,
+    0.011439749039709568,
+    0.009083162061870098,
+    0.051759105175733566,
+    0.05346519872546196,
+    0.02013126015663147,
+    0.04292337968945503,
+    -0.04844377562403679,
+    -0.029349271208047867,
+    0.05384897068142891,
+    0.03878931701183319,
+    0.05390695109963417,
+    -0.022618843242526054,
+    0.05128848925232887,
+    0.053951919078826904,
+    -0.05036007985472679,
+    -0.005399596411734819,
+    -0.036748141050338745,
+    0.02343757078051567,
+    -0.053813111037015915,
+    -0.005079967901110649,
+    0.0533197857439518,
+    -0.04510685056447983,
+    0.032769449055194855,
+    0.05381538346409798,
+    -0.043832894414663315,
+    0.047379981726408005,
+    0.0533565953373909,
+    0.038701675832271576,
+    -0.0331590361893177,
+    0.03193191811442375,
+    -0.0070296782068908215,
+    -0.03638837859034538,
+    -0.04631952568888664,
+    -0.04160308465361595,
+    -0.0021164442878216505,
+    0.05327893793582916,
+    -0.053951695561409,
+    0.05023767799139023,
+    -0.02805894985795021,
+    0.016992509365081787,
+    0.025814799591898918,
+    0.048443347215652466,
+    -0.05243266746401787,
+    0.037593621760606766,
+    0.008455121889710426,
+    0.04659510776400566,
+    -0.052664052695035934,
+    0.05391376093029976,
+    -0.001684995018877089,
+    0.04259885847568512,
+    0.01597866602241993,
+    -0.028996454551815987,
+    -0.053808387368917465,
+    -0.036440130323171616,
+    0.0539470911026001,
+    -0.0406608022749424,
+    0.05078780651092529,
+    0.05386199802160263,
+    0.05382068455219269,
+    0.05381760746240616,
+    0.04338319972157478,
+    0.053009551018476486,
+    -0.0538969412446022,
+    -0.05351618304848671,
+    -0.005166986025869846,
+    -0.053951945155858994,
+    -0.01790413074195385,
+    0.01574615016579628,
+    -0.031584762036800385,
+    -0.02567948028445244,
+    0.024472681805491447,
+    0.04691876098513603,
+    0.039819471538066864,
+    -0.04530716314911842,
+    0.00403242651373148,
+    0.052741639316082,
+    -0.0531950369477272,
+    -0.053951945155858994,
+    -0.05206608399748802,
+    -0.053200479596853256,
+    0.05384882539510727,
+    0.05366942659020424,
+    -0.05394652858376503,
+    -0.05394681543111801,
+    0.05056064575910568,
+    -0.05312678590416908,
+    0.05393385514616966,
+    0.044205404818058014,
+    -0.05013037100434303,
+    0.023169193416833878,
+    -0.0528281033039093,
+    0.03562963753938675,
+    -0.047808896750211716,
+    -0.04640979692339897,
+    0.05239952355623245,
+    0.02930191531777382,
+    0.05366811901330948,
+    -0.04102924093604088,
+    -0.052612874656915665,
+    -0.022967450320720673,
+    -0.01727081835269928,
+    -0.05013255029916763,
+    0.05218444764614105,
+    -0.037801772356033325,
+    -0.013784673064947128,
+    0.04967944324016571,
+    0.015660490840673447,
+    0.05335891246795654,
+    0.05235859751701355,
+    0.001723248977214098,
+    -0.05394892767071724,
+    -0.0004216453817207366,
+    -0.05395038053393364,
+    0.05395114794373512,
+    0.053927697241306305,
+    -0.05394904688000679,
+    0.05377363786101341,
+    -0.026267623528838158,
+    0.04310215637087822,
+    0.04149679094552994,
+    0.051004212349653244,
+    0.05304202064871788,
+    0.05207137390971184,
+    -0.05346439778804779,
+    0.053945690393447876,
+    0.010219906456768513,
+    -0.02938167378306389,
+    -0.05394628271460533,
+    -0.016661319881677628,
+    0.053911350667476654,
+    0.024613644927740097,
+    0.05248785391449928,
+    0.0537291057407856,
+    -0.047805678099393845,
+    0.0067247007973492146,
+    0.04691948741674423,
+    0.002352193696424365,
+    0.03152019530534744,
+    -0.053243882954120636,
+    0.038116537034511566,
+    0.010039325803518295,
+    -0.049630798399448395,
+    -0.026065729558467865,
+    -0.05390191078186035,
+    0.052732620388269424,
+    -0.04999316483736038,
+    0.05115431174635887,
+    -0.05394432321190834,
+    0.051721587777137756,
+    -0.04972449317574501,
+    0.04961713030934334,
+    -0.052249059081077576,
+    -0.024318942800164223,
+    -0.052588824182748795,
+    0.05389660969376564,
+    -0.05393780767917633,
+    -0.05390436574816704,
+    -0.04635247588157654,
+    -0.05395113304257393,
+    -0.053907569497823715,
+    -0.01965867541730404,
+    -0.003989925608038902,
+    -0.04601777344942093,
+    -0.04440521448850632,
+    -0.014555069617927074,
+    0.04200943186879158,
+    0.0045146215707063675,
+    -0.05384523421525955,
+    -0.053925056010484695,
+    -0.050031766295433044,
+    -0.05353241413831711,
+    -0.016100648790597916,
+    0.04866665229201317,
+    0.05393058434128761,
+    0.053931593894958496,
+    0.05152599513530731,
+    -0.053950417786836624,
+    -0.0023104441352188587,
+    0.05395124480128288,
+    0.01683463528752327,
+    -0.05372457951307297,
+    0.052213601768016815,
+    0.046375151723623276,
+    0.05392551049590111,
+    0.0527261383831501,
+    -0.02792835608124733,
+    -0.0499468632042408,
+    0.05300501734018326,
+    0.04997297376394272,
+    -0.04966849833726883,
+    0.0539337694644928,
+    0.05387315899133682,
+    -0.020605970174074173,
+    0.006679772865027189,
+    0.032739464193582535,
+    -0.05379008501768112,
+    -0.009898804128170013,
+    0.05314996838569641,
+    0.05184604972600937,
+    0.05342688411474228,
+    -0.05390283837914467,
+    -0.05394092574715614,
+    0.05371364578604698,
+    -0.04172949865460396,
+    -0.053895503282547,
+    -0.02931344509124756,
+    0.05349690839648247,
+    0.016179855912923813,
+    0.03890526667237282,
+    -0.0530833899974823,
+    0.053604863584041595,
+    -0.014881346374750137,
+    0.05184890702366829,
+    -0.007329223677515984,
+    0.05255482718348503,
+    -0.052519623190164566,
+    0.05394592881202698,
+    0.030097423121333122,
+    0.052236028015613556,
+    -0.05363011732697487,
+    0.037120454013347626,
+    0.05316487327218056,
+    -0.028687356039881706,
+    0.053530916571617126,
+    -0.05395185574889183,
+    -0.02718461863696575,
+    0.021826600655913353,
+    -0.04967357590794563,
+    -0.05200862139463425,
+    -0.050657693296670914,
+    0.05395090952515602,
+    -0.05179763212800026,
+    -0.04436134546995163
+  ],
+  "search_tags": [
+    "uses:@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+    "uses:stickyNote",
+    "uses:@n8n/n8n-nodes-langchain.agent",
+    "uses:telegram",
+    "uses:sort",
+    "uses:readWriteFile",
+    "uses:scheduleTrigger",
+    "uses:aggregate",
+    "uses:set",
+    "uses:gmail",
+    "uses:@n8n/n8n-nodes-langchain.toolWorkflow",
+    "complexity:high",
+    "uses:limit",
+    "uses:splitOut",
+    "uses:httpRequest",
+    "uses:convertToFile",
+    "uses:@n8n/n8n-nodes-langchain.chainLlm",
+    "trigger:scheduleTrigger",
+    "uses:executeWorkflowTrigger",
+    "category:ai-ml",
+    "uses:markdown",
+    "trigger:executeWorkflowTrigger",
+    "uses:@n8n/n8n-nodes-langchain.lmChatOpenAi",
+    "purpose:ai-and-machine-learning",
+    "uses:merge",
+    "uses:googleDrive"
+  ],
+  "category_info": {
+    "category_name": "Telegram",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Telegram"
+  }
+}

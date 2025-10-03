@@ -1,0 +1,1052 @@
+{
+  "workflow_info": {
+    "id": "vzU9QRZsHcyRsord",
+    "name": "Spot Workplace Discrimination Patterns with AI",
+    "display_name": "Spot Workplace Discrimination Patterns with AI",
+    "file_name": "1994_Code_Manual_Automation_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code\\1994_Code_Manual_Automation_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "f9304e80347e"
+  },
+  "structure": {
+    "total_nodes": 38,
+    "node_types": [
+      "n8n-nodes-base.quickChart",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.code",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "n8n-nodes-base.html",
+      "n8n-nodes-base.stickyNote",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "n8n-nodes-base.quickChart",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 7
+      },
+      {
+        "type": "n8n-nodes-base.manualTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.merge",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.code",
+        "count": 2
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.html",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 12
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "count": 3
+      }
+    ],
+    "triggers": [
+      {
+        "name": "When clicking ‘Test workflow’",
+        "type": "n8n-nodes-base.manualTrigger",
+        "position": [
+          280,
+          380
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "OpenAI Chat Model1",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2220,
+          800
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model2",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          2220,
+          380
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2940,
+          600
+        ]
+      },
+      {
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [
+          3840,
+          420
+        ]
+      },
+      {
+        "name": "SET company_name",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          540,
+          380
+        ]
+      },
+      {
+        "name": "Define dictionary of demographic keys",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          740,
+          380
+        ]
+      },
+      {
+        "name": "ScrapingBee Search Glassdoor",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          940,
+          380
+        ]
+      },
+      {
+        "name": "Extract company url path",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          1140,
+          380
+        ]
+      },
+      {
+        "name": "ScrapingBee GET company page contents",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1340,
+          380
+        ]
+      },
+      {
+        "name": "Extract reviews page url path",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          1540,
+          380
+        ]
+      },
+      {
+        "name": "ScrapingBee GET Glassdoor Reviews Content",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1760,
+          380
+        ]
+      },
+      {
+        "name": "Extract Overall Review Summary",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          1980,
+          260
+        ]
+      },
+      {
+        "name": "Extract Demographics Module",
+        "type": "n8n-nodes-base.html",
+        "position": [
+          1980,
+          520
+        ]
+      },
+      {
+        "name": "Extract overall ratings and distribution percentages",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          2200,
+          200
+        ]
+      },
+      {
+        "name": "Extract demographic distributions",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          2200,
+          620
+        ]
+      },
+      {
+        "name": "Define contributions to variance",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2560,
+          200
+        ]
+      },
+      {
+        "name": "Set variance and std_dev",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2740,
+          200
+        ]
+      },
+      {
+        "name": "Calculate P-Scores",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3340,
+          440
+        ]
+      },
+      {
+        "name": "Sort Effect Sizes",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3540,
+          440
+        ]
+      },
+      {
+        "name": "Calculate Z-Scores and Effect Sizes",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3140,
+          600
+        ]
+      },
+      {
+        "name": "Format dataset for scatterplot",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          3340,
+          760
+        ]
+      },
+      {
+        "name": "Specify additional parameters for scatterplot",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3540,
+          760
+        ]
+      },
+      {
+        "name": "Quickchart Scatterplot",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          3740,
+          760
+        ]
+      },
+      {
+        "name": "QuickChart Bar Chart",
+        "type": "n8n-nodes-base.quickChart",
+        "position": [
+          3740,
+          560
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          480,
+          40
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          900,
+          180
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          920,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2180,
+          99.69933502879758
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2516.1138215303854,
+          100
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3320,
+          706.46982689582
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          500,
+          120
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          500,
+          880
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4020,
+          880
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          3980,
+          800
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2540,
+          800
+        ]
+      },
+      {
+        "name": "Sticky Note12",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          4140,
+          80
+        ]
+      },
+      {
+        "name": "Text Analysis of Bias Data",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          3720,
+          280
+        ]
+      }
+    ],
+    "connections_count": 23,
+    "workflow_flow": {
+      "has_conditions": false,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 1,
+      "action_count": 37
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "webhook integration",
+    "use_cases": [
+      "On-demand execution"
+    ],
+    "complexity_score": 1080,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "scrapingbee get company page contents",
+      "sort effect sizes",
+      "format dataset for scatterplot",
+      "sticky note12",
+      "specify additional parameters for scatterplot",
+      "quickchart bar chart",
+      "sticky note7",
+      "sticky note11",
+      "scrapingbee get glassdoor reviews content",
+      "sticky note3",
+      "openai chat model1",
+      "quickchart scatterplot",
+      "stickyNote",
+      "ai-ml",
+      "extract overall ratings and distribution percentages",
+      "sticky note6",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "define dictionary of demographic keys",
+      "set variance and std_dev",
+      "define contributions to variance",
+      "@n8n/n8n nodes langchain.lmChatOpenAi",
+      "calculate z-scores and effect sizes",
+      "extract demographics module",
+      "sticky note10",
+      "extract reviews page url path",
+      "httpRequest",
+      "webhook integration",
+      "html",
+      "extract company url path",
+      "sticky note2",
+      "extract overall review summary",
+      "code",
+      "sticky note9",
+      "extract demographic distributions",
+      "openai chat model",
+      "set",
+      "sticky note4",
+      "openai chat model2",
+      "text analysis of bias data",
+      "merge",
+      "set company_name",
+      "quickChart",
+      "sticky note",
+      "sticky note8",
+      "complex",
+      "scrapingbee search glassdoor",
+      "manualTrigger",
+      "sticky note1",
+      "when clicking ‘test workflow’",
+      "calculate p-scores"
+    ],
+    "description": "'Spot Workplace Discrimination Patterns with AI' es un workflow diseñado para webhook integration con 38 nodos activado por When clicking ‘Test workflow’ que ejecuta: OpenAI Chat Model1, OpenAI Chat Model2, Merge en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Spot Workplace Discrimination Patterns with AI. Nodos: When clicking ‘Test workflow’ (manualTrigger), OpenAI Chat Model1 (@n8n/n8n-nodes-langchain.lmChatOpenAi), OpenAI Chat Model2 (@n8n/n8n-nodes-langchain.lmChatOpenAi), Merge (merge), OpenAI Chat Model (@n8n/n8n-nodes-langchain.lmChatOpenAi), SET company_name (set), Define dictionary of demographic keys (set), ScrapingBee Search Glassdoor (httpRequest), Extract company url path (html), ScrapingBee GET company page contents (httpRequest), Extract reviews page url path (html), ScrapingBee GET Glassdoor Reviews Content (httpRequest), Extract Overall Review Summary (html), Extract Demographics Module (html), Extract overall ratings and distribution percentages (@n8n/n8n-nodes-langchain.informationExtractor), Extract demographic distributions (@n8n/n8n-nodes-langchain.informationExtractor), Define contributions to variance (set), Set variance and std_dev (set), Calculate P-Scores (code), Sort Effect Sizes (set), Calculate Z-Scores and Effect Sizes (set), Format dataset for scatterplot (code), Specify additional parameters for scatterplot (set), Quickchart Scatterplot (httpRequest), QuickChart Bar Chart (quickChart), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote), Sticky Note12 (stickyNote), Text Analysis of Bias Data (@n8n/n8n-nodes-langchain.chainLlm). Propósito: webhook integration. Categoría: ai-ml. Disparadores: When clicking ‘Test workflow’",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "When clicking ‘Test workflow’",
+      "OpenAI Chat Model2",
+      "n8n-nodes-base.manualTrigger",
+      "n8n-nodes-base.merge",
+      "Merge",
+      "OpenAI Chat Model1",
+      "@n8n/n8n-nodes-langchain.lmChatOpenAi"
+    ],
+    "secondary_tags": [
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "n8n-nodes-base.httprequest",
+      "n8n-nodes-base.manualtrigger",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.merge",
+      "@n8n/n8n-nodes-langchain.lmchatopenai",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.quickchart",
+      "n8n-nodes-base.html",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "n8n-nodes-base.stickynote"
+    ],
+    "search_terms": [
+      "manual",
+      "webhook",
+      "code",
+      "automation",
+      "1994_code_manual_automation_webhook",
+      "1994"
+    ],
+    "alternative_names": [
+      "Spot Workplace Discrimination Patterns with AI"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "webhook integration"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": false,
+    "has_loops": false,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": false,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.manualTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 70.37037037037037,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 84.07407407407408
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:06.073385"
+  },
+  "semantic_vector": [
+    -0.056981734931468964,
+    -0.05839754268527031,
+    0.04053271934390068,
+    -0.029712894931435585,
+    -0.026340145617723465,
+    -0.05570153519511223,
+    -0.017428165301680565,
+    -0.02871144749224186,
+    -0.05604325234889984,
+    0.05724705383181572,
+    -0.05255548655986786,
+    -0.002594843041151762,
+    -0.0548434853553772,
+    -0.056589484214782715,
+    -0.05810605734586716,
+    0.05843375623226166,
+    0.056949716061353683,
+    -0.03282991051673889,
+    -0.016672229394316673,
+    -0.021665463224053383,
+    -0.027272649109363556,
+    0.057165004312992096,
+    -0.02015426568686962,
+    -0.037900347262620926,
+    0.0030416082590818405,
+    -0.046993568539619446,
+    -0.05205763503909111,
+    0.05768617242574692,
+    -0.05150745436549187,
+    -0.030538201332092285,
+    0.05538196489214897,
+    0.004907522816210985,
+    0.058297690004110336,
+    -0.03174150735139847,
+    -0.0011850657174363732,
+    0.022786930203437805,
+    -0.038447603583335876,
+    0.04173041507601738,
+    -0.046759024262428284,
+    -0.04979100823402405,
+    -0.056822288781404495,
+    0.05691329762339592,
+    -0.03861436992883682,
+    0.042234115302562714,
+    0.05843306705355644,
+    0.040841106325387955,
+    0.05554744973778725,
+    -0.02600935660302639,
+    -0.04153541475534439,
+    -0.05479566007852554,
+    -0.009845523163676262,
+    -0.022828081622719765,
+    -0.058423593640327454,
+    -0.04790136590600014,
+    -0.017518334090709686,
+    -0.058365270495414734,
+    0.057637132704257965,
+    -0.016280192881822586,
+    0.04789077118039131,
+    0.036131300032138824,
+    0.055497705936431885,
+    -0.03709131106734276,
+    0.013959269970655441,
+    0.05822933092713356,
+    0.03835603967308998,
+    0.010876592248678207,
+    0.058326732367277145,
+    -0.040127772837877274,
+    0.05216812342405319,
+    -0.044177453964948654,
+    -0.05600238963961601,
+    0.04667945206165314,
+    0.01803291216492653,
+    0.057594142854213715,
+    0.022420817986130714,
+    -0.03953428938984871,
+    0.050625719130039215,
+    -0.04403023421764374,
+    -0.0034050506073981524,
+    0.024826955050230026,
+    0.03513028845191002,
+    -0.0034945919178426266,
+    0.05386997014284134,
+    -0.05834892764687538,
+    -0.035382453352212906,
+    0.05662277340888977,
+    -0.0013053665170446038,
+    -0.029648322612047195,
+    -0.04975596442818642,
+    -0.009586316533386707,
+    -0.03068728744983673,
+    0.05283713340759277,
+    0.04622812569141388,
+    -0.05071263760328293,
+    0.0495145320892334,
+    0.016781548038125038,
+    -0.042026594281196594,
+    0.055414874106645584,
+    -0.047712184488773346,
+    -0.058393701910972595,
+    -0.04397819563746452,
+    -0.02390594221651554,
+    0.03224681317806244,
+    0.03910166770219803,
+    0.05650952458381653,
+    0.05828581377863884,
+    0.05630021542310715,
+    0.03871901333332062,
+    0.03402187302708626,
+    -0.05835895240306854,
+    0.003658168250694871,
+    -0.057643648236989975,
+    -0.01233900897204876,
+    0.05407949537038803,
+    0.057354699820280075,
+    0.04650125280022621,
+    -0.0576433427631855,
+    -0.05713248252868652,
+    0.05701621621847153,
+    0.029443731531500816,
+    0.01953596994280815,
+    0.052162159234285355,
+    0.04322265461087227,
+    0.0031054706778377295,
+    0.05214546248316765,
+    0.02346731722354889,
+    -0.010700787417590618,
+    0.05367147922515869,
+    0.05398852005600929,
+    0.0029530657920986414,
+    -0.03287084028124809,
+    0.01128759328275919,
+    0.04913950711488724,
+    0.0296233631670475,
+    0.05771724507212639,
+    -0.05769170820713043,
+    0.013375525362789631,
+    0.027212928980588913,
+    -0.05618276819586754,
+    -0.05787615105509758,
+    -0.018403558060526848,
+    0.05843232199549675,
+    -0.05468165874481201,
+    0.007720412220805883,
+    -0.054607536643743515,
+    -0.0584326907992363,
+    0.057247839868068695,
+    0.029956992715597153,
+    0.05840776860713959,
+    0.04474179074168205,
+    0.0508187934756279,
+    -0.044227369129657745,
+    -0.028810566291213036,
+    -0.013029484078288078,
+    0.05809175968170166,
+    0.058401890099048615,
+    0.010912402532994747,
+    -0.054715193808078766,
+    -0.03931910917162895,
+    -0.058308299630880356,
+    -0.05834436044096947,
+    -0.05839228630065918,
+    0.022753754630684853,
+    0.041859522461891174,
+    0.010095627047121525,
+    -0.0568404495716095,
+    -0.05493830889463425,
+    0.035688433796167374,
+    -0.057675499469041824,
+    -0.05395953357219696,
+    0.05716247484087944,
+    -0.006056312937289476,
+    -0.05504564195871353,
+    0.05027667060494423,
+    -0.050448961555957794,
+    0.054228927940130234,
+    0.011130832135677338,
+    -0.035837236791849136,
+    0.035155028104782104,
+    -0.05026494711637497,
+    0.036559928208589554,
+    0.03717237338423729,
+    -0.03431885689496994,
+    -0.004800636321306229,
+    0.05826427787542343,
+    0.005406382959336042,
+    -0.05120210722088814,
+    0.03978191316127777,
+    0.009532743133604527,
+    0.03714051842689514,
+    0.055771782994270325,
+    -0.01787872239947319,
+    0.05253388732671738,
+    -0.014989549294114113,
+    -0.05822325497865677,
+    -0.05733002349734306,
+    0.057178787887096405,
+    0.05843375623226166,
+    -0.007557519245892763,
+    -0.01964876987040043,
+    0.0568922720849514,
+    0.05751439929008484,
+    -0.057316653430461884,
+    0.03756185248494148,
+    0.019931213930249214,
+    -0.055117905139923096,
+    -0.02903003804385662,
+    0.013862903229892254,
+    -0.05842006951570511,
+    -0.039074406027793884,
+    0.014333972707390785,
+    -0.005682052578777075,
+    0.04832879453897476,
+    0.055071067065000534,
+    -0.05843184515833855,
+    -0.055945370346307755,
+    0.052960168570280075,
+    0.03002830222249031,
+    0.034504808485507965,
+    -0.05061165988445282,
+    -0.008193439804017544,
+    0.055284660309553146,
+    -0.046827856451272964,
+    -0.025261996313929558,
+    -0.029060419648885727,
+    -0.058032743632793427,
+    -0.04536730796098709,
+    -0.04380660876631737,
+    -0.05689306557178497,
+    -0.05797372758388519,
+    0.03405255451798439,
+    -0.05031144991517067,
+    -0.022854486480355263,
+    -0.05842971429228783,
+    -0.04337266832590103,
+    0.05748194083571434,
+    0.058426834642887115,
+    0.05843009799718857,
+    -0.058006156235933304,
+    0.056880753487348557,
+    0.022379666566848755,
+    0.018940294161438942,
+    -0.04342930391430855,
+    0.055746689438819885,
+    0.053924184292554855,
+    0.058084797114133835,
+    0.05152874067425728,
+    -0.047740451991558075,
+    0.05816807597875595,
+    0.05839952826499939,
+    -0.057815585285425186,
+    0.055546872317790985,
+    0.007953153923153877,
+    0.033101968467235565,
+    0.009770849719643593,
+    -0.03891967609524727,
+    0.0036934842355549335,
+    0.05843375623226166,
+    -0.011870970018208027,
+    0.0541626513004303,
+    0.034439317882061005,
+    0.03894774615764618,
+    -0.05673617497086525,
+    0.05711749941110611,
+    -0.014090393669903278,
+    -0.023736383765935898,
+    -0.04767823964357376,
+    -0.049240998923778534,
+    -0.05820722505450249,
+    -0.0017784929368644953,
+    -0.05800408869981766,
+    -0.01798407919704914,
+    -0.03602386638522148,
+    0.05677059665322304,
+    0.05780303478240967,
+    -0.05006612464785576,
+    -0.057482246309518814,
+    -0.03138331323862076,
+    0.058428216725587845,
+    -0.009069184772670269,
+    -0.021030910313129425,
+    0.045638177543878555,
+    0.05130256712436676,
+    0.051487166434526443,
+    0.0519695021212101,
+    -0.051217131316661835,
+    -0.011904288083314896,
+    0.05794147774577141,
+    -0.049753595143556595,
+    0.05832279101014137,
+    0.006508223246783018,
+    0.05607875809073448,
+    0.05841469392180443,
+    -0.046928200870752335,
+    0.045627251267433167,
+    -0.053078774362802505,
+    0.01893804967403412,
+    -0.04882290959358215,
+    -0.03353273123502731,
+    0.029987743124365807,
+    0.025870516896247864,
+    0.040768686681985855,
+    0.05692793428897858,
+    -0.04774870350956917,
+    -0.017335444688796997,
+    0.050888385623693466,
+    0.04832916334271431,
+    -0.02779444120824337,
+    0.025579238310456276,
+    -0.04743809252977371,
+    0.053721390664577484,
+    0.0018489332869648933,
+    -0.011584904044866562,
+    -0.011260763742029667,
+    0.004096581134945154,
+    -0.05444146692752838,
+    0.03322761878371239,
+    -0.0066527980379760265,
+    -0.02541988156735897,
+    0.04843268543481827,
+    0.045087531208992004,
+    -0.057393766939640045,
+    0.05642334744334221,
+    -0.009139035828411579,
+    -0.00014117306272964925,
+    0.04346113279461861,
+    0.04379333555698395,
+    -0.05434900149703026,
+    -0.057894255965948105,
+    0.03179159015417099,
+    0.021704327315092087,
+    -0.04155623912811279,
+    0.05652621015906334,
+    0.058424849063158035,
+    -0.007639696355909109,
+    0.052078139036893845,
+    0.057435981929302216,
+    -0.0383271761238575,
+    0.058273687958717346,
+    -0.04017189145088196,
+    -0.014905238524079323,
+    -0.03562023118138313,
+    0.03000544011592865,
+    -0.05473200976848602,
+    -0.05843375623226166,
+    -0.04927947372198105,
+    0.045310698449611664,
+    0.006781678646802902,
+    -0.05735806003212929,
+    -0.0013542628148570657,
+    0.038414981216192245,
+    0.04696903005242348,
+    0.05367681384086609,
+    0.006845023483037949,
+    0.00829206220805645,
+    -0.041395436972379684,
+    -0.05843355506658554,
+    0.033483799546957016,
+    0.04704246670007706,
+    0.04744869843125343,
+    0.052773334085941315,
+    -0.05813389644026756,
+    -0.05843348056077957,
+    0.0571843758225441,
+    -0.05786926671862602,
+    0.05803684517741203,
+    0.042675215750932693,
+    -0.055769551545381546,
+    0.04836542531847954,
+    -0.01737794652581215,
+    -0.035223688930273056,
+    -0.0353715606033802,
+    -0.04756265506148338,
+    0.05244821310043335,
+    7.87105382187292e-05,
+    0.04545687884092331,
+    -0.05578775703907013,
+    -0.05802767351269722,
+    -0.03333602100610733,
+    -0.05735909193754196,
+    -0.04955131933093071,
+    0.056740015745162964,
+    -0.00970327015966177,
+    -0.03571294620633125,
+    -0.04029381275177002,
+    -0.04008416458964348,
+    0.058292046189308167,
+    0.024881737306714058,
+    -0.02441093698143959,
+    -0.057826004922389984,
+    0.05207468941807747,
+    -0.04880620911717415,
+    0.058385979384183884,
+    -0.012737211771309376,
+    -0.0541607066988945,
+    0.05783288553357124,
+    -0.05587870627641678,
+    0.01970922015607357,
+    0.05286955460906029,
+    0.01171698234975338,
+    0.036671482026576996,
+    0.05681172385811806,
+    -0.056028787046670914,
+    0.05837194621562958,
+    -0.03098742850124836,
+    -0.04996522143483162,
+    -0.058409299701452255,
+    0.05781886354088783,
+    0.057794239372015,
+    -0.011592489667236805,
+    -0.0024513734970241785,
+    0.05540008470416069,
+    0.02568628638982773,
+    0.042979832738637924,
+    0.04322478547692299,
+    0.02813492715358734,
+    0.027571503072977066,
+    -0.04426359757781029,
+    -0.058138880878686905,
+    0.018083341419696808,
+    -0.014697140082716942,
+    -0.037775538861751556,
+    -0.05548973008990288,
+    0.05695785954594612,
+    0.040287867188453674,
+    0.003978548105806112,
+    -0.058052908629179,
+    0.05533579736948013,
+    -0.019830597564578056,
+    0.017155246809124947,
+    0.006153500638902187,
+    -0.047521524131298065,
+    0.0036550031509250402,
+    -0.04193228483200073,
+    -0.05822049081325531,
+    -0.045936618000268936,
+    -0.042201269418001175,
+    -0.05843226611614227,
+    -0.057840608060359955,
+    0.018276935443282127,
+    -0.020717425271868706,
+    -0.05809737369418144,
+    -0.05154547467827797,
+    -0.050153698772192,
+    0.01828029192984104,
+    -0.026510458439588547,
+    -0.05840499699115753,
+    -0.043191682547330856,
+    0.05273723229765892,
+    -0.0498623326420784,
+    0.056009601801633835,
+    0.05344628915190697,
+    0.058432336896657944,
+    0.017291665077209473,
+    -0.04558667913079262,
+    -0.0584152452647686,
+    0.046961214393377304,
+    0.058357879519462585,
+    0.03128242865204811,
+    -0.021468525752425194,
+    0.049049992114305496,
+    0.01893945038318634,
+    0.049421727657318115,
+    0.05619354173541069,
+    0.021381661295890808,
+    -0.047350477427244186,
+    0.05779906362295151,
+    -0.020586887374520302,
+    -0.0033719909843057394,
+    0.041467126458883286,
+    0.055948711931705475,
+    -0.04350651800632477,
+    0.05070442333817482,
+    0.0289236381649971,
+    -0.025214431807398796,
+    -0.054385267198085785,
+    0.04581071808934212,
+    0.030122747644782066,
+    0.022119911387562752,
+    -0.058023273944854736,
+    -0.0556575171649456,
+    0.057509396225214005,
+    -0.019237380474805832,
+    -0.05839149281382561,
+    0.029001476243138313,
+    0.0580960214138031,
+    -0.029161721467971802,
+    -0.054931219667196274,
+    -0.011475562117993832,
+    0.05609721690416336,
+    -0.001529409782961011,
+    0.03866928070783615,
+    -0.04832020401954651,
+    0.04512806236743927,
+    -0.05740758776664734,
+    0.057438094168901443,
+    -0.040395334362983704,
+    0.04706116020679474,
+    -0.051442425698041916,
+    -0.04876379668712616,
+    0.04706185311079025,
+    -0.008428062312304974,
+    0.05590961501002312,
+    -0.058433327823877335,
+    0.0479138046503067,
+    -0.05809536203742027,
+    0.038974691182374954,
+    -0.0016975273611024022,
+    -0.027412449941039085,
+    0.058432988822460175,
+    -0.036471571773290634,
+    -0.050122227519750595
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs webhook integration; When working with: When clicking ‘Test workflow’; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for webhook integration in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Code",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Code"
+  }
+}

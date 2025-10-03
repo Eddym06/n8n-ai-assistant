@@ -1,0 +1,1599 @@
+{
+  "workflow_info": {
+    "id": "AQcxkHANntUPrEBm",
+    "name": "Content - Newsletter Agent",
+    "display_name": "Content - Newsletter Agent",
+    "file_name": "write_newsletter_tool.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Gestión de Contenido\\write_newsletter_tool.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false,
+    "fingerprint": "686970a165c6"
+  },
+  "structure": {
+    "total_nodes": 91,
+    "node_types": [
+      "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainLlm",
+      "n8n-nodes-base.convertToFile",
+      "@n8n/n8n-nodes-langchain.informationExtractor",
+      "n8n-nodes-base.s3",
+      "n8n-nodes-base.splitOut",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.extractFromFile",
+      "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "n8n-nodes-base.executeWorkflowTrigger",
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.httpRequest",
+      "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "n8n-nodes-base.splitInBatches",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.executeWorkflow",
+      "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.stickyNote"
+    ],
+    "node_types_detailed": [
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.filter",
+        "count": 4
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "count": 8
+      },
+      {
+        "type": "n8n-nodes-base.convertToFile",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "count": 2
+      },
+      {
+        "type": "n8n-nodes-base.s3",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.splitOut",
+        "count": 3
+      },
+      {
+        "type": "n8n-nodes-base.set",
+        "count": 19
+      },
+      {
+        "type": "n8n-nodes-base.slack",
+        "count": 9
+      },
+      {
+        "type": "n8n-nodes-base.extractFromFile",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.formTrigger",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.httpRequest",
+        "count": 3
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "count": 6
+      },
+      {
+        "type": "n8n-nodes-base.splitInBatches",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.aggregate",
+        "count": 5
+      },
+      {
+        "type": "n8n-nodes-base.executeWorkflow",
+        "count": 1
+      },
+      {
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "count": 1
+      },
+      {
+        "type": "n8n-nodes-base.if",
+        "count": 4
+      },
+      {
+        "type": "n8n-nodes-base.stickyNote",
+        "count": 8
+      }
+    ],
+    "triggers": [
+      {
+        "name": "form_trigger",
+        "type": "n8n-nodes-base.formTrigger",
+        "position": [
+          -208,
+          -16
+        ]
+      },
+      {
+        "name": "workflow_trigger",
+        "type": "n8n-nodes-base.executeWorkflowTrigger",
+        "position": [
+          -208,
+          -240
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "filter_only_markdown",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          624,
+          -16
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          272,
+          -96
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          272,
+          208
+        ]
+      },
+      {
+        "name": "exclude_newsletters",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1248,
+          -16
+        ]
+      },
+      {
+        "name": "pick_top_stories",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          480,
+          752
+        ]
+      },
+      {
+        "name": "top_stories_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          640,
+          1168
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          272,
+          1520
+        ]
+      },
+      {
+        "name": "split_stories",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          512,
+          2048
+        ]
+      },
+      {
+        "name": "iterate_stories",
+        "type": "n8n-nodes-base.splitInBatches",
+        "position": [
+          768,
+          2048
+        ]
+      },
+      {
+        "name": "split_content_ids",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          1280,
+          2160
+        ]
+      },
+      {
+        "name": "check_external_urls",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          2768,
+          2160
+        ]
+      },
+      {
+        "name": "set_story_segments",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4608,
+          1680
+        ]
+      },
+      {
+        "name": "get_segment_content_info",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1504,
+          2160
+        ]
+      },
+      {
+        "name": "download_segment_content",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          1728,
+          2160
+        ]
+      },
+      {
+        "name": "get_segment_content_text",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          2128,
+          2160
+        ]
+      },
+      {
+        "name": "prepare_segment_content_item",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2368,
+          2160
+        ]
+      },
+      {
+        "name": "aggregate_segment_text_content",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2560,
+          2160
+        ]
+      },
+      {
+        "name": "set_segment_external_source_links",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3008,
+          2000
+        ]
+      },
+      {
+        "name": "split_segment_external_source_urls",
+        "type": "n8n-nodes-base.splitOut",
+        "position": [
+          3232,
+          2000
+        ]
+      },
+      {
+        "name": "scrape_segment_external_source_url",
+        "type": "n8n-nodes-base.executeWorkflow",
+        "position": [
+          3440,
+          2000
+        ]
+      },
+      {
+        "name": "aggregate_segment_external_source_content",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          3888,
+          2000
+        ]
+      },
+      {
+        "name": "filter_segment_external_source_errors",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          3664,
+          2000
+        ]
+      },
+      {
+        "name": "write_segment_content",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          4128,
+          2192
+        ]
+      },
+      {
+        "name": "set_current_segment",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1040,
+          2160
+        ]
+      },
+      {
+        "name": "set_combined_sections_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5040,
+          1680
+        ]
+      },
+      {
+        "name": "aggregate_story_sections",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          4832,
+          1680
+        ]
+      },
+      {
+        "name": "gemini-2.5-pro",
+        "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+        "position": [
+          3392,
+          3632
+        ]
+      },
+      {
+        "name": "story_segment_auto_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          4208,
+          2448
+        ]
+      },
+      {
+        "name": "story_segment_output_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          4288,
+          2640
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          272,
+          2848
+        ]
+      },
+      {
+        "name": "write_intro",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          288,
+          3200
+        ]
+      },
+      {
+        "name": "intro_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          368,
+          3600
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          752,
+          2848
+        ]
+      },
+      {
+        "name": "other_top_stories_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          928,
+          3600
+        ]
+      },
+      {
+        "name": "write_other_top_stories",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          848,
+          3200
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1232,
+          2848
+        ]
+      },
+      {
+        "name": "set_full_newsletter",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1376,
+          3200
+        ]
+      },
+      {
+        "name": "intro_auto_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          304,
+          3424
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2912,
+          -96
+        ]
+      },
+      {
+        "name": "combine_markdown_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2672,
+          -16
+        ]
+      },
+      {
+        "name": "aggregate_markdown_content",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          2384,
+          -16
+        ]
+      },
+      {
+        "name": "prepare_markdown_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2112,
+          -16
+        ]
+      },
+      {
+        "name": "get_markdown_file_content",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          1824,
+          -16
+        ]
+      },
+      {
+        "name": "download_markdown_object",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          1552,
+          -16
+        ]
+      },
+      {
+        "name": "get_markdown_object_info",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          944,
+          -16
+        ]
+      },
+      {
+        "name": "search_markdown_objects",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          352,
+          -16
+        ]
+      },
+      {
+        "name": "extract_tweets",
+        "type": "n8n-nodes-base.extractFromFile",
+        "position": [
+          3808,
+          -16
+        ]
+      },
+      {
+        "name": "search_tweets",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          2960,
+          -16
+        ]
+      },
+      {
+        "name": "download_tweet_objects",
+        "type": "n8n-nodes-base.s3",
+        "position": [
+          3552,
+          -16
+        ]
+      },
+      {
+        "name": "prepare_tweet_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4352,
+          -16
+        ]
+      },
+      {
+        "name": "set_selected_stories",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          288,
+          2048
+        ]
+      },
+      {
+        "name": "get_tweet_object_info",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4064,
+          -16
+        ]
+      },
+      {
+        "name": "aggregate_tweet_content",
+        "type": "n8n-nodes-base.aggregate",
+        "position": [
+          4624,
+          -16
+        ]
+      },
+      {
+        "name": "combine_tweet_content",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          4912,
+          0
+        ]
+      },
+      {
+        "name": "other_top_stories_auto_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          864,
+          3424
+        ]
+      },
+      {
+        "name": "top_stories_auto_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          560,
+          992
+        ]
+      },
+      {
+        "name": "share_selected_stories",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1040,
+          752
+        ]
+      },
+      {
+        "name": "edit_top_stories",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          480,
+          608
+        ]
+      },
+      {
+        "name": "subject_examples",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2384,
+          720
+        ]
+      },
+      {
+        "name": "set_current_stories",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          848,
+          752
+        ]
+      },
+      {
+        "name": "share_segment_msg",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          4832,
+          2192
+        ]
+      },
+      {
+        "name": "extract_image_urls",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          4464,
+          2192
+        ]
+      },
+      {
+        "name": "extract_image_urls_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          4608,
+          2640
+        ]
+      },
+      {
+        "name": "set_story_segment",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          5040,
+          2192
+        ]
+      },
+      {
+        "name": "share_stories_reasoning",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1248,
+          752
+        ]
+      },
+      {
+        "name": "extract_stories_approval_feedback",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          1648,
+          752
+        ]
+      },
+      {
+        "name": "check_stories_feedback",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1968,
+          752
+        ]
+      },
+      {
+        "name": "write_subject_line",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2784,
+          720
+        ]
+      },
+      {
+        "name": "set_subject_line_prompt",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2592,
+          720
+        ]
+      },
+      {
+        "name": "subject_line_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+        "position": [
+          2944,
+          992
+        ]
+      },
+      {
+        "name": "share_subject_line",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          3568,
+          720
+        ]
+      },
+      {
+        "name": "set_current_subject_line",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          3360,
+          720
+        ]
+      },
+      {
+        "name": "edit_subject_line",
+        "type": "@n8n/n8n-nodes-langchain.chainLlm",
+        "position": [
+          2784,
+          560
+        ]
+      },
+      {
+        "name": "share_subject_line_reasoning",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          3760,
+          720
+        ]
+      },
+      {
+        "name": "share_stories_approval_feedback",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1472,
+          752
+        ]
+      },
+      {
+        "name": "share_subject_line_approval_feedback",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          3984,
+          720
+        ]
+      },
+      {
+        "name": "extract_subject_line_approval_feedback",
+        "type": "@n8n/n8n-nodes-langchain.informationExtractor",
+        "position": [
+          4160,
+          720
+        ]
+      },
+      {
+        "name": "check_subject_line_feedback",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          4480,
+          720
+        ]
+      },
+      {
+        "name": "create_newsletter_file",
+        "type": "n8n-nodes-base.convertToFile",
+        "position": [
+          1616,
+          3200
+        ]
+      },
+      {
+        "name": "upload_newsletter_file",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          1840,
+          3200
+        ]
+      },
+      {
+        "name": "share_newsletter_msg",
+        "type": "n8n-nodes-base.slack",
+        "position": [
+          2080,
+          3200
+        ]
+      },
+      {
+        "name": "stories_prompt",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          288,
+          752
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2192,
+          208
+        ]
+      },
+      {
+        "name": "check_any_results",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          3248,
+          -16
+        ]
+      },
+      {
+        "name": "image_urls_auto_parser",
+        "type": "@n8n/n8n-nodes-langchain.outputParserAutofixing",
+        "position": [
+          4528,
+          2448
+        ]
+      },
+      {
+        "name": "claude-4-sonnet",
+        "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+        "position": [
+          3200,
+          3632
+        ]
+      },
+      {
+        "name": "filter_errors",
+        "type": "n8n-nodes-base.filter",
+        "position": [
+          1936,
+          2160
+        ]
+      },
+      {
+        "name": "set_input",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          96,
+          -16
+        ]
+      },
+      {
+        "name": "set_final_result",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          2304,
+          3200
+        ]
+      }
+    ],
+    "connections_count": 82,
+    "workflow_flow": {
+      "has_conditions": true,
+      "has_loops": true,
+      "is_linear": true,
+      "trigger_count": 2,
+      "action_count": 89
+    }
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "file processing",
+    "use_cases": [
+      "Team communication"
+    ],
+    "complexity_score": 2325,
+    "complexity_level": "Very Complex",
+    "keywords": [
+      "executeWorkflow",
+      "form_trigger",
+      "extract_image_urls",
+      "sticky note7",
+      "pick_top_stories",
+      "set_final_result",
+      "stickyNote",
+      "iterate_stories",
+      "aggregate_segment_text_content",
+      "write_segment_content",
+      "set_selected_stories",
+      "create_newsletter_file",
+      "get_markdown_object_info",
+      "get_segment_content_text",
+      "httpRequest",
+      "aggregate_segment_external_source_content",
+      "set_story_segment",
+      "prepare_markdown_content",
+      "set_current_segment",
+      "search_tweets",
+      "check_external_urls",
+      "filter_segment_external_source_errors",
+      "executeWorkflowTrigger",
+      "share_stories_reasoning",
+      "upload_newsletter_file",
+      "story_segment_output_parser",
+      "split_content_ids",
+      "@n8n/n8n nodes langchain.outputParserAutofixing",
+      "extractFromFile",
+      "edit_subject_line",
+      "slack",
+      "set_current_subject_line",
+      "share_subject_line",
+      "aggregate",
+      "get_markdown_file_content",
+      "share_selected_stories",
+      "get_segment_content_info",
+      "prepare_segment_content_item",
+      "set_story_segments",
+      "other_top_stories_auto_parser",
+      "sticky note5",
+      "extract_image_urls_parser",
+      "share_segment_msg",
+      "check_any_results",
+      "@n8n/n8n nodes langchain.informationExtractor",
+      "search_markdown_objects",
+      "formTrigger",
+      "intro_parser",
+      "sticky note3",
+      "split_segment_external_source_urls",
+      "ai-ml",
+      "@n8n/n8n nodes langchain.outputParserStructured",
+      "combine_tweet_content",
+      "@n8n/n8n nodes langchain.chainLlm",
+      "stories_prompt",
+      "subject_examples",
+      "gemini-2.5-pro",
+      "top_stories_auto_parser",
+      "splitInBatches",
+      "aggregate_markdown_content",
+      "set_combined_sections_content",
+      "sticky note4",
+      "set",
+      "share_newsletter_msg",
+      "set_segment_external_source_links",
+      "image_urls_auto_parser",
+      "download_segment_content",
+      "other_top_stories_parser",
+      "download_markdown_object",
+      "get_tweet_object_info",
+      "claude-4-sonnet",
+      "sticky note",
+      "combine_markdown_content",
+      "complex",
+      "set_full_newsletter",
+      "share_subject_line_reasoning",
+      "sticky note1",
+      "sticky note2",
+      "splitOut",
+      "write_intro",
+      "write_subject_line",
+      "subject_line_parser",
+      "file processing",
+      "top_stories_parser",
+      "filter_only_markdown",
+      "set_subject_line_prompt",
+      "check_stories_feedback",
+      "write_other_top_stories",
+      "sticky note6",
+      "convertToFile",
+      "story_segment_auto_parser",
+      "split_stories",
+      "download_tweet_objects",
+      "extract_stories_approval_feedback",
+      "aggregate_tweet_content",
+      "filter_errors",
+      "prepare_tweet_content",
+      "share_stories_approval_feedback",
+      "scrape_segment_external_source_url",
+      "extract_tweets",
+      "share_subject_line_approval_feedback",
+      "intro_auto_parser",
+      "aggregate_story_sections",
+      "extract_subject_line_approval_feedback",
+      "set_input",
+      "workflow_trigger",
+      "@n8n/n8n nodes langchain.lmChatGoogleGemini",
+      "edit_top_stories",
+      "exclude_newsletters",
+      "@n8n/n8n nodes langchain.lmChatAnthropic",
+      "filter",
+      "set_current_stories",
+      "check_subject_line_feedback"
+    ],
+    "description": "'Content - Newsletter Agent' es un workflow diseñado para file processing con 91 nodos con 2 disparadores que ejecuta: filter_only_markdown, Sticky Note, Sticky Note1 en la categoría de ai-ml.",
+    "semantic_content": "Workflow: Content - Newsletter Agent. Nodos: form_trigger (formTrigger), filter_only_markdown (filter), Sticky Note (stickyNote), Sticky Note1 (stickyNote), exclude_newsletters (filter), pick_top_stories (@n8n/n8n-nodes-langchain.chainLlm), top_stories_parser (@n8n/n8n-nodes-langchain.outputParserStructured), Sticky Note3 (stickyNote), split_stories (splitOut), iterate_stories (splitInBatches), split_content_ids (splitOut), check_external_urls (if), set_story_segments (set), get_segment_content_info (httpRequest), download_segment_content (s3), get_segment_content_text (extractFromFile), prepare_segment_content_item (set), aggregate_segment_text_content (aggregate), set_segment_external_source_links (set), split_segment_external_source_urls (splitOut), scrape_segment_external_source_url (executeWorkflow), aggregate_segment_external_source_content (aggregate), filter_segment_external_source_errors (filter), write_segment_content (@n8n/n8n-nodes-langchain.chainLlm), set_current_segment (set), set_combined_sections_content (set), aggregate_story_sections (aggregate), gemini-2.5-pro (@n8n/n8n-nodes-langchain.lmChatGoogleGemini), story_segment_auto_parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), story_segment_output_parser (@n8n/n8n-nodes-langchain.outputParserStructured), Sticky Note2 (stickyNote), write_intro (@n8n/n8n-nodes-langchain.chainLlm), intro_parser (@n8n/n8n-nodes-langchain.outputParserStructured), Sticky Note4 (stickyNote), other_top_stories_parser (@n8n/n8n-nodes-langchain.outputParserStructured), write_other_top_stories (@n8n/n8n-nodes-langchain.chainLlm), Sticky Note5 (stickyNote), set_full_newsletter (set), intro_auto_parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), Sticky Note6 (stickyNote), combine_markdown_content (set), aggregate_markdown_content (aggregate), prepare_markdown_content (set), get_markdown_file_content (extractFromFile), download_markdown_object (s3), get_markdown_object_info (httpRequest), search_markdown_objects (s3), extract_tweets (extractFromFile), search_tweets (s3), download_tweet_objects (s3), prepare_tweet_content (set), set_selected_stories (set), get_tweet_object_info (httpRequest), aggregate_tweet_content (aggregate), combine_tweet_content (set), other_top_stories_auto_parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), top_stories_auto_parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), share_selected_stories (slack), edit_top_stories (@n8n/n8n-nodes-langchain.chainLlm), subject_examples (set), set_current_stories (set), share_segment_msg (slack), extract_image_urls (@n8n/n8n-nodes-langchain.chainLlm), extract_image_urls_parser (@n8n/n8n-nodes-langchain.outputParserStructured), set_story_segment (set), share_stories_reasoning (slack), extract_stories_approval_feedback (@n8n/n8n-nodes-langchain.informationExtractor), check_stories_feedback (if), write_subject_line (@n8n/n8n-nodes-langchain.chainLlm), set_subject_line_prompt (set), subject_line_parser (@n8n/n8n-nodes-langchain.outputParserStructured), share_subject_line (slack), set_current_subject_line (set), edit_subject_line (@n8n/n8n-nodes-langchain.chainLlm), share_subject_line_reasoning (slack), share_stories_approval_feedback (slack), share_subject_line_approval_feedback (slack), extract_subject_line_approval_feedback (@n8n/n8n-nodes-langchain.informationExtractor), check_subject_line_feedback (if), create_newsletter_file (convertToFile), upload_newsletter_file (slack), share_newsletter_msg (slack), stories_prompt (set), Sticky Note7 (stickyNote), check_any_results (if), image_urls_auto_parser (@n8n/n8n-nodes-langchain.outputParserAutofixing), claude-4-sonnet (@n8n/n8n-nodes-langchain.lmChatAnthropic), filter_errors (filter), workflow_trigger (executeWorkflowTrigger), set_input (set), set_final_result (set). Propósito: file processing. Categoría: ai-ml. Disparadores: form_trigger, workflow_trigger",
+    "business_context": "General Automation"
+  },
+  "search_optimization": {
+    "primary_tags": [
+      "n8n-nodes-base.formTrigger",
+      "workflow_trigger",
+      "n8n-nodes-base.filter",
+      "form_trigger",
+      "filter_only_markdown",
+      "Sticky Note1",
+      "Sticky Note",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "secondary_tags": [
+      "n8n-nodes-base.filter",
+      "@n8n/n8n-nodes-langchain.chainllm",
+      "@n8n/n8n-nodes-langchain.outputparserstructured",
+      "n8n-nodes-base.s3",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.slack",
+      "n8n-nodes-base.formtrigger",
+      "@n8n/n8n-nodes-langchain.lmchatgooglegemini",
+      "@n8n/n8n-nodes-langchain.lmchatanthropic",
+      "n8n-nodes-base.stickynote",
+      "n8n-nodes-base.executeworkflowtrigger",
+      "n8n-nodes-base.httprequest",
+      "@n8n/n8n-nodes-langchain.informationextractor",
+      "n8n-nodes-base.splitout",
+      "n8n-nodes-base.aggregate",
+      "n8n-nodes-base.extractfromfile",
+      "@n8n/n8n-nodes-langchain.outputparserautofixing",
+      "n8n-nodes-base.converttofile",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.executeworkflow",
+      "n8n-nodes-base.splitinbatches"
+    ],
+    "search_terms": [
+      "tool",
+      "write_newsletter_tool",
+      "newsletter",
+      "write"
+    ],
+    "alternative_names": [
+      "Content - Newsletter Agent"
+    ],
+    "related_concepts": [
+      "ai-ml",
+      "file processing"
+    ]
+  },
+  "patterns": {
+    "has_error_handling": false,
+    "has_conditions": true,
+    "has_loops": true,
+    "has_http_requests": true,
+    "has_database_operations": false,
+    "has_file_operations": true,
+    "has_ai_integration": true,
+    "workflow_type": "ai_powered",
+    "data_flow_complexity": "linear",
+    "trigger_types": [
+      "n8n-nodes-base.formTrigger",
+      "n8n-nodes-base.executeWorkflowTrigger"
+    ],
+    "output_types": []
+  },
+  "quality_metrics": {
+    "completeness_score": 100.0,
+    "documentation_score": 100.0,
+    "complexity_balance": 78.27956989247312,
+    "best_practices_score": 75.0,
+    "maintainability_score": 66.66666666666666,
+    "overall_quality": 85.65591397849462
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T11:11:24.351995"
+  },
+  "semantic_vector": [
+    -0.05599239096045494,
+    -0.06042582541704178,
+    -0.011104326695203781,
+    -0.010757922194898129,
+    -0.03292250260710716,
+    -0.058314718306064606,
+    0.05852913111448288,
+    -0.005757119972258806,
+    -0.05880702659487724,
+    0.056882381439208984,
+    -0.05473256856203079,
+    0.02013864554464817,
+    -0.039800431579351425,
+    -0.05482993274927139,
+    -0.015451798215508461,
+    0.06090857461094856,
+    0.04552167281508446,
+    -0.011002002283930779,
+    -0.006573895923793316,
+    0.014396699145436287,
+    0.037173088639974594,
+    0.01774062216281891,
+    -0.04444558545947075,
+    0.034591250121593475,
+    0.00723126158118248,
+    0.054481763392686844,
+    -0.04807358235120773,
+    0.05355453118681908,
+    -0.0428520068526268,
+    0.04363676905632019,
+    0.05976654961705208,
+    -0.030798759311437607,
+    -0.058085210621356964,
+    -0.026713261380791664,
+    0.03770218789577484,
+    0.002149467123672366,
+    0.06039291247725487,
+    0.038111139088869095,
+    0.0011587950866669416,
+    -0.043660491704940796,
+    0.0253080315887928,
+    0.04727673903107643,
+    0.04912510886788368,
+    0.03976491466164589,
+    0.06016846373677254,
+    -0.03411146253347397,
+    0.056185249239206314,
+    0.036795563995838165,
+    -0.05305289477109909,
+    0.011965990997850895,
+    -0.013846573419868946,
+    -0.030240831896662712,
+    -0.06090974807739258,
+    -0.05951857566833496,
+    -0.05297927185893059,
+    -0.05553073808550835,
+    0.06017252430319786,
+    -0.026461217552423477,
+    -0.040563780814409256,
+    -0.015122460201382637,
+    0.04074979946017265,
+    -0.034967292100191116,
+    0.045966580510139465,
+    0.06016635149717331,
+    0.04864709824323654,
+    -0.00773614551872015,
+    0.05295949801802635,
+    -0.015602421946823597,
+    0.0608723983168602,
+    -0.05659487098455429,
+    -0.0593612939119339,
+    0.05278802290558815,
+    0.04757736250758171,
+    0.053574562072753906,
+    0.024315237998962402,
+    0.04747829958796501,
+    0.025653928518295288,
+    -0.06067673861980438,
+    -0.007495233789086342,
+    -0.05138951539993286,
+    0.05741981789469719,
+    0.03311584144830704,
+    0.0461580865085125,
+    -0.0559811107814312,
+    0.044675152748823166,
+    0.03480995446443558,
+    0.0408780574798584,
+    -0.01338133029639721,
+    0.04264272004365921,
+    0.0533745177090168,
+    -0.03182604908943176,
+    -0.009751752950251102,
+    0.04070204123854637,
+    -0.009993947111070156,
+    0.05968838557600975,
+    -0.033367738127708435,
+    -0.03150668367743492,
+    0.060886990278959274,
+    -0.06053087115287781,
+    -0.05882378667593002,
+    0.04093359410762787,
+    -0.03334176912903786,
+    -0.0014964393340051174,
+    0.016032537445425987,
+    0.05858981981873512,
+    -0.027768274769186974,
+    0.060328464955091476,
+    0.0423288531601429,
+    0.0020655805710703135,
+    -0.058984171599149704,
+    -0.018258070573210716,
+    -0.059273622930049896,
+    0.052266836166381836,
+    -0.026542630046606064,
+    0.030662963166832924,
+    -0.015317614190280437,
+    -0.05793572589755058,
+    -0.04419154301285744,
+    0.049915023148059845,
+    0.05007292702794075,
+    0.024269968271255493,
+    0.0544312447309494,
+    0.04876481369137764,
+    0.04290201887488365,
+    0.058154381811618805,
+    0.029863478615880013,
+    -0.05070069432258606,
+    -0.05607586354017258,
+    0.044715143740177155,
+    -0.057005442678928375,
+    -0.04620007053017616,
+    -0.01459086686372757,
+    0.060771599411964417,
+    -0.05907795578241348,
+    0.05023409426212311,
+    -0.021285291761159897,
+    0.059081077575683594,
+    -0.041598543524742126,
+    -0.059566423296928406,
+    -0.06063006445765495,
+    -0.03348679840564728,
+    0.06091003492474556,
+    -0.0427156500518322,
+    -0.002975937444716692,
+    -0.03495312109589577,
+    -0.06083790585398674,
+    0.052270013839006424,
+    0.04415547475218773,
+    -0.0036308346316218376,
+    0.0074179694056510925,
+    -0.026185842230916023,
+    -0.054813679307699203,
+    -0.029445163905620575,
+    -0.03746989369392395,
+    0.040096718817949295,
+    0.060490917414426804,
+    -0.05349516496062279,
+    -0.05892835929989815,
+    -0.043576136231422424,
+    -0.03927883133292198,
+    -0.043785132467746735,
+    -0.056620411574840546,
+    0.05826355516910553,
+    0.03731455281376839,
+    -0.011441112495958805,
+    0.015039891935884953,
+    -0.06062733754515648,
+    0.05083855614066124,
+    -0.04495994374155998,
+    0.013680354692041874,
+    0.06058916449546814,
+    -0.0066717262379825115,
+    -0.036477115005254745,
+    0.030171053484082222,
+    0.025400064885616302,
+    0.05792742967605591,
+    -0.004715429153293371,
+    -0.04457484930753708,
+    0.05889347568154335,
+    -0.059890016913414,
+    -0.031689442694187164,
+    0.025264989584684372,
+    -0.05905817076563835,
+    0.00834964495152235,
+    0.05710441991686821,
+    0.04228309914469719,
+    -0.041229620575904846,
+    0.056110672652721405,
+    0.014488601125776768,
+    0.0052762748673558235,
+    0.01805637963116169,
+    0.037660010159015656,
+    -0.0037085909862071276,
+    -0.05953194946050644,
+    -0.05550510808825493,
+    -0.06003643944859505,
+    -0.047824427485466,
+    0.06090638041496277,
+    -0.011711891740560532,
+    -0.03255820274353027,
+    0.04254521429538727,
+    0.051486384123563766,
+    0.051307693123817444,
+    0.06024061515927315,
+    0.03148074075579643,
+    0.039313677698373795,
+    -0.022823328152298927,
+    0.05556444078683853,
+    -0.050437744706869125,
+    -0.05274849385023117,
+    0.05499530956149101,
+    0.055770277976989746,
+    0.059111639857292175,
+    0.022395702078938484,
+    -0.06090996414422989,
+    -0.036517996340990067,
+    -0.005313389468938112,
+    0.015367347747087479,
+    0.03512630611658096,
+    0.008254694752395153,
+    0.017298495396971703,
+    0.058644093573093414,
+    0.020449969917535782,
+    -0.0469030998647213,
+    -0.03932354599237442,
+    -0.06080472841858864,
+    -0.04930078238248825,
+    -0.038141220808029175,
+    -0.05578894540667534,
+    -0.05327368155121803,
+    0.02581203542649746,
+    -0.03743298351764679,
+    0.057556379586458206,
+    -0.06086454913020134,
+    0.05956539884209633,
+    0.05586978420615196,
+    0.05831827223300934,
+    0.052069421857595444,
+    -0.05942411720752716,
+    0.05011822655797005,
+    0.0216439887881279,
+    0.058152936398983,
+    0.009055592119693756,
+    0.042743317782878876,
+    -0.01824929006397724,
+    0.05987667292356491,
+    0.05367828160524368,
+    0.057107217609882355,
+    0.04021960496902466,
+    0.0604923814535141,
+    -0.060352105647325516,
+    0.03844042867422104,
+    0.006815839093178511,
+    -0.023230118677020073,
+    0.06010649725794792,
+    -0.059838082641363144,
+    0.05675777792930603,
+    0.06091003492474556,
+    0.021996285766363144,
+    0.002284841611981392,
+    0.0306573323905468,
+    0.0012965664500370622,
+    0.05527378246188164,
+    0.06075606122612953,
+    0.011485660448670387,
+    0.015555103309452534,
+    -0.02661922574043274,
+    0.05578167364001274,
+    -0.05610605701804161,
+    0.05812738463282585,
+    -0.06054054573178291,
+    0.060630571097135544,
+    -0.05268430337309837,
+    0.06052809953689575,
+    0.007834133692085743,
+    -0.04748450219631195,
+    -0.04577016457915306,
+    0.03526007756590843,
+    0.05149218812584877,
+    0.06076352298259735,
+    -0.02512703277170658,
+    0.06064363569021225,
+    0.059642139822244644,
+    -0.03745041787624359,
+    0.04807623103260994,
+    -0.05673278123140335,
+    0.009892713278532028,
+    0.06077117472887039,
+    -0.015909837558865547,
+    0.0605090968310833,
+    -0.05583764985203743,
+    0.05176057294011116,
+    0.0584295354783535,
+    -0.052333708852529526,
+    -0.023783938959240913,
+    -0.028338348492980003,
+    -0.051228802651166916,
+    0.056844037026166916,
+    0.05115647241473198,
+    0.04266168549656868,
+    0.016389576718211174,
+    0.0004986009444110096,
+    0.045740604400634766,
+    -0.045114513486623764,
+    0.004359887447208166,
+    0.05430980771780014,
+    0.01605316437780857,
+    -0.05315589904785156,
+    0.060442011803388596,
+    -0.03183998540043831,
+    0.029674841091036797,
+    0.025079114362597466,
+    -0.01658349670469761,
+    -0.021426456049084663,
+    -0.04730930179357529,
+    -0.060092370957136154,
+    0.04789448156952858,
+    -0.045655507594347,
+    -0.037150099873542786,
+    -0.036741022020578384,
+    0.03831315040588379,
+    -0.006053125951439142,
+    0.05775484815239906,
+    -0.05867542698979378,
+    0.050784118473529816,
+    -0.058208923786878586,
+    -0.024463579058647156,
+    -0.034582193940877914,
+    -0.04964762553572655,
+    0.035285525023937225,
+    -0.04079823940992355,
+    -0.0575527660548687,
+    0.00309849064797163,
+    0.06087762117385864,
+    0.046548761427402496,
+    0.047541145235300064,
+    0.052749015390872955,
+    0.05260416865348816,
+    0.03352778032422066,
+    -0.05797030031681061,
+    -0.02086620032787323,
+    -0.02723652683198452,
+    0.038408324122428894,
+    -0.04511483013629913,
+    -0.06053377687931061,
+    0.04147091880440712,
+    -0.02569907158613205,
+    -0.004355593118816614,
+    0.010554458014667034,
+    0.03596111759543419,
+    0.04874366521835327,
+    0.033005084842443466,
+    -0.045800141990184784,
+    0.04751836881041527,
+    0.008722323924303055,
+    0.0382101833820343,
+    -0.060907620936632156,
+    0.0030880020931363106,
+    -0.04534335434436798,
+    0.05970602110028267,
+    0.05974249169230461,
+    -0.05651715025305748,
+    -0.060620710253715515,
+    0.05933094397187233,
+    -0.007460413035005331,
+    0.060408227145671844,
+    0.04035491868853569,
+    -0.05346407741308212,
+    0.011177214793860912,
+    -0.03208480030298233,
+    -0.03654356300830841,
+    -0.060446590185165405,
+    0.003073889994993806,
+    0.022231342270970345,
+    0.0579637810587883,
+    0.05696606636047363,
+    -0.02289401926100254,
+    -0.05983879044651985,
+    -0.045007746666669846,
+    -0.025157708674669266,
+    0.03687295690178871,
+    -0.020091945305466652,
+    0.018469741567969322,
+    -0.05466264486312866,
+    0.022201770916581154,
+    -0.003876354545354843,
+    0.06071346253156662,
+    -0.050393346697092056,
+    -0.005187109112739563,
+    -0.05726102739572525,
+    0.05758130922913551,
+    -0.05925270542502403,
+    0.06006024777889252,
+    0.05354688689112663,
+    -0.01994314417243004,
+    0.04896707087755203,
+    -0.04288797080516815,
+    -0.04904179647564888,
+    0.005634982604533434,
+    -0.043606001883745193,
+    0.022389864549040794,
+    0.044899843633174896,
+    -0.058450739830732346,
+    0.05701170489192009,
+    -0.04397756606340408,
+    -0.0585857629776001,
+    -0.04782082885503769,
+    0.012929216027259827,
+    0.05600953474640846,
+    0.06033166125416756,
+    -0.05971329286694527,
+    0.04726562649011612,
+    -0.047570545226335526,
+    -0.032773274928331375,
+    0.01775091513991356,
+    -0.047192126512527466,
+    -0.04426451772451401,
+    -0.050003375858068466,
+    0.05638812854886055,
+    -0.039875470101833344,
+    0.03387695923447609,
+    0.025825360789895058,
+    -0.03665997460484505,
+    -0.011346878483891487,
+    -0.00643770070746541,
+    -0.019796013832092285,
+    -0.060664672404527664,
+    -0.05896962806582451,
+    -0.024996692314743996,
+    0.02894425392150879,
+    -0.01285503339022398,
+    -0.003915057983249426,
+    -0.05625544488430023,
+    0.04189262166619301,
+    -0.057687293738126755,
+    -0.01504487358033657,
+    -0.053987424820661545,
+    -0.05366206169128418,
+    -0.05988028272986412,
+    0.04218244552612305,
+    -0.04405827447772026,
+    -0.046432457864284515,
+    -0.03737513720989227,
+    -0.05206719785928726,
+    -0.011719385161995888,
+    -0.0572066605091095,
+    0.0009112399420700967,
+    0.03153085708618164,
+    -0.053708843886852264,
+    -0.04852506145834923,
+    -0.054397907108068466,
+    -0.009815436787903309,
+    0.0454220175743103,
+    0.019400132820010185,
+    0.022082248702645302,
+    -0.060865242034196854,
+    -0.05922723561525345,
+    0.06083996593952179,
+    0.05303332209587097,
+    -0.05748596414923668,
+    -0.03796335682272911,
+    0.007282442878931761,
+    0.05935373902320862,
+    0.0036329999566078186,
+    0.03116937354207039,
+    -0.05747860297560692,
+    0.02506260946393013,
+    0.04618649557232857,
+    -0.03923753276467323,
+    0.05909549817442894,
+    0.03557978942990303,
+    -0.0033123367466032505,
+    -0.047797542065382004,
+    0.04768911004066467,
+    -0.016126876696944237,
+    0.03933897241950035,
+    0.057911019772291183,
+    -0.03114839643239975,
+    0.007954192347824574,
+    -0.02237243950366974,
+    -0.059922974556684494,
+    0.0555475614964962,
+    -0.0019900938495993614,
+    -0.05604823678731918,
+    -0.027231207117438316,
+    0.05592736601829529,
+    0.02613278105854988,
+    -0.05103417485952377,
+    0.03613512963056564,
+    0.04182057827711105,
+    -0.051667824387550354,
+    0.060453858226537704,
+    -0.004083061590790749,
+    -0.014355171471834183,
+    -0.0597049854695797,
+    0.060821883380413055,
+    -0.004508737474679947,
+    0.03614215552806854,
+    -0.053055837750434875,
+    0.0546041876077652,
+    -0.04915609583258629,
+    -0.05511605739593506,
+    0.059288375079631805,
+    -0.06090734153985977,
+    -0.020959507673978806,
+    -0.015993138775229454,
+    0.060395654290914536,
+    -0.022179780527949333,
+    -0.03316045552492142,
+    0.05971051752567291,
+    0.005479260813444853,
+    -0.05285532400012016
+  ],
+  "agent_hints": {
+    "when_to_recommend": "When user needs file processing; When working with: form_trigger, workflow_trigger; Suitable for very complex implementations",
+    "similar_to": [
+      "Complex workflows"
+    ],
+    "best_for": [
+      "Best for file processing in ai-ml context",
+      "Suitable for comprehensive business processes"
+    ]
+  },
+  "category_info": {
+    "category_name": "Gestión de Contenido",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\Workflow MCP n8n\\Gestión de Contenido"
+  }
+}

@@ -1,0 +1,1070 @@
+{
+  "workflow_info": {
+    "id": "KY0vB3hifSrA24k2",
+    "name": "AI-Powered Short-Form Video Generator with OpenAI, Flux, Kling, and ElevenLabs and upload to all social networks",
+    "file_name": "1282_Wait_Code_Import_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait\\1282_Wait_Code_Import_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false
+  },
+  "structure": {
+    "total_nodes": 51,
+    "node_types": [
+      "n8n-nodes-base.googleDrive",
+      "n8n-nodes-base.googleSheets",
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.readBinaryFile",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.discord",
+      "n8n-nodes-base.wait",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.code",
+      "n8n-nodes-base.writeBinaryFile",
+      "@n8n/n8n-nodes-langchain.openAi"
+    ],
+    "triggers": [
+      {
+        "name": "Once Per Day",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -600,
+          1220
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Get image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1160,
+          480
+        ]
+      },
+      {
+        "name": "Generate Image",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          880,
+          480
+        ]
+      },
+      {
+        "name": "Image-to-Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          520,
+          1000
+        ]
+      },
+      {
+        "name": "Get Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          780,
+          1000
+        ]
+      },
+      {
+        "name": "List Elements",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1400,
+          1040
+        ]
+      },
+      {
+        "name": "Wait 10min",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          660,
+          1000
+        ]
+      },
+      {
+        "name": "Wait 3min",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1020,
+          480
+        ]
+      },
+      {
+        "name": "Wait 5min",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1480,
+          400
+        ]
+      },
+      {
+        "name": "Generate voice",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          880,
+          1460
+        ]
+      },
+      {
+        "name": "List Elements1",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          1400,
+          1260
+        ]
+      },
+      {
+        "name": "Fail check",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          920,
+          1000
+        ]
+      },
+      {
+        "name": "Wait to retry",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1060,
+          960
+        ]
+      },
+      {
+        "name": "Generate Image Prompts",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          400,
+          560
+        ]
+      },
+      {
+        "name": "Calculate Token Usage",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          700,
+          560
+        ]
+      },
+      {
+        "name": "Check for failures",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1300,
+          480
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          380,
+          240
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          480,
+          720
+        ]
+      },
+      {
+        "name": "Generate Video Captions",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          -40,
+          1220
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          480,
+          1240
+        ]
+      },
+      {
+        "name": "Match captions with videos",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1240,
+          1040
+        ]
+      },
+      {
+        "name": "Generate Script",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          520,
+          1460
+        ]
+      },
+      {
+        "name": "Upload Voice Audio",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1080,
+          1460
+        ]
+      },
+      {
+        "name": "Set Access Permissions",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          1260,
+          1460
+        ]
+      },
+      {
+        "name": "Pair Videos with Audio",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          1620,
+          1140
+        ]
+      },
+      {
+        "name": "Render Final Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1800,
+          1140
+        ]
+      },
+      {
+        "name": "Notify me on Discord",
+        "type": "n8n-nodes-base.discord",
+        "position": [
+          2780,
+          1140
+        ]
+      },
+      {
+        "name": "Load Google Sheet",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          -180,
+          1220
+        ]
+      },
+      {
+        "name": "Create List",
+        "type": "n8n-nodes-base.code",
+        "position": [
+          280,
+          1140
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1560,
+          920
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -320,
+          280
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -480,
+          780
+        ]
+      },
+      {
+        "name": "Wait1",
+        "type": "n8n-nodes-base.wait",
+        "position": [
+          1920,
+          1140
+        ]
+      },
+      {
+        "name": "Get Final Video",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2040,
+          1140
+        ]
+      },
+      {
+        "name": "Upload Final Video",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          2300,
+          1140
+        ]
+      },
+      {
+        "name": "Get Raw File",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          2160,
+          1140
+        ]
+      },
+      {
+        "name": "Set Permissions",
+        "type": "n8n-nodes-base.googleDrive",
+        "position": [
+          2440,
+          1140
+        ]
+      },
+      {
+        "name": "Update Google Sheet",
+        "type": "n8n-nodes-base.googleSheets",
+        "position": [
+          2600,
+          1140
+        ]
+      },
+      {
+        "name": "Set API Keys",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          -380,
+          1220
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -440,
+          1160
+        ]
+      },
+      {
+        "name": "Validate list formatting",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          280,
+          1280
+        ]
+      },
+      {
+        "name": "Get Audio from Video",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          3820,
+          1360
+        ]
+      },
+      {
+        "name": "Generate Description for Videos  in Tiktok and Instagram",
+        "type": "@n8n/n8n-nodes-langchain.openAi",
+        "position": [
+          4060,
+          1360
+        ]
+      },
+      {
+        "name": "Upload Video and Description to Tiktok",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4880,
+          940
+        ]
+      },
+      {
+        "name": "Upload Video and Description to Instagram",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4880,
+          1140
+        ]
+      },
+      {
+        "name": "Upload Video and Description to Youtube",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4880,
+          1360
+        ]
+      },
+      {
+        "name": "Upload Video and Description to Facebook",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4880,
+          1600
+        ]
+      },
+      {
+        "name": "Upload Video and Description to Linkedin",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          4880,
+          1840
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          2940,
+          920
+        ]
+      },
+      {
+        "name": "Read Video from Google Drive",
+        "type": "n8n-nodes-base.readBinaryFile",
+        "position": [
+          4420,
+          1360
+        ]
+      },
+      {
+        "name": "Write video",
+        "type": "n8n-nodes-base.writeBinaryFile",
+        "position": [
+          3440,
+          1360
+        ]
+      }
+    ],
+    "connections_count": 38
+  },
+  "semantic_info": {
+    "category": "ai-ml",
+    "purpose": "social media management",
+    "complexity_score": 1605,
+    "quality_score": 0.5,
+    "keywords": [
+      "list elements1",
+      "generate description for videos  in tiktok and instagram",
+      "set permissions",
+      "get audio from video",
+      "googleDrive",
+      "check for failures",
+      "upload video and description to instagram",
+      "wait 5min",
+      "upload video and description to youtube",
+      "upload video and description to facebook",
+      "read video from google drive",
+      "sticky note5",
+      "get video",
+      "generate script",
+      "sticky note4",
+      "generate voice",
+      "wait1",
+      "get raw file",
+      "list elements",
+      "create list",
+      "set access permissions",
+      "set api keys",
+      "image-to-video",
+      "get final video",
+      "wait 10min",
+      "sticky note2",
+      "match captions with videos",
+      "generate image",
+      "generate video captions",
+      "@n8n/n8n nodes langchain.openAi",
+      "get image",
+      "generate image prompts",
+      "render final video",
+      "readBinaryFile",
+      "httpRequest",
+      "googleSheets",
+      "ai-ml",
+      "write video",
+      "stickyNote",
+      "upload video and description to tiktok",
+      "sticky note7",
+      "calculate token usage",
+      "wait",
+      "sticky note6",
+      "fail check",
+      "upload voice audio",
+      "pair videos with audio",
+      "code",
+      "merge",
+      "sticky note3",
+      "social media management",
+      "wait to retry",
+      "sticky note1",
+      "writeBinaryFile",
+      "update google sheet",
+      "notify me on discord",
+      "upload final video",
+      "set",
+      "validate list formatting",
+      "upload video and description to linkedin",
+      "discord",
+      "sticky note",
+      "scheduleTrigger",
+      "wait 3min",
+      "once per day",
+      "load google sheet",
+      "complex"
+    ],
+    "description": "'AI-Powered Short-Form Video Generator with OpenAI, Flux, Kling, and ElevenLabs and upload to all social networks' es un workflow diseñado para social media management con 51 nodos activado por Once Per Day que ejecuta: Get image, Generate Image, Image-to-Video en la categoría de ai-ml.",
+    "semantic_content": "Workflow: AI-Powered Short-Form Video Generator with OpenAI, Flux, Kling, and ElevenLabs and upload to all social networks. Nodos: Get image (httpRequest), Generate Image (httpRequest), Image-to-Video (httpRequest), Get Video (httpRequest), List Elements (code), Wait 10min (wait), Wait 3min (wait), Wait 5min (wait), Generate voice (httpRequest), List Elements1 (code), Fail check (if), Wait to retry (wait), Generate Image Prompts (@n8n/n8n-nodes-langchain.openAi), Calculate Token Usage (code), Check for failures (if), Sticky Note1 (stickyNote), Sticky Note (stickyNote), Generate Video Captions (@n8n/n8n-nodes-langchain.openAi), Sticky Note2 (stickyNote), Match captions with videos (merge), Generate Script (@n8n/n8n-nodes-langchain.openAi), Upload Voice Audio (googleDrive), Set Access Permissions (googleDrive), Pair Videos with Audio (merge), Render Final Video (httpRequest), Notify me on Discord (discord), Once Per Day (scheduleTrigger), Load Google Sheet (googleSheets), Create List (code), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Wait1 (wait), Get Final Video (httpRequest), Upload Final Video (googleDrive), Get Raw File (httpRequest), Set Permissions (googleDrive), Update Google Sheet (googleSheets), Set API Keys (set), Sticky Note6 (stickyNote), Validate list formatting (if), Get Audio from Video (@n8n/n8n-nodes-langchain.openAi), Generate Description for Videos  in Tiktok and Instagram (@n8n/n8n-nodes-langchain.openAi), Upload Video and Description to Tiktok (httpRequest), Upload Video and Description to Instagram (httpRequest), Upload Video and Description to Youtube (httpRequest), Upload Video and Description to Facebook (httpRequest), Upload Video and Description to Linkedin (httpRequest), Sticky Note7 (stickyNote), Read Video from Google Drive (readBinaryFile), Write video (writeBinaryFile). Propósito: social media management. Categoría: ai-ml. Disparadores: Once Per Day"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": false,
+    "has_conditional_logic": true,
+    "has_error_handling": false
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0000001192092896,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:45.834497"
+  },
+  "semantic_vector": [
+    -0.050252169370651245,
+    -0.042735062539577484,
+    0.05554433912038803,
+    -0.054244160652160645,
+    0.05297772213816643,
+    0.04596740007400513,
+    0.046530209481716156,
+    0.05565861612558365,
+    -0.055032163858413696,
+    0.05495472624897957,
+    -0.0464034266769886,
+    0.04886692017316818,
+    -0.002349764807149768,
+    -0.0556487999856472,
+    -0.004581374581903219,
+    0.055658917874097824,
+    0.0556386299431324,
+    -0.05262691155076027,
+    -0.05357372760772705,
+    -0.013978645205497742,
+    0.04416755214333534,
+    0.03761947154998779,
+    0.051336079835891724,
+    0.007936051115393639,
+    -0.055650290101766586,
+    -0.0019189667655155063,
+    -0.05504189431667328,
+    0.03713735565543175,
+    -0.04999129846692085,
+    -0.038780052214860916,
+    0.04854155704379082,
+    0.008818455971777439,
+    -0.05478094518184662,
+    0.04134621098637581,
+    0.05460045859217644,
+    -0.013500403612852097,
+    -0.03921664506196976,
+    -0.054328158497810364,
+    0.04923142120242119,
+    -0.05546325072646141,
+    -0.046157803386449814,
+    0.0513201579451561,
+    -0.02713901549577713,
+    -0.025469664484262466,
+    0.0556311197578907,
+    -0.03400586545467377,
+    0.04216456413269043,
+    0.052307382225990295,
+    -0.036329515278339386,
+    -0.05509503558278084,
+    -0.05393819510936737,
+    0.015233416110277176,
+    -0.05565414950251579,
+    -0.05170609429478645,
+    -0.055468738079071045,
+    -0.054356690496206284,
+    0.013973495922982693,
+    -0.044416703283786774,
+    -0.028926396742463112,
+    0.05059695988893509,
+    0.0098629891872406,
+    0.031594328582286835,
+    -0.05527491867542267,
+    0.047800254076719284,
+    0.02912648394703865,
+    -0.0077001843601465225,
+    0.05101462081074715,
+    0.03101138398051262,
+    0.03601648285984993,
+    0.04595697298645973,
+    -0.05565119534730911,
+    -0.05143193528056145,
+    -0.0555596686899662,
+    0.04494653642177582,
+    0.01817978359758854,
+    -0.005015639588236809,
+    -0.04583820700645447,
+    -0.005189552903175354,
+    0.015144024975597858,
+    0.00396591005846858,
+    0.020154394209384918,
+    0.012154408730566502,
+    -0.03379601985216141,
+    -0.04237082600593567,
+    0.05549154803156853,
+    0.037119194865226746,
+    -0.014712735079228878,
+    0.03248622640967369,
+    -0.02232128381729126,
+    -0.05462824925780296,
+    -0.047718346118927,
+    0.045436833053827286,
+    0.043093495070934296,
+    0.049709077924489975,
+    0.05016004666686058,
+    -0.04495014250278473,
+    0.04233146458864212,
+    0.019434882327914238,
+    -0.055658698081970215,
+    -0.055640965700149536,
+    -0.05325412005186081,
+    -0.05098629742860794,
+    0.021242929622530937,
+    0.029479391872882843,
+    0.050066474825143814,
+    0.025431562215089798,
+    0.055658772587776184,
+    -0.034248482435941696,
+    0.040613118559122086,
+    -0.05565875396132469,
+    -0.031065966933965683,
+    -0.02888859622180462,
+    -0.022054927423596382,
+    0.02467874437570572,
+    -0.05052110180258751,
+    0.048290692269802094,
+    0.05553433299064636,
+    -0.045978330075740814,
+    -0.05408003553748131,
+    0.04193275794386864,
+    0.044431574642658234,
+    0.05430104210972786,
+    0.03757862001657486,
+    0.029185667634010315,
+    0.036364734172821045,
+    0.023914257064461708,
+    0.009427612647414207,
+    -0.05565817281603813,
+    0.05518817901611328,
+    -0.04476102441549301,
+    -0.0487498864531517,
+    -0.051912788301706314,
+    0.04096876457333565,
+    0.022448113188147545,
+    -0.045271217823028564,
+    0.005133906379342079,
+    -0.037632644176483154,
+    0.052682239562273026,
+    -0.0555548220872879,
+    -0.055650487542152405,
+    -0.02665727771818638,
+    0.055658917874097824,
+    0.00891027133911848,
+    -0.05400785803794861,
+    -0.045166127383708954,
+    -0.055657871067523956,
+    0.055552270263433456,
+    -0.055389154702425,
+    0.010108904913067818,
+    0.03326386213302612,
+    0.0027186241932213306,
+    -0.052542153745889664,
+    0.047147564589977264,
+    -0.04235589876770973,
+    0.035196177661418915,
+    0.055649079382419586,
+    -0.022101232782006264,
+    -0.04984128847718239,
+    -0.00013421870244201273,
+    -0.0268502626568079,
+    -0.03154782950878143,
+    -0.052335210144519806,
+    0.05534530431032181,
+    -0.0031106353271752596,
+    0.04904566705226898,
+    -0.026586296036839485,
+    -0.05465727671980858,
+    -0.04313529655337334,
+    -0.055652469396591187,
+    -0.052094340324401855,
+    0.04992910474538803,
+    0.022805936634540558,
+    -0.04646415635943413,
+    -0.02923855558037758,
+    -0.044024817645549774,
+    0.05528886616230011,
+    0.0471699982881546,
+    -0.04811766371130943,
+    0.05186773091554642,
+    -0.04933146387338638,
+    -0.04909534752368927,
+    0.01737946644425392,
+    -0.032885581254959106,
+    0.053936734795570374,
+    0.05466795340180397,
+    -0.008045513182878494,
+    -0.05565815791487694,
+    0.04984833300113678,
+    -0.0410623773932457,
+    0.05208897218108177,
+    -0.055507294833660126,
+    0.054471492767333984,
+    -0.0006596068269573152,
+    -0.05558743327856064,
+    -0.054652802646160126,
+    -0.05560871213674545,
+    -0.03490260988473892,
+    0.055658917874097824,
+    0.034591708332300186,
+    0.03729899972677231,
+    0.0535966120660305,
+    0.054810360074043274,
+    -0.049882300198078156,
+    0.044673528522253036,
+    0.03957624360918999,
+    -0.016069801524281502,
+    -0.02789267525076866,
+    -0.017452819272875786,
+    -0.05565712973475456,
+    0.03138577193021774,
+    0.04191974177956581,
+    0.04272868484258652,
+    0.04912000894546509,
+    0.055148616433143616,
+    -0.0556349977850914,
+    -0.05500383302569389,
+    0.04702754691243172,
+    0.0539371483027935,
+    0.04497990384697914,
+    -0.039659105241298676,
+    0.05177600309252739,
+    0.04866611957550049,
+    0.04069918766617775,
+    0.05384409800171852,
+    -0.05547809228301048,
+    -0.05542905628681183,
+    -0.04357760399580002,
+    -0.035892054438591,
+    -0.05533536523580551,
+    -0.05374984070658684,
+    -0.042299699038267136,
+    -0.05564442276954651,
+    -0.009684897027909756,
+    -0.05565618351101875,
+    -0.04278130084276199,
+    0.044118691235780716,
+    0.055657047778367996,
+    0.05524449795484543,
+    -0.05465158820152283,
+    0.012199979275465012,
+    -0.05558094009757042,
+    0.053406864404678345,
+    0.05227217450737953,
+    0.04642573744058609,
+    0.04598373547196388,
+    0.05559464916586876,
+    0.05488006770610809,
+    0.025799117982387543,
+    0.05503618344664574,
+    0.05558479204773903,
+    -0.0556582547724247,
+    0.04503563791513443,
+    -0.028443466871976852,
+    0.04677813500165939,
+    0.03422578051686287,
+    -0.048007138073444366,
+    0.03791562840342522,
+    0.055658917874097824,
+    -0.0345473550260067,
+    0.036793239414691925,
+    0.028460200875997543,
+    0.0548747256398201,
+    -0.03127862885594368,
+    0.005540371406823397,
+    -0.0477350614964962,
+    0.03167935833334923,
+    0.02414955571293831,
+    -0.0314040333032608,
+    -0.05557012930512428,
+    0.04444500803947449,
+    -0.0530024990439415,
+    -0.03257052227854729,
+    -0.055185768753290176,
+    -0.01500252541154623,
+    -0.005039885174483061,
+    0.05365678295493126,
+    -0.048355866223573685,
+    -0.02549128048121929,
+    0.055658917874097824,
+    -0.03561787307262421,
+    0.0388520285487175,
+    -0.05483800172805786,
+    0.055423665791749954,
+    -0.047064658254384995,
+    0.034698840230703354,
+    -0.055658917874097824,
+    -0.0034626463893800974,
+    0.05540219694375992,
+    -0.048565302044153214,
+    0.05565348640084267,
+    -0.005101389717310667,
+    -0.017062705010175705,
+    0.05546639487147331,
+    0.009692981839179993,
+    0.047922443598508835,
+    -0.055447641760110855,
+    -0.055096834897994995,
+    0.052280690521001816,
+    0.03654291108250618,
+    0.03838413208723068,
+    -0.04978671669960022,
+    0.05466261878609657,
+    0.055591732263565063,
+    -0.038065411150455475,
+    0.05208253860473633,
+    0.054850418120622635,
+    0.04697852581739426,
+    0.05359751358628273,
+    0.04688657447695732,
+    -0.0212054755538702,
+    0.05485417693853378,
+    0.027931230142712593,
+    -0.007233034819364548,
+    -0.04113350808620453,
+    0.05071377009153366,
+    0.05293131619691849,
+    0.052766140550374985,
+    0.026232585310935974,
+    -0.029392164200544357,
+    -0.025731436908245087,
+    0.018770739436149597,
+    0.032059088349342346,
+    0.054758425801992416,
+    -0.05544731020927429,
+    -0.010300138965249062,
+    -0.011189545504748821,
+    0.051014918833971024,
+    -0.04796552658081055,
+    0.017065877094864845,
+    -0.0470246784389019,
+    0.012449056841433048,
+    -0.038466572761535645,
+    -0.053040891885757446,
+    0.0556391142308712,
+    0.0308923851698637,
+    -0.04456356167793274,
+    0.0545772984623909,
+    -0.005162226036190987,
+    -0.0007901539793238044,
+    0.020004548132419586,
+    0.05548236519098282,
+    -0.05529990419745445,
+    0.046757470816373825,
+    0.004639508668333292,
+    -0.055658869445323944,
+    -0.039820119738578796,
+    0.017016960307955742,
+    -0.032291848212480545,
+    -0.055393319576978683,
+    0.05549604073166847,
+    0.054966073483228683,
+    -0.05491121485829353,
+    0.018141739070415497,
+    0.051705725491046906,
+    0.055379096418619156,
+    -0.025036394596099854,
+    -0.055658768862485886,
+    0.009162811562418938,
+    -0.03864533081650734,
+    -0.013933252543210983,
+    0.048368703573942184,
+    -0.055167000740766525,
+    -0.05565660074353218,
+    0.05541442334651947,
+    -0.055655449628829956,
+    0.05479547008872032,
+    0.041867099702358246,
+    -0.05537115037441254,
+    0.0534452423453331,
+    0.03357621282339096,
+    0.029432127252221107,
+    -0.05134299024939537,
+    -0.055613670498132706,
+    0.031214116141200066,
+    0.009206720627844334,
+    0.05288936570286751,
+    -0.05025152117013931,
+    -0.052782587707042694,
+    0.041896212846040726,
+    0.05469511076807976,
+    0.05017386004328728,
+    -0.035664767026901245,
+    -0.0440518744289875,
+    -0.01925553008913994,
+    0.008115867152810097,
+    -0.053269028663635254,
+    -0.011355915106832981,
+    0.05506841093301773,
+    -0.02066912315785885,
+    -0.05524291470646858,
+    -0.04733443632721901,
+    0.010979815386235714,
+    0.055658843368291855,
+    -0.034687284380197525,
+    -0.029317252337932587,
+    0.02312060073018074,
+    0.009823163971304893,
+    0.05507892370223999,
+    -0.013932893052697182,
+    0.0528436042368412,
+    0.053371164947748184,
+    0.0047311498783528805,
+    0.035801373422145844,
+    0.05181688070297241,
+    0.055658917874097824,
+    0.022237829864025116,
+    -0.05565871298313141,
+    0.041842155158519745,
+    0.055502064526081085,
+    0.038290806114673615,
+    0.0012434091186150908,
+    0.042682137340307236,
+    0.054282110184431076,
+    0.048656027764081955,
+    0.024861928075551987,
+    -0.05541010573506355,
+    -0.03332693502306938,
+    -0.05552271381020546,
+    0.04664166271686554,
+    -0.009997925721108913,
+    -0.010587235912680626,
+    0.05000413581728935,
+    -0.055658917874097824,
+    0.03245748579502106,
+    -0.053916800767183304,
+    0.052165888249874115,
+    -0.05562780052423477,
+    0.05333267152309418,
+    -0.04421118274331093,
+    0.055548667907714844,
+    -0.05438581109046936,
+    -0.04137461632490158,
+    -0.0439513735473156,
+    0.05516638234257698,
+    -0.051086924970149994,
+    -0.053791288286447525,
+    -0.01963372342288494,
+    -0.05561704561114311,
+    -0.05560298264026642,
+    0.05288592353463173,
+    0.053151268512010574,
+    -0.043421126902103424,
+    -0.02083955705165863,
+    -0.054513849318027496,
+    0.054916225373744965,
+    -0.05565841123461723,
+    -0.05380604416131973,
+    -0.04434502124786377,
+    -0.05542600154876709,
+    -0.055252451449632645,
+    0.011658172123134136,
+    0.001375042018480599,
+    0.055658869445323944,
+    -0.010562088340520859,
+    0.00800544023513794,
+    -0.05565086007118225,
+    0.05055848881602287,
+    0.055404115468263626,
+    0.03265216946601868,
+    -0.04707368090748787,
+    0.03854233771562576,
+    0.055240970104932785,
+    0.055529333651065826,
+    0.05541663616895676,
+    0.034857377409935,
+    -0.053442057222127914,
+    0.05534811690449715,
+    -0.030345754697918892,
+    -0.0555059053003788,
+    0.03563549742102623,
+    0.03463388606905937,
+    -0.05401523411273956,
+    0.04217628762125969,
+    -0.05393878370523453,
+    -0.055441416800022125,
+    -0.05006767809391022,
+    0.05551918223500252,
+    0.04584265500307083,
+    -0.040816545486450195,
+    -0.05564190447330475,
+    0.044658806174993515,
+    0.04684639349579811,
+    -0.04188200831413269,
+    -0.05551699548959732,
+    -0.04810843989253044,
+    0.05563958361744881,
+    -0.02824721857905388,
+    0.048410676419734955,
+    0.01150386594235897,
+    0.053673915565013885,
+    0.00047835276927798986,
+    0.04181704297661781,
+    0.033145464956760406,
+    -0.009049961343407631,
+    -0.018223892897367477,
+    0.05217764154076576,
+    -0.016284924000501633,
+    0.05521875619888306,
+    -0.05206881836056709,
+    0.04787391051650047,
+    0.04563896730542183,
+    -0.05515085160732269,
+    -0.023543793708086014,
+    -0.05565866082906723,
+    0.04142492264509201,
+    0.0448557548224926,
+    -0.05520334467291832,
+    -0.05233917012810707,
+    -0.026785578578710556,
+    0.05565682053565979,
+    -0.05439595505595207,
+    -0.05262679234147072
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "uses:scheduleTrigger",
+    "uses:wait",
+    "category:ai-ml",
+    "uses:set",
+    "uses:code",
+    "uses:@n8n/n8n-nodes-langchain.openAi",
+    "uses:discord",
+    "uses:if",
+    "uses:merge",
+    "trigger:scheduleTrigger",
+    "purpose:social-media-management",
+    "complexity:high",
+    "uses:writeBinaryFile",
+    "uses:readBinaryFile",
+    "uses:googleSheets",
+    "uses:googleDrive",
+    "uses:httpRequest"
+  ],
+  "category_info": {
+    "category_name": "Wait",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Wait"
+  }
+}

@@ -1,0 +1,1217 @@
+{
+  "workflow_info": {
+    "id": "HpjjgJm3Ulnl1cJQ",
+    "name": "Notion to Clockify Sync Template",
+    "file_name": "1498_Stopanderror_Limit_Sync_Webhook.json",
+    "file_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror\\1498_Stopanderror_Limit_Sync_Webhook.json",
+    "created_at": "",
+    "updated_at": "",
+    "active": false
+  },
+  "structure": {
+    "total_nodes": 68,
+    "node_types": [
+      "n8n-nodes-base.set",
+      "n8n-nodes-base.noOp",
+      "n8n-nodes-base.webhook",
+      "n8n-nodes-base.notion",
+      "n8n-nodes-base.if",
+      "n8n-nodes-base.merge",
+      "n8n-nodes-base.httpRequest",
+      "n8n-nodes-base.stickyNote",
+      "n8n-nodes-base.compareDatasets",
+      "n8n-nodes-base.scheduleTrigger",
+      "n8n-nodes-base.limit",
+      "n8n-nodes-base.clockify",
+      "n8n-nodes-base.stopAndError"
+    ],
+    "triggers": [
+      {
+        "name": "Schedule Trigger",
+        "type": "n8n-nodes-base.scheduleTrigger",
+        "position": [
+          -400,
+          -300
+        ]
+      }
+    ],
+    "actions": [
+      {
+        "name": "Webhook",
+        "type": "n8n-nodes-base.webhook",
+        "position": [
+          -400,
+          -100
+        ]
+      },
+      {
+        "name": "Globals",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          40,
+          -200
+        ]
+      },
+      {
+        "name": "Get first workspace ID",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          -180,
+          -200
+        ]
+      },
+      {
+        "name": "Compare Datasets",
+        "type": "n8n-nodes-base.compareDatasets",
+        "position": [
+          920,
+          -220
+        ]
+      },
+      {
+        "name": "Stop and Error",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          2020,
+          -460
+        ]
+      },
+      {
+        "name": "Structure output",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1140,
+          -280
+        ]
+      },
+      {
+        "name": "Map values",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          700,
+          -300
+        ]
+      },
+      {
+        "name": "Map values1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          700,
+          -100
+        ]
+      },
+      {
+        "name": "No Operation",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          260,
+          -200
+        ]
+      },
+      {
+        "name": "Get active Clients from Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          480,
+          -300
+        ]
+      },
+      {
+        "name": "Get active Clients from Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          480,
+          -100
+        ]
+      },
+      {
+        "name": "If unmapped in Notion",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1140,
+          -480
+        ]
+      },
+      {
+        "name": "Set new values",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1360,
+          -20
+        ]
+      },
+      {
+        "name": "Update Client in Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          1580,
+          -180
+        ]
+      },
+      {
+        "name": "Get archived Client from Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1140,
+          -20
+        ]
+      },
+      {
+        "name": "Create Client in Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          1360,
+          -580
+        ]
+      },
+      {
+        "name": "Store Clockify ID in Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1580,
+          -580
+        ]
+      },
+      {
+        "name": "Remove Client from Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          1800,
+          -460
+        ]
+      },
+      {
+        "name": "Merge",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2240,
+          -280
+        ]
+      },
+      {
+        "name": "No Operation, do nothing",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2020,
+          -680
+        ]
+      },
+      {
+        "name": "Get active Projects from Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          480,
+          620
+        ]
+      },
+      {
+        "name": "Get active Projects from Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          480,
+          820
+        ]
+      },
+      {
+        "name": "Update Project in Clockify",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1580,
+          740
+        ]
+      },
+      {
+        "name": "Get completed Project from Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1140,
+          900
+        ]
+      },
+      {
+        "name": "Create Project in Clockify",
+        "type": "n8n-nodes-base.httpRequest",
+        "position": [
+          1360,
+          340
+        ]
+      },
+      {
+        "name": "Remove Project from Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          1800,
+          440
+        ]
+      },
+      {
+        "name": "Structure output1",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1140,
+          640
+        ]
+      },
+      {
+        "name": "No Operation1",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          260,
+          720
+        ]
+      },
+      {
+        "name": "Map values2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          700,
+          620
+        ]
+      },
+      {
+        "name": "Map values3",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          700,
+          820
+        ]
+      },
+      {
+        "name": "Compare Datasets1",
+        "type": "n8n-nodes-base.compareDatasets",
+        "position": [
+          920,
+          700
+        ]
+      },
+      {
+        "name": "If unmapped in Notion1",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1140,
+          440
+        ]
+      },
+      {
+        "name": "Set new values1",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1360,
+          900
+        ]
+      },
+      {
+        "name": "Store Clockify ID in Notion1",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1580,
+          340
+        ]
+      },
+      {
+        "name": "Stop and Error1",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          2020,
+          440
+        ]
+      },
+      {
+        "name": "Merge1",
+        "type": "n8n-nodes-base.merge",
+        "position": [
+          2240,
+          640
+        ]
+      },
+      {
+        "name": "No Operation, do nothing2",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          2020,
+          240
+        ]
+      },
+      {
+        "name": "Get active Tasks from Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          700,
+          1440
+        ]
+      },
+      {
+        "name": "Get active Tasks from Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          700,
+          1640
+        ]
+      },
+      {
+        "name": "Update Task in Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          1800,
+          1560
+        ]
+      },
+      {
+        "name": "Get completed Task from Notion",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1360,
+          1720
+        ]
+      },
+      {
+        "name": "Create Task in Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          1580,
+          1160
+        ]
+      },
+      {
+        "name": "Remove Task from Clockify",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          2020,
+          1260
+        ]
+      },
+      {
+        "name": "Structure output2",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          1360,
+          1460
+        ]
+      },
+      {
+        "name": "No Operation2",
+        "type": "n8n-nodes-base.noOp",
+        "position": [
+          260,
+          1540
+        ]
+      },
+      {
+        "name": "Map values4",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          920,
+          1440
+        ]
+      },
+      {
+        "name": "Map values5",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          920,
+          1640
+        ]
+      },
+      {
+        "name": "Get active Projects from Clockify1",
+        "type": "n8n-nodes-base.clockify",
+        "position": [
+          480,
+          1640
+        ]
+      },
+      {
+        "name": "Compare Datasets2",
+        "type": "n8n-nodes-base.compareDatasets",
+        "position": [
+          1140,
+          1520
+        ]
+      },
+      {
+        "name": "If unmapped in Notion2",
+        "type": "n8n-nodes-base.if",
+        "position": [
+          1360,
+          1260
+        ]
+      },
+      {
+        "name": "Set new values2",
+        "type": "n8n-nodes-base.set",
+        "position": [
+          1580,
+          1720
+        ]
+      },
+      {
+        "name": "Store Clockify ID in Notion2",
+        "type": "n8n-nodes-base.notion",
+        "position": [
+          1800,
+          1160
+        ]
+      },
+      {
+        "name": "Stop and Error2",
+        "type": "n8n-nodes-base.stopAndError",
+        "position": [
+          2240,
+          1260
+        ]
+      },
+      {
+        "name": "Limit",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          2460,
+          20
+        ]
+      },
+      {
+        "name": "Limit1",
+        "type": "n8n-nodes-base.limit",
+        "position": [
+          2460,
+          940
+        ]
+      },
+      {
+        "name": "Sticky Note",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          220,
+          -700
+        ]
+      },
+      {
+        "name": "Sticky Note1",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          220,
+          220
+        ]
+      },
+      {
+        "name": "Sticky Note2",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          220,
+          1140
+        ]
+      },
+      {
+        "name": "Sticky Note3",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -20,
+          -360
+        ]
+      },
+      {
+        "name": "Sticky Note4",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -460,
+          -460
+        ]
+      },
+      {
+        "name": "Sticky Note5",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1300,
+          1620
+        ]
+      },
+      {
+        "name": "Sticky Note6",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          420,
+          -400
+        ]
+      },
+      {
+        "name": "Sticky Note7",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1080,
+          -120
+        ]
+      },
+      {
+        "name": "Sticky Note8",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          1080,
+          800
+        ]
+      },
+      {
+        "name": "Sticky Note9",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          420,
+          520
+        ]
+      },
+      {
+        "name": "Sticky Note10",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          640,
+          1340
+        ]
+      },
+      {
+        "name": "Sticky Note11",
+        "type": "n8n-nodes-base.stickyNote",
+        "position": [
+          -460,
+          160
+        ]
+      }
+    ],
+    "connections_count": 51
+  },
+  "semantic_info": {
+    "category": "productivity",
+    "purpose": "webhook integration",
+    "complexity_score": 1225,
+    "quality_score": 0.75,
+    "keywords": [
+      "schedule trigger",
+      "no operation, do nothing",
+      "sticky note5",
+      "webhook",
+      "store clockify id in notion",
+      "update client in clockify",
+      "create client in clockify",
+      "store clockify id in notion1",
+      "httpRequest",
+      "map values",
+      "remove client from clockify",
+      "create project in clockify",
+      "store clockify id in notion2",
+      "no operation2",
+      "get completed project from notion",
+      "merge1",
+      "sticky note8",
+      "webhook integration",
+      "map values5",
+      "map values2",
+      "remove project from clockify",
+      "structure output",
+      "stop and error1",
+      "create task in clockify",
+      "limit",
+      "productivity",
+      "sticky note9",
+      "map values1",
+      "sticky note10",
+      "get active clients from notion",
+      "sticky note2",
+      "get active clients from clockify",
+      "update project in clockify",
+      "set new values",
+      "stickyNote",
+      "get completed task from notion",
+      "if unmapped in notion1",
+      "stopAndError",
+      "no operation, do nothing2",
+      "sticky note1",
+      "stop and error",
+      "structure output2",
+      "stop and error2",
+      "sticky note6",
+      "structure output1",
+      "update task in clockify",
+      "no operation",
+      "limit1",
+      "get active projects from clockify1",
+      "notion",
+      "globals",
+      "if unmapped in notion",
+      "sticky note7",
+      "compare datasets1",
+      "get first workspace id",
+      "get active projects from notion",
+      "compare datasets2",
+      "map values3",
+      "remove task from clockify",
+      "scheduleTrigger",
+      "get active projects from clockify",
+      "sticky note4",
+      "sticky note11",
+      "clockify",
+      "get active tasks from clockify",
+      "compare datasets",
+      "set new values2",
+      "compareDatasets",
+      "noOp",
+      "sticky note3",
+      "merge",
+      "if unmapped in notion2",
+      "get active tasks from notion",
+      "set",
+      "get archived client from notion",
+      "sticky note",
+      "complex",
+      "set new values1",
+      "no operation1",
+      "map values4"
+    ],
+    "description": "'Notion to Clockify Sync Template' es un workflow diseñado para webhook integration con 68 nodos activado por Schedule Trigger que ejecuta: Webhook, Globals, Get first workspace ID en la categoría de productivity.",
+    "semantic_content": "Workflow: Notion to Clockify Sync Template. Nodos: Webhook (webhook), Globals (set), Schedule Trigger (scheduleTrigger), Get first workspace ID (clockify), Compare Datasets (compareDatasets), Stop and Error (stopAndError), Structure output (noOp), Map values (set), Map values1 (set), No Operation (noOp), Get active Clients from Notion (notion), Get active Clients from Clockify (clockify), If unmapped in Notion (if), Set new values (set), Update Client in Clockify (clockify), Get archived Client from Notion (notion), Create Client in Clockify (clockify), Store Clockify ID in Notion (notion), Remove Client from Clockify (clockify), Merge (merge), No Operation, do nothing (noOp), Get active Projects from Notion (notion), Get active Projects from Clockify (clockify), Update Project in Clockify (httpRequest), Get completed Project from Notion (notion), Create Project in Clockify (httpRequest), Remove Project from Clockify (clockify), Structure output1 (noOp), No Operation1 (noOp), Map values2 (set), Map values3 (set), Compare Datasets1 (compareDatasets), If unmapped in Notion1 (if), Set new values1 (set), Store Clockify ID in Notion1 (notion), Stop and Error1 (stopAndError), Merge1 (merge), No Operation, do nothing2 (noOp), Get active Tasks from Notion (notion), Get active Tasks from Clockify (clockify), Update Task in Clockify (clockify), Get completed Task from Notion (notion), Create Task in Clockify (clockify), Remove Task from Clockify (clockify), Structure output2 (noOp), No Operation2 (noOp), Map values4 (set), Map values5 (set), Get active Projects from Clockify1 (clockify), Compare Datasets2 (compareDatasets), If unmapped in Notion2 (if), Set new values2 (set), Store Clockify ID in Notion2 (notion), Stop and Error2 (stopAndError), Limit (limit), Limit1 (limit), Sticky Note (stickyNote), Sticky Note1 (stickyNote), Sticky Note2 (stickyNote), Sticky Note3 (stickyNote), Sticky Note4 (stickyNote), Sticky Note5 (stickyNote), Sticky Note6 (stickyNote), Sticky Note7 (stickyNote), Sticky Note8 (stickyNote), Sticky Note9 (stickyNote), Sticky Note10 (stickyNote), Sticky Note11 (stickyNote). Propósito: webhook integration. Categoría: productivity. Disparadores: Schedule Trigger"
+  },
+  "quality_indicators": {
+    "has_meaningful_names": true,
+    "has_multiple_triggers": false,
+    "has_conditional_logic": true,
+    "has_error_handling": true
+  },
+  "vector_info": {
+    "vector_dimension": 512,
+    "vector_norm": 1.0,
+    "embedding_model": "universal-sentence-encoder-v4",
+    "generated_at": "2025-09-25T02:25:44.705254"
+  },
+  "semantic_vector": [
+    -0.009210783988237381,
+    -0.05793319642543793,
+    0.007377805653959513,
+    -0.05687820166349411,
+    0.015745677053928375,
+    -0.014558556489646435,
+    0.052472587674856186,
+    -0.023032531142234802,
+    -0.05510156601667404,
+    0.05896206572651863,
+    -0.009069611318409443,
+    -0.037155672907829285,
+    -0.018608668819069862,
+    0.008078052662312984,
+    -0.05607764050364494,
+    0.05909949541091919,
+    0.058283086866140366,
+    -0.03463485464453697,
+    -0.039542440325021744,
+    -0.04655258357524872,
+    -0.029706453904509544,
+    0.034171346575021744,
+    0.04281763359904289,
+    -0.04725554585456848,
+    0.055669642984867096,
+    0.057321712374687195,
+    -0.02690868265926838,
+    0.053034935146570206,
+    -0.05826251581311226,
+    0.029574334621429443,
+    0.05339576676487923,
+    -0.034136783331632614,
+    -0.0028673061169683933,
+    -0.023688960820436478,
+    -0.03425249457359314,
+    0.05316392332315445,
+    0.046281952410936356,
+    0.018175829201936722,
+    -0.029581677168607712,
+    0.042186882346868515,
+    -0.048311203718185425,
+    0.05864061042666435,
+    0.05594635754823685,
+    0.04758422449231148,
+    0.05909937247633934,
+    -0.056917112320661545,
+    -0.02371196076273918,
+    0.038404472172260284,
+    -0.05428275465965271,
+    -0.05655241385102272,
+    -0.05756847932934761,
+    0.010235331952571869,
+    -0.058284737169742584,
+    -0.057376760989427567,
+    -0.02940971776843071,
+    -0.05908589065074921,
+    0.052554644644260406,
+    0.0028393282555043697,
+    0.04611678794026375,
+    -0.0013355829287320375,
+    -0.048750702291727066,
+    -0.035690221935510635,
+    0.04021245613694191,
+    0.00853259302675724,
+    -0.03269093111157417,
+    0.033332709223032,
+    0.05902243033051491,
+    -0.04020011052489281,
+    0.05852142721414566,
+    -0.005381288938224316,
+    -0.056594111025333405,
+    -0.05876781791448593,
+    0.022262398153543472,
+    -0.023887567222118378,
+    -0.04866454005241394,
+    -0.025682341307401657,
+    0.04539695754647255,
+    -0.05078988894820213,
+    -0.04992765933275223,
+    0.03959698602557182,
+    0.03435050696134567,
+    -0.049843043088912964,
+    0.029214566573500633,
+    -0.05217760056257248,
+    0.05473538488149643,
+    0.04499470070004463,
+    -0.008047514595091343,
+    0.010880001820623875,
+    0.01728464476764202,
+    0.05687057599425316,
+    -0.057237427681684494,
+    0.039189212024211884,
+    -0.028327785432338715,
+    -0.014818531461060047,
+    -0.01979067549109459,
+    0.0041763875633478165,
+    0.04345695301890373,
+    0.02599019557237625,
+    -0.051617201417684555,
+    -0.05909941717982292,
+    0.05265600606799126,
+    -0.01312575489282608,
+    0.029563838616013527,
+    0.04420920088887215,
+    0.036401860415935516,
+    0.056259993463754654,
+    0.049973487854003906,
+    -0.0055241393856704235,
+    -0.019246574491262436,
+    -0.05672531947493553,
+    -0.011341908946633339,
+    -0.058346569538116455,
+    0.0015504813054576516,
+    0.05867544561624527,
+    0.05856643244624138,
+    0.041545890271663666,
+    -0.05681467428803444,
+    -0.029765795916318893,
+    0.04258182644844055,
+    0.04344892129302025,
+    -0.024840153753757477,
+    0.05723011493682861,
+    -0.047115009278059006,
+    0.05317900329828262,
+    0.057164255529642105,
+    -0.04605863615870476,
+    -0.019763970747590065,
+    0.037314508110284805,
+    0.058975204825401306,
+    -0.05323372036218643,
+    -0.04982374608516693,
+    0.01974356174468994,
+    0.05424812436103821,
+    -0.057433053851127625,
+    0.05866383761167526,
+    -0.05878545343875885,
+    -0.031633563339710236,
+    0.05530634522438049,
+    -0.05878162011504173,
+    -0.05702827498316765,
+    -0.05071046203374863,
+    0.05909949541091919,
+    0.007604135200381279,
+    -0.057049710303545,
+    -0.014788828790187836,
+    -0.05909936502575874,
+    0.05659119039773941,
+    0.048551566898822784,
+    0.054851241409778595,
+    0.0164902675896883,
+    -0.05801645293831825,
+    -0.0585843063890934,
+    -0.050214432179927826,
+    -0.005174966063350439,
+    0.05876510217785835,
+    0.059071656316518784,
+    0.04835371673107147,
+    -0.056778594851493835,
+    0.03606710582971573,
+    0.04419836029410362,
+    -0.05702409893274307,
+    -0.0579761378467083,
+    0.05308264493942261,
+    0.053586773574352264,
+    0.05105505511164665,
+    0.03163326531648636,
+    0.023107828572392464,
+    0.018094895407557487,
+    -0.055309683084487915,
+    -0.05020290985703468,
+    0.037001173943281174,
+    -0.05225718766450882,
+    0.05563428997993469,
+    0.05851618945598602,
+    -0.05899498611688614,
+    0.05860795080661774,
+    -0.026493987068533897,
+    0.008766730315983295,
+    0.057443615049123764,
+    -0.041368186473846436,
+    -0.021040283143520355,
+    0.04106020927429199,
+    -0.05485379323363304,
+    -0.02691720798611641,
+    0.015500064939260483,
+    0.0584615021944046,
+    -0.0587172731757164,
+    0.05833141505718231,
+    0.032240431755781174,
+    0.058500174432992935,
+    -0.05406802147626877,
+    -0.001817659242078662,
+    -0.03163698688149452,
+    -0.05836633965373039,
+    -0.057821258902549744,
+    -0.05908167362213135,
+    0.043344896286726,
+    0.05909949541091919,
+    0.02467486448585987,
+    0.006341373547911644,
+    0.05787143111228943,
+    0.014543893747031689,
+    -0.02341611310839653,
+    0.0573679618537426,
+    0.032439298927783966,
+    -0.002068329369649291,
+    -0.053491391241550446,
+    0.011034715920686722,
+    -0.05909659340977669,
+    0.008757133968174458,
+    0.05295883119106293,
+    0.04762394726276398,
+    0.046159546822309494,
+    0.010419209487736225,
+    -0.059097349643707275,
+    -0.056716252118349075,
+    0.02282632701098919,
+    0.04255395382642746,
+    -0.0028615184128284454,
+    -0.04832691326737404,
+    -0.05890510603785515,
+    0.05644890293478966,
+    -0.04233071208000183,
+    -0.007655882276594639,
+    0.052943550050258636,
+    -0.05846211314201355,
+    -0.05107584595680237,
+    -0.018501009792089462,
+    -0.058397077023983,
+    -0.04496719315648079,
+    -0.04654676467180252,
+    -0.05339641869068146,
+    -0.02308543212711811,
+    -0.059099454432725906,
+    -0.036492567509412766,
+    0.05809450149536133,
+    0.05909942463040352,
+    0.05537644028663635,
+    -0.0590452179312706,
+    -0.005602108780294657,
+    0.04466039314866066,
+    0.0578586719930172,
+    -0.054737064987421036,
+    0.044870227575302124,
+    0.04986878111958504,
+    0.058065276592969894,
+    0.029026562348008156,
+    -0.006163768470287323,
+    0.05685732886195183,
+    0.05866147577762604,
+    -0.05905717611312866,
+    -0.019961996003985405,
+    -0.057694341987371445,
+    0.015052610076963902,
+    0.05033531412482262,
+    0.003724060021340847,
+    -0.05103278532624245,
+    0.05909949541091919,
+    -0.043867774307727814,
+    0.05849941074848175,
+    0.04064419865608215,
+    0.05470556765794754,
+    -0.025042081251740456,
+    -0.03983541205525398,
+    0.0482768714427948,
+    0.057989444583654404,
+    -0.04788093641400337,
+    0.02507268637418747,
+    0.008572347462177277,
+    0.04946896806359291,
+    -0.05837439373135567,
+    0.056730810552835464,
+    -0.0005753358127549291,
+    0.05909568443894386,
+    -0.009958582930266857,
+    -0.03048725798726082,
+    -0.040600378066301346,
+    0.0561150461435318,
+    0.05909917131066322,
+    -0.04765208810567856,
+    0.0205167755484581,
+    0.05835416167974472,
+    0.04496457427740097,
+    0.018759414553642273,
+    -0.015784353017807007,
+    -0.05907787010073662,
+    -0.008581914007663727,
+    0.054921478033065796,
+    -0.020676778629422188,
+    0.006504930090159178,
+    -0.05833420529961586,
+    0.058070108294487,
+    0.05745867267251015,
+    0.05521506443619728,
+    0.05836468189954758,
+    -0.05839048698544502,
+    0.03316468745470047,
+    -0.011302230879664421,
+    0.04111294075846672,
+    -0.04276759922504425,
+    -0.029445776715874672,
+    0.03752892464399338,
+    0.05707016959786415,
+    -0.0012443450978025794,
+    0.020589131861925125,
+    -0.02041672356426716,
+    0.053946755826473236,
+    0.007449927274137735,
+    0.01955975778400898,
+    -0.058994706720113754,
+    -0.05291024595499039,
+    0.004646953660994768,
+    0.05880871042609215,
+    -0.005708504468202591,
+    0.007601060904562473,
+    -0.05428602546453476,
+    0.058572690933942795,
+    -0.0457204133272171,
+    0.05153190717101097,
+    0.05327322706580162,
+    -0.05365033075213432,
+    -0.056431882083415985,
+    0.014063401147723198,
+    0.023498769849538803,
+    0.05751700699329376,
+    -0.012197565287351608,
+    0.057547539472579956,
+    -0.038888730108737946,
+    -0.000895818171557039,
+    0.04394460469484329,
+    -0.05784323811531067,
+    -0.02342580258846283,
+    -0.007890635170042515,
+    0.05908998101949692,
+    0.020431675016880035,
+    -0.056254688650369644,
+    0.046500686556100845,
+    -0.022763729095458984,
+    0.05286140739917755,
+    -0.03390926867723465,
+    -0.027040470391511917,
+    -0.03383864462375641,
+    0.01696639508008957,
+    -0.054977402091026306,
+    -0.05909949541091919,
+    -0.035380929708480835,
+    -0.056035738438367844,
+    -0.057381272315979004,
+    -0.05855470150709152,
+    0.03126504644751549,
+    0.05505337566137314,
+    0.05717714503407478,
+    -0.006983886007219553,
+    0.040157340466976166,
+    -0.03435174748301506,
+    -0.05414925888180733,
+    -0.0590994693338871,
+    0.045398127287626266,
+    0.045860663056373596,
+    0.055623650550842285,
+    0.055166587233543396,
+    -0.022642502561211586,
+    -0.0590994656085968,
+    0.058965831995010376,
+    0.050706926733255386,
+    0.054822880774736404,
+    0.02256115712225437,
+    -0.05732712894678116,
+    0.058325618505477905,
+    -0.05017606541514397,
+    0.022732248529791832,
+    -0.044458091259002686,
+    -0.027465473860502243,
+    0.03230409324169159,
+    0.044434718787670135,
+    0.05242855101823807,
+    0.01484861969947815,
+    -0.057402465492486954,
+    0.03171604126691818,
+    0.044958457350730896,
+    0.05886656418442726,
+    0.05301772058010101,
+    0.04122479632496834,
+    -0.01462772861123085,
+    0.02601173147559166,
+    -0.017748553305864334,
+    0.05871988832950592,
+    0.01765376515686512,
+    -0.039864763617515564,
+    -0.05538557097315788,
+    -0.05874470993876457,
+    -0.04490877687931061,
+    -0.02459569275379181,
+    0.03496529161930084,
+    -0.025802452117204666,
+    0.011348762549459934,
+    0.04084663465619087,
+    0.04314884543418884,
+    0.006367035675793886,
+    0.05138234421610832,
+    -0.0377420075237751,
+    0.04344507306814194,
+    -0.0576263926923275,
+    0.05694563686847687,
+    -0.002868743846192956,
+    0.0039588878862559795,
+    -0.0590936541557312,
+    0.05891287699341774,
+    0.05246765911579132,
+    0.007570668589323759,
+    -0.054628144949674606,
+    0.03747690096497536,
+    0.0037083192728459835,
+    -0.052489444613456726,
+    0.008561782538890839,
+    0.00450613209977746,
+    0.04577847942709923,
+    -0.0068337395787239075,
+    0.01203528419137001,
+    0.0433206744492054,
+    -0.03588961809873581,
+    0.0018734033219516277,
+    0.021996181458234787,
+    0.006812870502471924,
+    -0.05819488689303398,
+    -0.055065784603357315,
+    -0.03193095326423645,
+    0.05858522281050682,
+    -0.053480613976716995,
+    0.026425711810588837,
+    -0.04369720071554184,
+    -0.020757626742124557,
+    -0.05599512904882431,
+    0.05908766761422157,
+    -0.05837651714682579,
+    -0.05687682330608368,
+    -0.0496678352355957,
+    -0.05510718375444412,
+    -0.05904720351099968,
+    0.016237813979387283,
+    0.04587320238351822,
+    -0.04573530703783035,
+    0.05378701537847519,
+    0.053436458110809326,
+    -0.05045812577009201,
+    -0.0425899475812912,
+    -0.059023596346378326,
+    -0.015654584392905235,
+    0.05879732593894005,
+    -0.058149393647909164,
+    -0.04211614280939102,
+    0.044670380651950836,
+    0.0590994767844677,
+    -0.02356070838868618,
+    0.0075101484544575214,
+    -0.059084806591272354,
+    -0.0029980437830090523,
+    0.05898740515112877,
+    0.023411506786942482,
+    0.046702560037374496,
+    -0.03837276250123978,
+    0.004800121299922466,
+    0.007499672472476959,
+    0.0590951107442379,
+    -0.042680758982896805,
+    -0.05819845199584961,
+    0.05234605073928833,
+    0.04018393158912659,
+    -0.050968244671821594,
+    0.05016941577196121,
+    0.0010953587479889393,
+    -0.0554375946521759,
+    0.010437160730361938,
+    0.04192536324262619,
+    0.051303986459970474,
+    0.0497480072081089,
+    0.05272630602121353,
+    0.05164596810936928,
+    0.0008632338140159845,
+    -0.05567106604576111,
+    0.042975377291440964,
+    0.0564279779791832,
+    -0.0029265161138027906,
+    -0.05901999771595001,
+    -0.0099575100466609,
+    0.05130724236369133,
+    0.001688190852291882,
+    -0.05667303875088692,
+    -0.045315030962228775,
+    0.03245040774345398,
+    0.006302366964519024,
+    0.05670923739671707,
+    -0.013146287761628628,
+    0.02131420560181141,
+    0.01873420737683773,
+    0.059087201952934265,
+    0.05761737748980522,
+    0.05888122320175171,
+    -0.052800919860601425,
+    -0.03941192105412483,
+    0.05684418976306915,
+    0.029417023062705994,
+    0.05782587081193924,
+    -0.05909949541091919,
+    0.03232347592711449,
+    -0.035082463175058365,
+    -0.020054662600159645,
+    0.026596901938319206,
+    -0.019770784303545952,
+    0.05909939855337143,
+    -0.03710807487368584,
+    -0.05645791068673134
+  ],
+  "search_tags": [
+    "uses:stickyNote",
+    "uses:scheduleTrigger",
+    "purpose:webhook-integration",
+    "uses:set",
+    "category:productivity",
+    "uses:noOp",
+    "uses:if",
+    "uses:merge",
+    "trigger:scheduleTrigger",
+    "uses:compareDatasets",
+    "uses:stopAndError",
+    "complexity:high",
+    "uses:limit",
+    "uses:webhook",
+    "uses:notion",
+    "uses:clockify",
+    "uses:httpRequest"
+  ],
+  "category_info": {
+    "category_name": "Stopanderror",
+    "category_path": "C:\\Users\\eddym\\Downloads\\n8n-ai-assistant\\workflows\\Stopanderror"
+  }
+}

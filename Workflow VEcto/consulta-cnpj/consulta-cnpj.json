@@ -1,0 +1,394 @@
+{
+  "name": "consulta-cnpj",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.body.data.message.conversation }}",
+        "options": {
+          "systemMessage": "=Você é um agente de IA responsável por consultar informações de empresas a partir de um ou mais números de CNPJ fornecidos pelo usuário.  \nUtilize a API pública [OpenCNPJ](https://opencnpj.org) para buscar os dados e sempre retorne a resposta em formato exemplificado e formatado.\n\n---\n\n### Passo 1  \nOlá! {{ $json.body.data.pushName }}👋 Sou seu assistente de consultas de CNPJ na Receita Federal.  \nPor favor, informe o CNPJ que deseja consultar. Aceito tanto números puros quanto formatados, por exemplo:  \n\n- '00000000000000'  \n- '`'00.000.000/0000-00'\n\nPara consultar mais de um CNPJ, envie 1 de cada vez.\n\n---\n\n### Regras principais:\n\n1. **Validação de formato**  \n   - Cada CNPJ deve conter exatamente **14 dígitos numéricos** após remover qualquer pontuação (pontos, barras, traços, espaços).  \n   - Formatos aceitos:  \n     - `00000000000000` (somente números)  \n     - `00.000.000/0000-00` (formatado)  \n   - Se algum CNPJ for inválido (menos ou mais de 14 dígitos), retorne para ele um objeto JSON de erro:  \n     ```json\n     {\n       \"erro\": \"CNPJ inválido. Um CNPJ deve conter exatamente 14 dígitos numéricos.\",\n       \"cnpj\": \"CNPJ_FORNECIDO\"\n     }\n     ```\n\n2. **Consulta na API**  \n   - Para cada CNPJ válido, consulte os dados na API do OpenCNPJ.  \n   - Retorne apenas informações oficiais disponibilizadas pela API, no formato especificado abaixo.\n\n3. **Tratamento de erros**  \n   - Se o **CNPJ não for encontrado**, retorne:  \n     ```json\n     {\n       \"erro\": \"CNPJ não encontrado na base da Receita Federal.\",\n       \"cnpj\": \"CNPJ_FORNECIDO\"\n     }\n     ```  \n   - Se ocorrer **falha na API** (erro 500, 404, indisponibilidade), retorne:  \n     ```json\n     {\n       \"erro\": \"Não foi possível consultar o CNPJ no momento. Tente novamente mais tarde.\",\n       \"cnpj\": \"CNPJ_FORNECIDO\"\n     }\n     ```  \n   - Nunca invente ou alucine dados.\n\n4. **Formato da resposta do payload**  \n \n   - Se for um único CNPJ válido, retorne um objeto JSON.  \n   - Se forem múltiplos CNPJs, retorne um array de objetos JSON, cada um no formato abaixo.  \n   - Quando o CNPJ for encontrado, retorne no seguinte modelo:  \n     ```json\n     {\n       \"cnpj\": \"12345678000195\",\n       \"razao_social\": \"NOME DA EMPRESA LTDA\",\n       \"nome_fantasia\": \"NOME FANTASIA\",\n       \"atividade_principal\": \"Descrição da atividade principal\",\n       \"atividades_secundarias\": [\n         \"Descrição atividade 1\",\n         \"Descrição atividade 2\"\n       ],\n       \"natureza_juridica\": \"Natureza jurídica\",\n       \"endereco\": {\n         \"logradouro\": \"Rua Exemplo\",\n         \"numero\": \"123\",\n         \"complemento\": \"Sala 5\",\n         \"bairro\": \"Centro\",\n         \"cep\": \"00000000\",\n         \"municipio\": \"São Paulo\",\n         \"uf\": \"SP\"\n       },\n       \"contato\": {\n         \"telefone\": \"(11) 0000-0000\",\n         \"email\": \"email@exemplo.com.br\"\n       },\n       \"situacao_cadastral\": \"ATIVA\"\n     }\n     ```\n\n---\n\nFormato da resposta que deve enviar ao usuário:\n\nAqui estão as informações do CNPJ 38.292.673/0001-35:\n\n*Razão Social:* FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.  \n*Nome Fantasia:* (não informado)  \n*Situação Cadastral:* Ativa desde 2011-02-14  \n*Matriz/Filial:* Matriz  \n*Início da Atividade:* 2011-02-14  \n*CNAE Principal:* 7312200  \n*Atividades Secundárias:*  \n- 7319004  \n- 7020400  \n*Natureza Jurídica:* Sociedade Empresária Limitada  \n*Endereço:* BRIG FARIA LIMA, 3732, ANDAR 3AO7 8ALASUL 9 E 10, Bairro ITAIM BIBI, SAO PAULO - SP, CEP 04538132  \n*Email:* TAXCOMPLIANCEBR@FB.COM  \n*Telefone*: (11) 30736800  \n*Capital Social:* R$ 3.631.639,00  \n*Porte da Empresa:* Demais  \n*Opção pelo Simples Nacional:* Não informado  \n*Opção MEI:* Não informado  \n*Sócios:*   \n- Nome: FACEBOOK MIAMI, INC., Qualificação: Sócio Pessoa Jurídica Domiciliado no Exterior, Entrada na Sociedade: 2015-09-17, Pessoa Jurídica  \n- Nome: CONRADO LEISTER, Qualificação: Administrador, Entrada na Sociedade: 2018-11-14, Pessoa Física, Faixa Etária: 41 a 50 anos\n\n### Instruções finais:  \n- Seja tolerante a diferentes formatos de entrada de CNPJ, desde que respeitem os 14 dígitos numéricos.  \n- Para múltiplos CNPJs, mantenha a ordem da entrada na resposta.  \n- Não inclua explicações ou mensagens fora do contexto.  \n- Nunca gere dados fictícios ou não confirmados pela API.\n```"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        224,
+        -112
+      ],
+      "id": "1fae313d-b7c3-43c0-a60d-dc2af7945a7c",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        64,
+        96
+      ],
+      "id": "00b19fff-c5ea-4839-bb2b-3cca7d2040bf",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "FrFf17RptbK9r1OB",
+          "name": "OpenAi Koch"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.body.data.key.remoteJid }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        224,
+        96
+      ],
+      "id": "d98d3aef-9209-4aaf-85e8-109f3ead3dd7",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "toolDescription": "a url para consulta do CNPJ é https://api.opencnpj.org/\nvocê deve inserir o cnpj logo após a /\n",
+        "url": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('URL', `Exemplo:\n\"https://api.opencnpj.org/38.292.673/0001-35\"`, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        368,
+        96
+      ],
+      "id": "c7e311de-8c50-4f39-b271-c0c3ef68528b",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "consulta-cnpj",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -256,
+        -112
+      ],
+      "id": "f1251e0c-773d-4bc0-b4b4-ee025802c7cd",
+      "name": "Webhook",
+      "webhookId": "5cb8b464-7381-482e-b181-4298cf543601"
+    },
+    {
+      "parameters": {
+        "resource": "messages-api",
+        "instanceName": "consulta-cnpj",
+        "remoteJid": "={{ $('Webhook').item.json.body.data.key.remoteJid }}",
+        "messageText": "={{ $json.output }}",
+        "options_message": {}
+      },
+      "type": "n8n-nodes-evolution-api.evolutionApi",
+      "typeVersion": 1,
+      "position": [
+        864,
+        -112
+      ],
+      "id": "e41d6d4c-f9ea-4268-921a-308b4a6c7d11",
+      "name": "Enviar texto",
+      "credentials": {
+        "evolutionApi": {
+          "id": "EP2IPCqQhnp9d3Yt",
+          "name": "Agente Demo"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Trigger & AI Agent\n\n**When chat message received**:\n- Aciona o fluxo quando uma mensagem do usuário é recebida.\n\n**AI Agent**:\n- Orquestra o fluxo de conversação.\n- Recebe input do gatilho e usa modelos, memória e ferramentas.",
+        "height": 216,
+        "width": 680,
+        "color": 4
+      },
+      "name": "Note: Trigger + Agent",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        256
+      ],
+      "id": "generated-0d6b936d-792d-4c4f-baa5-dda8759686b4"
+    },
+    {
+      "parameters": {
+        "content": "## Processamento de Dados\n\n**OpenAI Chat Model**:\n- Executa chamadas ao modelo GPT para gerar respostas.\n\n**Simple Memory**:\n- Armazena o contexto das últimas interações para manter o histórico.\n\n**HTTP Request**:\n- Consulta a API OpenCNPJ para obter dados de CNPJ.\n\n\n**Append row in sheet in Google Sheets**:\n- Grava a consulta na planilha google sheet.",
+        "height": 704,
+        "width": 680,
+        "color": 4
+      },
+      "name": "Note: Modelo, Memória & HTTP",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        -464
+      ],
+      "id": "generated-384ee6c6-1330-46ab-a012-c95ad6981adb"
+    },
+    {
+      "parameters": {
+        "content": "## Webhook Trigger Node\n\n- Recebe mensagens de chat via webhook.\n- Ponto de entrada do workflow.\n- Exposição do endpoint usado pelo node “When chat message received”.\n- Inicia o agente de IA para processar a entrada.",
+        "height": 372,
+        "width": 460
+      },
+      "name": "Webhook Explanation",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -480,
+        -336
+      ],
+      "id": "generated-04c8eaa3-1032-4011-8d0e-989ce08953d9"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "15zvnX5gWCzowoj_MmJp61EsWr3uk6vY__Z9yT0M5TFU",
+          "mode": "list",
+          "cachedResultName": "Busca CNPJ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15zvnX5gWCzowoj_MmJp61EsWr3uk6vY__Z9yT0M5TFU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Página1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/15zvnX5gWCzowoj_MmJp61EsWr3uk6vY__Z9yT0M5TFU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "CNPJ": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('CNPJ', ``, 'string') }}",
+            "Dados": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Dados', `Insira todos os dados da consulta do CNPJ\nDados de exemplo:\nRazão Social: FACEBOOK SERVICOS ONLINE DO BRASIL LTDA.  \nNome Fantasia: (não informado)  \nSituação Cadastral: Ativa desde 2011-02-14  \nMatriz/Filial: Matriz  \nInício da Atividade: 2011-02-14  \nCNAE Principal: 7312200  \nAtividades Secundárias:  \n- 7319004  \n- 7020400  \nNatureza Jurídica: Sociedade Empresária Limitada  \nEndereço: BRIG FARIA LIMA, 3732, ANDAR 3AO7 8ALASUL 9 E 10, Bairro ITAIM BIBI, SAO PAULO - SP, CEP 04538132  \nEmail: TAXCOMPLIANCEBR@FB.COM  \nTelefone: (11) 30736800  \nCapital Social: R$ 3.631.639,00  \nPorte da Empresa: Demais  \nOpção pelo Simples Nacional: Não informado  \nOpção MEI: Não informado  \nSócios:   \n- Nome: FACEBOOK MIAMI, INC., Qualificação: Sócio Pessoa Jurídica Domiciliado no Exterior, Entrada na Sociedade: 2015-09-17, Pessoa Jurídica  \n- Nome: CONRADO LEISTER, Qualificação: Administrador, Entrada na Sociedade: 2018-11-14, Pessoa Física, Faixa Etária: 41 a 50 anos\n\nExemplo:`, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "CNPJ",
+              "displayName": "CNPJ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Dados",
+              "displayName": "Dados",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        528,
+        80
+      ],
+      "id": "35c11c6d-0046-4129-94a5-01845821cd5c",
+      "name": "Append row in sheet in Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "nha50XekqXkBaYhk",
+          "name": "Google Sheets koch"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## RESPONDE WHATSAPP",
+        "height": 216,
+        "width": 392,
+        "color": 5
+      },
+      "name": "Note: Trigger + Agent1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        688,
+        -176
+      ],
+      "id": "ababf7e3-47ed-431b-b03c-f29bff6bb1be",
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "ipaas.ian8n.com.br",
+            "user-agent": "axios/1.10.0",
+            "content-length": "1028",
+            "accept": "application/json, text/plain, */*",
+            "accept-encoding": "gzip, br",
+            "cdn-loop": "cloudflare; loops=1",
+            "cf-connecting-ip": "92.112.179.86",
+            "cf-ipcountry": "BR",
+            "cf-ray": "980b6cb97f286292-GRU",
+            "cf-visitor": "{\"scheme\":\"https\"}",
+            "content-type": "application/json",
+            "x-forwarded-for": "92.112.179.86, 172.69.114.92",
+            "x-forwarded-host": "ipaas.ian8n.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "5ab2a0568e03",
+            "x-real-ip": "172.69.114.92"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "event": "messages.upsert",
+            "instance": "consulta-cnpj",
+            "data": {
+              "key": {
+                "remoteJid": "554188470604@s.whatsapp.net",
+                "fromMe": false,
+                "id": "3EB0925414F1C6B881A644",
+                "senderPn": "554188470604@s.whatsapp.net",
+                "previousRemoteJid": "203328332009651@lid"
+              },
+              "pushName": "Koch",
+              "status": "DELIVERY_ACK",
+              "message": {
+                "conversation": "oi",
+                "messageContextInfo": {
+                  "deviceListMetadata": {
+                    "senderKeyHash": "xCS3QrvvnbTzOA==",
+                    "senderTimestamp": "1758071722",
+                    "senderAccountType": "E2EE",
+                    "receiverAccountType": "E2EE",
+                    "recipientKeyHash": "NYb2HBZBPGj+bg==",
+                    "recipientTimestamp": "1758141641"
+                  },
+                  "deviceListMetadataVersion": 2,
+                  "messageSecret": "mV10a2gCpYBmna3DLpBuhCqx5/qlogFd4WP2gB+o17U="
+                }
+              },
+              "messageType": "conversation",
+              "messageTimestamp": 1758141689,
+              "instanceId": "9c5c1855-ac7d-4385-a11c-f7e7f3595e7e",
+              "source": "web"
+            },
+            "destination": "https://ipaas.ian8n.com.br/webhook/consulta-cnpj",
+            "date_time": "2025-09-17T17:41:29.798Z",
+            "sender": "554196489481@s.whatsapp.net",
+            "server_url": "https://apps-evolution-api.ufffth.easypanel.host",
+            "apikey": "5F7BE3A3AC20-403A-BA21-4ADAEB5D9043"
+          },
+          "webhookUrl": "https://ipaas.ian8n.com.br/webhook/consulta-cnpj",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Enviar texto",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Enviar texto": {
+      "main": [
+        []
+      ]
+    },
+    "Append row in sheet in Google Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "b785c540-f394-4bd0-bc6c-896caf18e455",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "096febf1a328040553c9026db980dfd113febeb7bfee98721d8a0d4a9fc12c4c"
+  },
+  "id": "Rlu55pVt0TrESs58",
+  "tags": []
+}
