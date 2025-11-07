@@ -108,6 +108,8 @@ npm run build
 
 The compiled extension will be in the `dist/` folder.
 
+> **💡 Tip**: If the build fails, try removing `node_modules` and `dist` folders, then run `npm install` again.
+
 #### 2️⃣ Load in Browser
 
 <details>
@@ -234,7 +236,7 @@ n8n-ai-assistant/
 │   └── gemini-model-router.js                 # LLM routing
 │
 ├── 📂 workflows/             # Example templates
-├── 📂 Oficial/               # Production-ready agents
+├── 📂 Oficial/               # Official production-ready agents
 ├── 📄 manifest.json          # Extension configuration
 ├── 📄 vite.config.js         # Build configuration
 └── 📄 package.json           # Dependencies
@@ -260,15 +262,18 @@ npm run preview
 npm run server
 ```
 
-### Environment Variables
+### Configuration Storage
 
-Create a `.env` file in the root:
+API keys are securely stored in the browser's storage (not in `.env` files):
 
-```env
-OPENAI_API_KEY=your_openai_key_here
-GEMINI_API_KEY=your_gemini_key_here
-GROK_API_KEY=your_grok_key_here
-```
+- Configure via the **Options Page** after installing the extension
+- Keys are stored using `chrome.storage.local` API
+- For the optional proxy server (`server.js`), create a `.env` file with:
+  ```env
+  OPENAI_API_KEY=your_openai_key_here
+  GEMINI_API_KEY=your_gemini_key_here
+  GROK_API_KEY=your_grok_key_here
+  ```
 
 ### Debugging
 
