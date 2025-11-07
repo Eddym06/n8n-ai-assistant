@@ -12,7 +12,7 @@
 
 *Transform natural language into powerful n8n workflows with AI-powered intelligence*
 
-[Features](#-features) • [Installation](#-quick-start) • [Usage](#-usage) • [Architecture](#-architecture) • [Contributing](#-contributing)
+[Features](#-features) • [Installation](#-quick-start) • [Usage](#-usage) • [Architecture](#️-architecture) • [Contributing](#-contributing)
 
 </div>
 
