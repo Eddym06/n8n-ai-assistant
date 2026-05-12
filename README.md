@@ -1,306 +1,156 @@
-# n8n AI Assistant - Extensión Chrome/Firefox
+# n8n AI Assistant
 
-## 🎯 Objetivo Principal
+Asistente impulsado por IA para crear, corregir y optimizar workflows de n8n usando lenguaje natural. El proyecto combina una extensión de navegador con componentes de backend y utilidades para validar workflows, mejorar prompts y asistir en tareas de depuración y generación.
 
-Esta extensión de navegador busca **revolucionar la experiencia de creación de workflows en n8n** mediante la integración de inteligencia artificial directamente en el editor. El objetivo es permitir a los usuarios crear, modificar y optimizar workflows complejos usando simplemente lenguaje natural.
+## Resumen
 
-## 🚀 ¿Qué hace esta extensión?
+Este repositorio reúne varias piezas del proyecto **n8n AI Assistant**, incluyendo:
 
-### Funcionalidad Principal
-- **Inyecta un chat inteligente** directamente en la interfaz de n8n
-- **Genera workflows completos** desde descripciones en texto plano
-- **Valida y corrige** workflows automáticamente antes de aplicarlos
-- **Optimiza el posicionamiento** de nodos para máxima legibilidad
-- **Integra múltiples LLMs** (OpenAI, Gemini, Grok) con fallback automático
+- una extensión para navegador orientada a integrarse con la interfaz de n8n;
+- scripts y agentes para generación y validación de workflows;
+- utilidades experimentales y versiones previas del sistema;
+- ejemplos y archivos de apoyo relacionados con workflows.
 
-### Casos de Uso
+> **Nota:** El repositorio contiene trabajo en progreso, archivos históricos y distintas iteraciones del sistema. Por eso pueden existir componentes solapados o documentación antigua en algunas carpetas.
+
+## Características principales
+
+- Generación de workflows a partir de instrucciones en lenguaje natural.
+- Validación y corrección de estructuras JSON para n8n.
+- Soporte para múltiples proveedores LLM.
+- Optimización de prompts antes de la generación.
+- Componentes para posicionamiento y coherencia de nodos.
+- Flujo orientado a creación, depuración y mejora de automatizaciones.
+
+## Estructura general del repositorio
+
+La estructura puede evolucionar, pero a grandes rasgos incluye:
+
+```text
+n8n-ai-assistant/
+├── src/                    # Código de interfaz/extensión
+├── dist/                   # Archivos compilados
+├── workflows/              # Workflows de ejemplo o referencia
+├── Oficial/                # Documentación o variantes oficiales
+├── SISTEMA PRINCIPAL/      # Versiones principales del sistema
+├── manifest.json           # Manifiesto de la extensión
+└── *.js                    # Scripts, agentes y utilidades del proyecto
 ```
-Usuario escribe: "Quiero un workflow que reciba webhooks de Stripe y envíe emails de confirmación"
 
-Extensión genera: Workflow completo con nodos de Webhook, Stripe, Email y lógica de validación
-```
+## Requisitos
 
-## 🏗️ Arquitectura de la Extensión
+Antes de empezar, asegúrate de tener instalado:
 
-### Componentes Core
-- **Content Script** - Se inyecta en n8n y proporciona la interfaz de chat
-- **Background Script** - Maneja la comunicación con APIs de IA
-- **Popup** - Controles rápidos para activar/configurar la extensión
-- **Options Page** - Configuración avanzada de modelos y APIs
+- Node.js 18 o superior
+- npm
+- Una instancia de n8n para pruebas
+- Claves API para los modelos o servicios que quieras usar
 
-### Agentes Especializados (Backend)
-- **🤖 Prompt Enhancement Agent** - Optimiza las consultas del usuario
-- **🔧 JSON Repair Agent** - Corrige workflows malformados automáticamente  
-- **📐 Positioning Agent** - Calcula posiciones óptimas de nodos
-- **🧠 Semantic Memory Agent** - Mantiene contexto entre sesiones
-- **🔍 Workflow Search Agent** - Busca workflows similares como referencia
+## Instalación
 
-## 🛠️ Desarrollo de la Extensión
-
-### Requisitos Previos
-- Node.js 18+ y npm
-- Chrome o Firefox Developer Mode
-- API Keys para LLMs (OpenAI, Gemini, etc.)
-
-### Instalación y Build
 ```bash
-# Clonar el repositorio
 git clone https://github.com/Eddym06/n8n-ai-assistant.git
 cd n8n-ai-assistant
-
-# Instalar dependencias
 npm install
-
-# Compilar la extensión
-npm run build
-
-# La extensión estará en la carpeta dist/
 ```
 
-### Cargar la Extensión
+## Desarrollo
 
-#### Chrome/Edge
+Para compilar los recursos del proyecto, usa:
+
+```bash
+npm run build
+```
+
+Si el repositorio incluye scripts adicionales definidos en `package.json`, también puedes revisar comandos como:
+
+```bash
+npm run dev
+npm run start
+```
+
+> Si alguno de estos scripts no existe en tu versión actual del repositorio, consulta el `package.json` correspondiente y ajusta el flujo según la parte del proyecto que quieras ejecutar.
+
+## Uso de la extensión
+
+Si estás trabajando con la extensión del navegador:
+
+### Chrome / Edge
+
 1. Abre `chrome://extensions/`
-2. Activa "Modo desarrollador"
-3. Haz clic en "Cargar descomprimida"
+2. Activa el **Modo desarrollador**
+3. Haz clic en **Cargar descomprimida**
 4. Selecciona la carpeta `dist/`
 
-#### Firefox
+### Firefox
+
 1. Abre `about:debugging`
-2. Haz clic en "Este Firefox"
-3. Haz clic en "Cargar complemento temporal"
+2. Entra en **Este Firefox**
+3. Haz clic en **Cargar complemento temporal**
 4. Selecciona `dist/manifest.json`
 
-## 🎮 Uso de la Extensión
+## Uso general del proyecto
 
-### Activación
-1. **Navega a tu instancia de n8n** (cloud o self-hosted)
-2. **Haz clic en el icono** de la extensión en la barra de herramientas
-3. **Selecciona "Activar aquí"** para inyectar el chat en n8n
-4. **¡Listo!** Verás aparecer el chat flotante en la esquina inferior
+Dependiendo del componente que quieras ejecutar, el flujo puede variar. Algunas partes del repositorio están pensadas para:
 
-### Configuración
-- **API Keys**: Se configuran en la página de opciones
-- **Modelos**: Selecciona entre OpenAI GPT-4, Gemini Pro, Grok, etc.
-- **Dominio**: La extensión se adapta automáticamente a cualquier instancia de n8n
+- generar workflows desde prompts;
+- validar estructuras y configuraciones;
+- mejorar la calidad de la salida producida por un modelo;
+- servir como base de pruebas para nuevas capacidades.
 
-### Comandos del Chat
-```
-"Crea un workflow para procesar pedidos de e-commerce"
-"Optimiza este workflow para mejor rendimiento"
-"Añade manejo de errores a este flujo"
-"Convierte este workflow manual en automático"
-```
+Si vas a trabajar con un script concreto, revisa primero:
 
-## 📦 Estructura del Proyecto
+- su carpeta;
+- sus dependencias;
+- las variables de entorno necesarias;
+- el archivo `package.json` relacionado.
 
-```
-n8n-ai-assistant/
-├── src/
-│   ├── content/          # Scripts inyectados en n8n
-│   ├── popup/            # Interfaz del popup de la extensión
-│   ├── options/          # Página de configuración
-│   ├── background.js     # Service worker
-│   └── pageBridge.js     # Comunicación con n8n
-├── dist/                 # Extensión compilada
-├── workflows/            # Workflows de ejemplo y templates
-├── manifest.json         # Configuración de la extensión
-└── server.js            # Servidor proxy opcional
+## Configuración
+
+Según el componente que uses, puede que necesites configurar variables de entorno en un archivo `.env`, por ejemplo para:
+
+- claves de API;
+- proveedor de modelo;
+- endpoints o proxies;
+- opciones de ejecución del sistema.
+
+Ejemplo básico:
+
+```env
+GEMINI_API_KEY=tu_api_key
+OPENAI_API_KEY=tu_api_key
 ```
 
-## 🔧 Características Técnicas
+> Usa únicamente las variables que realmente necesite la parte del sistema que vayas a ejecutar.
 
-### Tecnologías Utilizadas
-- **React + Vite** - Interfaz moderna y rápida
-- **Tailwind CSS** - Estilos responsive y consistentes
-- **Framer Motion** - Animaciones fluidas
-- **AJV** - Validación robusta de schemas JSON
-- **Chrome Extension APIs** - Integración nativa con el navegador
+## Estado del proyecto
 
-### Integraciones
-- **Multiple LLM Support** - OpenAI, Google Gemini, xAI Grok
-- **n8n Store Access** - Lectura/escritura directa en workflows
-- **GitHub Integration** - Backup automático de workflows
-- **Error Detection** - Análisis automático de errores en n8n
+El proyecto se encuentra en evolución continua. Incluye ideas, versiones funcionales, prototipos y componentes en revisión. La prioridad actual parece centrarse en mejorar la generación asistida de workflows para n8n y consolidar la experiencia de uso.
 
-## 🚦 Estado del Proyecto
+## Contribuciones
 
-### ✅ Completado
-- [x] Arquitectura base de la extensión
-- [x] Integración con múltiples LLMs
-- [x] Sistema de agentes especializados
-- [x] Validación automática de workflows
-- [x] Interfaz de usuario moderna
-- [x] Compatibilidad Chrome/Firefox
+Las contribuciones son bienvenidas.
 
-### 🔄 En Desarrollo
-- [ ] Optimización de rendimiento
-- [ ] Más templates de workflows
-- [ ] Integración con n8n Cloud API
-- [ ] Sistema de plugins para agentes
+Pasos sugeridos:
 
-### 🎯 Roadmap Futuro
-- [ ] Soporte para Edge y Safari
-- [ ] Modo offline con modelos locales
-- [ ] Marketplace de workflows generados por IA
-- [ ] Integración con VS Code
+1. Haz un fork del repositorio
+2. Crea una rama para tu cambio
+3. Realiza tus commits
+4. Abre un pull request con una descripción clara
 
-## 🚀 Características Ultra
-- **Generación Inteligente**: Crea workflows completos desde descripciones en lenguaje natural
-- **Agentes Especializados**: 5 agentes Ultra que manejan diferentes aspectos del workflow
-- **Validación Automática**: Sistema de validación híbrido (local + IA) para máxima calidad
-- **Posicionamiento Profesional**: Algoritmos avanzados para layout perfecto de nodos
-- **Integración Gemini**: Router inteligente con fallback automático entre modelos
-- **Sistema Híbrido**: Combina velocidad local con potencia de IA cuando es necesario
-- **Métricas de Calidad**: Scoring automático y trazabilidad completa8n AI Assistant (Chrome/Firefox, React + Vite)
+## Licencia
 
-Asistente IA flotante para el editor de n8n: crea, modifica y depura flujos con lenguaje natural. Panel moderno (React + Tailwind + Framer Motion), validación con AJV e integración directa con n8n.
+Este repositorio usa la licencia **Apache-2.0**.
 
-## Características
-- Chat flotante anclado abajo; translúcido y con animaciones.
-- Acciones rápidas en el popup: Activar aquí, Configuración, Iniciar chat.
-- Página de Opciones con animaciones y partículas; selector de modelos por proveedor (OpenAI, Gemini, Grok) y opción custom.
-- LLMs: OpenAI, Google Gemini, xAI Grok (con proxy opcional).
-- Validación de workflow con AJV; import/apply seguro; undo básico.
-- Detección de errores en n8n y prompt de “Fix Error”.
-- Señal visual cuando se activa el asistente.
+Consulta el archivo `LICENSE` para más información.
 
-## 🏗️ Arquitectura del Sistema
+## Enlaces útiles
 
-### Archivo Principal
-- **`extension-server-final-fix.js`** - Servidor principal del sistema Ultra
-
-### 🤖 Agentes Ultra Especializados
-- **`prompt-enhancement-agent-ultra.js`** - Mejora y analiza prompts del usuario
-- **`intelligent-workflow-validator-ultra.js`** - Validación híbrida de workflows
-- **`flow-coherence-agent-ultra.js`** - Asegura coherencia lógica del flujo
-- **`intelligent-positioning-agent-ultra.js`** - Posicionamiento profesional de nodos
-- **`v4-ultra-hybrid-system.js`** - Sistema de generación híbrido inteligente
-
-### 🔧 Componentes de Soporte
-- **`gemini-model-router.js`** - Router inteligente para API de Gemini
-- **`workflow-validator.js`** - Validación básica de compatibilidad n8n
-- **`semantic-memory-agent.js`** - Sistema de memoria contextual
-
-## 🤝 Contribuir
-
-### Cómo Contribuir
-1. **Fork** el repositorio
-2. **Crea** una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. **Commit** tus cambios (`git commit -m 'Añade nueva funcionalidad'`)
-4. **Push** a la rama (`git push origin feature/nueva-funcionalidad`)
-5. **Abre** un Pull Request
-
-### Áreas de Contribución
-- 🐛 **Bug fixes** y mejoras de estabilidad
-- 🚀 **Nuevas características** y funcionalidades
-- 📚 **Documentación** y guías de uso
-- 🎨 **Mejoras de UI/UX** en la interfaz
-- 🧪 **Tests** y validación de calidad
-
-## 📄 Licencia
-
-Este proyecto está bajo la licencia **Apache-2.0**. Ver el archivo [LICENSE](LICENSE) para más detalles.
-
-## � Enlaces Útiles
-
-- **[Repositorio GitHub](https://github.com/Eddym06/n8n-ai-assistant)**
-- **[Documentación n8n](https://docs.n8n.io/)**
-- **[API Documentation](https://docs.n8n.io/api/)**
-- **[Chrome Extension Docs](https://developer.chrome.com/docs/extensions/)**
+- Repositorio: https://github.com/Eddym06/n8n-ai-assistant
+- Documentación de n8n: https://docs.n8n.io/
+- Extensiones de Chrome: https://developer.chrome.com/docs/extensions/
+- Depuración de extensiones en Firefox: https://extensionworkshop.com/
 
 ---
 
-**¿Dudas o sugerencias?** Abre un [issue](https://github.com/Eddym06/n8n-ai-assistant/issues) en GitHub 💬
-
-## Cargar en Chrome
-1. Ir a chrome://extensions y activar “Modo desarrollador”.
-2. “Cargar descomprimida” y elegir la carpeta `dist`.
-3. Abre n8n y usa el popup:
-   - “Activar aquí”: inyecta CSS/JS y monta el chat.
-   - “Iniciar chat”: abre el panel si estaba colapsado.
-   - “Configuración”: abre la página de opciones.
-
-Nota: Si tu instancia es self‑hosted con dominio personalizado, el botón “Activar aquí” inyecta usando activeTab + scripting sin requerir host_permissions.
-
-## Configuración
-Abre Opciones desde el popup y ajusta:
-- Proveedor y modelo (lista por proveedor u “custom”).
-- API Keys (se guardan en chrome.storage).
-- Modo offline, proxy opcional, GitHub (export).
-
-## 📂 Estructura del Proyecto
-
-```
-n8n-ai-assistant/
-├── extension-server-final-fix.js     # 🔑 Servidor principal Ultra
-├── prompt-enhancement-agent-ultra.js  # 🤖 Agente de mejora de prompts
-├── intelligent-workflow-validator-ultra.js # ✅ Validador híbrido
-├── flow-coherence-agent-ultra.js     # 🔄 Agente de coherencia
-├── intelligent-positioning-agent-ultra.js # 📐 Posicionamiento avanzado
-├── v4-ultra-hybrid-system.js         # 🚀 Sistema generación híbrido
-├── gemini-model-router.js            # 🔀 Router inteligente Gemini
-├── generated-workflows/              # 📁 Workflows generados
-├── Archive/                          # 📦 Archivos legacy archivados
-│   ├── legacy-servers/              # Servidores obsoletos
-│   ├── legacy-agents/               # Agentes antiguos
-│   └── test-files/                  # Tests archivados
-└── workflows/                       # 📚 Workflows de referencia
-```
-
-## 🔍 Monitoreo y Debugging
-
-### Logs del Sistema
-```powershell
-# Ver logs en tiempo real
-node "extension-server-final-fix.js" "tu prompt" | Tee-Object logs.txt
-```
-
-### Métricas de Rendimiento
-- Tiempo de inicialización: < 1 segundo
-- Generación promedio: 2-10 segundos
-- Validación local: < 100ms
-- Validación con IA: 1-3 segundos
-- `src/background.js` notificaciones.
-- `server.js` proxy opcional (CORS/GitHub).
-
-## Publicación
-```powershell
-npm run build
-# Empaqueta la carpeta dist/ en un zip para Web Store
-```
-
-## Licencia
-MIT# Enhanced n8n AI Assistant (Chrome/Firefox Extension)
-
-Extensión que inyecta un chat con IA en el editor de n8n para crear, modificar y depurar flujos con lenguaje natural. Construida con React + Tailwind + Vite.
-
-## Características
-- Panel flotante con chat, historial y controles de aplicar/copiar
-- Selección de proveedor LLM (OpenAI, Gemini, Grok) y almacenamiento de API key en chrome.storage
-- Validación AJV del JSON de workflow antes de aplicar
-- Build con Vite para content script y popup
-- Compatibilidad inicial con Firefox (browser_specific_settings)
-
-## Desarrollo
-1. Instala dependencias:
-```powershell
-npm install
-```
-2. Compila:
-```powershell
-npm run build
-```
-3. Carga en Chrome:
-- Abre chrome://extensions
-- Activa Modo desarrollador
-- Cargar descomprimida -> selecciona la carpeta `dist`
-
-4. Abre n8n (cloud o local) y verás el panel flotante.
-
-## Notas
-- Si el acceso directo a los stores de n8n falla, la extensión copia el JSON al portapapeles para importarlo manualmente.
-- Ajusta `manifest.json` > `content_scripts.matches` según tu dominio.
-#   C o m m i t   r e a l i z a d o   p o r   c u e n t a   c o l a b o r a d o r a   s e c u n d a r i a   -   0 9 / 0 6 / 2 0 2 5   1 1 : 0 4 : 4 5 
- 
- 
+Si encuentras errores en la documentación o en el código, puedes abrir un issue en el repositorio.
