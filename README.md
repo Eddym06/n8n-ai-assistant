@@ -24,17 +24,25 @@ Este repositorio reúne varias piezas del proyecto **n8n AI Assistant**, incluye
 
 ## Estructura general del repositorio
 
-La estructura puede evolucionar, pero a grandes rasgos incluye:
-
 ```text
 n8n-ai-assistant/
-├── src/                    # Código de interfaz/extensión
-├── dist/                   # Archivos compilados
-├── workflows/              # Workflows de ejemplo o referencia
-├── Oficial/                # Documentación o variantes oficiales
-├── SISTEMA PRINCIPAL/      # Versiones principales del sistema
-├── manifest.json           # Manifiesto de la extensión
-└── *.js                    # Scripts, agentes y utilidades del proyecto
+├── src/                        # Código fuente de la extensión de navegador
+├── agents/                     # Agentes de IA, validadores y correctores principales
+├── scripts/                    # Utilidades, herramientas de análisis y scripts varios
+│   └── python/                 # Scripts de Python (scraping, vectorización, etc.)
+├── tests/                      # Scripts de prueba y validación
+├── docs/                       # Documentación, guías, análisis y reportes
+├── data/                       # Archivos de datos JSON (configs, reportes, plantillas)
+├── workflows/                  # Referencia de nodos n8n
+│   └── examples/               # Ejemplos y plantillas de workflows importables
+├── Oficial/                    # Versión oficial del sistema principal
+├── SISTEMA PRINCIPAL/          # Componentes del sistema principal
+├── Archive/                    # Versiones archivadas y legacy
+├── server.js                   # Servidor principal
+├── server-config.js            # Configuración del servidor
+├── manifest.json               # Manifiesto de la extensión de navegador
+├── package.json                # Dependencias del proyecto
+└── vite.config.js              # Configuración de compilación
 ```
 
 ## Requisitos
